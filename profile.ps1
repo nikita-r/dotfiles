@@ -65,7 +65,8 @@ function View-UrlParams-FromClipboard {
 function View-FileHexed { [CmdletBinding()]
     param([string]$FilePath, [int]$HeadCount = 240)
     gc -Encoding Byte -TotalCount $HeadCount (gi -LiteralPath $FilePath) `
-    |% { Write-Host ('{0:x}' -f $_).PadLeft(2, '0') -n '' }
+    |% { Write-Host (' {0:x2}' -f $_) -n }
+    Write-Host
 }
 
 function View-ProcUtil {

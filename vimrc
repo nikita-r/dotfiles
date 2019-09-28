@@ -117,6 +117,8 @@ inoremap <C-j>date <C-r>=strftime('%Y-%m-%d')<CR>
 inoremap <C-j>time <C-r>=strftime('%H:%M:%S')<CR>
 inoremap <C-j>isot <C-r>=strftime('%FT%R%z')<CR>
 inoremap <C-j>uuid <C-r>=substitute(system("uuidgen"), '\n$', '', '')<CR>
+inoremap <C-j>fn <C-r>=expand('%')<CR>
+inoremap <C-j>fp <C-r>=expand('%:p')<CR>
 
 runtime macros/matchit.vim
 "runtime macros/editexisting.vim

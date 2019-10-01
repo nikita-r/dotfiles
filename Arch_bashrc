@@ -2,8 +2,9 @@
 export EDITOR='vim'
 
 [[ $- != *i* ]] && return
+[[ $- == *i* ]] && stty -ixon
 
-PS1='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w\[\e[0;34m\]\$\[\e[0m\] '
+PS1='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w\[\e[0;34m\]\$ \[\e[0m\]'
 function set-prompt {
     PS1="\[\e[0;34m\]$1\[\e[1;31m\]|\[\e[0;34m\]> \[\e[0m\]"
 }
@@ -18,7 +19,8 @@ function ccd { mkdir "$1" && cd "$1"; }
 
 alias cls="printf '\ec'"
 alias cnf='cnf-lookup'
-[[ $- == *i* ]] && stty -ixon
+
+#export PATH=:$PATH
 
 shopt -s histappend
 export HISTSIZE=$(expr 1024 \* 32)
@@ -33,8 +35,10 @@ for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done
 export HISTIGNORE
 
 function aur {
-    pushd ~/pkgs
+    local -; set -x
+    pushd ~/pkgs 1>/dev/null
     git clone https://aur.archlinux.org/$1.git
+    if expr $? 1>/dev/null; then { popd 1>/dev/null; return; }; fi
     cd $1
 }
 

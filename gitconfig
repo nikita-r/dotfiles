@@ -1,0 +1,22 @@
+#·.gitconfig
+
+[user]
+	name = nikita-r
+
+[alias]
+	pull-r = git pull --recurse-submodules
+	clone-r = clone --recursive
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	aliases = config --get-regexp ^alias\.
+
+[commit]
+	gpgsign = true
+
+[url "git@github.com:"]
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gist:"
+

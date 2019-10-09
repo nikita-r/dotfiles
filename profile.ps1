@@ -2,15 +2,12 @@
 
 #. "$(join-path (split-path $profile -Parent) 'LocalFunctions.ps1')"
 
-# > powershell.exe –NoProfile –File %script%
-$ErrorActionPreference = 'Stop'; Set-StrictMode -Version Latest
+# > powershell.exe -NoProfile -File %script%
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
-function prompt {
-  $strUser = "[$env:UserName]"
-  $strTime = Get-Date -F 'MM\/dd|HH:mm'
-  Write-Host "$strTime$strUser>" -N
-  return ' '
-}
+function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$env:UserName]> " }
+$PSDefaultParameterValues += @{'Get-Help:ShowWindow' = $true}
 
 function ccd ($dir) { try {
 	mkdir $dir |% FullName
@@ -30,8 +27,6 @@ function dir {
         })
   } | sort
 }
-
-$PSDefaultParameterValues += @{'Get-Help:ShowWindow' = $true}
 
 <# misc utility funcs #>
 

@@ -30,10 +30,10 @@ function dir {
 
 <# misc utility funcs #>
 
-function isNumeric($x) {
+function Is-Numeric($x) {
   try {
     0 + $x | Out-Null
-    return $true
+    return ![string]::IsNullOrWhiteSpace($x) # this line would handle [DBNull]::Value correctly (were it to reach it) # irrealis
   } catch {
     return $false
   }

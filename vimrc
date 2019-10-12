@@ -4,6 +4,13 @@ set encoding=utf-8
 " Don't get reminded about poor children in Uganda.
 set shortmess+=I
 
+let s:is_msys = system('uname') =~ '^MSYS_NT-'
+
+if s:is_msys
+   set title
+   set titlestring=vim\ «%F»
+endif
+
 " Don't time out on mappings.  Time out on key codes almost immediately
 " because (a) I never want to enter them manually, and (b) "^[" hanging
 " in showcmd area is annoying.
@@ -37,26 +44,31 @@ au InsertLeave * set nopaste
 
 filetype plugin indent on
 syntax on
+au BufRead,BufNewFile *.py let python_highlight_all=1
 
 " Parse the entire file in order to correct syntax highlighting.
 nnoremap <F7> :syntax sync fromstart<CR>
 
-set t_Co=256
-if !empty(globpath(&rtp, 'colors/inkpot.vim'))
-  let g:inkpot_black_background = 1
-  color inkpot
-  hi ErrorMsg ctermfg=white
-  if v:version >= 700
-    hi PmenuThumb ctermbg=121
-  endif
+if s:is_msys
+  color industry
 else
-  color zellner
-  hi Statement ctermfg=196
-  if v:version >= 700
-    hi Pmenu ctermfg=black
-    hi PmenuSel ctermfg=black
-    hi PmenuThumb ctermbg=45
-  endif
+    set t_Co=256
+    if !empty(globpath(&rtp, 'colors/inkpot.vim'))
+      let g:inkpot_black_background = 1
+      color inkpot
+      hi ErrorMsg ctermfg=white
+      if v:version >= 700
+        hi PmenuThumb ctermbg=121
+      endif
+    else
+      color zellner
+      hi Statement ctermfg=196
+      if v:version >= 700
+        hi Pmenu ctermfg=black
+        hi PmenuSel ctermfg=black
+        hi PmenuThumb ctermbg=45
+      endif
+    endif
 endif
 
 set wrap nolbr

@@ -20,3 +20,6 @@
 [url "git@gist.github.com:"]
 	insteadOf = "gist:"
 
+[diff "utf-16"]
+	textconv = iconv -f utf-16 -t utf-8
+

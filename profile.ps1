@@ -28,6 +28,13 @@ function dir {
   } | sort
 }
 
+# Natural Sort: ... | sort $_naturally
+$_naturally = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(10, '0') }) }
+
+# ? "$($MyInvocation.MyCommand)() requires [int]"
+function chr($x) { [char]$x }
+function ord($x) { [int][char]$x }
+
 <# misc utility funcs #>
 
 function Is-Numeric($x) {

@@ -44,7 +44,8 @@ au InsertLeave * set nopaste
 
 filetype plugin indent on
 syntax on
-au BufRead,BufNewFile *.py let python_highlight_all=1
+
+let python_highlight_all = 1
 
 " Parse the entire file in order to correct syntax highlighting.
 nnoremap <F7> :syntax sync fromstart<CR>

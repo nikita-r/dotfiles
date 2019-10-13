@@ -2,6 +2,7 @@
 
 [user]
 	name = nikita-r
+	email = nikita-r@device
 
 [alias]
 	pull-r = git pull --recurse-submodules
@@ -9,7 +10,7 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
-	aliases = config --get-regexp ^alias\.
+	aliases = config --get-regexp ^alias\\.
 
 [commit]
 	gpgsign = true

@@ -14,6 +14,8 @@ function ccd ($dir) { try {
 	if ($?) { Set-Location $dir }
 } catch {'{0}' -f $_.Exception} }
 
+<# replace some well-known aliases #>
+
 del alias:pwd
 function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
 
@@ -28,8 +30,17 @@ function dir {
   } | sort
 }
 
+<# string manipulation helpers #>
+
 # Natural Sort: ... | sort $_naturally
 $_naturally = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(10, '0') }) }
+
+function normalize-space([string]$str) { # like XPath
+    if ([string]::IsNullOrWhiteSpace($str)) { return '' }
+    $str -replace '^\s+' -replace '\s+$' -replace '\s+', ' '
+}
+
+<# like python #>
 
 # ? "$($MyInvocation.MyCommand)() requires [int]"
 function chr($x) { [char]$x }

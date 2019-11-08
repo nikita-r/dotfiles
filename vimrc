@@ -4,9 +4,9 @@ set encoding=utf-8
 " Don't get reminded about poor children in Uganda.
 set shortmess+=I
 
-let s:is_msys = system('uname') =~ '^MSYS_NT-'
+let s:is_NT = ( system('uname') =~ '^MSYS_NT-' || system('uname') =~ '^MINGW(32|64)_NT-' )
 
-if s:is_msys
+if s:is_NT
    set title
    set titlestring=vim\ «%F»
 endif
@@ -50,7 +50,7 @@ let python_highlight_all = 1
 " Parse the entire file in order to correct syntax highlighting.
 nnoremap <F7> :syntax sync fromstart<CR>
 
-if s:is_msys
+if s:is_NT
   color industry
 else
     set t_Co=256

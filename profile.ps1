@@ -1,6 +1,6 @@
 #·profile.ps1
 
-#. "$(join-path (split-path $profile -Parent) 'LocalFunctions.ps1')"
+#. "$(join-path (split-path $profile) '???.ps1')"
 
 # > powershell.exe -NoProfile -File %script%
 $ErrorActionPreference = 'Stop'
@@ -13,6 +13,7 @@ function ccd ($dir) { try {
 	mkdir $dir |% FullName
 	if ($?) { Set-Location $dir }
 } catch {'{0}' -f $_.Exception} }
+
 
 <# replace some well-known aliases #>
 
@@ -30,6 +31,7 @@ function dir {
   } | sort
 }
 
+
 <# string manipulation helpers #>
 
 # Natural Sort: ... | sort $_naturally
@@ -40,11 +42,12 @@ function normalize-space([string]$str) { # like XPath
     $str -replace '^\s+' -replace '\s+$' -replace '\s+', ' '
 }
 
+
 <# like python #>
 
-# ? "$($MyInvocation.MyCommand)() requires [int]"
-function chr($x) { [char]$x }
-function ord($x) { [int][char]$x }
+function chr ([int]$x) { [char]$x }
+function ord ([char]$x) { [int]$x }
+
 
 <# misc utility funcs #>
 
@@ -101,4 +104,5 @@ function View-ProcUtil {
     | ft
   }
 }
+
 

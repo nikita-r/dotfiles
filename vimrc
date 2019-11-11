@@ -4,7 +4,8 @@ set encoding=utf-8
 " Don't get reminded about poor children in Uganda.
 set shortmess+=I
 
-let s:is_NT = ( system('uname') =~ '^MSYS_NT-' || system('uname') =~ '^MINGW(32|64)_NT-' )
+let s:uname = system('uname')
+let s:is_NT = ( s:uname =~ '^MSYS_NT-' || s:uname =~ '^MINGW\(32\|64\)_NT-' )
 
 if s:is_NT
    set title

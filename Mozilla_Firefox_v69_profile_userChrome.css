@@ -1,0 +1,7 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	.tab-close-button { display: none !important; }
+	#PanelUI-button { -moz-box-ordinal-group: 0 !important; }
+}
+

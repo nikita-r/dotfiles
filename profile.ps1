@@ -105,4 +105,12 @@ function View-ProcUtil {
   }
 }
 
+function DeepCopy-Object ($obj) {
+    $memStr = [io.MemoryStream]::new()
+    $fmtBin = [Runtime.Serialization.Formatters.Binary.BinaryFormatter]::new()
+    $fmtBin.Serialize($memStr, $obj)
+    $memStr.Position=0
+    $fmtBin.Deserialize($memStr)
+}
+
 

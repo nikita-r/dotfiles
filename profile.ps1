@@ -51,7 +51,7 @@ function ord ([char]$x) { [int]$x }
 
 <# misc utility funcs #>
 
-function Is-Numeric($x) {
+function Is-Numeric ($x) {
   try {
     0 + $x | Out-Null
     return ![string]::IsNullOrWhiteSpace($x) # this line would handle [DBNull]::Value correctly (were it to reach it) # irrealis
@@ -68,7 +68,7 @@ function Test-Elevated {
 }
 
 function Get-EnumValues {
-  param([string]$enum)
+  param ([string]$enum)
   [enum]::GetValues([type]$enum) |% {
     $rslt = [ordered]@{}
   } {
@@ -111,6 +111,11 @@ function DeepCopy-Object ($obj) {
     $fmtBin.Serialize($memStr, $obj)
     $memStr.Position=0
     $fmtBin.Deserialize($memStr)
+}
+
+function Get-Timestamp {
+    $datetime = (Get-Date).ToUniversalTime()
+    (Get-Date $datetime -f s) + (Get-Date $datetime -F:.fffZ)
 }
 
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }

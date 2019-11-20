@@ -1,0 +1,8 @@
+{
+  "template": "{has_project}| {path}{is_dirty}",
+  "has_project_true": "{project} ",
+  "has_project_false": "",
+  "is_dirty_true": " ℳ",
+  "is_dirty_false": "",
+  "untitled": "○",
+}

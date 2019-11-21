@@ -5,20 +5,24 @@
 
 	"show_tab_close_buttons": false,
 	"highlight_modified_tabs": true,
+	"auto_complete_commit_on_tab": true,
 
 	"drag_text": false,
 	"auto_match_enabled": false,
 	"find_selected_text": false,
-	"match_selection": false,
 
-	"shift_tab_unindent": true,
-	"auto_indent": true,
-	"smart_indent": false,
 	"detect_indentation": true,
 	"translate_tabs_to_spaces": true,
+	"shift_tab_unindent": true,
+	"auto_indent": true,
 	"indent_to_bracket": false,
+	"smart_indent": false,
+	"draw_indent_guides": true,
+	"indent_guide_options": ["draw_active"], // 'draw_normal'
 
 	"scroll_speed": 0,
+	"margin": 0,
+	"indent_subsequent_lines": false,
 
 	"always_prompt_for_file_reload": true,
 	"show_full_path": true,
@@ -28,7 +32,12 @@
 	"fallback_encoding": "Western (Windows 1252)",
 	"show_encoding": true,
 	"show_line_endings": true,
-	"margin": 0,
+
+	"match_selection": true,
+	"always_show_minimap_viewport": true,
+
+	"auto_find_in_selection": true,
+	"tree_animation_enabled": false,
 
 	"folder_exclude_patterns": [ ".svn", ".git", ".vs" ],
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+={}`~?[]-",

@@ -6,7 +6,7 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
-function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$env:UserName]> " }
+function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]> " }
 $PSDefaultParameterValues += @{'Get-Help:ShowWindow' = $true}
 
 function ccd ($dir) { try {
@@ -20,8 +20,8 @@ function ccd ($dir) { try {
 del alias:pwd
 function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
 
-rm alias:dir
-function dir {
+del alias:dir
+function  dir  {
   gci @Args |% {
     (rvpa -LiteralPath $_.FullName -Relative) `
     + $(switch ($_.Mode[0]) {

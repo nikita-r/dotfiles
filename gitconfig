@@ -5,7 +5,7 @@
 	email = nikita-r@device
 
 [alias]
-	pull-r = git pull --recurse-submodules
+	pull-r = pull --recurse-submodules
 	clone-r = clone --recursive
 	tags = tag -l
 	branches = branch -a
@@ -23,4 +23,10 @@
 
 [diff "utf-16"]
 	textconv = iconv -f utf-16 -t utf-8
+
+[alias]
+	wdc = diff --word-diff=color
+
+[diff]
+	wordRegex = "[^[:space:],.;:()<>+={}/]+|[,.;:()<>+={}/]"
 

@@ -22,7 +22,7 @@ function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirect
 
 del alias:dir
 function  dir  {
-  gci @Args |% {
+  gci -Force @args |% {
     (rvpa -LiteralPath $_.FullName -Relative) `
     + $(switch ($_.Mode[0]) {
           'd' {'\'} '-' {''}
@@ -67,9 +67,8 @@ function Test-Elevated {
     $prp.IsInRole($adm)
 }
 
-function Get-EnumValues {
-  param ([string]$enum)
-  [enum]::GetValues([type]$enum) |% {
+function Get-EnumValues ($enum) {
+  [enum]::GetValues($enum) |% {
     $rslt = [ordered]@{}
   } {
     $rslt.add($_, $_.value__)
@@ -79,7 +78,8 @@ function Get-EnumValues {
 }
 
 function View-UrlParams-FromClipboard {
-    $url = Get-Clipboard; write $url
+    $url = Get-Clipboard
+    write $url
     Add-Type -AssemblyName System.Web
     $q = $url.Substring($url.IndexOf('?')+1).Split('&') | ConvertFrom-StringData
     $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [System.Web.HttpUtility]::UrlDecode($_[$key]) } }

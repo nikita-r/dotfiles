@@ -3,7 +3,7 @@
 #. "$(join-path (split-path $profile) '???.ps1')"
 
 # > powershell.exe -NoProfile -File %script%
-$ErrorActionPreference = 'Stop'
+$ErrorActionPreference='Stop'
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
 function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]> " }
@@ -15,7 +15,7 @@ function ccd ($dir) { try {
 } catch {'{0}' -f $_.Exception} }
 
 
-<# replace some well-known aliases #>
+<# for dir nav #>
 
 del alias:pwd
 function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
@@ -31,6 +31,21 @@ function  dir  {
   } | sort
 }
 
+function swapd {
+-not (Get-Location -Stack).Count -and $(throw) | out-null
+$a = pwd; popd; $b = pwd
+Set-Location $a; pushd $b
+"swapd to `"$b`""
+}
+
+
+# HISTIGNORE
+Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
+    if ($cmd -like ' *') { return $false }
+    if ($cmd.Length -le 3) { return $false }
+    return $true
+}
+
 
 <# string manipulation helpers #>
 
@@ -41,12 +56,6 @@ function normalize-space([string]$str) { # like XPath
     if ([string]::IsNullOrWhiteSpace($str)) { return '' }
     $str -replace '^\s+' -replace '\s+$' -replace '\s+', ' '
 }
-
-
-<# like python #>
-
-function chr ([int]$x) { [char]$x }
-function ord ([char]$x) { [int]$x }
 
 
 <# misc utility funcs #>
@@ -80,9 +89,8 @@ function Get-EnumValues ($enum) {
 function View-UrlParams-FromClipboard {
     $url = Get-Clipboard
     write $url
-    Add-Type -AssemblyName System.Web
     $q = $url.Substring($url.IndexOf('?')+1).Split('&') | ConvertFrom-StringData
-    $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [System.Web.HttpUtility]::UrlDecode($_[$key]) } }
+    $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
     $q | Out-GridView
 }
 

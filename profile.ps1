@@ -81,25 +81,25 @@ function Is-Numeric ($x) {
 }
 
 function Test-Elevated {
-    $wid = [System.Security.Principal.WindowsIdentity]::GetCurrent()
-    $prp = New-Object System.Security.Principal.WindowsPrincipal($wid)
-    $adm = [System.Security.Principal.WindowsBuiltInRole]::Administrator
+    $wid = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $prp = New-Object Security.Principal.WindowsPrincipal $wid
+    $adm = [Security.Principal.WindowsBuiltInRole]::Administrator
     $prp.IsInRole($adm)
 }
 
 function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
-    $enum = [type]( $enum -replace '^\[([^][]+)\]$', {$1} )
+    $enum = [type]( $enum -replace '^\[([^][]+)\]$', '$1' )
     $rslt = [ordered]@{}
     [enum]::GetValues($enum) |% { $rslt.add($_, $_.value__) }
     $rslt
 }
 
 function View-UrlParams-FromClipboard {
-    $url = Get-Clipboard
-    write $url
-    $q = $url.Substring($url.IndexOf('?')+1).Split('&') | ConvertFrom-StringData
+    $url=Get-Clipboard; Write-Host $url
+    $q = $url.Substring($url.IndexOf('?')+1).Split('&')
+    $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
     $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
-    $q | Out-GridView
+    $q | Out-GridView -PassThru
 }
 
 # > CertUtil -EncodeHex -f $FilePath (New-TemporaryFile | tee -Variable tmp).FullName

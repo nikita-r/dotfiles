@@ -20,10 +20,21 @@ function ccd ($dir) { try {
 del alias:pwd
 function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
 
+function ResolveTo-AbsolutePath {
+  [CmdletBinding()] param (
+[Parameter(Mandatory=$true, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
+[string[]]$Path
+  )
+
+  $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
+}
+
 del alias:dir
 function  dir  {
+  $pwd=$( pwd ).TrimEnd('\')
+  $regex = [regex] ('^' + [regex]::Escape($pwd) + '\\' + '(?!$)')
   gci -Force @args |% {
-    (rvpa -LiteralPath $_.FullName -Relative) `
+    ( $_.FullName -replace $regex, '.\' ) `
     + $(switch ($_.Mode[0]) {
           'd' {'\'} '-' {''}
           default { '?' }

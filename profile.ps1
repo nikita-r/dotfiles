@@ -87,14 +87,11 @@ function Test-Elevated {
     $prp.IsInRole($adm)
 }
 
-function Get-EnumValues ($enum) {
-  [enum]::GetValues($enum) |% {
+function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
+    $enum = [type]( $enum -replace '^\[([^][]+)\]$', {$1} )
     $rslt = [ordered]@{}
-  } {
-    $rslt.add($_, $_.value__)
-  } {
+    [enum]::GetValues($enum) |% { $rslt.add($_, $_.value__) }
     $rslt
-  }
 }
 
 function View-UrlParams-FromClipboard {

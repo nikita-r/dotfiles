@@ -11,6 +11,8 @@
 	branches = branch -a
 	remotes = remote -v
 	aliases = config --get-regexp ^alias\\.
+	save = stash save -u
+	scrub = ! git reset --hard && git clean -fdx
 
 [commit]
 	gpgsign = true

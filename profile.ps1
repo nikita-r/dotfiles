@@ -32,8 +32,8 @@ function  dir  {
 }
 
 function swapd {
--not (Get-Location -Stack).Count -and $(throw) | out-null
-$a = pwd; popd; $b = pwd
+if ((Get-Location -Stack).Count -eq 0) { throw }
+$a=Get-Location; popd; $b=Get-Location
 Set-Location $a; pushd $b
 "swapd to `"$b`""
 }

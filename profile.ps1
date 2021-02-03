@@ -3,11 +3,11 @@
 #. "$(join-path (split-path $profile) '???.ps1')"
 
 # > powershell.exe -NoProfile -File %script%
-$ErrorActionPreference='Stop'
+$ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
 function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]> " }
-$PSDefaultParameterValues += @{'Get-Help:ShowWindow' = $true}
+$PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
 
 function ccd ($dir) { try {
 	mkdir $dir |% FullName
@@ -46,7 +46,7 @@ function swapd {
 if ((Get-Location -Stack).Count -eq 0) { throw }
 $a=Get-Location; popd; $b=Get-Location
 Set-Location $a; pushd $b
-"swapd to `"$b`""
+Write-Host "swapd to `"$b`""
 }
 
 
@@ -94,7 +94,7 @@ function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
     $rslt
 }
 
-function View-UrlParams-FromClipboard {
+function Parse-UrlQuery-FromClipboard {
     $url=Get-Clipboard; Write-Host $url
     $q = $url.Substring($url.IndexOf('?')+1).Split('&')
     $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
@@ -103,15 +103,23 @@ function View-UrlParams-FromClipboard {
 }
 
 # > CertUtil -EncodeHex -f $FilePath (New-TemporaryFile | tee -Variable tmp).FullName
-function View-FileHexed { [CmdletBinding()]
-    param([string]$FilePath, [int]$HeadCount = 240)
-    gc -Encoding Byte -TotalCount $HeadCount (gi -LiteralPath $FilePath) `
-    |% { Write-Host (' {0:x2}' -f $_) -n }
-    Write-Host
+function View-FileHexed {
+    [CmdletBinding()] param (
+[Parameter(Mandatory=$true)][string]$FilePath
+, [int]$HeadCount=20
+)
+    $i = Get-Item -Force -LiteralPath $FilePath
+    $a = Get-Content -Encoding Byte -TotalCount $HeadCount `
+    $i |% { ' {0:x2}' -f $_ }
+    -join($a)
 }
 
 function View-ProcUtil {
-  param([Parameter(Mandatory=$true)][ValidateLength(3, 33)][string]$ProcNamePrefix)
+  [CmdletBinding()] param (
+[Parameter(Mandatory=$true)]
+[ValidateLength(3, 33)]
+[string]$ProcNamePrefix
+  )
   process {
     Get-WmiObject Win32_PerfRawData_PerfProc_Process -Filter "Name like '$ProcNamePrefix%'" | sort IDProcess `
     | select @{N='CreatPID';E={$_.CreatingProcessID}}, @{N='PID';E={'{0,9:d}' -f $_.IDProcess}}, Name `

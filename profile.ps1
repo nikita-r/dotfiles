@@ -73,8 +73,8 @@ function normalize-space([string]$str) { # like XPath
 
 function Is-Numeric ($x) {
   try {
-    0 + $x | Out-Null
-    return ![string]::IsNullOrWhiteSpace($x) # this line would handle [DBNull]::Value correctly (were it to reach it) # irrealis
+    0 + $x | Out-Null # [DBNull|NullString]::Value throw here; [string]::Empty|[AutomationNull]::Value do not
+    return ![string]::IsNullOrWhiteSpace($x)
   } catch {
     return $false
   }
@@ -110,14 +110,14 @@ function View-FileHexed {
 )
     $i = Get-Item -Force -LiteralPath $FilePath
     $a = Get-Content -Encoding Byte -TotalCount $HeadCount `
-    $i |% { ' {0:x2}' -f $_ }
+            $i |% { ' {0:x2}' -f $_ }
     -join($a)
 }
 
 function View-ProcUtil {
   [CmdletBinding()] param (
 [Parameter(Mandatory=$true)]
-[ValidateLength(3, 33)]
+[ValidatePattern('^\w[-\w\s\.][-\w\s\.]+$')]
 [string]$ProcNamePrefix
   )
   process {

@@ -15,7 +15,7 @@ Set-PSReadLineOption -HistoryNoDuplicates:$true
 Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd -like ' *') { return $false }
     if ($cmd.Length -le 3) { return $false }
-    if ($cmd -eq 'Parse-UrlQuery-FromClipboard') { return $false }
+    if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
     if ($cmd -like 'gcm *' -or $cmd -like 'shcm *') { return $false }
     return $true
 }
@@ -118,7 +118,10 @@ function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing 
 <# web dev helpers #>
 
 function Get-AuthHeader-Basic ([string]${client_id}, [string]${client_secret}) {
-@{Authorization="Basic $([Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("${client_id}:${client_secret}")))"}
+    if (${client_id} -match ':') { throw }
+    $str = "${client_id}:${client_secret}"
+    if ($str -cmatch '[^\x20-\x7E]') { throw }
+    return @{Authorization="Basic $([Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($str)))"}
 }
 
 function Format-Json {

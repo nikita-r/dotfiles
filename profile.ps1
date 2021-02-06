@@ -1,33 +1,35 @@
 #·profile.ps1
-
-#. "$(join-path (split-path $profile) '???.ps1')"
-
 # > powershell.exe -NoProfile -File %script%
+
 $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
+#. "$(join-path (split-path $profile) 'profile.extra-func.ps1')"
+
 function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]> " }
+
 $PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
+
+# HISTIGNORE
+Set-PSReadLineOption -HistoryNoDuplicates:$true
+Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
+    if ($cmd -like ' *') { return $false }
+    if ($cmd.Length -le 3) { return $false }
+    if ($cmd -eq 'Parse-UrlQuery-FromClipboard') { return $false }
+    if ($cmd -like 'gcm *' -or $cmd -like 'shcm *') { return $false }
+    return $true
+}
+
+
+<# dir nav #>
 
 function ccd ($dir) { try {
 	mkdir $dir |% FullName
 	if ($?) { Set-Location $dir }
 } catch {'{0}' -f $_.Exception} }
 
-
-<# for dir nav #>
-
 del alias:pwd
 function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
-
-function ResolveTo-AbsolutePath {
-  [CmdletBinding()] param (
-[Parameter(Mandatory=$true, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
-[string[]]$Path
-  )
-
-  $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
-}
 
 del alias:dir
 function  dir  {
@@ -50,14 +52,6 @@ Write-Host "swapd to `"$b`""
 }
 
 
-# HISTIGNORE
-Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
-    if ($cmd -like ' *') { return $false }
-    if ($cmd.Length -le 3) { return $false }
-    return $true
-}
-
-
 <# string manipulation helpers #>
 
 # Natural Sort: ... | sort $_naturally
@@ -69,23 +63,7 @@ function normalize-space([string]$str) { # like XPath
 }
 
 
-<# misc utility funcs #>
-
-function Is-Numeric ($x) {
-  try {
-    0 + $x | Out-Null # [DBNull|NullString]::Value throw here; [string]::Empty|[AutomationNull]::Value do not
-    return ![string]::IsNullOrWhiteSpace($x)
-  } catch {
-    return $false
-  }
-}
-
-function Test-Elevated {
-    $wid = [Security.Principal.WindowsIdentity]::GetCurrent()
-    $prp = New-Object Security.Principal.WindowsPrincipal $wid
-    $adm = [Security.Principal.WindowsBuiltInRole]::Administrator
-    $prp.IsInRole($adm)
-}
+<# misc utility #>
 
 function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
     $enum = [type]( $enum -replace '^\[([^][]+)\]$', '$1' )
@@ -129,19 +107,26 @@ function View-ProcUtil {
   }
 }
 
-function DeepCopy-Object ($obj) {
-    $memStr = [io.MemoryStream]::new()
-    $fmtBin = [Runtime.Serialization.Formatters.Binary.BinaryFormatter]::new()
-    $fmtBin.Serialize($memStr, $obj)
-    $memStr.Position=0
-    $fmtBin.Deserialize($memStr)
-}
-
 function Get-Timestamp {
     $datetime = (Get-Date).ToUniversalTime()
     (Get-Date $datetime -f s) + (Get-Date $datetime -F.fffZ)
 }
 
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }
+
+
+<# web dev helpers #>
+
+function Get-AuthHeader-Basic ([string]${client_id}, [string]${client_secret}) {
+@{Authorization="Basic $([Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("${client_id}:${client_secret}")))"}
+}
+
+function Format-Json {
+#[CmdletBinding()] param ()
+#if ($PSCmdlet.MyInvocation.PipelinePosition -eq 1) { throw }
+$input | ConvertFrom-Json | ConvertTo-Json @args
+}
+
+Set-Alias fj Format-Json
 
 

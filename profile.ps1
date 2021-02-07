@@ -1,13 +1,18 @@
 #·profile.ps1
 
+# guard against repeated load of the profile
+if ($PSDefaultParameterValues.Contains('Get-Help:ShowWindow')) { throw }
+$PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
+
 $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
 #. "$(join-path (split-path $profile) 'profile.extra-func.ps1')"
 
-function prompt { "$(Get-Date -f 'MM\/dd|HH:mm')[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]> " }
-
-$PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
+function prompt { (Get-Date -f 'MM\/dd|HH:mm') `
+                + "[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]" `
+                + '>' * (1+$NestedPromptLevel) + ' ' `
+                }
 
 # HISTIGNORE
 Set-PSReadLineOption -HistoryNoDuplicates:$true

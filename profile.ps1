@@ -1,5 +1,4 @@
 #·profile.ps1
-# > powershell.exe -NoProfile -File %script%
 
 $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
@@ -17,6 +16,7 @@ Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd.Length -le 3) { return $false }
     if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
     if ($cmd -like 'gcm *' -or $cmd -like 'shcm *') { return $false }
+    if ($cmd -like 'View-*') { return $false }
     return $true
 }
 
@@ -33,12 +33,13 @@ function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirect
 
 del alias:dir
 function  dir  {
-  $pwd=$( pwd ).TrimEnd('\')
-  $regex = [regex] ('^' + [regex]::Escape($pwd) + '\\' + '(?!$)')
+  $pwd=$( pwd )#.TrimEnd([IO.Path]::DirectorySeparatorChar)
+  $regex = [regex] ('^' + [regex]::Escape($(Join-Path $pwd $null)) + '(?!$)')
   gci -Force @args |% {
-    ( $_.FullName -replace $regex, '.\' ) `
+    ( $_.FullName -replace $regex, (Join-Path . $null) ) `
     + $(switch ($_.Mode[0]) {
-          'd' {'\'} '-' {''}
+          'd' { [IO.Path]::DirectorySeparatorChar }
+          '-' { $null }
           default { '?' }
         })
   } | sort

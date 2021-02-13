@@ -8,7 +8,7 @@
 	"auto_complete_cycle": true,
 	"shift_tab_unindent": true,
 
-	"drag_text": false,
+	"drag_text": true,
 	"auto_match_enabled": false,
 	"find_selected_text": false,
 
@@ -46,7 +46,7 @@
 	"ensure_newline_at_eof_on_save": false,
 
 	"folder_exclude_patterns": [ ".vscode", ".vs", ".svn", ".git" ],
-	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+={}`~?[]·",
+	"word_separators": "./\\\"',.;:()<>!@#^&*|+={}`?[]·",
 
 	"update_check": false
 }

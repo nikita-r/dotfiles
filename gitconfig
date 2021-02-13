@@ -26,9 +26,9 @@
 	scrub = ! git reset --hard && git clean -fdx
 
 [alias]
-	branched-when = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
-	branched-diff = ! bash -c "echo; git diff $(git branched-when ${1:-main} ${2:-HEAD}).. #"
-	branched-rlog = ! bash -c "echo; git log-rs $(git branched-when ${1:-main} ${2:-HEAD}).. #"
+	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
+	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 
 [commit]
 	gpgsign = true
@@ -46,5 +46,5 @@
 	wdc = diff --word-diff=color
 
 [diff]
-	wordRegex = "[^[:space:],.;:()<>+={}/]+|[,.;:()<>+={}/]"
+	wordRegex = "[^][\\\"'[:space:],.;:()<>+={}/!@#^&*`?|]+|[][\\\"',.;:()<>+={}/!@#^&*`?|]"
 

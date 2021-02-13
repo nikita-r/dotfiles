@@ -45,8 +45,8 @@
 	"trim_trailing_white_space_on_save": false,
 	"ensure_newline_at_eof_on_save": false,
 
-	"folder_exclude_patterns": [ ".svn", ".git", ".vs" ],
-	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+={}`~?[]-",
+	"folder_exclude_patterns": [ ".vscode", ".vs", ".svn", ".git" ],
+	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+={}`~?[]·",
 
 	"update_check": false
 }

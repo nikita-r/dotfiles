@@ -4,6 +4,14 @@
 	name = nikita-r
 	email = nikita-r@device
 
+[init]
+	defaultBranch = main
+
+[alias]
+	co = checkout
+	st = status -sb
+	unadd = reset HEAD
+
 [alias]
 	pull-r = pull --recurse-submodules
 	clone-r = clone --recursive
@@ -11,8 +19,16 @@
 	branches = branch -a
 	remotes = remote -v
 	aliases = config --get-regexp ^alias\\.
+
+[alias]
+	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save = stash save -u
 	scrub = ! git reset --hard && git clean -fdx
+
+[alias]
+	branched-when = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+	branched-diff = ! bash -c "echo; git diff $(git branched-when ${1:-main} ${2:-HEAD}).. #"
+	branched-rlog = ! bash -c "echo; git log-rs $(git branched-when ${1:-main} ${2:-HEAD}).. #"
 
 [commit]
 	gpgsign = true

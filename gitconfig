@@ -9,12 +9,12 @@
 
 [alias]
 	co = checkout
-	st = status -sb
-	unadd = reset HEAD
+	sb = status -sb
+	fb = "! fb () { git branch -a --contains $1 ; } ; fb"
 
 [alias]
-	pull-r = pull --recurse-submodules
 	clone-r = clone --recursive
+	pull-r = pull --recurse-submodules
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
@@ -22,7 +22,7 @@
 
 [alias]
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
-	save = stash save -u
+	save-u = stash save -u
 	scrub = ! git reset --hard && git clean -fdx
 
 [alias]
@@ -46,5 +46,24 @@
 	wdc = diff --word-diff=color
 
 [diff]
-	wordRegex = "[^][\\\"'[:space:],.;:()<>+={}/!@#^&*`?|]+|[][\\\"',.;:()<>+={}/!@#^&*`?|]"
+	wordRegex = "[^][\"'[:space:],.;:()<>+={}/!@#^&*`?|]+|[][\"',.;:()<>+={}/!@#^&*`?|]"
+
+[core]
+	editor = vim
+	# TODO autocrlf
+	safecrlf = true
+
+[status]
+	showStash = true
+	submoduleSummary = true
+
+[rebase]
+	stat = true
+
+[advice]
+	ignoredHook = true
+	detachedHead = false
+
+[rerere]
+	enabled = true
 

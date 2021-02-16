@@ -1,21 +1,12 @@
 
 function ResolveTo-AbsolutePath {
   [CmdletBinding()] param (
-[Parameter(Mandatory=$true, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
+[Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
 [string[]]$Path
   )
-
+process {
   $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
-}
-
-function Is-Numeric ($x) {
-  try {
-    0 + $x | Out-Null # [DBNull|NullString]::Value throw here; [string]::Empty|[AutomationNull]::Value do not
-    return ![string]::IsNullOrWhiteSpace($x)
-  } catch {
-    return $false
-  }
-}
+} }
 
 function Test-Elevated {
     $wid = [Security.Principal.WindowsIdentity]::GetCurrent()

@@ -80,11 +80,11 @@ hi LineNr ctermfg=DarkGrey ctermbg=black
 set noshowmatch
 if v:version >= 700 | hi MatchParen ctermfg=black | endif
 
-set tabstop=8
+set ts=8
+set sw=4
 set expandtab
-set softtabstop=4
-let &shiftwidth = &softtabstop
-set backspace=indent,eol,start
+set sts=0 sta
+set backspace=eol,nostop
 
 hi Tab ctermbg=232
 match Tab /\t/

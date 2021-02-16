@@ -139,3 +139,40 @@ $input | ConvertFrom-Json | ConvertTo-Json @args
 Set-Alias fj Format-Json
 
 
+function Parse-eyJ { [CmdletBinding()] param (
+        [Parameter(ValueFromPipeline)]
+        [string[]]$t )
+process {
+  $t |% {
+      $k = $_ -replace '-', '+' -replace '_', '/'
+      while ($k.Length % 4) { $k += '=' }
+      [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k)) | fj
+  }
+}
+}
+
+
+function Is-Numeric ($x) {
+  try {
+    0 + $x | Out-Null # [DBNull|NullString]::Value throw here; [string]::Empty|[AutomationNull]::Value do not
+    return ![string]::IsNullOrWhiteSpace($x)
+  } catch {
+    return $false
+  }
+}
+
+function Get-Epoch-Timestamp ($x) {
+  $epoch = Get-Date 1970-1-1
+  if (Is-Numeric $x) {
+    $datetime = $epoch.AddSeconds($x)
+    return (Get-Date $datetime -f s) + 'Z'
+  }
+  if ($null -eq $x) {
+    $datetime = (Get-Date).ToUniversalTime()
+  } else {
+    $datetime = (Get-Date $x).ToUniversalTime()
+  }
+  [int] ($datetime - $epoch).TotalSeconds
+}
+
+

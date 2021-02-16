@@ -23,7 +23,7 @@
 [alias]
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
-	scrub = ! git reset --hard && git clean -fdx
+	scour = ! git reset --hard && git clean -fdx
 
 [alias]
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
@@ -43,13 +43,14 @@
 	textconv = iconv -f utf-16 -t utf-8
 
 [alias]
-	wdc = diff --word-diff=color
+	dc = diff -w --word-diff=color
 
 [diff]
-	wordRegex = "[^][\"'[:space:],.;:()<>+={}/!@#^&*`?|]+|[][\"',.;:()<>+={}/!@#^&*`?|]"
+	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
 [core]
 	editor = vim
+	pager = cat
 	# TODO autocrlf
 	safecrlf = true
 
@@ -63,6 +64,9 @@
 [advice]
 	ignoredHook = true
 	detachedHead = false
+
+[color]
+	branch = false
 
 [rerere]
 	enabled = true

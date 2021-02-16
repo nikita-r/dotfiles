@@ -40,12 +40,13 @@ fu! ToggleVE()
 endfu
 nnoremap <F8> :call ToggleVE()<CR>
 
+set wrap nolbr
+
 set ai pastetoggle=<F2>
 au InsertLeave * set nopaste
 
 filetype plugin indent on
 syntax on
-
 let python_highlight_all = 1
 
 " Parse the entire file in order to correct syntax highlighting.
@@ -73,19 +74,18 @@ else
     endif
 endif
 
-set wrap nolbr
-set nu
+set nu nuw=5
 hi LineNr ctermfg=DarkGrey ctermbg=black
 
 set noshowmatch
 if v:version >= 700 | hi MatchParen ctermfg=black | endif
 
+set tabstop=8
 set expandtab
 set softtabstop=4
 let &shiftwidth = &softtabstop
 set backspace=indent,eol,start
 
-set tabstop=8
 hi Tab ctermbg=232
 match Tab /\t/
 
@@ -116,6 +116,10 @@ nmap Y y$
 nmap <C-k> "_dd
 vmap <C-k> "_d
 
+" please no Help
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Insert one character.
 nnoremap <Leader>i i<Space><Esc>r
 " Split the line.
@@ -135,7 +139,6 @@ inoremap <C-j>fn <C-r>=expand('%')<CR>
 inoremap <C-j>fp <C-r>=expand('%:p')<CR>
 
 runtime macros/matchit.vim
-"runtime macros/editexisting.vim
 
 runtime! vimrc/*.vim
 

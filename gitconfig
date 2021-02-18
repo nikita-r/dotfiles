@@ -11,6 +11,7 @@
 	co = checkout
 	sb = status -sb
 	fb = "! fb () { git branch -a --contains $1 ; } ; fb"
+	sf = submodule foreach --recursive
 
 [alias]
 	clone-r = clone --recursive
@@ -23,7 +24,9 @@
 [alias]
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
-	scour = ! git reset --hard && git clean -fdx
+	scour-n = clean -nxffd
+	scour-f = ! git reset --hard && git clean -xffd
+	puta = push --follow-tags
 
 [alias]
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
@@ -31,12 +34,12 @@
 	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 
 [commit]
-	gpgsign = true
+	gpgSign = false
 
-[url "git@github.com:"]
+[url "https://github.com/"]
 	insteadOf = "github:"
 
-[url "git@gist.github.com:"]
+[url "https://gist.github.com/"]
 	insteadOf = "gist:"
 
 [diff "utf-16"]
@@ -47,6 +50,16 @@
 
 [diff]
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
+	tool = bc
+
+[merge]
+	tool = bc
+
+[difftool "bc"]
+	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
+
+[mergetool "bc"]
+	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
 
 [core]
 	editor = vim

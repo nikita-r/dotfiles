@@ -84,12 +84,17 @@ set ts=8
 set sw=4
 set expandtab
 set sts=0 sta
+set backspace=eol,start
+
+if has('patch-8.2.0590')
 set backspace=eol,nostop
+endif
 
 hi Tab ctermbg=232
 match Tab /\t/
 
-set listchars=extends:>,precedes:<,trail:~,eol:$,nbsp:·,tab:↗↝
+set listchars=extends:>,precedes:<,trail:~,eol:$,nbsp:˽,tab:↗↝
+if has("patch-7.4.710") | set listchars+=space:· | endif
 
 set ic smartcase
 set wrapscan
@@ -106,8 +111,7 @@ vnoremap <silent> <F4> y:let @/='\V'.substitute(@",'\','\\\\','g')<CR>:set hls<C
 " was captured by typing <C-v><S-F3> in i-mode.
 set <S-F3>=[25~
 
-set noea
-set lazyredraw
+set noea lz
 
 map Q @q
 nmap Y y$

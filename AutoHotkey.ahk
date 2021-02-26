@@ -14,8 +14,8 @@ SetTitleMatchMode RegEx
 SendMode InputThenPlay
 
 
-;SetWorkingDir, D:
-;#c::Run run
+;SetWorkingDir, D:\rk
+;#c::Run pind.cmd
 ;+#c::Run %ComSpec%, %SystemDrive%\Windows\System32
 #c::Run %ComSpec%, %UserProfile%
 +#c::Run, *RunAs %ComSpec%

@@ -120,6 +120,12 @@ function Get-Timestamp {
 
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }
 
+function New-TemporaryDirectory {
+$path = Join-Path ([io.path]::GetTempPath()) ([guid]::NewGuid())
+$path += '.tmp.d'
+New-Item $path -Type Dir |% FullName
+}
+
 
 <# web dev helpers #>
 
@@ -131,8 +137,6 @@ function Get-AuthHeader-Basic ([string]${client_id}, [string]${client_secret}) {
 }
 
 function Format-Json {
-#[CmdletBinding()] param ()
-#if ($PSCmdlet.MyInvocation.PipelinePosition -eq 1) { throw }
 $input | ConvertFrom-Json | ConvertTo-Json @args
 }
 

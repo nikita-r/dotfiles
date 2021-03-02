@@ -1,0 +1,9 @@
+{
+	"editor.autoClosingBrackets": "never",
+	"window.titleSeparator": " · ",
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.tabCloseButton": "off",
+	"workbench.editor.wrapTabs": true,
+	"powershell.scriptAnalysis.enable": false,
+	"files.exclude": { "obj/": true, "bin/": true }
+}

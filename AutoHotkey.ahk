@@ -82,12 +82,6 @@ Tab::Send {Space 4}
 +Tab::Send   {bs 4}
 ^Tab::Send {Tab}
 
-; Ruby REPL
-#If WinActive("ahk_class ConsoleWindowClass") and WinActive(" - ruby$")
-Tab::Send {Space 2}
-+Tab::Send   {bs 2}
-^Tab::Send {Tab}
-
 #If
 ; please do not Cut
 +Del::Send {Del}

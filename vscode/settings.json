@@ -10,6 +10,7 @@
 
 	"editor.wordSeparators": "./\\\"',.;:()<>!@#^&*|+={}`?[]·",
 
+	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
 
@@ -23,6 +24,7 @@
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.wrapTabs": true,
 
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.scriptAnalysis.enable": false,
 

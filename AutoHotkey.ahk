@@ -23,6 +23,8 @@ SendMode InputThenPlay
 #n::Run Notepad, %UserProfile%\Documents
 +#n::Run, *RunAs Notepad
 
+#g::Run https://www.google.com/search?q=%clipboard%
+
 F1:: ; nope
 return
 

@@ -4,6 +4,15 @@
 	name = nikita-r
 	email = nikita-r@device
 
+[commit]
+	gpgSign = false
+
+[url "https://github.com/"]
+	insteadOf = "github:"
+
+[url "https://gist.github.com/"]
+	insteadOf = "gist:"
+
 [init]
 	defaultBranch = main
 
@@ -32,15 +41,6 @@
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
 	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
-
-[commit]
-	gpgSign = false
-
-[url "https://github.com/"]
-	insteadOf = "github:"
-
-[url "https://gist.github.com/"]
-	insteadOf = "gist:"
 
 [diff "utf-16"]
 	textconv = iconv -f utf-16 -t utf-8

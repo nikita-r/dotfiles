@@ -23,6 +23,7 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	"window.newWindowDimensions": "inherit",
+	"workbench.editor.enablePreview": false,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",

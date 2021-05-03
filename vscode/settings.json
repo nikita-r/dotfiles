@@ -1,6 +1,9 @@
 {
 	"window.titleSeparator": " · ",
 
+	"explorer.openEditors.visible": 0,
+	//"explorer.sortOrder": "modified",
+
 	"update.mode": "none",
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
@@ -12,35 +15,39 @@
 
 	"editor.wordSeparators": "./\\\"',.;:()<>!@#^&*|+={}`?[]·",
 
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
 
+	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
 
-	//"explorer.sortOrder": "modified",
+	//"editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+	//"editor.fontLigatures": true,
+
+	"workbench.editor.enablePreview": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
+	"workbench.tree.renderIndentGuides": "always",
 
 	"window.newWindowDimensions": "inherit",
-	"workbench.editor.enablePreview": false,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.wrapTabs": true,
 
-	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": true,
 
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.scriptAnalysis.enable": false,
 
-	"editor.find.cursorMoveOnType": false,
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
+	"editor.renderIndentGuides": false,
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.hotExit": "off"

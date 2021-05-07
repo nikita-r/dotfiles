@@ -1,7 +1,7 @@
 set nocompatible
 set encoding=utf-8
 
-" Don't get reminded about poor children in Uganda.
+" no intro message
 set shortmess+=I
 
 let s:uname = system('uname')
@@ -20,7 +20,7 @@ set notimeout ttimeout ttimeoutlen=10
 set history=200
 set ul=1000
 
-" Don't lose the undo tree when I leave buffer.
+" Don't lose the undo tree upon leaving a buffer.
 set hid
 
 set ls=2
@@ -124,15 +124,13 @@ vmap <C-k> "_d
 map <F1> <Esc>
 imap <F1> <Esc>
 
-" Insert one character.
+" follow the leader
 nnoremap <Leader>i i<Space><Esc>r
-" Split the line.
 nmap <Leader>n <Leader>i<CR>
+nnoremap <Leader>b :ls<CR>:buffer<Space>
 
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
-
-nnoremap <Leader>b :ls<CR>:buffer<Space>
 
 inoremap <C-j><C-j> <C-j>
 inoremap <C-j>date <C-r>=strftime('%Y-%m-%d')<CR>
@@ -147,4 +145,7 @@ runtime macros/matchit.vim
 runtime! vimrc/*.vim
 
 set dir=~/.vim/swap-files//
+
+" no monkeying with system clipboard
+set clipboard=
 

@@ -20,6 +20,7 @@
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
 
+	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
@@ -40,18 +41,25 @@
 
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": true,
-	"diffEditor.renderIndicators": false,
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
 	"editor.renderIndentGuides": false,
+	"diffEditor.renderIndicators": false,
+
+	/* extensions */
 
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
 
+	"python.autoUpdateLanguageServer": false,
+	"python.showStartPage": false,
+
 	"todo-tree.highlights.enabled": false,
+
+	/* files */
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.hotExit": "off"

@@ -27,7 +27,7 @@
 	//"editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
 	//"editor.fontLigatures": true,
 
-	"workbench.editor.enablePreview": false,
+	//"workbench.editor.enablePreview": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.tree.renderIndentGuides": "always",
 
@@ -40,14 +40,18 @@
 
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": true,
-
-	"powershell.integratedConsole.suppressStartupBanner": true,
-	"powershell.scriptAnalysis.enable": false,
+	"diffEditor.renderIndicators": false,
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
 	"editor.renderIndentGuides": false,
+
+	"powershell.integratedConsole.suppressStartupBanner": true,
+	"powershell.promptToUpdatePowerShell": false,
+	"powershell.scriptAnalysis.enable": false,
+
+	"todo-tree.highlights.enabled": false,
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.hotExit": "off"

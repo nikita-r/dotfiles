@@ -46,9 +46,11 @@
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
 	"editor.renderIndentGuides": false,
+
+	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 
-	/* extensions */
+	/* Extensions */
 
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
@@ -59,7 +61,7 @@
 
 	"todo-tree.highlights.enabled": false,
 
-	/* files */
+	/* Files */
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.hotExit": "off"

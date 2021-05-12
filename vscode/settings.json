@@ -40,7 +40,7 @@
 	"workbench.editor.wrapTabs": true,
 
 	"editor.cursorBlinking": "phase",
-	"editor.cursorSmoothCaretAnimation": true,
+	//"editor.cursorSmoothCaretAnimation": true,
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,

@@ -25,7 +25,7 @@
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
 
-	//"editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+	//"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
 	//"editor.fontLigatures": true,
 
 	//"workbench.editor.enablePreview": false,
@@ -49,6 +49,15 @@
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
+	"problems.showCurrentInStatus": true,
+
+	"editor.inlineHints.fontFamily": "Courier New",
+	"editor.inlineHints.fontSize": 13,
+
+	"git.enableStatusBarSync": false,
+	"scm.alwaysShowRepositories": true,
+	"scm.inputFontFamily": "editor",
+	"scm.inputFontSize": 14,
 
 	/* Extensions */
 
@@ -60,6 +69,7 @@
 	"python.showStartPage": false,
 
 	"todo-tree.highlights.enabled": false,
+	"todo-tree.tree.showBadges": false,
 
 	/* Files */
 

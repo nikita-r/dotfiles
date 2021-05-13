@@ -51,11 +51,13 @@
 	"diffEditor.renderIndicators": false,
 	"problems.showCurrentInStatus": true,
 
-	"editor.inlineHints.fontFamily": "Courier New",
-	"editor.inlineHints.fontSize": 13,
+	"editor.inlineHints.fontFamily": "Wingdings",
+	"editor.inlineHints.fontSize": 11,
 
-	"git.enableStatusBarSync": false,
 	"scm.alwaysShowRepositories": true,
+	"git.enableStatusBarSync": false,
+	"git.rebaseWhenSync": true,
+	"git.showCommitInput": false,
 	"scm.inputFontFamily": "editor",
 	"scm.inputFontSize": 14,
 

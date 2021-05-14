@@ -1,5 +1,18 @@
 [
 	{
+		"key": "ctrl+shift+u",
+		"command": "cursorRedo",
+		//"when": "textInputFocus"
+	},
+
+	{
+		"key": "alt+q",
+		"command": "workbench.action.closeEditorsInOtherGroups",
+		"when": "editorFocus"
+	},
+
+	/* Ctrl+Shift+Arrow */
+	{
 		"key": "ctrl+alt+up",
 		"command": "-editor.action.insertCursorAbove",
 		"when": "editorTextFocus"
@@ -18,5 +31,47 @@
 		"key": "ctrl+shift+down",
 		"command": "editor.action.insertCursorBelow",
 		"when": "editorTextFocus"
+	},
+
+	/* Ctrl+Shift+(D|L) */
+	{
+		"key": "ctrl+shift+l",
+		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "-workbench.view.debug",
+		"when": "viewContainer.workbench.view.debug.enabled"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "-selectAllSearchEditorMatches",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "selectAllSearchEditorMatches",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "-editor.action.selectHighlights",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.selectHighlights",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "-addCursorsAtSearchResults",
+		"when": "fileMatchOrMatchFocus && searchViewletVisible"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "addCursorsAtSearchResults",
+		"when": "fileMatchOrMatchFocus && searchViewletVisible"
 	},
 ]

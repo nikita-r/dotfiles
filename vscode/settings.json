@@ -50,9 +50,12 @@
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 	"problems.showCurrentInStatus": true,
+	"workbench.editor.untitled.hint": "hidden",
 
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,
+
+	/* SCM */
 
 	"scm.alwaysShowRepositories": true,
 	"git.enableStatusBarSync": false,

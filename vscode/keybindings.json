@@ -1,4 +1,8 @@
 [
+	/*
+	$: editor.action.showHover: "cmd+k cmd+i"
+	*/
+
 	{
 		"key": "ctrl+shift+u",
 		"command": "cursorRedo",
@@ -37,7 +41,7 @@
 	{
 		"key": "ctrl+shift+l",
 		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorTextFocus"
+		"when": "editorHasSelection"
 	},
 	{
 		"key": "ctrl+shift+d",
@@ -74,4 +78,9 @@
 		"command": "addCursorsAtSearchResults",
 		"when": "fileMatchOrMatchFocus && searchViewletVisible"
 	},
+
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	}
 ]

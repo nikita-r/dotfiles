@@ -54,6 +54,7 @@
 
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,
+	//"editor.rulers": [ 80, 120 ],
 
 	/* SCM */
 

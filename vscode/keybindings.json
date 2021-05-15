@@ -1,7 +1,5 @@
 [
 	/*
-	$: breadcrumbs.focusAndSelect: "ctrl+shift+."
-	$: editor.action.jumpToBracket: "ctrl+shift+\\"
 	$: editor.action.showHover: "cmd+k cmd+i"
 	*/
 
@@ -9,6 +7,16 @@
 		"key": "ctrl+shift+u",
 		"command": "cursorRedo",
 		//"when": "textInputFocus"
+	},
+
+	/* default bindings, but with "when" removed */
+	{
+		"key": "ctrl+shift+.",
+		"command": "breadcrumbs.focusAndSelect"
+	},
+	{
+		"key": "ctrl+shift+\\",
+		"command": "editor.action.jumpToBracket"
 	},
 
 	/* close tabs that been split */

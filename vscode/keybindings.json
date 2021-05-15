@@ -80,6 +80,15 @@
 	},
 
 	{
+		"key": "ctrl+,",
+		"command": "editor.action.marker.next",
+	},
+	{
+		"key": "shift+ctrl+,",
+		"command": "editor.action.marker.prev",
+	},
+
+	{
 		"key": "ctrl+shift+w",
 		"command": "-workbench.action.closeWindow"
 	}

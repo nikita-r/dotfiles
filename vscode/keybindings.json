@@ -162,6 +162,24 @@
 		"when": "textCompareEditorVisible"
 	},
 
+	/* moveEditor↑Group */
+	{
+		"key": "ctrl+shift+alt+up",
+		"command": "workbench.action.moveEditorToAboveGroup"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "workbench.action.moveEditorToBelowGroup"
+	},
+	{
+		"key": "ctrl+shift+alt+left",
+		"command": "workbench.action.moveEditorToLeftGroup"
+	},
+	{
+		"key": "ctrl+shift+alt+right",
+		"command": "workbench.action.moveEditorToRightGroup"
+	},
+
 	/* la dernière */
 	{
 		"key": "ctrl+shift+w",

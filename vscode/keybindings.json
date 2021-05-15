@@ -1,5 +1,7 @@
 [
 	/*
+	$: breadcrumbs.focusAndSelect: "ctrl+shift+."
+	$: editor.action.jumpToBracket: "ctrl+shift+\\"
 	$: editor.action.showHover: "cmd+k cmd+i"
 	*/
 
@@ -9,6 +11,7 @@
 		//"when": "textInputFocus"
 	},
 
+	/* close tabs that been split */
 	{
 		"key": "alt+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
@@ -79,6 +82,17 @@
 		"when": "fileMatchOrMatchFocus && searchViewletVisible"
 	},
 
+	/* Ctrl+,: jump to next error */
+	{
+		"key": "ctrl+shift+,",
+		"command": "-editor.action.inPlaceReplace.up",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+.",
+		"command": "-editor.action.inPlaceReplace.down",
+		"when": "editorTextFocus && !editorReadonly"
+	},
 	{
 		"key": "ctrl+,",
 		"command": "editor.action.marker.next",
@@ -88,6 +102,59 @@
 		"command": "editor.action.marker.prev",
 	},
 
+	/* Ctrl+[][]: jump to next change */
+	{
+		"key": "ctrl+]",
+		"command": "-editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "-editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+f5",
+		"command": "-workbench.action.editor.nextChange",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+f5",
+		"command": "-workbench.action.editor.previousChange",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.editor.nextChange",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.editor.previousChange",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+f5",
+		"command": "-workbench.action.compareEditor.nextChange",
+		"when": "textCompareEditorVisible"
+	},
+	{
+		"key": "shift+alt+f5",
+		"command": "-workbench.action.compareEditor.previousChange",
+		"when": "textCompareEditorVisible"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.compareEditor.nextChange",
+		"when": "textCompareEditorVisible"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.compareEditor.previousChange",
+		"when": "textCompareEditorVisible"
+	},
+
+	/* la dernière */
 	{
 		"key": "ctrl+shift+w",
 		"command": "-workbench.action.closeWindow"

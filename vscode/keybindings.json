@@ -164,19 +164,19 @@
 
 	/* moveEditor↑Group */
 	{
-		"key": "ctrl+shift+alt+up",
+		"key": "ctrl+k shift+k",
 		"command": "workbench.action.moveEditorToAboveGroup"
 	},
 	{
-		"key": "ctrl+shift+alt+down",
+		"key": "ctrl+k shift+j",
 		"command": "workbench.action.moveEditorToBelowGroup"
 	},
 	{
-		"key": "ctrl+shift+alt+left",
+		"key": "ctrl+k shift+h",
 		"command": "workbench.action.moveEditorToLeftGroup"
 	},
 	{
-		"key": "ctrl+shift+alt+right",
+		"key": "ctrl+k shift+l",
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 

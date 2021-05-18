@@ -19,6 +19,7 @@
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
+	"editor.quickSuggestionsDelay": 1000,
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
@@ -32,7 +33,6 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.tree.renderIndentGuides": "always",
 
-	"window.newWindowDimensions": "inherit",
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
@@ -55,12 +55,19 @@
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
+	"editor.copyWithSyntaxHighlighting": false,
+	"explorer.autoReveal": false,
 
 	/* SCM */
 
 	"scm.alwaysShowRepositories": true,
+	"scm.autoReveal": false,
+
 	"git.enableStatusBarSync": false,
+	//"git.followTagsWhenSync": true,
 	"git.rebaseWhenSync": true,
+	"git.showPushSuccessNotification": true,
+
 	"git.showCommitInput": false,
 	"scm.inputFontFamily": "editor",
 	"scm.inputFontSize": 14,
@@ -77,8 +84,12 @@
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.tree.showBadges": false,
 
-	/* Files */
+	/* Exit / Init */
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
-	"files.hotExit": "off"
+	"files.hotExit": "off",
+	"terminal.integrated.confirmOnExit": true,
+	"window.newWindowDimensions": "offset",
+	"workbench.startupEditor": "none",
+	"zenMode.restore": false,
 }

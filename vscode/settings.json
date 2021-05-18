@@ -19,7 +19,9 @@
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
-	"editor.quickSuggestionsDelay": 1000,
+
+	//"editor.quickSuggestions": false,
+	"editor.quickSuggestionsDelay": 0,
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
@@ -31,6 +33,7 @@
 
 	//"workbench.editor.enablePreview": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
+	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
 	"workbench.editor.showIcons": false,
@@ -49,13 +52,15 @@
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
+	"editor.copyWithSyntaxHighlighting": false,
+	"editor.fastScrollSensitivity": 17,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 
+	"editor.hover.enabled": false,
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
-	"editor.copyWithSyntaxHighlighting": false,
 	"explorer.autoReveal": false,
 
 	/* SCM */

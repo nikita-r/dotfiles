@@ -53,7 +53,7 @@
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 	"editor.copyWithSyntaxHighlighting": false,
-	"editor.fastScrollSensitivity": 17,
+	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 

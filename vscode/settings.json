@@ -52,6 +52,7 @@
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
+	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
@@ -67,6 +68,7 @@
 
 	"scm.alwaysShowRepositories": true,
 	"scm.autoReveal": false,
+	"scm.repositories.visible": 0,
 
 	"git.enableStatusBarSync": false,
 	//"git.followTagsWhenSync": true,
@@ -84,6 +86,10 @@
 	"powershell.scriptAnalysis.enable": false,
 
 	"python.autoUpdateLanguageServer": false,
+	"python.linting.pylintEnabled": false,
+	//"python.linting.flake8Enabled": true,
+	"python.linting.pycodestyleEnabled": true,
+	"python.linting.pydocstyleEnabled": true,
 	"python.showStartPage": false,
 
 	"todo-tree.highlights.enabled": false,
@@ -91,10 +97,11 @@
 
 	/* Exit / Init */
 
-	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.hotExit": "off",
 	"terminal.integrated.confirmOnExit": true,
 	"window.newWindowDimensions": "offset",
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
+
+	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 }

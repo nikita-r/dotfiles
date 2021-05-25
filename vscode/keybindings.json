@@ -1,12 +1,25 @@
 [
 	/*
-	$: editor.action.showHover: "cmd+k cmd+i"
+	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
+	$: workbench.action.gotoSymbol: "ctrl+shift+o"
+	$: workbench.action.togglePanel: "ctrl+j"
 	*/
 
 	{
 		"key": "ctrl+shift+u",
 		"command": "cursorRedo",
 		//"when": "textInputFocus"
+	},
+
+	/* use the quickOpenView key to showHover; when inDebugMode, use this key to showHover instead of showDebugHover */
+	{
+		"key": "ctrl+q",
+		"command": "editor.action.showHover",
+		//"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "noop"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -162,7 +175,7 @@
 		"when": "textCompareEditorVisible"
 	},
 
-	/* moveEditor↑Group */
+	/* moveEditor→Group */
 	{
 		"key": "ctrl+k shift+k",
 		"command": "workbench.action.moveEditorToAboveGroup"
@@ -180,9 +193,9 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
-	/* la dernière */
 	{
-		"key": "ctrl+shift+w",
-		"command": "-workbench.action.closeWindow"
-	}
+		"key": "ctrl+shift+/",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
 ]

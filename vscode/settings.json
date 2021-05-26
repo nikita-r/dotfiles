@@ -1,7 +1,6 @@
 {
 	"window.titleSeparator": " · ",
 
-	"explorer.openEditors.visible": 0,
 	//"explorer.sortOrder": "modified",
 
 	"update.mode": "manual",
@@ -37,10 +36,10 @@
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
+	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
-	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.wrapTabs": true,
 
 	"editor.cursorBlinking": "phase",
@@ -64,6 +63,7 @@
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
 	"explorer.autoReveal": false,
+	"explorer.openEditors.visible": 0,
 
 	/* SCM */
 
@@ -93,7 +93,9 @@
 	"python.linting.pydocstyleEnabled": true,
 	"python.showStartPage": false,
 
+	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
+	"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.tree.showBadges": false,
 
 	/* Exit / Init */

@@ -56,30 +56,12 @@
 	},
 
 	/* Ctrl+Shift+(D|L) */
-	{
-		"key": "ctrl+shift+l",
-		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorHasSelection"
-	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "-workbench.view.debug",
-		"when": "viewContainer.workbench.view.debug.enabled"
-	},
-	{
-		"key": "ctrl+shift+l",
-		"command": "-selectAllSearchEditorMatches",
-		"when": "inSearchEditor"
-	},
+	{ "key": "ctrl+shift+d" },
+	{ "key": "ctrl+shift+l" },
 	{
 		"key": "ctrl+shift+d",
 		"command": "selectAllSearchEditorMatches",
 		"when": "inSearchEditor"
-	},
-	{
-		"key": "ctrl+shift+l",
-		"command": "-editor.action.selectHighlights",
-		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+shift+d",
@@ -87,14 +69,14 @@
 		"when": "editorFocus"
 	},
 	{
-		"key": "ctrl+shift+l",
-		"command": "-addCursorsAtSearchResults",
-		"when": "fileMatchOrMatchFocus && searchViewletVisible"
-	},
-	{
 		"key": "ctrl+shift+d",
 		"command": "addCursorsAtSearchResults",
 		"when": "fileMatchOrMatchFocus && searchViewletVisible"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "editorHasSelection"
 	},
 
 	/* Ctrl+,: jump to next error */
@@ -117,27 +99,11 @@
 		"command": "editor.action.marker.prev",
 	},
 
-	/* Ctrl+[][]: jump to next change */
-	{
-		"key": "ctrl+]",
-		"command": "-editor.action.indentLines",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "-editor.action.outdentLines",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "alt+f5",
-		"command": "-workbench.action.editor.nextChange",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+f5",
-		"command": "-workbench.action.editor.previousChange",
-		"when": "editorTextFocus"
-	},
+	/* Ctrl+[][]: jump to next change; remove any non-Debug use of F5 */
+	{ "key": "ctrl+]" },
+	{ "key": "ctrl+[" },
+	{ "key": "alt+f5" },
+	{ "key": "shift+alt+f5" },
 	{
 		"key": "ctrl+]",
 		"command": "workbench.action.editor.nextChange",
@@ -147,16 +113,6 @@
 		"key": "ctrl+[",
 		"command": "workbench.action.editor.previousChange",
 		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+f5",
-		"command": "-workbench.action.compareEditor.nextChange",
-		"when": "textCompareEditorVisible"
-	},
-	{
-		"key": "shift+alt+f5",
-		"command": "-workbench.action.compareEditor.previousChange",
-		"when": "textCompareEditorVisible"
 	},
 	{
 		"key": "ctrl+]",

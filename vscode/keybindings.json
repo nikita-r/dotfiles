@@ -11,6 +11,7 @@
 		//"when": "textInputFocus"
 	},
 
+	/* Q */
 	/* use the quickOpenView key to showHover; when inDebugMode, use this key to showHover instead of showDebugHover */
 	{
 		"key": "ctrl+q",
@@ -20,6 +21,12 @@
 	{
 		"key": "ctrl+shift+q",
 		"command": "noop"
+	},
+	/* close tabs that been split */
+	{
+		"key": "alt+q",
+		"command": "workbench.action.closeEditorsInOtherGroups",
+		"when": "editorFocus"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -32,24 +39,11 @@
 		"command": "editor.action.jumpToBracket"
 	},
 
-	/* close tabs that been split */
-	{
-		"key": "alt+q",
-		"command": "workbench.action.closeEditorsInOtherGroups",
-		"when": "editorFocus"
-	},
-
-	/* Ctrl+Shift+Arrow */
-	{
-		"key": "ctrl+alt+up",
-		"command": "-editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+alt+down",
-		"command": "-editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
-	},
+	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
+	{ "key": "ctrl+alt+up" },
+	{ "key": "ctrl+alt+down" },
+	{ "key": "ctrl+alt+left" },
+	{ "key": "ctrl+alt+right" },
 	{
 		"key": "ctrl+shift+up",
 		"command": "editor.action.insertCursorAbove",

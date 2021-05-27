@@ -45,6 +45,11 @@
 [diff "utf-16"]
 	textconv = iconv -f utf-16 -t utf-8
 
+[diff "rtf"]
+	textconv = unrtf --text
+	binary = true
+	cachetextconv = true
+
 [alias]
 	dc = diff -w --word-diff=color
 

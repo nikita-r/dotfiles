@@ -102,6 +102,7 @@
 
 	"files.hotExit": "off",
 	"terminal.integrated.confirmOnExit": true,
+	"terminal.integrated.tabs.enabled": true,
 	"window.dialogStyle": "custom",
 	"window.newWindowDimensions": "offset",
 	"workbench.startupEditor": "none",

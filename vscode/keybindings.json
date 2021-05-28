@@ -2,6 +2,7 @@
 	/*
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
+	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
 	*/
 
@@ -36,7 +37,7 @@
 	},
 	{
 		"key": "ctrl+shift+\\",
-		"command": "editor.action.jumpToBracket"
+		"command": "workbench.action.terminal.focusTabs"
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
@@ -125,22 +126,31 @@
 		"when": "textCompareEditorVisible"
 	},
 
+	/* vim-like panes navigation */
+	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
+	{ "key": "ctrl+k j", "command": "workbench.action.navigateDown" },
+	{ "key": "ctrl+k h", "command": "workbench.action.navigateLeft" },
+	{ "key": "ctrl+k l", "command": "workbench.action.navigateRight" },
 	/* moveEditor→Group */
 	{
 		"key": "ctrl+k shift+k",
-		"command": "workbench.action.moveEditorToAboveGroup"
+		"command": "workbench.action.moveEditorToAboveGroup",
+		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+j",
-		"command": "workbench.action.moveEditorToBelowGroup"
+		"command": "workbench.action.moveEditorToBelowGroup",
+		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+h",
-		"command": "workbench.action.moveEditorToLeftGroup"
+		"command": "workbench.action.moveEditorToLeftGroup",
+		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+l",
-		"command": "workbench.action.moveEditorToRightGroup"
+		"command": "workbench.action.moveEditorToRightGroup",
+		"when": "editorFocus"
 	},
 
 	{

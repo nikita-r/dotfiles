@@ -13,7 +13,7 @@
 	"telemetry.enableTelemetry": false,
 	"workbench.enableExperiments": false,
 
-	"editor.wordSeparators": "./\\\"',.;:()<>!@#^&*|+={}`?[]·",
+	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
@@ -107,6 +107,13 @@
 	"window.newWindowDimensions": "offset",
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
+
+	/* Format */
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"html.format.wrapAttributesIndentSize": 1,
+	"powershell.codeFormatting.preset": "OTBS",
+	"powershell.codeFormatting.useCorrectCasing": true,
+	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 }

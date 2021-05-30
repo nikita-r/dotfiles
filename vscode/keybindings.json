@@ -1,15 +1,21 @@
 [
 	/*
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
+	$: editor.fold: Ctrl+Shift+[][]
+	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
 	*/
 
+	/* Sublime Text */
 	{
-		"key": "ctrl+shift+u",
 		"command": "cursorRedo",
-		//"when": "textInputFocus"
+		"key": "ctrl+shift+u"
+	},
+	{
+		"command": "editor.action.jumpToBracket",
+		"key": "ctrl+m"
 	},
 
 	/* Q */
@@ -19,13 +25,9 @@
 		"command": "editor.action.showHover",
 		//"when": "editorTextFocus"
 	},
-	{
-		"key": "ctrl+shift+q",
-		"command": "noop"
-	},
 	/* close tabs that been split */
 	{
-		"key": "alt+q",
+		"key": "ctrl+shift+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
 		"when": "editorFocus"
 	},
@@ -41,10 +43,10 @@
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
-	{ "key": "ctrl+alt+up" },
-	{ "key": "ctrl+alt+down" },
-	{ "key": "ctrl+alt+left" },
-	{ "key": "ctrl+alt+right" },
+	{ "command": "noop", "key": "ctrl+alt+up" },
+	{ "command": "noop", "key": "ctrl+alt+down" },
+	{ "command": "noop", "key": "ctrl+alt+left" },
+	{ "command": "noop", "key": "ctrl+alt+right" },
 	{
 		"key": "ctrl+shift+up",
 		"command": "editor.action.insertCursorAbove",
@@ -57,8 +59,8 @@
 	},
 
 	/* Ctrl+Shift+(D|L) */
-	{ "key": "ctrl+shift+d" },
-	{ "key": "ctrl+shift+l" },
+	{ "command": "noop", "key": "ctrl+shift+d" },
+	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
 		"key": "ctrl+shift+d",
 		"command": "selectAllSearchEditorMatches",
@@ -92,19 +94,19 @@
 		"when": "editorTextFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+,",
 		"command": "editor.action.marker.next",
+		"key": "ctrl+,"
 	},
 	{
-		"key": "shift+ctrl+,",
 		"command": "editor.action.marker.prev",
+		"key": "shift+ctrl+,"
 	},
 
 	/* Ctrl+[][]: jump to next change; remove any non-Debug use of F5 */
-	{ "key": "ctrl+]" },
-	{ "key": "ctrl+[" },
-	{ "key": "alt+f5" },
-	{ "key": "shift+alt+f5" },
+	{ "command": "noop", "key": "ctrl+]" },
+	{ "command": "noop", "key": "ctrl+[" },
+	{ "command": "noop", "key": "alt+f5" },
+	{ "command": "noop", "key": "shift+alt+f5" },
 	{
 		"key": "ctrl+]",
 		"command": "workbench.action.editor.nextChange",

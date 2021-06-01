@@ -1,6 +1,6 @@
 {
 	"window.titleSeparator": " · ",
-
+	"window.title": "Code${separator}${dirty}${activeEditorShort}${separator}${rootName}",
 	//"explorer.sortOrder": "modified",
 
 	"update.mode": "manual",

@@ -29,7 +29,6 @@
 	{
 		"key": "ctrl+shift+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
-		"when": "editorFocus"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -137,24 +136,63 @@
 	{
 		"key": "ctrl+k shift+k",
 		"command": "workbench.action.moveEditorToAboveGroup",
-		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+j",
 		"command": "workbench.action.moveEditorToBelowGroup",
-		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+h",
 		"command": "workbench.action.moveEditorToLeftGroup",
-		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+k shift+l",
 		"command": "workbench.action.moveEditorToRightGroup",
-		"when": "editorFocus"
 	},
 
+	/* Zoom */
+	{
+		"key": "ctrl+9",
+		"command": "-workbench.action.lastEditorInGroup"
+	},
+	{
+		"key": "ctrl+0",
+		"command": "-workbench.action.focusSideBar"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "workbench.action.zoomIn"
+	},
+	{
+		"key": "ctrl+shift+=",
+		"command": "workbench.action.zoomOut"
+	},
+	{
+		"key": "ctrl+0",
+		"command": "workbench.action.zoomReset"
+	},
+
+	/* "move", "args": {"by": "subwords", "forward": ? */
+	{
+		"key": "alt+left",
+		"command": "cursorWordPartLeft"
+	},
+	{
+		"key": "alt+right",
+		"command": "cursorWordPartRight"
+	},
+
+	/* [VS] View.Navigate */
+	{
+		"key": "ctrl+-",
+		"command": "workbench.action.navigateBack"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "workbench.action.navigateForward"
+	},
+
+	/* "toggle_comment", "args": { "block": true */
 	{
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",

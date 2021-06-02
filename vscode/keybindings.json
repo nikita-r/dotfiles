@@ -1,5 +1,6 @@
 [
 	/*
+	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.fold: Ctrl+Shift+[][]
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
@@ -25,10 +26,12 @@
 		"command": "editor.action.showHover",
 		//"when": "editorTextFocus"
 	},
+	{ "command": "noop", "key": "ctrl+shift+q" },
 	/* close tabs that been split */
 	{
 		"key": "ctrl+shift+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
+		"when": "editorTextFocus"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -150,7 +153,7 @@
 		"command": "workbench.action.moveEditorToRightGroup",
 	},
 
-	/* Zoom */
+	/* ±zoom */
 	{
 		"key": "ctrl+9",
 		"command": "-workbench.action.lastEditorInGroup"
@@ -190,6 +193,20 @@
 	{
 		"key": "ctrl+shift+-",
 		"command": "workbench.action.navigateForward"
+	},
+
+	/* selection anchor */
+	{ "command": "noop", "key": "ctrl+k ctrl+k" },
+	{ "command": "noop", "key": "ctrl+k Escape" },
+	{
+		"key": "ctrl+k ctrl+k",
+		"command": "editor.action.selectFromAnchorToCursor",
+		"when": "editorTextFocus && selectionAnchorSet"
+	},
+	{
+		"key": "ctrl+k ctrl+g",
+		"command": "editor.action.goToSelectionAnchor",
+		"when": "editorTextFocus && selectionAnchorSet"
 	},
 
 	/* "toggle_comment", "args": { "block": true */

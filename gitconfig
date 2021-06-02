@@ -55,16 +55,23 @@
 
 [diff]
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
-	tool = bc
 
+# Beyond Compare
+[diff]
+	tool = bc
+	#tool = bc3
 [merge]
 	tool = bc
-
+	#tool = bc3
 [difftool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
-
 [mergetool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
+# Use bc3 under Linux
+[difftool "bc3"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
 
 [core]
 	editor = vim

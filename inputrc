@@ -1,9 +1,11 @@
 $include /etc/inputrc
 
-set show-all-if-unmodified off
+Control-b: unix-filename-rubout
+
+set revert-all-at-newline on
+
+set show-all-if-unmodified on
 set show-all-if-ambiguous off
-Control-j: menu-complete
-Control-h: menu-complete-backward
 
 set mark-directories on
 set mark-symlinked-directories on
@@ -13,10 +15,10 @@ set match-hidden-files off
 set completion-ignore-case off
 set completion-map-case off
 
+Control-j: menu-complete
+Control-h: menu-complete-backward
 Control-n: history-search-forward
 Control-p: history-search-backward
 
-Control-b: unix-filename-rubout
-
-#set bell-style visible
+"\C-x\C-i": dynamic-complete-history
 

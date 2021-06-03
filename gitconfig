@@ -93,6 +93,9 @@
 [color]
 	branch = false
 
+[alias]
+	tm = merge --no-ff --no-commit
+
 [rerere]
 	enabled = true
 

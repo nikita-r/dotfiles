@@ -12,7 +12,9 @@ function set-prompt {
     PS1="\[\e[0;34m\]$1\[\e[1;31m\]|\[\e[0;34m\]> \[\e[0m\]"
 }
 
-alias grep='grep --color=auto'
+alias cp='cp --reflink=auto --sparse=always'
+
+alias grep='grep --colour'
 
 alias ls='ls --color=auto'
 alias la='ls -A'
@@ -38,6 +40,7 @@ HISTIGNORE+=":lsusb:lsscsi:lsblk"
 HISTIGNORE+=":mount:free -m:last"
 HISTIGNORE+=":sensors:rfkill:ip link:iwctl:bluetoothctl:journalctl"
 HISTIGNORE+=":systemctl poweroff:systemctl reboot:systemctl status"
+HISTIGNORE+=":gitk"
 
 declare -a comps=( weston sway )
 for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done

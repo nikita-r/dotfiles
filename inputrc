@@ -15,8 +15,8 @@ set match-hidden-files off
 set completion-ignore-case off
 set completion-map-case off
 
-Control-j: menu-complete
-Control-h: menu-complete-backward
+Control-f: menu-complete
+Control-d: menu-complete-backward
 Control-n: history-search-forward
 Control-p: history-search-backward
 

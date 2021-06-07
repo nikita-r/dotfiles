@@ -14,6 +14,10 @@
 		"key": "ctrl+y"
 	},
 	{ "command": "noop", "key": "ctrl+shift+u" },
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.selectHighlights"
+	},
 
 	/* Sublime Text */
 	{
@@ -31,15 +35,14 @@
 	/* use the quickOpenView key to showHover; when inDebugMode, use this key to showHover instead of showDebugHover */
 	{
 		"key": "ctrl+q",
-		"command": "editor.action.showHover",
-		//"when": "editorTextFocus"
+		"command": "editor.action.showHover"
 	},
 	{ "command": "noop", "key": "ctrl+shift+q" },
 	/* close tabs that been split */
 	{
 		"key": "ctrl+shift+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
-		"when": "editorTextFocus"
+		"when": "editorFocus"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -66,24 +69,6 @@
 		"key": "ctrl+shift+down",
 		"command": "editor.action.insertCursorBelow",
 		"when": "editorTextFocus"
-	},
-
-	/* Ctrl+Shift+D */
-	{ "command": "noop", "key": "ctrl+shift+d" },
-	{
-		"key": "ctrl+shift+d",
-		"command": "selectAllSearchEditorMatches",
-		"when": "inSearchEditor"
-	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "editor.action.selectHighlights",
-		"when": "editorFocus"
-	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "addCursorsAtSearchResults",
-		"when": "fileMatchOrMatchFocus && searchViewletVisible"
 	},
 
 	/* Ctrl+,: jump to next error */
@@ -155,7 +140,7 @@
 		"command": "workbench.action.moveEditorToRightGroup",
 	},
 
-	/* set "editorTextFocus" */
+	/* set "editor%Focus" */
 	{
 		"key": "ctrl+9",
 		"command": "workbench.action.focusActiveEditorGroup"

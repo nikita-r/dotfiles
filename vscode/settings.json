@@ -87,10 +87,7 @@
 	"powershell.scriptAnalysis.enable": false,
 
 	"python.autoUpdateLanguageServer": false,
-	"python.linting.pylintEnabled": false,
-	//"python.linting.flake8Enabled": true,
-	"python.linting.pycodestyleEnabled": true,
-	"python.linting.pydocstyleEnabled": true,
+	"python.linting.enabled": false,
 	"python.showStartPage": false,
 
 	"todo-tree.general.revealBehaviour": "start of line",
@@ -114,6 +111,10 @@
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
+	"python.formatting.provider": "none",
+
+	"editor.cursorWidth": 3,
+	"window.zoomLevel": 0.0,
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 }

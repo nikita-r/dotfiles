@@ -9,14 +9,22 @@
 	$: workbench.action.togglePanel: "ctrl+j"
 	*/
 
-	/* Sublime Text */
 	{
 		"command": "cursorRedo",
-		"key": "ctrl+shift+u"
+		"key": "ctrl+y"
 	},
+	{ "command": "noop", "key": "ctrl+shift+u" },
+
+	/* Sublime Text */
 	{
 		"command": "editor.action.jumpToBracket",
 		"key": "ctrl+m"
+	},
+	{ "command": "noop", "key": "ctrl+shift+l" },
+	{
+		"key": "ctrl+shift+l",
+		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "editorHasSelection"
 	},
 
 	/* Q */
@@ -60,9 +68,8 @@
 		"when": "editorTextFocus"
 	},
 
-	/* Ctrl+Shift+(D|L) */
+	/* Ctrl+Shift+D */
 	{ "command": "noop", "key": "ctrl+shift+d" },
-	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
 		"key": "ctrl+shift+d",
 		"command": "selectAllSearchEditorMatches",
@@ -77,11 +84,6 @@
 		"key": "ctrl+shift+d",
 		"command": "addCursorsAtSearchResults",
 		"when": "fileMatchOrMatchFocus && searchViewletVisible"
-	},
-	{
-		"key": "ctrl+shift+l",
-		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorHasSelection"
 	},
 
 	/* Ctrl+,: jump to next error */
@@ -153,11 +155,13 @@
 		"command": "workbench.action.moveEditorToRightGroup",
 	},
 
-	/* ±zoom */
+	/* set "editorTextFocus" */
 	{
 		"key": "ctrl+9",
-		"command": "-workbench.action.lastEditorInGroup"
+		"command": "workbench.action.focusActiveEditorGroup"
 	},
+
+	/* ±zoom */
 	{
 		"key": "ctrl+0",
 		"command": "-workbench.action.focusSideBar"

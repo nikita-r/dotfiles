@@ -16,6 +16,12 @@
 [init]
 	defaultBranch = main
 
+[core]
+	editor = vim
+	pager = cat
+	# TODO autocrlf
+	safecrlf = true
+
 [alias]
 	co = checkout
 	sb = status -sb
@@ -51,7 +57,8 @@
 	cachetextconv = true
 
 [alias]
-	dc = diff -w --word-diff=color
+	dc = ! git diff -w --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dw = diff -w --word-diff=color
 
 [diff]
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
@@ -73,29 +80,23 @@
 [mergetool "bc3"]
 	trustExitCode = true
 
-[core]
-	editor = vim
-	pager = cat
-	# TODO autocrlf
-	safecrlf = true
+[alias]
+	tm = merge --no-ff --no-commit
+
+[rebase]
+	stat = true
+
+[rerere]
+	enabled = true
+
+[color]
+	branch = false
 
 [status]
 	showStash = true
 	submoduleSummary = true
 
-[rebase]
-	stat = true
-
 [advice]
 	ignoredHook = true
 	detachedHead = false
-
-[color]
-	branch = false
-
-[alias]
-	tm = merge --no-ff --no-commit
-
-[rerere]
-	enabled = true
 

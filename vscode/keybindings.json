@@ -71,6 +71,34 @@
 		"when": "editorTextFocus"
 	},
 
+	/* Shift+Alt+Arrow: ensure Windows defaults */
+	{ "command": "noop", "key": "ctrl+shift+alt+up" },
+	{ "command": "noop", "key": "ctrl+shift+alt+down" },
+	{ "command": "noop", "key": "ctrl+shift+alt+left" },
+	{ "command": "noop", "key": "ctrl+shift+alt+right" },
+	{ "command": "noop", "key": "shift+alt+up" },
+	{ "command": "noop", "key": "shift+alt+down" },
+	{
+		"key": "shift+alt+up",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "notebook.cell.copyUp",
+		"when": "notebookEditorFocused && !inputFocus"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "notebook.cell.copyDown",
+		"when": "notebookEditorFocused && !inputFocus"
+	},
+
 	/* Ctrl+,: jump to next error */
 	{
 		"key": "ctrl+shift+,",
@@ -196,34 +224,6 @@
 		"key": "ctrl+k ctrl+g",
 		"command": "editor.action.goToSelectionAnchor",
 		"when": "editorTextFocus && selectionAnchorSet"
-	},
-
-	/* Shift+Alt+Arrow: ensure Windows defaults */
-	{ "command": "noop", "key": "ctrl+shift+alt+up" },
-	{ "command": "noop", "key": "ctrl+shift+alt+down" },
-	{ "command": "noop", "key": "ctrl+shift+alt+left" },
-	{ "command": "noop", "key": "ctrl+shift+alt+right" },
-	{ "command": "noop", "key": "shift+alt+up" },
-	{ "command": "noop", "key": "shift+alt+down" },
-	{
-		"key": "shift+alt+up",
-		"command": "editor.action.copyLinesUpAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "shift+alt+down",
-		"command": "editor.action.copyLinesDownAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "shift+alt+up",
-		"command": "notebook.cell.copyUp",
-		"when": "notebookEditorFocused && !inputFocus"
-	},
-	{
-		"key": "shift+alt+down",
-		"command": "notebook.cell.copyDown",
-		"when": "notebookEditorFocused && !inputFocus"
 	},
 
 	/* "toggle_comment", "args": { "block": true */

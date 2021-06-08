@@ -30,15 +30,15 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 shopt -s histappend
-HISTSIZE=$(expr 1024 \* 32)
-HISTFILESIZE=$(expr $HISTSIZE \* 32)
-
+HISTSIZE=
+HISTFILESIZE=
+#HISTTIMEFORMAT='%F %T '
 HISTIGNORE="&: *:ls:la:ll:pwd:cd:cd *:..:..."
 HISTIGNORE+=":clear:exit:date:cls:vim:python"
-HISTIGNORE+=":[bf]g:[bf]g *:jobs:last:ping *"
+HISTIGNORE+=":[bf]g:[bf]g *:jobs:last:passwd"
 HISTIGNORE+=":lsusb:lsscsi:lsblk:mount:iwctl"
-HISTIGNORE+=":sensors:free -m:pwsh:alsamixer"
-HISTIGNORE+=":rfkill:ip link:bluetoothctl:journalctl:journalctl -r"
+HISTIGNORE+=":ip link:alsamixer:free -m:pwsh"
+HISTIGNORE+=":sensors:bluetoothctl:rfkill:journalctl:journalctl -r"
 HISTIGNORE+=":systemctl poweroff:systemctl reboot:systemctl status"
 HISTIGNORE+=":gitk"
 

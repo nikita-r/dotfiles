@@ -7,6 +7,11 @@
 
 export EDITOR='vim'
 
+if [[ $PATH != ~/.local/bin:* ]]; then
+PATH=~/.local/bin:$PATH
+fi
+export PATH
+
 function ccd { mkdir "$1" && cd "$1"; }
 
 PS1='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w\[\e[0;34m\]\$ \[\e[0m\]'
@@ -24,21 +29,16 @@ alias cls="printf '\ec'"
 alias ..='cd ..'
 alias ...='cd ../..'
 
-if [[ $PATH != ~/.local/bin:* ]]; then
-PATH=~/.local/bin:$PATH
-fi
-export PATH
-
 shopt -s histappend
-export HISTSIZE=$(expr 1024 \* 32)
-export HISTFILESIZE=$(expr $HISTSIZE \* 32)
+HISTSIZE=$(expr 1024 \* 32)
+HISTFILESIZE=$(expr $HISTSIZE \* 32)
 
 HISTIGNORE="&: *:ls:la:ll:pwd:cd:cd *:..:..."
 HISTIGNORE+=":clear:exit:date:cls:vim:python"
-HISTIGNORE+=":[bf]g:[bf]g *:jobs"
-HISTIGNORE+=":lsusb:lsscsi:lsblk"
-HISTIGNORE+=":mount:free -m:last"
-HISTIGNORE+=":sensors:rfkill:ip link:iwctl:bluetoothctl:journalctl"
+HISTIGNORE+=":[bf]g:[bf]g *:jobs:last:ping *"
+HISTIGNORE+=":lsusb:lsscsi:lsblk:mount:iwctl"
+HISTIGNORE+=":sensors:free -m:pwsh:alsamixer"
+HISTIGNORE+=":rfkill:ip link:bluetoothctl:journalctl:journalctl -r"
 HISTIGNORE+=":systemctl poweroff:systemctl reboot:systemctl status"
 HISTIGNORE+=":gitk"
 
@@ -76,7 +76,6 @@ function set-prompt {
 }
 
 HISTIGNORE+=":bat:lit:lit *:set-prompt"
-export HISTIGNORE
 
 if shopt -q login_shell; then
 :

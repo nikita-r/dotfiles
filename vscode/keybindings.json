@@ -42,7 +42,28 @@
 	{
 		"key": "ctrl+shift+q",
 		"command": "workbench.action.closeEditorsInOtherGroups",
-		"when": "editorFocus"
+		//"when": "editorFocus"
+	},
+	/* Replace Alt+R */
+	{
+		"key": "alt+q",
+		"command": "toggleFindRegex",
+		//"when": "editorFocus"
+	},
+	{
+		"key": "alt+q",
+		"command": "toggleSearchEditorRegex",
+		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+q",
+		"command": "toggleSearchRegex",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+q",
+		"command": "workbench.action.terminal.toggleFindRegex",
+		"when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
 	},
 
 	/* default bindings, but with "when" removed */
@@ -174,6 +195,24 @@
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
 
+	/* Alt+Digit */
+	{
+		"key": "alt+9",
+		"command": "workbench.action.lastEditorInGroup"
+	},
+	{ "command": "noop", "key": "alt+1" },
+	{ "command": "noop", "key": "alt+2" },
+	{ "command": "noop", "key": "alt+3" },
+	{ "command": "noop", "key": "alt+4" },
+	{ "command": "noop", "key": "alt+5" },
+	{ "command": "noop", "key": "alt+6" },
+	{ "command": "noop", "key": "alt+7" },
+	{ "command": "noop", "key": "alt+8" },
+	{
+		"key": "alt+0",
+		"command": "workbench.action.openEditorAtIndex"
+	},
+
 	/* ±zoom */
 	{
 		"key": "ctrl+0",
@@ -224,6 +263,20 @@
 		"key": "ctrl+k ctrl+g",
 		"command": "editor.action.goToSelectionAnchor",
 		"when": "editorTextFocus && selectionAnchorSet"
+	},
+
+	/* Alt+Letter */
+	{ "command": "", "key": "alt+f" }, // File
+	{ "command": "", "key": "alt+e" }, // Edit
+	{ "command": "", "key": "alt+s" }, // Selection
+	{ "command": "", "key": "alt+v" }, // View
+	{ "command": "", "key": "alt+g" }, // Go
+	{ "command": "", "key": "alt+r" }, // Run
+	{ "command": "", "key": "alt+t" }, // Terminal
+	{ "command": "", "key": "alt+h" }, // Help
+	{
+		"key": "alt+x",
+		"command": "workbench.action.compareEditor.focusOtherSide"
 	},
 
 	/* "toggle_comment", "args": { "block": true */

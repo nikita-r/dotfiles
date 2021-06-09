@@ -63,7 +63,7 @@
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
 	"explorer.autoReveal": false,
-	"explorer.openEditors.visible": 0,
+	//"explorer.openEditors.visible": 0,
 
 	/* SCM */
 

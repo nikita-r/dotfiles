@@ -44,6 +44,7 @@
 
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorWidth": 3,
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
@@ -63,7 +64,6 @@
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
 	"explorer.autoReveal": false,
-	//"explorer.openEditors.visible": 0,
 
 	/* SCM */
 
@@ -99,8 +99,6 @@
 
 	"files.hotExit": "off",
 	"terminal.integrated.confirmOnExit": true,
-	"terminal.integrated.tabs.enabled": true,
-	"window.dialogStyle": "custom",
 	"window.newWindowDimensions": "offset",
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
@@ -113,8 +111,16 @@
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"python.formatting.provider": "none",
 
-	"editor.cursorWidth": 3,
+	/* UI styles */
+	"terminal.integrated.tabs.enabled": true,
+	"window.dialogStyle": "custom",
+	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,
+	"workbench.iconTheme": "vs-minimal",
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
+	"files.associations": {
+		"*.qss": "css",
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
 }

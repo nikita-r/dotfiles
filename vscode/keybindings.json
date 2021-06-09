@@ -37,7 +37,6 @@
 		"key": "ctrl+q",
 		"command": "editor.action.showHover"
 	},
-	{ "command": "noop", "key": "ctrl+shift+q" },
 	/* close tabs that been split */
 	{
 		"key": "ctrl+shift+q",
@@ -187,6 +186,16 @@
 	{
 		"key": "ctrl+k shift+l",
 		"command": "workbench.action.moveEditorToRightGroup",
+	},
+
+	/* moveEditor within Group */
+	{
+		"key": "ctrl+alt+pageup",
+		"command": "workbench.action.moveEditorLeftInGroup"
+	},
+	{
+		"key": "ctrl+alt+pagedown",
+		"command": "workbench.action.moveEditorRightInGroup"
 	},
 
 	/* set "editor%Focus" */

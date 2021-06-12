@@ -7,6 +7,7 @@
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
+	?: "isInDiffEditor"
 	*/
 
 	{
@@ -165,6 +166,16 @@
 		"when": "textCompareEditorVisible"
 	},
 
+	/* moveEditor within Group */
+	{
+		"key": "ctrl+alt+PageUp",
+		"command": "workbench.action.moveEditorLeftInGroup"
+	},
+	{
+		"key": "ctrl+alt+PageDown",
+		"command": "workbench.action.moveEditorRightInGroup"
+	},
+
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
 	{ "key": "ctrl+k j", "command": "workbench.action.navigateDown" },
@@ -173,34 +184,28 @@
 	/* moveEditor→Group */
 	{
 		"key": "ctrl+k shift+k",
-		"command": "workbench.action.moveEditorToAboveGroup",
+		"command": "workbench.action.moveEditorToAboveGroup"
 	},
 	{
 		"key": "ctrl+k shift+j",
-		"command": "workbench.action.moveEditorToBelowGroup",
+		"command": "workbench.action.moveEditorToBelowGroup"
 	},
 	{
 		"key": "ctrl+k shift+h",
-		"command": "workbench.action.moveEditorToLeftGroup",
+		"command": "workbench.action.moveEditorToLeftGroup"
 	},
 	{
 		"key": "ctrl+k shift+l",
-		"command": "workbench.action.moveEditorToRightGroup",
-	},
-
-	/* moveEditor within Group */
-	{
-		"key": "ctrl+alt+pageup",
-		"command": "workbench.action.moveEditorLeftInGroup"
-	},
-	{
-		"key": "ctrl+alt+pagedown",
-		"command": "workbench.action.moveEditorRightInGroup"
+		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
 	/* set "editor%Focus" */
 	{
 		"key": "ctrl+9",
+		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "alt+`",
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
 
@@ -209,9 +214,9 @@
 		"key": "alt+9",
 		"command": "workbench.action.lastEditorInGroup"
 	},
-	{ "command": "noop", "key": "alt+1" },
-	{ "command": "noop", "key": "alt+2" },
-	{ "command": "noop", "key": "alt+3" },
+	//{ "command": "noop", "key": "alt+1" },
+	//{ "command": "noop", "key": "alt+2" },
+	//{ "command": "noop", "key": "alt+3" },
 	{ "command": "noop", "key": "alt+4" },
 	{ "command": "noop", "key": "alt+5" },
 	{ "command": "noop", "key": "alt+6" },
@@ -259,6 +264,13 @@
 		"key": "ctrl+shift+-",
 		"command": "workbench.action.navigateForward"
 	},
+
+	/* avoid chords that are similar to Ctrl+S */
+	{ "command": "noop", "key": "ctrl+shift+s" },
+	{ "command": "noop", "key": "ctrl+k s" },
+	{ "command": "noop", "key": "ctrl+k ctrl+s" },
+	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
+	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
 
 	/* selection anchor */
 	{ "command": "noop", "key": "ctrl+k ctrl+k" },

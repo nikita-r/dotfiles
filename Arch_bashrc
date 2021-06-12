@@ -32,12 +32,14 @@ alias ...='cd ../..'
 shopt -s histappend
 HISTSIZE=
 HISTFILESIZE=
+#HISTFILE=?
 #HISTTIMEFORMAT='%F %T '
+
 HISTIGNORE="&: *:ls:la:ll:pwd:cd:cd *:..:..."
 HISTIGNORE+=":clear:exit:date:cls:vim:python"
 HISTIGNORE+=":[bf]g:[bf]g *:jobs:last:passwd"
-HISTIGNORE+=":lsusb:lsscsi:lsblk:mount:iwctl"
-HISTIGNORE+=":ip link:alsamixer:free -m:pwsh"
+HISTIGNORE+=":lspci:lsblk:mount:lsusb:lsscsi"
+HISTIGNORE+=":free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr"
 HISTIGNORE+=":sensors:bluetoothctl:rfkill:journalctl:journalctl -r"
 HISTIGNORE+=":systemctl poweroff:systemctl reboot:systemctl status"
 HISTIGNORE+=":gitk"
@@ -78,6 +80,7 @@ function set-prompt {
 HISTIGNORE+=":bat:lit:lit *:set-prompt"
 
 if shopt -q login_shell; then
-:
+cls
+PROMPT_COMMAND="history -a"
 fi
 

@@ -15,18 +15,19 @@
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 
-	"editor.acceptSuggestionOnCommitCharacter": false,
-	"editor.acceptSuggestionOnEnter": "off",
-	"editor.autoClosingBrackets": "never",
-	"editor.autoClosingQuotes": "never",
-
-	//"editor.quickSuggestions": false,
-	"editor.quickSuggestionsDelay": 0,
-
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
+
+	"editor.hover.enabled": false,
+	"editor.quickSuggestions": false,
+	"editor.quickSuggestionsDelay": 0,
+	"editor.tabCompletion": "onlySnippets",
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.autoClosingBrackets": "never",
+	"editor.autoClosingQuotes": "never",
 
 	//"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
 	//"editor.fontLigatures": true,
@@ -35,6 +36,11 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
+
+	"editor.minimap.showSlider": "always",
+	"editor.minimap.renderCharacters": false,
+	"editor.renderControlCharacters": true,
+	"editor.renderIndentGuides": false,
 
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
@@ -46,11 +52,6 @@
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
 
-	"editor.minimap.showSlider": "always",
-	"editor.minimap.renderCharacters": false,
-	"editor.renderControlCharacters": true,
-	"editor.renderIndentGuides": false,
-
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
@@ -59,7 +60,8 @@
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 
-	"editor.hover.enabled": false,
+	"editor.codeLensFontFamily": "Lucida Console, DejaVu Sans Mono",
+	"editor.codeLensFontSize": 11,
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,
 	//"editor.rulers": [ 80, 120 ],
@@ -117,6 +119,8 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,
 	"workbench.iconTheme": "vs-minimal",
+
+	/* . . . */
 
 	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
 	"files.associations": {

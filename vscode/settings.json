@@ -60,7 +60,7 @@
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 
-	"editor.codeLensFontFamily": "Lucida Console, DejaVu Sans Mono",
+	"editor.codeLensFontFamily": "DejaVu Sans Mono, sans serif",
 	"editor.codeLensFontSize": 11,
 	"editor.inlineHints.fontFamily": "Wingdings",
 	"editor.inlineHints.fontSize": 11,

@@ -29,12 +29,12 @@ function set-prompt {
 }
 
 function prompt_command {
-    local EXITSTATUS=$?
-    local C='0;34m'
-    if [ $EXITSTATUS != 0 ]; then
-          C='0;97m'
-    fi
-    PS1="$PSO\[\e[$C\]$PS_ \[\e[0m\]"
+   local EXIT_STATUS=$?
+   local C='0;34m'
+   if [ $EXIT_STATUS != 0 ]; then
+         C='0;97m'
+   fi
+   PS1="$PSO\[\e[$C\]$PS_ \[\e[0m\]"
 }
 PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
 
@@ -58,11 +58,11 @@ HISTSIZE=
 HISTFILESIZE=
 #HISTFILE=?
 #HISTTIMEFORMAT='%F %T '
-
+HISTCONTROL=
 HISTIGNORE='&: *:ls:la:ll:pwd:cd:cd *:..:...'
 HISTIGNORE+=':clear:exit:date:cls:vim:python'
 HISTIGNORE+=':[bf]g:[bf]g *:jobs:last:passwd'
-HISTIGNORE+=':lspci:lsblk:mount:lsusb:lsscsi'
+HISTIGNORE+=':lspci:lsscsi:lsblk:mount:lsusb'
 HISTIGNORE+=':free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr'
 HISTIGNORE+=':sensors:bluetoothctl:rfkill:journalctl:journalctl -r'
 HISTIGNORE+=':systemctl poweroff:systemctl reboot:systemctl status'

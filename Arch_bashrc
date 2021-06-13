@@ -14,7 +14,31 @@ export PATH
 
 function ccd { mkdir "$1" && cd "$1"; }
 
-PS1='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w\[\e[0;34m\]\$ \[\e[0m\]'
+PROMPT_DIRTRIM=5
+
+PSO='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w'
+PS_=$
+PS1="$PSO\[\e[0;34m\]$PS_ \[\e[0m\]"
+
+if shopt -q login_shell; then :; else
+
+function set-prompt {
+    PSO="\[\e[0;34m\]$1\[\e[1;31m\]|"
+    PSO="\[\e[1;31m\]|$PSO"
+    PS_='>'
+}
+
+function prompt_command {
+    local EXITSTATUS=$?
+    local C='0;34m'
+    if [ $EXITSTATUS != 0 ]; then
+          C='0;97m'
+    fi
+    PS1="$PSO\[\e[$C\]$PS_ \[\e[0m\]"
+}
+PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
+
+fi
 
 alias cp='cp --reflink=auto --sparse=always'
 
@@ -35,14 +59,15 @@ HISTFILESIZE=
 #HISTFILE=?
 #HISTTIMEFORMAT='%F %T '
 
-HISTIGNORE="&: *:ls:la:ll:pwd:cd:cd *:..:..."
-HISTIGNORE+=":clear:exit:date:cls:vim:python"
-HISTIGNORE+=":[bf]g:[bf]g *:jobs:last:passwd"
-HISTIGNORE+=":lspci:lsblk:mount:lsusb:lsscsi"
-HISTIGNORE+=":free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr"
-HISTIGNORE+=":sensors:bluetoothctl:rfkill:journalctl:journalctl -r"
-HISTIGNORE+=":systemctl poweroff:systemctl reboot:systemctl status"
-HISTIGNORE+=":gitk"
+HISTIGNORE='&: *:ls:la:ll:pwd:cd:cd *:..:...'
+HISTIGNORE+=':clear:exit:date:cls:vim:python'
+HISTIGNORE+=':[bf]g:[bf]g *:jobs:last:passwd'
+HISTIGNORE+=':lspci:lsblk:mount:lsusb:lsscsi'
+HISTIGNORE+=':free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr'
+HISTIGNORE+=':sensors:bluetoothctl:rfkill:journalctl:journalctl -r'
+HISTIGNORE+=':systemctl poweroff:systemctl reboot:systemctl status'
+HISTIGNORE+=':true:false'
+HISTIGNORE+=':gitk:git sb:git dc:git show'
 
 declare -a comps=( weston sway )
 for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done
@@ -73,14 +98,9 @@ function lit {
     sudo sh -c "echo $n > $f"
 }
 
-function set-prompt {
-    PS1="\[\e[0;34m\]$1\[\e[1;31m\]|\[\e[0;34m\]> \[\e[0m\]"
-}
-
 HISTIGNORE+=":bat:lit:lit *:set-prompt"
 
 if shopt -q login_shell; then
 cls
 PROMPT_COMMAND="history -a"
 fi
-

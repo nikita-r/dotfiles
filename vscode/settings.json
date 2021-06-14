@@ -21,9 +21,14 @@
 	"editor.occurrencesHighlight": false,
 
 	"editor.hover.enabled": false,
+	//"editor.parameterHints.enabled": false,
+	"editor.suggestOnTriggerCharacters": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 0,
+	//"editor.suggest.filterGraceful": false,
+	"editor.snippetSuggestions": "top",
 	"editor.tabCompletion": "onlySnippets",
+	//"editor.suggest.snippetsPreventQuickSuggestions": false,
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
@@ -78,9 +83,9 @@
 	"git.rebaseWhenSync": true,
 	"git.showPushSuccessNotification": true,
 
-	"git.showCommitInput": false,
 	"scm.inputFontFamily": "editor",
 	"scm.inputFontSize": 14,
+	"git.showCommitInput": false,
 
 	/* Extensions */
 

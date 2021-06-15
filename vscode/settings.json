@@ -20,19 +20,27 @@
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
 
+	/* suggestions-adjacent settings */
+
 	"editor.hover.enabled": false,
 	//"editor.parameterHints.enabled": false,
 	"editor.suggestOnTriggerCharacters": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 0,
 	//"editor.suggest.filterGraceful": false,
+	//"editor.suggest.preview": true,
+	"editor.suggest.showDeprecated": false,
+
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
 	"editor.tabCompletion": "onlySnippets",
+
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
+
+	/* . . . */
 
 	//"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
 	//"editor.fontSize": 14,
@@ -46,6 +54,7 @@
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
 	"editor.renderIndentGuides": false,
+	//"editor.rulers": [ 80, 120 ],
 
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
@@ -67,10 +76,9 @@
 
 	"editor.codeLensFontFamily": "DejaVu Sans Mono, sans serif",
 	"editor.codeLensFontSize": 11,
-	"editor.inlineHints.fontFamily": "Wingdings",
-	"editor.inlineHints.fontSize": 11,
-	//"editor.rulers": [ 80, 120 ],
+
 	"explorer.autoReveal": false,
+	"explorer.incrementalNaming": "smart",
 
 	/* SCM */
 
@@ -89,6 +97,9 @@
 
 	/* Extensions */
 
+	"powershell.debugging.createTemporaryIntegratedConsole": true,
+	//"powershell.integratedConsole.focusConsoleOnExecute": false,
+	"powershell.integratedConsole.showOnStartup": false,
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,

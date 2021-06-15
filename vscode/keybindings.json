@@ -140,6 +140,28 @@
 		"key": "shift+ctrl+,"
 	},
 
+	/* Reserve F8 for PowerShell.RunSelection */
+	{
+		"key": "f8",
+		"command": "-editor.action.marker.nextInFiles",
+		//"when": "editorFocus"
+	},
+	{
+		"key": "shift+f8",
+		"command": "-editor.action.marker.prevInFiles",
+		//"when": "editorFocus"
+	},
+	{
+		"key": "alt+f8",
+		"command": "editor.action.marker.nextInFiles",
+		//"when": "editorFocus"
+	},
+	{
+		"key": "shift+alt+f8",
+		"command": "editor.action.marker.prevInFiles",
+		//"when": "editorFocus"
+	},
+
 	/* Ctrl+[][]: jump to next change; remove any non-Debug use of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
 	{ "command": "noop", "key": "ctrl+[" },
@@ -306,4 +328,11 @@
 		"command": "editor.action.blockComment",
 		"when": "editorTextFocus && !editorReadonly"
 	},
+
+	/* v1.57 release removed this kb */
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	}
 ]

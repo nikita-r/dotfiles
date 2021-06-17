@@ -316,6 +316,11 @@
 		"key": "alt+x",
 		"command": "editor.action.inPlaceReplace.down"
 	},
+	{
+		"key": "alt+d",
+		"command": "workbench.action.showEmmetCommands",
+		"when": "editorTextFocus"
+	},
 
 	/* "toggle_comment", "args": { "block": true */
 	{
@@ -329,5 +334,5 @@
 		"key": "ctrl+w",
 		"command": "workbench.action.closeWindow",
 		"when": "!editorIsOpen && !multipleEditorGroups"
-	}
+	},
 ]

@@ -123,6 +123,10 @@
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
 
+	/* Emmet */
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+
 	/* Format */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,

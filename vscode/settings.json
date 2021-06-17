@@ -1,7 +1,8 @@
 {
 	"window.titleSeparator": " · ",
 	"window.title": "Code${separator}${dirty}${activeEditorShort}${separator}${rootName}",
-	//"explorer.sortOrder": "modified",
+
+	//"security.workspace.trust.enabled": false,
 
 	"update.mode": "manual",
 	"update.enableWindowsBackgroundUpdates": false,
@@ -15,10 +16,16 @@
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 
+	"explorer.autoReveal": false,
+	"explorer.incrementalNaming": "smart",
+	//"explorer.sortOrder": "modified",
+
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": false,
 	"editor.occurrencesHighlight": false,
+
+	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
 
@@ -46,15 +53,13 @@
 	//"editor.fontSize": 14,
 	//"editor.fontLigatures": true,
 
-	"workbench.settings.enableNaturalLanguageSearch": false,
-	"workbench.tree.indent": 12,
-	"workbench.tree.renderIndentGuides": "always",
-
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
 	"editor.renderIndentGuides": false,
 	//"editor.rulers": [ 80, 120 ],
+	"workbench.tree.indent": 12,
+	"workbench.tree.renderIndentGuides": "always",
 
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
@@ -76,9 +81,6 @@
 
 	"editor.codeLensFontFamily": "DejaVu Sans Mono, sans serif",
 	"editor.codeLensFontSize": 11,
-
-	"explorer.autoReveal": false,
-	"explorer.incrementalNaming": "smart",
 
 	/* SCM */
 

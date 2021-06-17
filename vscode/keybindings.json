@@ -19,6 +19,8 @@
 		"key": "ctrl+shift+d",
 		"command": "editor.action.selectHighlights"
 	},
+	{ "command": "noop", "key": "ctrl+shift+," },
+	{ "command": "noop", "key": "ctrl+shift+." },
 
 	/* Sublime Text */
 	{
@@ -41,8 +43,7 @@
 	/* close tabs that been split */
 	{
 		"key": "ctrl+shift+q",
-		"command": "workbench.action.closeEditorsInOtherGroups",
-		//"when": "editorFocus"
+		"command": "workbench.action.closeEditorsInOtherGroups"
 	},
 	/* Replace Alt+R */
 	{
@@ -120,17 +121,8 @@
 		"when": "notebookEditorFocused && !inputFocus"
 	},
 
-	/* Ctrl+,: jump to next error */
-	{
-		"key": "ctrl+shift+,",
-		"command": "-editor.action.inPlaceReplace.up",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+shift+.",
-		"command": "-editor.action.inPlaceReplace.down",
-		"when": "editorTextFocus && !editorReadonly"
-	},
+	/* Go to Problem */
+	/* Ctrl+, */
 	{
 		"command": "editor.action.marker.next",
 		"key": "ctrl+,"
@@ -139,27 +131,22 @@
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
 	},
-
 	/* Reserve F8 for PowerShell.RunSelection */
 	{
 		"key": "f8",
-		"command": "-editor.action.marker.nextInFiles",
-		//"when": "editorFocus"
+		"command": "-editor.action.marker.nextInFiles"
 	},
 	{
 		"key": "shift+f8",
-		"command": "-editor.action.marker.prevInFiles",
-		//"when": "editorFocus"
+		"command": "-editor.action.marker.prevInFiles"
 	},
 	{
 		"key": "alt+f8",
-		"command": "editor.action.marker.nextInFiles",
-		//"when": "editorFocus"
+		"command": "editor.action.marker.nextInFiles"
 	},
 	{
 		"key": "shift+alt+f8",
-		"command": "editor.action.marker.prevInFiles",
-		//"when": "editorFocus"
+		"command": "editor.action.marker.prevInFiles"
 	},
 
 	/* Ctrl+[][]: jump to next change; remove any non-Debug use of F5 */
@@ -248,6 +235,10 @@
 		"key": "alt+0",
 		"command": "workbench.action.openEditorAtIndex"
 	},
+	{
+		"key": "alt+0",
+		"command": "workbench.action.compareEditor.focusOtherSide"
+	},
 
 	/* ±zoom */
 	{
@@ -318,8 +309,12 @@
 	{ "command": "", "key": "alt+t" }, // Terminal
 	{ "command": "", "key": "alt+h" }, // Help
 	{
+		"key": "alt+a",
+		"command": "editor.action.inPlaceReplace.up"
+	},
+	{
 		"key": "alt+x",
-		"command": "workbench.action.compareEditor.focusOtherSide"
+		"command": "editor.action.inPlaceReplace.down"
 	},
 
 	/* "toggle_comment", "args": { "block": true */

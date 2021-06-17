@@ -329,6 +329,22 @@
 		"when": "editorTextFocus && !editorReadonly"
 	},
 
+	/* File Explorer */
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
+	},
+
 	/* v1.57 release removed this kb */
 	{
 		"key": "ctrl+w",

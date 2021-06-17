@@ -42,6 +42,9 @@
 	"editor.snippetSuggestions": "top",
 	"editor.tabCompletion": "onlySnippets",
 
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.autoClosingBrackets": "never",
@@ -123,10 +126,6 @@
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
 
-	/* Emmet */
-	"emmet.showSuggestionsAsSnippets": true,
-	"emmet.triggerExpansionOnTab": true,
-
 	/* Format */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
@@ -134,6 +133,8 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"python.formatting.provider": "none",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.quoteStyle": "single",
 
 	/* UI styles */
 	"terminal.integrated.tabs.enabled": true,

@@ -102,9 +102,11 @@
 
 	/* Extensions */
 
+	"gitlens.blame.ignoreWhitespace": true,
+
 	"powershell.debugging.createTemporaryIntegratedConsole": true,
 	//"powershell.integratedConsole.focusConsoleOnExecute": false,
-	"powershell.integratedConsole.showOnStartup": false,
+	//"powershell.integratedConsole.showOnStartup": false,
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
@@ -141,6 +143,16 @@
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,
+	"workbench.colorCustomizations": {
+		//"minimapSlider.background": "#79797933",
+		"editor.selectionBackground": "#135",
+		"editor.inactiveSelectionBackground": "#393939",
+		"editor.selectionHighlightBackground": "#aaa3",
+		"editor.findMatchHighlightBackground": "#511",
+		"minimap.findMatchHighlight": "#c84",
+		"editor.findMatchBackground": "#733",
+		"minimap.selectionHighlight": "#357",
+	},
 	"workbench.iconTheme": "vs-minimal",
 
 	/* . . . */

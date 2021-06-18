@@ -329,7 +329,7 @@
 		"when": "editorTextFocus && !editorReadonly"
 	},
 
-	/* File Explorer */
+	/* Files Explorer */
 	{
 		"key": "ctrl+shift+e",
 		"command": "workbench.files.action.focusFilesExplorer"

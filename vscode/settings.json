@@ -4,7 +4,7 @@
 
 	//"security.workspace.trust.enabled": false,
 
-	"update.mode": "manual",
+	"update.mode": "none", // or "manual"
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
 	"extensions.autoUpdate": false,
@@ -82,7 +82,7 @@
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 
-	"editor.codeLensFontFamily": "DejaVu Sans Mono, sans serif",
+	"editor.codeLensFontFamily": "sans-serif",
 	"editor.codeLensFontSize": 11,
 
 	/* SCM */
@@ -144,9 +144,8 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,
 	"workbench.colorCustomizations": {
-		//"minimapSlider.background": "#79797933",
 		"editor.selectionBackground": "#135",
-		"editor.inactiveSelectionBackground": "#393939",
+		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",
 		"editor.findMatchHighlightBackground": "#511",
 		"minimap.findMatchHighlight": "#c84",

@@ -1,1 +1,4 @@
+eamodio.gitlens
 EditorConfig.EditorConfig
+hediet.vscode-drawio
+JohannesRudolph.file-ext-switcher

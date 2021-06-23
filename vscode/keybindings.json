@@ -345,6 +345,24 @@
 		"when": "filesExplorerFocus"
 	},
 
+	/* JohannesRudolph.file-ext-switcher */
+	/* Angular */
+	{
+		"key": "ctrl+shift+j",
+		"command": "fileextswitch",
+		"args": {
+			"extensions": [
+				".ts",
+				".html",
+				".css",
+				".scss",
+				".spec.ts",
+			],
+			//"useOtherColumn": true
+		},
+		"when": "editorFocus"
+	},
+
 	/* v1.57 release removed this kb */
 	{
 		"key": "ctrl+w",

@@ -102,8 +102,13 @@
 
 	/* Extensions */
 
+	"gitlens.blame.avatars": false,
 	"gitlens.blame.ignoreWhitespace": true,
 
+	"omnisharp.autoStart": false, // #> OmniSharp: Restart
+	"omnisharp.enableRoslynAnalyzers": true,
+
+	"powershell.startAutomatically": false, // #> PowerShell: Restart
 	"powershell.debugging.createTemporaryIntegratedConsole": true,
 	//"powershell.integratedConsole.focusConsoleOnExecute": false,
 	//"powershell.integratedConsole.showOnStartup": false,
@@ -121,7 +126,6 @@
 	"todo-tree.tree.showBadges": false,
 
 	/* Exit / Init */
-
 	"files.hotExit": "off",
 	"terminal.integrated.confirmOnExit": true,
 	"window.newWindowDimensions": "offset",

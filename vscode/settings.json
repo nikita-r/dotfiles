@@ -40,7 +40,7 @@
 
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
-	"editor.tabCompletion": "onlySnippets",
+	"editor.tabCompletion": "onlySnippets", // or "on"
 
 	"emmet.showSuggestionsAsSnippets": true,
 	"emmet.triggerExpansionOnTab": true,

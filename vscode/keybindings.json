@@ -369,6 +369,11 @@
 	},
 	{
 		"key": "ctrl+shift+j",
+		"command": "workbench.action.openActiveLogOutputFile",
+		"when": "inOutput"
+	},
+	{
+		"key": "ctrl+shift+j",
 		"command": "settings.switchToJSON",
 		"when": "inSettingsEditor"
 	},
@@ -378,5 +383,12 @@
 		"key": "ctrl+w",
 		"command": "workbench.action.closeWindow",
 		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+
+	/* Try and block a useless Tab */
+	{
+		"key": "tab",
+		"command": "editor.action.indentLines",
+		"when": "editorTextFocus && editorHasSelection && !inSnippetMode && !editorTabMovesFocus && !suggestWidgetVisible && !editorReadonly"
 	},
 ]

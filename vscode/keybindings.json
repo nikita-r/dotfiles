@@ -346,11 +346,6 @@
 	},
 
 	/* Ctrl+Shift+J */
-	{
-		"key": "ctrl+shift+j",
-		"command": "settings.switchToJSON",
-		"when": "inSettingsEditor"
-	},
 	/* file-ext-switcher:Angular */
 	{
 		"key": "ctrl+shift+j",
@@ -365,7 +360,17 @@
 			],
 			//"useOtherColumn": true
 		},
-		"when": "editorFocus && !inSearchEditor && !inSettingsEditor"
+		"when": "editorFocus && !inSearchEditor"
+	},
+	{
+		"key": "ctrl+shift+j",
+		"command": "workbench.action.openGlobalKeybindingsFile",
+		"when": "inKeybindings"
+	},
+	{
+		"key": "ctrl+shift+j",
+		"command": "settings.switchToJSON",
+		"when": "inSettingsEditor"
 	},
 
 	/* v1.57 release removed this kb */

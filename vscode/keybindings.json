@@ -345,8 +345,13 @@
 		"when": "filesExplorerFocus"
 	},
 
-	/* JohannesRudolph.file-ext-switcher */
-	/* Angular */
+	/* Ctrl+Shift+J */
+	{
+		"key": "ctrl+shift+j",
+		"command": "settings.switchToJSON",
+		"when": "inSettingsEditor"
+	},
+	/* file-ext-switcher:Angular */
 	{
 		"key": "ctrl+shift+j",
 		"command": "fileextswitch",
@@ -360,7 +365,7 @@
 			],
 			//"useOtherColumn": true
 		},
-		"when": "editorFocus"
+		"when": "editorFocus && !inSearchEditor && !inSettingsEditor"
 	},
 
 	/* v1.57 release removed this kb */

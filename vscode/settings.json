@@ -82,8 +82,8 @@
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.untitled.hint": "hidden",
 
-	"editor.codeLensFontFamily": "sans-serif",
-	"editor.codeLensFontSize": 11,
+	"editor.codeLensFontFamily": "serif",
+	"editor.codeLensFontSize": 12,
 
 	/* SCM */
 
@@ -96,8 +96,8 @@
 	"git.rebaseWhenSync": true,
 	"git.showPushSuccessNotification": true,
 
-	"scm.inputFontFamily": "editor",
-	"scm.inputFontSize": 14,
+	"scm.inputFontFamily": "sans",
+	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
 
 	/* Extensions */

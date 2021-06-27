@@ -24,6 +24,17 @@ function DeepCopy-Object ($obj) {
 }
 
 
+function Get-ScriptDirectory {
+  Split-Path ($(
+    if ($host.Name -clike '* ISE Host') {
+      $global:psISE.CurrentFile.FullPath
+    } else {
+      $global:PSCommandPath
+    }
+  ))
+}
+
+
 function Reload-Path {
   $env:Path = [Environment]::GetEnvironmentVariable('Path', 'User') `
       + ';' + [Environment]::GetEnvironmentVariable('Path', 'Machine')
@@ -58,7 +69,7 @@ function Install-App ($url, $OutFile, $Arguments) {
     $Process = Start-Process -FilePath $OutFile -Wait -PassThru
   }
   if ($Process.ExitCode) {
-    Write-Error "`"${OutFile}`" installation has failed.  ExitCode=${Process.ExitCode}"
+    Write-Error ("`"${OutFile}`" installation has failed.  ExitCode=" + $Process.ExitCode)
     return
   }
   Set-Content -Path "$OutFile.skip" -Value 'skip'

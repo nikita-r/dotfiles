@@ -1,4 +1,5 @@
 #·profile.ps1
+#> notepad (Join-Path (Split-Path $PROFILE) profile.ps1)
 
 # guard against repeated load of the profile
 if ($PSDefaultParameterValues.Contains('Get-Help:ShowWindow')) { throw }
@@ -7,7 +8,7 @@ $PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
 $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
-#. "$(join-path (split-path $profile) 'profile.extra-func.ps1')"
+#. (Join-Path (Split-Path $PROFILE) profile.extra-func.ps1)
 
 function prompt { (Get-Date -f 'MM\/dd|HH:mm') `
                 + "[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]" `
@@ -20,8 +21,7 @@ Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd -like ' *') { return $false }
     if ($cmd.Length -le 3) { return $false }
     if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
-    if ($cmd -like 'gcm *' -or $cmd -like 'shcm *') { return $false }
-    if ($cmd -like 'View-*') { return $false }
+    if ($cmd -like 'View-*' -or $cmd -like 'Set-SpeakersVolume*') { return $false }
     return $true
 }
 
@@ -97,6 +97,8 @@ function View-FileHexed {
             $i |% { ' {0:x2}' -f $_ }
     -join($a)
 }
+
+function Toggle-Mute { (New-Object -com WScript.Shell).SendKeys([char]173) }
 
 function View-ProcUtil {
   [CmdletBinding()] param (
@@ -177,6 +179,16 @@ function Get-Epoch-Timestamp ($x) {
     $datetime = (Get-Date $x).ToUniversalTime()
   }
   [int] ($datetime - $epoch).TotalSeconds
+}
+
+
+function Set-SpeakersVolume ([float]$v) {
+    $wsh = New-Object -com WScript.Shell
+    1..50 |% { $wsh.SendKeys([char]174) }
+    $v /= 2 # in case of ([int]$v), would round half to even
+    for ($i=0; $i -lt $v; ++$i) {
+        $wsh.SendKeys([char]175) # incr by 2pp
+    }
 }
 
 

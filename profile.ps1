@@ -10,8 +10,21 @@ Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
 #. (Join-Path (Split-Path $PROFILE) profile.extra-func.ps1)
 
+$prompt_intern = '[' + [Environment]::UserName + ']'
+if ($PSVersionTable['Platform'] -ceq 'Unix') {
+  $prompt_intern = "[$((&tty)-replace'^/dev/')|$env:USER]"
+}
+if ([Environment]::Is64BitProcess -ne [Environment]::Is64BitOperatingSystem) {
+  $prompt_intern += $(
+    switch ([IntPtr]::Size) {
+                4 { '(x86)' }
+                8 { '(x64)' }
+          default { '(?)' }
+    }
+  )
+}
 function prompt { (Get-Date -f 'MM\/dd|HH:mm') `
-                + "[$(if($PSVersionTable['Platform']-ceq'Unix'){((&tty)-replace'^/dev/')+'|'+$env:USER}else{$env:UserName})]" `
+                + $prompt_intern `
                 + '>' * (1+$NestedPromptLevel) + ' ' `
                 }
 
@@ -98,8 +111,6 @@ function View-FileHexed {
     -join($a)
 }
 
-function Toggle-Mute { (New-Object -com WScript.Shell).SendKeys([char]173) }
-
 function View-ProcUtil {
   [CmdletBinding()] param (
 [Parameter(Mandatory=$true)]
@@ -181,6 +192,10 @@ function Get-Epoch-Timestamp ($x) {
   [int] ($datetime - $epoch).TotalSeconds
 }
 
+
+<# WScript.Shell #>
+
+function Toggle-Mute { (New-Object -com WScript.Shell).SendKeys([char]173) }
 
 function Set-SpeakersVolume ([float]$v) {
     $wsh = New-Object -com WScript.Shell

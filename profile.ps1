@@ -71,7 +71,39 @@ Write-Host "swapd to `"$b`""
 }
 
 
-<# string manipulation helpers #>
+<# Object helpers #>
+
+function DeepCopy-Object ($obj) {
+    $memStr = [io.MemoryStream]::new()
+    $fmtBin = [Runtime.Serialization.Formatters.Binary.BinaryFormatter]::new()
+    $fmtBin.Serialize($memStr, $obj)
+    $memStr.Position=0
+    $fmtBin.Deserialize($memStr)
+}
+
+# Usage: ... | List-ObjectProps -t | ogv
+# FIXME: array as positional argument results in additional property Name=Length
+function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
+                          , [switch]$TruthyOnly ) {
+    begin { $i=0; Set-StrictMode -Off }
+    process {
+        $obj | gm -MemberType *Property |% Name | sort -u `
+        |? { if ($TruthyOnly) {$obj |% $_} else {$true} } `
+        |% { New-Object PSObject -Property $(
+                        $values = $obj |% $_ |? {if($TruthyOnly){$_}else{$true}}
+                        if ($MyInvocation.ExpectingInput) {
+                [ordered]@{'00'=$i.ToString('00');Name=$_;Value=$values}
+                        } else {
+                [ordered]                       @{Name=$_;Value=$values}
+                        }
+                        )
+                }
+        ++$i
+    }
+}
+
+
+<# str utils #>
 
 # Natural Sort: ... | sort $_naturally
 $_naturally = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(10, '0') }) }

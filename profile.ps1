@@ -33,8 +33,9 @@ Set-PSReadLineOption -HistoryNoDuplicates:$true
 Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd -like ' *') { return $false }
     if ($cmd.Length -le 3) { return $false }
+    if ($cmd -like 'gcm *' -or $cmd -like 'dir *') { return $false }
+    if ($cmd -like 'View-*') { return $false }
     if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
-    if ($cmd -like 'View-*' -or $cmd -like 'Set-SpeakersVolume*') { return $false }
     return $true
 }
 
@@ -47,7 +48,7 @@ function ccd ($dir) { try {
 } catch {'{0}' -f $_.Exception} }
 
 del alias:pwd
-function  pwd  { (Get-Location).Path }  # != [System.Environment]::CurrentDirectory
+function  pwd  { (Get-Location).Path }  # != [Environment]::CurrentDirectory
 
 del alias:dir
 function  dir  {
@@ -87,14 +88,16 @@ function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
                           , [switch]$TruthyOnly ) {
     begin { $i=0; Set-StrictMode -Off }
     process {
-        $obj | gm -MemberType *Property |% Name | sort -u `
-        |? { if ($TruthyOnly) {$obj |% $_} else {$true} } `
+        $obj | Get-Member -MemberType *Property |% Name | Sort-Object -Unique `
+        |? { if ($TruthyOnly) {$obj |% $_ |? {$_}} else {$true} } `
         |% { New-Object PSObject -Property $(
-                        $values = $obj |% $_ |? {if($TruthyOnly){$_}else{$true}}
+                        $v = $obj |% $_
+                        if ($obj.Count -gt 1) { $v = @($v|Sort-Object -Unique) }
+                        if ($TruthyOnly) { $v = $v |? {$_} }
                         if ($MyInvocation.ExpectingInput) {
-                [ordered]@{'00'=$i.ToString('00');Name=$_;Value=$values}
+                [ordered]@{'00'=$i.ToString('00');Name=$_;Value=$v}
                         } else {
-                [ordered]                       @{Name=$_;Value=$values}
+                [ordered]                       @{Name=$_;Value=$v}
                         }
                         )
                 }

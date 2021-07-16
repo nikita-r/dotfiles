@@ -67,7 +67,7 @@ HISTIGNORE+=':free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr'
 HISTIGNORE+=':sensors:bluetoothctl:rfkill:journalctl:journalctl -r'
 HISTIGNORE+=':systemctl reboot:systemctl status:systemctl poweroff'
 HISTIGNORE+=':set:su:true:false'
-HISTIGNORE+=':gitk:git sb:git dc:git show'
+HISTIGNORE+=':gitk:git sb:git dc:git show:git log *:git show *'
 
 declare -a comps=( weston sway )
 for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done

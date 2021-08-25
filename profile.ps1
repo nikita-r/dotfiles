@@ -86,22 +86,23 @@ function DeepCopy-Object ($obj) {
 # FIXME: array as positional argument results in additional property Name=Length
 function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
                           , [switch]$TruthyOnly ) {
-    begin { $i=0; Set-StrictMode -Off }
+    begin { Set-StrictMode -Off }
     process {
         $obj | Get-Member -MemberType *Property |% Name | Sort-Object -Unique `
         |? { if ($TruthyOnly) {$obj |% $_ |? {$_}} else {$true} } `
         |% { New-Object PSObject -Property $(
                         $v = $obj |% $_
-                        if ($obj.Count -gt 1) { $v = @($v|Sort-Object -Unique) }
+                        if ($obj.Count -gt 1) { $v = $v | Sort-Object -Unique }
                         if ($TruthyOnly) { $v = $v |? {$_} }
                         if ($MyInvocation.ExpectingInput) {
-                [ordered]@{'00'=$i.ToString('00');Name=$_;Value=$v}
+                            $f = $(if ($local:i -lt 100) {(0+$local:i).ToString('00')} else {'##'})
+                [ordered]@{'00'=$f;Name=$_;Value=$v}
                         } else {
-                [ordered]                       @{Name=$_;Value=$v}
+                [ordered]        @{Name=$_;Value=$v}
                         }
                         )
                 }
-        ++$i
+        ++$local:i
     }
 }
 

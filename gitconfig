@@ -100,3 +100,10 @@
 	ignoredHook = true
 	detachedHead = false
 
+# Usage: .git/info/attributes: *.whatever diff=nodiff
+[diff "nodiff"]
+	command = true
+
+[pull]
+	rebase = true
+

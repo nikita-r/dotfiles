@@ -22,7 +22,7 @@
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
-	"editor.find.seedSearchStringFromSelection": false,
+	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false,
 
 	"workbench.settings.enableNaturalLanguageSearch": false,
@@ -56,6 +56,7 @@
 	//"editor.fontSize": 14,
 	//"editor.fontLigatures": true,
 
+	"editor.bracketPairColorization.enabled": true,
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
@@ -80,10 +81,14 @@
 	"editor.copyWithSyntaxHighlighting": false,
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
+	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
+
+	"workbench.editor.restoreViewState": true,
+	"workbench.editor.sharedViewState": true,
 
 	/* SCM */
 
@@ -127,10 +132,13 @@
 
 	/* Exit / Init */
 	"files.hotExit": "off",
-	"terminal.integrated.confirmOnExit": true,
 	"window.newWindowDimensions": "offset",
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
+
+	"debug.confirmOnExit": "always",
+	"terminal.integrated.confirmOnExit": "always", // or "hasChildProcesses"
+	"terminal.integrated.confirmOnKill": "always",
 
 	/* Format */
 	"html.format.wrapAttributes": "force-expand-multiline",
@@ -144,6 +152,7 @@
 
 	/* UI styles */
 	"terminal.integrated.tabs.enabled": true,
+	"terminal.integrated.tabs.enableAnimation": false,
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,

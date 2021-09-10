@@ -28,13 +28,14 @@ SendMode InputThenPlay
 F1:: ; nope
 return
 
-; Disable keyboard shortcuts for Undo/Redo in Windows Explorer
+; Disable keyboard shortcuts that shalt never be invoked in Windows Explorer
 #IfWinActive ahk_exe explorer.exe
+^d::
 ^z::
 ^y::
 SoundPlay,*-1
 Send,{esc}
-MsgBox Windows Explorer: Ctrl+Z and Ctrl+Y are disabled
+MsgBox Windows Explorer: Ctrl+D, Ctrl+Z and Ctrl+Y are disabled
 return
 #If
 

@@ -137,7 +137,7 @@
 	"zenMode.restore": false,
 
 	"debug.confirmOnExit": "always",
-	"terminal.integrated.confirmOnExit": "always", // or "hasChildProcesses"
+	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always",
 
 	/* Format */

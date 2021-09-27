@@ -42,12 +42,13 @@ nnoremap <F8> :call ToggleVE()<CR>
 
 set wrap nolbr
 
-set ai pastetoggle=<F2>
-au InsertLeave * set nopaste
-
-filetype plugin indent on
-syntax on
+filetype off
+set ai
+set pastetoggle=<F2>
+filetype indent off
+filetype plugin on
 let python_highlight_all = 1
+au InsertLeave * set nopaste
 
 " Parse the entire file in order to correct syntax highlighting.
 nnoremap <F7> :syntax sync fromstart<CR>

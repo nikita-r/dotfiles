@@ -56,7 +56,8 @@
 	//"editor.fontSize": 14,
 	//"editor.fontLigatures": true,
 
-	"editor.bracketPairColorization.enabled": true,
+	//"editor.bracketPairColorization.enabled": true,
+
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
@@ -73,6 +74,7 @@
 
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorSurroundingLines": 0,
 	"editor.cursorWidth": 3,
 
 	"breadcrumbs.symbolSortOrder": "name",
@@ -157,6 +159,13 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.zoomLevel": 0.0,
 	"workbench.colorCustomizations": {
+
+		"activityBar.background": "#3F1F1F",
+		"statusBar.background": "#3F1F1F",
+		"statusBar.noFolderBackground": "#3F1F1F",
+		"titleBar.activeBackground": "#3F1F1F",
+		"titleBar.inactiveBackground": "#3F1F1F",
+
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",

@@ -160,11 +160,14 @@
 	"window.zoomLevel": 0.0,
 	"workbench.colorCustomizations": {
 
-		"activityBar.background": "#3F1F1F",
-		"statusBar.background": "#3F1F1F",
-		"statusBar.noFolderBackground": "#3F1F1F",
-		"titleBar.activeBackground": "#3F1F1F",
-		"titleBar.inactiveBackground": "#3F1F1F",
+		"activityBar.background": "#3F1F3F",
+		"activityBarBadge.background": "#7F5F7F",
+		"activityBarBadge.foreground": "#3F1F3F",
+		"breadcrumb.background": "#3F1F3F",
+		"statusBar.background": "#3F1F3F",
+		"statusBar.noFolderBackground": "#3F1F3F",
+		"titleBar.activeBackground": "#3F1F3F",
+		"titleBar.inactiveBackground": "#3F1F3F",
 
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",

@@ -152,22 +152,26 @@
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
 
-	/* UI styles */
+	/* customize GUI */
+
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.enableAnimation": false,
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
+	"window.customMenuBarAltFocus": false,
+
 	"window.zoomLevel": 0.0,
+
 	"workbench.colorCustomizations": {
 
-		"activityBar.background": "#3F1F3F",
-		"activityBarBadge.background": "#7F5F7F",
-		"activityBarBadge.foreground": "#3F1F3F",
-		"breadcrumb.background": "#3F1F3F",
-		"statusBar.background": "#3F1F3F",
-		"statusBar.noFolderBackground": "#3F1F3F",
-		"titleBar.activeBackground": "#3F1F3F",
-		"titleBar.inactiveBackground": "#3F1F3F",
+		"activityBar.background": "#402040",
+		"activityBarBadge.background": "#806080",
+		"activityBarBadge.foreground": "#402040",
+		"breadcrumb.background": "#402040",
+		"statusBar.background": "#402040",
+		"statusBar.noFolderBackground": "#402040",
+		"titleBar.activeBackground": "#402040",
+		"titleBar.inactiveBackground": "#402040",
 
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
@@ -179,6 +183,7 @@
 		"editor.findMatchBackground": "#733",
 		"minimap.selectionHighlight": "#357",
 	},
+
 	"workbench.iconTheme": "vs-minimal",
 
 	/* . . . */

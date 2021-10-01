@@ -184,11 +184,16 @@
 		"minimap.selectionHighlight": "#357",
 	},
 
-	"workbench.iconTheme": "vs-minimal",
+	"workbench.iconTheme": "vs-minimal", // File Icon Theme
+	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)
 
 	/* . . . */
 
-	"files.exclude": { "**/__pycache__": true, "**/CVS": false },
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.ipynb_checkpoints": true,
+		"**/CVS": false
+	},
 	"files.associations": {
 		"*.qss": "css",
 	},

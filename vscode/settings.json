@@ -30,11 +30,11 @@
 	/* suggestions-adjacent settings */
 
 	"editor.hover.enabled": false,
-	//"editor.parameterHints.enabled": false,
 	"editor.suggestOnTriggerCharacters": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 0,
-	//"editor.suggest.filterGraceful": false,
+	"editor.suggest.filterGraceful": false,
+	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
 
@@ -89,6 +89,7 @@
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
 
+	//"workbench.editor.enablePreview": false,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -189,13 +190,13 @@
 
 	/* . . . */
 
-	"files.exclude": {
-		"**/__pycache__": true,
-		"**/.ipynb_checkpoints": true,
-		"**/CVS": false
-	},
+	"diffEditor.ignoreTrimWhitespace": false,
 	"files.associations": {
 		"*.qss": "css",
 	},
-	"diffEditor.ignoreTrimWhitespace": false,
+	//"files.eol": "\n",
+	"files.exclude": {
+		"**/.ipynb_checkpoints": true,
+		"**/CVS": false
+	},
 }

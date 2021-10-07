@@ -124,8 +124,9 @@
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
 
-	"python.autoUpdateLanguageServer": false,
+	"python.dataScience.enabled": false,
 	"python.linting.enabled": false,
+	"python.autoUpdateLanguageServer": false,
 	"python.showStartPage": false,
 
 	"todo-tree.general.revealBehaviour": "start of line",
@@ -197,6 +198,7 @@
 	//"files.eol": "\n",
 	"files.exclude": {
 		"**/.ipynb_checkpoints": true,
+		"**/__pycache__": true,
 		"**/CVS": false
 	},
 }

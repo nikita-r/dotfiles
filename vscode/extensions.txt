@@ -1,4 +1,12 @@
+alefragnani.Bookmarks
 eamodio.gitlens
 EditorConfig.EditorConfig
+Gruntfuggly.todo-tree
 hediet.vscode-drawio
 JohannesRudolph.file-ext-switcher
+ms-dotnettools.csharp
+ms-vscode.hexeditor
+ms-vscode.powershell
+redhat.vscode-commons
+redhat.vscode-xml
+redhat.vscode-yaml

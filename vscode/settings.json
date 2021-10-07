@@ -30,7 +30,6 @@
 	/* suggestions-adjacent settings */
 
 	"editor.hover.enabled": false,
-	"editor.suggestOnTriggerCharacters": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 0,
 	"editor.suggest.filterGraceful": false,
@@ -45,10 +44,9 @@
 	"emmet.showSuggestionsAsSnippets": true,
 	"emmet.triggerExpansionOnTab": true,
 
+	"editor.suggestOnTriggerCharacters": false,
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
-	"editor.autoClosingBrackets": "never",
-	"editor.autoClosingQuotes": "never",
 
 	/* . . . */
 
@@ -144,7 +142,7 @@
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always",
 
-	/* Format */
+	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
 	"powershell.codeFormatting.preset": "OTBS",
@@ -154,6 +152,14 @@
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
 
+	/* !autoClosing */
+	"editor.autoClosingBrackets": "never",
+	"editor.autoClosingQuotes": "never",
+	"html.autoClosingTags": false,
+	"javascript.autoClosingTags": false,
+	"typescript.autoClosingTags": false,
+	"xml.completion.autoCloseTags": false,
+
 	/* customize GUI */
 
 	"terminal.integrated.tabs.enabled": true,
@@ -161,8 +167,6 @@
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
-
-	"window.zoomLevel": 0.0,
 
 	"workbench.colorCustomizations": {
 
@@ -191,7 +195,13 @@
 
 	/* . . . */
 
+	"window.zoomLevel": 0.0,
+
+	"emmet.includeLanguages": {
+	},
+
 	"diffEditor.ignoreTrimWhitespace": false,
+	//"diffEditor.renderSideBySide": false,
 	"files.associations": {
 		"*.qss": "css",
 	},

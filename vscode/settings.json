@@ -200,6 +200,13 @@
 	"emmet.includeLanguages": {
 	},
 
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"args": ["-NoLogo"]
+		},
+	},
+
 	"diffEditor.ignoreTrimWhitespace": false,
 	//"diffEditor.renderSideBySide": false,
 	"files.associations": {

@@ -345,6 +345,26 @@
 		"when": "filesExplorerFocus"
 	},
 
+	/* keys in Terminal */
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpen",
+		"when": "!terminalFocus && !terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.files.newUntitledFile",
+		"when": "!terminalFocus && !terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+
 	/* Ctrl+Shift+J */
 	/* file-ext-switcher:Angular */
 	{

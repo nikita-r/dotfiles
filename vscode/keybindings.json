@@ -356,6 +356,32 @@
 		"command": "",
 		"when": "terminalFocus || terminalTabsFocus"
 	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported || terminalTabsFocus && terminalProcessSupported"
+	},
+	/* ?terminalTabsFocus */
+	{
+		"key": "ctrl+f",
+		"command": "workbench.action.terminal.focusFind",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "alt+c",
+		"command": "workbench.action.terminal.toggleFindCaseSensitive",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "alt+q",
+		"command": "workbench.action.terminal.toggleFindRegex",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.terminal.toggleFindWholeWord",
+		"when": "terminalTabsFocus"
+	},
 
 	/* Ctrl+Shift+J */
 	/* file-ext-switcher:Angular */

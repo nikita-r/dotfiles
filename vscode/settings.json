@@ -183,6 +183,9 @@
 		"titleBar.activeBackground": "#402040",
 		"titleBar.inactiveBackground": "#402040",
 
+		"focusBorder": "#F08048",
+		"tab.activeModifiedBorder": "#F08048",
+
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",

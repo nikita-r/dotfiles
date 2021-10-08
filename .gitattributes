@@ -1,0 +1,5 @@
+*       eol=lf
+*.ahk eol=crlf
+*.bat eol=crlf
+*.cmd eol=crlf
+*.txt eol=crlf

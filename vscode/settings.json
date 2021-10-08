@@ -76,7 +76,6 @@
 
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
-	"editor.cursorSurroundingLines": 0,
 	"editor.cursorWidth": 3,
 
 	"breadcrumbs.symbolSortOrder": "name",
@@ -128,11 +127,9 @@
 
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
-	"python.experiments.enabled": false,
-	"python.dataScience.enabled": false,
-	"python.linting.enabled": false,
 	"python.autoUpdateLanguageServer": false,
-	"python.showStartPage": false,
+	"python.experiments.enabled": false,
+	"python.linting.enabled": false,
 
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,

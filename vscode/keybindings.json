@@ -14,7 +14,7 @@
 		"command": "cursorRedo",
 		"key": "ctrl+y"
 	},
-	{ "command": "noop", "key": "ctrl+shift+u" },
+	//{ "command": "noop", "key": "ctrl+shift+u" },
 	{
 		"key": "ctrl+shift+d",
 		"command": "editor.action.selectHighlights"

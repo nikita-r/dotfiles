@@ -398,6 +398,11 @@
 		"command": "workbench.action.terminal.toggleFindWholeWord",
 		"when": "terminalTabsFocus"
 	},
+	{
+		"key": "alt+z",
+		"command": "workbench.action.terminal.sizeToContentWidth",
+		"when": "terminalTabsFocus"
+	},
 
 	/* Ctrl+Shift+J */
 	/* file-ext-switcher:Angular */

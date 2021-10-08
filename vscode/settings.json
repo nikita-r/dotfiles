@@ -12,6 +12,7 @@
 	"redhat.telemetry.enabled": false,
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
+	"telemetry.telemetryLevel": "off",
 	"workbench.enableExperiments": false,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -55,14 +56,17 @@
 	//"editor.fontLigatures": true,
 
 	//"editor.bracketPairColorization.enabled": true,
+	//"editor.guides.bracketPairs": true,
+	//"editor.guides.highlightActiveIndentation": false,
+	"editor.guides.indentation": false,
+	"editor.renderIndentGuides": false, // pre-v1.61
+	//"editor.rulers": [ 80, 120 ],
+	"workbench.tree.indent": 12,
+	"workbench.tree.renderIndentGuides": "always",
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": true,
-	"editor.renderIndentGuides": false,
-	//"editor.rulers": [ 80, 120 ],
-	"workbench.tree.indent": 12,
-	"workbench.tree.renderIndentGuides": "always",
 
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
@@ -122,6 +126,9 @@
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
 
+	"jupyter.disableJupyterAutoStart": true,
+	"jupyter.experiments.enabled": false,
+	"python.experiments.enabled": false,
 	"python.dataScience.enabled": false,
 	"python.linting.enabled": false,
 	"python.autoUpdateLanguageServer": false,
@@ -131,16 +138,6 @@
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.tree.showBadges": false,
-
-	/* Exit / Init */
-	"files.hotExit": "off",
-	"window.newWindowDimensions": "offset",
-	"workbench.startupEditor": "none",
-	"zenMode.restore": false,
-
-	"debug.confirmOnExit": "always",
-	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
-	"terminal.integrated.confirmOnKill": "always",
 
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
@@ -159,6 +156,16 @@
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
 	"xml.completion.autoCloseTags": false,
+
+	/* Exit / Init */
+	"files.hotExit": "off",
+	"window.newWindowDimensions": "offset",
+	"workbench.startupEditor": "none",
+	"zenMode.restore": false,
+
+	"debug.confirmOnExit": "always",
+	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
+	"terminal.integrated.confirmOnKill": "always",
 
 	/* customize GUI */
 

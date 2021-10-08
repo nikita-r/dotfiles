@@ -356,10 +356,26 @@
 		"command": "",
 		"when": "terminalFocus || terminalTabsFocus"
 	},
+	/* un/split */
 	{
 		"key": "ctrl+shift+s",
 		"command": "workbench.action.terminal.split",
-		"when": "terminalFocus && terminalProcessSupported || terminalTabsFocus && terminalProcessSupported"
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+u",
+		"command": "workbench.action.terminal.unsplit",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.terminal.splitInstance",
+		"when": "terminalTabsFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+u",
+		"command": "workbench.action.terminal.unsplitInstance",
+		"when": "terminalTabsFocus && terminalProcessSupported"
 	},
 	/* ?terminalTabsFocus */
 	{

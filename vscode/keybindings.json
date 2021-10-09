@@ -346,16 +346,14 @@
 	},
 
 	/* keys in Terminal */
-	{
-		"key": "ctrl+p",
-		"command": "",
-		"when": "terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "",
-		"when": "terminalFocus || terminalTabsFocus"
-	},
+	{ "key": "ctrl+e", "command": ""
+	, "when": "terminalFocus || terminalTabsFocus" },
+	{ "key": "ctrl+n", "command": ""
+	, "when": "terminalFocus || terminalTabsFocus" },
+	{ "key": "ctrl+p", "command": ""
+	, "when": "terminalFocus || terminalTabsFocus" },
+	{ "key": "ctrl+w", "command": ""
+	, "when": "terminalFocus || terminalTabsFocus" },
 	/* un/split */
 	{
 		"key": "ctrl+shift+s",

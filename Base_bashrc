@@ -1,0 +1,59 @@
+#·.bashrc
+
+[[ $- != *i* ]] && return
+[[ $- == *i* ]] && stty -ixon
+
+
+export EDITOR='vim'
+
+
+alias cp='cp --reflink=auto --sparse=always'
+
+alias grep='grep --colour'
+
+alias ls='ls --color=auto'
+alias la='ls -A'
+alias ll='ls -l --full-time'
+
+alias cls="printf '\ec'"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+function ccd { mkdir "$1" && cd "$1"; }
+
+
+PROMPT_DIRTRIM=5
+
+PSO='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w'
+PS_=$
+PS1="$PSO\[\e[0;34m\]$PS_ \[\e[0m\]"
+
+if shopt -q login_shell; then
+
+cls
+PROMPT_COMMAND="history -a"
+
+else
+
+function set-prompt {
+    PSO="\[\e[0;34m\]$1\[\e[1;31m\]|"
+    PSO="\[\e[1;31m\]|$PSO"
+    PS_='>'
+}
+
+function prompt_command {
+   local EXIT_STATUS=$?
+   local C='0;34m'
+   if [ $EXIT_STATUS != 0 ]; then
+         C='0;97m'
+   fi
+   PS1="$PSO\[\e[$C\]$PS_ \[\e[0m\]"
+}
+PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
+
+fi
+
+shopt -s histappend
+HISTCONTROL=ignoreboth
+

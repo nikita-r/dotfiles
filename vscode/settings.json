@@ -164,10 +164,29 @@
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always",
 
-	/* customize GUI */
+	/* Terminal */
+
+	"terminal.integrated.commandsToSkipShell": [
+		"workbench.action.showAllSymbols",
+		"workbench.action.toggleSidebarVisibility",
+	],
+
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"args": ["-NoLogo"]
+		},
+	},
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.enableAnimation": false,
+
+	/* Remote › Containers */
+	"dotfiles.repository": "nikita-r/dotfiles",
+	"remote.containers.copyGitConfig": false,
+
+	/* customize GUI */
+
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
@@ -205,13 +224,6 @@
 	"window.zoomLevel": 0.0,
 
 	"emmet.includeLanguages": {
-	},
-
-	"terminal.integrated.profiles.windows": {
-		"PowerShell": {
-			"source": "PowerShell",
-			"args": ["-NoLogo"]
-		},
 	},
 
 	"diffEditor.ignoreTrimWhitespace": false,

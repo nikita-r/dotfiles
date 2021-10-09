@@ -3,3 +3,10 @@
 *.bat eol=crlf
 *.cmd eol=crlf
 *.txt eol=crlf
+
+# https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+/gitattributes linguist-language=gitattributes
+/gitconfig linguist-language=gitconfig
+/editorconfig linguist-language=EditorConfig
+/*_bashrc linguist-language=sh
+*.json linguist-language=jsonc

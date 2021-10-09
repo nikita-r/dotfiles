@@ -78,6 +78,10 @@
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
 
+	//"workbench.editor.enablePreview": false,
+	"workbench.editor.restoreViewState": true,
+	"workbench.editor.sharedViewState": true,
+
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
@@ -89,10 +93,6 @@
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
-
-	//"workbench.editor.enablePreview": false,
-	"workbench.editor.restoreViewState": true,
-	"workbench.editor.sharedViewState": true,
 
 	/* SCM */
 
@@ -166,6 +166,8 @@
 
 	/* Terminal */
 
+	"terminal.integrated.allowMnemonics": true,
+
 	"terminal.integrated.commandsToSkipShell": [
 		"workbench.action.showAllSymbols",
 		"workbench.action.toggleSidebarVisibility",
@@ -180,6 +182,9 @@
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.enableAnimation": false,
+	"terminal.integrated.tabs.hideCondition": "never",
+	"terminal.integrated.tabs.showActions": "never",
+	"terminal.integrated.scrollback": 32767,
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
@@ -190,6 +195,9 @@
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
+
+	"editor.roundedSelection": false,
+	"editor.showFoldingControls": "always",
 
 	"workbench.colorCustomizations": {
 
@@ -236,5 +244,8 @@
 		"**/.ipynb_checkpoints": true,
 		"**/__pycache__": true,
 		"**/CVS": false
+	},
+	"search.exclude": {
+		"**/package-lock.json": true,
 	},
 }

@@ -14,6 +14,7 @@ alias grep='grep --colour'
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -l --full-time'
+alias lt='ls -1t'
 
 alias cls="printf '\ec'"
 
@@ -39,7 +40,7 @@ else
 function set-prompt {
     PSO="\[\e[0;34m\]$1\[\e[1;31m\]|"
     PSO="\[\e[1;31m\]|$PSO"
-    PS_='>'
+    PS_='#'
 }
 
 function prompt_command {

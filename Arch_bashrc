@@ -25,7 +25,7 @@ if shopt -q login_shell; then :; else
 function set-prompt {
     PSO="\[\e[0;34m\]$1\[\e[1;31m\]|"
     PSO="\[\e[1;31m\]|$PSO"
-    PS_='>'
+    PS_='#'
 }
 
 function prompt_command {
@@ -47,6 +47,7 @@ alias grep='grep --colour'
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -l --full-time'
+alias lt='ls -1t'
 
 alias cls="printf '\ec'"
 
@@ -66,8 +67,8 @@ HISTIGNORE+=':lspci:lsscsi:lsblk:mount:lsusb'
 HISTIGNORE+=':free -m:alsamixer:pwsh:iwctl:ip help:ip link:ip addr'
 HISTIGNORE+=':sensors:bluetoothctl:rfkill:journalctl:journalctl -r'
 HISTIGNORE+=':systemctl reboot:systemctl status:systemctl poweroff'
-HISTIGNORE+=':set:su:true:false'
-HISTIGNORE+=':gitk:git sb:git dc:git show:git log *:git show *'
+HISTIGNORE+=':set:su:lt:true:false:mpv:mpv *'
+HISTIGNORE+=':gitk:git sb:git dc:git show:git log *:git show *:top'
 
 declare -a comps=( weston sway )
 for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done

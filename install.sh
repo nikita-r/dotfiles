@@ -2,12 +2,15 @@
 
 set -e
 set -f
+
+cwd=`pwd -P`
+
 set -x
 
-ln -sf "$(pwd)/gitconfig" "${HOME}/.gitconfig"
+ln -Tfs "$cwd/gitconfig" "${HOME}/.gitconfig"
 
-ln -sf "$(pwd)/Base_bashrc" "${HOME}/.bashrc"
+ln -Tfs "$cwd/Base_bashrc" "${HOME}/.bashrc"
 
-ln -sf -T "$(pwd)/vim" "${HOME}/.vim"
-ln -sf "$(pwd)/vimrc" "${HOME}/.vimrc"
+ln -Tfs "$cwd/vim" "${HOME}/.vim"
+ln -Tfs "$cwd/vimrc" "${HOME}/.vimrc"
 

@@ -56,6 +56,9 @@
 	binary = true
 	cachetextconv = true
 
+[diff "bin"]
+	textconv = hexdump -v -C
+
 [alias]
 	dc = ! git diff -w --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dw = diff -w --word-diff=color
@@ -106,4 +109,20 @@
 
 [pull]
 	rebase = true
+
+#[fetch]
+#	prune = true
+#	pruneTags = false
+
+[alias]
+	ls = ls-files -s -o
+
+[apply]
+	whitespace = fix
+
+#[core]
+#	whitespace = blank-at-eol,-blank-at-eof
+
+[diff]
+	renames = copies
 

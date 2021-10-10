@@ -14,3 +14,6 @@ ln -Tfs "$cwd/Base_bashrc" "${HOME}/.bashrc"
 ln -Tfs "$cwd/vim" "${HOME}/.vim"
 ln -Tfs "$cwd/vimrc" "${HOME}/.vimrc"
 
+mkdir -p ~/.local/bin
+cp -n -a "$cwd"/u.bin/. ~/.local/bin/
+

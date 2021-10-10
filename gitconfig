@@ -57,7 +57,7 @@
 	cachetextconv = true
 
 [diff "bin"]
-	textconv = hexdump -v -C
+	textconv = hexdump --canonical --no-squeezing
 
 [alias]
 	dc = ! git diff -w --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
@@ -125,4 +125,10 @@
 
 [diff]
 	renames = copies
+
+[user]
+	useConfigOnly = true
+
+[include]
+	path = ~/.gitconfig.local
 

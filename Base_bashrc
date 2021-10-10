@@ -1,20 +1,20 @@
 #·.bashrc
 
-[[ $- != *i* ]] && return
-[[ $- == *i* ]] && stty -ixon
+case $- in
+	*i*) test -t 0 && stty -ixon ;;
+	  *) return ;;
+esac
 
 
 export EDITOR='vim'
 
+if [[ $PATH != ~/.local/bin:* ]]; then
+PATH=~/.local/bin:$PATH
+fi
+export PATH
+
 
 alias cp='cp --reflink=auto --sparse=always'
-
-alias grep='grep --colour'
-
-alias ls='ls --color=auto'
-alias la='ls -A'
-alias ll='ls -l --full-time'
-alias lt='ls -1t'
 
 alias cls="printf '\ec'"
 
@@ -22,6 +22,13 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 function ccd { mkdir "$1" && cd "$1"; }
+
+alias grep='grep --colour'
+
+alias ls='ls --color=auto'
+alias la='ls -A'
+alias ll='ls -l --full-time'
+alias lt='ls -1t'
 
 
 PROMPT_DIRTRIM=5
@@ -54,6 +61,7 @@ function prompt_command {
 PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
 
 fi
+
 
 shopt -s histappend
 HISTCONTROL=ignoreboth

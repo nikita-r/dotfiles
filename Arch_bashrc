@@ -12,7 +12,11 @@ PATH=~/.local/bin:$PATH
 fi
 export PATH
 
-function ccd { mkdir "$1" && cd "$1"; }
+alias cp='cp --reflink=auto --sparse=always'
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -Iv'
 
 PROMPT_DIRTRIM=5
 
@@ -40,8 +44,6 @@ PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
 
 fi
 
-alias cp='cp --reflink=auto --sparse=always'
-
 alias grep='grep --colour'
 
 alias ls='ls --color=auto'
@@ -53,6 +55,8 @@ alias cls="printf '\ec'"
 
 alias ..='cd ..'
 alias ...='cd ../..'
+
+function ccd { mkdir "$1" && cd "$1"; }
 
 shopt -s histappend
 HISTSIZE=

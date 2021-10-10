@@ -1,8 +1,12 @@
 #·.gitconfig
 
-[user]
-	name = nikita-r
-	email = nikita-r@device
+[core]
+	editor = vim
+	pager = cat
+	# TODO autocrlf
+	safecrlf = true
+	;whitespace = blank-at-eol,-blank-at-eof
+	hideDotFiles = true
 
 [commit]
 	gpgSign = false
@@ -16,12 +20,6 @@
 [init]
 	defaultBranch = main
 
-[core]
-	editor = vim
-	pager = cat
-	# TODO autocrlf
-	safecrlf = true
-
 [alias]
 	co = checkout
 	sb = status -sb
@@ -31,10 +29,11 @@
 [alias]
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
 	aliases = config --get-regexp ^alias\\.
+	branches = branch -a
+	contributors = shortlog -s --email
+	remotes = remote -v
+	tags = tag -l
 
 [alias]
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
@@ -68,11 +67,9 @@
 
 # Beyond Compare
 [diff]
-	tool = bc
-	#tool = bc3
+	tool = bc ; bc3
 [merge]
-	tool = bc
-	#tool = bc3
+	tool = bc ; bc3
 [difftool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
 [mergetool "bc"]
@@ -120,14 +117,15 @@
 [apply]
 	whitespace = fix
 
-#[core]
-#	whitespace = blank-at-eol,-blank-at-eof
-
 [diff]
 	renames = copies
 
 [user]
 	useConfigOnly = true
+
+#[user]
+#	name = nikita-r
+#	email = nikita-r@device
 
 [include]
 	path = ~/.gitconfig.local

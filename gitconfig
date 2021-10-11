@@ -55,17 +55,18 @@
 	binary = true
 	cachetextconv = true
 
-[diff "bin"]
+[diff "hex"]
 	textconv = hexdump --canonical --no-squeezing
-
-[alias]
-	dc = ! git diff -w --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
-	dw = diff -w --word-diff=color
+	binary = true
 
 [diff]
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
-# Beyond Compare
+[alias]
+	dc = ! git diff -w --ignore-blank-lines --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dx = diff -w --ignore-blank-lines --color-words --no-index
+
+# Beyond Compare; under Linux, use "bc3"
 [diff]
 	tool = bc ; bc3
 [merge]
@@ -74,7 +75,6 @@
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
 [mergetool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
-# Use bc3 under Linux
 [difftool "bc3"]
 	trustExitCode = true
 [mergetool "bc3"]

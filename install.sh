@@ -7,12 +7,12 @@ cwd=`pwd -P`
 
 set -x
 
-ln -Tfs "$cwd/gitconfig" "${HOME}/.gitconfig"
+ln -sT -f "$cwd/gitconfig" "${HOME}/.gitconfig"
 
-ln -Tfs "$cwd/Base_bashrc" "${HOME}/.bashrc"
+ln -sT -f "$cwd/Base_bashrc" "${HOME}/.bashrc"
 
-ln -Tfs "$cwd/vim" "${HOME}/.vim"
-ln -Tfs "$cwd/vimrc" "${HOME}/.vimrc"
+ln -sT -f "$cwd/vim" "${HOME}/.vim"
+ln -sT -f "$cwd/vimrc" "${HOME}/.vimrc"
 
 mkdir -p ~/.local/bin
 cp -n -a "$cwd"/u.bin/. ~/.local/bin/

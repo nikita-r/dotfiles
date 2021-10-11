@@ -86,8 +86,10 @@
 	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
+	"editor.foldingHighlight": false, // MAYBE: pick a sane color and enable
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
+	"workbench.editor.decorations.badges": false,
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
 
@@ -108,6 +110,10 @@
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
+
+	/* Remote › Containers */
+	"dotfiles.repository": "nikita-r/dotfiles",
+	"remote.containers.copyGitConfig": false,
 
 	/* Extensions */
 
@@ -166,7 +172,10 @@
 
 	/* Terminal */
 
-	"terminal.integrated.allowMnemonics": true,
+	"terminal.integrated.scrollback": 32767,
+	"terminal.integrated.persistentSessionScrollback": 4095,
+
+	//"terminal.integrated.allowMnemonics": true, // makes Alt+B unavailable
 
 	"terminal.integrated.commandsToSkipShell": [
 		"workbench.action.showAllSymbols",
@@ -184,11 +193,6 @@
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.hideCondition": "never",
 	"terminal.integrated.tabs.showActions": "never",
-	"terminal.integrated.scrollback": 32767,
-
-	/* Remote › Containers */
-	"dotfiles.repository": "nikita-r/dotfiles",
-	"remote.containers.copyGitConfig": false,
 
 	/* customize GUI */
 

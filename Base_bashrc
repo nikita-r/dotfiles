@@ -69,10 +69,11 @@ HISTCONTROL=ignoreboth
 
 # apply readline settings (inputrc)
 bind 'set revert-all-at-newline on'
-bind 'set show-all-if-unmodified on'
 bind 'set show-all-if-ambiguous off'
+bind 'set show-all-if-unmodified on'
 bind 'set mark-directories on'
 bind 'set mark-symlinked-directories on'
+bind 'set match-hidden-files off'
 bind 'Control-n: history-search-forward'
 bind 'Control-p: history-search-backward'
 

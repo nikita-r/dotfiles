@@ -87,6 +87,9 @@
 	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.foldingHighlight": false, // MAYBE: pick a sane color and enable
+	"editor.roundedSelection": false,
+
+	"editor.showFoldingControls": "always",
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.decorations.badges": false,
@@ -141,6 +144,11 @@
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.tree.showBadges": false,
+	"todo-tree.tree.showScanModeButton": false,
+	"todo-tree.general.tags": [
+		"BUG", "HACK", "FIXME",
+		"TODO", "XXX", "MAYBE:"
+	],
 
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
@@ -192,6 +200,7 @@
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.hideCondition": "never",
+	"terminal.integrated.tabs.showActiveTerminal": "never",
 	"terminal.integrated.tabs.showActions": "never",
 
 	/* customize GUI */
@@ -199,9 +208,6 @@
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
-
-	"editor.roundedSelection": false,
-	"editor.showFoldingControls": "always",
 
 	"workbench.colorCustomizations": {
 

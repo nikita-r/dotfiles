@@ -1,0 +1,4 @@
+#·.git/info/attributes
+
+package-lock.json diff=nodiff
+

@@ -55,6 +55,10 @@
 	//"editor.fontSize": 14,
 	//"editor.fontLigatures": true,
 
+	"editor.cursorBlinking": "phase",
+	//"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorWidth": 3,
+
 	//"editor.bracketPairColorization.enabled": true,
 	//"editor.guides.bracketPairs": true,
 	//"editor.guides.highlightActiveIndentation": false,
@@ -64,29 +68,25 @@
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
-	"editor.minimap.showSlider": "always",
-	"editor.minimap.renderCharacters": false,
-	"editor.renderControlCharacters": true,
-
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
-	"editor.cursorBlinking": "phase",
-	//"editor.cursorSmoothCaretAnimation": true,
-	"editor.cursorWidth": 3,
-
 	//"workbench.editor.enablePreview": false,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
+
+	"editor.minimap.showSlider": "always",
+	"editor.minimap.renderCharacters": false,
+	"editor.renderControlCharacters": true,
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
-	"editor.foldingHighlight": false, // MAYBE: pick a sane color and enable
+	//"editor.foldingHighlight": false,
 	"editor.roundedSelection": false,
 
 	"editor.showFoldingControls": "always",
@@ -142,7 +142,7 @@
 
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
-	"todo-tree.regex.regexCaseSensitive": false,
+	//"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.tree.showBadges": false,
 	"todo-tree.tree.showScanModeButton": false,
 	"todo-tree.general.tags": [
@@ -159,6 +159,8 @@
 	"python.formatting.provider": "none",
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
+	"yaml.format.enable": false,
+	"yaml.validate": false,
 
 	/* !autoClosing */
 	"editor.autoClosingBrackets": "never",
@@ -197,7 +199,7 @@
 		},
 	},
 
-	"terminal.integrated.tabs.enabled": true,
+	//"terminal.integrated.tabs.enabled": false,
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.hideCondition": "never",
 	"terminal.integrated.tabs.showActiveTerminal": "never",
@@ -210,6 +212,7 @@
 	"window.customMenuBarAltFocus": false,
 
 	"workbench.colorCustomizations": {
+		"editor.foldBackground": "#323232",
 
 		"activityBar.background": "#402040",
 		"activityBarBadge.background": "#806080",

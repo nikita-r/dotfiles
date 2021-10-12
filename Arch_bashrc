@@ -48,7 +48,7 @@ alias grep='grep --colour'
 
 alias ls='ls --color=auto'
 alias la='ls -A'
-alias ll='ls -l --full-time'
+alias ll='ls --full-time'
 alias lt='ls -1t'
 
 alias cls="printf '\ec'"

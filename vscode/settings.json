@@ -140,15 +140,15 @@
 	"python.experiments.enabled": false,
 	"python.linting.enabled": false,
 
-	"todo-tree.general.revealBehaviour": "start of line",
-	"todo-tree.highlights.enabled": false,
+	"todo-tree.filtering.ignoreGitSubmodules": true,
 	//"todo-tree.regex.regexCaseSensitive": false,
-	"todo-tree.tree.showBadges": false,
-	"todo-tree.tree.showScanModeButton": false,
 	"todo-tree.general.tags": [
-		"BUG", "HACK", "FIXME",
+		"BUG", "HACK", "FIXME", "ToDo",
 		"TODO", "XXX", "MAYBE:"
 	],
+	"todo-tree.general.revealBehaviour": "start of line",
+	"todo-tree.highlights.enabled": false,
+	"todo-tree.tree.showBadges": false,
 
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",

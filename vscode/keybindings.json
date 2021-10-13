@@ -321,6 +321,10 @@
 		"command": "workbench.action.showEmmetCommands",
 		"when": "editorTextFocus"
 	},
+	{
+		"key": "alt+j",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
 
 	/* "toggle_comment", "args": { "block": true */
 	{

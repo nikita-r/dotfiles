@@ -17,3 +17,6 @@ ln -sT -f "$cwd/vimrc" "${HOME}/.vimrc"
 mkdir -p ~/.local/bin
 cp -n -a "$cwd"/u.bin/. ~/.local/bin/
 
+mkdir -p ~/.config/powershell
+ln -s -f "$cwd"/profile.ps1 ~/.config/powershell/
+

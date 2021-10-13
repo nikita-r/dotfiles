@@ -1,22 +1,4 @@
 
-function ResolveTo-AbsolutePath {
-  [CmdletBinding()] param (
-[Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-[string[]]$Path
-  )
-process {
-  $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
-} }
-
-
-function Test-Elevated {
-    $wid = [Security.Principal.WindowsIdentity]::GetCurrent()
-    $prp = New-Object Security.Principal.WindowsPrincipal $wid
-    $adm = [Security.Principal.WindowsBuiltInRole]::Administrator
-    $prp.IsInRole($adm)
-}
-
-
 function Get-ScriptDirectory {
   Split-Path ($(
     if ($host.Name -clike '* ISE Host') {
@@ -27,6 +9,53 @@ function Get-ScriptDirectory {
   ))
 }
 
+
+function Test-Elevated {
+    $wid = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $prp = New-Object Security.Principal.WindowsPrincipal $wid
+    $adm = [Security.Principal.WindowsBuiltInRole]::Administrator
+    $prp.IsInRole($adm)
+}
+
+function Parse-UrlQuery-FromClipboard {
+  $url=Get-Clipboard; Write-Host $url
+  $q = $url.Substring($url.IndexOf('?')+1).Split('&')
+  $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
+  $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
+  $q | Out-GridView -PassThru
+}
+
+function View-ProcUtil {
+  [CmdletBinding()] param (
+[Parameter(Mandatory=$true)]
+[ValidatePattern('^\w[-\w\s\.][-\w\s\.]+$')]
+[string]$ProcNamePrefix
+  )
+  process {
+    Get-WmiObject Win32_PerfRawData_PerfProc_Process -Filter "Name like '$ProcNamePrefix%'" | sort IDProcess `
+    | select @{N='CreatPID';E={$_.CreatingProcessID}}, @{N='PID';E={'{0,9:d}' -f $_.IDProcess}}, Name `
+    , @{N='ElapsedHours';E={'{0,12:n3}' -f ( ($_.Timestamp_Object - $_.ElapsedTime) / $_.Frequency_Object / 3600 )}} `
+    , @{N='PercentProcT';E={'{0,12:p2}' -f ( $_.PercentProcessorTime / ($_.Timestamp_Object - $_.ElapsedTime) )}} `
+    | ft
+  }
+}
+
+
+<# WScript.Shell #>
+
+function Toggle-Mute { (New-Object -com WScript.Shell).SendKeys([char]173) }
+
+function Set-SpeakersVolume ([float]$v) {
+    $wsh = New-Object -com WScript.Shell
+    1..50 |% { $wsh.SendKeys([char]174) }
+    $v /= 2 # in case of ([int]$v), would round half to even
+    for ($i=0; $i -lt $v; ++$i) {
+        $wsh.SendKeys([char]175) # incr by 2pp
+    }
+}
+
+
+<# WiP: set apps up #>
 
 function Reload-Path {
   $env:Path = [Environment]::GetEnvironmentVariable('Path', 'User') `
@@ -42,7 +71,6 @@ function ReplaceWith-SymbolicLink ($AbsPath, $target) {
   }
   New-Item -ItemType SymbolicLink -Path $AbsPath -Value $target
 }
-
 
 function Install-App ($url, $OutFile, $Arguments) {
   if (Test-Path -Path "$OutFile.skip") {

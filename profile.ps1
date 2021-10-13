@@ -8,11 +8,11 @@ $PSDefaultParameterValues += @{'Get-Help:ShowWindow'=$true}
 $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
-#. (Join-Path (Split-Path $PROFILE) profile.extra-func.ps1)
-
-$prompt_intern = '[' + [Environment]::UserName + ']'
 if ($PSVersionTable['Platform'] -ceq 'Unix') {
   $prompt_intern = "[$((&tty)-replace'^/dev/')|$env:USER]"
+} else {
+  $prompt_intern = '[' + [Environment]::UserName + ']'
+  try{ . (Join-Path (Split-Path $PROFILE) profile-win-extra-func.ps1) }catch{}
 }
 if ([Environment]::Is64BitProcess -ne [Environment]::Is64BitOperatingSystem) {
   $prompt_intern += $(
@@ -127,41 +127,6 @@ function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
     $rslt
 }
 
-function Parse-UrlQuery-FromClipboard {
-    $url=Get-Clipboard; Write-Host $url
-    $q = $url.Substring($url.IndexOf('?')+1).Split('&')
-    $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
-    $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
-    $q | Out-GridView -PassThru
-}
-
-# > CertUtil -EncodeHex -f $FilePath (New-TemporaryFile | tee -Variable tmp).FullName
-function View-FileHexed {
-    [CmdletBinding()] param (
-[Parameter(Mandatory=$true)][string]$FilePath
-, [int]$HeadCount=20
-)
-    $i = Get-Item -Force -LiteralPath $FilePath
-    $a = Get-Content -Encoding Byte -TotalCount $HeadCount `
-            $i |% { ' {0:x2}' -f $_ }
-    -join($a)
-}
-
-function View-ProcUtil {
-  [CmdletBinding()] param (
-[Parameter(Mandatory=$true)]
-[ValidatePattern('^\w[-\w\s\.][-\w\s\.]+$')]
-[string]$ProcNamePrefix
-  )
-  process {
-    Get-WmiObject Win32_PerfRawData_PerfProc_Process -Filter "Name like '$ProcNamePrefix%'" | sort IDProcess `
-    | select @{N='CreatPID';E={$_.CreatingProcessID}}, @{N='PID';E={'{0,9:d}' -f $_.IDProcess}}, Name `
-    , @{N='ElapsedHours';E={'{0,12:n3}' -f ( ($_.Timestamp_Object - $_.ElapsedTime) / $_.Frequency_Object / 3600 )}} `
-    , @{N='PercentProcT';E={'{0,12:p2}' -f ( $_.PercentProcessorTime / ($_.Timestamp_Object - $_.ElapsedTime) )}} `
-    | ft
-  }
-}
-
 function Get-Timestamp {
     $datetime = (Get-Date).ToUniversalTime()
     (Get-Date $datetime -f s) + (Get-Date $datetime -F.fffZ)
@@ -170,9 +135,31 @@ function Get-Timestamp {
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }
 
 function New-TemporaryDirectory {
-$path = Join-Path ([io.path]::GetTempPath()) ([guid]::NewGuid())
+$path = Join-Path ([io.path]::GetTempPath()) (New-Guid)
 $path += '.tmp.d'
 New-Item $path -Type Dir |% FullName
+}
+
+function ResolveTo-AbsolutePath {
+  [CmdletBinding()] param (
+[Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+[string[]]$Path
+  )
+process {
+  $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
+} }
+
+
+#> CertUtil -EncodeHex -f $FilePath (New-TemporaryFile | tee -Variable f).FullName
+function View-FileHexed {
+  [CmdletBinding()] param (
+[Parameter(Mandatory=$true)][string]$FilePath
+, [int]$HeadCount=20
+)
+  $i = Get-Item -Force -LiteralPath $FilePath
+  $a = Get-Content -Encoding Byte -TotalCount $HeadCount `
+          $i |% { ' {0:x2}' -f $_ }
+  -join($a)
 }
 
 
@@ -226,20 +213,6 @@ function Get-Epoch-Timestamp ($x) {
     $datetime = (Get-Date $x).ToUniversalTime()
   }
   [int] ($datetime - $epoch).TotalSeconds
-}
-
-
-<# WScript.Shell #>
-
-function Toggle-Mute { (New-Object -com WScript.Shell).SendKeys([char]173) }
-
-function Set-SpeakersVolume ([float]$v) {
-    $wsh = New-Object -com WScript.Shell
-    1..50 |% { $wsh.SendKeys([char]174) }
-    $v /= 2 # in case of ([int]$v), would round half to even
-    for ($i=0; $i -lt $v; ++$i) {
-        $wsh.SendKeys([char]175) # incr by 2pp
-    }
 }
 
 

@@ -8,8 +8,8 @@
 	;whitespace = blank-at-eol,-blank-at-eof
 	hideDotFiles = true
 
-[commit]
-	gpgSign = false
+[init]
+	defaultBranch = main
 
 [url "https://github.com/"]
 	insteadOf = "github:"
@@ -17,14 +17,14 @@
 [url "https://gist.github.com/"]
 	insteadOf = "gist:"
 
-[init]
-	defaultBranch = main
-
 [alias]
 	co = checkout
 	sb = status -sb
 	fb = "! fb () { git branch -a --contains $1 ; } ; fb"
 	sf = submodule foreach --recursive
+	tm = merge --no-ff --no-commit
+	ls = ls-files -s -o
+	rs = restore --staged
 
 [alias]
 	clone-r = clone --recursive
@@ -80,9 +80,6 @@
 [mergetool "bc3"]
 	trustExitCode = true
 
-[alias]
-	tm = merge --no-ff --no-commit
-
 [rerere]
 	enabled = true
 
@@ -97,7 +94,6 @@
 	ignoredHook = true
 	detachedHead = false
 
-# Usage: .git/info/attributes: *.whatever diff=nodiff
 [diff "nodiff"]
 	command = true
 
@@ -111,9 +107,6 @@
 #	prune = true
 #	pruneTags = false
 
-[alias]
-	ls = ls-files -s -o
-
 [apply]
 	whitespace = fix
 
@@ -126,7 +119,10 @@
 #[user]
 #	name = nikita-r
 #	email = nikita-r@device
-
+#
+#[commit]
+#	gpgSign = true
+#
 [include]
 	path = ~/.gitconfig.local
 

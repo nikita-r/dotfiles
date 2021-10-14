@@ -1,9 +1,6 @@
-#·Base_bashrc
+#·WSL_bashrc
 
-case $- in
-	*i*) test -t 0 && stty -ixon ;;
-	  *) return ;;
-esac
+[ -z "$PS1" ] && return
 
 
 export EDITOR='vim'
@@ -13,8 +10,6 @@ PATH=~/.local/bin:$PATH
 fi
 export PATH
 
-
-alias cp='cp --reflink=auto --sparse=always'
 
 alias cls="printf '\ec'"
 
@@ -30,24 +25,20 @@ alias la='ls -A'
 alias ll='/bin/ls -l --time-style=full-iso'
 alias lt='ls -1t'
 
+alias pwsh='pwsh -NoLogo'
+
 
 shopt -s histappend
 HISTCONTROL=ignoreboth
-HISTIGNORE=ls:la:ll:lt:cls:vim
+HISTIGNORE=cd:l?:pwsh:vim
+HISTIGNORE+=:cls
 
 
 PROMPT_DIRTRIM=5
 
-PSO='\[\e[0;34m\]\u@\h:\[\e[1;31m\]\w'
+PSO='\[\e[0;34m\]\u@\h:\[\e[1;34m\]\w'
 PS_=$
 PS1="$PSO\[\e[0;34m\]$PS_ \[\e[0m\]"
-
-if shopt -q login_shell; then
-
-cls
-PROMPT_COMMAND="history -a"
-
-else
 
 function set-prompt {
     PSO="\[\e[0;34m\]$1\[\e[1;31m\]|"
@@ -65,16 +56,4 @@ function prompt_command {
 }
 PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
 
-fi
-
-
-# apply readline settings (inputrc)
-bind 'set revert-all-at-newline on'
-bind 'set show-all-if-ambiguous off'
-bind 'set show-all-if-unmodified on'
-bind 'set mark-directories on'
-bind 'set mark-symlinked-directories on'
-bind 'set match-hidden-files off'
-bind 'Control-n: history-search-forward'
-bind 'Control-p: history-search-backward'
 

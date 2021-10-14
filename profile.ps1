@@ -157,8 +157,12 @@ function View-FileHexed {
 , [int]$HeadCount=20
 )
   $i = Get-Item -Force -LiteralPath $FilePath
-  $a = Get-Content -Encoding Byte -TotalCount $HeadCount `
-          $i |% { ' {0:x2}' -f $_ }
+  if ($PSVersionTable.PSEdition -ceq 'Core') {
+    $a = Get-Content $i -TotalCount $HeadCount -Raw -AsByteStream
+  } else {
+    $a = Get-Content $i -TotalCount $HeadCount -Raw -Encoding Byte
+  }
+  $a = $a |% { ' {0:x2}' -f $_ }
   -join($a)
 }
 

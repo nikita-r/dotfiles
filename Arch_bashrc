@@ -1,4 +1,4 @@
-#·.bashrc
+#·Arch_bashrc
 
 [[ $- != *i* ]] && return
 

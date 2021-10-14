@@ -18,11 +18,11 @@ function Test-Elevated {
 }
 
 function Parse-UrlQuery-FromClipboard {
-  $url=Get-Clipboard; Write-Host $url
-  $q = $url.Substring($url.IndexOf('?')+1).Split('&')
-  $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
-  $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
-  $q | Out-GridView -PassThru
+    $url=Get-Clipboard; Write-Host $url
+    $q = $url.Substring($url.IndexOf('?')+1).Split('&')
+    $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
+    $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
+    $q | Out-GridView -PassThru
 }
 
 function View-ProcUtil {

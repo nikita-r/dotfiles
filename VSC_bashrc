@@ -1,0 +1,60 @@
+#·VSC_bashrc
+
+[ -z "$PS1" ] && return
+
+
+export EDITOR='vim'
+
+if [[ $PATH != ~/.local/bin:* ]]; then
+PATH=~/.local/bin:$PATH
+fi
+export PATH
+
+
+alias cls="printf '\ec'"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+function ccd { mkdir "$1" && cd "$1"; }
+
+alias grep='grep --colour'
+
+alias ls='ls --file-type -L --group-directories-first --color=never'
+alias la='ls -A'
+alias ll='/bin/ls -l --time-style=full-iso'
+alias lt='ls -1t'
+
+alias pwsh='pwsh -NoLogo'
+
+
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTIGNORE=cd:l?:pwsh:vim
+HISTIGNORE+=:cls:pwd
+
+
+PROMPT_DIRTRIM=5
+
+PSO='\[\e[0;35m\]\u@\h:\[\e[0;33m\]\w'
+PS_=$
+PS1="$PSO\[\e[0;35m\]$PS_ \[\e[0m\]"
+
+function set-prompt {
+    PSO="\[\e[0;34m\]$1\[\e[0;33m\]|"
+    PSO="\[\e[0;33m\]|$PSO"
+    PS_='#'
+}
+
+function prompt_command {
+   local EXIT_STATUS=$?
+   local C='0;35m'
+   if [ $EXIT_STATUS != 0 ]; then
+         C='0;36m'
+   fi
+   PS1="$PSO\[\e[$C\]$PS_ \[\e[0m\]"
+}
+PROMPT_COMMAND="prompt_command; $PROMPT_COMMAND"
+
+
+HISTIGNORE+=:set-prompt

@@ -42,13 +42,13 @@ nnoremap <F8> :call ToggleVE()<CR>
 
 set wrap nolbr
 
-filetype off
-set ai
-set pastetoggle=<F2>
 filetype indent off
+set ai pastetoggle=<F2>
+au InsertLeave * set nopaste
+
 filetype plugin on
 let python_highlight_all = 1
-au InsertLeave * set nopaste
+syntax on
 
 " Parse the entire file in order to correct syntax highlighting.
 nnoremap <F7> :syntax sync fromstart<CR>
@@ -62,24 +62,23 @@ else
       color inkpot
       hi ErrorMsg ctermfg=white
       if v:version >= 700
-        hi PmenuThumb ctermbg=121
+        hi PmenuSbar ctermbg=211
+        hi PmenuThumb ctermbg=61
       endif
     else
       color zellner
-      hi Statement ctermfg=196
+      hi Comment ctermfg=90
       if v:version >= 700
         hi Pmenu ctermfg=black
         hi PmenuSel ctermfg=black
-        hi PmenuThumb ctermbg=45
+        hi PmenuThumb ctermbg=7
       endif
     endif
 endif
+if v:version >= 700 | hi MatchParen ctermfg=black | endif
 
 set nu nuw=5
 hi LineNr ctermfg=DarkGrey ctermbg=black
-
-set noshowmatch
-if v:version >= 700 | hi MatchParen ctermfg=black | endif
 
 set ts=8
 set sw=4
@@ -101,7 +100,7 @@ set ic smartcase
 set wrapscan
 set incsearch
 set hlsearch
-"hi Search ctermfg=white ctermbg=DarkBlue
+hi Search ctermfg=white ctermbg=DarkBlue
 nnoremap <silent> <F3> :noh<CR>
 nnoremap <silent> <S-F3> :set hls<CR>
 vmap <F3> <Esc><F3>gv| imap <F3> <C-o><F3>
@@ -112,7 +111,7 @@ vnoremap <silent> <F4> y:let @/='\V'.substitute(@",'\','\\\\','g')<CR>:set hls<C
 " was captured by typing <C-v><S-F3> in i-mode.
 set <S-F3>=[25~
 
-set noea lz
+set noea lz notf
 
 map Q @q
 nmap Y y$

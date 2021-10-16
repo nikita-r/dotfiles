@@ -29,6 +29,10 @@
 [alias]
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
+	pufw = push --force-with-lease
+	root = !pwd
+
+[alias]
 	aliases = config --get-regexp ^alias\\.
 	branches = branch -a
 	contributors = shortlog -s --email
@@ -48,9 +52,6 @@
 	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 
-[alias]
-	ap = add --patch
-
 [diff "utf-16"]
 	textconv = iconv -f utf-16 -t utf-8
 
@@ -67,9 +68,9 @@
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
 [alias]
-	dc = ! git diff -w --ignore-blank-lines --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dc = ! git diff -w --ignore-blank-lines --word-diff=color -C "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
-	ds = diff -w --ignore-blank-lines --stat
+	ds = diff -b --ignore-blank-lines --stat
 
 # Beyond Compare; under Linux, use "bc3"
 [diff]
@@ -98,6 +99,7 @@
 [advice]
 	ignoredHook = true
 	detachedHead = false
+	addEmptyPathspec = false
 
 [diff "nodiff"]
 	command = true
@@ -117,6 +119,7 @@
 
 [diff]
 	renames = copies
+	mnemonicPrefix = true
 
 [user]
 	useConfigOnly = true

@@ -39,7 +39,7 @@
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
 	scour-n = clean -nxffd
-	reset-f = ! git reset --hard $1 && git clean -xffd
+	reset-f = ! git reset --hard $1 && git clean -xffd && :
 	pop-i = stash pop --index
 	puta = push --follow-tags
 

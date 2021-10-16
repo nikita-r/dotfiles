@@ -39,13 +39,17 @@
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
 	scour-n = clean -nxffd
-	scour-f = ! git reset --hard && git clean -xffd
+	scour-u = ! git reset --hard && git clean -X -fd
+	pop-i = stash pop --index
 	puta = push --follow-tags
 
 [alias]
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
 	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
+
+[alias]
+	ap = add --patch
 
 [diff "utf-16"]
 	textconv = iconv -f utf-16 -t utf-8
@@ -65,6 +69,7 @@
 [alias]
 	dc = ! git diff -w --ignore-blank-lines --word-diff=color "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
+	ds = diff -w --ignore-blank-lines --stat
 
 # Beyond Compare; under Linux, use "bc3"
 [diff]
@@ -121,6 +126,10 @@
 #	email = nikita-r@device
 #
 #[commit]
+#	gpgSign = true
+#[push]
+#	gpgSign = true
+#[tag]
 #	gpgSign = true
 #
 [include]

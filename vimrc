@@ -75,7 +75,7 @@ else
       endif
     endif
 endif
-if v:version >= 700 | hi MatchParen ctermfg=black | endif
+if v:version >= 700 | hi MatchParen ctermfg=white ctermbg=DarkCyan | endif
 
 set nu nuw=5
 hi LineNr ctermfg=DarkGrey ctermbg=black
@@ -100,18 +100,18 @@ set ic smartcase
 set wrapscan
 set incsearch
 set hlsearch
-hi Search ctermfg=white ctermbg=DarkBlue
+hi Search ctermfg=white ctermbg=DarkCyan
 nnoremap <silent> <F3> :noh<CR>
 nnoremap <silent> <S-F3> :set hls<CR>
 vmap <F3> <Esc><F3>gv| imap <F3> <C-o><F3>
 vmap <S-F3> <Esc><S-F3>gv| imap <S-F3> <C-o><S-F3>
-vnoremap <silent> <F4> y:let @/='\V'.substitute(@",'\','\\\\','g')<CR>:set hls<CR>
 
 " Recognize the sequence that PuTTY sends when you press <S-F3>.  The sequence
 " was captured by typing <C-v><S-F3> in i-mode.
 set <S-F3>=[25~
 
 set noea lz notf
+set nolz tf " kill this line if the performance is of concern
 
 map Q @q
 nmap Y y$
@@ -124,7 +124,7 @@ vmap <C-k> "_d
 map <F1> <Esc>
 imap <F1> <Esc>
 
-" follow the leader
+" Follow the Leader!
 nnoremap <Leader>i i<Space><Esc>r
 nmap <Leader>n <Leader>i<CR>
 nnoremap <Leader>b :ls<CR>:buffer<Space>
@@ -135,7 +135,7 @@ vnoremap <S-Tab> <gv
 inoremap <C-j><C-j> <C-j>
 inoremap <C-j>date <C-r>=strftime('%Y-%m-%d')<CR>
 inoremap <C-j>time <C-r>=strftime('%H:%M:%S')<CR>
-inoremap <C-j>isot <C-r>=strftime('%FT%R%z')<CR>
+inoremap <C-j>isot <C-r>=strftime('%FT%T%z')<CR>
 inoremap <C-j>uuid <C-r>=substitute(system("uuidgen"), '\n$', '', '')<CR>
 inoremap <C-j>fn <C-r>=expand('%')<CR>
 inoremap <C-j>fp <C-r>=expand('%:p')<CR>

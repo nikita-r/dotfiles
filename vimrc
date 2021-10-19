@@ -8,8 +8,8 @@ let s:uname = system('uname')
 let s:is_NT = ( s:uname =~ '^MSYS_NT-' || s:uname =~ '^MINGW\(32\|64\)_NT-' )
 
 if s:is_NT
-   set title
-   set titlestring=vim\ «%F»
+  set title
+  set titlestring=vim\ «%F»
 endif
 
 " Don't time out on mappings.  Time out on key codes almost immediately
@@ -31,19 +31,19 @@ set stl+=<u%04.B>\ %7.(%c%V%)\|\ %5.l/%L\
 set showcmd
 set wildmode=list:longest,full
 
-set virtualedit=block,onemore
+set  virtualedit=block,onemore
 fu! ToggleVE()
-  if &ve != 'all'| set ve=all
-             else| set ve=block,onemore
+  if &ve != 'all'|  set ve=all
+  else|   set ve=block,onemore
   endif
   set ve?
 endfu
 nnoremap <F8> :call ToggleVE()<CR>
 
-set wrap nolbr
+set wrap nolbr so=0
 
 filetype indent off
-set ai pastetoggle=<F2>
+set ai nosi pastetoggle=<F2>
 au InsertLeave * set nopaste
 
 filetype plugin on
@@ -55,30 +55,31 @@ nnoremap <F7> :syntax sync fromstart<CR>
 
 if s:is_NT
   color industry
+  hi Visual ctermbg=53
 else
-    set t_Co=256
-    if !empty(globpath(&rtp, 'colors/inkpot.vim'))
-      let g:inkpot_black_background = 1
-      color inkpot
-      hi ErrorMsg ctermfg=white
-      if v:version >= 700
-        hi PmenuSbar ctermbg=211
-        hi PmenuThumb ctermbg=61
-      endif
-    else
-      color zellner
-      hi Comment ctermfg=90
-      if v:version >= 700
-        hi Pmenu ctermfg=black
-        hi PmenuSel ctermfg=black
-        hi PmenuThumb ctermbg=7
-      endif
-    endif
+  set t_Co=256
+  if !empty(globpath(&rtp, 'colors/inkpot.vim'))
+    let g:inkpot_black_background = 1
+    color inkpot
+    hi ErrorMsg ctermfg=white
+  else
+    color zellner
+    hi Comment ctermfg=90
+  endif
 endif
-if v:version >= 700 | hi MatchParen ctermfg=white ctermbg=DarkCyan | endif
+
+if v:version >= 700
+  hi MatchParen ctermfg=white ctermbg=DarkCyan
+  hi Pmenu ctermfg=253 ctermbg=238
+  hi PmenuSbar ctermfg=253 ctermbg=211
+  hi PmenuSel ctermfg=253 ctermbg=61
+  hi PmenuThumb ctermfg=253 ctermbg=61
+endif
 
 set nu nuw=5
 hi LineNr ctermfg=DarkGrey ctermbg=black
+
+set iskeyword+=-
 
 set ts=8
 set sw=4
@@ -112,6 +113,10 @@ set <S-F3>=[25~
 
 set noea lz notf
 set nolz tf " kill this line if the performance is of concern
+set nois
+
+vnoremap <silent> <F4> y:let @/='\V'.substitute(@",'\','\\\\','g')<CR>
+                        \:set hls<CR>
 
 map Q @q
 nmap Y y$
@@ -120,7 +125,7 @@ nmap Y y$
 nmap <C-k> "_dd
 vmap <C-k> "_d
 
-" please no Help
+" escape Help
 map <F1> <Esc>
 imap <F1> <Esc>
 

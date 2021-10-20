@@ -1,8 +1,9 @@
 set nocompatible
 set encoding=utf-8
 
-" no intro message
-set shortmess+=I
+set shortmess+=I " turn off the intro
+set shortmess+=c " turn off ins-completion-menu status
+set shortmess-=S " show matches counter when searching
 
 let s:uname = system('uname')
 let s:is_NT = ( s:uname =~ '^MSYS_NT-' || s:uname =~ '^MINGW\(32\|64\)_NT-' )
@@ -17,11 +18,10 @@ endif
 " in showcmd area is annoying.
 set notimeout ttimeout ttimeoutlen=10
 
-set history=200
-set ul=1000
+set history=255
 
-" Don't lose the undo tree upon leaving a buffer.
-set hid
+" Don't lose the undo tree upon leaving a buffer; set 'undolevels'.
+set hid ul=4095
 
 set ls=2
 set ruler

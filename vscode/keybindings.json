@@ -349,6 +349,12 @@
 		"when": "filesExplorerFocus"
 	},
 
+	{
+		"key": "ctrl+shift+f",
+		"command": "workbench.view.search.focus",
+		/* instead of "workbench.action.findInFiles" which populates with the selected text */
+	},
+
 	/* keys in Terminal */
 	{ "key": "ctrl+e", "command": ""
 	, "when": "terminalFocus || terminalTabsFocus" },

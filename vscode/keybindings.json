@@ -349,10 +349,15 @@
 		"when": "filesExplorerFocus"
 	},
 
+	/* Ctrl+Shift+f & Ctrl+Shift+c */
 	{
 		"key": "ctrl+shift+f",
-		"command": "workbench.view.search.focus",
+		"command": "workbench.view.search.focus", // may focus the results list
 		/* instead of "workbench.action.findInFiles" which populates with the selected text */
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "search.action.clearSearchResults" // then focus the input
 	},
 
 	/* keys in Terminal */

@@ -68,6 +68,8 @@ else
   endif
 endif
 
+set noshowmatch mps+=<:> " to include '<' and '>' in MatchParen
+
 if v:version >= 700
   hi MatchParen ctermfg=white ctermbg=DarkCyan
   hi Pmenu ctermfg=253 ctermbg=238
@@ -79,12 +81,10 @@ endif
 set nu nuw=5
 hi LineNr ctermfg=DarkGrey ctermbg=black
 
-set iskeyword+=-
-
 set ts=8
 set sw=4
 set expandtab
-set sts=0 sta
+set sts=0 sta shiftround
 set backspace=eol,start
 
 if has('patch-8.2.0590')
@@ -99,7 +99,7 @@ if has("patch-7.4.710") | set listchars+=space:· | endif
 
 set ic smartcase
 set wrapscan
-set incsearch
+set incsearch " enable /_CTRL-G and /_CTRL-T
 set hlsearch
 hi Search ctermfg=white ctermbg=DarkCyan
 nnoremap <silent> <F3> :noh<CR>
@@ -111,12 +111,16 @@ vmap <S-F3> <Esc><S-F3>gv| imap <S-F3> <C-o><S-F3>
 " was captured by typing <C-v><S-F3> in i-mode.
 set <S-F3>=[25~
 
-set noea lz notf
-set nolz tf " kill this line if the performance is of concern
-set nois
+set iskeyword+=-
 
 vnoremap <silent> <F4> y:let @/='\V'.substitute(@",'\','\\\\','g')<CR>
                         \:set hls<CR>
+
+set noea lz notf
+set nolz ttyfast " kill this line if the performance is of concern
+
+set shortmess-=f
+nnoremap <C-g> 2<C-g>
 
 map Q @q
 nmap Y y$

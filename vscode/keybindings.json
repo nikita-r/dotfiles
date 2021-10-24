@@ -14,7 +14,7 @@
 		"command": "cursorRedo",
 		"key": "ctrl+y"
 	},
-	//{ "command": "noop", "key": "ctrl+shift+u" },
+	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{
 		"key": "ctrl+shift+d",
 		"command": "editor.action.selectHighlights"
@@ -75,6 +75,13 @@
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
+	},
+
+	/* "toggle_comment", "args": { "block": true */
+	{
+		"key": "ctrl+shift+/",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
@@ -326,11 +333,10 @@
 		"command": "workbench.action.toggleMaximizedPanel"
 	},
 
-	/* "toggle_comment", "args": { "block": true */
+	/* Activity Bar */
 	{
-		"key": "ctrl+shift+/",
-		"command": "editor.action.blockComment",
-		"when": "editorTextFocus && !editorReadonly"
+		"key": "ctrl+alt+s",
+		"command": "workbench.action.focusActivityBar"
 	},
 
 	/* Files Explorer */
@@ -360,6 +366,16 @@
 		"command": "search.action.clearSearchResults" // then focus the input
 	},
 
+	/* Alt for quickOpen */
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+alt+e",
+		"command": "workbench.action.quickOpen"
+	},
+
 	/* keys in Terminal */
 	{ "key": "ctrl+e", "command": ""
 	, "when": "terminalFocus || terminalTabsFocus" },
@@ -369,27 +385,6 @@
 	, "when": "terminalFocus || terminalTabsFocus" },
 	{ "key": "ctrl+w", "command": ""
 	, "when": "terminalFocus || terminalTabsFocus" },
-	/* un/split */
-	{
-		"key": "ctrl+shift+s",
-		"command": "workbench.action.terminal.split",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+u",
-		"command": "workbench.action.terminal.unsplit",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+s",
-		"command": "workbench.action.terminal.splitInstance",
-		"when": "terminalTabsFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+u",
-		"command": "workbench.action.terminal.unsplitInstance",
-		"when": "terminalTabsFocus && terminalProcessSupported"
-	},
 	/* ?terminalTabsFocus */
 	{
 		"key": "ctrl+f",

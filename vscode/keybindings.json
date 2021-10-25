@@ -286,11 +286,14 @@
 	},
 
 	/* avoid chords that are similar to Ctrl+S */
-	{ "command": "noop", "key": "ctrl+shift+s" },
 	{ "command": "noop", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
+
+	/* O chords */
+	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
+	{ "key": "ctrl+k ctrl+o", "command": "editor.foldAll" },
 
 	/* selection anchor */
 	{ "command": "noop", "key": "ctrl+k ctrl+k" },

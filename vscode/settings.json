@@ -2,7 +2,7 @@
 	"window.titleSeparator": " · ",
 	"window.title": "Code${separator}${dirty}${activeEditorShort}${separator}${rootName}",
 
-	//"security.workspace.trust.enabled": false,
+	"security.workspace.trust.enabled": false,
 
 	"update.mode": "none", // or "manual"
 	"update.enableWindowsBackgroundUpdates": false,
@@ -140,16 +140,6 @@
 	"python.experiments.enabled": false,
 	"python.linting.enabled": false,
 
-	"todo-tree.filtering.ignoreGitSubmodules": true,
-	//"todo-tree.regex.regexCaseSensitive": false,
-	"todo-tree.general.tags": [
-		"BUG", "HACK", "FIXME", "ToDo",
-		"TODO", "XXX", "MAYBE:"
-	],
-	"todo-tree.general.revealBehaviour": "start of line",
-	"todo-tree.highlights.enabled": false,
-	"todo-tree.tree.showBadges": false,
-
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
@@ -253,7 +243,7 @@
 	"files.associations": {
 		"*.qss": "css",
 	},
-	//"files.eol": "\n",
+	"files.eol": "\n",
 	"files.exclude": {
 		"**/.ipynb_checkpoints": true,
 		"**/__pycache__": true,

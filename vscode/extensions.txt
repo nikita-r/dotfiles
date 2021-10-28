@@ -1,7 +1,8 @@
 alefragnani.Bookmarks
+andyyaldoo.vscode-json
 eamodio.gitlens
 EditorConfig.EditorConfig
-Gruntfuggly.todo-tree
+#Gruntfuggly.todo-tree
 hediet.vscode-drawio
 JohannesRudolph.file-ext-switcher
 ms-dotnettools.csharp

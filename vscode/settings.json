@@ -230,6 +230,7 @@
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)
+	"notebook.outline.showCodeCells": true,
 
 	/* . . . */
 

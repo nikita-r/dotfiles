@@ -414,6 +414,17 @@
 		"command": "workbench.action.terminal.sizeToContentWidth",
 		"when": "terminalTabsFocus"
 	},
+	/* In addition to "shift+page*" */
+	{
+		"key": "alt+pageup",
+		"command": "workbench.action.terminal.scrollUpPage",
+		"when": "terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+	},
+	{
+		"key": "alt+pagedown",
+		"command": "workbench.action.terminal.scrollDownPage",
+		"when": "terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+	},
 
 	/* Ctrl+Shift+J */
 	/* file-ext-switcher:Angular */

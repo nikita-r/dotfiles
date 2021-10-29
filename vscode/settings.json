@@ -221,6 +221,7 @@
 		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",
 		"editor.findMatchHighlightBackground": "#511",
+		"editor.findRangeHighlightBackground": "#66e3",
 		"minimap.findMatchHighlight": "#c84",
 		"minimap.warningHighlight": "#ff0",
 		"minimap.errorHighlight": "#f00",

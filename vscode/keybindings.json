@@ -27,6 +27,10 @@
 		"command": "editor.action.jumpToBracket",
 		"key": "ctrl+m"
 	},
+	{
+		"command": "editor.action.selectToBracket",
+		"key": "ctrl+shift+m", // but "expand_selection" is "shift+alt+right"
+	},
 	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
 		"key": "ctrl+shift+l",

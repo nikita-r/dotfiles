@@ -32,7 +32,7 @@
 
 	"editor.hover.enabled": false,
 	"editor.quickSuggestions": false,
-	"editor.quickSuggestionsDelay": 0,
+	"editor.quickSuggestionsDelay": 333,
 	"editor.suggest.filterGraceful": false,
 	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
@@ -140,22 +140,6 @@
 	"python.experiments.enabled": false,
 	"python.linting.enabled": false,
 
-	"todo-tree.filtering.ignoreGitSubmodules": true,
-	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-	"todo-tree.filtering.excludeGlobs": [
-		"**/*.txt",
-		"**/*.log",
-	],
-	"todo-tree.regex.regex": "(\\b($TAGS)\\b|^\\s*- \\[ \\])",
-	//"todo-tree.regex.regexCaseSensitive": false,
-	"todo-tree.general.tags": [
-		"BUG", "HACK", "FIXME", "ToDo",
-		"TODO", "XXX", "MAYBE:"
-	],
-	"todo-tree.general.revealBehaviour": "start of line",
-	"todo-tree.highlights.enabled": false,
-	"todo-tree.tree.showBadges": false,
-
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
@@ -163,12 +147,8 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"python.formatting.provider": "none",
-	"javascript.preferences.importModuleSpecifier": "non-relative",
-	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
-	"yaml.format.enable": false,
-	"yaml.validate": false,
 
 	/* !autoClosing */
 	"editor.autoClosingBrackets": "never",
@@ -220,8 +200,9 @@
 	"window.customMenuBarAltFocus": false,
 
 	"workbench.colorCustomizations": {
-		"editor.foldBackground": "#323232",
 
+		/* hue: 300/360 */
+		"editor.foldBackground": "#301830",
 		"activityBar.background": "#402040",
 		"activityBarBadge.background": "#806080",
 		"activityBarBadge.foreground": "#402040",
@@ -231,6 +212,7 @@
 		"titleBar.activeBackground": "#402040",
 		"titleBar.inactiveBackground": "#402040",
 
+		/* hue:  20/360 */
 		"focusBorder": "#F08048",
 		"progressBar.background": "#F08048",
 		"tab.activeModifiedBorder": "#F08048",

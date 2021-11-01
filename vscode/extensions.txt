@@ -1,13 +1,12 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
 eamodio.gitlens
-EditorConfig.EditorConfig
+#EditorConfig.EditorConfig
 #Gruntfuggly.todo-tree
 hediet.vscode-drawio
 JohannesRudolph.file-ext-switcher
-ms-dotnettools.csharp
+#ms-dotnettools.csharp
+#ms-python.python
+#ms-toolsai.jupyter
 ms-vscode.hexeditor
 ms-vscode.powershell
-redhat.vscode-commons
-redhat.vscode-xml
-redhat.vscode-yaml

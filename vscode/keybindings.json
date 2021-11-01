@@ -31,6 +31,7 @@
 		"command": "editor.action.selectToBracket",
 		"key": "ctrl+shift+m", // but "expand_selection" is "shift+alt+right"
 	},
+	/* ~Emmet */
 	{
 		"key": "ctrl+shift+a", // "expand_selection", "args": {"to": "tag"}
 		"command": "editor.emmet.action.balanceOut"
@@ -38,6 +39,25 @@
 	{
 		"key": "ctrl+shift+x",
 		"command": "editor.emmet.action.balanceIn"
+	},
+	{
+		"key": "alt+.",
+		"command": "editor.emmet.action.splitJoinTag"
+	},
+	/* "toggle_comment", "args": { "block": true */
+	{
+		"key": "ctrl+shift+/",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	/* "move", "args": {"by": "subwords", "forward": ? */
+	{
+		"key": "alt+left",
+		"command": "cursorWordPartLeft"
+	},
+	{
+		"key": "alt+right",
+		"command": "cursorWordPartRight"
 	},
 	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
@@ -87,13 +107,6 @@
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
-	},
-
-	/* "toggle_comment", "args": { "block": true */
-	{
-		"key": "ctrl+shift+/",
-		"command": "editor.action.blockComment",
-		"when": "editorTextFocus && !editorReadonly"
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
@@ -275,16 +288,6 @@
 	{
 		"key": "ctrl+0",
 		"command": "workbench.action.zoomReset"
-	},
-
-	/* "move", "args": {"by": "subwords", "forward": ? */
-	{
-		"key": "alt+left",
-		"command": "cursorWordPartLeft"
-	},
-	{
-		"key": "alt+right",
-		"command": "cursorWordPartRight"
 	},
 
 	/* [VS] View.Navigate */

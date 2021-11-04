@@ -41,16 +41,16 @@
 		"command": "editor.emmet.action.balanceIn"
 	},
 	{
-		"key": "alt+.",
+		"key": "alt+.", // "close_tag"
 		"command": "editor.emmet.action.splitJoinTag"
 	},
-	/* "toggle_comment", "args": { "block": true */
+	/* "toggle_comment", "block" */
 	{
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",
 		"when": "editorTextFocus && !editorReadonly"
 	},
-	/* "move", "args": {"by": "subwords", "forward": ? */
+	/* "by": "subword*s" */
 	{
 		"key": "alt+left",
 		"command": "cursorWordPartLeft"
@@ -59,6 +59,7 @@
 		"key": "alt+right",
 		"command": "cursorWordPartRight"
 	},
+	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
 		"key": "ctrl+shift+l",

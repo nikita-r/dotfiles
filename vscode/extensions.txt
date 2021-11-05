@@ -10,3 +10,4 @@ JohannesRudolph.file-ext-switcher
 #ms-toolsai.jupyter
 ms-vscode.hexeditor
 ms-vscode.powershell
+ms-vscode-remote.remote-containers

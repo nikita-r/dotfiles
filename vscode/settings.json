@@ -31,6 +31,7 @@
 	/* suggestions-adjacent settings */
 
 	"editor.hover.enabled": false,
+	"editor.hover.above": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 333,
 	"editor.suggest.filterGraceful": false,
@@ -40,7 +41,7 @@
 
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
-	"editor.tabCompletion": "on", // or "onlySnippets"
+	"editor.tabCompletion": "onlySnippets", // or "on"
 
 	"emmet.showSuggestionsAsSnippets": true,
 	"emmet.triggerExpansionOnTab": true,

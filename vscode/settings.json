@@ -25,6 +25,7 @@
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false,
+	"search.showLineNumbers": true,
 
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
@@ -34,10 +35,12 @@
 	"editor.hover.above": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 333,
+
 	"editor.suggest.filterGraceful": false,
 	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
+	"editor.suggest.showStatusBar": true,
 
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
@@ -47,6 +50,7 @@
 	"emmet.triggerExpansionOnTab": true,
 
 	"editor.suggestOnTriggerCharacters": false,
+	//"editor.parameterHints.enabled": false,
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 

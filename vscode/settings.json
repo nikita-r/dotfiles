@@ -85,7 +85,7 @@
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
-	//"editor.renderControlCharacters": true,
+	"editor.renderControlCharacters": false,
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"diffEditor.renderIndicators": false,
@@ -110,6 +110,8 @@
 	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
 
+	//"git.autorefresh": false,
+	"git.fetchOnPull": true,
 	"git.enableStatusBarSync": false,
 	//"git.followTagsWhenSync": true,
 	"git.rebaseWhenSync": true,
@@ -226,13 +228,13 @@
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",
-		"editor.findMatchHighlightBackground": "#511",
+		"editor.findMatchHighlightBackground": "#515",
 		"editor.findRangeHighlightBackground": "#66e3",
 		"terminal.selectionBackground": "#fff2",
 		"minimap.findMatchHighlight": "#c84",
 		"minimap.warningHighlight": "#ff0",
 		"minimap.errorHighlight": "#f00",
-		"editor.findMatchBackground": "#733",
+		"editor.findMatchBackground": "#737",
 		"minimap.selectionHighlight": "#357",
 	},
 

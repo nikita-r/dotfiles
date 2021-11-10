@@ -2,12 +2,15 @@ alefragnani.Bookmarks
 andyyaldoo.vscode-json
 eamodio.gitlens
 #EditorConfig.EditorConfig
+GrapeCity.gc-excelviewer
 #Gruntfuggly.todo-tree
 hediet.vscode-drawio
+humao.rest-client
 JohannesRudolph.file-ext-switcher
+mkxml.vscode-filesize
 #ms-dotnettools.csharp
 #ms-python.python
 #ms-toolsai.jupyter
 ms-vscode.hexeditor
 ms-vscode.powershell
-ms-vscode-remote.remote-containers
+#ms-vscode-remote.vscode-remote-extensionpack

@@ -111,8 +111,8 @@
 	"scm.repositories.visible": 0,
 
 	//"git.autorefresh": false,
-	"git.fetchOnPull": true,
 	"git.enableStatusBarSync": false,
+	"git.fetchOnPull": true,
 	//"git.followTagsWhenSync": true,
 	"git.rebaseWhenSync": true,
 	"git.showPushSuccessNotification": true,

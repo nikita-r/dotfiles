@@ -1,9 +1,11 @@
 [
 	/*
+	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.fold: Ctrl+Shift+[][]
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
+	$: workbench.action.files.revealActiveFileInWindows: "ctrl+k r"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"

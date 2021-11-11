@@ -5,7 +5,6 @@ eamodio.gitlens
 GrapeCity.gc-excelviewer
 #Gruntfuggly.todo-tree
 hediet.vscode-drawio
-humao.rest-client
 JohannesRudolph.file-ext-switcher
 mkxml.vscode-filesize
 #ms-dotnettools.csharp
@@ -14,3 +13,4 @@ mkxml.vscode-filesize
 ms-vscode.hexeditor
 ms-vscode.powershell
 #ms-vscode-remote.vscode-remote-extensionpack
+samuelcolvin.jinjahtml

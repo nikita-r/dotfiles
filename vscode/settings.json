@@ -27,6 +27,10 @@
 	"editor.occurrencesHighlight": false,
 	"search.showLineNumbers": true,
 
+	//"editor.stablePeek": true,
+	"markdown.preview.doubleClickToSwitchToEditor": false,
+	"search.searchEditor.doubleClickBehaviour": "selectWord",
+
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
@@ -80,6 +84,7 @@
 	"workbench.editor.wrapTabs": true,
 
 	//"workbench.editor.enablePreview": false,
+	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -126,6 +131,8 @@
 	"remote.containers.copyGitConfig": false,
 
 	/* Extensions */
+
+	"filesize.showGzip": false,
 
 	"gitlens.blame.avatars": false,
 	"gitlens.blame.ignoreWhitespace": true,
@@ -194,6 +201,7 @@
 		},
 	},
 
+	"terminal.integrated.tabs.separator": " · ",
 	//"terminal.integrated.tabs.enabled": false,
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.hideCondition": "never",

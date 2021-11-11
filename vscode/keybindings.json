@@ -73,6 +73,12 @@
 		"key": "ctrl+q",
 		"command": "editor.action.showHover"
 	},
+	/* jump to location of the search result */
+	{
+		"key": "ctrl+q",
+		"command": "editor.action.revealDefinition",
+		"when": "inSearchEditor"
+	},
 	/* close tabs that been split */
 	{
 		"key": "ctrl+shift+q",
@@ -82,7 +88,7 @@
 	{
 		"key": "alt+q",
 		"command": "toggleFindRegex",
-		//"when": "editorFocus"
+		"when": "editorFocus"
 	},
 	{
 		"key": "alt+q",
@@ -100,7 +106,7 @@
 		"when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
 	},
 
-	/* default bindings, but with "when" removed */
+	/* default bindings, but with the "when" removed */
 	{
 		"key": "ctrl+shift+.",
 		"command": "breadcrumbs.focusAndSelect"
@@ -182,7 +188,7 @@
 		"command": "editor.action.marker.prevInFiles"
 	},
 
-	/* Ctrl+[][]: jump to next change; remove any non-Debug use of F5 */
+	/* Ctrl+[][]: jump to next/prev; remove any non-Debug use of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
 	{ "command": "noop", "key": "ctrl+[" },
 	{ "command": "noop", "key": "alt+f5" },
@@ -206,6 +212,16 @@
 		"key": "ctrl+[",
 		"command": "workbench.action.compareEditor.previousChange",
 		"when": "textCompareEditorVisible"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "search.action.focusNextSearchResult",
+		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "search.action.focusPreviousSearchResult",
+		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
 	},
 
 	/* moveEditor within Group */

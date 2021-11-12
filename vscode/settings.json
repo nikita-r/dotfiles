@@ -85,6 +85,7 @@
 
 	//"workbench.editor.enablePreview": false,
 	//"workbench.editor.closeEmptyGroups": false,
+
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -96,7 +97,6 @@
 	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
-	//"editor.foldingHighlight": false,
 	"editor.roundedSelection": false,
 
 	"editor.showFoldingControls": "always",
@@ -132,10 +132,14 @@
 
 	/* Extensions */
 
-	"filesize.showGzip": false,
-
+	"gitlens.advanced.messages": {
+		"suppressGitMissingWarning": true,
+	},
 	"gitlens.blame.avatars": false,
 	"gitlens.blame.ignoreWhitespace": true,
+
+	"csv-preview.skipComments": true,
+	"filesize.showGzip": false,
 
 	"omnisharp.autoStart": false, // #> OmniSharp: Restart
 	"omnisharp.enableRoslynAnalyzers": true,
@@ -203,12 +207,12 @@
 		},
 	},
 
-	"terminal.integrated.tabs.separator": " · ",
-	//"terminal.integrated.tabs.enabled": false,
-	"terminal.integrated.tabs.enableAnimation": false,
+	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",
-	"terminal.integrated.tabs.showActiveTerminal": "never",
+	"terminal.integrated.tabs.enableAnimation": false,
+	"terminal.integrated.tabs.separator": " · ",
 	"terminal.integrated.tabs.showActions": "never",
+	"terminal.integrated.tabs.showActiveTerminal": "never",
 
 	/* customize GUI */
 
@@ -274,6 +278,6 @@
 		"**/package-lock.json": true,
 	},
 	"workbench.editorAssociations": {
-		"*.hex": "hexEditor.hexedit"
+		"*.hex": "hexEditor.hexedit",
 	},
 }

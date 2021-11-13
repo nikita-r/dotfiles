@@ -137,6 +137,9 @@
 	},
 	"gitlens.blame.avatars": false,
 	"gitlens.blame.ignoreWhitespace": true,
+	//"gitlens.advanced.blame.delayAfterEdit": 0,
+	"gitlens.defaultGravatarsStyle": "identicon",
+	//"gitlens.hovers.avatars": false,
 
 	"csv-preview.skipComments": true,
 	"filesize.showGzip": false,

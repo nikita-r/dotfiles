@@ -11,6 +11,9 @@
 [init]
 	defaultBranch = main
 
+[help]
+	autoCorrect = prompt
+
 [url "https://github.com/"]
 	insteadOf = "github:"
 
@@ -52,9 +55,6 @@
 	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 
-[diff "utf-16"]
-	textconv = iconv -f utf-16 -t utf-8
-
 [diff "rtf"]
 	textconv = unrtf --text
 	binary = true
@@ -86,11 +86,11 @@
 [mergetool "bc3"]
 	trustExitCode = true
 
-[rerere]
-	enabled = true
-
 [color]
 	branch = false
+
+[diff "utf-16"]
+	textconv = iconv -f utf-16 -t utf-8
 
 [status]
 	showStash = true
@@ -104,8 +104,12 @@
 [diff "nodiff"]
 	command = true
 
+[rerere]
+	enabled = true
+
 [rebase]
 	stat = true
+	missingCommitsCheck = error
 
 [pull]
 	rebase = true
@@ -120,6 +124,7 @@
 [diff]
 	renames = copies
 	mnemonicPrefix = true
+	noPrefix = true
 
 [user]
 	useConfigOnly = true

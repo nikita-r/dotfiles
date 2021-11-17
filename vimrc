@@ -94,7 +94,7 @@ endif
 hi Tab ctermbg=232
 match Tab /\t/
 
-set listchars=extends:>,precedes:<,trail:~,eol:$,nbsp:˽,tab:↗↝
+set listchars=extends:›,precedes:‹,trail:·,nbsp:˽,tab:↗↝
 if has("patch-7.4.710") | set listchars+=space:· | endif
 
 set ic smartcase

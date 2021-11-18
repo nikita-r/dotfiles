@@ -105,7 +105,7 @@
 	{
 		"key": "alt+q",
 		"command": "workbench.action.terminal.toggleFindRegex",
-		"when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+		"when": "terminalFindFocused || terminalFocus"
 	},
 
 	/* default bindings, but with the "when" removed */
@@ -116,6 +116,10 @@
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "editor.unfoldAll"
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
@@ -452,12 +456,12 @@
 	{
 		"key": "alt+pageup",
 		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+		"when": "terminalFocus && !terminalAltBufferActive"
 	},
 	{
 		"key": "alt+pagedown",
 		"command": "workbench.action.terminal.scrollDownPage",
-		"when": "terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+		"when": "terminalFocus && !terminalAltBufferActive"
 	},
 
 	/* Ctrl+Shift+J */

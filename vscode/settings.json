@@ -241,18 +241,21 @@
 		"focusBorder": "#F08048",
 		"progressBar.background": "#F08048",
 		"tab.activeModifiedBorder": "#F08048",
+		"statusBar.debuggingBackground": "#c63",
+		"statusBarItem.warningBackground": "#c63",
 
+		/* codes highlight */
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
 		"editor.selectionHighlightBackground": "#aaa3",
+		"editor.findMatchBackground": "#737",
 		"editor.findMatchHighlightBackground": "#515",
 		"editor.findRangeHighlightBackground": "#66e3",
-		"terminal.selectionBackground": "#fff2",
+		"minimap.selectionHighlight": "#357",
 		"minimap.findMatchHighlight": "#c84",
 		"minimap.warningHighlight": "#ff0",
 		"minimap.errorHighlight": "#f00",
-		"editor.findMatchBackground": "#737",
-		"minimap.selectionHighlight": "#357",
+		"terminal.selectionBackground": "#fff2"
 	},
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme

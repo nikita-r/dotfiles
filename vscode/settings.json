@@ -196,8 +196,6 @@
 	"terminal.integrated.scrollback": 32767,
 	"terminal.integrated.persistentSessionScrollback": 4095,
 
-	//"terminal.integrated.allowMnemonics": true, // makes Alt+B unavailable
-
 	"terminal.integrated.commandsToSkipShell": [
 		"workbench.action.showAllSymbols",
 		"workbench.action.toggleSidebarVisibility",
@@ -243,6 +241,14 @@
 		"tab.activeModifiedBorder": "#F08048",
 		"statusBar.debuggingBackground": "#c63",
 		"statusBarItem.warningBackground": "#c63",
+
+		/* |~| */
+		"minimapSlider.activeBackground": "#ccc3",
+		"minimapSlider.background": "#8883",
+		"minimapSlider.hoverBackground": "#aaa3",
+		"scrollbarSlider.activeBackground": "#ccc6",
+		"scrollbarSlider.background": "#8886",
+		"scrollbarSlider.hoverBackground": "#aaa6",
 
 		/* codes highlight */
 		"editor.selectionBackground": "#135",

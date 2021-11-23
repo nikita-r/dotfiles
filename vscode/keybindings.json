@@ -118,6 +118,14 @@
 		"command": "workbench.action.terminal.focusTabs"
 	},
 	{
+		"key": "alt+pageup",
+		"command": "scrollPageUp"
+	},
+	{
+		"key": "alt+pagedown",
+		"command": "scrollPageDown"
+	},
+	{
 		"key": "ctrl+k ctrl+j",
 		"command": "editor.unfoldAll"
 	},
@@ -419,13 +427,13 @@
 
 	/* keys in Terminal */
 	{ "key": "ctrl+e", "command": ""
-	, "when": "terminalFocus || terminalTabsFocus" },
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "key": "ctrl+n", "command": ""
-	, "when": "terminalFocus || terminalTabsFocus" },
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "key": "ctrl+p", "command": ""
-	, "when": "terminalFocus || terminalTabsFocus" },
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "key": "ctrl+w", "command": ""
-	, "when": "terminalFocus || terminalTabsFocus" },
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	/* ?terminalTabsFocus */
 	{
 		"key": "ctrl+f",
@@ -450,18 +458,29 @@
 	{
 		"key": "alt+z",
 		"command": "workbench.action.terminal.sizeToContentWidth",
-		"when": "terminalTabsFocus"
+		"when": "terminalFindFocused || terminalTabsFocus"
 	},
 	/* In addition to "shift+page*" */
 	{
 		"key": "alt+pageup",
 		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFocus && !terminalAltBufferActive"
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
 		"key": "alt+pagedown",
 		"command": "workbench.action.terminal.scrollDownPage",
-		"when": "terminalFocus && !terminalAltBufferActive"
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* scroll a line */
+	{
+		"key": "ctrl+up",
+		"command": "workbench.action.terminal.scrollUp",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "workbench.action.terminal.scrollDown",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* Ctrl+Shift+J */

@@ -216,7 +216,7 @@ function Get-Epoch-Timestamp ($x) {
   } else {
     $datetime = (Get-Date $x).ToUniversalTime()
   }
-  [int] ($datetime - $epoch).TotalSeconds
+  [Int64] ($datetime - $epoch).TotalSeconds
 }
 
 

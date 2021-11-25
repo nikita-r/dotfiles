@@ -230,6 +230,7 @@
 		"breadcrumb.background": "#402040",
 		"editor.foldBackground": "#301830",
 		"editorGutter.background": "#201020",
+		"editorOverviewRuler.findMatchForeground": "#A050A0",
 		"statusBar.background": "#402040",
 		"statusBar.noFolderBackground": "#402040",
 		"titleBar.activeBackground": "#402040",
@@ -258,7 +259,8 @@
 		"editor.findMatchHighlightBackground": "#515",
 		"editor.findRangeHighlightBackground": "#66e3",
 		"minimap.selectionHighlight": "#357",
-		"minimap.findMatchHighlight": "#c84",
+		"minimap.selectionOccurrenceHighlight": "#666",
+		"minimap.findMatchHighlight": "#c6c",
 		"minimap.warningHighlight": "#ff0",
 		"minimap.errorHighlight": "#f00",
 		"terminal.selectionBackground": "#fff2"

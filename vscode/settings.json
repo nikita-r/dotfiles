@@ -227,10 +227,10 @@
 		"activityBar.background": "#402040",
 		"activityBarBadge.background": "#806080",
 		"activityBarBadge.foreground": "#402040",
+		"banner.background": "#201020",
 		"breadcrumb.background": "#402040",
 		"editor.foldBackground": "#301830",
 		"editorGutter.background": "#201020",
-		"editorOverviewRuler.findMatchForeground": "#A050A0",
 		"statusBar.background": "#402040",
 		"statusBar.noFolderBackground": "#402040",
 		"titleBar.activeBackground": "#402040",
@@ -241,7 +241,10 @@
 		"progressBar.background": "#F08048",
 		"tab.activeModifiedBorder": "#F08048",
 		"statusBar.debuggingBackground": "#c63",
-		"statusBarItem.warningBackground": "#c63",
+
+		/* Hue: 160/360 */
+		"statusBarItem.remoteBackground": "#208060",
+		"statusBarItem.warningBackground": "#208060",
 
 		/* |~| */
 		"minimapSlider.activeBackground": "#ccc3",
@@ -250,6 +253,7 @@
 		"scrollbarSlider.activeBackground": "#ccc6",
 		"scrollbarSlider.background": "#8886",
 		"scrollbarSlider.hoverBackground": "#aaa6",
+		"editorOverviewRuler.findMatchForeground": "#A050A0",
 
 		/* codes highlight */
 		"editor.selectionBackground": "#135",
@@ -261,8 +265,8 @@
 		"minimap.selectionHighlight": "#357",
 		"minimap.selectionOccurrenceHighlight": "#666",
 		"minimap.findMatchHighlight": "#c6c",
-		"minimap.warningHighlight": "#ff0",
-		"minimap.errorHighlight": "#f00",
+		//"minimap.warningHighlight": "#ff0",
+		//"minimap.errorHighlight": "#f00",
 		"terminal.selectionBackground": "#fff2"
 	},
 

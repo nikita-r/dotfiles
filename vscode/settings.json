@@ -140,9 +140,15 @@
 	//"gitlens.advanced.blame.delayAfterEdit": 0,
 	"gitlens.defaultGravatarsStyle": "identicon",
 	//"gitlens.hovers.avatars": false,
+	"gitlens.views.formats.commits.label": "${❰ tips ❱ ┇ }${message}",
 
+	"csv-preview.capitalizeHeaders": false,
+	"csv-preview.formatValues": "unquoted",
+	"csv-preview.lineNumbers": "source",
 	"csv-preview.skipComments": true,
+
 	"filesize.showGzip": false,
+	"quicktype.inferBooleanStrings": false,
 
 	"omnisharp.autoStart": false, // #> OmniSharp: Restart
 	"omnisharp.enableRoslynAnalyzers": true,

@@ -1,7 +1,7 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
 eamodio.gitlens
-#EditorConfig.EditorConfig
+EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
 #Gruntfuggly.todo-tree
 hediet.vscode-drawio
@@ -13,4 +13,5 @@ mkxml.vscode-filesize
 ms-vscode.hexeditor
 ms-vscode.powershell
 #ms-vscode-remote.vscode-remote-extensionpack
+quicktype.quicktype
 samuelcolvin.jinjahtml

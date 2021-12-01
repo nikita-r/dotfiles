@@ -86,11 +86,11 @@
 [mergetool "bc3"]
 	trustExitCode = true
 
+[merge]
+	conflictStyle = diff3
+
 [color]
 	branch = false
-
-[diff "utf-16"]
-	textconv = iconv -f utf-16 -t utf-8
 
 [status]
 	showStash = true
@@ -100,6 +100,9 @@
 	ignoredHook = true
 	detachedHead = false
 	addEmptyPathspec = false
+
+[diff "utf-16"]
+	textconv = iconv -f utf-16 -t utf-8
 
 [diff "nodiff"]
 	command = true
@@ -120,9 +123,6 @@
 
 [apply]
 	whitespace = fix
-
-[merge]
-	conflictStyle = diff3
 
 [diff]
 	renames = copies

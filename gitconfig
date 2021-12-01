@@ -121,6 +121,9 @@
 [apply]
 	whitespace = fix
 
+[merge]
+	conflictStyle = diff3
+
 [diff]
 	renames = copies
 	mnemonicPrefix = true

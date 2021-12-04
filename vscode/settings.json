@@ -261,6 +261,9 @@
 		"scrollbarSlider.hoverBackground": "#aaa6",
 		"editorOverviewRuler.findMatchForeground": "#A050A0",
 
+		/* ext */
+		"gitlens.trailingLineForegroundColor": "#99999966",
+
 		/* codes highlight */
 		"editor.selectionBackground": "#135",
 		"editor.inactiveSelectionBackground": "#135",
@@ -275,6 +278,8 @@
 		//"minimap.errorHighlight": "#f00",
 		"terminal.selectionBackground": "#fff2"
 	},
+
+	"htmlEndTagLabels.labelColor": "#99999966",
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)

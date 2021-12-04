@@ -1,7 +1,8 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
+anteprimorac.html-end-tag-labels
 eamodio.gitlens
-EditorConfig.EditorConfig
+#EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
 #Gruntfuggly.todo-tree
 hediet.vscode-drawio

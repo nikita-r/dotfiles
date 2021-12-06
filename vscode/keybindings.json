@@ -388,6 +388,12 @@
 		"command": "workbench.action.focusActivityBar"
 	},
 
+	/* new tab */
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.files.newUntitledFile"
+	},
+
 	/* Files Explorer */
 	{
 		"key": "ctrl+shift+e",

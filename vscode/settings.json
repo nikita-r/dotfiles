@@ -247,6 +247,7 @@
 		"progressBar.background": "#F08048",
 		"tab.activeModifiedBorder": "#F08048",
 		"statusBar.debuggingBackground": "#c63",
+		"editor.stackFrameHighlightBackground": "#421",
 
 		/* Hue: 160/360 */
 		"statusBarItem.remoteBackground": "#208060",

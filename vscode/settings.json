@@ -25,6 +25,7 @@
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false,
+	"search.searchOnTypeDebouncePeriod": 666,
 	"search.showLineNumbers": true,
 
 	//"editor.stablePeek": true,
@@ -318,6 +319,6 @@
 	},
 	"workbench.editorAssociations": {
 		"*.hex": "hexEditor.hexedit",
-		"*.md": "vscode.markdown.preview.editor",
+		//"*.md": "vscode.markdown.preview.editor",
 	},
 }

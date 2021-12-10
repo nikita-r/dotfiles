@@ -1,6 +1,6 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
-anteprimorac.html-end-tag-labels
+dbaeumer.vscode-eslint
 eamodio.gitlens
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer

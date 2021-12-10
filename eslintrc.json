@@ -1,0 +1,58 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ]
+      },
+      "env": {
+        "browser": true,
+        "node": true
+      },
+      "extends": [
+        "eslint:recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "brace-style": [ 2, "1tbs", { "allowSingleLine": true } ],
+        "comma-dangle": [ 1,
+          {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "only-multiline"
+          }
+        ],
+        "curly": [ 2, "all" ],
+        "eol-last": [ 2, "always" ],
+        "eqeqeq": [ 2, "smart" ],
+        "indent": [ "error", 2, { "SwitchCase": 1 } ],
+        //"no-control-regex": 0,
+        "no-tabs": [ 2 ],
+        "no-throw-literal": 2,
+        "no-var": [ 2 ],
+        "semi": [ 2, "always" ]
+      }
+    }
+    /*
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+    */
+  ]
+}

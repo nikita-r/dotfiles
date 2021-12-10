@@ -18,6 +18,7 @@
         "node": true
       },
       "extends": [
+        //"plugin:@angular-eslint/recommended",
         "eslint:recommended"
       ],
       "rules": {
@@ -37,6 +38,7 @@
         "eqeqeq": [ 2, "smart" ],
         "indent": [ "error", 2, { "SwitchCase": 1 } ],
         //"no-control-regex": 0,
+        "no-sequences": [ 2, { "allowInParentheses": false } ],
         "no-tabs": [ 2 ],
         "no-throw-literal": 2,
         "no-var": [ 2 ],

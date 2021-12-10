@@ -100,6 +100,8 @@
 	"editor.roundedSelection": false,
 
 	"editor.showFoldingControls": "always",
+	"notebook.showFoldingControls": "always",
+	"notebook.outline.showCodeCells": true,
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.decorations.badges": false,
@@ -125,6 +127,11 @@
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
+
+	/* diff */
+	//"diffEditor.renderSideBySide": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
@@ -176,6 +183,8 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"python.formatting.provider": "none",
+	"javascript.preferences.importModuleSpecifier": "non-relative",
+	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
 
@@ -235,7 +244,6 @@
 		"activityBarBadge.foreground": "#402040",
 		"banner.background": "#201020",
 		"breadcrumb.background": "#402040",
-		"editor.foldBackground": "#301830",
 		"editorGutter.background": "#201020",
 		"statusBar.background": "#402040",
 		"statusBar.noFolderBackground": "#402040",
@@ -247,6 +255,7 @@
 		"progressBar.background": "#F08048",
 		"tab.activeModifiedBorder": "#F08048",
 		"statusBar.debuggingBackground": "#c63",
+		"editor.foldBackground": "#421",
 		"editor.stackFrameHighlightBackground": "#421",
 
 		/* Hue: 160/360 */
@@ -284,7 +293,6 @@
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)
-	"notebook.outline.showCodeCells": true,
 
 	/* . . . */
 
@@ -296,8 +304,6 @@
 		"html": { "self_closing_tag": "xhtml" },
 	},
 
-	"diffEditor.ignoreTrimWhitespace": false,
-	//"diffEditor.renderSideBySide": false,
 	"files.associations": {
 		"*.qss": "css",
 	},
@@ -312,5 +318,6 @@
 	},
 	"workbench.editorAssociations": {
 		"*.hex": "hexEditor.hexedit",
+		"*.md": "vscode.markdown.preview.editor",
 	},
 }

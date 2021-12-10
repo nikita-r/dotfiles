@@ -522,6 +522,18 @@
 		"when": "inSettingsEditor"
 	},
 
+	/* Ctrl+Shift+V */
+	{
+		"key": "ctrl+shift+v",
+		"command": "markdown.showSource",
+		"when": "markdownPreviewFocus"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "markdown.showPreview",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+
 	/* v1.57 release removed this kb */
 	{
 		"key": "ctrl+w",

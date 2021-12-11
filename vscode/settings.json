@@ -13,6 +13,7 @@
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
 	"telemetry.telemetryLevel": "off",
+	"typescript.surveys.enabled": false,
 	"workbench.enableExperiments": false,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -78,6 +79,7 @@
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
+	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
@@ -85,8 +87,6 @@
 	"workbench.editor.wrapTabs": true,
 
 	//"workbench.editor.enablePreview": false,
-	//"workbench.editor.closeEmptyGroups": false,
-
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -102,12 +102,14 @@
 
 	"editor.showFoldingControls": "always",
 	"notebook.showFoldingControls": "always",
+	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.decorations.badges": false,
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
+	"workbench.quickOpen.closeOnFocusLost": false,
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
@@ -184,8 +186,10 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"python.formatting.provider": "none",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"javascript.preferences.quoteStyle": "single",
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
 
@@ -236,6 +240,7 @@
 	"window.dialogStyle": "custom",
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
+	"window.enableMenuBarMnemonics": true,
 
 	"workbench.colorCustomizations": {
 
@@ -272,8 +277,9 @@
 		"scrollbarSlider.hoverBackground": "#aaa6",
 		"editorOverviewRuler.findMatchForeground": "#A050A0",
 
-		/* ext */
-		"gitlens.trailingLineForegroundColor": "#99999966",
+		/* diff */
+		"diffEditor.insertedTextBackground": "#304030",
+		"diffEditor.removedTextBackground": "#603030",
 
 		/* codes highlight */
 		"editor.selectionBackground": "#135",
@@ -287,7 +293,10 @@
 		"minimap.findMatchHighlight": "#c6c",
 		//"minimap.warningHighlight": "#ff0",
 		//"minimap.errorHighlight": "#f00",
-		"terminal.selectionBackground": "#fff2"
+		"terminal.selectionBackground": "#fff2",
+
+		/* ext */
+		"gitlens.trailingLineForegroundColor": "#99999966",
 	},
 
 	"htmlEndTagLabels.labelColor": "#99999966",

@@ -522,7 +522,7 @@
 		"when": "inSettingsEditor"
 	},
 
-	/* Resolving ctrl+shift+V */
+	/* Resolving ctrl+shift+[KeyV] */
 	{
 		"key": "ctrl+shift+v",
 		"command": "markdown.showSource",

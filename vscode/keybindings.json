@@ -488,6 +488,12 @@
 		"command": "workbench.action.terminal.scrollDown",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
+	/* "ctrl+`": do not toggleTerminal if Terminal is already focussed */
+	{
+		"key": "ctrl+`",
+		"command": "workbench.action.quickOpenTerm",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
 
 	/* Ctrl+Shift+J */
 	/* file-ext-switcher:Angular */

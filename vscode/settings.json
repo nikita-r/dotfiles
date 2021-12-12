@@ -217,7 +217,6 @@
 	"terminal.integrated.persistentSessionScrollback": 4095,
 
 	"terminal.integrated.commandsToSkipShell": [
-		"workbench.action.showAllSymbols",
 		"workbench.action.toggleSidebarVisibility",
 	],
 
@@ -278,8 +277,8 @@
 		"editorOverviewRuler.findMatchForeground": "#A050A0",
 
 		/* diff */
-		"diffEditor.insertedTextBackground": "#304030",
-		"diffEditor.removedTextBackground": "#603030",
+		"diffEditor.insertedTextBackground": "#2b562b",
+		"diffEditor.removedTextBackground": "#633",
 
 		/* codes highlight */
 		"editor.selectionBackground": "#135",

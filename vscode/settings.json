@@ -207,11 +207,14 @@
 	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
 
+	/* debug */
 	"debug.confirmOnExit": "always",
-	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
-	"terminal.integrated.confirmOnKill": "always",
+	"debug.javascript.breakOnConditionalError": true,
 
 	/* Terminal */
+
+	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
+	"terminal.integrated.confirmOnKill": "always",
 
 	"terminal.integrated.scrollback": 32767,
 	"terminal.integrated.persistentSessionScrollback": 4095,

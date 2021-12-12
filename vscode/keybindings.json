@@ -492,12 +492,7 @@
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+`",
-		"command": "noop",
-		"when": "inTerminalPicker"
+		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* Ctrl+Shift+J */

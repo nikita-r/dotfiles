@@ -28,6 +28,7 @@
 	"editor.occurrencesHighlight": false,
 	"search.searchOnTypeDebouncePeriod": 666,
 	"search.showLineNumbers": true,
+	"search.searchEditor.defaultNumberOfContextLines": null,
 
 	//"editor.stablePeek": true,
 	"markdown.preview.doubleClickToSwitchToEditor": false,
@@ -69,6 +70,7 @@
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
+	"editor.hideCursorInOverviewRuler": true,
 
 	//"editor.bracketPairColorization.enabled": true,
 	//"editor.guides.bracketPairs": true,
@@ -236,6 +238,7 @@
 	"terminal.integrated.tabs.separator": " · ",
 	"terminal.integrated.tabs.showActions": "never",
 	"terminal.integrated.tabs.showActiveTerminal": "never",
+	"terminal.integrated.tabs.location": "right",
 
 	/* customize GUI */
 
@@ -280,8 +283,8 @@
 		"editorOverviewRuler.findMatchForeground": "#A050A0",
 
 		/* diff */
-		"diffEditor.insertedTextBackground": "#2b562b",
-		"diffEditor.removedTextBackground": "#633",
+		"diffEditor.insertedTextBackground": "#0f02",
+		"diffEditor.removedTextBackground": "#f002",
 
 		/* codes highlight */
 		"editor.selectionBackground": "#135",
@@ -300,8 +303,6 @@
 		/* ext */
 		"gitlens.trailingLineForegroundColor": "#99999966",
 	},
-
-	"htmlEndTagLabels.labelColor": "#99999966",
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)

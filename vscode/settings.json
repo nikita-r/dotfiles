@@ -101,6 +101,7 @@
 	"editor.comments.insertSpace": false,
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.roundedSelection": false,
+	"explorer.copyRelativePathSeparator": "/",
 
 	"editor.showFoldingControls": "always",
 	"notebook.showFoldingControls": "always",

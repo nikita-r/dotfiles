@@ -421,6 +421,27 @@
 		"command": "search.action.clearSearchResults" // then focus the input
 	},
 
+	/* Shift+Alt+c */
+	{
+		"key": "shift+alt+c",
+		"command": "-copyFilePath",
+		"when": "!editorFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+c",
+		"command": "-copyRelativeFilePath",
+		"when": "!editorFocus"
+	},
+	{
+		"key": "shift+alt+c",
+		"command": "copyRelativeFilePath"
+	},
+	{
+		"key": "shift+alt+c",
+		"command": "search.action.copyPath",
+		"when": "fileMatchOrFolderMatchWithResourceFocus"
+	},
+
 	/* Alt for quickOpen */
 	{
 		"key": "ctrl+alt+p",

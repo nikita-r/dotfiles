@@ -168,12 +168,16 @@
 	"todo-tree.filtering.excludeGlobs": [
 		"**/*.log",
 	],
-	"todo-tree.regex.regex": "(\\b($TAGS)\\b|^\\s*- \\[ \\])",
+	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config --pcre2",
+	"todo-tree.regex.regex": "((?<!\")\\b($TAGS)\\b|^\\s*- \\[ \\])",
+	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
 	//"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.general.tags": [
 		"BUG", "HACK", "FIXME", "ToDo",
 		"TODO", "XXX", "MAYBE:"
 	],
+	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
+	"todo-tree.tree.tooltipFormat": "Line ${line}: ${after}",
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.tree.showBadges": false,

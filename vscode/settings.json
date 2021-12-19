@@ -148,7 +148,7 @@
 	"gitlens.advanced.messages": {
 		"suppressGitMissingWarning": true,
 	},
-	"gitlens.blame.avatars": false,
+	//"gitlens.blame.avatars": false,
 	"gitlens.blame.ignoreWhitespace": true,
 	//"gitlens.advanced.blame.delayAfterEdit": 0,
 	"gitlens.defaultGravatarsStyle": "identicon",
@@ -165,22 +165,41 @@
 
 	"todo-tree.filtering.ignoreGitSubmodules": true,
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-	"todo-tree.filtering.excludeGlobs": [
-		"**/*.log",
-	],
+	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
 	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config --pcre2",
-	"todo-tree.regex.regex": "((?<!\")\\b($TAGS)\\b|^\\s*- \\[ \\])",
+	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*- \\[ \\]",
 	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
 	//"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.general.tags": [
 		"BUG", "HACK", "FIXME", "ToDo",
-		"TODO", "XXX", "MAYBE:"
+		"TODO", "XXX", "MAYBE", "NOTE",
 	],
 	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
 	"todo-tree.tree.tooltipFormat": "Line ${line}: ${after}",
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.tree.showBadges": false,
+	"todo-tree.highlights.defaultHighlight": {
+		"icon": "$(symbol-array)",
+		"iconColor": "editorOverviewRuler.findMatchForeground",
+	},
+	"todo-tree.highlights.customHighlight": {
+		"BUG": { "icon": "$(bug)", "iconColor": "focusBorder" },
+		"FIXME": { "icon": "$(tools)" },
+		"HACK": { "icon": "$(flame)" },
+		"MAYBE": {
+			"icon": "question",
+			"iconColor": "#4080c0"
+		},
+		"NOTE": {
+			"icon": "note",
+			"iconColor": "#4080c0"
+		},
+		"XXX": {
+			"icon": "pulse",
+			"iconColor": "red"
+		}
+	},
 
 	"omnisharp.autoStart": false, // #> OmniSharp: Restart
 	"omnisharp.enableRoslynAnalyzers": true,

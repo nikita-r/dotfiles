@@ -175,7 +175,7 @@
 		"TODO", "XXX", "MAYBE", "NOTE",
 	],
 	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
-	"todo-tree.tree.tooltipFormat": "Line ${line}: ${after}",
+	"todo-tree.tree.tooltipFormat": "Line ${line}: |${after}",
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.tree.showBadges": false,
@@ -184,7 +184,7 @@
 		"iconColor": "editorOverviewRuler.findMatchForeground",
 	},
 	"todo-tree.highlights.customHighlight": {
-		"BUG": { "icon": "$(bug)", "iconColor": "focusBorder" },
+		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiBrightRed" },
 		"FIXME": { "icon": "$(tools)" },
 		"HACK": { "icon": "$(flame)" },
 		"MAYBE": {
@@ -286,7 +286,7 @@
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
 
-	"workbench.colorCustomizations": {
+	"workbench.colorCustomizations": { "[Default Dark+]": {
 
 		/* Hue:  20/360 */
 		"focusBorder": "#F08048",
@@ -342,7 +342,7 @@
 
 		/* ext */
 		"gitlens.trailingLineForegroundColor": "#6666",
-	},
+	} },
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)

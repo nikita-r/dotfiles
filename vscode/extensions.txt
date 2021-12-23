@@ -3,13 +3,14 @@ andyyaldoo.vscode-json
 datasert.vscode-texty
 dbaeumer.vscode-eslint
 #dendron.dendron
-eamodio.gitlens
+#eamodio.gitlens
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
-#Gruntfuggly.todo-tree
+Gruntfuggly.todo-tree
 hediet.vscode-drawio
 JohannesRudolph.file-ext-switcher
 KevinRose.vsc-python-indent
+mhutchie.git-graph
 mkxml.vscode-filesize
 #ms-dotnettools.csharp
 #ms-python.python

@@ -152,6 +152,7 @@
 	//"gitlens.advanced.blame.delayAfterEdit": 0,
 	"gitlens.defaultGravatarsStyle": "identicon",
 	"gitlens.views.formats.commits.label": "${❰ tips ❱ ┇ }${message}",
+	"gitlens.views.repositories.autoRefresh": false,
 
 	"csv-preview.capitalizeHeaders": false,
 	"csv-preview.formatValues": "unquoted",
@@ -161,6 +162,8 @@
 	"filesize.showGzip": false,
 	"quicktype.inferBooleanStrings": false,
 
+	"todo-tree.tree.scanAtStartup": false,
+	"todo-tree.tree.autoRefresh": false,
 	"todo-tree.filtering.ignoreGitSubmodules": true,
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
 	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
@@ -339,6 +342,7 @@
 		"terminal.selectionBackground": "#fff2",
 
 		/* ext */
+		"gitlens.gutterBackgroundColor": "#2222",
 		"gitlens.trailingLineForegroundColor": "#6666",
 	} },
 

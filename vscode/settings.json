@@ -42,6 +42,7 @@
 	"editor.hover.above": false,
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 333,
+	"editor.lightbulb.enabled": false,
 
 	"editor.suggest.filterGraceful": false,
 	"editor.suggest.localityBonus": true,
@@ -122,6 +123,7 @@
 	"scm.alwaysShowRepositories": true,
 	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
+	"git.untrackedChanges": "separate",
 
 	//"git.autorefresh": false,
 	"git.enableStatusBarSync": false,
@@ -144,6 +146,10 @@
 	"remote.containers.copyGitConfig": false,
 
 	/* Extensions */
+
+	"git-graph.commitDetailsView.location": "Docked to Bottom",
+	"git-graph.date.format": "ISO Date Only",
+	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
 
 	"gitlens.advanced.messages": {
 		"suppressGitMissingWarning": true,
@@ -176,7 +182,7 @@
 		"TODO", "XXX", "MAYBE", "NOTE",
 	],
 	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
-	"todo-tree.tree.tooltipFormat": "Line ${line}: |${after}",
+	"todo-tree.tree.tooltipFormat": "Line ${line} ┇ ${after}",
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.tree.showBadges": false,
@@ -287,64 +293,67 @@
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
 
-	"workbench.colorCustomizations": { "[Default Dark+]": {
-
-		/* Hue:  20/360 */
-		"focusBorder": "#F08048",
-		"progressBar.background": "#F08048",
-		"tab.activeModifiedBorder": "#F08048",
-		"statusBar.debuggingBackground": "#c63",
-		"editor.foldBackground": "#421",
-		"editor.stackFrameHighlightBackground": "#421",
-
-		/* Hue: 160/360 */
-		"statusBarItem.remoteBackground": "#208060",
-		"statusBarItem.warningBackground": "#208060",
-
-		/* Hue: 300/360 */
-		"activityBar.background": "#402040",
-		"activityBarBadge.background": "#806080",
-		"activityBarBadge.foreground": "#402040",
-		"banner.background": "#201020",
-		"breadcrumb.background": "#402040",
-		//"editor.foldBackground": "#301830",
-		"editorGutter.background": "#201020",
-		"statusBar.background": "#402040",
-		"statusBar.noFolderBackground": "#402040",
-		"titleBar.activeBackground": "#402040",
-		"titleBar.inactiveBackground": "#402040",
-
-		/* |~| */
-		"minimapSlider.activeBackground": "#ccc3",
-		"minimapSlider.background": "#8883",
-		"minimapSlider.hoverBackground": "#aaa3",
-		"scrollbarSlider.activeBackground": "#ccc6",
-		"scrollbarSlider.background": "#8886",
-		"scrollbarSlider.hoverBackground": "#aaa6",
-		"editorOverviewRuler.findMatchForeground": "#A5A",
+	"workbench.colorCustomizations": {
 
 		/* diff */
 		"diffEditor.insertedTextBackground": "#0f02",
 		"diffEditor.removedTextBackground": "#f002",
 
-		/* codes highlight */
-		"editor.selectionBackground": "#135",
-		"editor.inactiveSelectionBackground": "#135",
-		"editor.selectionHighlightBackground": "#aaa3",
-		"editor.findMatchBackground": "#737",
-		"editor.findMatchHighlightBackground": "#515",
-		"editor.findRangeHighlightBackground": "#66e3",
-		"minimap.selectionHighlight": "#357",
-		"minimap.selectionOccurrenceHighlight": "#666",
-		"minimap.findMatchHighlight": "#c6c",
-		//"minimap.warningHighlight": "#ff0",
-		//"minimap.errorHighlight": "#f00",
-		"terminal.selectionBackground": "#fff2",
+		"[Default Dark+]": {
 
-		/* ext */
-		"gitlens.gutterBackgroundColor": "#2222",
-		"gitlens.trailingLineForegroundColor": "#6666",
-	} },
+			/* Hue:  20/360 */
+			"focusBorder": "#F08048",
+			"progressBar.background": "#F08048",
+			"tab.activeModifiedBorder": "#F08048",
+			"statusBar.debuggingBackground": "#c63",
+			"editor.foldBackground": "#421",
+			"editor.stackFrameHighlightBackground": "#421",
+
+			/* Hue: 160/360 */
+			"statusBarItem.remoteBackground": "#208060",
+			"statusBarItem.warningBackground": "#208060",
+
+			/* Hue: 300/360 */
+			"activityBar.background": "#402040",
+			"activityBarBadge.background": "#806080",
+			"activityBarBadge.foreground": "#402040",
+			"banner.background": "#201020",
+			"breadcrumb.background": "#402040",
+			//"editor.foldBackground": "#301830",
+			"editorGutter.background": "#201020",
+			"statusBar.background": "#402040",
+			"statusBar.noFolderBackground": "#402040",
+			"titleBar.activeBackground": "#402040",
+			"titleBar.inactiveBackground": "#402040",
+
+			/* |~| */
+			"minimapSlider.activeBackground": "#ccc3",
+			"minimapSlider.background": "#8883",
+			"minimapSlider.hoverBackground": "#aaa3",
+			"scrollbarSlider.activeBackground": "#ccc6",
+			"scrollbarSlider.background": "#8886",
+			"scrollbarSlider.hoverBackground": "#aaa6",
+			"editorOverviewRuler.findMatchForeground": "#A5A",
+
+			/* codes highlight */
+			"editor.selectionBackground": "#135",
+			"editor.inactiveSelectionBackground": "#135",
+			"editor.selectionHighlightBackground": "#aaa3",
+			"editor.findMatchBackground": "#737",
+			"editor.findMatchHighlightBackground": "#515",
+			"editor.findRangeHighlightBackground": "#66e3",
+			"minimap.selectionHighlight": "#357",
+			"minimap.selectionOccurrenceHighlight": "#666",
+			"minimap.findMatchHighlight": "#c6c",
+			//"minimap.warningHighlight": "#ff0",
+			//"minimap.errorHighlight": "#f00",
+			"terminal.selectionBackground": "#fff2",
+
+			/* ext */
+			"gitlens.gutterBackgroundColor": "#2222",
+			"gitlens.trailingLineForegroundColor": "#6666",
+		},
+	},
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)

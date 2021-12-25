@@ -21,6 +21,9 @@
 	"explorer.autoReveal": false,
 	"explorer.incrementalNaming": "smart",
 	//"explorer.sortOrder": "modified",
+	"explorer.openEditors.visible": 11,
+
+	/* search / peek / preview */
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
@@ -34,6 +37,7 @@
 	"markdown.preview.doubleClickToSwitchToEditor": false,
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
+	//"workbench.editor.enablePreview": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
@@ -74,6 +78,7 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
+	/* visual guides */
 	//"editor.bracketPairColorization.enabled": true,
 	//"editor.guides.bracketPairs": true,
 	//"editor.guides.highlightActiveIndentation": false,
@@ -83,6 +88,9 @@
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
+	/* editor tabs */
+	"workbench.editor.decorations.badges": false,
+	"workbench.editor.decorations.colors": false,
 	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
@@ -90,7 +98,6 @@
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
-	//"workbench.editor.enablePreview": false,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -104,17 +111,16 @@
 	"explorer.copyRelativePathSeparator": "/",
 
 	"breadcrumbs.symbolSortOrder": "name",
-	"editor.showFoldingControls": "always",
-	"notebook.showFoldingControls": "always",
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
+	"notebook.showFoldingControls": "always",
+	"editor.showFoldingControls": "always",
+
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
-	"workbench.editor.decorations.badges": false,
-	"workbench.editor.decorations.colors": false,
-
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
+
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"workbench.view.alwaysShowHeaderActions": true,
 

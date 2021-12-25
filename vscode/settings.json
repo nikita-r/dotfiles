@@ -72,6 +72,7 @@
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
 	"editor.hideCursorInOverviewRuler": true,
+	"editor.roundedSelection": false,
 
 	//"editor.bracketPairColorization.enabled": true,
 	//"editor.guides.bracketPairs": true,
@@ -97,13 +98,12 @@
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": false,
 
-	"breadcrumbs.symbolSortOrder": "name",
-	"diffEditor.renderIndicators": false,
 	"editor.comments.insertSpace": false,
+	//"editor.comments.ignoreEmptyLines": false,
 	"editor.copyWithSyntaxHighlighting": false,
-	"editor.roundedSelection": false,
 	"explorer.copyRelativePathSeparator": "/",
 
+	"breadcrumbs.symbolSortOrder": "name",
 	"editor.showFoldingControls": "always",
 	"notebook.showFoldingControls": "always",
 	"notebook.breadcrumbs.showCodeCells": false,
@@ -111,9 +111,12 @@
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.decorations.badges": false,
+	"workbench.editor.decorations.colors": false,
+
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.quickOpen.closeOnFocusLost": false,
+	"workbench.view.alwaysShowHeaderActions": true,
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
@@ -139,6 +142,7 @@
 	/* diff */
 	"scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
 	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.renderIndicators": false,
 	"diffEditor.renderSideBySide": true,
 
 	/* Remote › Containers */

@@ -120,6 +120,7 @@
 	"problems.showCurrentInStatus": true,
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
+	"workbench.startupEditor": "none",
 
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"workbench.view.alwaysShowHeaderActions": true,
@@ -259,10 +260,9 @@
 	"typescript.autoClosingTags": false,
 	"xml.completion.autoCloseTags": false,
 
-	/* Exit / Init */
+	/* . . . */
+
 	"files.hotExit": "off",
-	"window.newWindowDimensions": "offset",
-	"workbench.startupEditor": "none",
 	"zenMode.restore": false,
 
 	/* debug */
@@ -296,12 +296,9 @@
 	"terminal.integrated.tabs.showActiveTerminal": "never",
 	"terminal.integrated.tabs.location": "right",
 
-	/* customize GUI */
+	/* . . . */
 
-	"window.dialogStyle": "custom",
-	//"window.menuBarVisibility": "hidden",
-	"window.customMenuBarAltFocus": false,
-	"window.enableMenuBarMnemonics": true,
+	"workbench.colorTheme": "Default Dark+",
 
 	"workbench.colorCustomizations": {
 
@@ -368,9 +365,13 @@
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)
 
-	/* . . . */
-
 	"window.zoomLevel": 0.0,
+	"window.dialogStyle": "custom",
+	"window.openFilesInNewWindow": "default",
+	"window.newWindowDimensions": "offset",
+	//"window.menuBarVisibility": "hidden",
+	"window.customMenuBarAltFocus": false,
+	"window.enableMenuBarMnemonics": true,
 
 	"emmet.includeLanguages": {
 	},
@@ -378,10 +379,14 @@
 		"html": { "self_closing_tag": "xhtml" },
 	},
 
+	"files.eol": "\n",
+	//"files.insertFinalNewline": true,
+	//"files.trimFinalNewlines": true,
+	//"files.trimTrailingWhitespace": true,
+
 	"files.associations": {
 		"*.qss": "css",
 	},
-	"files.eol": "\n",
 	"files.exclude": {
 		"**/.ipynb_checkpoints": true,
 		"**/__pycache__": true,

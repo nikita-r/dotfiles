@@ -21,7 +21,7 @@
 	"explorer.autoReveal": false,
 	"explorer.incrementalNaming": "smart",
 	//"explorer.sortOrder": "modified",
-	"explorer.openEditors.visible": 11,
+	"explorer.openEditors.visible": 16,
 
 	/* search / peek / preview */
 
@@ -78,7 +78,6 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
-	/* visual guides */
 	//"editor.bracketPairColorization.enabled": true,
 	//"editor.guides.bracketPairs": true,
 	//"editor.guides.highlightActiveIndentation": false,
@@ -98,6 +97,10 @@
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
+	"workbench.editor.languageDetection": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.startupEditor": "none",
+
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
 
@@ -116,14 +119,11 @@
 	"notebook.showFoldingControls": "always",
 	"editor.showFoldingControls": "always",
 
-	"problems.decorations.enabled": false,
-	"problems.showCurrentInStatus": true,
-	"workbench.editor.languageDetection": false,
-	"workbench.editor.untitled.hint": "hidden",
-	"workbench.startupEditor": "none",
-
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"workbench.view.alwaysShowHeaderActions": true,
+
+	"problems.decorations.enabled": false,
+	"problems.showCurrentInStatus": true,
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
@@ -177,6 +177,7 @@
 	"csv-preview.skipComments": true,
 
 	"filesize.showGzip": false,
+	"hexeditor.maxFileSize": 99,
 	"quicktype.inferBooleanStrings": false,
 
 	"todo-tree.tree.scanAtStartup": false,
@@ -263,7 +264,6 @@
 	/* . . . */
 
 	"files.hotExit": "off",
-	"zenMode.restore": false,
 
 	/* debug */
 	"debug.confirmOnExit": "always",
@@ -373,16 +373,18 @@
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
 
+	//"files.trimTrailingWhitespace": true,
+	//"files.trimFinalNewlines": true,
+	//"files.insertFinalNewline": true,
+	"files.eol": "\n",
+
+	/* discriminate amongst file types */
+
 	"emmet.includeLanguages": {
 	},
 	"emmet.syntaxProfiles": {
 		"html": { "self_closing_tag": "xhtml" },
 	},
-
-	"files.eol": "\n",
-	//"files.insertFinalNewline": true,
-	//"files.trimFinalNewlines": true,
-	//"files.trimTrailingWhitespace": true,
 
 	"files.associations": {
 		"*.qss": "css",
@@ -399,4 +401,7 @@
 		"*.hex": "hexEditor.hexedit",
 		//"*.md": "vscode.markdown.preview.editor",
 	},
+
+	/*~*~*~*~*~*~*~*~*~*~*~*/
+	"zenMode.restore": false,
 }

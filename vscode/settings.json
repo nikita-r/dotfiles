@@ -5,6 +5,7 @@
 	"security.workspace.trust.enabled": false,
 
 	"update.mode": "none", // or "manual"
+	"update.showReleaseNotes": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
 	"extensions.autoUpdate": false,
@@ -21,6 +22,7 @@
 	"explorer.autoReveal": false,
 	"explorer.incrementalNaming": "smart",
 	//"explorer.sortOrder": "modified",
+	//"explorer.sortOrderLexicographicOptions": "unicode",
 	"explorer.openEditors.visible": 16,
 
 	/* search / peek / preview */
@@ -100,6 +102,7 @@
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.startupEditor": "none",
+	"workbench.tips.enabled": false,
 
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
@@ -185,7 +188,7 @@
 	"todo-tree.filtering.ignoreGitSubmodules": true,
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
 	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
-	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config --pcre2",
+	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=999 --no-config --pcre2",
 	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*- \\[ \\]",
 	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
 	//"todo-tree.regex.regexCaseSensitive": false,

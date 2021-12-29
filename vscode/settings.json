@@ -92,7 +92,6 @@
 	/* editor tabs */
 	"workbench.editor.decorations.badges": false,
 	"workbench.editor.decorations.colors": false,
-	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
@@ -121,9 +120,11 @@
 	"notebook.outline.showCodeCells": true,
 	"notebook.showFoldingControls": "always",
 	"editor.showFoldingControls": "always",
-
-	"workbench.quickOpen.closeOnFocusLost": false,
 	"workbench.view.alwaysShowHeaderActions": true,
+
+	"extensions.closeExtensionDetailsOnViewChange": true,
+	//"workbench.editor.closeEmptyGroups": false,
+	"workbench.quickOpen.closeOnFocusLost": false,
 
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
@@ -178,6 +179,9 @@
 	"csv-preview.formatValues": "unquoted",
 	"csv-preview.lineNumbers": "source",
 	"csv-preview.skipComments": true,
+
+	"editWithShell.shell.windows": "PowerShell.exe",
+	"editWithShell.shellArgs.windows": [ "-NoProfile", "-Command" ],
 
 	"filesize.showGzip": false,
 	"hexeditor.maxFileSize": 99,

@@ -16,7 +16,8 @@ mkxml.vscode-filesize
 #ms-python.python
 #ms-toolsai.jupyter
 ms-vscode.hexeditor
-ms-vscode.powershell
+#ms-vscode.powershell
 #ms-vscode-remote.vscode-remote-extensionpack
 quicktype.quicktype
+ryu1kn.edit-with-shell
 samuelcolvin.jinjahtml

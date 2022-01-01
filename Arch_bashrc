@@ -78,15 +78,17 @@ declare -a comps=( weston sway )
 for comp in ${comps[@]}; do HISTIGNORE+=":$comp:pkill $comp"; done
 unset comp comps
 
-# fetch from Arch User Repository
-# install via `makepkg -si`
-# list the installed files via `pacman -Ql $1`
+# Package from Arch User Repository
+# Install: $ makepkg -si; popd
+# List the installed files: $ pacman -Ql $1
 function aur {
+    [ -d ~/aur ] || {  1>&2 echo 'The "~/aur" dir does not exist?'; return -1; }
+    [ -e ~/aur/"$1" ] && { 1>&2 echo "\"~/aur/$1\" already exists!"; return 2; }
+    mkdir ~/aur/"$1"
     local -; set -x
-    pushd ~/pkgs 1>/dev/null
-    git clone https://aur.archlinux.org/$1.git
-    if expr $? 1>/dev/null; then { popd 1>/dev/null; return; }; fi
-    cd $1
+    pushd ~/aur 1>/dev/null
+    git clone "https://aur.archlinux.org/$1.git"
+    cd "$1"; ls
 }
 
 function bat {

@@ -140,19 +140,18 @@ $path += '.tmp.d'
 New-Item $path -Type Dir |% FullName
 }
 
-function ResolveTo-AbsolutePath {
-  [CmdletBinding()] param (
-[Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-[string[]]$Path
+function ResolveTo-AbsolutePath { [CmdletBinding()] param (
+    [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+    [string[]]$Path
   )
-process {
-  $Path |% { $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
-} }
+  process {
+    $Path|%{ $PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($_) }
+  }
+}
 
 
 #> CertUtil -EncodeHex -f $FilePath (New-TemporaryFile | tee -Variable f).FullName
-function View-FileHexed {
-  [CmdletBinding()] param (
+function View-FileHexed { [CmdletBinding()] param (
 [Parameter(Mandatory=$true)][string]$FilePath
 , [int]$HeadCount=20
 )
@@ -192,8 +191,7 @@ process {
       while ($k.Length % 4) { $k += '=' }
       [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k)) | fj
   }
-}
-}
+} }
 
 
 function Is-Numeric ($x) {

@@ -27,9 +27,9 @@ function Parse-UrlQuery-FromClipboard {
 
 function View-ProcUtil {
   [CmdletBinding()] param (
-[Parameter(Mandatory=$true)]
-[ValidatePattern('^\w[-\w\s\.][-\w\s\.]+$')]
-[string]$ProcNamePrefix
+    [Parameter(Mandatory=$true)]
+    [ValidatePattern('^\w[-\w\s\.][-\w\s\.]+$')]
+    [string]$ProcNamePrefix
   )
   process {
     Get-WmiObject Win32_PerfRawData_PerfProc_Process -Filter "Name like '$ProcNamePrefix%'" | sort IDProcess `

@@ -321,6 +321,7 @@
 			"focusBorder": "#F08048",
 			"progressBar.background": "#F08048",
 			"tab.activeModifiedBorder": "#F08048",
+			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
 			"editor.foldBackground": "#421",
 			"editor.stackFrameHighlightBackground": "#421",
@@ -333,6 +334,8 @@
 			"activityBar.background": "#402040",
 			"activityBarBadge.background": "#806080",
 			"activityBarBadge.foreground": "#402040",
+			"badge.background": "#515",
+			"badge.foreground": "#b7b",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			//"editor.foldBackground": "#301830",
@@ -372,12 +375,13 @@
 	},
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
-	"outline.icons": false, // these icons are also used in breadcrumbs ("breadcrumbs.icons" is no-op)
+	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
 
 	"window.zoomLevel": 0.0,
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
+
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,

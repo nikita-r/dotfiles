@@ -421,7 +421,7 @@
 	/* Ctrl+Shift+f: Focus the Search Viewlet */
 	{ "command": "workbench.view.search.focus", "key": "ctrl+shift+f" },
 
-	/* Ctrl+Shift+c: Clear the Search Results; then focus the input */
+	/* Ctrl+Shift+c: Clear Results of a Search, and focus the input */
 	{ "command": "noop", "key": "ctrl+shift+c" },
 	{
 		"key": "ctrl+shift+c",

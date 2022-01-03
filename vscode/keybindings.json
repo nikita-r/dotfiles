@@ -16,14 +16,11 @@
 		"command": "cursorRedo",
 		"key": "ctrl+y"
 	},
-	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{
 		"key": "ctrl+shift+d",
 		"command": "editor.action.selectHighlights"
 	},
-	{ "command": "noop", "key": "ctrl+shift+i" },
-	{ "command": "noop", "key": "ctrl+shift+," },
-	{ "command": "noop", "key": "ctrl+shift+." },
+	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 
 	/* Sublime Text */
 	{
@@ -421,18 +418,24 @@
 		"when": "filesExplorerFocus"
 	},
 
-	/* Ctrl+Shift+f & Ctrl+Shift+c */
+	/* Ctrl+Shift+f: Focus the Search Viewlet */
+	{ "command": "workbench.view.search.focus", "key": "ctrl+shift+f" },
+
+	/* Ctrl+Shift+c: Clear the Search Results; then focus the input */
+	{ "command": "noop", "key": "ctrl+shift+c" },
 	{
-		"key": "ctrl+shift+f",
-		"command": "workbench.view.search.focus", // may focus the results list
-		/* instead of "workbench.action.findInFiles" which populates with the selected text */
+		"key": "ctrl+shift+c",
+		"command": "search.action.clearSearchResults",
+		"when": "activeViewlet == 'workbench.view.search'"
 	},
 	{
 		"key": "ctrl+shift+c",
-		"command": "search.action.clearSearchResults" // then focus the input
+		"command": "workbench.extensions.action.clearExtensionsSearchResults",
+		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
 
 	/* Ctrl+Shift+i: ensure Linux defaults */
+	{ "command": "noop", "key": "ctrl+shift+i" },
 	{
 		"key": "ctrl+shift+i",
 		"command": "editor.action.formatDocument",

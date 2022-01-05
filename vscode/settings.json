@@ -317,6 +317,10 @@
 
 		"[Default Dark+]": {
 
+			"editorCursor.foreground": "#c090c0",
+			"badge.background": "#515",
+			"badge.foreground": "#ccc",
+
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
 			"progressBar.background": "#F08048",
@@ -334,8 +338,6 @@
 			"activityBar.background": "#402040",
 			"activityBarBadge.background": "#806080",
 			"activityBarBadge.foreground": "#402040",
-			"badge.background": "#515",
-			"badge.foreground": "#b7b",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			//"editor.foldBackground": "#301830",

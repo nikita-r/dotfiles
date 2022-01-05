@@ -217,6 +217,16 @@
 	},
 	{
 		"key": "ctrl+]",
+		"command": "merge-conflict.next",
+		"when": "mergeConflictsCount > 0"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "merge-conflict.previous",
+		"when": "mergeConflictsCount > 0"
+	},
+	{
+		"key": "ctrl+]",
 		"command": "workbench.action.compareEditor.nextChange",
 		"when": "textCompareEditorVisible"
 	},
@@ -434,29 +444,6 @@
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
 
-	/* Ctrl+Shift+i: ensure Linux defaults */
-	{ "command": "noop", "key": "ctrl+shift+i" },
-	{
-		"key": "ctrl+shift+i",
-		"command": "editor.action.formatDocument",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "notebook.formatCell",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "notebook.format",
-		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
-	},
-
 	/* Shift+Alt+c */
 	{
 		"key": "shift+alt+c",
@@ -550,6 +537,29 @@
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+
+	/* Ctrl+Shift+i: ensure Linux defaults */
+	{ "command": "noop", "key": "ctrl+shift+i" },
+	{
+		"key": "ctrl+shift+i",
+		"command": "editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "editor.action.formatDocument.none",
+		"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "notebook.formatCell",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "notebook.format",
+		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
 	},
 
 	/* Ctrl+Shift+J */

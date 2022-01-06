@@ -228,12 +228,12 @@
 	{
 		"key": "ctrl+]",
 		"command": "workbench.action.compareEditor.nextChange",
-		"when": "textCompareEditorVisible"
+		"when": "textCompareEditorActive"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "workbench.action.compareEditor.previousChange",
-		"when": "textCompareEditorVisible"
+		"when": "textCompareEditorActive"
 	},
 	{
 		"key": "ctrl+]",
@@ -443,6 +443,16 @@
 		"command": "workbench.extensions.action.clearExtensionsSearchResults",
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "settings.action.clearSearchResults",
+		"when": "inSettingsEditor"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "keybindings.editor.clearSearchResults",
+		"when": "inKeybindings"
+	},
 
 	/* Shift+Alt+c */
 	{
@@ -537,6 +547,13 @@
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+
+	/* dbankier.vscode-quick-select */
+	{
+		"key": "ctrl+k ctrl+;",
+		"command": "extension.selectEitherQuote",
+		"when": "editorFocus"
 	},
 
 	/* Ctrl+Shift+i: ensure Linux defaults */

@@ -111,6 +111,8 @@
 	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.quickOpen.closeOnFocusLost": false,
 
+	/* . . . */
+
 	"breadcrumbs.symbolSortOrder": "name",
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
@@ -343,6 +345,7 @@
 			"breadcrumb.background": "#402040",
 			//"editor.foldBackground": "#301830",
 			"editorGutter.background": "#201020",
+			"menu.border": "#804080",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",

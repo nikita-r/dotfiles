@@ -186,6 +186,7 @@
 
 	"filesize.showGzip": false,
 	"hexeditor.maxFileSize": 99,
+	"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
 
 	"todo-tree.tree.scanAtStartup": false,

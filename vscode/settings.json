@@ -279,6 +279,7 @@
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
+	"html.format.endWithNewline": true,
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
@@ -321,7 +322,7 @@
 	"terminal.integrated.profiles.windows": {
 		"PowerShell": {
 			"source": "PowerShell",
-			"args": ["-NoLogo"]
+			"args": [ "-NoLogo" ]
 		},
 	},
 

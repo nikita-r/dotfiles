@@ -4,6 +4,8 @@
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.fold: Ctrl+Shift+[][]
+	$: references-view.showCallHierarchy: "shift+alt+h"
+	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.files.revealActiveFileInWindows: "ctrl+k r"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
@@ -49,15 +51,6 @@
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",
 		"when": "editorTextFocus && !editorReadonly"
-	},
-	/* "by": "subword*s" */
-	{
-		"key": "alt+left",
-		"command": "cursorWordPartLeft"
-	},
-	{
-		"key": "alt+right",
-		"command": "cursorWordPartRight"
 	},
 	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
@@ -142,6 +135,32 @@
 		"key": "ctrl+shift+down",
 		"command": "editor.action.insertCursorBelow",
 		"when": "editorTextFocus"
+	},
+
+	/* Alt+Arrow */
+	{ "command": "noop", "key": "alt+left" },
+	{ "command": "noop", "key": "alt+right" },
+	/* Sublime Text: "move", "by": "subword*s" */
+	{
+		"key": "alt+left",
+		"command": "cursorWordPartLeft",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+right",
+		"command": "cursorWordPartRight",
+		"when": "editorTextFocus"
+	},
+	/* Move Selected Text */
+	{
+		"key": "alt+left",
+		"command": "editor.action.moveCarretLeftAction",
+		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "alt+right",
+		"command": "editor.action.moveCarretRightAction",
+		"when": "editorTextFocus && editorHasSelection"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -339,11 +358,15 @@
 		"command": "workbench.action.navigateForward"
 	},
 
-	/* avoid chords that are similar to Ctrl+S */
+	/* Chords that are similar to Ctrl+S */
 	{ "command": "noop", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
+	{
+		"key": "ctrl+k s",
+		"command": "saveAll"
+	},
 
 	/* O chords */
 	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
@@ -469,11 +492,11 @@
 		"key": "shift+alt+c",
 		"command": "copyRelativeFilePath"
 	},
-	{
-		"key": "shift+alt+c",
-		"command": "search.action.copyPath",
-		"when": "fileMatchOrFolderMatchWithResourceFocus"
-	},
+	//{
+	//	"key": "shift+alt+c",
+	//	"command": "search.action.copyPath",
+	//	"when": "fileMatchOrFolderMatchWithResourceFocus"
+	//},
 
 	/* Alt for quickOpen */
 	{

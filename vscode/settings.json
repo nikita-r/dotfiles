@@ -186,6 +186,31 @@
 	"editWithShell.shell.windows": "PowerShell.exe",
 	"editWithShell.shellArgs.windows": [ "-NoProfile", "-Command" ],
 
+	"highlight-matching-tag.highlightFromContent": true,
+	"highlight-matching-tag.highlightSelfClosing": true,
+	"highlight-matching-tag.styles": {
+		"opening": {
+			"left": {
+				"custom": {
+					"borderWidth": "0 0 0 4px",
+					"borderStyle": "solid",
+					"borderColor": "#F08048",
+					"borderRadius": "8px",
+					"overviewRulerColor": "#c63"
+				}
+			},
+			"right": {
+				"custom": {
+					"borderWidth": "0 4px 0 0",
+					"borderStyle": "solid",
+					"borderColor": "#F08048",
+					"borderRadius": "8px",
+					"overviewRulerColor": "#c63"
+				}
+			}
+		}
+	},
+
 	"filesize.showGzip": false,
 	"hexeditor.maxFileSize": 99,
 	"quick-select.includeBackticks": false,

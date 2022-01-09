@@ -12,37 +12,26 @@
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	*/
 
+	{ "command": "noop", "key": "ctrl+shift+n" },
+	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{
 		"command": "cursorRedo",
 		"key": "ctrl+y"
 	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "editor.action.selectHighlights"
-	},
-	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 
-	/* Sublime Text */
+	/* Sublime Text defaults */
+	/* {"to": "brackets"} */
+	{ "command": "noop", "key": "ctrl+m" }, // byDef: Toggle Tab Key Moves Focus
+	{ "command": "noop", "key": "ctrl+shift+m" }, // byDef: View: Toggle Problems
 	{
 		"command": "editor.action.jumpToBracket",
-		"key": "ctrl+m"
+		"key": "ctrl+m",
+		"when": "editorTextFocus"
 	},
 	{
 		"command": "editor.action.selectToBracket",
 		"key": "ctrl+shift+m", // but "expand_selection" is "shift+alt+right"
-	},
-	/* ~Emmet */
-	{
-		"key": "ctrl+shift+a", // "expand_selection", "args": {"to": "tag"}
-		"command": "editor.emmet.action.balanceOut"
-	},
-	{
-		"key": "ctrl+shift+x",
-		"command": "editor.emmet.action.balanceIn"
-	},
-	{
-		"key": "alt+.", // "close_tag"
-		"command": "editor.emmet.action.splitJoinTag"
+		"when": "editorTextFocus"
 	},
 	/* "toggle_comment", "block" */
 	{
@@ -59,10 +48,9 @@
 	},
 
 	/* Q */
-	/* use the quickOpenView key to showHover; when inDebugMode, use this key to showHover instead of showDebugHover */
 	{
 		"key": "ctrl+q",
-		"command": "editor.action.showHover"
+		"command": "editor.action.showHover" // distinct from showDebugHover inDebugMode
 	},
 	/* jump to location of the search result */
 	{
@@ -138,7 +126,7 @@
 	/* Alt+Arrow */
 	{ "command": "noop", "key": "alt+left" },
 	{ "command": "noop", "key": "alt+right" },
-	/* Sublime Text: "move", "by": "subword*s" */
+	/* Sublime Text defaults: "move", "by": "subword*s" */
 	{
 		"key": "alt+left",
 		"command": "cursorWordPartLeft",
@@ -435,21 +423,48 @@
 
 	/* Alt+Letter */
 	{
+		"key": "alt+j",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
+	{
 		"key": "alt+a",
-		"command": "editor.action.inPlaceReplace.up"
+		"command": "editor.action.inPlaceReplace.up",
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "alt+x",
-		"command": "editor.action.inPlaceReplace.down"
+		"command": "editor.action.inPlaceReplace.down",
+		"when": "editorTextFocus"
+	},
+
+	/* Alt+d */
+	{
+		"key": "ctrl+alt+d",
+		"command": "editor.action.selectHighlights",
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "alt+d",
 		"command": "workbench.action.showEmmetCommands",
 		"when": "editorTextFocus"
 	},
+
+	/* Emmet */
 	{
-		"key": "alt+j",
-		"command": "workbench.action.toggleMaximizedPanel"
+		"key": "alt+.", // Sublime Text defaults: "close_tag"
+		"command": "editor.emmet.action.splitJoinTag",
+		"when": "editorTextFocus"
+	},
+	/* expand_selection about tag */
+	{
+		"key": "alt+shift+a",
+		"command": "editor.emmet.action.balanceOut",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+shift+x",
+		"command": "editor.emmet.action.balanceIn",
+		"when": "editorFocus"
 	},
 
 	/* Activity Bar */

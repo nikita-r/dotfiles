@@ -4,11 +4,9 @@
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.fold: Ctrl+Shift+[][]
-	$: references-view.showCallHierarchy: "shift+alt+h"
+	$: "shift+alt+h": nav Hierarchy
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
-	$: workbench.action.files.revealActiveFileInWindows: "ctrl+k r"
-	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
@@ -358,17 +356,48 @@
 		"command": "workbench.action.navigateForward"
 	},
 
-	/* Chords that are similar to Ctrl+S */
-	{ "command": "noop", "key": "ctrl+k s" },
+	/* Ctrl+k *s */
+	{ "command": "saveAll", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
-	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
+	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
+
+	/* Ctrl+k r */
+	{ "command": "revealInExplorer", "key": "ctrl+k r" },
+	/* Ctrl+k Ctrl+r */
+	{ "command": "noop", "key": "ctrl+k ctrl+r" },
 	{
-		"key": "ctrl+k s",
-		"command": "saveAll"
+		"key": "ctrl+k ctrl+r",
+		"command": "workbench.files.action.refreshFilesExplorer",
+		"when": "activeViewlet == 'workbench.view.explorer'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "search.action.refreshSearchResults",
+		"when": "activeViewlet == 'workbench.view.search'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "git.refresh",
+		"when": "activeViewlet == 'workbench.view.scm'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "workbench.extensions.action.refreshExtension",
+		"when": "activeViewlet == 'workbench.view.extensions'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "bookmarks.refresh",
+		"when": "activeViewlet == 'workbench.view.extension.bookmarks'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "todo-tree.refresh",
+		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
 	},
 
-	/* O chords */
+	/* Ctrl+k *o */
 	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
 	{ "key": "ctrl+k ctrl+o", "command": "editor.foldAll" },
 
@@ -466,16 +495,16 @@
 		"command": "workbench.extensions.action.clearExtensionsSearchResults",
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
-	{
-		"key": "ctrl+shift+c",
-		"command": "settings.action.clearSearchResults",
-		"when": "inSettingsEditor"
-	},
-	{
-		"key": "ctrl+shift+c",
-		"command": "keybindings.editor.clearSearchResults",
-		"when": "inKeybindings"
-	},
+	//{
+	//	"key": "ctrl+shift+c",
+	//	"command": "settings.action.clearSearchResults",
+	//	"when": "inSettingsEditor"
+	//},
+	//{
+	//	"key": "ctrl+shift+c",
+	//	"command": "keybindings.editor.clearSearchResults",
+	//	"when": "inKeybindings"
+	//},
 
 	/* Shift+Alt+c */
 	{
@@ -577,6 +606,13 @@
 		"key": "ctrl+k ctrl+;",
 		"command": "extension.selectEitherQuote",
 		"when": "editorFocus"
+	},
+
+	/* alefragnani.Bookmarks */
+	{
+		"key": "ctrl+alt+o",
+		"command": "bookmarks.toggleLabeled",
+		"when": "editorTextFocus"
 	},
 
 	/* Ctrl+Shift+i: ensure Linux defaults */

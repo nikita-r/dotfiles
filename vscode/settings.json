@@ -188,6 +188,7 @@
 
 	"highlight-matching-tag.highlightFromContent": true,
 	"highlight-matching-tag.highlightSelfClosing": true,
+	"highlight-matching-tag.noDefaultEmptyElements": true,
 	"highlight-matching-tag.styles": {
 		"opening": {
 			"left": {
@@ -211,6 +212,7 @@
 		}
 	},
 
+	"bookmarks.label.suggestion": "suggestWhenSelected",
 	"filesize.showGzip": false,
 	"hexeditor.maxFileSize": 99,
 	"quick-select.includeBackticks": false,
@@ -417,6 +419,8 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
+
+	"editor.wrappingIndent": "none",
 
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

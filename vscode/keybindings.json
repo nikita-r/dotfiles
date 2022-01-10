@@ -4,7 +4,6 @@
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.fold: Ctrl+Shift+[][]
-	$: "shift+alt+h": nav Hierarchy
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
@@ -105,6 +104,10 @@
 	{
 		"key": "ctrl+k ctrl+j",
 		"command": "editor.unfoldAll"
+	},
+	{
+		"key": "ctrl+k f2",
+		"command": "togglePeekWidgetFocus"
 	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
@@ -376,6 +379,11 @@
 	},
 	{
 		"key": "ctrl+k ctrl+r",
+		"command": "references-view.refresh",
+		"when": "activeViewlet == 'workbench.view.extension.references-view'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
 		"command": "bookmarks.refresh",
 		"when": "activeViewlet == 'workbench.view.extension.bookmarks'"
 	},
@@ -420,6 +428,23 @@
 	{ "command": "", "key": "shift+alt+t" },
 	{ "command": "", "key": "alt+h" }, // Help
 	{ "command": "", "key": "shift+alt+h" },
+
+	/* Peek Call Hierarchy */
+	{
+		"key": "ctrl+alt+h",
+		"command": "editor.showCallHierarchy",
+		"when": "editorHasCallHierarchyProvider && editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+h",
+		"command": "editor.showIncomingCalls",
+		"when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
+	},
+	{
+		"key": "ctrl+alt+h",
+		"command": "editor.showOutgoingCalls",
+		"when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
+	},
 
 	/* Alt+Letter */
 	{

@@ -214,6 +214,7 @@
 
 	"bookmarks.label.suggestion": "suggestWhenSelected",
 	"filesize.showGzip": false,
+	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"hexeditor.maxFileSize": 99,
 	"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,

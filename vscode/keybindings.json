@@ -13,6 +13,7 @@
 
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
+	{ "command": "noop", "key": "ctrl+shift+." },
 	{
 		"command": "cursorRedo",
 		"key": "ctrl+y"
@@ -57,10 +58,10 @@
 		"command": "editor.action.revealDefinition",
 		"when": "inSearchEditor"
 	},
-	/* close tabs that been split */
+	/* Go to Definition */
 	{
 		"key": "ctrl+shift+q",
-		"command": "workbench.action.closeEditorsInOtherGroups"
+		"command": "editor.action.revealDefinition"
 	},
 	/* Replace Alt+R */
 	{
@@ -85,10 +86,6 @@
 	},
 
 	/* default bindings, but with the "when" removed */
-	{
-		"key": "ctrl+shift+.",
-		"command": "breadcrumbs.focusAndSelect"
-	},
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
@@ -180,7 +177,14 @@
 		"when": "notebookEditorFocused && !inputFocus"
 	},
 
-	/* Go to Problem */
+	/* Fix Problems */
+	{
+		"key": "ctrl+shift+.",
+		"command": "eslint.executeAutofix",
+		"when": "editorTextFocus"
+	},
+
+	/* Jump Problems */
 	/* Ctrl+, */
 	{
 		"command": "editor.action.marker.next",
@@ -216,12 +220,10 @@
 	{
 		"key": "ctrl+]",
 		"command": "workbench.action.editor.nextChange",
-		"when": "editorTextFocus"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "workbench.action.editor.previousChange",
-		"when": "editorTextFocus"
 	},
 	{
 		"key": "ctrl+]",
@@ -653,6 +655,19 @@
 		"key": "ctrl+alt+o",
 		"command": "bookmarks.toggleLabeled",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "bookmarks.jumpToPrevious",
+	},
+	{
+		"key": "ctrl+alt+k",
+		"command": "bookmarks.toggle",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+l",
+		"command": "bookmarks.jumpToNext",
 	},
 
 	/* Ctrl+Shift+i: ensure Linux defaults */

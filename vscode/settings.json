@@ -66,7 +66,7 @@
 	"editor.suggestOnTriggerCharacters": false,
 	//"editor.parameterHints.enabled": false,
 	"editor.acceptSuggestionOnCommitCharacter": false,
-	"editor.acceptSuggestionOnEnter": "off",
+	//"editor.acceptSuggestionOnEnter": "off",
 
 	/* . . . */
 
@@ -80,10 +80,12 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
-	//"editor.bracketPairColorization.enabled": true,
-	//"editor.guides.bracketPairs": true,
-	//"editor.guides.highlightActiveIndentation": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	"editor.guides.bracketPairsHorizontal": false,
+	"editor.guides.highlightActiveBracketPair": false,
 	"editor.guides.indentation": false,
+	"editor.guides.highlightActiveIndentation": false,
 	"editor.renderIndentGuides": false, // pre-v1.61
 	//"editor.rulers": [ 80, 120 ],
 	"workbench.tree.indent": 12,
@@ -193,19 +195,17 @@
 		"opening": {
 			"left": {
 				"custom": {
-					"borderWidth": "0 0 0 4px",
-					"borderStyle": "solid",
-					"borderColor": "#F08048",
-					"borderRadius": "8px",
+					"borderWidth": "1px",
+					"borderStyle": "dotted",
+					"borderColor": "#c86",
 					"overviewRulerColor": "#c63"
 				}
 			},
 			"right": {
 				"custom": {
-					"borderWidth": "0 4px 0 0",
-					"borderStyle": "solid",
-					"borderColor": "#F08048",
-					"borderRadius": "8px",
+					"borderWidth": "1px",
+					"borderStyle": "dotted",
+					"borderColor": "#c86",
 					"overviewRulerColor": "#c63"
 				}
 			}
@@ -349,7 +349,7 @@
 
 		"[Default Dark+]": {
 
-			"editorCursor.foreground": "#c090c0",
+			"editorCursor.foreground": "#3090c0",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 

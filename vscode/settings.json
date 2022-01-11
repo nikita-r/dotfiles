@@ -170,6 +170,8 @@
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
+	"git-graph.repository.onLoad.showCheckedOutBranch": true,
+	"git-graph.repository.includeCommitsMentionedByReflogs": true,
 
 	"gitlens.advanced.messages": {
 		"suppressGitMissingWarning": true,
@@ -346,10 +348,14 @@
 		/* diff */
 		"diffEditor.insertedTextBackground": "#0f02",
 		"diffEditor.removedTextBackground": "#f002",
+		"editorOverviewRuler.addedForeground": "#0f0a",
+		"editorOverviewRuler.deletedForeground": "#f00a",
+		"editorOverviewRuler.modifiedForeground": "#0afa",
 
 		"[Default Dark+]": {
 
 			"editorCursor.foreground": "#3090c0",
+			"editorBracketMatch.border": "#689",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 

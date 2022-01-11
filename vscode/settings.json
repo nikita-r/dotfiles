@@ -360,7 +360,9 @@
 		"[Default Dark+]": {
 
 			"editorCursor.foreground": "#3090c0",
+			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689",
+			"editorBracketMatch.background": "#0000",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 

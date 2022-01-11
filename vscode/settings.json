@@ -80,10 +80,10 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
-	"editor.bracketPairColorization.enabled": true,
-	"editor.guides.bracketPairs": true,
-	"editor.guides.bracketPairsHorizontal": false,
-	"editor.guides.highlightActiveBracketPair": false,
+	//"editor.bracketPairColorization.enabled": true,
+	//"editor.guides.bracketPairs": true,
+	//"editor.guides.bracketPairsHorizontal": false,
+	//"editor.guides.highlightActiveBracketPair": false,
 	"editor.guides.indentation": false,
 	"editor.guides.highlightActiveIndentation": false,
 	"editor.renderIndentGuides": false, // pre-v1.61
@@ -241,7 +241,7 @@
 	"todo-tree.tree.showBadges": false,
 	"todo-tree.highlights.defaultHighlight": {
 		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-		"iconColor": "terminal.ansiBrightMagenta",
+		"iconColor": "terminal.ansiBrightMagenta"
 	},
 	"todo-tree.highlights.customHighlight": {
 		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiBrightRed" },
@@ -351,6 +351,11 @@
 		"editorOverviewRuler.addedForeground": "#0f0a",
 		"editorOverviewRuler.deletedForeground": "#f00a",
 		"editorOverviewRuler.modifiedForeground": "#0afa",
+		"[* Dark*]": {
+			"editorGutter.addedBackground": "#408020",
+			"editorGutter.deletedBackground": "#fff", //"#802020",
+			"editorGutter.modifiedBackground": "#206080",
+		},
 
 		"[Default Dark+]": {
 

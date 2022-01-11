@@ -14,10 +14,8 @@
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "command": "noop", "key": "ctrl+shift+." },
-	{
-		"command": "cursorRedo",
-		"key": "ctrl+y"
-	},
+	{ "key": "ctrl+y", "command": "cursorRedo" },
+	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
 
 	/* Sublime Text defaults */
 	/* {"to": "brackets"} */

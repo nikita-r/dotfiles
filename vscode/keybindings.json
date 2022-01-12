@@ -254,6 +254,26 @@
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
 	},
 
+	/* Ctrl Page Up/Down */
+	{
+		"key": "ctrl+PageUp",
+		"command": "workbench.action.previousEditor"
+	},
+	{
+		"key": "ctrl+PageDown",
+		"command": "workbench.action.nextEditor"
+	},
+	/* ?panelFocus */
+	//{
+	//	"key": "ctrl+pageup",
+	//	"command": "workbench.action.previousPanelView",
+	//	"when": "panelFocus"
+	//},
+	//{
+	//	"key": "ctrl+pagedown",
+	//	"command": "workbench.action.nextPanelView",
+	//	"when": "panelFocus"
+	//},
 	/* moveEditor within Group */
 	{
 		"key": "ctrl+alt+PageUp",

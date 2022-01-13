@@ -261,6 +261,8 @@
 		}
 	},
 
+	/* Language Extensions */
+
 	"omnisharp.autoStart": false, // #> OmniSharp: Restart
 	"omnisharp.enableRoslynAnalyzers": true,
 
@@ -277,7 +279,7 @@
 
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
-	"python.autoUpdateLanguageServer": false,
+	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
 	"python.linting.enabled": false,
 
@@ -388,7 +390,7 @@
 			//"editor.foldBackground": "#301830",
 			"editorGutter.background": "#201020",
 			"menu.border": "#804080",
-			"panel.border": "#c090c0",
+			"panel.border": "#806080",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",
@@ -417,7 +419,14 @@
 			//"minimap.errorHighlight": "#f00",
 			"terminal.selectionBackground": "#fff2",
 
-			/* ext */
+			/* Jupyter */
+			"notebook.cellBorderColor": "#806080",
+			"notebook.cellEditorBackground": "#1e1e1e",
+			"notebook.cellStatusBarItemHoverBackground": "#0000",
+			"notebook.cellToolbarSeparator": "#806080",
+			//"notebook.focusedCellBorder": "#806080",
+
+			/* Extensions */
 			"gitlens.gutterBackgroundColor": "#2222",
 			"gitlens.trailingLineForegroundColor": "#6666",
 		},

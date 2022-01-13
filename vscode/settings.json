@@ -268,6 +268,7 @@
 
 	"[powershell]": {
 		"editor.codeLens": false,
+		"editor.snippetSuggestions": "none",
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
@@ -361,7 +362,7 @@
 
 		"[Default Dark+]": {
 
-			"editorCursor.foreground": "#3090c0",
+			"editorCursor.foreground": "#287ACC",
 			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
@@ -455,9 +456,8 @@
 
 	"emmet.includeLanguages": {
 	},
-	"emmet.syntaxProfiles": {
-		"html": { "self_closing_tag": "xhtml" },
-	},
+	"emmet.preferences": { "output.inlineBreak": 3 },
+	"emmet.syntaxProfiles": { "html": { "self_closing_tag": "xhtml" } },
 
 	"files.associations": {
 		"*.qss": "css",

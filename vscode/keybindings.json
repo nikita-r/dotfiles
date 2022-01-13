@@ -175,14 +175,27 @@
 		"when": "notebookEditorFocused && !inputFocus"
 	},
 
-	/* Fix Problems */
+	/* Ctrl+Shift+. */
+	//{
+	//	"key": "ctrl+shift+.",
+	//	"command": "eslint.executeAutofix",
+	//	"when": "editorTextFocus"
+	//},
 	{
 		"key": "ctrl+shift+.",
-		"command": "eslint.executeAutofix",
+		"command": "editor.action.insertSnippet",
 		"when": "editorTextFocus"
 	},
 
 	/* Jump Problems */
+	{
+		"key": "alt+f8",
+		"command": "editor.action.marker.nextInFiles"
+	},
+	{
+		"key": "shift+alt+f8",
+		"command": "editor.action.marker.prevInFiles"
+	},
 	/* Ctrl+, */
 	{
 		"command": "editor.action.marker.next",
@@ -192,7 +205,8 @@
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
 	},
-	/* Reserve F8 for PowerShell.RunSelection */
+
+	/* Retain F8 for runSelection */
 	{
 		"key": "f8",
 		"command": "-editor.action.marker.nextInFiles"
@@ -202,15 +216,17 @@
 		"command": "-editor.action.marker.prevInFiles"
 	},
 	{
-		"key": "alt+f8",
-		"command": "editor.action.marker.nextInFiles"
+		"key": "f8",
+		"command": "workbench.action.terminal.runSelectedText",
+		"when": "editorTextFocus"
 	},
-	{
-		"key": "shift+alt+f8",
-		"command": "editor.action.marker.prevInFiles"
-	},
+	//{
+	//	"key": "f8",
+	//	"command": "PowerShell.RunSelection",
+	//	"when": "editorTextFocus && editorLangId == 'powershell'"
+	//},
 
-	/* Ctrl+[][]: jump to next/prev; remove any non-Debug use of F5 */
+	/* Ctrl+[][]: jump to next/prev; block non-Debug usage of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
 	{ "command": "noop", "key": "ctrl+[" },
 	{ "command": "noop", "key": "alt+f5" },
@@ -242,6 +258,16 @@
 		"key": "ctrl+[",
 		"command": "workbench.action.compareEditor.previousChange",
 		"when": "textCompareEditorActive"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "references-view.next",
+		"when": "reference-list.hasResult && activeViewlet == 'workbench.view.extension.references-view'"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "references-view.prev",
+		"when": "reference-list.hasResult && activeViewlet == 'workbench.view.extension.references-view'"
 	},
 	{
 		"key": "ctrl+]",
@@ -555,16 +581,16 @@
 		"command": "workbench.extensions.action.clearExtensionsSearchResults",
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
-	//{
-	//	"key": "ctrl+shift+c",
-	//	"command": "settings.action.clearSearchResults",
-	//	"when": "inSettingsEditor"
-	//},
-	//{
-	//	"key": "ctrl+shift+c",
-	//	"command": "keybindings.editor.clearSearchResults",
-	//	"when": "inKeybindings"
-	//},
+	{
+		"key": "ctrl+shift+c",
+		"command": "testing.clearTestResults",
+		"when": "activeViewlet == 'workbench.view.extension.test'"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "references-view.clear",
+		"when": "activeViewlet == 'workbench.view.extension.references-view'"
+	},
 
 	/* Shift+Alt+c */
 	{
@@ -654,7 +680,7 @@
 		"command": "workbench.action.terminal.scrollDown",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	/* "ctrl+`": do not toggleTerminal if Terminal is already focussed */
+	/* "ctrl+`": do not toggleTerminal if Terminal is in focus */
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",

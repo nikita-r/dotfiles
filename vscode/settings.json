@@ -241,10 +241,10 @@
 	"todo-tree.tree.showBadges": false,
 	"todo-tree.highlights.defaultHighlight": {
 		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-		"iconColor": "terminal.ansiBrightMagenta"
+		"iconColor": "terminal.ansiMagenta"
 	},
 	"todo-tree.highlights.customHighlight": {
-		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiBrightRed" },
+		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiRed" },
 		"FIXME": { "icon": "$(tools)" },
 		"HACK": { "icon": "$(flame)" },
 		"MAYBE": {
@@ -257,7 +257,7 @@
 		},
 		"XXX": {
 			"icon": "pulse", // https://primer.style/octicons/
-			"iconColor": "red"
+			"iconColor": "FireBrick"
 		}
 	},
 
@@ -368,6 +368,10 @@
 			"editorBracketMatch.background": "#0000",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
+
+			"editor.snippetFinalTabstopHighlightBorder": "#C00000",
+			"editor.snippetTabstopHighlightBackground": "#0000",
+			"editor.snippetTabstopHighlightBorder": "#C00000",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

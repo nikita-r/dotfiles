@@ -11,9 +11,10 @@
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	*/
 
+	{ "command": "noop", "key": "ctrl+shift+i" },
+	{ "command": "noop", "key": "ctrl+shift+." },
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
-	{ "command": "noop", "key": "ctrl+shift+." },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
 
@@ -173,18 +174,6 @@
 		"key": "shift+alt+down",
 		"command": "notebook.cell.copyDown",
 		"when": "notebookEditorFocused && !inputFocus"
-	},
-
-	/* Ctrl+Shift+. */
-	//{
-	//	"key": "ctrl+shift+.",
-	//	"command": "eslint.executeAutofix",
-	//	"when": "editorTextFocus"
-	//},
-	{
-		"key": "ctrl+shift+.",
-		"command": "editor.action.insertSnippet",
-		"when": "editorTextFocus"
 	},
 
 	/* Jump Problems */
@@ -714,27 +703,16 @@
 		"command": "bookmarks.jumpToNext",
 	},
 
-	/* Ctrl+Shift+i: ensure Linux defaults */
-	{ "command": "noop", "key": "ctrl+shift+i" },
+	/* Ctrl*I */
 	{
-		"key": "ctrl+shift+i",
-		"command": "editor.action.formatDocument",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+		"key": "ctrl+k i",
+		"command": "editor.action.format",
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "ctrl+shift+i",
-		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "notebook.formatCell",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "notebook.format",
-		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus"
 	},
 
 	/* Ctrl+Shift+J */
@@ -754,6 +732,7 @@
 		},
 		"when": "editorFocus && !inSearchEditor"
 	},
+	/* Switch to JSON */
 	{
 		"key": "ctrl+shift+j",
 		"command": "workbench.action.openGlobalKeybindingsFile",

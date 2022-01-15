@@ -710,9 +710,21 @@
 		"when": "editorTextFocus"
 	},
 	{
+		"key": "ctrl+k i",
+		"command": "editor.action.formatDocument.none",
+		"when": "editorTextFocus && !editorHasDocumentFormattingProvider"
+	},
+	{
 		"key": "ctrl+shift+i",
-		"command": "editor.action.insertSnippet",
+		"command": "editor.action.triggerParameterHints",
 		"when": "editorTextFocus"
+	},
+
+	/* Ctrl+Shift+. */
+	{
+		"key": "ctrl+shift+.",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorHasSelection"
 	},
 
 	/* Ctrl+Shift+J */

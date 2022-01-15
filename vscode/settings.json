@@ -46,27 +46,28 @@
 
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
+	"editor.lightbulb.enabled": false,
+
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 333,
-	"editor.lightbulb.enabled": false,
+	"editor.parameterHints.enabled": false,
+	"editor.suggestOnTriggerCharacters": false,
+
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	//"editor.acceptSuggestionOnEnter": "off",
+
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.showSuggestionsAsSnippets": true,
+
+	"editor.snippetSuggestions": "top",
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "onlySnippets", // or "on"
 
 	"editor.suggest.filterGraceful": false,
 	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showStatusBar": true,
-
-	"editor.suggestSelection": "first",
-	"editor.snippetSuggestions": "top",
-	"editor.tabCompletion": "onlySnippets", // or "on"
-
-	"emmet.showSuggestionsAsSnippets": true,
-	"emmet.triggerExpansionOnTab": true,
-
-	"editor.suggestOnTriggerCharacters": false,
-	//"editor.parameterHints.enabled": false,
-	"editor.acceptSuggestionOnCommitCharacter": false,
-	//"editor.acceptSuggestionOnEnter": "off",
 
 	/* . . . */
 
@@ -218,7 +219,7 @@
 	"filesize.showGzip": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"hexeditor.maxFileSize": 99,
-	"quick-select.includeBackticks": false,
+	//"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
 
 	"todo-tree.tree.scanAtStartup": false,
@@ -355,9 +356,17 @@
 		"editorOverviewRuler.deletedForeground": "#f00a",
 		"editorOverviewRuler.modifiedForeground": "#0afa",
 		"[* Dark*]": {
+			"editorError.foreground": "#fff",
 			"editorGutter.addedBackground": "#408020",
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080",
+			"editorInfo.foreground": "#39f",
+			"editorWarning.foreground": "#fd3",
+
+			/* tabstops */
+			"editor.snippetFinalTabstopHighlightBorder": "#C00000",
+			"editor.snippetTabstopHighlightBackground": "#0000",
+			"editor.snippetTabstopHighlightBorder": "#C00000",
 		},
 
 		"[Default Dark+]": {
@@ -366,12 +375,9 @@
 			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
+
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
-
-			"editor.snippetFinalTabstopHighlightBorder": "#C00000",
-			"editor.snippetTabstopHighlightBackground": "#0000",
-			"editor.snippetTabstopHighlightBorder": "#C00000",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -429,7 +435,6 @@
 			"notebook.cellEditorBackground": "#1e1e1e",
 			"notebook.cellStatusBarItemHoverBackground": "#0000",
 			"notebook.cellToolbarSeparator": "#806080",
-			//"notebook.focusedCellBorder": "#806080",
 
 			/* Extensions */
 			"gitlens.gutterBackgroundColor": "#2222",

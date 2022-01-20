@@ -54,15 +54,14 @@
 	"editor.suggestOnTriggerCharacters": false,
 
 	"editor.acceptSuggestionOnCommitCharacter": false,
-	//"editor.acceptSuggestionOnEnter": "off",
-
-	"emmet.triggerExpansionOnTab": true,
-	"emmet.showSuggestionsAsSnippets": true,
-
-	"editor.snippetSuggestions": "top",
-	"editor.suggestSelection": "first",
+	"editor.acceptSuggestionOnEnter": "off",
 	"editor.tabCompletion": "onlySnippets", // or "on"
+	"emmet.triggerExpansionOnTab": true,
 
+	"emmet.showSuggestionsAsSnippets": false,
+	"editor.snippetSuggestions": "none", // or "top"
+
+	"editor.suggestSelection": "first",
 	"editor.suggest.filterGraceful": false,
 	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
@@ -198,16 +197,16 @@
 		"opening": {
 			"left": {
 				"custom": {
-					"borderWidth": "1px",
-					"borderStyle": "dotted",
+					"borderWidth": "2px",
+					"borderStyle": "dashed",
 					"borderColor": "#c86",
 					"overviewRulerColor": "#c63"
 				}
 			},
 			"right": {
 				"custom": {
-					"borderWidth": "1px",
-					"borderStyle": "dotted",
+					"borderWidth": "2px",
+					"borderStyle": "dashed",
 					"borderColor": "#c86",
 					"overviewRulerColor": "#c63"
 				}
@@ -269,7 +268,6 @@
 
 	"[powershell]": {
 		"editor.codeLens": false,
-		"editor.snippetSuggestions": "none",
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
@@ -278,6 +276,11 @@
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
+
+	"java.autobuild.enabled": false,
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.project.importHint": false,
+	"java.project.importOnFirstTimeStartup": "interactive",
 
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
@@ -349,7 +352,7 @@
 
 	"workbench.colorCustomizations": {
 
-		/* diff */
+		/* diff+markers */
 		"diffEditor.insertedTextBackground": "#0f02",
 		"diffEditor.removedTextBackground": "#f002",
 		"editorOverviewRuler.addedForeground": "#0f0a",
@@ -371,13 +374,13 @@
 
 		"[Default Dark+]": {
 
+			"badge.background": "#515",
+			"badge.foreground": "#ccc",
+
 			"editorCursor.foreground": "#287ACC",
 			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
-
-			"badge.background": "#515",
-			"badge.foreground": "#ccc",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

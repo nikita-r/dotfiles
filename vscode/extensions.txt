@@ -21,6 +21,7 @@ ms-vscode.hexeditor
 #ms-vscode.powershell
 #ms-vscode-remote.vscode-remote-extensionpack
 quicktype.quicktype
+#redhat.java
 ryu1kn.edit-with-shell
 samuelcolvin.jinjahtml
 vincaslt.highlight-matching-tag

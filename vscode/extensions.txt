@@ -1,6 +1,7 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
 datasert.vscode-texty
+DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
 #dendron.dendron
@@ -9,6 +10,7 @@ dbankier.vscode-quick-select
 GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hediet.vscode-drawio
+helixquar.randomeverything
 JannisX11.batch-rename-extension
 JohannesRudolph.file-ext-switcher
 KevinRose.vsc-python-indent
@@ -24,4 +26,5 @@ quicktype.quicktype
 #redhat.java
 ryu1kn.edit-with-shell
 samuelcolvin.jinjahtml
+streetsidesoftware.code-spell-checker
 vincaslt.highlight-matching-tag

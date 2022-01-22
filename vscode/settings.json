@@ -215,6 +215,8 @@
 	},
 
 	"bookmarks.label.suggestion": "suggestWhenSelected",
+	"bookmarks.sideBar.expanded": true,
+	"cSpell.showStatus": false,
 	"filesize.showGzip": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"hexeditor.maxFileSize": 99,
@@ -277,10 +279,10 @@
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
 
-	"java.autobuild.enabled": false,
-	"java.configuration.checkProjectSettingsExclusions": false,
-	"java.project.importHint": false,
 	"java.project.importOnFirstTimeStartup": "interactive",
+	"java.project.importHint": false,
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.autobuild.enabled": false,
 
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
@@ -366,6 +368,12 @@
 			"editorInfo.foreground": "#39f",
 			"editorWarning.foreground": "#fd3",
 
+			/* . . . */
+			"editorCursor.foreground": "#39f",
+			"editorCursor.background": "#fff",
+			"editorBracketMatch.border": "#689",
+			"editorBracketMatch.background": "#0000",
+
 			/* tabstops */
 			"editor.snippetFinalTabstopHighlightBorder": "#C00000",
 			"editor.snippetTabstopHighlightBackground": "#0000",
@@ -376,11 +384,6 @@
 
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
-
-			"editorCursor.foreground": "#287ACC",
-			"editorCursor.background": "#fff",
-			"editorBracketMatch.border": "#689",
-			"editorBracketMatch.background": "#0000",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

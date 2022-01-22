@@ -1,5 +1,6 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
+darkriszty.markdown-table-prettify
 datasert.vscode-texty
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint

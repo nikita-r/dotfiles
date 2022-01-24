@@ -14,7 +14,6 @@ hediet.vscode-drawio
 helixquar.randomeverything
 JannisX11.batch-rename-extension
 JohannesRudolph.file-ext-switcher
-KevinRose.vsc-python-indent
 mhutchie.git-graph
 mkxml.vscode-filesize
 #ms-dotnettools.csharp

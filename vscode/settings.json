@@ -18,6 +18,7 @@
 	"workbench.enableExperiments": false,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
+	"editor.wrappingIndent": "none",
 
 	"explorer.autoReveal": false,
 	"explorer.incrementalNaming": "smart",
@@ -216,9 +217,11 @@
 
 	"bookmarks.label.suggestion": "suggestWhenSelected",
 	"bookmarks.sideBar.expanded": true,
+	"cSpell.language": "en,en-GB",
+	"cSpell.numSuggestions": 3,
 	"cSpell.showStatus": false,
-	"filesize.showGzip": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
+	"filesize.showGzip": false,
 	"hexeditor.maxFileSize": 99,
 	//"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
@@ -361,11 +364,14 @@
 		"editorOverviewRuler.deletedForeground": "#f00a",
 		"editorOverviewRuler.modifiedForeground": "#0afa",
 		"[* Dark*]": {
+			"bookmarks.overviewRuler": "#39f6",
 			"editorError.foreground": "#fff",
 			"editorGutter.addedBackground": "#408020",
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080",
 			"editorInfo.foreground": "#39f",
+			"editorOverviewRuler.infoForeground": "#39f9",
+			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorWarning.foreground": "#fd3",
 
 			/* . . . */
@@ -421,6 +427,7 @@
 			"scrollbarSlider.background": "#8886",
 			"scrollbarSlider.hoverBackground": "#aaa6",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
+			"editorOverviewRuler.unicodeForeground": "#000",
 
 			/* codes highlight */
 			"editor.selectionBackground": "#135",
@@ -459,8 +466,6 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
-
-	"editor.wrappingIndent": "none",
 
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

@@ -136,17 +136,6 @@
 		"command": "cursorWordPartRight",
 		"when": "editorTextFocus"
 	},
-	/* Move Selected Text */
-	{
-		"key": "alt+left",
-		"command": "editor.action.moveCarretLeftAction",
-		"when": "editorTextFocus && editorHasSelection"
-	},
-	{
-		"key": "alt+right",
-		"command": "editor.action.moveCarretRightAction",
-		"when": "editorTextFocus && editorHasSelection"
-	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },

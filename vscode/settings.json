@@ -202,16 +202,16 @@
 				"custom": {
 					"borderWidth": "2px",
 					"borderStyle": "dashed",
-					"borderColor": "#c86",
-					"overviewRulerColor": "#c63"
+					"borderColor": "#379",
+					"overviewRulerColor": "#356"
 				}
 			},
 			"right": {
 				"custom": {
 					"borderWidth": "2px",
 					"borderStyle": "dashed",
-					"borderColor": "#c86",
-					"overviewRulerColor": "#c63"
+					"borderColor": "#379",
+					"overviewRulerColor": "#356"
 				}
 			}
 		}
@@ -248,7 +248,7 @@
 	"todo-tree.tree.showBadges": false,
 	"todo-tree.highlights.defaultHighlight": {
 		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-		"iconColor": "terminal.ansiMagenta"
+		"iconColor": "terminal.ansiMagenta",
 	},
 	"todo-tree.highlights.customHighlight": {
 		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiRed" },
@@ -393,10 +393,10 @@
 			"editorBracketMatch.border": "#689", // 200°
 			"editorBracketMatch.background": "#0000",
 
-			/* tabstops */
-			"editor.snippetFinalTabstopHighlightBorder": "#C00000",
+			/* [|] */
+			"editor.snippetFinalTabstopHighlightBorder": "#fff",
 			"editor.snippetTabstopHighlightBackground": "#0000",
-			"editor.snippetTabstopHighlightBorder": "#C00000",
+			"editor.snippetTabstopHighlightBorder": "#fff",
 		},
 
 		"[Default Dark+]": {

@@ -1,7 +1,6 @@
 alefragnani.Bookmarks
 andyyaldoo.vscode-json
 darkriszty.markdown-table-prettify
-datasert.vscode-texty
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
@@ -12,7 +11,6 @@ GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hediet.vscode-drawio
 helixquar.randomeverything
-JannisX11.batch-rename-extension
 JohannesRudolph.file-ext-switcher
 mhutchie.git-graph
 mkxml.vscode-filesize

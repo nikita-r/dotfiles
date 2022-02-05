@@ -473,7 +473,8 @@
 	/* Alt+Letter */
 	{
 		"key": "alt+j",
-		"command": "workbench.action.toggleMaximizedPanel"
+		"command": "editor.action.joinLines",
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "alt+a",
@@ -665,6 +666,24 @@
 		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
+	/* View: Toggle Sizes */
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		//"when": "panelFocus"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleEditorWidths",
+		"when": "editorFocus && multipleEditorGroups"
+	},
+
+	/* View: Toggle Side Panel */
+	{
+		"key": "ctrl+;",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+
 	/* dbankier.vscode-quick-select */
 	{
 		"key": "ctrl+k ctrl+;",
@@ -717,7 +736,7 @@
 	},
 
 	/* Ctrl+Shift+J */
-	/* file-ext-switcher:Angular */
+	/* file-ext-switcher */
 	{
 		"key": "ctrl+shift+j",
 		"command": "fileextswitch",
@@ -750,9 +769,9 @@
 		"when": "inSettingsEditor"
 	},
 
-	/* Resolving ctrl+shift+[KeyV] */
+	/* Markdown Preview */
 	{
-		"key": "ctrl+shift+v",
+		"key": "ctrl+shift+j",
 		"command": "markdown.showSource",
 		"when": "markdownPreviewFocus"
 	},
@@ -760,6 +779,11 @@
 		"key": "ctrl+shift+v",
 		"command": "markdown.showPreview",
 		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "markdown.preview.toggleLock",
+		"when": "markdownPreviewFocus"
 	},
 
 	/* v1.57 release removed this kb */

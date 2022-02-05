@@ -87,7 +87,7 @@
 	trustExitCode = true
 
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 
 [color]
 	branch = false
@@ -131,7 +131,7 @@
 	renames = copies
 	mnemonicPrefix = true
 	noPrefix = true
-	algorithm = patience
+	algorithm = histogram
 
 [user]
 	useConfigOnly = true

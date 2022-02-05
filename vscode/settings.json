@@ -21,6 +21,8 @@
 	"editor.wrappingIndent": "none",
 
 	"explorer.autoReveal": false,
+	"explorer.confirmUndo": "verbose",
+	"explorer.enableUndo": false,
 	"explorer.incrementalNaming": "smart",
 	//"explorer.sortOrder": "modified",
 	//"explorer.sortOrderLexicographicOptions": "unicode",
@@ -374,7 +376,18 @@
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorWarning.foreground": "#fd3",
 
-			/* . . . */
+			/* |~| */
+			"minimapSlider.background": "#6663",
+			"minimapSlider.hoverBackground": "#9993",
+			"minimapSlider.activeBackground": "#ccc3",
+			"minimap.findMatchHighlight": "#c6c",
+			"editorOverviewRuler.unicodeForeground": "#000",
+			"scrollbarSlider.background": "#6666",
+			"scrollbarSlider.hoverBackground": "#9996",
+			"scrollbarSlider.activeBackground": "#ccc6",
+			"editorOverviewRuler.findMatchForeground": "#A5A",
+
+			/* cursor */
 			"editorCursor.foreground": "#39f",
 			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689",
@@ -419,17 +432,7 @@
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#402040",
 
-			/* |~| */
-			"minimapSlider.activeBackground": "#ccc3",
-			"minimapSlider.background": "#8883",
-			"minimapSlider.hoverBackground": "#aaa3",
-			"scrollbarSlider.activeBackground": "#ccc6",
-			"scrollbarSlider.background": "#8886",
-			"scrollbarSlider.hoverBackground": "#aaa6",
-			"editorOverviewRuler.findMatchForeground": "#A5A",
-			"editorOverviewRuler.unicodeForeground": "#000",
-
-			/* codes highlight */
+			/* text selection highlight */
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
@@ -438,9 +441,6 @@
 			"editor.findRangeHighlightBackground": "#66e3",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",
-			"minimap.findMatchHighlight": "#c6c",
-			//"minimap.warningHighlight": "#ff0",
-			//"minimap.errorHighlight": "#f00",
 			"terminal.selectionBackground": "#fff2",
 
 			/* Jupyter */
@@ -466,6 +466,9 @@
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
+
+	//"window.titleBarStyle": "custom",
+	"workbench.experimental.layoutControl.enabled": true,
 
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

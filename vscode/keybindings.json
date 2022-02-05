@@ -669,8 +669,12 @@
 	/* View: Toggle Sizes */
 	{
 		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleCenteredLayout"
+	},
+	{
+		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
-		//"when": "panelFocus"
+		"when": "panelFocus"
 	},
 	{
 		"key": "shift+alt+enter",
@@ -678,10 +682,14 @@
 		"when": "editorFocus && multipleEditorGroups"
 	},
 
-	/* View: Toggle Side Panel */
+	/* View: Side Panel */
 	{
 		"key": "ctrl+;",
 		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "ctrl+'",
+		"command": "workbench.action.focusAuxiliaryBar"
 	},
 
 	/* dbankier.vscode-quick-select */

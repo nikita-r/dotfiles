@@ -1,6 +1,6 @@
 {
 	"window.titleSeparator": " · ",
-	"window.title": "Code${separator}${dirty}${activeEditorShort}${separator}${rootName}",
+	"window.title": "Code${separator}${rootName}${separator}${dirty}${activeEditorShort}",
 
 	"security.workspace.trust.enabled": false,
 
@@ -314,6 +314,7 @@
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingQuotes": "never",
 	"html.autoClosingTags": false,
+	"html.autoCreateQuotes": false,
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
 	"xml.completion.autoCloseTags": false,
@@ -368,29 +369,28 @@
 		"[* Dark*]": {
 			"bookmarks.overviewRuler": "#39f6",
 			"editorError.foreground": "#fff",
-			"editorGutter.addedBackground": "#408020",
+			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
-			"editorGutter.modifiedBackground": "#206080",
-			"editorInfo.foreground": "#39f",
+			"editorGutter.modifiedBackground": "#206080", // 200°
+			"editorInfo.foreground": "#39f", // 210°
 			"editorOverviewRuler.infoForeground": "#39f9",
 			"editorOverviewRuler.warningForeground": "#fd39",
-			"editorWarning.foreground": "#fd3",
+			"editorWarning.foreground": "#fd3", // 50°
 
 			/* |~| */
 			"minimapSlider.background": "#6663",
 			"minimapSlider.hoverBackground": "#9993",
 			"minimapSlider.activeBackground": "#ccc3",
 			"minimap.findMatchHighlight": "#c6c",
-			"editorOverviewRuler.unicodeForeground": "#000",
 			"scrollbarSlider.background": "#6666",
 			"scrollbarSlider.hoverBackground": "#9996",
 			"scrollbarSlider.activeBackground": "#ccc6",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 
-			/* cursor */
-			"editorCursor.foreground": "#39f",
+			/* {^} */
+			"editorCursor.foreground": "#f93", // 30°
 			"editorCursor.background": "#fff",
-			"editorBracketMatch.border": "#689",
+			"editorBracketMatch.border": "#689", // 200°
 			"editorBracketMatch.background": "#0000",
 
 			/* tabstops */
@@ -436,9 +436,11 @@
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
-			"editor.findMatchBackground": "#737",
+			"editor.findMatchBackground": "#515",
+			"editor.findMatchBorder": "#30c090c0",
 			"editor.findMatchHighlightBackground": "#515",
 			"editor.findRangeHighlightBackground": "#66e3",
+			"searchEditor.findMatchBackground": "#5258",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",
 			"terminal.selectionBackground": "#fff2",

@@ -86,6 +86,10 @@
 
 	/* default bindings, but with the "when" removed */
 	{
+		"key": "ctrl+shift+;",
+		"command": "breadcrumbs.focus"
+	},
+	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
 	},
@@ -669,17 +673,22 @@
 	/* View: Toggle Sizes */
 	{
 		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleCenteredLayout"
+		"command": "workbench.action.toggleFullScreen"
 	},
 	{
 		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleMaximizedPanel",
-		"when": "panelFocus"
+		"command": "workbench.action.toggleCenteredLayout",
+		"when": "editorIsOpen"
 	},
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleEditorWidths",
 		"when": "editorFocus && multipleEditorGroups"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "panelFocus"
 	},
 
 	/* View: Side Panel */

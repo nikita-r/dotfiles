@@ -219,11 +219,11 @@
 
 	"bookmarks.label.suggestion": "suggestWhenSelected",
 	"bookmarks.sideBar.expanded": true,
-	"cSpell.language": "en,en-GB",
 	"cSpell.numSuggestions": 3,
 	"cSpell.showStatus": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"filesize.showGzip": false,
+	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
 	//"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
@@ -425,6 +425,7 @@
 			"breadcrumb.background": "#402040",
 			//"editor.foldBackground": "#301830",
 			"editorGutter.background": "#201020",
+			"editorUnicodeHighlight.border": "#737",
 			"menu.border": "#804080",
 			"panel.border": "#806080",
 			"statusBar.background": "#402040",
@@ -479,11 +480,6 @@
 
 	/* discriminate amongst file types */
 
-	"emmet.includeLanguages": {
-	},
-	"emmet.preferences": { "output.inlineBreak": 3 },
-	"emmet.syntaxProfiles": { "html": { "self_closing_tag": "xhtml" } },
-
 	"files.associations": {
 		"*.qss": "css",
 	},
@@ -499,6 +495,17 @@
 		"*.hex": "hexEditor.hexedit",
 		//"*.md": "vscode.markdown.preview.editor",
 	},
+
+	/* ad-hoc preferences per extension */
+
+	"emmet.includeLanguages": {
+	},
+	"emmet.preferences": { "output.inlineBreak": 3 },
+	"emmet.syntaxProfiles": { "html": { "self_closing_tag": "xhtml" } },
+
+	"cSpell.language": "en,en-GB",
+	"cSpell.userWords": [
+	],
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

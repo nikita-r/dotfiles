@@ -104,16 +104,18 @@
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.editor.languageDetection": false,
+	//"workbench.editor.historyBasedLanguageDetection": true,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
-	"workbench.editor.revealIfOpen": true,
+	//"workbench.editor.revealIfOpen": true,
+	"workbench.editor.navigationScope": "editorGroup",
+	//"workbench.editor.closeEmptyGroups": false,
 
 	"extensions.closeExtensionDetailsOnViewChange": true,
-	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.quickOpen.closeOnFocusLost": false,
 
 	/* . . . */
@@ -472,6 +474,7 @@
 
 	//"window.titleBarStyle": "custom",
 	"workbench.experimental.layoutControl.enabled": true,
+	"workbench.experimental.layoutControl.type": "toggles",
 
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

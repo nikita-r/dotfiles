@@ -3,7 +3,6 @@
 	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
-	$: editor.fold: Ctrl+Shift+[][]
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
@@ -208,7 +207,7 @@
 	//	"when": "editorTextFocus && editorLangId == 'powershell'"
 	//},
 
-	/* Ctrl+[][]: jump to next/prev; block non-Debug usage of F5 */
+	/* Ctrl+[][]: jump to next/prev; cut any non-Debug usage of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
 	{ "command": "noop", "key": "ctrl+[" },
 	{ "command": "noop", "key": "alt+f5" },
@@ -373,6 +372,14 @@
 	{
 		"key": "ctrl+shift+-",
 		"command": "workbench.action.navigateForward"
+	},
+	{
+		"key": "ctrl+shift+[",
+		"command": "workbench.action.navigateBackInEditLocations"
+	},
+	{
+		"key": "ctrl+shift+]",
+		"command": "workbench.action.navigateForwardInEditLocations"
 	},
 
 	/* Ctrl+k *s */
@@ -746,6 +753,12 @@
 	},
 
 	/* Ctrl+Shift+. */
+	{ "command": "noop", "key": "ctrl+shift+." },
+	{
+		"key": "ctrl+shift+.",
+		"command": "editor.action.surroundWithSnippet",
+		"when": "editorTextFocus && editorHasSelection"
+	},
 	{
 		"key": "ctrl+shift+.",
 		"command": "editor.action.insertSnippet",

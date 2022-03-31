@@ -207,7 +207,7 @@
 	//	"when": "editorTextFocus && editorLangId == 'powershell'"
 	//},
 
-	/* Ctrl+[][]: jump to next/prev; cut any non-Debug usage of F5 */
+	/* Ctrl+[][]: jump to next/prev; abjure any-and-all non-Debug usage of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
 	{ "command": "noop", "key": "ctrl+[" },
 	{ "command": "noop", "key": "alt+f5" },
@@ -735,6 +735,12 @@
 		"command": "bookmarks.jumpToNext",
 	},
 
+	/* Remote: Show Remote Menu */
+	{
+		"key": "ctrl+alt+\\",
+		"command": "workbench.action.remote.showMenu"
+	},
+
 	/* Ctrl*I */
 	{
 		"key": "ctrl+k i",
@@ -756,13 +762,13 @@
 	{ "command": "noop", "key": "ctrl+shift+." },
 	{
 		"key": "ctrl+shift+.",
-		"command": "editor.action.surroundWithSnippet",
-		"when": "editorTextFocus && editorHasSelection"
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "ctrl+shift+.",
-		"command": "editor.action.insertSnippet",
-		"when": "editorTextFocus && !editorHasSelection"
+		"command": "editor.action.surroundWithSnippet",
+		"when": "editorTextFocus && editorHasSelection"
 	},
 
 	/* Ctrl+Shift+J */

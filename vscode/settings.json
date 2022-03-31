@@ -28,6 +28,10 @@
 	//"explorer.sortOrderLexicographicOptions": "unicode",
 	"explorer.openEditors.visible": 16,
 
+	//"workbench.localHistory.enabled": false,
+	"workbench.localHistory.mergeWindow": 96,
+	"workbench.localHistory.maxFileEntries": 16,
+
 	/* search / peek / preview */
 
 	"editor.find.addExtraSpaceOnTop": false,
@@ -84,6 +88,7 @@
 	"editor.roundedSelection": false,
 
 	//"editor.bracketPairColorization.enabled": true,
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	//"editor.guides.bracketPairs": true,
 	//"editor.guides.bracketPairsHorizontal": false,
 	//"editor.guides.highlightActiveBracketPair": false,
@@ -104,7 +109,7 @@
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.editor.languageDetection": false,
-	//"workbench.editor.historyBasedLanguageDetection": true,
+	"workbench.editor.historyBasedLanguageDetection": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
@@ -445,6 +450,8 @@
 			"searchEditor.findMatchBackground": "#5258",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",
+			"terminal.findMatchBorder": "#30c090",
+			"terminal.findMatchHighlightBorder": "#b7b",
 			"terminal.selectionBackground": "#fff2",
 
 			/* Jupyter */
@@ -474,6 +481,8 @@
 	//"window.titleBarStyle": "custom",
 	"workbench.experimental.layoutControl.enabled": true,
 	"workbench.experimental.layoutControl.type": "toggles",
+	"workbench.layoutControl.enabled": true,
+	"workbench.layoutControl.type": "toggles",
 
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

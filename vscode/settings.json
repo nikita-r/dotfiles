@@ -87,14 +87,16 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
+	/* rulers & guides */
 	//"editor.bracketPairColorization.enabled": true,
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	//"editor.guides.bracketPairs": true,
-	//"editor.guides.bracketPairsHorizontal": false,
-	//"editor.guides.highlightActiveBracketPair": false,
+	"editor.guides.bracketPairsHorizontal": false,
+	"editor.guides.highlightActiveBracketPair": false,
 	"editor.guides.indentation": false,
 	"editor.guides.highlightActiveIndentation": false,
 	"editor.renderIndentGuides": false, // pre-v1.61
+	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
@@ -422,6 +424,7 @@
 			/* Hue: 160/360 */
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.warningBackground": "#208060",
+			"editor.foldBackground": "#20806040",
 
 			/* Hue: 300/360 */
 			"activityBar.background": "#402040",
@@ -429,7 +432,6 @@
 			"activityBarBadge.foreground": "#402040",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
-			"editor.foldBackground": "#60216060", // translates to "#382038" when on "#1e1e1e" background
 			"editorGutter.background": "#201020",
 			"editorUnicodeHighlight.border": "#737",
 			"menu.border": "#804080",
@@ -479,8 +481,6 @@
 	"window.enableMenuBarMnemonics": true,
 
 	//"window.titleBarStyle": "custom",
-	"workbench.experimental.layoutControl.enabled": true,
-	"workbench.experimental.layoutControl.type": "toggles",
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",
 

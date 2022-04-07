@@ -28,7 +28,7 @@
 	//"explorer.sortOrderLexicographicOptions": "unicode",
 	"explorer.openEditors.visible": 16,
 
-	//"workbench.localHistory.enabled": false,
+	"workbench.localHistory.enabled": false,
 	"workbench.localHistory.mergeWindow": 96,
 	"workbench.localHistory.maxFileEntries": 16,
 
@@ -433,7 +433,6 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
-			"editorUnicodeHighlight.border": "#737",
 			"menu.border": "#804080",
 			"panel.border": "#806080",
 			"statusBar.background": "#402040",
@@ -441,7 +440,7 @@
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#402040",
 
-			/* text selection highlight */
+			/* chars hilite */
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
@@ -449,6 +448,8 @@
 			"editor.findMatchBorder": "#30c090c0",
 			"editor.findMatchHighlightBackground": "#515",
 			"editor.findRangeHighlightBackground": "#66e3",
+			"editorUnicodeHighlight.background": "#0000",
+			"editorUnicodeHighlight.border": "#737",
 			"searchEditor.findMatchBackground": "#5258",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",

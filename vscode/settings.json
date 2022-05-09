@@ -53,6 +53,7 @@
 
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
+	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.lightbulb.enabled": false,
 
 	"editor.quickSuggestions": false,
@@ -412,6 +413,8 @@
 
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
+			"editorInlayHint.background": "#404",
+			"editorInlayHint.foreground": "#c8c",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

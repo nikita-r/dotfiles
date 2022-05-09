@@ -88,15 +88,14 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
-	/* rulers & guides */
-	//"editor.bracketPairColorization.enabled": true,
+	/* pairs, rulers & guides */
+	"editor.bracketPairColorization.enabled": true,
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	//"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": false,
 	"editor.guides.highlightActiveBracketPair": false,
 	"editor.guides.indentation": false,
 	"editor.guides.highlightActiveIndentation": false,
-	"editor.renderIndentGuides": false, // pre-v1.61
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
 	"workbench.tree.indent": 12,
@@ -155,7 +154,7 @@
 	"scm.alwaysShowRepositories": true,
 	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
-	"git.untrackedChanges": "separate",
+	"git.untrackedChanges": "separate", // or "hidden" for better performance
 
 	//"git.autorefresh": false,
 	"git.enableStatusBarSync": false,
@@ -296,6 +295,7 @@
 
 	"java.project.importOnFirstTimeStartup": "interactive",
 	"java.project.importHint": false,
+	"java.import.generatesMetadataFilesAtProjectRoot": false,
 	"java.configuration.checkProjectSettingsExclusions": false,
 	"java.autobuild.enabled": false,
 
@@ -303,6 +303,7 @@
 	"jupyter.experiments.enabled": false,
 	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
+	"python.languageServer": "Pylance",
 	"python.linting.enabled": false,
 
 	/* ~codeFormatting */
@@ -357,12 +358,12 @@
 	},
 
 	"terminal.integrated.tabs.enabled": true,
+	//"terminal.integrated.tabs.location": "left",
 	"terminal.integrated.tabs.hideCondition": "never",
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.separator": " · ",
 	"terminal.integrated.tabs.showActions": "never",
 	"terminal.integrated.tabs.showActiveTerminal": "never",
-	"terminal.integrated.tabs.location": "right",
 
 	/* . . . */
 

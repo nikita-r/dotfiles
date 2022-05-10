@@ -279,9 +279,6 @@
 
 	/* Language Extensions */
 
-	"omnisharp.autoStart": false, // #> OmniSharp: Restart
-	"omnisharp.enableRoslynAnalyzers": true,
-
 	"[powershell]": {
 		"editor.codeLens": false,
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -293,18 +290,43 @@
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
 
+	/* C♯ */
+	"omnisharp.autoStart": false, // #> OmniSharp: Restart
+	"omnisharp.enableRoslynAnalyzers": true,
+
+	/* Java */
 	"java.project.importOnFirstTimeStartup": "interactive",
 	"java.project.importHint": false,
 	"java.import.generatesMetadataFilesAtProjectRoot": false,
 	"java.configuration.checkProjectSettingsExclusions": false,
 	"java.autobuild.enabled": false,
 
+	/* Py */
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
 	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
+	"python.formatting.provider": "none",
 	"python.languageServer": "Pylance",
 	"python.linting.enabled": false,
+
+	/* ES */
+	"eslint.alwaysShowStatus": true,
+	"javascript.suggestionActions.enabled": false,
+	"typescript.suggestionActions.enabled": false,
+	/* inlay */
+	"javascript.inlayHints.enumMemberValues.enabled": true,
+	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"javascript.inlayHints.parameterNames.enabled": "all",
+	"javascript.inlayHints.parameterTypes.enabled": true,
+	"javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"javascript.inlayHints.variableTypes.enabled": true,
+	"typescript.inlayHints.enumMemberValues.enabled": true,
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	"typescript.inlayHints.parameterTypes.enabled": true,
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"typescript.inlayHints.variableTypes.enabled": true,
 
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
@@ -313,7 +335,6 @@
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
-	"python.formatting.provider": "none",
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"javascript.preferences.quoteStyle": "single",
@@ -358,8 +379,8 @@
 	},
 
 	"terminal.integrated.tabs.enabled": true,
-	//"terminal.integrated.tabs.location": "left",
 	"terminal.integrated.tabs.hideCondition": "never",
+	//"terminal.integrated.tabs.location": "left",
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.separator": " · ",
 	"terminal.integrated.tabs.showActions": "never",
@@ -448,9 +469,9 @@
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
-			"editor.findMatchBackground": "#515",
+			"editor.findMatchBackground": "#404",
 			"editor.findMatchBorder": "#30c090c0",
-			"editor.findMatchHighlightBackground": "#515",
+			"editor.findMatchHighlightBackground": "#404",
 			"editor.findRangeHighlightBackground": "#66e3",
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",

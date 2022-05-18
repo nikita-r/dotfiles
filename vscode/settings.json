@@ -133,6 +133,7 @@
 	"workbench.view.alwaysShowHeaderActions": true,
 	"notebook.showFoldingControls": "always",
 	"editor.showFoldingControls": "always",
+	"editor.unfoldOnClickAfterEndOfLine": true,
 
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
@@ -357,6 +358,8 @@
 
 	/* debug */
 	"debug.confirmOnExit": "always",
+	"debug.console.historySuggestions": false,
+	//"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,
 
 	/* Terminal */

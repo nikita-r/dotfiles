@@ -59,6 +59,7 @@
 	"editor.quickSuggestions": false,
 	"editor.quickSuggestionsDelay": 333,
 	"editor.parameterHints.enabled": false,
+	"editor.parameterHints.cycle": true,
 	"editor.suggestOnTriggerCharacters": false,
 
 	"editor.acceptSuggestionOnCommitCharacter": false,
@@ -98,6 +99,8 @@
 	"editor.guides.highlightActiveIndentation": false,
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
+	"workbench.list.horizontalScrolling": true,
+	"workbench.list.smoothScrolling": true,
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 

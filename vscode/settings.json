@@ -92,11 +92,11 @@
 	/* pairs, rulers & guides */
 	"editor.bracketPairColorization.enabled": true,
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-	//"editor.guides.bracketPairs": true,
+	"editor.guides.bracketPairs": "active",
 	"editor.guides.bracketPairsHorizontal": false,
 	"editor.guides.highlightActiveBracketPair": false,
-	"editor.guides.indentation": false,
 	"editor.guides.highlightActiveIndentation": false,
+	"editor.guides.indentation": false,
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
 	"workbench.list.horizontalScrolling": true,
@@ -283,6 +283,9 @@
 
 	/* Language Extensions */
 
+	"omnisharp.autoStart": false, // #> OmniSharp: Restart
+	"omnisharp.enableRoslynAnalyzers": true,
+
 	"[powershell]": {
 		"editor.codeLens": false,
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -293,10 +296,6 @@
 	"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
 	"powershell.scriptAnalysis.enable": false,
-
-	/* C♯ */
-	"omnisharp.autoStart": false, // #> OmniSharp: Restart
-	"omnisharp.enableRoslynAnalyzers": true,
 
 	/* Java */
 	"java.project.importOnFirstTimeStartup": "interactive",
@@ -362,6 +361,7 @@
 	/* debug */
 	"debug.confirmOnExit": "always",
 	"debug.console.historySuggestions": false,
+	"debug.focusEditorOnBreak": false,
 	//"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,
 

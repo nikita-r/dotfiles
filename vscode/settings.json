@@ -93,7 +93,7 @@
 	"editor.bracketPairColorization.enabled": true,
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"editor.guides.bracketPairs": "active",
-	"editor.guides.bracketPairsHorizontal": false,
+	"editor.guides.bracketPairsHorizontal": "active",
 	"editor.guides.highlightActiveBracketPair": false,
 	"editor.guides.highlightActiveIndentation": false,
 	"editor.guides.indentation": false,
@@ -364,6 +364,8 @@
 	"debug.focusEditorOnBreak": false,
 	//"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,
+	"debug.showBreakpointsInOverviewRuler": true,
+	"debug.showSubSessionsInToolBar": true,
 
 	/* Terminal */
 
@@ -450,7 +452,6 @@
 			"tab.activeModifiedBorder": "#F08048",
 			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
-			"editor.stackFrameHighlightBackground": "#421",
 
 			/* Hue: 160/360 */
 			"statusBarItem.remoteBackground": "#208060",
@@ -487,6 +488,13 @@
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			"terminal.selectionBackground": "#fff2",
+
+			/* on break */
+			"editor.stackFrameHighlightBackground": "#C0400033",
+			"editor.focusedStackFrameHighlightBackground": "#00C08033",
+			"debugIcon.breakpointForeground": "#c63",
+			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
+			"debugIcon.breakpointStackframeForeground": "#c3c",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",

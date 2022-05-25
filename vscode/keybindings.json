@@ -17,6 +17,31 @@
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
 
+	/* pour Web-based */
+	{
+		"key": "ctrl+k w",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+k t",
+		"command": "workbench.action.reopenClosedEditor"
+	},
+	/* ctrl+n/N */
+	{
+		"key": "ctrl+k n",
+		"command": "workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+k n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+k shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
+	},
+
 	/* Sublime Text defaults */
 	/* {"to": "brackets"} */
 	{ "command": "noop", "key": "ctrl+m" }, // byDef: Toggle Tab Key Moves Focus

@@ -576,11 +576,6 @@
 		"command": "workbench.files.action.focusFilesExplorer"
 	},
 	{
-		"key": "ctrl+shift+e",
-		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
 		"key": "ctrl+n",
 		"command": "explorer.newFile",
 		"when": "filesExplorerFocus"
@@ -589,6 +584,18 @@
 		"key": "ctrl+shift+n",
 		"command": "explorer.newFolder",
 		"when": "filesExplorerFocus"
+	},
+
+	/* ^E/^P */
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.action.quickOpenNavigateNext",
+		"when": "inCommandsPicker && inQuickOpen"
 	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */

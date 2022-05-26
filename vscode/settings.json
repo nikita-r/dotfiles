@@ -490,7 +490,7 @@
 			"terminal.selectionBackground": "#fff2",
 
 			/* on break */
-			"editor.stackFrameHighlightBackground": "#C0800033",
+			"editor.stackFrameHighlightBackground": "#C0000033",
 			"editor.focusedStackFrameHighlightBackground": "#C000C033",
 			"debugIcon.breakpointForeground": "#c63",
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",

@@ -23,6 +23,11 @@
 		"command": "workbench.action.closeActiveEditor"
 	},
 	{
+		"key": "ctrl+k w",
+		"command": "workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
 		"key": "ctrl+k t",
 		"command": "workbench.action.reopenClosedEditor"
 	},
@@ -569,6 +574,11 @@
 	{
 		"key": "ctrl+shift+e",
 		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
 	},
 	{
 		"key": "ctrl+n",

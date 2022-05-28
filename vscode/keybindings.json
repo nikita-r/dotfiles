@@ -25,7 +25,7 @@
 	{
 		"key": "ctrl+k w",
 		"command": "workbench.action.closeGroup",
-		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+		"when": "activeEditorGroupEmpty"
 	},
 	{
 		"key": "ctrl+k t",
@@ -586,7 +586,7 @@
 		"when": "filesExplorerFocus"
 	},
 
-	/* ^E/^P */
+	/* ?inQuickOpen */
 	{
 		"key": "ctrl+shift+e",
 		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
@@ -596,6 +596,11 @@
 		"key": "ctrl+shift+p",
 		"command": "workbench.action.quickOpenNavigateNext",
 		"when": "inCommandsPicker && inQuickOpen"
+	},
+	{
+		"key": "alt+`",
+		"command": "workbench.action.focusQuickOpen",
+		"when": "inQuickOpen"
 	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */

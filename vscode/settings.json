@@ -247,7 +247,7 @@
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
 	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
 	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=999 --no-config --pcre2",
-	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*- \\[ \\]",
+	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*[-*+] \\[ \\]",
 	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
 	//"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.general.tags": [
@@ -376,6 +376,7 @@
 	"terminal.integrated.persistentSessionScrollback": 4095,
 
 	"terminal.integrated.commandsToSkipShell": [
+		"workbench.action.focusQuickOpen",
 		"workbench.action.toggleSidebarVisibility",
 	],
 
@@ -476,9 +477,9 @@
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
-			"editor.findMatchBackground": "#404",
-			"editor.findMatchBorder": "#30c090c0",
-			"editor.findMatchHighlightBackground": "#404",
+			"editor.findMatchBackground": "#515",
+			"editor.findMatchBorder": "#30c090",
+			"editor.findMatchHighlightBackground": "#a0a6",
 			"editor.findRangeHighlightBackground": "#66e3",
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",

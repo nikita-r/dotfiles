@@ -38,7 +38,7 @@
 [alias]
 	aliases = config --get-regexp ^alias\\.
 	branches = branch -a
-	contributors = shortlog -s --email
+	contributors = shortlog -s --email --no-merges -n
 	remotes = remote -v
 	tags = tag -l
 

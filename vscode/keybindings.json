@@ -750,6 +750,12 @@
 	},
 
 	/* alefragnani.Bookmarks */
+	{ "command": "noop", "key": "ctrl+alt+l" },
+	{
+		"key": "ctrl+alt+i",
+		"command": "bookmarks.toggle",
+		"when": "editorTextFocus"
+	},
 	{
 		"key": "ctrl+alt+o",
 		"command": "bookmarks.toggleLabeled",
@@ -757,16 +763,23 @@
 	},
 	{
 		"key": "ctrl+alt+j",
-		"command": "bookmarks.jumpToPrevious",
+		"command": "bookmarks.jumpToNext",
 	},
 	{
 		"key": "ctrl+alt+k",
-		"command": "bookmarks.toggle",
+		"command": "bookmarks.jumpToPrevious",
+	},
+	{ "command": "noop", "key": "shift+alt+k" },
+	{ "command": "noop", "key": "shift+alt+l" },
+	{
+		"key": "shift+alt+j",
+		"command": "bookmarks.expandSelectionToNext",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "ctrl+alt+l",
-		"command": "bookmarks.jumpToNext",
+		"key": "shift+alt+k",
+		"command": "bookmarks.expandSelectionToPrevious",
+		"when": "editorTextFocus"
 	},
 
 	/* Remote: Show Remote Menu */

@@ -79,9 +79,12 @@
 
 	/* . . . */
 
-	//"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
-	//"editor.fontSize": 14,
-	//"editor.fontLigatures": true,
+	"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
+	"editor.fontSize": 14,
+	"editor.fontLigatures": true,
+	//"editor.fontFamily": "Cascadia Code",
+	//"editor.fontSize": 15,
+	//"editor.fontLigatures": "'ss01', 'zero'",
 
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
@@ -371,6 +374,7 @@
 
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always", // like "hasChildProcesses"
+	"terminal.integrated.rightClickBehavior": "default",
 
 	"terminal.integrated.scrollback": 32767,
 	"terminal.integrated.persistentSessionScrollback": 4095,

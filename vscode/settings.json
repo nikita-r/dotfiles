@@ -247,7 +247,7 @@
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
 	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
 	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=999 --no-config --pcre2",
-	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*[-*+] \\[ \\]",
+	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*[-*+] +\\[ \\]",
 	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
 	//"todo-tree.regex.regexCaseSensitive": false,
 	"todo-tree.general.tags": [
@@ -433,6 +433,11 @@
 			"editorCursor.background": "#fff",
 			"editorBracketMatch.border": "#689", // 200°
 			"editorBracketMatch.background": "#0000",
+
+			/* [_] */
+			"listFilterWidget.background": "#104030",
+			"listFilterWidget.noMatchesOutline": "#CC2860",
+			"listFilterWidget.outline": "#ccc",
 
 			/* [|] */
 			"editor.snippetFinalTabstopHighlightBorder": "#fff",

@@ -6,6 +6,7 @@
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
+	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
@@ -245,11 +246,11 @@
 	{ "command": "noop", "key": "shift+alt+f5" },
 	{
 		"key": "ctrl+]",
-		"command": "workbench.action.editor.nextChange",
+		"command": "workbench.action.editor.nextChange"
 	},
 	{
 		"key": "ctrl+[",
-		"command": "workbench.action.editor.previousChange",
+		"command": "workbench.action.editor.previousChange"
 	},
 	{
 		"key": "ctrl+]",
@@ -617,18 +618,7 @@
 		"when": "activeViewlet == 'workbench.view.extension.references-view'"
 	},
 
-	/* Shift+Alt+c */
-	{
-		"key": "shift+alt+c",
-		"command": "copyRelativeFilePath"
-	},
-
 	/* Ctrl+Alt+Letter */
-	{
-		"key": "ctrl+alt+d",
-		"command": "editor.action.selectHighlights",
-		"when": "editorTextFocus"
-	},
 	{
 		"key": "ctrl+alt+s",
 		"command": "workbench.action.focusActivityBar"
@@ -638,10 +628,10 @@
 		"command": "workbench.action.inspectContextKeys"
 	},
 	/* Alt for quickOpen */
-	{
-		"key": "ctrl+alt+p",
-		"command": "workbench.action.quickOpen"
-	},
+	//{
+	//	"key": "ctrl+alt+p",
+	//	"command": "workbench.action.quickOpen"
+	//},
 	{
 		"key": "ctrl+alt+e",
 		"command": "workbench.action.quickOpen"
@@ -749,42 +739,53 @@
 		"when": "editorFocus"
 	},
 
+	/* Shift+Alt+Letter */
+	{
+		"key": "shift+alt+c",
+		"command": "copyRelativeFilePath"
+	},
+	{
+		"key": "shift+alt+d",
+		"command": "editor.action.selectHighlights",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "outline.focus"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "outline.collapse",
+		"when": "sideBarFocus && focusedView == 'outline'"
+	},
+
 	/* alefragnani.Bookmarks */
+	{ "command": "noop", "key": "ctrl+alt+j" },
+	{ "command": "noop", "key": "ctrl+alt+k" },
 	{ "command": "noop", "key": "ctrl+alt+l" },
-	{
-		"key": "ctrl+alt+i",
-		"command": "bookmarks.toggle",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+alt+o",
-		"command": "bookmarks.toggleLabeled",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+alt+j",
-		"command": "bookmarks.jumpToNext",
-	},
-	{
-		"key": "ctrl+alt+k",
-		"command": "bookmarks.jumpToPrevious",
-	},
+	{ "command": "noop", "key": "shift+alt+j" }, // "bookmarks.expandSelectionToPrevious"
 	{ "command": "noop", "key": "shift+alt+k" },
-	{ "command": "noop", "key": "shift+alt+l" },
-	{
-		"key": "shift+alt+j",
-		"command": "bookmarks.expandSelectionToNext",
-		"when": "editorTextFocus"
-	},
+	{ "command": "noop", "key": "shift+alt+l" }, // "bookmarks.expandSelectionToNext"
 	{
 		"key": "shift+alt+k",
-		"command": "bookmarks.expandSelectionToPrevious",
-		"when": "editorTextFocus"
+		"command": "bookmarks.toggle"
+	},
+	{
+		"key": "shift+alt+l",
+		"command": "bookmarks.toggleLabeled"
+	},
+	{
+		"key": "shift+alt+n",
+		"command": "bookmarks.jumpToNext"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "bookmarks.jumpToPrevious"
 	},
 
 	/* Remote: Show Remote Menu */
 	{
-		"key": "ctrl+alt+\\",
+		"key": "alt+\\",
 		"command": "workbench.action.remote.showMenu"
 	},
 

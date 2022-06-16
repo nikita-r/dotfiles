@@ -140,6 +140,10 @@
 		"key": "ctrl+k f2",
 		"command": "togglePeekWidgetFocus"
 	},
+	{
+		"key": "ctrl+/",
+		"command": "editor.action.commentLine"
+	},
 
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
 	{ "command": "noop", "key": "ctrl+alt+up" },
@@ -747,7 +751,7 @@
 	{
 		"key": "shift+alt+d",
 		"command": "editor.action.selectHighlights",
-		"when": "editorTextFocus"
+		"when": "editorFocus"
 	},
 	{
 		"key": "shift+alt+o",
@@ -792,13 +796,12 @@
 	/* Ctrl*I */
 	{
 		"key": "ctrl+k i",
-		"command": "editor.action.format",
-		"when": "editorTextFocus"
+		"command": "editor.action.format"
 	},
 	{
 		"key": "ctrl+k i",
 		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && !editorHasDocumentFormattingProvider"
+		"when": "!editorHasDocumentFormattingProvider"
 	},
 	{
 		"key": "ctrl+shift+i",

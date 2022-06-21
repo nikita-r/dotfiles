@@ -87,7 +87,7 @@
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
-	"editor.hideCursorInOverviewRuler": true,
+	//"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
 
 	/* pairs, rulers & guides */
@@ -500,6 +500,8 @@
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			//"terminal.selectionBackground": "#fff2",
+			"peekViewEditor.matchHighlightBackground": "#404",
+			"peekViewResult.matchHighlightBackground": "#404",
 
 			/* on break */
 			"editor.stackFrameHighlightBackground": "#C0000033",

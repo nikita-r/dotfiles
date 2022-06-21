@@ -760,7 +760,7 @@
 	{
 		"key": "shift+alt+o",
 		"command": "outline.collapse",
-		"when": "sideBarFocus && focusedView == 'outline'"
+		"when": "focusedView == 'outline'"
 	},
 
 	/* alefragnani.Bookmarks */
@@ -770,6 +770,10 @@
 	{ "command": "noop", "key": "shift+alt+j" }, // "bookmarks.expandSelectionToPrevious"
 	{ "command": "noop", "key": "shift+alt+k" },
 	{ "command": "noop", "key": "shift+alt+l" }, // "bookmarks.expandSelectionToNext"
+	{
+		"key": "shift+alt+j",
+		"command": "workbench.view.extension.bookmarks"
+	},
 	{
 		"key": "shift+alt+k",
 		"command": "bookmarks.toggle"

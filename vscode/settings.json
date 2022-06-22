@@ -494,12 +494,13 @@
 			"editor.findRangeHighlightBackground": "#66e3",
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",
-			"searchEditor.findMatchBackground": "#5258",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",
+			//"terminal.selectionBackground": "#fff2",
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
-			//"terminal.selectionBackground": "#fff2",
+			"searchEditor.findMatchBackground": "#515",
+			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#404",
 
@@ -525,10 +526,10 @@
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
 
-	"window.zoomLevel": 0.0,
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
+	"window.zoomLevel": 0.0,
 
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,

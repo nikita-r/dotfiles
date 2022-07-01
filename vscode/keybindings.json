@@ -7,6 +7,7 @@
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
+	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.togglePanel: "ctrl+j"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
@@ -17,6 +18,11 @@
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "key": "ctrl+y", "command": "cursorRedo" },
+	{ "key": "alt+y", "command": "notifications.showList" },
+
+	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // replace "ctrl+shift+;"
+	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
+	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
 
 	/* pour Web-based */
@@ -116,10 +122,6 @@
 	},
 
 	/* default bindings, but with the "when" removed */
-	{
-		"key": "ctrl+shift+;",
-		"command": "breadcrumbs.focus"
-	},
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
@@ -724,16 +726,6 @@
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelFocus"
-	},
-
-	/* View: Side Panel */
-	{
-		"key": "ctrl+;",
-		"command": "workbench.action.toggleAuxiliaryBar"
-	},
-	{
-		"key": "ctrl+'",
-		"command": "workbench.action.focusAuxiliaryBar"
 	},
 
 	/* dbankier.vscode-quick-select */

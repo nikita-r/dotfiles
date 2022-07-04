@@ -1,4 +1,5 @@
 alefragnani.Bookmarks
+ctf0.macros
 andyyaldoo.vscode-json
 darkriszty.markdown-table-prettify
 DavidAnson.vscode-markdownlint

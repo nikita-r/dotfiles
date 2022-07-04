@@ -601,8 +601,9 @@
 	/* Ctrl+Shift+f: Focus the Search Viewlet */
 	{ "command": "workbench.view.search.focus", "key": "ctrl+shift+f" },
 
-	/* Ctrl+Shift+c: Clear Results of a Search, and focus the input */
+	/* Ctrl+Shift+c */
 	{ "command": "noop", "key": "ctrl+shift+c" },
+	/* Clear Results of a Search, and focus the input */
 	{
 		"key": "ctrl+shift+c",
 		"command": "search.action.clearSearchResults",
@@ -612,6 +613,12 @@
 		"key": "ctrl+shift+c",
 		"command": "workbench.extensions.action.clearExtensionsSearchResults",
 		"when": "activeViewlet == 'workbench.view.extensions'"
+	},
+	/* Reset the View / Clear Results */
+	{
+		"key": "ctrl+shift+c",
+		"command": "macros.resetExplorerView", /* ctf0.macros */
+		"when": "activeViewlet == 'workbench.view.explorer'"
 	},
 	{
 		"key": "ctrl+shift+c",

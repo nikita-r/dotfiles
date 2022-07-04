@@ -573,6 +573,15 @@
 	"cSpell.userWords": [
 	],
 
+	/* ctf0.macros */
+	"macros.list": {
+		"resetExplorerView": [
+			"workbench.files.action.focusFilesExplorer",
+			"list.clear",
+			"workbench.files.action.collapseExplorerFolders",
+		],
+	},
+
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,

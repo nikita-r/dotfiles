@@ -9,10 +9,11 @@ dbankier.vscode-quick-select
 #eamodio.gitlens
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
-Gruntfuggly.todo-tree
+#Gruntfuggly.todo-tree
 hediet.vscode-drawio
 helixquar.randomeverything
 JohannesRudolph.file-ext-switcher
+KevinRose.vsc-python-indent
 mhutchie.git-graph
 mkxml.vscode-filesize
 #ms-dotnettools.csharp
@@ -23,7 +24,8 @@ ms-vscode.hexeditor
 #ms-vscode-remote.vscode-remote-extensionpack
 quicktype.quicktype
 #redhat.java
-ryu1kn.edit-with-shell
+#ryu1kn.edit-with-shell
 samuelcolvin.jinjahtml
-streetsidesoftware.code-spell-checker
+#streetsidesoftware.code-spell-checker
+sysoev.vscode-open-in-github
 vincaslt.highlight-matching-tag

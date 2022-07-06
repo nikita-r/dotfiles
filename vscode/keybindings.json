@@ -727,7 +727,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleEditorWidths",
-		"when": "editorFocus && multipleEditorGroups"
+		"when": "multipleEditorGroups"
 	},
 	{
 		"key": "shift+alt+enter",

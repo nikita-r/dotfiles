@@ -139,6 +139,14 @@
 		"command": "editor.unfoldAll"
 	},
 	{
+		"key": "ctrl+PageDown",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+PageUp",
+		"command": "workbench.action.previousEditor"
+	},
+	{
 		"key": "ctrl+k f2",
 		"command": "togglePeekWidgetFocus"
 	},
@@ -299,41 +307,12 @@
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
 	},
 
-	/* Ctrl Page Up/Down */
-	{
-		"key": "ctrl+PageUp",
-		"command": "workbench.action.previousEditor"
-	},
-	{
-		"key": "ctrl+PageDown",
-		"command": "workbench.action.nextEditor"
-	},
-	/* ?panelFocus */
-	//{
-	//	"key": "ctrl+pageup",
-	//	"command": "workbench.action.previousPanelView",
-	//	"when": "panelFocus"
-	//},
-	//{
-	//	"key": "ctrl+pagedown",
-	//	"command": "workbench.action.nextPanelView",
-	//	"when": "panelFocus"
-	//},
-	/* moveEditor within Group */
-	{
-		"key": "ctrl+alt+PageUp",
-		"command": "workbench.action.moveEditorLeftInGroup"
-	},
-	{
-		"key": "ctrl+alt+PageDown",
-		"command": "workbench.action.moveEditorRightInGroup"
-	},
-
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
 	{ "key": "ctrl+k j", "command": "workbench.action.navigateDown" },
 	{ "key": "ctrl+k h", "command": "workbench.action.navigateLeft" },
 	{ "key": "ctrl+k l", "command": "workbench.action.navigateRight" },
+
 	/* moveEditor→Group */
 	{
 		"key": "ctrl+k shift+k",
@@ -352,7 +331,17 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
-	/* set "editor%Focus" */
+	/* moveEditor↕Group */
+	{
+		"key": "ctrl+alt+PageUp",
+		"command": "workbench.action.moveEditorLeftInGroup"
+	},
+	{
+		"key": "ctrl+alt+PageDown",
+		"command": "workbench.action.moveEditorRightInGroup"
+	},
+
+	/* set "editorTextFocus" */
 	{
 		"key": "ctrl+9",
 		"command": "workbench.action.focusActiveEditorGroup"
@@ -640,11 +629,10 @@
 		"key": "ctrl+alt+x",
 		"command": "workbench.action.inspectContextKeys"
 	},
-	/* Alt for quickOpen */
-	//{
-	//	"key": "ctrl+alt+p",
-	//	"command": "workbench.action.quickOpen"
-	//},
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.terminal.runRecentCommand"
+	},
 	{
 		"key": "ctrl+alt+e",
 		"command": "workbench.action.quickOpen"
@@ -717,12 +705,7 @@
 	/* View: Toggle Sizes */
 	{
 		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleFullScreen"
-	},
-	{
-		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleCenteredLayout",
-		"when": "editorIsOpen"
+		"command": "workbench.action.toggleCenteredLayout"
 	},
 	{
 		"key": "shift+alt+enter",

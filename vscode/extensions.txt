@@ -25,6 +25,7 @@ ms-vscode.hexeditor
 quicktype.quicktype
 #redhat.java
 #ryu1kn.edit-with-shell
+ryu1kn.text-marker
 samuelcolvin.jinjahtml
 #streetsidesoftware.code-spell-checker
 sysoev.vscode-open-in-github

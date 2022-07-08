@@ -56,7 +56,11 @@
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.lightbulb.enabled": false,
 
-	"editor.quickSuggestions": false,
+	"editor.quickSuggestions": {
+		"comments": "off",
+		"strings": "off",
+		"other": "off"
+	},
 	"editor.quickSuggestionsDelay": 333,
 	"editor.parameterHints.enabled": false,
 	"editor.parameterHints.cycle": true,
@@ -572,6 +576,16 @@
 	"cSpell.language": "en,en-GB",
 	"cSpell.userWords": [
 	],
+
+	/* ryu1kn.text-marker */
+	"textmarker.hideStatusBarItems": true,
+	"textmarker.autoSelectDistinctiveTextColor": true,
+	//"textmarker.defaultHighlightOpacity": 0.5,
+	"textmarker.highlightColors": [
+		"SteelBlue",
+		"Sienna",
+	],
+	"textmarker.defaultHighlightColor": "DarkSlateGray",
 
 	/* ctf0.macros */
 	"macros.list": {

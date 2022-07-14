@@ -164,6 +164,11 @@
 	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
+	"git.showActionButton": {
+		"commit": false,
+		"publish": true,
+		"sync": false
+	},
 
 	"git.enableStatusBarSync": false,
 	//"git.autorefresh": false,

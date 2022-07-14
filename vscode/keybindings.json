@@ -18,7 +18,8 @@
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "key": "ctrl+y", "command": "cursorRedo" },
-	{ "key": "alt+y", "command": "notifications.showList" },
+	{ "key": "shift+alt+y", "command": "notifications.showList" },
+	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
 
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // replace "ctrl+shift+;"
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },

@@ -358,7 +358,7 @@
 	"html.autoCreateQuotes": false,
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
-	"xml.completion.autoCloseTags": false,
+	//"xml.completion.autoCloseTags": false,
 
 	/* . . . */
 
@@ -382,6 +382,7 @@
 	"terminal.integrated.persistentSessionScrollback": 4095,
 
 	"terminal.integrated.commandsToSkipShell": [
+		"notifications.showList",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.toggleSidebarVisibility",
 	],
@@ -584,6 +585,8 @@
 	"textmarker.highlightColors": [
 		"SteelBlue",
 		"Sienna",
+		"OliveDrab",
+		"IndianRed",
 	],
 	"textmarker.defaultHighlightColor": "DarkSlateGray",
 

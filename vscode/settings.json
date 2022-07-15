@@ -88,11 +88,13 @@
 	//"editor.fontFamily": "Cascadia Code",
 	//"editor.fontLigatures": "'ss01', 'zero'",
 
+	/* Caret */
 	"editor.cursorBlinking": "phase",
 	//"editor.cursorSmoothCaretAnimation": true,
 	"editor.cursorWidth": 3,
 	//"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
+	"editor.multiCursorMergeOverlapping": false,
 
 	/* pairs, rulers & guides */
 	"editor.bracketPairColorization.enabled": true,
@@ -181,6 +183,7 @@
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
+	"git.mergeEditor": true,
 
 	/* diff */
 	"scm.diffDecorationsIgnoreTrimWhitespace": "inherit",

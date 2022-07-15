@@ -279,6 +279,16 @@
 	},
 	{
 		"key": "ctrl+]",
+		"command": "merge.goToNextConflict",
+		"when": "activeEditor == 'mergeEditor'"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "merge.goToPreviousConflict",
+		"when": "activeEditor == 'mergeEditor'"
+	},
+	{
+		"key": "ctrl+]",
 		"command": "workbench.action.compareEditor.nextChange",
 		"when": "textCompareEditorActive"
 	},
@@ -306,6 +316,27 @@
 		"key": "ctrl+[",
 		"command": "search.action.focusPreviousSearchResult",
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "merge.goToNextConflict",
+		"when": "isMergeEditor"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "merge.goToPreviousConflict",
+		"when": "isMergeEditor"
+	},
+	/* ?panelFocus */
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.nextPanelView",
+		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.previousPanelView",
+		"when": "panelFocus"
 	},
 
 	/* vim-like panes navigation */
@@ -707,6 +738,11 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleCenteredLayout"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "textCompareEditorActive && config.diffEditor.renderSideBySide"
 	},
 	{
 		"key": "shift+alt+enter",

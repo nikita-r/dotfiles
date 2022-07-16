@@ -58,8 +58,8 @@
 
 	/* Sublime Text defaults */
 	/* {"to": "brackets"} */
-	{ "command": "noop", "key": "ctrl+m" }, // byDef: Toggle Tab Key Moves Focus
-	{ "command": "noop", "key": "ctrl+shift+m" }, // byDef: View: Toggle Problems
+	{ "command": "noop", "key": "ctrl+m" }, // Toggle Tab Key Moves Focus
+	{ "command": "noop", "key": "ctrl+shift+m" }, // View: Toggle Problems
 	{
 		"command": "editor.action.jumpToBracket",
 		"key": "ctrl+m",
@@ -74,7 +74,7 @@
 	{
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",
-		"when": "editorTextFocus && !editorReadonly"
+		"when": "editorTextFocus"
 	},
 	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
@@ -140,14 +140,6 @@
 		"command": "editor.unfoldAll"
 	},
 	{
-		"key": "ctrl+PageDown",
-		"command": "workbench.action.nextEditor"
-	},
-	{
-		"key": "ctrl+PageUp",
-		"command": "workbench.action.previousEditor"
-	},
-	{
 		"key": "ctrl+k f2",
 		"command": "togglePeekWidgetFocus"
 	},
@@ -197,12 +189,12 @@
 	{
 		"key": "shift+alt+up",
 		"command": "editor.action.copyLinesUpAction",
-		"when": "editorTextFocus && !editorReadonly"
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "shift+alt+down",
 		"command": "editor.action.copyLinesDownAction",
-		"when": "editorTextFocus && !editorReadonly"
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "shift+alt+up",
@@ -234,7 +226,7 @@
 		"key": "shift+ctrl+,"
 	},
 
-	/* Retain F8 for runSelection */
+	/* Retain F8 for execSelection */
 	{
 		"key": "f8",
 		"command": "-editor.action.marker.nextInFiles"
@@ -253,6 +245,16 @@
 	//	"command": "PowerShell.RunSelection",
 	//	"when": "editorTextFocus && editorLangId == 'powershell'"
 	//},
+	//{
+	//	"key": "f8",
+	//	"command": "python.execSelectionInTerminal",
+	//	"when": "editorTextFocus && editorLangId == 'python'"
+	//},
+	{
+		"key": "f8",
+		"command": "terminal.focus",
+		"when": "!editorTextFocus"
+	},
 
 	/* Ctrl+[][]: jump to next/prev; abjure any-and-all non-Debug usage of F5 */
 	{ "command": "noop", "key": "ctrl+]" },
@@ -326,6 +328,16 @@
 		"key": "ctrl+[",
 		"command": "merge.goToPreviousConflict",
 		"when": "isMergeEditor"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.compareEditor.nextChange",
+		"when": "inDiffEditor"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.compareEditor.previousChange",
+		"when": "inDiffEditor"
 	},
 	/* ?panelFocus */
 	{

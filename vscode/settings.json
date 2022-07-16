@@ -36,7 +36,6 @@
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
-	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false,
 	"search.searchEditor.defaultNumberOfContextLines": null,
 	"search.searchOnTypeDebouncePeriod": 666,

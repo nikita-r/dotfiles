@@ -375,15 +375,15 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
-	/* moveEditor↕Group */
-	{
-		"key": "ctrl+alt+PageUp",
-		"command": "workbench.action.moveEditorLeftInGroup"
-	},
-	{
-		"key": "ctrl+alt+PageDown",
-		"command": "workbench.action.moveEditorRightInGroup"
-	},
+	///* moveEditor↕Group */
+	//{
+	//	"key": "ctrl+alt+PageUp",
+	//	"command": "workbench.action.moveEditorLeftInGroup"
+	//},
+	//{
+	//	"key": "ctrl+alt+PageDown",
+	//	"command": "workbench.action.moveEditorRightInGroup"
+	//},
 
 	/* set "editorTextFocus" */
 	{
@@ -630,23 +630,22 @@
 		"command": "workbench.action.focusQuickOpen",
 		"when": "inQuickOpen"
 	},
+	/* Ctrl+Shift+a */
+	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.showCommands"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.quickOpenNavigateNext",
+		"when": "inCommandsPicker && inQuickOpen"
+	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */
 	{ "command": "workbench.view.search.focus", "key": "ctrl+shift+f" },
 
 	/* Ctrl+Shift+c */
 	{ "command": "noop", "key": "ctrl+shift+c" },
-	/* Clear Results of a Search, and focus the input */
-	{
-		"key": "ctrl+shift+c",
-		"command": "search.action.clearSearchResults",
-		"when": "activeViewlet == 'workbench.view.search'"
-	},
-	{
-		"key": "ctrl+shift+c",
-		"command": "workbench.extensions.action.clearExtensionsSearchResults",
-		"when": "activeViewlet == 'workbench.view.extensions'"
-	},
 	/* Reset the View / Clear Results */
 	{
 		"key": "ctrl+shift+c",
@@ -662,6 +661,16 @@
 		"key": "ctrl+shift+c",
 		"command": "references-view.clear",
 		"when": "activeViewlet == 'workbench.view.extension.references-view'"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.extensions.action.clearExtensionsSearchResults",
+		"when": "activeViewlet == 'workbench.view.extensions'"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "search.action.clearSearchResults",
+		"when": "view.workbench.view.search.visible" // in case the View is placed under Panel
 	},
 
 	/* Ctrl+Alt+Letter */
@@ -728,17 +737,17 @@
 		"command": "workbench.action.terminal.scrollDownPage",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	/* scroll a line */
-	{
-		"key": "ctrl+up",
-		"command": "workbench.action.terminal.scrollUp",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "workbench.action.terminal.scrollDown",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
+	///* scroll a line */
+	//{
+	//	"key": "ctrl+up",
+	//	"command": "workbench.action.terminal.scrollUp",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
+	//{
+	//	"key": "ctrl+down",
+	//	"command": "workbench.action.terminal.scrollDown",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
 	/* "ctrl+`": do not toggleTerminal if Terminal is in focus */
 	{
 		"key": "ctrl+`",

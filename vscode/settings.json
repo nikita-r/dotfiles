@@ -481,6 +481,7 @@
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.warningBackground": "#208060",
 			"editor.foldBackground": "#20806040",
+			"panel.border": "#698",
 
 			/* Hue: 300/360 */
 			"activityBar.background": "#402040",
@@ -490,7 +491,6 @@
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
 			"menu.border": "#804080",
-			"panel.border": "#806080",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",

@@ -580,6 +580,16 @@
 		"command": "editor.emmet.action.splitJoinTag",
 		"when": "editorTextFocus"
 	},
+	{
+		"key": "alt+.",
+		"command": "editor.emmet.action.wrapWithAbbreviation",
+		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "alt+/",
+		"command": "editor.emmet.action.removeTag",
+		"when": "editorTextFocus"
+	},
 	/* expand_selection about tag */
 	{
 		"key": "alt+shift+a",
@@ -835,6 +845,25 @@
 	{
 		"key": "alt+\\",
 		"command": "workbench.action.remote.showMenu"
+	},
+
+	/* ryu1kn.text-marker */
+	{
+		"key": "alt+,",
+		"command": "textmarker.goToNextHighlight",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+,",
+		"command": "textmarker.goToPreviousHighlight",
+		"when": "editorTextFocus"
+	},
+
+	/* hediet.vscode-drawio */
+	{
+		"key": "shift+f3",
+		"command": "-hediet.vscode-drawio.linkCodeWithSelectedNode",
+		"when": "!findWidgetVisible"
 	},
 
 	/* Ctrl*I */

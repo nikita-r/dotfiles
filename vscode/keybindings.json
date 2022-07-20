@@ -55,6 +55,8 @@
 		"command": "explorer.newFolder",
 		"when": "filesExplorerFocus"
 	},
+	/* Ctrl+Shift+a: Search Tabs in Chrome */
+	{ "command": "", "key": "ctrl+shift+a" },
 
 	/* Sublime Text defaults */
 	/* {"to": "brackets"} */
@@ -639,16 +641,6 @@
 		"key": "alt+`",
 		"command": "workbench.action.focusQuickOpen",
 		"when": "inQuickOpen"
-	},
-	/* Ctrl+Shift+a */
-	{
-		"key": "ctrl+shift+a",
-		"command": "workbench.action.showCommands"
-	},
-	{
-		"key": "ctrl+shift+a",
-		"command": "workbench.action.quickOpenNavigateNext",
-		"when": "inCommandsPicker && inQuickOpen"
 	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */

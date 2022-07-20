@@ -86,6 +86,15 @@
 	"editor.fontLigatures": "'cv13', 'cv14'",
 	//"editor.fontFamily": "Cascadia Code",
 	//"editor.fontLigatures": "'ss01', 'zero'",
+	//"editor.tokenColorCustomizations": { "textMateRules": [ {
+	//	"scope": [
+	//		"comment.block",
+	//		"meta.function.decorator.python",
+	//		"variable.parameter.function.language.special.cls.python",
+	//		"variable.parameter.function.language.special.self.python",
+	//	],
+	//	"settings": { "fontStyle": "italic" }
+	//} ] },
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
@@ -292,6 +301,27 @@
 			"icon": "pulse", // https://primer.style/octicons/
 			"iconColor": "FireBrick"
 		}
+	},
+
+	/* ryu1kn.text-marker */
+	"textmarker.hideStatusBarItems": true,
+	"textmarker.autoSelectDistinctiveTextColor": true,
+	//"textmarker.defaultHighlightOpacity": 0.5,
+	"textmarker.highlightColors": [
+		"SteelBlue",
+		"Sienna",
+		"OliveDrab",
+		"IndianRed",
+	],
+	"textmarker.defaultHighlightColor": "DarkSlateGray",
+
+	/* ctf0.macros */
+	"macros.list": {
+		"resetExplorerView": [
+			"workbench.files.action.focusFilesExplorer",
+			"list.clear",
+			"workbench.files.action.collapseExplorerFolders",
+		],
 	},
 
 	/* Language Extensions */
@@ -584,27 +614,6 @@
 	"cSpell.language": "en,en-GB",
 	"cSpell.userWords": [
 	],
-
-	/* ryu1kn.text-marker */
-	"textmarker.hideStatusBarItems": true,
-	"textmarker.autoSelectDistinctiveTextColor": true,
-	//"textmarker.defaultHighlightOpacity": 0.5,
-	"textmarker.highlightColors": [
-		"SteelBlue",
-		"Sienna",
-		"OliveDrab",
-		"IndianRed",
-	],
-	"textmarker.defaultHighlightColor": "DarkSlateGray",
-
-	/* ctf0.macros */
-	"macros.list": {
-		"resetExplorerView": [
-			"workbench.files.action.focusFilesExplorer",
-			"list.clear",
-			"workbench.files.action.collapseExplorerFolders",
-		],
-	},
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

@@ -89,7 +89,7 @@
 	//"editor.tokenColorCustomizations": { "textMateRules": [ {
 	//	"scope": [
 	//		"comment.block",
-	//		"meta.function.decorator.python",
+	//		"meta.function.decorator",
 	//		"variable.parameter.function.language.special.cls.python",
 	//		"variable.parameter.function.language.special.self.python",
 	//	],
@@ -102,7 +102,7 @@
 	"editor.cursorWidth": 3,
 	//"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
-	"editor.multiCursorMergeOverlapping": false,
+	"editor.multiCursorMergeOverlapping": true,
 
 	/* pairs, rulers & guides */
 	"editor.bracketPairColorization.enabled": true,
@@ -301,6 +301,12 @@
 			"icon": "pulse", // https://primer.style/octicons/
 			"iconColor": "FireBrick"
 		}
+	},
+
+	/* ryu1kn.partial-diff */
+	"partialDiff.commandsOnContextMenu": {
+		"diffVisibleEditors": false,
+		"togglePreComparisonTextNormalizationRules": false
 	},
 
 	/* ryu1kn.text-marker */

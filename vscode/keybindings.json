@@ -377,16 +377,6 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
-	///* moveEditor↕Group */
-	//{
-	//	"key": "ctrl+alt+PageUp",
-	//	"command": "workbench.action.moveEditorLeftInGroup"
-	//},
-	//{
-	//	"key": "ctrl+alt+PageDown",
-	//	"command": "workbench.action.moveEditorRightInGroup"
-	//},
-
 	/* set "editorTextFocus" */
 	{
 		"key": "ctrl+9",
@@ -402,27 +392,30 @@
 		"key": "alt+9",
 		"command": "workbench.action.lastEditorInGroup"
 	},
-	//{ "command": "noop", "key": "alt+1" },
-	//{ "command": "noop", "key": "alt+2" },
-	//{ "command": "noop", "key": "alt+3" },
-	{ "command": "noop", "key": "alt+4" },
-	{ "command": "noop", "key": "alt+5" },
-	{ "command": "noop", "key": "alt+6" },
-	{ "command": "noop", "key": "alt+7" },
-	{ "command": "noop", "key": "alt+8" },
-	{
-		"key": "alt+0",
-		"command": "workbench.action.openEditorAtIndex"
-	},
 	{
 		"key": "alt+0",
 		"command": "workbench.action.compareEditor.focusOtherSide"
 	},
 
-	/* ±zoom */
+	/* time/out/line/focus */
+	{
+		"key": "alt+o",
+		"command": "timeline.focus"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "outline.focus"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "outline.collapse",
+		"when": "focusedView == 'outline'"
+	},
+
+	/* 🎛zoom */
 	{
 		"key": "ctrl+0",
-		"command": "-workbench.action.focusSideBar"
+		"command": "workbench.action.zoomReset"
 	},
 	{
 		"key": "ctrl+=",
@@ -431,10 +424,6 @@
 	{
 		"key": "ctrl+shift+=",
 		"command": "workbench.action.zoomOut"
-	},
-	{
-		"key": "ctrl+0",
-		"command": "workbench.action.zoomReset"
 	},
 
 	/* [VS] View.Navigate */
@@ -693,6 +682,21 @@
 		"command": "workbench.action.quickOpen"
 	},
 
+	/* v1.57 release removed this kb */
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+
+	/* Analogous to workbench.action.terminal.killEditor */
+	{
+		"key": "ctrl+f4",
+		"command": "workbench.action.terminal.kill",
+		// (terminalFindFocused || terminalFocus || terminalTabsFocus) && !(resourceScheme == 'vscode-terminal')
+		"when": "panelFocus && activePanel == 'terminal'"
+	},
+
 	/* keys in Terminal */
 	{ "key": "ctrl+e", "command": ""
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
@@ -795,15 +799,6 @@
 		"command": "editor.action.selectHighlights",
 		"when": "editorFocus"
 	},
-	{
-		"key": "shift+alt+o",
-		"command": "outline.focus"
-	},
-	{
-		"key": "shift+alt+o",
-		"command": "outline.collapse",
-		"when": "focusedView == 'outline'"
-	},
 
 	/* alefragnani.Bookmarks */
 	{ "command": "noop", "key": "ctrl+alt+j" },
@@ -849,6 +844,12 @@
 		"key": "shift+alt+,",
 		"command": "textmarker.goToPreviousHighlight",
 		"when": "editorTextFocus"
+	},
+
+	/* ryu1kn.partial-diff */
+	{
+		"key": "ctrl+k c",
+		"command": "extension.partialDiff.diffSelectionWithClipboard"
 	},
 
 	/* hediet.vscode-drawio */
@@ -936,13 +937,6 @@
 		"key": "ctrl+shift+v",
 		"command": "markdown.preview.toggleLock",
 		"when": "markdownPreviewFocus"
-	},
-
-	/* v1.57 release removed this kb */
-	{
-		"key": "ctrl+w",
-		"command": "workbench.action.closeWindow",
-		"when": "!editorIsOpen && !multipleEditorGroups"
 	},
 
 	/* Try and block a useless Tab */

@@ -9,7 +9,7 @@ dbankier.vscode-quick-select
 #eamodio.gitlens
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
-#Gruntfuggly.todo-tree
+Gruntfuggly.todo-tree
 hediet.vscode-drawio
 helixquar.randomeverything
 JohannesRudolph.file-ext-switcher
@@ -25,6 +25,7 @@ ms-vscode.hexeditor
 quicktype.quicktype
 #redhat.java
 #ryu1kn.edit-with-shell
+ryu1kn.partial-diff
 ryu1kn.text-marker
 samuelcolvin.jinjahtml
 #streetsidesoftware.code-spell-checker

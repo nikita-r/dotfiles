@@ -4,6 +4,8 @@
 *.cmd eol=crlf
 *.txt eol=crlf
 
+*.vsix binary
+
 # https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 /gitattributes linguist-language=gitattributes
 /gitconfig linguist-language=gitconfig

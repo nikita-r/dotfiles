@@ -472,21 +472,23 @@
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorWarning.foreground": "#fd3", // 50°
 
+			/* 200° */
+			"editorBracketMatch.border": "#689",
+			"editorBracketMatch.background": "#0000",
+			"panel.border": "#689",
+			"icon.foreground": "#cef",
+
+			/* 30° */
+			"editorCursor.foreground": "#f93",
+			"editorCursor.background": "#fff",
+
 			/* |~| */
 			"minimapSlider.background": "#6663",
 			"minimapSlider.hoverBackground": "#9993",
 			"minimapSlider.activeBackground": "#ccc3",
-			"minimap.findMatchHighlight": "#c6c",
 			"scrollbarSlider.background": "#6666",
 			"scrollbarSlider.hoverBackground": "#9996",
 			"scrollbarSlider.activeBackground": "#ccc6",
-			"editorOverviewRuler.findMatchForeground": "#A5A",
-
-			/* {^} */
-			"editorCursor.foreground": "#f93", // 30°
-			"editorCursor.background": "#fff",
-			"editorBracketMatch.border": "#689", // 200°
-			"editorBracketMatch.background": "#0000",
 
 			/* [_] */
 			"listFilterWidget.background": "#104030",
@@ -517,7 +519,6 @@
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.warningBackground": "#208060",
 			"editor.foldBackground": "#20806040",
-			"panel.border": "#698",
 
 			/* Hue: 300/360 */
 			"activityBar.background": "#402040",
@@ -531,6 +532,7 @@
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#402040",
+			"editorOverviewRuler.findMatchForeground": "#A5A",
 
 			/* chars hilite */
 			"editor.selectionBackground": "#135",
@@ -544,6 +546,7 @@
 			"editorUnicodeHighlight.border": "#737",
 			"minimap.selectionHighlight": "#357",
 			"minimap.selectionOccurrenceHighlight": "#666",
+			"minimap.findMatchHighlight": "#c6c",
 			//"terminal.selectionBackground": "#fff2",
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",

@@ -689,6 +689,17 @@
 		"when": "!editorIsOpen && !multipleEditorGroups"
 	},
 
+	/* Ctrl+F4 is by default not bound under Linux */
+	{
+		"key": "ctrl+f4",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+f4",
+		"command": "workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty"
+	},
+
 	/* Analogous to workbench.action.terminal.killEditor */
 	{
 		"key": "ctrl+f4",

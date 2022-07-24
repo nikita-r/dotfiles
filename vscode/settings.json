@@ -462,8 +462,9 @@
 		"editorOverviewRuler.deletedForeground": "#f00a",
 		"editorOverviewRuler.modifiedForeground": "#0afa",
 		"[* Dark*]": {
-			"bookmarks.overviewRuler": "#39f6",
 			"editorError.foreground": "#fff",
+			"bookmarks.overviewRuler": "#39f6",
+
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
@@ -476,7 +477,6 @@
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
 			"panel.border": "#689",
-			"icon.foreground": "#cef",
 
 			/* 30° */
 			"editorCursor.foreground": "#f93",
@@ -502,7 +502,7 @@
 		},
 
 		"[Default Dark+]": {
-
+			"icon.foreground": "#fec",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 			"editorInlayHint.background": "#404",

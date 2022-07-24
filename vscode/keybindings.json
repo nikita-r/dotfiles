@@ -461,11 +461,6 @@
 	},
 	{
 		"key": "ctrl+k ctrl+r",
-		"command": "search.action.refreshSearchResults",
-		"when": "activeViewlet == 'workbench.view.search'"
-	},
-	{
-		"key": "ctrl+k ctrl+r",
 		"command": "git.refresh",
 		"when": "activeViewlet == 'workbench.view.scm'"
 	},
@@ -488,6 +483,11 @@
 		"key": "ctrl+k ctrl+r",
 		"command": "todo-tree.refresh",
 		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "search.action.refreshSearchResults",
+		"when": "workbench.view.search.visible"
 	},
 
 	/* Ctrl+k *o */
@@ -567,7 +567,7 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+.", // Sublime Text defaults: "close_tag"
+		"key": "alt+.",
 		"command": "editor.emmet.action.splitJoinTag",
 		"when": "editorTextFocus"
 	},
@@ -581,15 +581,14 @@
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
-	/* expand_selection about tag */
 	{
 		"key": "alt+shift+a",
-		"command": "editor.emmet.action.balanceOut",
+		"command": "editor.emmet.action.balanceOut", // expand_selection~tag
 		"when": "editorFocus"
 	},
 	{
 		"key": "alt+shift+x",
-		"command": "editor.emmet.action.balanceIn",
+		"command": "editor.emmet.action.balanceIn", // shrink_selection~tag
 		"when": "editorFocus"
 	},
 
@@ -661,18 +660,15 @@
 	{
 		"key": "ctrl+shift+c",
 		"command": "search.action.clearSearchResults",
-		"when": "view.workbench.view.search.visible" // in case the View is placed under Panel
+		"when": "view.workbench.view.search.visible"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.output.action.clearOutput",
+		"when": "panelFocus && activePanel == 'workbench.panel.output'" // "focusedView == 'workbench.panel.output'"
 	},
 
 	/* Ctrl+Alt+Letter */
-	{
-		"key": "ctrl+alt+s",
-		"command": "workbench.action.focusActivityBar"
-	},
-	{
-		"key": "ctrl+alt+x",
-		"command": "workbench.action.inspectContextKeys"
-	},
 	{
 		"key": "ctrl+alt+p",
 		"command": "workbench.action.terminal.runRecentCommand"
@@ -680,6 +676,10 @@
 	{
 		"key": "ctrl+alt+e",
 		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+alt+x",
+		"command": "workbench.action.inspectContextKeys"
 	},
 
 	/* v1.57 release removed this kb */
@@ -700,12 +700,16 @@
 		"when": "activeEditorGroupEmpty"
 	},
 
-	/* Analogous to workbench.action.terminal.killEditor */
+	/* terminal.kill[Editor] */
 	{
 		"key": "ctrl+f4",
 		"command": "workbench.action.terminal.kill",
-		// (terminalFindFocused || terminalFocus || terminalTabsFocus) && !(resourceScheme == 'vscode-terminal')
-		"when": "panelFocus && activePanel == 'terminal'"
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus" // "panelFocus && activePanel == 'terminal'"
+	},
+	{
+		"key": "ctrl+f4",
+		"command": "workbench.action.terminal.killEditor",
+		"when": "resourceScheme == 'vscode-terminal'"
 	},
 
 	/* keys in Terminal */

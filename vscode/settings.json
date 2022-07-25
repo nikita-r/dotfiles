@@ -237,16 +237,16 @@
 				"custom": {
 					"borderWidth": "2px",
 					"borderStyle": "dashed",
-					"borderColor": "#379",
-					"overviewRulerColor": "#356"
+					"borderColor": "#abc",
+					"overviewRulerColor": "#abc"
 				}
 			},
 			"right": {
 				"custom": {
 					"borderWidth": "2px",
 					"borderStyle": "dashed",
-					"borderColor": "#379",
-					"overviewRulerColor": "#356"
+					"borderColor": "#abc",
+					"overviewRulerColor": "#abc"
 				}
 			}
 		}

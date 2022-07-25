@@ -6,6 +6,7 @@
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
+	$: workbench.action.focusNextPart: "f6"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
@@ -567,6 +568,16 @@
 		"when": "editorTextFocus"
 	},
 	{
+		"key": "alt+m",
+		"command": "editor.emmet.action.matchTag",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+m",
+		"command": "editor.emmet.action.updateTag",
+		"when": "editorTextFocus"
+	},
+	{
 		"key": "alt+.",
 		"command": "editor.emmet.action.splitJoinTag",
 		"when": "editorTextFocus"
@@ -769,6 +780,7 @@
 	//	"command": "workbench.action.terminal.scrollDown",
 	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	//},
+
 	/* "ctrl+`": do not toggleTerminal if Terminal is in focus */
 	{
 		"key": "ctrl+`",

@@ -87,6 +87,19 @@
 		"when": "editorHasSelection"
 	},
 
+	/* Ctrl+L */
+	{ "command": "noop", "key": "ctrl+l" },
+	{
+		"key": "ctrl+l",
+		"command": "expandLineSelection",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.debug.panel.action.clearReplAction",
+		"when": "inDebugRepl"
+	},
+
 	/* Q */
 	{
 		"key": "ctrl+q",
@@ -603,12 +616,6 @@
 		"when": "editorFocus"
 	},
 
-	/* new tab */
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.files.newUntitledFile"
-	},
-
 	/* Files Explorer */
 	{
 		"key": "ctrl+shift+e",
@@ -855,12 +862,6 @@
 		"command": "bookmarks.jumpToPrevious"
 	},
 
-	/* Remote: Show Remote Menu */
-	{
-		"key": "alt+\\",
-		"command": "workbench.action.remote.showMenu"
-	},
-
 	/* ryu1kn.text-marker */
 	{
 		"key": "alt+,",
@@ -972,4 +973,8 @@
 		"command": "editor.action.indentLines",
 		"when": "editorTextFocus && editorHasSelection && !inSnippetMode && !editorTabMovesFocus && !suggestWidgetVisible && !editorReadonly"
 	},
+
+	/*~*~*~*/
+	{ "key": "ctrl+t", "command": "workbench.action.files.newUntitledFile" },
+	{ "key": "alt+\\", "command": "workbench.action.remote.showMenu" },
 ]

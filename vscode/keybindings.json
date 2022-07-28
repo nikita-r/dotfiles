@@ -84,7 +84,7 @@
 	{
 		"key": "ctrl+shift+l",
 		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorHasSelection"
+		"when": "editorTextFocus && editorHasSelection"
 	},
 
 	/* Ctrl+L */
@@ -98,6 +98,11 @@
 		"key": "ctrl+l",
 		"command": "workbench.debug.panel.action.clearReplAction",
 		"when": "inDebugRepl"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.terminal.clear",
+		"when": "terminalFocus"
 	},
 
 	/* Q */
@@ -662,11 +667,6 @@
 	},
 	{
 		"key": "ctrl+shift+c",
-		"command": "testing.clearTestResults",
-		"when": "activeViewlet == 'workbench.view.extension.test'"
-	},
-	{
-		"key": "ctrl+shift+c",
 		"command": "references-view.clear",
 		"when": "activeViewlet == 'workbench.view.extension.references-view'"
 	},
@@ -679,11 +679,6 @@
 		"key": "ctrl+shift+c",
 		"command": "search.action.clearSearchResults",
 		"when": "view.workbench.view.search.visible"
-	},
-	{
-		"key": "ctrl+shift+c",
-		"command": "workbench.output.action.clearOutput",
-		"when": "panelFocus && activePanel == 'workbench.panel.output'" // "focusedView == 'workbench.panel.output'"
 	},
 
 	/* Ctrl+Alt+Letter */
@@ -975,6 +970,9 @@
 	},
 
 	/*~*~*~*/
-	{ "key": "ctrl+t", "command": "workbench.action.files.newUntitledFile" },
 	{ "key": "alt+\\", "command": "workbench.action.remote.showMenu" },
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.files.newUntitledFile"
+	},
 ]

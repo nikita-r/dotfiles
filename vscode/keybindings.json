@@ -506,7 +506,7 @@
 	{
 		"key": "ctrl+k ctrl+r",
 		"command": "search.action.refreshSearchResults",
-		"when": "workbench.view.search.visible"
+		"when": "view.workbench.view.search.visible"
 	},
 
 	/* Ctrl+k *o */
@@ -937,7 +937,7 @@
 	{
 		"key": "ctrl+shift+j",
 		"command": "workbench.action.openActiveLogOutputFile",
-		"when": "inOutput"
+		"when": "panelFocus && activePanel == 'workbench.panel.output'"
 	},
 	{
 		"key": "ctrl+shift+j",

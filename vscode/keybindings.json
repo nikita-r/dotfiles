@@ -87,6 +87,23 @@
 		"when": "editorTextFocus && editorHasSelection"
 	},
 
+	/* Ctrl+D complements */
+	{
+		"key": "shift+alt+d",
+		"command": "editor.action.selectHighlights",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.addSelectionToPreviousFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+d",
+		"command": "editor.action.moveSelectionToPreviousFindMatch",
+		"when": "editorFocus"
+	},
+
 	/* Ctrl+L */
 	{ "command": "noop", "key": "ctrl+l" },
 	{
@@ -360,6 +377,27 @@
 		"command": "workbench.action.compareEditor.previousChange",
 		"when": "inDiffEditor"
 	},
+	/* ReferenceSearch is not references-view */
+	{
+		"key": "f12",
+		"command": "-goToNextReference",
+		"when": "inReferenceSearchEditor || referenceSearchVisible"
+	},
+	{
+		"key": "shift+f12",
+		"command": "-goToPreviousReference",
+		"when": "inReferenceSearchEditor || referenceSearchVisible"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "goToNextReference",
+		"when": "inReferenceSearchEditor || referenceSearchVisible"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "goToPreviousReference",
+		"when": "inReferenceSearchEditor || referenceSearchVisible"
+	},
 	/* ?panelFocus */
 	{
 		"key": "ctrl+]",
@@ -469,6 +507,53 @@
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
 
+	/* workbench.view # */
+	{
+		"key": "ctrl+k 1",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+k 1",
+		"command": "workbench.files.action.collapseExplorerFolders",
+		"when": "focusedView == 'workbench.explorer.fileView'"
+	},
+	{
+		"key": "ctrl+k 2",
+		"command": "workbench.view.search"
+	},
+	{
+		"key": "ctrl+k 2",
+		"command": "search.action.collapseSearchResults",
+		"when": "focusedView == 'workbench.view.search'"
+	},
+	{
+		"key": "ctrl+k 3",
+		"command": "workbench.view.scm"
+	},
+	{
+		"key": "ctrl+k 3",
+		"command": "workbench.scm.action.collapseAllRepositories",
+		"when": "focusedView == 'workbench.scm'"
+	},
+	{
+		"key": "ctrl+k 4",
+		"command": "workbench.view.debug"
+	},
+	{
+		"key": "ctrl+k 4",
+		"command": "workbench.debug.action.focusRepl",
+		"when": "sideBarFocus && activeViewlet == 'workbench.view.debug'"
+	},
+	{
+		"key": "ctrl+k 5",
+		"command": "workbench.view.extension.test"
+	},
+	{
+		"key": "ctrl+k 5",
+		"command": "testing.collapseAll",
+		"when": "focusedView == 'workbench.view.testing'"
+	},
+
 	/* Ctrl+k r */
 	{ "command": "revealInExplorer", "key": "ctrl+k r" },
 	/* Ctrl+k Ctrl+r */
@@ -477,6 +562,11 @@
 		"key": "ctrl+k ctrl+r",
 		"command": "workbench.files.action.refreshFilesExplorer",
 		"when": "activeViewlet == 'workbench.view.explorer'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "search.action.refreshSearchResults",
+		"when": "activeViewlet == 'workbench.view.search'"
 	},
 	{
 		"key": "ctrl+k ctrl+r",
@@ -502,11 +592,6 @@
 		"key": "ctrl+k ctrl+r",
 		"command": "todo-tree.refresh",
 		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
-	},
-	{
-		"key": "ctrl+k ctrl+r",
-		"command": "search.action.refreshSearchResults",
-		"when": "view.workbench.view.search.visible"
 	},
 
 	/* Ctrl+k *o */
@@ -678,7 +763,7 @@
 	{
 		"key": "ctrl+shift+c",
 		"command": "search.action.clearSearchResults",
-		"when": "view.workbench.view.search.visible"
+		"when": "searchViewletVisible"
 	},
 
 	/* Ctrl+Alt+Letter */
@@ -822,11 +907,6 @@
 	{
 		"key": "shift+alt+c",
 		"command": "copyRelativeFilePath"
-	},
-	{
-		"key": "shift+alt+d",
-		"command": "editor.action.selectHighlights",
-		"when": "editorFocus"
 	},
 
 	/* alefragnani.Bookmarks */

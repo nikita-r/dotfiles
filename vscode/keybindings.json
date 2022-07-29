@@ -178,10 +178,6 @@
 		"command": "editor.unfoldAll"
 	},
 	{
-		"key": "ctrl+k f2",
-		"command": "togglePeekWidgetFocus"
-	},
-	{
 		"key": "ctrl+/",
 		"command": "editor.action.commentLine"
 	},
@@ -452,6 +448,11 @@
 	{
 		"key": "alt+0",
 		"command": "workbench.action.compareEditor.focusOtherSide"
+	},
+	{
+		"key": "alt+0",
+		"command": "togglePeekWidgetFocus",
+		"when": "inReferenceSearchEditor || referenceSearchVisible"
 	},
 
 	/* time/out/line/focus */
@@ -845,17 +846,17 @@
 		"command": "workbench.action.terminal.sizeToContentWidth",
 		"when": "terminalFindFocused || terminalTabsFocus"
 	},
-	/* In addition to "shift+page*" */
-	{
-		"key": "alt+pageup",
-		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "alt+pagedown",
-		"command": "workbench.action.terminal.scrollDownPage",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
+	///* In addition to "shift+page*" */
+	//{
+	//	"key": "alt+pageup",
+	//	"command": "workbench.action.terminal.scrollUpPage",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
+	//{
+	//	"key": "alt+pagedown",
+	//	"command": "workbench.action.terminal.scrollDownPage",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
 	///* scroll a line */
 	//{
 	//	"key": "ctrl+up",
@@ -1040,6 +1041,28 @@
 		"key": "ctrl+shift+v",
 		"command": "markdown.preview.toggleLock",
 		"when": "markdownPreviewFocus"
+	},
+
+	/* Terminal defaults under the corrected "when" */
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.action.terminal.copySelection",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "workbench.action.terminal.paste",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+pageup",
+		"command": "workbench.action.terminal.scrollUpPage",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+pagedown",
+		"command": "workbench.action.terminal.scrollDownPage",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* Try and block a useless Tab */

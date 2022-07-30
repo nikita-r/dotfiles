@@ -516,7 +516,7 @@
 	{
 		"key": "ctrl+k 1",
 		"command": "workbench.files.action.collapseExplorerFolders",
-		"when": "focusedView == 'workbench.explorer.fileView'"
+		"when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
 	},
 	{
 		"key": "ctrl+k 2",
@@ -745,7 +745,7 @@
 
 	/* Ctrl+Shift+c */
 	{ "command": "noop", "key": "ctrl+shift+c" },
-	/* Reset the View / Clear Results */
+	/* Reset the View ( Clear ) */
 	{
 		"key": "ctrl+shift+c",
 		"command": "macros.resetExplorerView", /* ctf0.macros */
@@ -755,6 +755,11 @@
 		"key": "ctrl+shift+c",
 		"command": "references-view.clear",
 		"when": "activeViewlet == 'workbench.view.extension.references-view'"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "todo-tree.filterClear",
+		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
 	},
 	{
 		"key": "ctrl+shift+c",
@@ -812,13 +817,17 @@
 	},
 
 	/* keys in Terminal */
-	{ "key": "ctrl+e", "command": ""
+	{ "command": "", "key": "ctrl+c"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	{ "key": "ctrl+n", "command": ""
+	{ "command": "", "key": "ctrl+e"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	{ "key": "ctrl+p", "command": ""
+	{ "command": "", "key": "ctrl+n"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	{ "key": "ctrl+w", "command": ""
+	{ "command": "", "key": "ctrl+p"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+v"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+w"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	/* ?terminalTabsFocus */
 	{

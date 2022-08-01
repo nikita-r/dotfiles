@@ -4,6 +4,7 @@
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
+	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.focusNextPart: "f6"
@@ -597,7 +598,7 @@
 
 	/* Ctrl+k *o */
 	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
-	{ "key": "ctrl+k ctrl+o", "command": "editor.foldAll" },
+	{ "key": "ctrl+k ctrl+o", "command": "editor.foldAllExcept" },
 
 	/* selection anchor */
 	{ "command": "noop", "key": "ctrl+k ctrl+k" },
@@ -816,7 +817,8 @@
 		"when": "resourceScheme == 'vscode-terminal'"
 	},
 
-	/* keys in Terminal */
+	/* Terminal */
+	/* Unbind some of the control codes. */
 	{ "command": "", "key": "ctrl+c"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+e"
@@ -851,11 +853,31 @@
 		"when": "terminalTabsFocus"
 	},
 	{
+		"key": "f3",
+		"command": "workbench.action.terminal.findNext",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "shift+f3",
+		"command": "workbench.action.terminal.findPrevious",
+		"when": "terminalTabsFocus"
+	},
+	{
 		"key": "alt+z",
 		"command": "workbench.action.terminal.sizeToContentWidth",
 		"when": "terminalFindFocused || terminalTabsFocus"
 	},
-	///* In addition to "shift+page*" */
+	/* scroll */
+	{
+		"key": "alt+up",
+		"command": "workbench.action.terminal.scrollUp",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "workbench.action.terminal.scrollDown",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
 	//{
 	//	"key": "alt+pageup",
 	//	"command": "workbench.action.terminal.scrollUpPage",
@@ -866,17 +888,68 @@
 	//	"command": "workbench.action.terminal.scrollDownPage",
 	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	//},
-	///* scroll a line */
-	//{
-	//	"key": "ctrl+up",
-	//	"command": "workbench.action.terminal.scrollUp",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
-	//{
-	//	"key": "ctrl+down",
-	//	"command": "workbench.action.terminal.scrollDown",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
+	{
+		"key": "shift+pageup",
+		"command": "workbench.action.terminal.scrollUpPage",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+pagedown",
+		"command": "workbench.action.terminal.scrollDownPage",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+home",
+		"command": "workbench.action.terminal.scrollToTop",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+end",
+		"command": "workbench.action.terminal.scrollToBottom",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+home",
+		"command": "workbench.action.terminal.scrollToTop",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+end",
+		"command": "workbench.action.terminal.scrollToBottom",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* Terminal Group Focus */
+	{
+		"key": "alt+left",
+		"command": "workbench.action.terminal.focusPreviousPane",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "alt+right",
+		"command": "workbench.action.terminal.focusNextPane",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+pageup",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* [un]split */
+	{
+		"key": "ctrl+clear",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+clear",
+		"command": "workbench.action.terminal.unsplit",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
 
 	/* "ctrl+`": do not toggleTerminal if Terminal is in focus */
 	{
@@ -1052,7 +1125,7 @@
 		"when": "markdownPreviewFocus"
 	},
 
-	/* Terminal defaults under the corrected "when" */
+	/* Copy/Paste in Terminal */
 	{
 		"key": "ctrl+shift+c",
 		"command": "workbench.action.terminal.copySelection",
@@ -1061,16 +1134,6 @@
 	{
 		"key": "ctrl+shift+v",
 		"command": "workbench.action.terminal.paste",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "shift+pageup",
-		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "shift+pagedown",
-		"command": "workbench.action.terminal.scrollDownPage",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 

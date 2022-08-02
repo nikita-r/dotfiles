@@ -200,8 +200,8 @@
 	},
 
 	/* Alt+Arrow */
-	{ "command": "noop", "key": "alt+left" },
-	{ "command": "noop", "key": "alt+right" },
+	{ "command": "noop", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
+	{ "command": "noop", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
 	/* Sublime Text defaults: "move", "by": "subword*s" */
 	{
 		"key": "alt+left",
@@ -212,6 +212,27 @@
 		"key": "alt+right",
 		"command": "cursorWordPartRight",
 		"when": "editorTextFocus"
+	},
+	/* listFocus */
+	{
+		"key": "alt+up",
+		"command": "list.scrollUp",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "list.scrollDown",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "alt+left",
+		"command": "list.scrollLeft",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "alt+right",
+		"command": "list.scrollRight",
+		"when": "listFocus && !inputFocus"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */

@@ -317,7 +317,7 @@
 		"SteelBlue",
 		"Sienna",
 		"OliveDrab",
-		"IndianRed",
+		"#dfbf20ff",
 	],
 	"textmarker.defaultHighlightColor": "DarkSlateGray",
 
@@ -426,6 +426,7 @@
 
 	"terminal.integrated.commandsToSkipShell": [
 		"notifications.showList",
+		"scrollPageDown", "scrollPageUp",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.toggleSidebarVisibility",
 	],
@@ -458,9 +459,9 @@
 		/* diff+markers */
 		"diffEditor.insertedTextBackground": "#0f02",
 		"diffEditor.removedTextBackground": "#f002",
-		"editorOverviewRuler.addedForeground": "#0f0a",
-		"editorOverviewRuler.deletedForeground": "#f00a",
-		"editorOverviewRuler.modifiedForeground": "#0afa",
+		"editorOverviewRuler.addedForeground": "#0f0a", // 120°
+		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
+		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
 		"[* Dark*]": {
 			"editorError.foreground": "#fff",
 			"bookmarks.overviewRuler": "#39f6",
@@ -473,14 +474,9 @@
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorWarning.foreground": "#fd3", // 50°
 
-			/* 200° */
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
-			"panel.border": "#689",
-
-			/* 30° */
-			"editorCursor.foreground": "#f93",
-			"editorCursor.background": "#fff",
+			"panel.border": "#689", // 200°
 
 			/* |~| */
 			"minimapSlider.background": "#6663",
@@ -502,9 +498,11 @@
 		},
 
 		"[Default Dark+]": {
-			"icon.foreground": "#fec",
+			"icon.foreground": "#fec", // 40°
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
+			"editorCursor.foreground": "#f93", // 30°
+			"editorCursor.background": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
 
@@ -535,7 +533,7 @@
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 
 			/* chars hilite */
-			"editor.selectionBackground": "#135",
+			"editor.selectionBackground": "#135", // 210°
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.selectionHighlightBackground": "#aaa3",
 			"editor.findMatchBackground": "#515",

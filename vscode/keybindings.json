@@ -213,7 +213,7 @@
 		"command": "cursorWordPartRight",
 		"when": "editorTextFocus"
 	},
-	/* listFocus */
+	/* list.scroll */
 	{
 		"key": "alt+up",
 		"command": "list.scrollUp",
@@ -416,17 +416,6 @@
 		"command": "goToPreviousReference",
 		"when": "inReferenceSearchEditor || referenceSearchVisible"
 	},
-	/* ?panelFocus */
-	{
-		"key": "ctrl+]",
-		"command": "workbench.action.nextPanelView",
-		"when": "panelFocus"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "workbench.action.previousPanelView",
-		"when": "panelFocus"
-	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -522,6 +511,17 @@
 	{
 		"key": "ctrl+shift+]",
 		"command": "workbench.action.navigateForwardInEditLocations"
+	},
+	/* ?panelFocus */
+	{
+		"key": "ctrl+shift+]",
+		"command": "workbench.action.nextPanelView",
+		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+shift+[",
+		"command": "workbench.action.previousPanelView",
+		"when": "panelFocus"
 	},
 
 	/* Ctrl+k *s */
@@ -840,6 +840,10 @@
 
 	/* Terminal */
 	/* Unbind some of the control codes. */
+	{ "command": "", "key": "ctrl+["
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+]"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+c"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+e"

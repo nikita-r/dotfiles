@@ -425,10 +425,15 @@
 	"terminal.integrated.persistentSessionScrollback": 4095,
 
 	"terminal.integrated.commandsToSkipShell": [
-		"notifications.showList",
+		"copyRelativeFilePath",
+		"noop", "notifications.showList",
+		"outline.focus",
 		"scrollPageDown", "scrollPageUp",
+		"timeline.focus",
 		"workbench.action.focusQuickOpen",
+		"workbench.action.terminal.moveToEditorInstance",
 		"workbench.action.toggleSidebarVisibility",
+		"workbench.view.extension.bookmarks",
 	],
 
 	"terminal.integrated.profiles.windows": {

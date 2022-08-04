@@ -975,12 +975,33 @@
 		"command": "workbench.action.terminal.unsplit",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-
-	/* "ctrl+`": do not toggleTerminal if Terminal is in focus */
+	/* ctrl/back/slash */
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.terminal.moveToEditorInstance",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.terminal.split",
+		"when": "resourceScheme == 'vscode-terminal'"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
+		"args": { "text": "\u001f" } // readline undo
+	},
+	/* "ctrl+`": toggle only towards the panel */
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "resourceScheme == 'vscode-terminal'"
 	},
 
 	/* View: Toggle Sizes */

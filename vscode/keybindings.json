@@ -183,6 +183,38 @@
 		"command": "editor.action.commentLine"
 	},
 
+	/* F3 */
+	{
+		"key": "f3",
+		"command": "editor.action.nextMatchFindAction"
+	},
+	{
+		"key": "shift+f3",
+		"command": "editor.action.previousMatchFindAction"
+	},
+	{
+		"key": "f3",
+		"command": "workbench.action.terminal.findNext",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+f3",
+		"command": "workbench.action.terminal.findPrevious",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+
+	/* list.find */
+	{
+		"key": "ctrl+f",
+		"command": "-list.find",
+		"when": "listFocus && listSupportsFind"
+	},
+	{
+		"key": "/",
+		"command": "list.find",
+		"when": "listFocus && !inputFocus"
+	},
+
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
 	{ "command": "noop", "key": "ctrl+alt+up" },
 	{ "command": "noop", "key": "ctrl+alt+down" },
@@ -441,7 +473,7 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
-	/* set "editorTextFocus" */
+	/* antipode to "ctrl+`" */
 	{
 		"key": "ctrl+9",
 		"command": "workbench.action.focusActiveEditorGroup"
@@ -537,7 +569,7 @@
 	},
 	{
 		"key": "ctrl+k 1",
-		"command": "workbench.files.action.collapseExplorerFolders",
+		"command": "workbench.action.saveWorkspaceAs",
 		"when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
 	},
 	{
@@ -546,7 +578,7 @@
 	},
 	{
 		"key": "ctrl+k 2",
-		"command": "search.action.collapseSearchResults",
+		"command": "search.action.openNewEditor",
 		"when": "focusedView == 'workbench.view.search'"
 	},
 	{
@@ -555,7 +587,7 @@
 	},
 	{
 		"key": "ctrl+k 3",
-		"command": "workbench.scm.action.collapseAllRepositories",
+		"command": "workbench.scm.action.expandAllRepositories",
 		"when": "focusedView == 'workbench.scm'"
 	},
 	{
@@ -573,7 +605,7 @@
 	},
 	{
 		"key": "ctrl+k 5",
-		"command": "testing.collapseAll",
+		"command": "testing.runSelected",
 		"when": "focusedView == 'workbench.view.testing'"
 	},
 
@@ -878,16 +910,6 @@
 		"when": "terminalTabsFocus"
 	},
 	{
-		"key": "f3",
-		"command": "workbench.action.terminal.findNext",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "shift+f3",
-		"command": "workbench.action.terminal.findPrevious",
-		"when": "terminalTabsFocus"
-	},
-	{
 		"key": "alt+z",
 		"command": "workbench.action.terminal.sizeToContentWidth",
 		"when": "terminalFindFocused || terminalTabsFocus"
@@ -923,16 +945,16 @@
 		"command": "workbench.action.terminal.scrollDownPage",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	{
-		"key": "shift+home",
-		"command": "workbench.action.terminal.scrollToTop",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "shift+end",
-		"command": "workbench.action.terminal.scrollToBottom",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
+	//{
+	//	"key": "shift+home",
+	//	"command": "workbench.action.terminal.scrollToTop",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
+	//{
+	//	"key": "shift+end",
+	//	"command": "workbench.action.terminal.scrollToBottom",
+	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	//},
 	{
 		"key": "ctrl+home",
 		"command": "workbench.action.terminal.scrollToTop",

@@ -3,6 +3,7 @@
 	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
+	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
@@ -15,10 +16,9 @@
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	*/
 
-	{ "command": "noop", "key": "ctrl+shift+i" },
 	{ "command": "noop", "key": "ctrl+shift+." },
-	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
+	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
@@ -441,12 +441,12 @@
 	{
 		"key": "ctrl+]",
 		"command": "goToNextReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible"
+		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
 	},
 	{
 		"key": "ctrl+[",
 		"command": "goToPreviousReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible"
+		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
 	},
 
 	/* vim-like panes navigation */
@@ -587,7 +587,7 @@
 	},
 	{
 		"key": "ctrl+k 3",
-		"command": "workbench.scm.action.expandAllRepositories",
+		"command": "git-graph.view",
 		"when": "focusedView == 'workbench.scm'"
 	},
 	{
@@ -601,11 +601,11 @@
 	},
 	{
 		"key": "ctrl+k 5",
-		"command": "workbench.view.extension.test"
+		"command": "workbench.view.testing.focus"
 	},
 	{
 		"key": "ctrl+k 5",
-		"command": "testing.runSelected",
+		"command": "testing.openOutputPeek",
 		"when": "focusedView == 'workbench.view.testing'"
 	},
 
@@ -651,7 +651,7 @@
 
 	/* Ctrl+k *o */
 	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
-	{ "key": "ctrl+k ctrl+o", "command": "editor.foldAllExcept" },
+	{ "key": "ctrl+k ctrl+o", "command": "addRootFolder" },
 
 	/* selection anchor */
 	{ "command": "noop", "key": "ctrl+k ctrl+k" },
@@ -687,19 +687,47 @@
 
 	/* Peek Call Hierarchy */
 	{
-		"key": "ctrl+alt+h",
+		"key": "ctrl+k i",
 		"command": "editor.showCallHierarchy",
-		"when": "editorHasCallHierarchyProvider && editorTextFocus"
+		"when": "editorTextFocus"
 	},
 	{
-		"key": "ctrl+alt+h",
+		"key": "ctrl+k i",
 		"command": "editor.showIncomingCalls",
 		"when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
 	},
 	{
-		"key": "ctrl+alt+h",
+		"key": "ctrl+k i",
 		"command": "editor.showOutgoingCalls",
 		"when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
+	},
+	{
+		"key": "shift+enter",
+		"command": "-editor.refocusCallHierarchy",
+		"when": "callHierarchyVisible"
+	},
+
+	/* ? */
+	{
+		"key": "ctrl+k y",
+		"command": "editor.showTypeHierarchy"
+	},
+
+	/* references-view */
+	{
+		"key": "ctrl+k ctrl+h",
+		"command": "references-view.showCallHierarchy",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+h",
+		"command": "references-view.showIncomingCalls",
+		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode == 'showOutgoing'"
+	},
+	{
+		"key": "ctrl+k ctrl+h",
+		"command": "references-view.showOutgoingCalls",
+		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode == 'showIncoming'"
 	},
 
 	/* Alt+Letter */
@@ -880,9 +908,17 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+e"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+g"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+h"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+n"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+p"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+q"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+s"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+v"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
@@ -908,6 +944,19 @@
 		"key": "alt+w",
 		"command": "workbench.action.terminal.toggleFindWholeWord",
 		"when": "terminalTabsFocus"
+	},
+	/* Z */
+	{
+		"key": "ctrl+z",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalTabsFocus",
+		"args": { "text": "\u001a" } // ^Z
+	},
+	{
+		"key": "ctrl+shift+z", // default is "ctrl+shift+2"
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocus || terminalTabsFocus",
+		"args": { "text": "\u0000" }
 	},
 	{
 		"key": "alt+z",
@@ -1113,16 +1162,31 @@
 		"when": "!findWidgetVisible"
 	},
 
-	/* Ctrl*I */
+	/* Ctrl+k Ctrl+f */
+	{ "command": "noop", "key": "ctrl+k ctrl+f" },
 	{
-		"key": "ctrl+k i",
-		"command": "editor.action.format"
+		"key": "ctrl+k ctrl+f",
+		"command": "editor.action.format",
+		"when": "editorTextFocus"
 	},
 	{
-		"key": "ctrl+k i",
+		"key": "ctrl+k ctrl+f",
 		"command": "editor.action.formatDocument.none",
-		"when": "!editorHasDocumentFormattingProvider"
+		"when": "editorTextFocus && !editorHasDocumentFormattingProvider"
 	},
+	{
+		"key": "ctrl+k ctrl+f",
+		"command": "editor.action.formatSelection",
+		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "ctrl+k ctrl+f",
+		"command": "editor.action.formatDocument.none",
+		"when": "editorTextFocus && editorHasSelection && !editorHasDocumentSelectionFormattingProvider"
+	},
+
+	/* Ctrl+Shift+i */
+	{ "command": "noop", "key": "ctrl+shift+i" },
 	{
 		"key": "ctrl+shift+i",
 		"command": "editor.action.triggerParameterHints",

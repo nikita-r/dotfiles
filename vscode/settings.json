@@ -53,6 +53,7 @@
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
+	//"editor.inlineSuggest.enabled": false,
 	"editor.lightbulb.enabled": false,
 
 	"editor.quickSuggestions": {
@@ -78,6 +79,7 @@
 	"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
+	"editor.suggest.showInlineDetails": false,
 	"editor.suggest.showStatusBar": true,
 
 	/* . . . */
@@ -411,7 +413,7 @@
 	"debug.confirmOnExit": "always",
 	"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
-	//"debug.inlineValues": "on",
+	"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.showBreakpointsInOverviewRuler": true,
 	"debug.showSubSessionsInToolBar": true,
@@ -479,9 +481,10 @@
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorWarning.foreground": "#fd3", // 50°
 
+			/* (:) */
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
-			"panel.border": "#689", // 200°
+			"panel.border": "#689",
 
 			/* |~| */
 			"minimapSlider.background": "#6663",
@@ -544,7 +547,7 @@
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090",
 			"editor.findMatchHighlightBackground": "#a0a6",
-			"editor.findRangeHighlightBackground": "#66e3",
+			"editor.findRangeHighlightBackground": "#66e3", // 240°
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",
 			"minimap.selectionHighlight": "#357",
@@ -564,6 +567,8 @@
 			"debugIcon.breakpointForeground": "#c63",
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
 			"debugIcon.breakpointStackframeForeground": "#c3c",
+			"editor.inlineValuesBackground": "#333",
+			"editor.inlineValuesForeground": "#999",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",

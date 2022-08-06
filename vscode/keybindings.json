@@ -313,6 +313,27 @@
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
 	},
+	/* problematic view */
+	{
+		"key": "ctrl+up",
+		"command": "problems.action.showSinglelineMessage",
+		"when": "focusedView == 'workbench.panel.markers.view'"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "problems.action.showMultilineMessage",
+		"when": "focusedView == 'workbench.panel.markers.view'"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTable",
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'tree'"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode != 'tree'"
+	},
 
 	/* Retain F8 for execSelection */
 	{
@@ -1246,15 +1267,20 @@
 		"command": "markdown.showSource",
 		"when": "markdownPreviewFocus"
 	},
+	//{
+	//	"key": "ctrl+shift+v",
+	//	"command": "markdown.showPreview",
+	//	"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	//},
+	//{
+	//	"key": "ctrl+shift+v",
+	//	"command": "markdown.preview.toggleLock",
+	//	"when": "markdownPreviewFocus"
+	//},
 	{
 		"key": "ctrl+shift+v",
 		"command": "markdown.showPreview",
-		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+shift+v",
-		"command": "markdown.preview.toggleLock",
-		"when": "markdownPreviewFocus"
+		"when": "resourceLangId == 'markdown'"
 	},
 
 	/* Copy/Paste in Terminal */

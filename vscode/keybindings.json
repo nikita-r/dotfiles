@@ -19,6 +19,7 @@
 	{ "command": "noop", "key": "ctrl+shift+." },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "command": "noop", "key": "ctrl+shift+n" },
+	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
@@ -234,6 +235,7 @@
 	/* Alt+Arrow */
 	{ "command": "noop", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
 	{ "command": "noop", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
+
 	/* Sublime Text defaults: "move", "by": "subword*s" */
 	{
 		"key": "alt+left",
@@ -245,26 +247,39 @@
 		"command": "cursorWordPartRight",
 		"when": "editorTextFocus"
 	},
+
 	/* list.scroll */
+	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
+	{ "key": "ctrl+down", "when": "listFocus", "command": "noop" },
 	{
 		"key": "alt+up",
 		"command": "list.scrollUp",
-		"when": "listFocus && !inputFocus"
+		"when": "listFocus && !inputFocus && !notebookCellListFocused"
 	},
 	{
 		"key": "alt+down",
 		"command": "list.scrollDown",
-		"when": "listFocus && !inputFocus"
+		"when": "listFocus && !inputFocus && !notebookCellListFocused"
 	},
 	{
 		"key": "alt+left",
 		"command": "list.scrollLeft",
-		"when": "listFocus && !inputFocus"
+		"when": "listFocus && !inputFocus && !notebookCellListFocused"
 	},
 	{
 		"key": "alt+right",
 		"command": "list.scrollRight",
-		"when": "listFocus && !inputFocus"
+		"when": "listFocus && !inputFocus && !notebookCellListFocused"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "notebook.cell.focusOutOutput",
+		"when": "notebookCellFocused"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "notebook.cell.focusInOutput",
+		"when": "notebookCellFocused"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -287,12 +302,12 @@
 	{
 		"key": "shift+alt+up",
 		"command": "notebook.cell.copyUp",
-		"when": "notebookEditorFocused && !inputFocus"
+		"when": "notebookCellFocused && !inputFocus"
 	},
 	{
 		"key": "shift+alt+down",
 		"command": "notebook.cell.copyDown",
-		"when": "notebookEditorFocused && !inputFocus"
+		"when": "notebookCellFocused && !inputFocus"
 	},
 
 	/* Jump Problems */
@@ -313,6 +328,7 @@
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
 	},
+
 	/* problematic view */
 	{
 		"key": "ctrl+up",
@@ -325,9 +341,9 @@
 		"when": "focusedView == 'workbench.panel.markers.view'"
 	},
 	{
-		"key": "ctrl+left",
+		"key": "ctrl+left", // Useful in a Tree to list.collapseAll
 		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
-		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode != 'tree'"
 	},
 	{
 		"key": "ctrl+right",
@@ -337,7 +353,7 @@
 	{
 		"key": "ctrl+right",
 		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
-		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode != 'tree'"
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
 	},
 
 	/* Retain F8 for execSelection */
@@ -753,12 +769,12 @@
 	{
 		"key": "ctrl+up",
 		"command": "references-view.showIncomingCalls",
-		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode != 'showIncoming'"
+		"when": "focusedView == 'references-view.tree' && reference-list.source == 'callHierarchy'" // references-view.callHierarchyMode != 'showIncoming'
 	},
 	{
 		"key": "ctrl+down",
 		"command": "references-view.showOutgoingCalls",
-		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode != 'showOutgoing'"
+		"when": "focusedView == 'references-view.tree' && reference-list.source == 'callHierarchy'" // references-view.callHierarchyMode != 'showOutgoing'
 	},
 
 	/* Alt+Letter */
@@ -766,6 +782,11 @@
 		"key": "alt+j",
 		"command": "editor.action.joinLines",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+j",
+		"command": "notebook.cell.joinBelow",
+		"when": "notebookCellFocused && !inputFocus"
 	},
 	{
 		"key": "alt+a",
@@ -1168,6 +1189,28 @@
 		"command": "bookmarks.jumpToPrevious"
 	},
 
+	/* alefragnani.Bookmarks is not functional in Notebook Editor */
+	{
+		"key": "shift+alt+k",
+		"command": "notebook.revealRunningCell",
+		"when": "activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "shift+alt+l",
+		"command": "notebook.cell.toggleLineNumbers",
+		"when": "activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "shift+alt+n",
+		"command": "notebook.focusNextEditor",
+		"when": "notebookCellFocused"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "notebook.focusPreviousEditor",
+		"when": "notebookCellFocused"
+	},
+
 	/* ryu1kn.text-marker */
 	{
 		"key": "alt+,",
@@ -1214,6 +1257,11 @@
 		"key": "ctrl+k ctrl+f",
 		"command": "editor.action.formatDocument.none",
 		"when": "editorTextFocus && editorHasSelection && !editorHasDocumentSelectionFormattingProvider"
+	},
+	{
+		"key": "ctrl+k ctrl+f",
+		"command": "notebook.formatCell",
+		"when": "notebookCellFocused && !inputFocus"
 	},
 
 	/* Ctrl+Shift+i */

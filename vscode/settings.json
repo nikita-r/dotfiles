@@ -222,13 +222,11 @@
 	"gitlens.views.formats.commits.label": "${❰ tips ❱ ┇ }${message}",
 	"gitlens.views.repositories.autoRefresh": false,
 
+	/* grapecity.gc-excelviewer */
 	"csv-preview.capitalizeHeaders": false,
 	"csv-preview.formatValues": "unquoted",
 	"csv-preview.lineNumbers": "source",
 	"csv-preview.skipComments": true,
-
-	"editWithShell.shell.windows": "PowerShell.exe",
-	"editWithShell.shellArgs.windows": [ "-NoProfile", "-Command" ],
 
 	"highlight-matching-tag.highlightFromContent": true,
 	"highlight-matching-tag.highlightSelfClosing": true,
@@ -304,6 +302,10 @@
 			"iconColor": "FireBrick"
 		}
 	},
+
+	/* ryu1kn.edit-with-shell */
+	"editWithShell.shell.windows": "PowerShell.exe",
+	"editWithShell.shellArgs.windows": [ "-NoProfile", "-Command" ],
 
 	/* ryu1kn.partial-diff */
 	"partialDiff.commandsOnContextMenu": {
@@ -484,7 +486,7 @@
 			/* (:) */
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
-			"panel.border": "#689",
+			"panel.border": "#689", // 200°
 
 			/* |~| */
 			"minimapSlider.background": "#6663",
@@ -533,16 +535,25 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
+			"menu.background": "#333033",
 			"menu.border": "#804080",
+			"notificationCenterHeader.background": "#332233",
+			"notifications.border": "#332233",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#402040",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 
-			/* chars hilite */
-			"editor.selectionBackground": "#135", // 210°
+			/* Selective Hue: 210/360 */
+			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
+			//"terminal.selectionBackground": "#fff2",
+			"list.activeSelectionBackground": "#147",
+			"list.inactiveSelectionBackground": "#345",
+			"menu.selectionBackground": "#147",
+
+			/* chars hilite */
 			"editor.selectionHighlightBackground": "#aaa3",
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090",
@@ -550,10 +561,9 @@
 			"editor.findRangeHighlightBackground": "#66e3", // 240°
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",
-			"minimap.selectionHighlight": "#357",
+			"minimap.selectionHighlight": "#69c",
 			"minimap.selectionOccurrenceHighlight": "#666",
 			"minimap.findMatchHighlight": "#c6c",
-			//"terminal.selectionBackground": "#fff2",
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			"searchEditor.findMatchBackground": "#515",

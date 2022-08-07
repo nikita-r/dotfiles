@@ -325,6 +325,11 @@
 		"when": "focusedView == 'workbench.panel.markers.view'"
 	},
 	{
+		"key": "ctrl+left",
+		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
+	},
+	{
 		"key": "ctrl+right",
 		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTable",
 		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'tree'"
@@ -742,13 +747,18 @@
 	},
 	{
 		"key": "ctrl+k ctrl+h",
-		"command": "references-view.showIncomingCalls",
-		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode == 'showOutgoing'"
+		"command": "references-view.pickFromHistory",
+		"when": "focusedView == 'references-view.tree'"
 	},
 	{
-		"key": "ctrl+k ctrl+h",
+		"key": "ctrl+up",
+		"command": "references-view.showIncomingCalls",
+		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode != 'showIncoming'"
+	},
+	{
+		"key": "ctrl+down",
 		"command": "references-view.showOutgoingCalls",
-		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode == 'showIncoming'"
+		"when": "focusedView == 'references-view.tree' && references-view.callHierarchyMode != 'showOutgoing'"
 	},
 
 	/* Alt+Letter */
@@ -920,14 +930,14 @@
 	},
 
 	/* Terminal */
+	{ "command": "", "key": "ctrl+e", "when": "terminalFocus" },
+	{ "command": "", "key": "ctrl+a", "when": "terminalFocus" },
 	/* Unbind some of the control codes. */
 	{ "command": "", "key": "ctrl+["
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+]"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+c"
-	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	{ "command": "", "key": "ctrl+e"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+g"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },

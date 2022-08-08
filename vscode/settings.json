@@ -53,9 +53,9 @@
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
-	//"editor.inlineSuggest.enabled": false,
 	"editor.lightbulb.enabled": false,
 
+	"editor.inlineSuggest.enabled": false,
 	"editor.quickSuggestions": {
 		"comments": "off",
 		"strings": "off",
@@ -466,7 +466,9 @@
 	"workbench.colorCustomizations": {
 
 		/* diff+markers */
+		"diffEditor.insertedLineBackground": "#0f02",
 		"diffEditor.insertedTextBackground": "#0f02",
+		"diffEditor.removedLineBackground": "#f002",
 		"diffEditor.removedTextBackground": "#f002",
 		"editorOverviewRuler.addedForeground": "#0f0a", // 120°
 		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
@@ -570,6 +572,8 @@
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#404",
+			//"diffEditor.removedTextBorder": null,
+			"diffEditorGutter.removedLineBackground": "#300",
 
 			/* on break */
 			"editor.stackFrameHighlightBackground": "#C0000033",
@@ -645,4 +649,5 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
+	"terminal.integrated.shellIntegration.enabled": false,
 }

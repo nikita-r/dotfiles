@@ -978,6 +978,26 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	/* ?terminalTabsFocus */
 	{
+		"key": "ctrl+up",
+		"command": "workbench.action.terminal.scrollToPreviousCommand",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "workbench.action.terminal.selectToPreviousCommand",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "workbench.action.terminal.scrollToNextCommand",
+		"when": "terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "workbench.action.terminal.selectToNextCommand",
+		"when": "terminalTabsFocus"
+	},
+	{
 		"key": "ctrl+f",
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalTabsFocus"

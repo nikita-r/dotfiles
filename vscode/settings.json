@@ -327,6 +327,10 @@
 
 	/* ctf0.macros */
 	"macros.list": {
+		"expandAllNotebookCells": [
+			"notebook.cell.expandAllCellInputs",
+			"notebook.cell.expandAllCellOutputs",
+		],
 		"resetExplorerView": [
 			"workbench.files.action.focusFilesExplorer",
 			"list.clear",
@@ -476,7 +480,8 @@
 		"[* Dark*]": {
 			"editorError.foreground": "#fff",
 			"bookmarks.overviewRuler": "#39f6",
-
+			//"diffEditor.removedTextBorder": null,
+			"diffEditorGutter.removedLineBackground": "#300",
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
@@ -507,6 +512,15 @@
 			"editor.snippetFinalTabstopHighlightBorder": "#fff",
 			"editor.snippetTabstopHighlightBackground": "#0000",
 			"editor.snippetTabstopHighlightBorder": "#fff",
+
+			/* on break */
+			"editor.stackFrameHighlightBackground": "#C0000033",
+			"editor.focusedStackFrameHighlightBackground": "#C000C033",
+			"debugIcon.breakpointForeground": "#c63",
+			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
+			"debugIcon.breakpointStackframeForeground": "#c3c",
+			"editor.inlineValuesBackground": "#333",
+			"editor.inlineValuesForeground": "#999",
 		},
 
 		"[Default Dark+]": {
@@ -572,17 +586,6 @@
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#404",
-			//"diffEditor.removedTextBorder": null,
-			"diffEditorGutter.removedLineBackground": "#300",
-
-			/* on break */
-			"editor.stackFrameHighlightBackground": "#C0000033",
-			"editor.focusedStackFrameHighlightBackground": "#C000C033",
-			"debugIcon.breakpointForeground": "#c63",
-			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
-			"debugIcon.breakpointStackframeForeground": "#c3c",
-			"editor.inlineValuesBackground": "#333",
-			"editor.inlineValuesForeground": "#999",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",

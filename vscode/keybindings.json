@@ -15,7 +15,6 @@
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	*/
 
-	{ "command": "noop", "key": "ctrl+shift+." },
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
@@ -222,6 +221,18 @@
 		"when": "listFocus && !inputFocus"
 	},
 
+	/* list.toggle */
+	{
+		"key": "ctrl+space",
+		"command": "list.toggleSelection",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "shift+space",
+		"command": "list.toggleSelection",
+		"when": "listFocus && !inputFocus"
+	},
+
 	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
 	{ "command": "noop", "key": "ctrl+alt+up" },
 	{ "command": "noop", "key": "ctrl+alt+down" },
@@ -254,7 +265,7 @@
 		"when": "editorTextFocus"
 	},
 
-	/* list.scroll */
+	/* Reassign Ctrl+Up/Down when "listFocus" */
 	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
 	{ "key": "ctrl+down", "when": "listFocus", "command": "noop" },
 	{
@@ -286,6 +297,11 @@
 		"key": "ctrl+down",
 		"command": "notebook.cell.focusInOutput",
 		"when": "notebookCellFocused"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "search.action.focusSearchFromResults",
+		"when": "focusedView == 'workbench.view.search' && listFocus"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -758,7 +774,8 @@
 	/* ? */
 	{
 		"key": "ctrl+k y",
-		"command": "editor.showTypeHierarchy"
+		"command": "editor.showTypeHierarchy",
+		"when": "editorTextFocus"
 	},
 
 	/* references-view */
@@ -781,6 +798,27 @@
 		"key": "ctrl+down",
 		"command": "references-view.showOutgoingCalls",
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'callHierarchy'" // references-view.callHierarchyMode != 'showOutgoing'
+	},
+	/* 'javaTypeHierarchy' */
+	{
+		"key": "ctrl+k y",
+		"command": "java.action.showTypeHierarchy",
+		"when": "editorLangId == 'java'"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "java.action.showSupertypeHierarchy",
+		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'parents'
+	},
+	{
+		"key": "ctrl+down",
+		"command": "java.action.showSubtypeHierarchy",
+		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'children'
+	},
+	{
+		"key": "ctrl+right",
+		"command": "java.action.showClassHierarchy",
+		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
 	/* Alt+Letter */

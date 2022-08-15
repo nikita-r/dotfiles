@@ -2,7 +2,10 @@
 	"window.titleSeparator": " · ",
 	"window.title": "Code${separator}${rootName}${separator}${dirty}${activeEditorShort}",
 
+	/* extravagant features */
 	"security.workspace.trust.enabled": false,
+	"git.mergeEditor": false,
+	"terminal.integrated.shellIntegration.enabled": false,
 
 	"update.mode": "none", // or "manual"
 	"update.showReleaseNotes": false,
@@ -193,7 +196,6 @@
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
-	"git.mergeEditor": true,
 
 	/* diff */
 	"scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
@@ -263,6 +265,7 @@
 	//"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
 
+	/* gruntfuggly.todo-tree */
 	"todo-tree.tree.scanAtStartup": false,
 	"todo-tree.tree.autoRefresh": false,
 	"todo-tree.filtering.ignoreGitSubmodules": true,
@@ -439,6 +442,7 @@
 		"scrollPageDown", "scrollPageUp",
 		"timeline.focus",
 		"workbench.action.focusQuickOpen",
+		"workbench.action.remote.showMenu",
 		"workbench.action.terminal.moveToEditorInstance",
 		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
@@ -531,6 +535,9 @@
 			"editorCursor.background": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
+			"notificationCenterHeader.background": "#323",
+			"notificationCenterHeader.foreground": "#fec",
+			"notifications.border": "#ccc",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -553,8 +560,6 @@
 			"editorGutter.background": "#201020",
 			"menu.background": "#333033",
 			"menu.border": "#804080",
-			"notificationCenterHeader.background": "#332233",
-			"notifications.border": "#332233",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",
@@ -652,5 +657,4 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
-	"terminal.integrated.shellIntegration.enabled": false,
 }

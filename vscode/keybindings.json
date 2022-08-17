@@ -694,6 +694,16 @@
 	},
 	{
 		"key": "ctrl+k ctrl+r",
+		"command": "remote-containers.explorerDetailsRefresh",
+		"when": "activeViewlet == 'workbench.view.remote' && view.detailsContainers.visible"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
+		"command": "remote-containers.explorerTargetsRefresh",
+		"when": "activeViewlet == 'workbench.view.remote' && view.targetsContainers.visible"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
 		"command": "workbench.extensions.action.refreshExtension",
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
@@ -1438,15 +1448,15 @@
 	//	"command": "markdown.showPreview",
 	//	"when": "!notebookEditorFocused && editorLangId == 'markdown'"
 	//},
-	//{
-	//	"key": "ctrl+shift+v",
-	//	"command": "markdown.preview.toggleLock",
-	//	"when": "markdownPreviewFocus"
-	//},
 	{
 		"key": "ctrl+shift+v",
 		"command": "markdown.showPreview",
 		"when": "resourceLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "markdown.preview.toggleLock",
+		"when": "markdownPreviewFocus"
 	},
 
 	/* Copy/Paste in Terminal */
@@ -1469,7 +1479,7 @@
 	},
 
 	/*~*~*~*/
-	{ "key": "alt+\\", "command": "workbench.action.remote.showMenu" },
+	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "command": "", "key": "shift+f10" },
 	{
 		"key": "ctrl+t",

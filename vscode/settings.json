@@ -83,6 +83,7 @@
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showInlineDetails": false,
+	"editor.suggest.showKeywords": false,
 	"editor.suggest.showStatusBar": true,
 
 	/* . . . */
@@ -211,9 +212,10 @@
 
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
-	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
-	"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.includeCommitsMentionedByReflogs": true,
+	"git-graph.repository.onLoad.showCheckedOutBranch": true,
+	"git-graph.repository.showUncommittedChanges": false,
+	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
 
 	"gitlens.advanced.messages": {
 		"suppressGitMissingWarning": true,
@@ -256,13 +258,12 @@
 
 	"bookmarks.label.suggestion": "suggestWhenSelected",
 	"bookmarks.sideBar.expanded": true,
-	"cSpell.numSuggestions": 3,
+	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
 	"cSpell.showStatus": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"filesize.showGzip": false,
 	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
-	//"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
 
 	/* gruntfuggly.todo-tree */

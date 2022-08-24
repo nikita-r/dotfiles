@@ -89,7 +89,7 @@
 
 	/* Ctrl+D complements */
 	{
-		"key": "shift+alt+d",
+		"key": "alt+d d",
 		"command": "editor.action.selectHighlights",
 		"when": "editorFocus"
 	},
@@ -262,6 +262,28 @@
 	{
 		"key": "alt+right",
 		"command": "cursorWordPartRight",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+left",
+		"command": "cursorWordPartLeftSelect",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+right",
+		"command": "cursorWordPartRightSelect",
+		"when": "editorTextFocus"
+	},
+
+	/* smart */
+	{
+		"key": "alt+a",
+		"command": "editor.action.smartSelect.grow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+x",
+		"command": "editor.action.smartSelect.shrink",
 		"when": "editorTextFocus"
 	},
 
@@ -831,7 +853,7 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* Alt+Letter */
+	/* joiners */
 	{
 		"key": "alt+j",
 		"command": "editor.action.joinLines",
@@ -842,20 +864,10 @@
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
 	},
-	{
-		"key": "alt+a",
-		"command": "editor.action.inPlaceReplace.up",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+x",
-		"command": "editor.action.inPlaceReplace.down",
-		"when": "editorTextFocus"
-	},
 
 	/* Emmet */
 	{
-		"key": "alt+d",
+		"key": "alt+d e",
 		"command": "workbench.action.showEmmetCommands",
 		"when": "editorTextFocus"
 	},

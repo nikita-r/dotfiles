@@ -257,25 +257,25 @@
 	{
 		"key": "alt+left",
 		"command": "cursorWordPartLeft",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "alt+right",
 		"command": "cursorWordPartRight",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "shift+alt+left",
 		"command": "cursorWordPartLeftSelect",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "shift+alt+right",
 		"command": "cursorWordPartRightSelect",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 
-	/* smart */
+	/* smart-select */
 	{
 		"key": "alt+a",
 		"command": "editor.action.smartSelect.grow",
@@ -533,6 +533,30 @@
 		"key": "ctrl+[",
 		"command": "goToPreviousReference",
 		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
+	},
+
+	/* Alt+[][] */
+	{ "command": "noop", "key": "alt+]" },
+	{ "command": "noop", "key": "alt+[" },
+	{
+		"key": "alt+]",
+		"command": "editor.gotoNextFold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+[",
+		"command": "editor.gotoPreviousFold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+]",
+		"command": "editor.action.inlineSuggest.showNext",
+		"when": "inlineSuggestionVisible"
+	},
+	{
+		"key": "alt+[",
+		"command": "editor.action.inlineSuggest.showPrevious",
+		"when": "inlineSuggestionVisible"
 	},
 
 	/* vim-like panes navigation */
@@ -853,7 +877,7 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* joiners */
+	/* Alt+J */
 	{
 		"key": "alt+j",
 		"command": "editor.action.joinLines",
@@ -1496,5 +1520,9 @@
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+alt+f4",
+		"command": "workbench.action.quit"
 	},
 ]

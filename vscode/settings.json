@@ -4,7 +4,7 @@
 
 	/* extravagant features */
 	"security.workspace.trust.enabled": false,
-	"git.mergeEditor": false,
+	//"git.mergeEditor": false,
 	"terminal.integrated.shellIntegration.enabled": false,
 
 	"update.mode": "none", // or "manual"
@@ -14,8 +14,6 @@
 	"extensions.autoUpdate": false,
 	"extensions.ignoreRecommendations": true,
 	"redhat.telemetry.enabled": false,
-	"telemetry.enableCrashReporter": false,
-	"telemetry.enableTelemetry": false,
 	"telemetry.telemetryLevel": "off",
 	"typescript.surveys.enabled": false,
 	"workbench.enableExperiments": false,
@@ -417,7 +415,10 @@
 
 	/* . . . */
 
-	"files.hotExit": "off",
+	"files.hotExit": "off", // or "onExitAndWindowClose"
+	"terminal.integrated.persistentSessionReviveProcess": "never", // or "onExitAndWindowClose"
+	"terminal.integrated.persistentSessionScrollback": 4095,
+	"terminal.integrated.scrollback": 32767,
 
 	/* debug */
 	"debug.confirmOnExit": "always",
@@ -432,9 +433,6 @@
 
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always", // like "hasChildProcesses"
-
-	"terminal.integrated.scrollback": 32767,
-	"terminal.integrated.persistentSessionScrollback": 4095,
 
 	"terminal.integrated.commandsToSkipShell": [
 		"copyRelativeFilePath",

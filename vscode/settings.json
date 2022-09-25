@@ -22,6 +22,7 @@
 	"editor.wrappingIndent": "none",
 
 	"explorer.autoReveal": false,
+	"explorer.copyRelativePathSeparator": "/",
 	"explorer.confirmUndo": "verbose",
 	"explorer.enableUndo": false,
 	"explorer.incrementalNaming": "smart",
@@ -163,8 +164,6 @@
 
 	"editor.comments.insertSpace": false,
 	//"editor.comments.ignoreEmptyLines": false,
-	"editor.copyWithSyntaxHighlighting": false,
-	"explorer.copyRelativePathSeparator": "/",
 
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
@@ -197,8 +196,7 @@
 	"git.showCommitInput": false,
 
 	/* diff */
-	"scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
-	"diffEditor.ignoreTrimWhitespace": false,
+	"scm.diffDecorationsIgnoreTrimWhitespace": "false",
 	"diffEditor.renderIndicators": false,
 	"diffEditor.renderSideBySide": true,
 
@@ -376,6 +374,7 @@
 	"eslint.alwaysShowStatus": true,
 	"javascript.suggestionActions.enabled": false,
 	"typescript.suggestionActions.enabled": false,
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
 	/* inlay */
 	"javascript.inlayHints.enumMemberValues.enabled": true,
 	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
@@ -642,6 +641,13 @@
 		//"*.md": "vscode.markdown.preview.editor",
 	},
 
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+	"explorer.fileNesting.patterns": {
+		"*proj": "${capture}proj.user",
+		"appsettings.json": "appsettings.*.json",
+	},
+
 	/* ad-hoc preferences per extension */
 
 	"emmet.includeLanguages": {
@@ -656,4 +662,6 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
+	"editor.copyWithSyntaxHighlighting": false,
+	"diffEditor.ignoreTrimWhitespace": false,
 }

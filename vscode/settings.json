@@ -119,6 +119,8 @@
 	"editor.guides.indentation": false,
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
+	"editor.scrollbar.vertical": "visible",
+	"editor.scrollbar.horizontal": "visible",
 	"workbench.list.horizontalScrolling": true,
 	"workbench.list.smoothScrolling": true,
 	"workbench.tree.indent": 12,

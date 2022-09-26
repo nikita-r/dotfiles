@@ -64,13 +64,13 @@
 	{ "command": "noop", "key": "ctrl+m" }, // Toggle Tab Key Moves Focus
 	{ "command": "noop", "key": "ctrl+shift+m" }, // View: Toggle Problems
 	{
-		"command": "editor.action.jumpToBracket",
+		"command": "editor.action.jumpToBracket", // move_to
 		"key": "ctrl+m",
 		"when": "editorTextFocus"
 	},
 	{
-		"command": "editor.action.selectToBracket",
-		"key": "ctrl+shift+m", // but "expand_selection" is "shift+alt+right"
+		"command": "editor.action.selectToBracket", // expand_selection
+		"key": "ctrl+shift+m",
 		"when": "editorTextFocus"
 	},
 	/* "toggle_comment", "block" */
@@ -922,12 +922,12 @@
 	},
 	{
 		"key": "alt+shift+a",
-		"command": "editor.emmet.action.balanceOut", // expand_selection~tag
+		"command": "editor.emmet.action.balanceOut", // expand_selection "to": "tag"
 		"when": "editorFocus"
 	},
 	{
 		"key": "alt+shift+x",
-		"command": "editor.emmet.action.balanceIn", // shrink_selection~tag
+		"command": "editor.emmet.action.balanceIn", // shrink_selection "to": "tag"
 		"when": "editorFocus"
 	},
 

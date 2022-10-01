@@ -1,14 +1,8 @@
 
-function Get-ScriptDirectory {
-  Split-Path ($(
-    if ($host.Name -clike '* ISE Host') {
-      $global:psISE.CurrentFile.FullPath
-    } else {
-      $global:PSCommandPath
-    }
-  ))
+function Reload-Path {
+  $env:Path = [Environment]::GetEnvironmentVariable('Path', 'User') `
+      + ';' + [Environment]::GetEnvironmentVariable('Path', 'Machine')
 }
-
 
 function Test-Elevated {
     $wid = [Security.Principal.WindowsIdentity]::GetCurrent()
@@ -17,12 +11,36 @@ function Test-Elevated {
     $prp.IsInRole($adm)
 }
 
+
+<# with GridView #>
+
 function Parse-UrlQuery-FromClipboard {
     $url=Get-Clipboard; Write-Host $url
     $q = $url.Substring($url.IndexOf('?')+1).Split('&')
     $q = $q |% { if ('=' -in $_.ToCharArray()) { $_ } else { "$_=" } } | ConvertFrom-StringData
     $q |% { foreach ($key in $($_.Keys)) { $_[$key] = [Net.WebUtility]::UrlDecode($_[$key]) } }
     $q | Out-GridView -PassThru
+}
+
+
+<# view procs #>
+
+function View-Top ($N=8) {
+  Get-Counter "\Process(*)\% Processor Time" -ea:0 | Select-Object -ExpandProperty CounterSamples `
+    |? Status -eq 0 |? InstanceName -notIn "_total", "idle" | Sort-Object CookedValue -Descending `
+    | Select-Object @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
+      @{N='Process Name';E={
+        $friendlyName = $_.InstanceName
+        try {
+          $procId = [Diagnostics.Process]::GetProcessesByName($_.InstanceName)[0].Id
+          $proc = Get-WmiObject -Query "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId=$procId"
+          $procPath = ($proc |? ExecutablePath | Select-Object -First 1).ExecutablePath
+          $friendlyName = [Diagnostics.FileVersionInfo]::GetVersionInfo($procPath).FileDescription
+        } catch {}
+        $friendlyName
+      }},
+      @{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
+      -First $N | ft -a -HideTableHeaders
 }
 
 function View-ProcUtil {
@@ -52,80 +70,6 @@ function Set-SpeakersVolume ([float]$v) {
     for ($i=0; $i -lt $v; ++$i) {
         $wsh.SendKeys([char]175) # incr by 2pp
     }
-}
-
-
-<# WiP: set apps up #>
-
-function Reload-Path {
-  $env:Path = [Environment]::GetEnvironmentVariable('Path', 'User') `
-      + ';' + [Environment]::GetEnvironmentVariable('Path', 'Machine')
-}
-
-function ReplaceWith-SymbolicLink ($AbsPath, $target) {
-  if (-not (Test-Path -Path (Split-Path $AbsPath) -Type Container)) {
-    New-Item -ItemType Directory -Path (Split-Path $AbsPath)
-  }
-  if (Test-Path -Path $AbsPath) {
-    Remove-Item -Path $AbsPath
-  }
-  New-Item -ItemType SymbolicLink -Path $AbsPath -Value $target
-}
-
-function Install-App ($url, $OutFile, $Arguments) {
-  if (Test-Path -Path "$OutFile.skip") {
-    return
-  }
-# if (Test-Path -Path $OutFile) {
-#   Remove-Item -Path $OutFile
-# }
-  if (-not (Test-Path -Path $OutFile)) {
-    $ProgressPreference, $tmp = "SilentlyContinue", $ProgressPreference
-    Invoke-WebRequest -Uri $url -OutFile $OutFile
-    $ProgressPreference = $tmp
-  }
-  if ($Arguments.Count) {
-    $Process = Start-Process -FilePath $OutFile -Wait -PassThru -ArgumentList $Arguments
-  } else {
-    $Process = Start-Process -FilePath $OutFile -Wait -PassThru
-  }
-  if ($Process.ExitCode) {
-    Write-Error ("`"${OutFile}`" installation has failed.  ExitCode=" + $Process.ExitCode)
-    return
-  }
-  Set-Content -Path "$OutFile.skip" -Value 'skip'
-}
-
-function Install-App-7z {
-  Install-App https://www.7-zip.org/a/7z1900-x64.exe `
-              -OutFile setup-7z.exe -Arguments @('/S')
-}
-
-function Install-App-Insomnia {
-  Install-App https://updates.insomnia.rest/downloads/windows/latest `
-              -OutFile setup-insomnia.exe -Arguments @('--silent')
-}
-
-function Install-App-VSCode {
-  Install-App https://aka.ms/win32-x64-user-stable `
-              -OutFile setup-vscode.exe -Arguments @(
-                "/SP-"
-                "/SILENT"
-                "/SUPPRESSMSGBOXES"
-                "/TASKS=""addcontextmenufiles,addcontextmenufolders,addtopath"""
-                "/LOG=""setup-vscode.log"""
-              )
-}
-
-function Configure-App-VSCode {
-  ReplaceWith-SymbolicLink "$home\AppData\Roaming\Code\User\keybindings.json" `
-                      -Target "${MyDotfiles}\vscode\keybindings.json"
-# ReplaceWith-SymbolicLink "$home\AppData\Roaming\Code\User\settings.json" `
-#                     -Target "${MyDotfiles}\vscode\settings.json"
-  Copy-Item -LiteralPath "${MyDotfiles}\vscode\settings.json" `
-            -Destination "$home\AppData\Roaming\Code\User\settings.json" `
-            #-Force -Confirm:$false
-  Get-Content "${MyDotfiles}\vscode\extensions.txt" |% { code --install-extension $_ }
 }
 
 

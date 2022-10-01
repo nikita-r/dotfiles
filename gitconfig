@@ -30,6 +30,7 @@
 	rs = restore --staged
 
 [alias]
+	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
 	pufw = push --force-with-lease
@@ -43,6 +44,7 @@
 	tags = tag -l
 
 [alias]
+	ana = add -NA
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
 	scour-n = clean -nxffd

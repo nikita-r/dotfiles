@@ -12,6 +12,7 @@ GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hediet.vscode-drawio
 helixquar.randomeverything
+jock.svg
 JohannesRudolph.file-ext-switcher
 KevinRose.vsc-python-indent
 mhutchie.git-graph

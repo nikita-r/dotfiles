@@ -264,6 +264,10 @@
 	"hexeditor.maxFileSize": 99,
 	"quicktype.inferBooleanStrings": false,
 
+	/* jock.svg */
+	"svg.preview.autoFit": false,
+	"svg.preview.showRuler": true,
+
 	/* gruntfuggly.todo-tree */
 	"todo-tree.tree.scanAtStartup": false,
 	"todo-tree.tree.autoRefresh": false,
@@ -624,6 +628,8 @@
 	//"files.trimFinalNewlines": true,
 	//"files.insertFinalNewline": true,
 	"files.eol": "\n",
+
+	"[json]": { "editor.maxTokenizationLineLength": 102400 },
 
 	/* discriminate amongst file types */
 

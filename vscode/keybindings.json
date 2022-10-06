@@ -287,7 +287,7 @@
 		"when": "editorTextFocus"
 	},
 
-	/* Reassign Ctrl+Up/Down when "listFocus" */
+	/* Reassign Ctrl+Up/Down when "listFocus"; Ctrl+Right to switch viewAs */
 	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
 	{ "key": "ctrl+down", "when": "listFocus", "command": "noop" },
 	{
@@ -320,10 +320,47 @@
 		"command": "notebook.cell.focusInOutput",
 		"when": "notebookCellFocused"
 	},
+	/* Search Results */
 	{
 		"key": "ctrl+up",
 		"command": "search.action.focusSearchFromResults",
 		"when": "focusedView == 'workbench.view.search' && listFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "search.action.expandSearchResults",
+		"when": "focusedView == 'workbench.view.search' && listFocus"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "search.action.viewAsTree",
+		"when": "focusedView == 'workbench.view.search' && listFocus && !inTreeView"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "search.action.viewAsList",
+		"when": "focusedView == 'workbench.view.search' && listFocus && inTreeView"
+	},
+	/* problematic view */
+	{
+		"key": "ctrl+up",
+		"command": "problems.action.showSinglelineMessage",
+		"when": "focusedView == 'workbench.panel.markers.view'"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "problems.action.showMultilineMessage",
+		"when": "focusedView == 'workbench.panel.markers.view'"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTable",
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'tree'"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
+		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -371,33 +408,6 @@
 	{
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
-	},
-
-	/* problematic view */
-	{
-		"key": "ctrl+up",
-		"command": "problems.action.showSinglelineMessage",
-		"when": "focusedView == 'workbench.panel.markers.view'"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "problems.action.showMultilineMessage",
-		"when": "focusedView == 'workbench.panel.markers.view'"
-	},
-	{
-		"key": "ctrl+left", // Useful in a Tree to list.collapseAll
-		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
-		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode != 'tree'"
-	},
-	{
-		"key": "ctrl+right",
-		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTable",
-		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'tree'"
-	},
-	{
-		"key": "ctrl+right",
-		"command": "workbench.actions.table.workbench.panel.markers.view.viewAsTree",
-		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
 	},
 
 	/* Retain F8 for execSelection */

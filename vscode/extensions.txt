@@ -2,14 +2,12 @@ alefragnani.Bookmarks
 ctf0.macros
 andyyaldoo.vscode-json
 darkriszty.markdown-table-prettify
-DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
 #dendron.dendron
 #eamodio.gitlens
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
-Gruntfuggly.todo-tree
 hediet.vscode-drawio
 helixquar.randomeverything
 jock.svg

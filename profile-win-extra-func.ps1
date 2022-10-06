@@ -31,12 +31,11 @@ function View-Top ($N=8) {
     | Select-Object @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
       @{N='Process Name';E={
         $friendlyName = $_.InstanceName
-        try {
-          $procId = [Diagnostics.Process]::GetProcessesByName($_.InstanceName)[0].Id
-          $proc = Get-WmiObject -Query "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId=$procId"
-          $procPath = ($proc |? ExecutablePath | Select-Object -First 1).ExecutablePath
-          $friendlyName = [Diagnostics.FileVersionInfo]::GetVersionInfo($procPath).FileDescription
-        } catch {}
+        # try {
+        #   $procId = [Diagnostics.Process]::GetProcessesByName($_.InstanceName)[0].Id
+        #   $proc = Get-WmiObject -Query "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId=$procId"
+        #   $friendlyName = [Diagnostics.FileVersionInfo]::GetVersionInfo($proc.ExecutablePath).FileDescription
+        # } catch { }
         $friendlyName
       }},
       @{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `

@@ -45,6 +45,7 @@
 
 [alias]
 	ana = add -NA
+	dns = diff --name-status
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
 	scour-n = clean -nxffd
@@ -72,7 +73,7 @@
 [alias]
 	dc = ! git diff -w --ignore-blank-lines --word-diff=color -C "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
-	ds = diff -b --ignore-blank-lines --stat
+	db = diff -b --ignore-blank-lines --stat
 
 # Beyond Compare; under Linux, use "bc3"
 [diff]

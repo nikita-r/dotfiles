@@ -84,7 +84,7 @@
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showInlineDetails": false,
 	"editor.suggest.showKeywords": false,
-	"editor.suggest.showStatusBar": true,
+	//"editor.suggest.showStatusBar": true,
 
 	/* . . . */
 
@@ -365,7 +365,6 @@
 	"java.project.importOnFirstTimeStartup": "interactive",
 	"java.project.importHint": false,
 	"java.import.generatesMetadataFilesAtProjectRoot": false,
-	"java.configuration.checkProjectSettingsExclusions": false,
 	"java.autobuild.enabled": false,
 
 	/* Py */
@@ -376,6 +375,7 @@
 	"python.formatting.provider": "none",
 	"python.languageServer": "Pylance",
 	"python.linting.enabled": false,
+	"python.analysis.typeCheckingMode": "strict",
 
 	/* ES */
 	"eslint.alwaysShowStatus": true,
@@ -403,6 +403,7 @@
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
+	"powershell.codeFormatting.alignPropertyValuePairs": false,
 	//"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"javascript.preferences.quoteStyle": "single",
@@ -563,6 +564,8 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
+			"editorStickyScroll.background": "#301030",
+			"editorStickyScrollHover.background": "#302030",
 			"menu.background": "#333033",
 			"menu.border": "#804080",
 			"statusBar.background": "#402040",
@@ -630,7 +633,7 @@
 	//"files.insertFinalNewline": true,
 	"files.eol": "\n",
 
-	"[json]": { "editor.maxTokenizationLineLength": 102400 },
+	"[json]": { "editor.maxTokenizationLineLength": 10240000 },
 
 	/* discriminate amongst file types */
 

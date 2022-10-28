@@ -39,6 +39,7 @@
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
+	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false,
 	"search.searchEditor.defaultNumberOfContextLines": null,
 	"search.searchOnTypeDebouncePeriod": 666,
@@ -49,6 +50,9 @@
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
 	//"workbench.editor.enablePreview": false,
+	//"extensions.closeExtensionDetailsOnViewChange": true,
+	"workbench.quickOpen.closeOnFocusLost": false,
+	"search.quickOpen.includeSymbols": true,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
@@ -147,9 +151,6 @@
 	//"workbench.editor.revealIfOpen": true,
 	"workbench.editor.navigationScope": "editorGroup",
 	//"workbench.editor.closeEmptyGroups": false,
-
-	"extensions.closeExtensionDetailsOnViewChange": true,
-	"workbench.quickOpen.closeOnFocusLost": false,
 
 	/* . . . */
 
@@ -283,11 +284,14 @@
 		"BUG", "HACK", "FIXME", "ToDo",
 		"TODO", "XXX", "MAYBE", "NOTE",
 	],
+	"todo-tree.general.showActivityBarBadge": true,
+	"todo-tree.tree.expanded": true,
+	"todo-tree.tree.flat": true,
+	"todo-tree.tree.showBadges": false,
 	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
 	"todo-tree.tree.tooltipFormat": "Line ${line} ┇ ${after}",
 	"todo-tree.general.revealBehaviour": "start of line",
 	"todo-tree.highlights.enabled": false,
-	"todo-tree.tree.showBadges": false,
 	"todo-tree.highlights.defaultHighlight": {
 		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
 		"iconColor": "terminal.ansiMagenta",
@@ -647,6 +651,7 @@
 	},
 	"search.exclude": {
 		"**/package-lock.json": true,
+		"**/yarn.lock": true,
 	},
 	"workbench.editorAssociations": {
 		"*.hex": "hexEditor.hexedit",

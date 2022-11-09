@@ -47,6 +47,10 @@
 		"command": "workbench.action.files.newUntitledFile"
 	},
 	{
+		"key": "ctrl+k shift+n", /* vscode-github-issue-notebooks */
+		"command": "workbench.action.files.newUntitledFile", "args": { "viewType": "github-issues" }
+	},
+	{
 		"key": "ctrl+k n",
 		"command": "explorer.newFile",
 		"when": "filesExplorerFocus"

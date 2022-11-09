@@ -206,6 +206,8 @@
 	"scm.diffDecorationsIgnoreTrimWhitespace": "false",
 	"diffEditor.renderIndicators": false,
 	"diffEditor.renderSideBySide": true,
+	"diffEditor.diffAlgorithm": "experimental",
+	"mergeEditor.diffAlgorithm": "experimental",
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
@@ -265,6 +267,10 @@
 	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
 	"quicktype.inferBooleanStrings": false,
+
+	/* tomoki1207.pdf */
+	"pdf-preview.default.cursor": "hand",
+	"pdf-preview.default.scale": "page-actual",
 
 	/* jock.svg */
 	"svg.preview.autoFit": false,
@@ -376,10 +382,20 @@
 	"jupyter.experiments.enabled": false,
 	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
-	"python.formatting.provider": "none",
 	"python.languageServer": "Pylance",
-	"python.linting.enabled": false,
 	"python.analysis.typeCheckingMode": "strict",
+	"isort.args": [ "--profile", "black" ],
+	"[python]": {
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": { "source.organizeImports": true }
+	},
+	"python.formatting.provider": "none",
+	"python.linting.enabled": false,
+
+	/* T-SQL */
+	"mssql.format.datatypeCasing": "lowercase",
+	"mssql.format.keywordCasing": "uppercase",
+	"mssql.format.placeCommasBeforeNextStatement": true,
 
 	/* ES */
 	"eslint.alwaysShowStatus": true,
@@ -654,7 +670,6 @@
 		"**/yarn.lock": true,
 	},
 	"workbench.editorAssociations": {
-		"*.hex": "hexEditor.hexedit",
 		//"*.md": "vscode.markdown.preview.editor",
 	},
 

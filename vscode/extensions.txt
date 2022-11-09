@@ -11,7 +11,6 @@ dbankier.vscode-quick-select
 #EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
 hediet.vscode-drawio
-helixquar.randomeverything
 JohannesRudolph.file-ext-switcher
 KevinRose.vsc-python-indent
 mhutchie.git-graph
@@ -21,10 +20,11 @@ ms-python.python
 #ms-toolsai.jupyter
 ms-vscode.hexeditor
 #ms-vscode.powershell
+ms-vscode.vscode-github-issue-notebooks
 ms-vscode-remote.remote-containers
-quicktype.quicktype
+#quicktype.quicktype
 #redhat.java
 samuelcolvin.jinjahtml
 #streetsidesoftware.code-spell-checker
-sysoev.vscode-open-in-github
+tomoki1207.pdf
 vincaslt.highlight-matching-tag

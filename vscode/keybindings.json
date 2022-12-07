@@ -244,6 +244,16 @@
 	{ "command": "noop", "key": "ctrl+alt+right" },
 	{
 		"key": "ctrl+shift+up",
+		"command": "-cursorUpSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "-cursorDownSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
 		"command": "editor.action.insertCursorAbove",
 		"when": "editorTextFocus"
 	},
@@ -907,6 +917,11 @@
 	{
 		"key": "alt+d e",
 		"command": "workbench.action.showEmmetCommands",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+d i",
+		"command": "editor.emmet.action.updateImageSize",
 		"when": "editorTextFocus"
 	},
 	{

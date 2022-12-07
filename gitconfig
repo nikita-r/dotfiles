@@ -34,7 +34,7 @@
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
 	pufw = push --force-with-lease
-	root = !pwd
+	root = !pwd # ~ rev-parse --show-toplevel
 
 [alias]
 	aliases = config --get-regexp ^alias\\.
@@ -52,6 +52,7 @@
 	reset-f = ! git reset --hard $1 && git clean -xffd && :
 	pop-i = stash pop --index
 	puta = push --follow-tags
+	down = log --branches --not --remotes # \ git branch -r
 
 [alias]
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -

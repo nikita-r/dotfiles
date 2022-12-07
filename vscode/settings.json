@@ -419,6 +419,7 @@
 	/* ~codeFormatting */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
+	//"html.format.wrapLineLength": 0,
 	"html.format.endWithNewline": true,
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
@@ -668,6 +669,7 @@
 	"search.exclude": {
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
+		"**/pnpm-lock.yaml": true,
 	},
 	"workbench.editorAssociations": {
 		//"*.md": "vscode.markdown.preview.editor",

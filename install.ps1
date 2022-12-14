@@ -1,13 +1,22 @@
 
-New-Item $env:AppData\Code\User -Type Dir -ea:0 | Out-Null
+$dirUsr = "$env:AppData\Code"
+#$dirExt = "$env:UserProfile\.vscode\extensions"
 
-$urlDotCode = 'https://raw.githubusercontent.com/nikita-r/dotfiles/master/vscode'
+New-Item $dirUsr\User -Type Dir -ea:0 | Out-Null
+
+$urlRepoMain = 'https://raw.githubusercontent.com/nikita-r/dotfiles/master'
 
 'keybindings.json', 'settings.json' |% {
-  iwr $urlDotCode/$_ -OutFile $env:AppData\Code\User\$_
+  iwr $urlRepoMain/vscode/$_ -OutFile $dirUsr\User\$_
 }
 
--split((iwr $urlDotCode/extensions.txt).Content) |? { $_ -notLike '#*' } |% {
-  code --install-extension $_
+-split((
+  iwr $urlRepoMain/vscode/extensions.txt
+).Content) |% Trim |? { $_ } |? { $_ -notLike '#*' } |% {
+  if (Get-Variable dirExt -ea:0 -ValueOnly) {
+    code --install-extension $_ --user-data-dir $dirUsr --extensions-dir $dirExt
+  } else {
+    code --install-extension $_
+  }
 }
 

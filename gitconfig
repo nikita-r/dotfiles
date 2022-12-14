@@ -5,8 +5,7 @@
 	pager = cat
 	# TODO autocrlf
 	safecrlf = true
-	;whitespace = blank-at-eol,-blank-at-eof
-	hideDotFiles = true
+	;whitespace = space-before-tab,blank-at-eol,-blank-at-eof,tab-in-indent
 
 [init]
 	defaultBranch = main
@@ -28,13 +27,17 @@
 	tm = merge --no-ff --no-commit
 	ls = ls-files -s -o
 	rs = restore --staged
+	wt = worktree
 
 [alias]
 	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
 	pufw = push --force-with-lease
-	root = !pwd # ~ rev-parse --show-toplevel
+
+[alias] # Merge "master" into the current branch
+	remain = pull origin main
+	remaster = pull origin master
 
 [alias]
 	aliases = config --get-regexp ^alias\\.
@@ -46,18 +49,18 @@
 [alias]
 	ana = add -NA
 	dns = diff --name-status
-	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	save-u = stash save -u
 	scour-n = clean -nxffd
 	reset-f = ! git reset --hard $1 && git clean -xffd && :
 	pop-i = stash pop --index
 	puta = push --follow-tags
+	root = !pwd # ~ rev-parse --show-toplevel
 	down = log --branches --not --remotes # \ git branch -r
 
 [alias]
+	whoami = !printf '%s <%s>\\n' \"$(git config user.name)\" \"$(git config user.email)\"
+	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
 	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
-	branched-diff = ! bash -c "echo; git diff $(git branched-from ${1:-main} ${2:-HEAD}).. #"
-	branched-rlog = ! bash -c "echo; git log-rs $(git branched-from ${1:-main} ${2:-HEAD}).. #"
 
 [diff "rtf"]
 	textconv = unrtf --text
@@ -92,6 +95,13 @@
 
 [merge]
 	conflictStyle = zdiff3
+
+#[core]
+#	editor = code -w
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 
 [color]
 	branch = false

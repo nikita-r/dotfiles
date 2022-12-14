@@ -1,4 +1,6 @@
 #·.git/info/attributes
 
 package-lock.json diff=nodiff
+yarn.lock diff=nodiff
+pnpm-lock.yaml diff=nodiff
 

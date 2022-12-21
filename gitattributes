@@ -1,5 +1,7 @@
 #·.git/info/attributes
 
+*.py whitespace=-space-before-tab,tab-in-indent
+
 package-lock.json diff=nodiff
 yarn.lock diff=nodiff
 pnpm-lock.yaml diff=nodiff

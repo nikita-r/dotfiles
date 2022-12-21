@@ -5,7 +5,7 @@
 	pager = cat
 	# TODO autocrlf
 	safecrlf = true
-	;whitespace = space-before-tab,blank-at-eol,-blank-at-eof,tab-in-indent
+	;whitespace = -blank-at-eof
 
 [init]
 	defaultBranch = main
@@ -24,6 +24,9 @@
 	sb = status -sb
 	fb = "! fb () { git branch -a --contains $1 ; } ; fb"
 	sf = submodule foreach --recursive
+	cm = commit -m
+	pm = stash push -m
+	pi = stash pop --index
 	tm = merge --no-ff --no-commit
 	ls = ls-files -s -o
 	rs = restore --staged
@@ -35,7 +38,7 @@
 	pull-r = pull --recurse-submodules
 	pufw = push --force-with-lease
 
-[alias] # Merge "master" into the current branch
+[alias] # Merge mainline into the current branch
 	remain = pull origin main
 	remaster = pull origin master
 

@@ -6,6 +6,7 @@
 	# TODO autocrlf
 	safecrlf = true
 	;whitespace = -blank-at-eof
+	precomposeUnicode = true
 
 [init]
 	defaultBranch = main
@@ -22,13 +23,10 @@
 [alias]
 	co = checkout
 	sb = status -sb
-	fb = "! fb () { git branch -a --contains $1 ; } ; fb"
 	sf = submodule foreach --recursive
 	cm = commit -m
-	pm = stash push -m
 	pi = stash pop --index
-	tm = merge --no-ff --no-commit
-	ls = ls-files -s -o
+	pm = stash push -m
 	rs = restore --staged
 	wt = worktree
 
@@ -52,10 +50,12 @@
 [alias]
 	ana = add -NA
 	dns = diff --name-status
+	mnn = merge --no-commit --no-ff
+	rmd = ! git ls-files -d | xargs -r git rm
+	pop-i = stash pop --index
 	save-u = stash save -u
 	scour-n = clean -nxffd
 	reset-f = ! git reset --hard $1 && git clean -xffd && :
-	pop-i = stash pop --index
 	puta = push --follow-tags
 	root = !pwd # ~ rev-parse --show-toplevel
 	down = log --branches --not --remotes # \ git branch -r

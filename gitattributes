@@ -6,3 +6,8 @@ package-lock.json diff=nodiff
 yarn.lock diff=nodiff
 pnpm-lock.yaml diff=nodiff
 
+# git-for-windows / git-extra
+*.docx diff=astextplain
+*.pdf diff=astextplain
+*.rtf diff=astextplain
+

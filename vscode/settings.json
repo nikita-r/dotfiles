@@ -60,6 +60,7 @@
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
+	"editor.inlayHints.padding": true,
 	"editor.lightbulb.enabled": false,
 
 	"editor.inlineSuggest.enabled": false,
@@ -146,11 +147,12 @@
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 
+	//"workbench.editor.openPositioning": "first",
+	"workbench.editor.revealIfOpen": true,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
-	//"workbench.editor.revealIfOpen": true,
-	"workbench.editor.navigationScope": "editorGroup",
 	//"workbench.editor.closeEmptyGroups": false,
+	"workbench.editor.navigationScope": "editorGroup",
 
 	/* . . . */
 
@@ -158,6 +160,7 @@
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
 	"workbench.view.alwaysShowHeaderActions": true,
+	//"editor.foldingImportsByDefault": true,
 	"notebook.showFoldingControls": "always",
 	"editor.showFoldingControls": "always",
 	"editor.unfoldOnClickAfterEndOfLine": true,

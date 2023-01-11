@@ -289,6 +289,18 @@
 		"when": "textInputFocus"
 	},
 
+	/* erase subword */
+	{
+		"key": "alt+backspace",
+		"command": "deleteWordPartLeft",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "alt+delete",
+		"command": "deleteWordPartRight",
+		"when": "textInputFocus"
+	},
+
 	/* smart-select */
 	{
 		"key": "alt+a",

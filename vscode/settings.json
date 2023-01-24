@@ -141,11 +141,12 @@
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
-	"workbench.editor.languageDetection": false,
-	"workbench.editor.historyBasedLanguageDetection": false,
-	"workbench.editor.untitled.hint": "hidden",
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
+	"workbench.editor.untitled.hint": "hidden",
+
+	"workbench.editor.languageDetection": false,
+	"workbench.editor.historyBasedLanguageDetection": false,
 
 	//"workbench.editor.openPositioning": "first",
 	"workbench.editor.revealIfOpen": true,
@@ -160,9 +161,10 @@
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
 	"workbench.view.alwaysShowHeaderActions": true,
-	//"editor.foldingImportsByDefault": true,
-	"notebook.showFoldingControls": "always",
+
 	"editor.showFoldingControls": "always",
+	"notebook.showFoldingControls": "always",
+	//"editor.foldingImportsByDefault": true,
 	"editor.unfoldOnClickAfterEndOfLine": true,
 
 	"editor.minimap.showSlider": "always",
@@ -559,15 +561,14 @@
 
 		"[Default Dark+]": {
 			"icon.foreground": "#fec", // 40°
+			"notificationCenterHeader.foreground": "#fec",
+			"notifications.border": "#ccc",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 			"editorCursor.foreground": "#f93", // 30°
 			"editorCursor.background": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
-			"notificationCenterHeader.background": "#323",
-			"notificationCenterHeader.foreground": "#fec",
-			"notifications.border": "#ccc",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -592,6 +593,7 @@
 			"editorStickyScrollHover.background": "#302030",
 			"menu.background": "#333033",
 			"menu.border": "#804080",
+			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",

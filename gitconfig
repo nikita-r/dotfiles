@@ -28,6 +28,7 @@
 	pi = stash pop --index
 	pm = stash push -m
 	rs = restore --staged
+	ol = log --oneline
 	wt = worktree
 
 [alias]
@@ -49,6 +50,7 @@
 
 [alias]
 	ana = add -NA
+	cam = commit -a -m
 	dns = diff --name-status
 	mnn = merge --no-commit --no-ff
 	rmd = ! git ls-files -d | xargs -r git rm
@@ -78,7 +80,7 @@
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
 [alias]
-	dc = ! git diff -w --ignore-blank-lines --word-diff=color -C "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dc = ! set -f && git diff -w --ignore-blank-lines --word-diff=color -C "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
 	db = diff -b --ignore-blank-lines --stat
 

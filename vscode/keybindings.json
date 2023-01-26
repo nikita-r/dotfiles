@@ -213,7 +213,7 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
-	/* list.find */
+	/* toggle treeFind */
 	{
 		"key": "ctrl+f",
 		"command": "-list.find",
@@ -224,8 +224,18 @@
 		"command": "list.find",
 		"when": "listFocus && !inputFocus"
 	},
+	{
+		"key": "alt+/",
+		"command": "list.toggleFindMode",
+		"when": "listFocus"
+	},
+	{
+		"key": "alt+/",
+		"command": "list.find",
+		"when": "listFocus && !treeFindOpen"
+	},
 
-	/* list.toggle */
+	/* space in a tree */
 	{
 		"key": "ctrl+space",
 		"command": "list.toggleSelection",
@@ -313,7 +323,7 @@
 		"when": "editorTextFocus"
 	},
 
-	/* Reassign Ctrl+Up/Down when "listFocus"; Ctrl+Right to switch viewAs */
+	/* Reassign Ctrl+Up/Down in lists; Ctrl+Right to switch viewAs */
 	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
 	{ "key": "ctrl+down", "when": "listFocus", "command": "noop" },
 	{

@@ -213,6 +213,18 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
+	/* Ctrl+G */
+	{
+		"key": "ctrl+g",
+		"command": "editor.action.goToMatchFindAction",
+		"when": "findInputFocussed"
+	},
+	{
+		"key": "ctrl+g",
+		"command": "workbench.action.terminal.goToRecentDirectory",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+
 	/* toggle treeFind */
 	{
 		"key": "ctrl+f",
@@ -952,22 +964,17 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "shift+alt+m",
+		"key": "alt+d m",
 		"command": "editor.emmet.action.updateTag",
 		"when": "editorTextFocus"
 	},
 	{
 		"key": "alt+.",
-		"command": "editor.emmet.action.splitJoinTag",
+		"command": "editor.emmet.action.wrapWithAbbreviation",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+.",
-		"command": "editor.emmet.action.wrapWithAbbreviation",
-		"when": "editorTextFocus && editorHasSelection"
-	},
-	{
-		"key": "alt+/",
+		"key": "alt+\\",
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
@@ -1145,8 +1152,8 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+c"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	{ "command": "", "key": "ctrl+g"
-	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	//{ "command": "", "key": "ctrl+g"
+	//, "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+h"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+n"

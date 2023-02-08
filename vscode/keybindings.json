@@ -186,6 +186,34 @@
 		"command": "editor.action.commentLine"
 	},
 
+	/* 📜 */
+	/* half a page */
+	{
+		"key": "Shift+Alt+PageUp",
+		//"when": "editorTextFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "halfPage", "to": "up" }
+	},
+	{
+		"key": "Shift+Alt+PageDown",
+		//"when": "editorTextFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "halfPage", "to": "down" }
+	},
+	/* a numbered line (not "wrappedLine") */
+	{
+		"key": "Ctrl+Up",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "line", "to": "up" }
+	},
+	{
+		"key": "Ctrl+Down",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "line", "to": "down" }
+	},
+
 	/* Unfold All Cells */
 	{
 		"key": "ctrl+k ctrl+j",
@@ -647,6 +675,15 @@
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
 	{
+		"key": "ctrl+0",
+		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "ctrl+0",
+		"command": "workbench.action.focusActivityBar",
+		"when": "editorFocus || sideBarFocus"
+	},
+	{
 		"key": "alt+`",
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
@@ -681,20 +718,6 @@
 		"when": "focusedView == 'outline'"
 	},
 
-	/* 🎛zoom */
-	{
-		"key": "ctrl+0",
-		"command": "workbench.action.zoomReset"
-	},
-	{
-		"key": "ctrl+=",
-		"command": "workbench.action.zoomIn"
-	},
-	{
-		"key": "ctrl+shift+=",
-		"command": "workbench.action.zoomOut"
-	},
-
 	/* [VS] View.Navigate */
 	{
 		"key": "ctrl+-",
@@ -711,6 +734,14 @@
 	{
 		"key": "ctrl+shift+]",
 		"command": "workbench.action.navigateForwardInEditLocations"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "workbench.action.navigateBackInNavigationLocations"
+	},
+	{
+		"key": "ctrl+shift+=",
+		"command": "workbench.action.navigateForwardInNavigationLocations"
 	},
 	/* ?panelFocus */
 	{
@@ -845,7 +876,7 @@
 		"when": "editorTextFocus && selectionAnchorSet"
 	},
 
-	/* mnemonics */
+	/* Menu Bar mnemonics */
 	{ "command": "", "key": "alt+f" }, // File
 	{ "command": "", "key": "shift+alt+f" },
 	{ "command": "", "key": "alt+e" }, // Edit

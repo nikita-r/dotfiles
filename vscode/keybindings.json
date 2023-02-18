@@ -170,6 +170,10 @@
 		"command": "workbench.action.terminal.focusTabs"
 	},
 	{
+		"key": "ctrl+/",
+		"command": "editor.action.commentLine"
+	},
+	{
 		"key": "alt+pageup",
 		"command": "scrollPageUp"
 	},
@@ -180,10 +184,6 @@
 	{
 		"key": "ctrl+k ctrl+j",
 		"command": "editor.unfoldAll"
-	},
-	{
-		"key": "ctrl+/",
-		"command": "editor.action.commentLine"
 	},
 
 	/* 📜 */
@@ -578,26 +578,6 @@
 		"key": "ctrl+[",
 		"command": "search.action.focusPreviousSearchResult",
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "merge.goToNextConflict",
-		"when": "isMergeEditor"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "merge.goToPreviousConflict",
-		"when": "isMergeEditor"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "workbench.action.compareEditor.nextChange",
-		"when": "inDiffEditor"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "workbench.action.compareEditor.previousChange",
-		"when": "inDiffEditor"
 	},
 	/* ReferenceSearch is not references-view */
 	{
@@ -1606,6 +1586,10 @@
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "command": "", "key": "shift+f10" },
+	{
+		"key": "shift+alt+z",
+		"command": "search.action.replace"
+	},
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"

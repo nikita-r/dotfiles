@@ -196,6 +196,7 @@
 
 	"git.enableStatusBarSync": false,
 	//"git.autorefresh": false,
+	//"git.openRepositoryInParentFolders": "never",
 	"git.fetchOnPull": true,
 	//"git.autofetch": "all",
 	"git.rebaseWhenSync": true,
@@ -332,7 +333,7 @@
 	/* ryu1kn.partial-diff */
 	"partialDiff.commandsOnContextMenu": {
 		"diffVisibleEditors": false,
-		"togglePreComparisonTextNormalizationRules": false
+		"togglePreComparisonTextNormalizationRules": false,
 	},
 
 	/* ryu1kn.text-marker */

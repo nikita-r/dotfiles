@@ -489,6 +489,7 @@
 	},
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
+	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 

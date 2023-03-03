@@ -84,7 +84,7 @@
 
 	"editor.suggestSelection": "first",
 	"editor.suggest.filterGraceful": false,
-	"editor.suggest.localityBonus": true,
+	//"editor.suggest.localityBonus": true,
 	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showInlineDetails": false,
@@ -106,6 +106,11 @@
 	//	],
 	//	"settings": { "fontStyle": "italic" }
 	//} ] },
+
+	/* Terminal */
+	//"terminal.integrated.fontFamily": "JetBrains Mono",
+	//"terminal.integrated.fontSize": 14,
+	//"terminal.integrated.tabs.location": "left",
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
@@ -306,7 +311,7 @@
 	"todo-tree.highlights.enabled": false,
 	"todo-tree.highlights.defaultHighlight": {
 		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-		"iconColor": "terminal.ansiMagenta",
+		"iconColor": "terminal.ansiMagenta"
 	},
 	"todo-tree.highlights.customHighlight": {
 		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiRed" },
@@ -469,11 +474,10 @@
 	"terminal.integrated.confirmOnKill": "always", // like "hasChildProcesses"
 
 	"terminal.integrated.commandsToSkipShell": [
-		"copyRelativeFilePath",
-		"noop", "notifications.showList",
-		"outline.focus",
-		"scrollPageDown", "scrollPageUp",
-		"timeline.focus",
+		"noop",
+		"copyRelativeFilePath", "notifications.showList",
+		"outline.focus", "timeline.focus",
+		"scrollPageUp", "scrollPageDown", "editorScroll",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.remote.showMenu",
 		"workbench.action.terminal.moveToEditorInstance",
@@ -495,7 +499,6 @@
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",
-	//"terminal.integrated.tabs.location": "left",
 	"terminal.integrated.tabs.enableAnimation": false,
 	"terminal.integrated.tabs.separator": " · ",
 	"terminal.integrated.tabs.showActions": "never",
@@ -653,6 +656,7 @@
 	"window.enableMenuBarMnemonics": true,
 
 	//"window.titleBarStyle": "custom",
+	"workbench.editor.centeredLayoutFixedWidth": true,
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",
 
@@ -685,6 +689,7 @@
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.fileNesting.patterns": {
+		//"*": "${capture}.map",
 		"*proj": "${capture}proj.user",
 		"appsettings.json": "appsettings.*.json",
 	},

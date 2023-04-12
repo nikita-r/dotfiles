@@ -89,6 +89,8 @@
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showInlineDetails": false,
 	"editor.suggest.showKeywords": false,
+	"editor.wordBasedSuggestions": false,
+	"editor.suggest.showWords": true,
 	//"editor.suggest.showStatusBar": true,
 
 	/* . . . */
@@ -144,6 +146,7 @@
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
+	"workbench.editor.pinnedTabSizing": "shrink", // shrink intensifies
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.startupEditor": "none",
@@ -486,11 +489,20 @@
 	],
 
 	"terminal.integrated.profiles.windows": {
-		"PowerShell": {
-			"source": "PowerShell",
+		//"PowerShell": {
+		//	"source": "PowerShell",
+		//	"args": [ "-NoLogo" ],
+		//},
+		"PowerShell v5": {
+			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
 			"args": [ "-NoLogo" ],
 		},
+		"Command Prompt": {
+			"path": [ "${env:windir}\\System32\\cmd.exe" ],
+			"args": [ "/K", "cls & @echo CMD launched on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
+		},
 	},
+	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
 	"terminal.integrated.showLinkHover": false,
@@ -678,6 +690,7 @@
 		"**/CVS": false
 	},
 	"search.exclude": {
+		//"**/*.map": true,
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,

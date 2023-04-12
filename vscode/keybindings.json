@@ -203,13 +203,13 @@
 	/* a numbered line (not "wrappedLine") */
 	{
 		"key": "Ctrl+Up",
-		"when": "editorFocus",
+		"when": "editorFocus && !editorHoverFocused",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "line", "to": "up" }
 	},
 	{
 		"key": "Ctrl+Down",
-		"when": "editorFocus",
+		"when": "editorFocus && !editorHoverFocused",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "line", "to": "down" }
 	},
@@ -1110,9 +1110,14 @@
 	},
 
 	/* Ctrl+Alt+Letter */
+	//{
+	//	"key": "ctrl+alt+p",
+	//	"command": "workbench.action.terminal.runRecentCommand"
+	//},
 	{
-		"key": "ctrl+alt+p",
-		"command": "workbench.action.terminal.runRecentCommand"
+		"key": "ctrl+alt+r",
+		"command": "renameFile",
+		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+alt+e",

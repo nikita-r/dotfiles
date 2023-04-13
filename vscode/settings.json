@@ -367,6 +367,11 @@
 			"list.clear",
 			"workbench.files.action.collapseExplorerFolders",
 		],
+		"renamePresentFile": [
+			"revealInExplorer",
+			"revealInExplorer", // allow for !explorerViewletVisible
+			"renameFile",
+		],
 	},
 
 	/* Language Extensions */

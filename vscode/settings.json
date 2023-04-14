@@ -489,6 +489,7 @@
 		"workbench.action.focusQuickOpen",
 		"workbench.action.remote.showMenu",
 		"workbench.action.terminal.moveToEditorInstance",
+		"workbench.action.moveEditorLeftInGroup", "workbench.action.moveEditorRightInGroup",
 		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
 	],
@@ -504,7 +505,7 @@
 		},
 		"Command Prompt": {
 			"path": [ "${env:windir}\\System32\\cmd.exe" ],
-			"args": [ "/K", "cls & @echo CMD launched on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
+			"args": [ "/K", "cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
 		},
 	},
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",

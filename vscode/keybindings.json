@@ -1155,7 +1155,7 @@
 	{
 		"key": "ctrl+f4",
 		"command": "workbench.action.terminal.killEditor",
-		"when": "resourceScheme == 'vscode-terminal'"
+		"when": "terminalEditorActive"
 	},
 
 	/* Terminal */
@@ -1294,7 +1294,7 @@
 		"command": "workbench.action.terminal.scrollToBottom",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	/* Terminal Group Focus */
+	/* Navigate panes/groups/tabs */
 	{
 		"key": "alt+left",
 		"command": "workbench.action.terminal.focusPreviousPane",
@@ -1314,6 +1314,16 @@
 		"key": "ctrl+pagedown",
 		"command": "workbench.action.terminal.focusNext",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+pageup",
+		"command": "workbench.action.previousEditor",
+		"when": "terminalEditorActive"
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "workbench.action.nextEditor",
+		"when": "terminalEditorActive"
 	},
 	/* [un]split */
 	{
@@ -1335,7 +1345,7 @@
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.split",
-		"when": "resourceScheme == 'vscode-terminal'"
+		"when": "terminalEditorActive"
 	},
 	{
 		"key": "ctrl+/",
@@ -1343,7 +1353,7 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
-	/* "ctrl+`": toggle only towards the panel */
+	/* "ctrl+`": solely toggle open, never close */
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
@@ -1352,7 +1362,7 @@
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "resourceScheme == 'vscode-terminal'"
+		"when": "terminalEditorActive"
 	},
 
 	/* View: Toggle Sizes */

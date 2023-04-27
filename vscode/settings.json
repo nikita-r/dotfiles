@@ -91,7 +91,6 @@
 	"editor.suggest.showKeywords": false,
 	"editor.wordBasedSuggestions": false,
 	"editor.suggest.showWords": true,
-	//"editor.suggest.showStatusBar": true,
 
 	/* . . . */
 
@@ -611,6 +610,7 @@
 			"activityBarBadge.foreground": "#402040",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
+			"editor.rangeHighlightBackground": "#80008040",
 			"editorGutter.background": "#201020",
 			"editorStickyScroll.background": "#301030",
 			"editorStickyScrollHover.background": "#302030",

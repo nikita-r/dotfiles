@@ -219,8 +219,8 @@
 	"scm.diffDecorationsIgnoreTrimWhitespace": "false",
 	"diffEditor.renderIndicators": false,
 	"diffEditor.renderSideBySide": true,
-	"diffEditor.diffAlgorithm": "experimental",
-	"mergeEditor.diffAlgorithm": "experimental",
+	"diffEditor.diffAlgorithm": "advanced",
+	"mergeEditor.diffAlgorithm": "advanced",
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
@@ -610,36 +610,36 @@
 			"activityBarBadge.foreground": "#402040",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
-			"editor.rangeHighlightBackground": "#80008040",
 			"editorGutter.background": "#201020",
 			"editorStickyScroll.background": "#301030",
 			"editorStickyScrollHover.background": "#302030",
-			"menu.background": "#333033",
+			"menu.background": "#262426",
 			"menu.border": "#804080",
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#402040",
-			"editorOverviewRuler.findMatchForeground": "#A5A",
 
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
-			//"terminal.selectionBackground": "#fff2",
+			"terminal.selectionBackground": "#369",
 			"list.activeSelectionBackground": "#147",
 			"list.inactiveSelectionBackground": "#345",
 			"menu.selectionBackground": "#147",
+			"minimap.selectionHighlight": "#69c",
 
-			/* chars hilite */
+			/* pinpoint matches within text */
 			"editor.selectionHighlightBackground": "#aaa3",
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090",
 			"editor.findMatchHighlightBackground": "#a0a6",
 			"editor.findRangeHighlightBackground": "#66e3", // 240°
+			"editor.rangeHighlightBackground": "#80008040",
+			"editorOverviewRuler.findMatchForeground": "#A5A",
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",
-			"minimap.selectionHighlight": "#69c",
 			"minimap.selectionOccurrenceHighlight": "#666",
 			"minimap.findMatchHighlight": "#c6c",
 			"terminal.findMatchBorder": "#30c090",

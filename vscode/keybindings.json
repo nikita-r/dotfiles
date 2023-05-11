@@ -987,12 +987,12 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+.",
+		"key": "alt+d .",
 		"command": "editor.emmet.action.wrapWithAbbreviation",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+\\",
+		"key": "alt+d /",
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
@@ -1360,7 +1360,7 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
-	/* "ctrl+`": solely toggle open, never close */
+	/* "ctrl+`": only toggle open or focus, never close */
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",

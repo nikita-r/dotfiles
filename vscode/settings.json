@@ -115,7 +115,7 @@
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
-	//"editor.cursorSmoothCaretAnimation": true,
+	//"editor.cursorSmoothCaretAnimation": "explicit",
 	"editor.cursorWidth": 3,
 	//"editor.hideCursorInOverviewRuler": true,
 	"editor.roundedSelection": false,
@@ -538,8 +538,6 @@
 		"[* Dark*]": {
 			"editorError.foreground": "#fff",
 			"bookmarks.overviewRuler": "#39f6",
-			//"diffEditor.removedTextBorder": null,
-			"diffEditorGutter.removedLineBackground": "#300",
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
@@ -551,6 +549,10 @@
 			/* (:) */
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
+
+			/* |=| */
+			"tab.border": "#666",
+			"editorGroup.border": "#666",
 			"panel.border": "#689", // 200°
 
 			/* |~| */

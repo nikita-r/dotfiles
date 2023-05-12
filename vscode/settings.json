@@ -551,6 +551,7 @@
 			"editorBracketMatch.background": "#0000",
 
 			/* |=| */
+			"sideBar.border": "#666",
 			"tab.border": "#666",
 			"editorGroup.border": "#666",
 			"panel.border": "#689", // 200°
@@ -581,6 +582,13 @@
 			"debugIcon.breakpointStackframeForeground": "#c3c",
 			"editor.inlineValuesBackground": "#333",
 			"editor.inlineValuesForeground": "#999",
+		},
+
+		"[Default Dark Modern]": {
+			"panel.border": "#666",
+			"activityBar.border": "#6669",
+			"statusBar.border": "#6669",
+			"titleBar.border": "#6669",
 		},
 
 		"[Default Dark+]": {

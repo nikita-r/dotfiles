@@ -554,6 +554,7 @@
 			"sideBar.border": "#666",
 			"tab.border": "#666",
 			"editorGroup.border": "#666",
+			"editorRuler.foreground": "#3c96", // 160°
 			"panel.border": "#689", // 200°
 
 			/* |~| */
@@ -584,11 +585,13 @@
 			"editor.inlineValuesForeground": "#999",
 		},
 
-		"[Default Dark Modern]": {
+		"[Default Dark Modern][GitHub Dark*]": {
 			"panel.border": "#666",
 			"activityBar.border": "#6669",
 			"statusBar.border": "#6669",
 			"titleBar.border": "#6669",
+			"editorGroupHeader.tabsBorder": "#666",
+			"editorGroupHeader.border": "#666",
 		},
 
 		"[Default Dark+]": {
@@ -628,8 +631,10 @@
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
+			"tab.activeBorder": "#804080",
+			"tab.hoverBorder": "#c060c0",
 			"titleBar.activeBackground": "#402040",
-			"titleBar.inactiveBackground": "#402040",
+			"titleBar.inactiveBackground": "#281428",
 
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
@@ -639,13 +644,14 @@
 			"list.inactiveSelectionBackground": "#345",
 			"menu.selectionBackground": "#147",
 			"minimap.selectionHighlight": "#69c",
+			"toolbar.hoverBackground": "#69c9",
 
 			/* pinpoint matches within text */
 			"editor.selectionHighlightBackground": "#aaa3",
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090",
 			"editor.findMatchHighlightBackground": "#a0a6",
-			"editor.findRangeHighlightBackground": "#66e3", // 240°
+			"editor.findRangeHighlightBackground": "#66e3",
 			"editor.rangeHighlightBackground": "#80008040",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 			"editorUnicodeHighlight.background": "#0000",

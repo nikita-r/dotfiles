@@ -536,6 +536,8 @@
 		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
 		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
 		"[* Dark*]": {
+			"widget.border": "#000",
+			"widget.shadow": "#000",
 			"editorError.foreground": "#fff",
 			"bookmarks.overviewRuler": "#39f6",
 			"editorGutter.addedBackground": "#408020", // 100°
@@ -592,6 +594,7 @@
 			"titleBar.border": "#6669",
 			"editorGroupHeader.tabsBorder": "#666",
 			"editorGroupHeader.border": "#666",
+			"toolbar.hoverBackground": "#3699",
 		},
 
 		"[Default Dark+]": {

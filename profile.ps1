@@ -33,8 +33,8 @@ Set-PSReadLineOption -HistoryNoDuplicates:$true
 Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd -like ' *') { return $false }
     if ($cmd.Length -le 3) { return $false }
-    if ($cmd -like 'gcm *' -or $cmd -like 'dir *') { return $false }
-    if ($cmd -like 'View-*') { return $false }
+    #if ($cmd -like 'gcm *' -or $cmd -like 'dir *') { return $false }
+    #if ($cmd -like 'View-*') { return $false }
     if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
     return $true
 }
@@ -109,7 +109,7 @@ function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
 
 <# str utils #>
 
-# Natural Sort: ... | sort $_naturally
+# Natural Sort: ... | Sort-Object $_naturally; ... | Sort-Object Extension, { $_.BaseName |% $_naturally }
 $_naturally = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(10, '0') }) }
 
 function normalize-space([string]$str) { # like XPath
@@ -135,7 +135,7 @@ function Get-Timestamp {
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }
 
 function New-TemporaryDirectory {
-$path = Join-Path ([io.path]::GetTempPath()) (New-Guid)
+$path = Join-Path ([io.path]::GetTempPath()) ('[_]' + (New-Guid))
 $path += '.tmp.d'
 New-Item $path -Type Dir |% FullName
 }
@@ -188,7 +188,7 @@ function Parse-eyJ { [CmdletBinding()] param (
 process {
   $t |% {
       $k = $_ -replace '-', '+' -replace '_', '/'
-      while ($k.Length % 4) { $k += '=' }
+      $k += '=' * (4 - $k.Length % 4)
       [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k)) | fj
   }
 } }

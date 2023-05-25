@@ -26,11 +26,14 @@ function Parse-UrlQuery-FromClipboard {
 <# view procs #>
 
 function View-Top ($N=8) {
-  Get-Counter "\Process(*)\% Processor Time" -ea:0 | Select-Object -ExpandProperty CounterSamples `
-    |? Status -eq 0 |? InstanceName -notIn "_total", "idle" | Sort-Object CookedValue -Descending `
+  $dats = Get-Counter "\Process(*)\% Processor Time" -ea:0
+  $tots = ($dats.CounterSamples |? InstanceName -eq '_total').CookedValue
+  $dats.CounterSamples `
+    |? Status -eq 0 |? InstanceName -notIn '_total'<#, 'idle'#> `
+    | Sort-Object { $_.InstanceName -eq 'idle' }, CookedValue -Descending `
     | Select-Object @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
       @{N='Process Name';E={
-        $friendlyName = $_.InstanceName
+        $friendlyName = $_.InstanceName -replace '^idle$', '[ idle ]'
         # try {
         #   $procId = [Diagnostics.Process]::GetProcessesByName($_.InstanceName)[0].Id
         #   $proc = Get-WmiObject -Query "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId=$procId"
@@ -38,8 +41,9 @@ function View-Top ($N=8) {
         # } catch { }
         $friendlyName
       }},
-      @{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
-      -First $N | ft -a -HideTableHeaders
+      #@{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
+      @{N='Overall CPU %';E={ ($_.CookedValue / $tots).ToString("P") }} `
+      -First (1 + $N) | ft -a -HideTableHeaders
 }
 
 function View-ProcUtil {

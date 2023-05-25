@@ -35,7 +35,7 @@ Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd.Length -le 3) { return $false }
     #if ($cmd -like 'gcm *' -or $cmd -like 'dir *') { return $false }
     #if ($cmd -like 'View-*') { return $false }
-    if ($cmd -in 'exit', 'Parse-UrlQuery-FromClipboard') { return $false }
+    if ($cmd -in 'exit'<#, 'Parse-UrlQuery-FromClipboard'#>) { return $false }
     return $true
 }
 
@@ -188,7 +188,7 @@ function Parse-eyJ { [CmdletBinding()] param (
 process {
   $t |% {
       $k = $_ -replace '-', '+' -replace '_', '/'
-      $k += '=' * (4 - $k.Length % 4)
+      $k += '=' * ((4 - $k.Length % 4) % 4)
       [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k)) | fj
   }
 } }

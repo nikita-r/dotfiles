@@ -30,8 +30,8 @@ function View-Top ($N=8) {
   $tots = ($dats.CounterSamples |? InstanceName -eq '_total').CookedValue
   $dats.CounterSamples `
     |? Status -eq 0 |? InstanceName -notIn '_total'<#, 'idle'#> `
-    | Sort-Object { $_.InstanceName -eq 'idle' }, CookedValue -Descending `
-    | Select-Object @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
+    | Sort-Object { $_.InstanceName -eq 'idle' }, CookedValue -Descending | select -First (1 + $N) `
+    | Format-Table @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
       @{N='Process Name';E={
         $friendlyName = $_.InstanceName -replace '^idle$', '[ idle ]'
         # try {
@@ -42,8 +42,8 @@ function View-Top ($N=8) {
         $friendlyName
       }},
       #@{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
-      @{N='Overall CPU %';E={ ($_.CookedValue / $tots).ToString("P") }} `
-      -First (1 + $N) | ft -a -HideTableHeaders
+      @{N='Overall CPU %';E={ ($_.CookedValue / $tots).ToString("P") };Align='Right'} `
+      -a -HideTableHeaders
 }
 
 function View-ProcUtil {

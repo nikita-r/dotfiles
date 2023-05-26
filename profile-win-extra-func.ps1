@@ -30,19 +30,21 @@ function View-Top ($N=8) {
   $tots = ($dats.CounterSamples |? InstanceName -eq '_total').CookedValue
   $dats.CounterSamples `
     |? Status -eq 0 |? InstanceName -notIn '_total'<#, 'idle'#> `
-    | Sort-Object { $_.InstanceName -eq 'idle' }, CookedValue -Descending | select -First (1 + $N) `
-    | Format-Table @{N='Sample TimeStamp';E={ Get-Date $_.TimeStamp -f s }},
+    | Sort-Object { $_.InstanceName -eq 'idle' }, CookedValue, @{ E='InstanceName'; D=$false } -Descending | select -First (1 + $N) `
+    | Format-Table @{N='Sample TimeStampISO';E={ Get-Date $_.TimeStamp -f s }},
       @{N='Process Name';E={
-        $friendlyName = $_.InstanceName -replace '^idle$', '[ idle ]'
+        $friendlyName = $_.InstanceName
         # try {
         #   $procId = [Diagnostics.Process]::GetProcessesByName($_.InstanceName)[0].Id
         #   $proc = Get-WmiObject -Query "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId=$procId"
         #   $friendlyName = [Diagnostics.FileVersionInfo]::GetVersionInfo($proc.ExecutablePath).FileDescription
         # } catch { }
-        $friendlyName
+        if ($friendlyName -eq 'idle') { '[ idle ]' } else { $friendlyName }
       }},
-      #@{N='Overall CPU %';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
-      @{N='Overall CPU %';E={ ($_.CookedValue / $tots).ToString("P") };Align='Right'} `
+      #@{N='% of CPU';E={ ($_.CookedValue / 100 / $env:NUMBER_OF_PROCESSORS).ToString("P") }} `
+      @{N='% of CPU';E={
+        if ($_.CookedValue -gt 0) { ($_.CookedValue / $tots).ToString("P") } else { $_.CookedValue }
+      };Align='Right'} `
       -a -HideTableHeaders
 }
 

@@ -656,6 +656,18 @@
 		"command": "workbench.action.moveEditorToRightGroup"
 	},
 
+	/* restrict next/prev editor to in-group */
+	{
+		"key": "ctrl+pageup",
+		"command": "workbench.action.previousEditorInGroup",
+		"when": "!inDebugRepl"
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "workbench.action.nextEditorInGroup",
+		"when": "!inDebugRepl"
+	},
+
 	/* antipode to "ctrl+`" */
 	{
 		"key": "ctrl+9",
@@ -1324,12 +1336,12 @@
 	},
 	{
 		"key": "ctrl+pageup",
-		"command": "workbench.action.previousEditor",
+		"command": "workbench.action.previousEditorInGroup",
 		"when": "terminalEditorActive"
 	},
 	{
 		"key": "ctrl+pagedown",
-		"command": "workbench.action.nextEditor",
+		"command": "workbench.action.nextEditorInGroup",
 		"when": "terminalEditorActive"
 	},
 	/* [un]split */

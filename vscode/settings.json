@@ -201,6 +201,7 @@
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2,
 
+	"git.defaultBranchName": "trunk",
 	"git.enableStatusBarSync": false,
 	//"git.autorefresh": false,
 	//"git.openRepositoryInParentFolders": "never",

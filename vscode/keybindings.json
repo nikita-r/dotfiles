@@ -22,7 +22,7 @@
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
 
-	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // replace "ctrl+shift+;"
+	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // instead of "ctrl+shift+;"
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
@@ -221,7 +221,7 @@
 		"when": "activeEditor == 'workbench.editor.notebook' && !editorTextFocus"
 	},
 
-	/* F3 */
+	/* Find Action */
 	{
 		"key": "f3",
 		"command": "editor.action.nextMatchFindAction"
@@ -240,17 +240,10 @@
 		"command": "workbench.action.terminal.findPrevious",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-
-	/* Ctrl+G */
 	{
 		"key": "ctrl+g",
 		"command": "editor.action.goToMatchFindAction",
 		"when": "findInputFocussed"
-	},
-	{
-		"key": "ctrl+g",
-		"command": "workbench.action.terminal.goToRecentDirectory",
-		"when": "terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* toggle treeFind */
@@ -660,12 +653,12 @@
 	{
 		"key": "ctrl+pageup",
 		"command": "workbench.action.previousEditorInGroup",
-		"when": "!inDebugRepl"
+		//"when": "!inDebugRepl"
 	},
 	{
 		"key": "ctrl+pagedown",
 		"command": "workbench.action.nextEditorInGroup",
-		"when": "!inDebugRepl"
+		//"when": "!inDebugRepl"
 	},
 
 	/* antipode to "ctrl+`" */
@@ -1187,8 +1180,11 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+c"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	//{ "command": "", "key": "ctrl+g"
-	//, "when": "terminalFocus" },
+	{
+		"key": "ctrl+g",
+		"command": "workbench.action.terminal.goToRecentDirectory",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
 	{ "command": "", "key": "ctrl+h"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+n"

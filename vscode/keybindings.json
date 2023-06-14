@@ -439,6 +439,55 @@
 		"when": "breadcrumbsActive && breadcrumbsVisible && !listFocus"
 	},
 
+	/* pour Mac: "ctrl" to be replaced with "cmd" in the "key" in order to override the default keybindings which go to an end of the line */
+	/* Left */
+	{
+		"key": "ctrl+left",
+		"command": "cursorWordLeft",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+left",
+		"command": "cursorWordLeftSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "breadcrumbs.focusPrevious",
+		"when": "breadcrumbsActive && breadcrumbsVisible"
+	},
+	{
+		"key": "ctrl+backspace",
+		"command": "deleteWordLeft",
+		"when": "textInputFocus"
+	},
+	/* Right */
+	{
+		"key": "ctrl+right",
+		"command": "cursorWordEndRight",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+right",
+		"command": "cursorWordEndRightSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "breadcrumbs.focusNext",
+		"when": "breadcrumbsActive && breadcrumbsVisible"
+	},
+	{
+		"key": "ctrl+delete",
+		"command": "deleteWordRight",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "editor.action.inlineSuggest.acceptNextWord",
+		"when": "inlineSuggestionVisible"
+	},
+
 	/* Shift+Alt+Arrow: ensure Windows defaults */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
@@ -1615,7 +1664,7 @@
 
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
-	{ "command": "", "key": "shift+f10" },
+	{ "command": "", "key": "shift+f10", "when": "!isMac" },
 	{
 		"key": "shift+alt+z",
 		"command": "search.action.replace"

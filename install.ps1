@@ -17,7 +17,7 @@ Invoke-WebRequest $urlPath/settings.json -OutFile $dirUsr/User/settings.json
 # 'keybindings.json'
 $json = Invoke-WebRequest -UseBasicParsing $urlPath/keybindings.json
 $json -split '`n' `
-  -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)"', '"key": "$2$1md+$3"' `
+  -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+q)"', '"key": "$2$1md+$3"' `
   -iReplace '"key": "(shift)\+(c)trl\+([^+"]+)"', '"key": "$2md+$1+$3"' `
   -iReplace '"key": "(c)trl\+(alt)\+([^+"]+)"', '"key": "$2+$1md+$3"' `
   -iReplace '"key": "(c)trl\+(shift)\+(alt)\+(\w+)"', '"key": "$2+$3+$1md+$4"' `

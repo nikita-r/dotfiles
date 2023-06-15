@@ -436,7 +436,7 @@
 	{
 		"key": "ctrl+down",
 		"command": "breadcrumbs.selectFocused",
-		"when": "breadcrumbsActive && breadcrumbsVisible && !listFocus"
+		"when": "breadcrumbsActive && !listFocus"
 	},
 
 	/* pour Mac: "ctrl" to be replaced with "cmd" in the "key" in order to override the default keybindings which go to an end of the line */
@@ -454,7 +454,7 @@
 	{
 		"key": "ctrl+left",
 		"command": "breadcrumbs.focusPrevious",
-		"when": "breadcrumbsActive && breadcrumbsVisible"
+		"when": "breadcrumbsActive"
 	},
 	{
 		"key": "ctrl+backspace",
@@ -475,7 +475,7 @@
 	{
 		"key": "ctrl+right",
 		"command": "breadcrumbs.focusNext",
-		"when": "breadcrumbsActive && breadcrumbsVisible"
+		"when": "breadcrumbsActive"
 	},
 	{
 		"key": "ctrl+delete",
@@ -1119,6 +1119,17 @@
 		"key": "ctrl+shift+n",
 		"command": "explorer.newFolder",
 		"when": "filesExplorerFocus"
+	},
+
+	/* Ctrl+E; Mac default for Cmd+E is "actions.findWithSelection" */
+	{
+		"key": "ctrl+e",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
 	},
 
 	/* ?inQuickOpen */

@@ -17,6 +17,7 @@ Invoke-WebRequest $urlPath/settings.json -OutFile $dirCode/User/settings.json
 # 'keybindings.json'
 $json = Invoke-WebRequest -UseBasicParsing $urlPath/keybindings.json
 $json -split "`n" |% {
+  if ($_ -match '"ctrl\+shift\+a"') { return }
   if ($_ -match '"command": ""') { return $_ }
   $_ `
     -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g])"', '"key": "$2$1md+$3"' `

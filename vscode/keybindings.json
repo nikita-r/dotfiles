@@ -701,16 +701,22 @@
 	/* restrict next/prev editor to in-group */
 	{
 		"key": "ctrl+pageup",
-		"command": "workbench.action.previousEditorInGroup",
-		//"when": "!inDebugRepl"
+		"command": "workbench.action.previousEditorInGroup"
 	},
 	{
 		"key": "ctrl+pagedown",
-		"command": "workbench.action.nextEditorInGroup",
-		//"when": "!inDebugRepl"
+		"command": "workbench.action.nextEditorInGroup"
 	},
 
-	/* antipode to "ctrl+`" */
+	/* antipode to Ctrl+Grave */
+	{
+		"key": "alt+`",
+		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "cmd+escape",
+		"command": "workbench.action.focusActiveEditorGroup"
+	},
 	{
 		"key": "ctrl+9",
 		"command": "workbench.action.focusActiveEditorGroup"
@@ -723,10 +729,6 @@
 		"key": "ctrl+0",
 		"command": "workbench.action.focusActivityBar",
 		"when": "editorFocus || sideBarFocus"
-	},
-	{
-		"key": "alt+`",
-		"command": "workbench.action.focusActiveEditorGroup"
 	},
 
 	/* Alt+Digit */
@@ -1428,11 +1430,15 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
-	/* "ctrl+`": only toggle open or focus, never close */
+	/* Ctrl+Grave */
+	{
+		"key": "ctrl+`",
+		"command": "terminal.focus"
+	},
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
-		"when": "inTerminalPicker || terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "inTerminalPicker || terminalFocus"
 	},
 	{
 		"key": "ctrl+`",

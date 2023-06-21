@@ -150,18 +150,78 @@
 	},
 	{
 		"key": "alt+q",
-		"command": "toggleSearchEditorRegex",
-		"when": "inSearchEditor && searchInputBoxFocus"
-	},
-	{
-		"key": "alt+q",
 		"command": "toggleSearchRegex",
 		"when": "searchViewletFocus"
 	},
 	{
 		"key": "alt+q",
+		"command": "toggleSearchEditorRegex",
+		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+q",
 		"command": "workbench.action.terminal.toggleFindRegex",
-		"when": "terminalFindFocused || terminalFocus"
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+
+	/* Optional search toggles for Mac */
+	/* Opt+C */
+	{
+		"key": "alt+c",
+		"command": "toggleFindCaseSensitive",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+c",
+		"command": "toggleSearchCaseSensitive",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+c",
+		"command": "toggleSearchEditorCaseSensitive",
+		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+c",
+		"command": "workbench.action.terminal.toggleFindCaseSensitive",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* Opt+W */
+	{
+		"key": "alt+w",
+		"command": "toggleFindWholeWord",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "toggleSearchWholeWord",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "toggleSearchEditorWholeWord",
+		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.terminal.toggleFindWholeWord",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* Opt+P */
+	{
+		"key": "alt+p",
+		"command": "togglePreserveCase",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+p",
+		"command": "toggleSearchPreserveCase",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+p",
+		"command": "keybindings.editor.toggleSortByPrecedence",
+		"when": "inKeybindings"
 	},
 
 	/* default bindings, but with the "when" removed */
@@ -244,6 +304,16 @@
 		"key": "ctrl+g",
 		"command": "editor.action.goToMatchFindAction",
 		"when": "findInputFocussed"
+	},
+	{
+		"key": "cmd+g",
+		"command": "workbench.action.terminal.findNext",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "workbench.action.terminal.findPrevious",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* toggle treeFind */
@@ -485,7 +555,7 @@
 	{
 		"key": "ctrl+right",
 		"command": "editor.action.inlineSuggest.acceptNextWord",
-		"when": "inlineSuggestionVisible"
+		"when": "inlineSuggestionVisible && editorTextFocus"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -1233,9 +1303,9 @@
 	},
 
 	/* Terminal */
+	/* Emacs-mode shortcuts for readline/zle */
 	{ "command": "", "key": "ctrl+e", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+a", "when": "terminalFocus" },
-	/* Unbind some of the control codes. */
 	{ "command": "", "key": "ctrl+["
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+]"
@@ -1285,21 +1355,6 @@
 	{
 		"key": "ctrl+f",
 		"command": "workbench.action.terminal.focusFind",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "alt+c",
-		"command": "workbench.action.terminal.toggleFindCaseSensitive",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "alt+q",
-		"command": "workbench.action.terminal.toggleFindRegex",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "alt+w",
-		"command": "workbench.action.terminal.toggleFindWholeWord",
 		"when": "terminalTabsFocus"
 	},
 	/* Z */

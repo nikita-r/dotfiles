@@ -699,6 +699,8 @@
 	"workbench.layoutControl.type": "toggles",
 
 	"editor.useTabStops": false, // for Backspace
+	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+	"editor.smartSelect.selectSubwords": false,
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,
 	//"files.insertFinalNewline": true,

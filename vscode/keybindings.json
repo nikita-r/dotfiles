@@ -1734,6 +1734,21 @@
 		"when": "editorTextFocus && editorHasSelection && !inSnippetMode && !editorTabMovesFocus && !suggestWidgetVisible && !editorReadonly"
 	},
 
+	/* User-Defined Snippets */
+	/* https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax */
+	{
+		"key": "alt+shift+;",
+		"when": "editorTextFocus",
+		"command": "editor.action.insertSnippet",
+		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$0" }
+	},
+	{
+		"key": "alt+shift+;",
+		"when": "editorTextFocus && editorHasSelection",
+		"command": "editor.action.insertSnippet",
+		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
+	},
+
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },

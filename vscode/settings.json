@@ -404,10 +404,6 @@
 	"python.languageServer": "Pylance",
 	"python.analysis.typeCheckingMode": "strict",
 	"isort.args": [ "--profile", "black" ],
-	"[python]": {
-		"editor.formatOnSave": false,
-		"editor.codeActionsOnSave": { "source.organizeImports": true }
-	},
 	"python.formatting.provider": "none",
 	"python.linting.enabled": false,
 
@@ -701,6 +697,12 @@
 	"editor.useTabStops": false, // for Backspace
 	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
 	"editor.smartSelect.selectSubwords": false,
+
+	/* file-saving preferences */
+	"[python]": {
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": { "source.organizeImports": true }
+	},
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,
 	//"files.insertFinalNewline": true,
@@ -708,11 +710,12 @@
 
 	"[json]": { "editor.maxTokenizationLineLength": 10240000 },
 
-	/* discriminate amongst file types */
-
 	"files.associations": {
 		"*.qss": "css",
 	},
+
+	/* glob discrimination */
+
 	"files.exclude": {
 		"**/.ipynb_checkpoints": true,
 		"**/__pycache__": true,
@@ -723,6 +726,9 @@
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
+	},
+	"files.readonlyInclude": {
+		//"**/*.log": true,
 	},
 	"workbench.editorAssociations": {
 		//"*.md": "vscode.markdown.preview.editor",

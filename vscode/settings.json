@@ -21,6 +21,7 @@
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	"editor.wrappingIndent": "none",
+	"editor.renderFinalNewline": "dimmed",
 
 	"explorer.autoReveal": false,
 	"explorer.copyRelativePathSeparator": "/",
@@ -334,10 +335,6 @@
 		}
 	},
 
-	/* ryu1kn.edit-with-shell */
-	"editWithShell.shell.windows": "PowerShell.exe",
-	"editWithShell.shellArgs.windows": [ "-NoProfile", "-Command" ],
-
 	/* ryu1kn.partial-diff */
 	"partialDiff.commandsOnContextMenu": {
 		"diffVisibleEditors": false,
@@ -624,6 +621,7 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
+			"editorLineNumber.dimmedForeground": "#802080",
 			"editorStickyScroll.background": "#301030",
 			"editorStickyScrollHover.background": "#302030",
 			"menu.background": "#262426",
@@ -726,12 +724,6 @@
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
-	},
-	"files.readonlyInclude": {
-		//"**/*.log": true,
-	},
-	"workbench.editorAssociations": {
-		//"*.md": "vscode.markdown.preview.editor",
 	},
 
 	"explorer.fileNesting.enabled": true,

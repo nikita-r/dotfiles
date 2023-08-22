@@ -720,6 +720,33 @@
 		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
 	},
 
+	/* GitHub Copilot */
+	{
+		"key": "ctrl+\\",
+		"command": "github.copilot.generate",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "github.copilot.acceptCursorPanelSolution",
+		"when": "resourceScheme == 'copilot'" // github.copilot.activated && github.copilot.panelVisible
+	},
+	{
+		"key": "ctrl+]",
+		"command": "github.copilot.nextPanelSolution",
+		"when": "github.copilot.panelVisible"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "github.copilot.previousPanelSolution",
+		"when": "github.copilot.panelVisible"
+	},
+	{
+		"key": "alt+\\",
+		"command": "editor.action.inlineSuggest.trigger",
+		"when": "editorTextFocus"
+	},
+
 	/* Alt+[][] */
 	{ "command": "noop", "key": "alt+]" },
 	{ "command": "noop", "key": "alt+[" },
@@ -785,10 +812,6 @@
 	},
 	{
 		"key": "cmd+escape",
-		"command": "workbench.action.focusActiveEditorGroup"
-	},
-	{
-		"key": "ctrl+9",
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
 	{
@@ -1587,14 +1610,14 @@
 
 	/* ryu1kn.text-marker */
 	{
-		"key": "alt+,",
+		"key": "ctrl+0",
 		"command": "textmarker.goToNextHighlight",
-		"when": "editorTextFocus"
+		//"when": "editorTextFocus"
 	},
 	{
-		"key": "shift+alt+,",
+		"key": "ctrl+9",
 		"command": "textmarker.goToPreviousHighlight",
-		"when": "editorTextFocus"
+		//"when": "editorTextFocus"
 	},
 
 	/* ryu1kn.partial-diff */

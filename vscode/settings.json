@@ -546,6 +546,10 @@
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
 
+			/* 123 */
+			"editorLineNumber.foreground": "#808080",
+			"editorActiveLineNumber.foreground": "#c0c0c0",
+
 			/* |=| */
 			"sideBar.border": "#666",
 			"tab.border": "#666",
@@ -621,7 +625,7 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#201020",
-			"editorLineNumber.dimmedForeground": "#802080",
+			"editorLineNumber.dimmedForeground": "#804080",
 			"editorStickyScroll.background": "#301030",
 			"editorStickyScrollHover.background": "#302030",
 			"menu.background": "#262426",

@@ -29,6 +29,7 @@
 	pm = stash push -m
 	rs = restore --staged
 	ol = log --oneline
+	ol = log --pretty=format:'%C(auto)%cI %h %s%d' # prepended committer date
 	wt = worktree
 
 [alias]

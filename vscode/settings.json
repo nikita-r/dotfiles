@@ -90,7 +90,7 @@
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showInlineDetails": false,
 	"editor.suggest.showKeywords": false,
-	"editor.wordBasedSuggestions": false,
+	//"editor.wordBasedSuggestions": false,
 	"editor.suggest.showWords": true,
 
 	/* . . . */
@@ -685,14 +685,16 @@
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
+
 	"window.zoomLevel": 0.0,
+	"workbench.editor.centeredLayoutFixedWidth": true,
 
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
 
 	//"window.titleBarStyle": "custom",
-	"workbench.editor.centeredLayoutFixedWidth": true,
+	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",
 

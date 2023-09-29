@@ -53,7 +53,7 @@
 	//"workbench.editor.enablePreview": false,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
-	"search.quickOpen.includeSymbols": true,
+	//"search.quickOpen.includeSymbols": true,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
@@ -684,10 +684,11 @@
 
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
-	"window.newWindowDimensions": "offset",
+	"window.newWindowDimensions": "default", // or "offset"
 
 	"window.zoomLevel": 0.0,
 	"workbench.editor.centeredLayoutFixedWidth": true,
+	"workbench.editor.splitOnDragAndDrop": false,
 
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,

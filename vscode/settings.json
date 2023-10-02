@@ -146,7 +146,7 @@
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
-	"workbench.editor.pinnedTabSizing": "shrink", // shrink intensifies
+	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.startupEditor": "none",
@@ -682,9 +682,10 @@
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
 
+	//"files.simpleDialog.enable": true,
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
-	"window.newWindowDimensions": "default", // or "offset"
+	"window.newWindowDimensions": "offset",
 
 	"window.zoomLevel": 0.0,
 	"workbench.editor.centeredLayoutFixedWidth": true,

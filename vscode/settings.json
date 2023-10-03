@@ -146,7 +146,7 @@
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
-	"workbench.editor.pinnedTabSizing": "shrink",
+	//"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.startupEditor": "none",
@@ -471,6 +471,7 @@
 
 	/* Terminal */
 
+	"terminal.integrated.hideOnStartup": "whenEmpty", // on startup, do not open the Terminal View unless there is a persistent session
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
 	"terminal.integrated.confirmOnKill": "always", // like "hasChildProcesses"
 

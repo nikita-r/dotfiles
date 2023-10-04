@@ -146,12 +146,14 @@
 	"workbench.editor.showIcons": false,
 	"workbench.editor.tabCloseButton": "off",
 	"workbench.editor.tabSizing": "shrink",
-	//"workbench.editor.pinnedTabSizing": "shrink",
+	//"window.density.editorTabHeight": "compact",
+	"workbench.editor.pinnedTabsOnSeparateRow": true,
 	"workbench.editor.wrapTabs": true,
 
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 	"workbench.editor.untitled.hint": "hidden",
+	"workbench.editor.empty.hint": "hidden",
 
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.historyBasedLanguageDetection": false,
@@ -487,6 +489,7 @@
 		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
 	],
+	//"terminal.integrated.allowMnemonics": true,
 
 	"terminal.integrated.profiles.windows": {
 		//"PowerShell": {
@@ -634,8 +637,12 @@
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
-			"tab.activeBorder": "#804080",
+			"editorGroupHeader.tabsBorder": "#806080",
+			//"tab.activeBorder": "#804080",
 			"tab.hoverBorder": "#c060c0",
+			"activityBar.border": "#806080",
+			"statusBar.border": "#806080",
+			"titleBar.border": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#281428",
 

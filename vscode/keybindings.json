@@ -234,6 +234,10 @@
 		"command": "editor.action.commentLine"
 	},
 	{
+		"key": "ctrl+k i",
+		"command": "inlineChat.start"
+	},
+	{
 		"key": "alt+pageup",
 		"command": "scrollPageUp"
 	},
@@ -742,6 +746,11 @@
 		"when": "github.copilot.panelVisible"
 	},
 	{
+		"key": "ctrl+k shift+i",
+		"command": "workbench.action.quickchat.toggle",
+		"when": "hasChatProvider"
+	},
+	{
 		"key": "alt+\\",
 		"command": "editor.action.inlineSuggest.trigger",
 		"when": "editorTextFocus"
@@ -1031,21 +1040,21 @@
 	{ "command": "", "key": "shift+alt+h" },
 
 	/* Peek Call Hierarchy */
-	{
-		"key": "ctrl+k i",
-		"command": "editor.showCallHierarchy",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+k i",
-		"command": "editor.showIncomingCalls",
-		"when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
-	},
-	{
-		"key": "ctrl+k i",
-		"command": "editor.showOutgoingCalls",
-		"when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
-	},
+	//{
+	//	"key": "ctrl+k i",
+	//	"command": "editor.showCallHierarchy",
+	//	"when": "editorTextFocus"
+	//},
+	//{
+	//	"key": "ctrl+k i",
+	//	"command": "editor.showIncomingCalls",
+	//	"when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
+	//},
+	//{
+	//	"key": "ctrl+k i",
+	//	"command": "editor.showOutgoingCalls",
+	//	"when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
+	//},
 	{
 		"key": "shift+enter",
 		"command": "-editor.refocusCallHierarchy",
@@ -1661,8 +1670,24 @@
 		"when": "notebookCellFocused && !inputFocus"
 	},
 
-	/* Ctrl+Shift+i */
+	/* Match Ctrl+Space with regard to Suggestions */
+	{ "command": "noop", "key": "ctrl+i" },
 	{ "command": "noop", "key": "ctrl+shift+i" },
+	{
+		"key": "ctrl+i",
+		"command": "editor.action.triggerSuggest",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "focusSuggestion",
+		"when": "textInputFocus && suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "toggleSuggestionDetails",
+		"when": "textInputFocus && suggestWidgetVisible && suggestWidgetHasFocusedSuggestion"
+	},
 	{
 		"key": "ctrl+shift+i",
 		"command": "editor.action.triggerParameterHints",

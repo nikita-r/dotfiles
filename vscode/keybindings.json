@@ -8,7 +8,6 @@
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
-	$: workbench.action.focusNextPart: "f6"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
@@ -702,27 +701,6 @@
 		"command": "search.action.focusPreviousSearchResult",
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
 	},
-	/* ReferenceSearch is not references-view */
-	{
-		"key": "f12",
-		"command": "-goToNextReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible"
-	},
-	{
-		"key": "shift+f12",
-		"command": "-goToPreviousReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "goToNextReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
-	},
-	{
-		"key": "ctrl+[",
-		"command": "goToPreviousReference",
-		"when": "inReferenceSearchEditor || referenceSearchVisible" // ?callHierarchyVisible
-	},
 
 	/* GitHub Copilot */
 	{
@@ -823,6 +801,8 @@
 		"key": "cmd+escape",
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
+
+	/* 0 & 9 */
 	{
 		"key": "ctrl+0",
 		"command": "workbench.action.focusActiveEditorGroup"
@@ -832,8 +812,10 @@
 		"command": "workbench.action.focusActivityBar",
 		"when": "editorFocus || sideBarFocus"
 	},
-
-	/* Alt+Digit */
+	{
+		"key": "ctrl+9",
+		"command": "workbench.action.lastEditorInGroup"
+	},
 	{
 		"key": "alt+9",
 		"command": "workbench.action.lastEditorInGroup"
@@ -1670,7 +1652,7 @@
 		"when": "notebookCellFocused && !inputFocus"
 	},
 
-	/* Match Ctrl+Space with regard to Suggestions */
+	/* Ctrl+i is to match Ctrl+Space with regard to Suggestions and Hints */
 	{ "command": "noop", "key": "ctrl+i" },
 	{ "command": "noop", "key": "ctrl+shift+i" },
 	{

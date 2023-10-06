@@ -65,11 +65,7 @@
 	"editor.lightbulb.enabled": false,
 
 	"editor.inlineSuggest.enabled": false,
-	"editor.quickSuggestions": {
-		"comments": "off",
-		"strings": "off",
-		"other": "off"
-	},
+	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "off" },
 	"editor.quickSuggestionsDelay": 333,
 	"editor.parameterHints.enabled": false,
 	"editor.parameterHints.cycle": true,
@@ -556,6 +552,7 @@
 
 			/* |=| */
 			"sideBar.border": "#666",
+			"sideBarSectionHeader.border": "#666",
 			"tab.border": "#666",
 			"editorGroup.border": "#666",
 			"editorRuler.foreground": "#3c96", // 160°
@@ -632,8 +629,8 @@
 			"editorLineNumber.dimmedForeground": "#804080",
 			"editorStickyScroll.background": "#301030",
 			"editorStickyScrollHover.background": "#302030",
-			"menu.background": "#262426",
-			"menu.border": "#804080",
+			"menu.background": "#282428",
+			"menu.border": "#806080",
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",

@@ -605,7 +605,7 @@
 			"badge.foreground": "#ccc",
 			"editorCursor.foreground": "#f93", // 30°
 			"editorCursor.background": "#fff",
-			"tab.hoverBorder": "#f93",
+			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
 			"editor.background": "#1a1a1a",
@@ -648,7 +648,7 @@
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",
 			"titleBar.activeBackground": "#402040",
-			"titleBar.inactiveBackground": "#0C060C",
+			"titleBar.inactiveBackground": "#201020",
 
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
@@ -745,6 +745,7 @@
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
 	},
+	"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,

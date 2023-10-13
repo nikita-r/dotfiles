@@ -534,14 +534,17 @@
 			"widget.border": "#000",
 			"widget.shadow": "#000",
 			"editorError.foreground": "#fff",
+			"titleBar.inactiveForeground": "#ccc",
+			"banner.foreground": "#ccc",
+			"banner.iconForeground": "#ccc",
+			"editorInfo.foreground": "#39f", // 210°
+			"editorOverviewRuler.infoForeground": "#39f9",
 			"bookmarks.overviewRuler": "#39f6",
+			"editorWarning.foreground": "#fd3", // 50°
+			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
-			"editorInfo.foreground": "#39f", // 210°
-			"editorOverviewRuler.infoForeground": "#39f9",
-			"editorOverviewRuler.warningForeground": "#fd39",
-			"editorWarning.foreground": "#fd3", // 50°
 
 			/* (:) */
 			"editorBracketMatch.border": "#689",

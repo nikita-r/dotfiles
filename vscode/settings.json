@@ -436,6 +436,9 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"powershell.codeFormatting.alignPropertyValuePairs": false,
+	//"powershell.codeFormatting.addWhitespaceAroundPipe": false,
+	"powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+	"powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
 	//"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"javascript.preferences.quoteStyle": "single",
@@ -461,7 +464,7 @@
 
 	/* debug */
 	"debug.confirmOnExit": "always",
-	"debug.console.historySuggestions": false,
+	//"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
 	"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,

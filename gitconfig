@@ -23,6 +23,7 @@
 [alias]
 	co = checkout
 	sb = status -sb
+	au = add -u
 	sf = submodule foreach --recursive
 	cm = commit -m
 	pi = stash pop --index

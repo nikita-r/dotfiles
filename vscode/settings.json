@@ -6,6 +6,7 @@
 	"security.workspace.trust.enabled": false,
 	"git.mergeEditor": false,
 	"editor.stickyScroll.enabled": false,
+	//"workbench.tree.enableStickyScroll": true,
 	"terminal.integrated.shellIntegration.enabled": false,
 
 	"update.mode": "none", // or "manual"
@@ -41,7 +42,7 @@
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
-	"editor.occurrencesHighlight": false,
+	"editor.occurrencesHighlight": false, // or "multiFile"
 	"search.searchEditor.defaultNumberOfContextLines": null,
 	"search.searchOnTypeDebouncePeriod": 666,
 	"search.showLineNumbers": true,
@@ -130,8 +131,9 @@
 	//"editor.rulers": [ 80, 120 ],
 	"editor.scrollbar.vertical": "visible",
 	"editor.scrollbar.horizontal": "visible",
-	"workbench.list.horizontalScrolling": true,
+	"editor.smoothScrolling": false,
 	"workbench.list.smoothScrolling": true,
+	"workbench.list.horizontalScrolling": true,
 	"workbench.tree.indent": 12,
 	"workbench.tree.renderIndentGuides": "always",
 
@@ -140,7 +142,8 @@
 	"workbench.editor.decorations.colors": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showIcons": false,
-	"workbench.editor.tabCloseButton": "off",
+	"workbench.editor.tabCloseButton": "off", // voided at v1.85
+	"workbench.editor.tabActionCloseVisibility": false,
 	"workbench.editor.tabSizing": "shrink",
 	//"window.density.editorTabHeight": "compact",
 	"workbench.editor.pinnedTabsOnSeparateRow": true,

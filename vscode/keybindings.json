@@ -663,26 +663,6 @@
 	},
 	{
 		"key": "ctrl+]",
-		"command": "merge.goToNextConflict",
-		"when": "activeEditor == 'mergeEditor'"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "merge.goToPreviousConflict",
-		"when": "activeEditor == 'mergeEditor'"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "workbench.action.compareEditor.nextChange",
-		"when": "textCompareEditorActive"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "workbench.action.compareEditor.previousChange",
-		"when": "textCompareEditorActive"
-	},
-	{
-		"key": "ctrl+]",
 		"command": "references-view.next",
 		"when": "reference-list.hasResult && activeViewlet == 'workbench.view.extension.references-view'"
 	},
@@ -700,6 +680,26 @@
 		"key": "ctrl+[",
 		"command": "search.action.focusPreviousSearchResult",
 		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "merge.goToNextConflict",
+		"when": "activeEditor == 'mergeEditor'"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "merge.goToPreviousConflict",
+		"when": "activeEditor == 'mergeEditor'"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.compareEditor.nextChange",
+		"when": "textCompareEditorActive"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.compareEditor.previousChange",
+		"when": "textCompareEditorActive"
 	},
 
 	/* GitHub Copilot */
@@ -1547,6 +1547,11 @@
 	{
 		"key": "shift+alt+c",
 		"command": "copyRelativeFilePath"
+	},
+	{
+		"key": "shift+alt+c",
+		"command": "workbench.action.terminal.copyLastCommandOutput",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* alefragnani.Bookmarks */

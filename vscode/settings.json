@@ -2,23 +2,31 @@
 	"window.titleSeparator": " · ",
 	"window.title": "Code${separator}${rootName}${separator}${dirty}${activeEditorShort}",
 
-	/* extravagant features */
-	"security.workspace.trust.enabled": false,
-	"git.mergeEditor": false,
-	"editor.stickyScroll.enabled": false,
-	//"workbench.tree.enableStickyScroll": true,
-	"terminal.integrated.shellIntegration.enabled": false,
-
 	"update.mode": "none", // or "manual"
 	"update.showReleaseNotes": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
 	"extensions.autoUpdate": false,
+
+	/* surveys & telemetry */
 	"extensions.ignoreRecommendations": true,
 	"redhat.telemetry.enabled": false,
 	"telemetry.telemetryLevel": "off",
 	"typescript.surveys.enabled": false,
 	"workbench.enableExperiments": false,
+
+	/* extravagant features */
+	"security.workspace.trust.enabled": false,
+	"git.mergeEditor": false,
+	"terminal.integrated.shellIntegration.enabled": false,
+
+	/* icky */
+	"editor.stickyScroll.enabled": false,
+	"editor.stickyScroll.maxLineCount": 5,
+	//"workbench.tree.enableStickyScroll": true,
+	"workbench.tree.stickyScrollMaxItemCount": 7,
+	//"terminal.integrated.stickyScroll.enabled": true,
+	"terminal.integrated.stickyScroll.maxLineCount": 3,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	"editor.wrappingIndent": "none",
@@ -234,7 +242,7 @@
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
 	"git-graph.repository.includeCommitsMentionedByReflogs": true,
-	"git-graph.repository.onLoad.showCheckedOutBranch": true,
+	//"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.showUncommittedChanges": false,
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
 
@@ -567,6 +575,8 @@
 			"editorGroup.border": "#666",
 			"editorRuler.foreground": "#3c96", // 160°
 			"panel.border": "#689", // 200°
+			"editorStickyScroll.background": "#203038",
+			"editorStickyScrollHover.background": "#304854",
 
 			/* |~| */
 			"minimapSlider.background": "#6663",
@@ -618,8 +628,8 @@
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
 			"editor.background": "#1a1a1a",
-			"editorStickyScroll.background": "#2d2d2d",
-			"editorStickyScrollHover.background": "#3a3a3a",
+			//"editorStickyScroll.background": "#2d2d2d",
+			//"editorStickyScrollHover.background": "#3a3a3a",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -728,7 +738,10 @@
 	/* file-saving preferences */
 	"[python]": {
 		"editor.formatOnSave": false,
-		"editor.codeActionsOnSave": { "source.organizeImports": true }
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit",
+			"source.fixAll": "never",
+		}
 	},
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

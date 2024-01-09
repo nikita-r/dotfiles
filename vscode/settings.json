@@ -290,6 +290,7 @@
 	"filesize.showGzip": false,
 	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
+	"quick-select.includeBackticks": false,
 	"quicktype.inferBooleanStrings": false,
 
 	/* tomoki1207.pdf */
@@ -375,7 +376,7 @@
 		],
 		"renamePresentFile": [
 			"revealInExplorer",
-			"revealInExplorer", // allow for !explorerViewletVisible
+			"revealInExplorer", // 2nd time is needed if "!explorerViewletVisible" before the 1st command
 			"renameFile",
 		],
 	},
@@ -409,7 +410,7 @@
 	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
 	"python.languageServer": "Pylance",
-	"python.analysis.typeCheckingMode": "strict",
+	//"python.analysis.typeCheckingMode": "strict",
 	"isort.args": [ "--profile", "black" ],
 	"python.formatting.provider": "none",
 	"python.linting.enabled": false,

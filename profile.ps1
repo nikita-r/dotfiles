@@ -205,16 +205,25 @@ function Is-Numeric ($x) {
 
 function Get-Epoch-Timestamp ($x) {
   $epoch = Get-Date 1970-1-1
+
   if (Is-Numeric $x) {
-    $datetime = $epoch.AddSeconds($x)
+    try {
+      $datetime = $epoch.AddSeconds($x)
+    } catch [ArgumentOutOfRangeException] {
+      Write-Host 'consider as milliseconds' -ForegroundColor Yellow
+      $datetime = $epoch.AddSeconds($x / 1000)
+    }
     return (Get-Date $datetime -f s) + 'Z'
   }
+
   if ($null -eq $x) {
     $datetime = (Get-Date).ToUniversalTime()
   } else {
     $datetime = (Get-Date $x).ToUniversalTime()
   }
-  [Int64] ($datetime - $epoch).TotalSeconds
+
+  Write-Host 'seconds since epoch' -ForegroundColor Yellow
+  [Int64] ($datetime - $epoch).TotalSeconds # -is [double]
 }
 
 

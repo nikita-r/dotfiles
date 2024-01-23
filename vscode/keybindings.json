@@ -589,7 +589,7 @@
 		"when": "notebookCellFocused && !inputFocus"
 	},
 
-	/* Jump Problems */
+	/* peruse Problems */
 	{
 		"key": "alt+f8",
 		"command": "editor.action.marker.nextInFiles"
@@ -598,7 +598,7 @@
 		"key": "shift+alt+f8",
 		"command": "editor.action.marker.prevInFiles"
 	},
-	/* Ctrl+, */
+	/* in the present file */
 	{
 		"command": "editor.action.marker.next",
 		"key": "ctrl+,"
@@ -606,6 +606,12 @@
 	{
 		"command": "editor.action.marker.prev",
 		"key": "shift+ctrl+,"
+	},
+	/* cycle Solutions (Quick Fixes) */
+	{
+		"key": "ctrl+.",
+		"command": "selectNextCodeAction",
+		"when": "codeActionMenuVisible"
 	},
 
 	/* Retain F8 for execSelection */
@@ -727,6 +733,11 @@
 		"key": "ctrl+k shift+i",
 		"command": "workbench.action.quickchat.toggle",
 		"when": "hasChatProvider"
+	},
+	{
+		"key": "ctrl+k shift+i",
+		"command": "github.copilot.terminal.suggestCommand",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
 		"key": "alt+\\",
@@ -1660,6 +1671,7 @@
 	/* Ctrl+i is to match Ctrl+Space with regard to Suggestions and Hints */
 	{ "command": "noop", "key": "ctrl+i" },
 	{ "command": "noop", "key": "ctrl+shift+i" },
+	{ "command": "", "key": "ctrl+i", "when": "terminalFocus" },
 	{
 		"key": "ctrl+i",
 		"command": "editor.action.triggerSuggest",

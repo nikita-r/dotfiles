@@ -107,7 +107,7 @@ function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
 }
 
 
-<# str utils #>
+<# Str utils #>
 
 # Natural Sort: ... | Sort-Object $_naturally; ... | Sort-Object Extension, { $_.BaseName |% $_naturally }
 $_naturally = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(10, '0') }) }
@@ -118,7 +118,7 @@ function normalize-space([string]$str) { # like XPath
 }
 
 
-<# misc utility #>
+<# misc Getters #>
 
 function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
     $enum = [type]( $enum -replace '^\[([^][]+)\]$', '$1' )
@@ -127,12 +127,22 @@ function Get-EnumValues ([string]$enum) { # cannot be of type [type] here
     $rslt
 }
 
+function Get-StrictMode { # Set-StrictMode -Version:0
+    try { $arr=@(1); $arr[1] } catch { return 3 } # -Version:Latest
+    try { "Not-a-Date".Year } catch { return 2 }
+    try { $local:undefined } catch { return 1 }
+    return 0 # Set-StrictMode -Off
+}
+
 function Get-Timestamp {
     $datetime = (Get-Date).ToUniversalTime()
     (Get-Date $datetime -f s) + (Get-Date $datetime -F.fffZ)
 }
 
 function Get-LoremIpsum { “Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam hendrerit nisi sed sollicitudin pellentesque.  Nunc posuere purus rhoncus pulvinar aliquam.  Ut aliquet tristique nisl vitae volutpat.  Nulla aliquet porttitor venenatis.  Donec a dui et dui fringilla consectetur id nec massa.  Aliquam erat volutpat.  Sed ut dui ut lacus dictum fermentum vel tincidunt neque.  Sed sed lacinia lectus.  Duis sit amet sodales felis.  Duis nunc eros, mattis at dui ac, convallis semper risus.  In adipiscing ultrices tellus, in suscipit massa vehicula eu.” }
+
+
+<# Path generation #>
 
 function New-TemporaryDirectory {
 $path = Join-Path ([io.path]::GetTempPath()) ('[_]' + (New-Guid))
@@ -166,7 +176,7 @@ function View-FileHexed { [CmdletBinding()] param (
 }
 
 
-<# web dev helpers #>
+<# Web Dev helpers #>
 
 function Get-AuthHeader-Basic ([string]${client_id}, [string]${client_secret}) {
     if (${client_id} -match ':') { throw }

@@ -516,17 +516,17 @@
 			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
 			"args": [
 				"-NoExit",
-				"$workspaceFolder = <#\"${userHome}\"#>\"${env:UserProfile}\"; Set-PSReadLineOption -HistorySavePath (Join-Path \"${workspaceFolder}\" .vscode.PowerShell_v5.history.txt); Remove-Variable workspaceFolder"
+				"function abra-cadabra { Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { ${env:UserProfile} }) .vscode.PowerShell_v5.History.txt) } abra-cadabra; Remove-Item Function:abra-cadabra"
 			],
 		},
-		"PowerShell v5": {
-			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
-			"args": [
-				"-NoExit",
-				/* History placed in [environment]::CurrentDirectory, which is either ${workspaceFolder} or ${env:UserProfile} at launch */
-				"Set-PSReadLineOption -HistorySavePath .vscode.PowerShell_v5.history.txt"
-			],
-		},
+		//"PowerShell v5": {
+		//	"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
+		//	"args": [
+		//		"-NoExit",
+		//		/* History will be placed under [environment]::CurrentDirectory, which is either "${workspaceFolder}" or $env:UserProfile at launch */
+		//		"Set-PSReadLineOption -HistorySavePath .vscode.PowerShell_v5.History.txt"
+		//	],
+		//},
 		"Command Prompt": {
 			"path": [ "${env:windir}\\System32\\cmd.exe" ],
 			"args": [ "/K", "cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],

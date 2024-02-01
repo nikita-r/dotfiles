@@ -946,6 +946,27 @@
 		"when": "focusedView == 'workbench.view.testing'"
 	},
 
+	/* Ctrl+r */
+	{
+		"key": "ctrl+r",
+		"command": "workbench.action.openRecent"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+		"when": "inQuickOpen && inRecentFilesPicker"
+	},
+	{
+		"key": "ctrl+shift+r",
+		"command": "workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+		"when": "inQuickOpen && inRecentFilesPicker"
+	},
+	/* ?isDevelopment */
+	{
+		"key": "ctrl+k shift+r",
+		"command": "workbench.action.reloadWindow",
+		//"when": "isDevelopment"
+	},
 	/* Ctrl+k r */
 	{ "command": "revealInExplorer", "key": "ctrl+k r" },
 	/* Ctrl+k Ctrl+r */
@@ -1350,6 +1371,8 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+q"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	//{ "command": "", "key": "ctrl+r"
+	//, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+s"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+v"
@@ -1740,26 +1763,25 @@
 		"when": "inSettingsEditor"
 	},
 
+	/* Paste As...</strong> */
+	{
+		"key": "ctrl+shift+v",
+		"command": "editor.action.pasteAs",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+
 	/* Markdown Preview */
+	{ "command": "noop", "key": "ctrl+k v" },
+	{ "command": "noop", "key": "ctrl+k shift+v" },
 	{
-		"key": "ctrl+shift+j",
-		"command": "markdown.showSource",
-		"when": "markdownPreviewFocus"
+		"key": "ctrl+k v",
+		"command": "markdown.showPreviewToSide",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
 	},
-	//{
-	//	"key": "ctrl+shift+v",
-	//	"command": "markdown.showPreview",
-	//	"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	//},
 	{
-		"key": "ctrl+shift+v",
+		"key": "ctrl+k shift+v",
 		"command": "markdown.showPreview",
-		"when": "resourceLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+shift+v",
-		"command": "markdown.preview.toggleLock",
-		"when": "markdownPreviewFocus"
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
 	},
 
 	/* Copy/Paste in Terminal */

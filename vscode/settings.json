@@ -476,6 +476,7 @@
 
 	/* debug */
 	"debug.confirmOnExit": "always",
+	"debug.allowBreakpointsEverywhere": true,
 	//"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
 	"debug.inlineValues": "on",
@@ -495,6 +496,7 @@
 		"outline.focus", "timeline.focus",
 		"scrollPageUp", "scrollPageDown", "editorScroll",
 		"workbench.action.focusQuickOpen",
+		"workbench.action.openRecent",
 		"workbench.action.remote.showMenu",
 		"workbench.action.terminal.moveToEditorInstance",
 		"workbench.action.moveEditorLeftInGroup", "workbench.action.moveEditorRightInGroup",
@@ -516,7 +518,7 @@
 			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
 			"args": [
 				"-NoExit",
-				"function abra-cadabra { Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { ${env:UserProfile} }) .vscode.PowerShell_v5.History.txt) } abra-cadabra; Remove-Item Function:abra-cadabra"
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { ${env:UserProfile} }) .vscode.PowerShell_v5.History.txt) }.Invoke()"
 			],
 		},
 		//"PowerShell v5": {

@@ -11,6 +11,7 @@
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
+	$: workbench.action.toggleMaximizeEditorGroup: "ctrl+k ctrl+m"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	*/
 
@@ -1763,6 +1764,30 @@
 		"when": "inSettingsEditor"
 	},
 
+	/* ^+C to Copy in Panel (not in Editor), while ^+V to Paste should work anyplace already */
+	{
+		"key": "ctrl+shift+c",
+		"command": "editor.action.clipboardCopyAction",
+		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "problems.action.copy",
+		"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
+	},
+
+	/* Copy/Paste in Terminal */
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.action.terminal.copySelection",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "workbench.action.terminal.paste",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+
 	/* Paste As...</strong> */
 	{
 		"key": "ctrl+shift+v",
@@ -1782,18 +1807,6 @@
 		"key": "ctrl+k shift+v",
 		"command": "markdown.showPreview",
 		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	},
-
-	/* Copy/Paste in Terminal */
-	{
-		"key": "ctrl+shift+c",
-		"command": "workbench.action.terminal.copySelection",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+shift+v",
-		"command": "workbench.action.terminal.paste",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* Try and block a useless Tab */

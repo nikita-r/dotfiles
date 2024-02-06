@@ -1764,16 +1764,22 @@
 		"when": "inSettingsEditor"
 	},
 
-	/* ^+C to Copy in Panel (not in Editor), while ^+V to Paste should work anyplace already */
+	/* ^+C to Copy in Panel (not in Editor) */
 	{
 		"key": "ctrl+shift+c",
 		"command": "editor.action.clipboardCopyAction",
 		"when": "panelFocus"
 	},
+	//{
+	//	"key": "ctrl+shift+c",
+	//	"command": "problems.action.copy",
+	//	"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
+	//},
+
+	/* I could set ^+V unbound under Windows, but the following command for "shift+cmd+v" under Mac is in order to Paste into any input */
 	{
-		"key": "ctrl+shift+c",
-		"command": "problems.action.copy",
-		"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
+		"key": "ctrl+shift+v",
+		"command": "editor.action.clipboardPasteAction"
 	},
 
 	/* Copy/Paste in Terminal */

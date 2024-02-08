@@ -72,6 +72,17 @@ Write-Host "swapd to `"$b`""
 }
 
 
+<# Predicates #>
+
+function Are-ArraysEqual ([Object[]]$A, [Object[]]$B, [switch]$StrictOrdering) {
+  if ($StrictOrdering) {
+    !@( Compare-Object -SyncWindow:0 $A $B )
+  } else {
+    !@( Compare-Object -SyncWindow:0 ($A | Sort-Object) ($B | Sort-Object) )
+  }
+}
+
+
 <# Object helpers #>
 
 function DeepCopy-Object ($obj) {

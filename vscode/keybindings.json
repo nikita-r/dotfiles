@@ -6,6 +6,7 @@
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
+	$: rerunSearchEditorSearch: "ctrl+shift+r"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
@@ -20,6 +21,7 @@
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
+	//{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
 
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // instead of "ctrl+shift+;"
@@ -1657,13 +1659,6 @@
 		"command": "extension.partialDiff.diffSelectionWithClipboard"
 	},
 
-	/* hediet.vscode-drawio */
-	{
-		"key": "shift+f3",
-		"command": "-hediet.vscode-drawio.linkCodeWithSelectedNode",
-		"when": "!findWidgetVisible"
-	},
-
 	/* Ctrl+k Ctrl+f */
 	{ "command": "noop", "key": "ctrl+k ctrl+f" },
 	{
@@ -1776,10 +1771,17 @@
 	//	"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
 	//},
 
+	/* ^+V to Paste */
 	/* I could set ^+V unbound under Windows, but the following command for "shift+cmd+v" under Mac is in order to Paste into any input */
 	{
 		"key": "ctrl+shift+v",
 		"command": "editor.action.clipboardPasteAction"
+	},
+	/* Paste As...</strong> */
+	{
+		"key": "ctrl+shift+v",
+		"command": "editor.action.pasteAs",
+		"when": "editorTextFocus && !editorReadonly"
 	},
 
 	/* Copy/Paste in Terminal */
@@ -1792,13 +1794,6 @@
 		"key": "ctrl+shift+v",
 		"command": "workbench.action.terminal.paste",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-
-	/* Paste As...</strong> */
-	{
-		"key": "ctrl+shift+v",
-		"command": "editor.action.pasteAs",
-		"when": "editorTextFocus && !editorReadonly"
 	},
 
 	/* Markdown Preview */

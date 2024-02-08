@@ -2,11 +2,13 @@
 	/*
 	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
+	$: editor.action.selectAllMatches: "alt+enter"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: rerunSearchEditorSearch: "ctrl+shift+r"
+	$: search.action.replaceAll: "ctrl+alt+enter"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
@@ -1832,13 +1834,20 @@
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
 	},
 
+	/* No search.action.replace[All*] without Alt */
+	{ "command": "", "key": "ctrl+shift+1" },
+	{ "command": "", "key": "shift+cmd+1" },
+	{ "command": "", "key": "ctrl+shift+enter", "when": "!editorTextFocus" },
+	{ "command": "", "key": "shift+cmd+enter", "when": "!editorTextFocus" },
+	{
+		"key": "shift+alt+z",
+		"command": "search.action.replace",
+		"when": "focusedView == 'workbench.view.search' && listFocus"
+	},
+
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },
-	{
-		"key": "shift+alt+z",
-		"command": "search.action.replace"
-	},
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"

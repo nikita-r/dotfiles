@@ -806,6 +806,12 @@
 	"cSpell.userWords": [
 	],
 
+	/* . . . */
+
+	"inlineChat.mode": "preview",
+	"github.copilot.chat.welcomeMessage": "never",
+	"github.copilot.editor.enableCodeActions": false,
+
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,

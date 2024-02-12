@@ -2,13 +2,12 @@
 	/*
 	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
+	$: editor.action.replaceAll: "ctrl+alt+enter"
 	$: editor.action.selectAllMatches: "alt+enter"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
-	$: editor.debug.action.showDebugHover: "cmd+k cmd+i"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: rerunSearchEditorSearch: "ctrl+shift+r"
-	$: search.action.replaceAll: "ctrl+alt+enter"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
@@ -16,6 +15,7 @@
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.toggleMaximizeEditorGroup: "ctrl+k ctrl+m"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
+	%: Show or Focus Hover: "ctrl+k ctrl+i"
 	*/
 
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
@@ -1841,8 +1841,42 @@
 	{ "command": "", "key": "shift+cmd+enter", "when": "!editorTextFocus" },
 	{
 		"key": "shift+alt+z",
+		"command": "editor.action.replaceOne"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "macros.focusFindWidgetSecondInput",
+		"when": "!findInputFocussed && !replaceInputFocussed"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "editor.action.startFindReplaceAction",
+		"when": "findInputFocussed"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "noop",
+		"when": "focusedView == 'workbench.view.search'"
+	},
+	{
+		"key": "shift+alt+z",
 		"command": "search.action.replace",
 		"when": "focusedView == 'workbench.view.search' && listFocus"
+	},
+	{
+		"key": "alt+enter",
+		"command": "search.action.openInEditor",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "ctrl+alt+enter",
+		"command": "noop",
+		"when": "!editorFocus || !findWidgetVisible"
+	},
+	{
+		"key": "ctrl+alt+enter",
+		"command": "search.action.replaceAll",
+		"when": "replaceInputBoxFocus"
 	},
 
 	/*~*~*~*/

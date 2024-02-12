@@ -379,6 +379,10 @@
 			"revealInExplorer", // 2nd time is needed if "!explorerViewletVisible" before the 1st command
 			"renameFile",
 		],
+		"focusFindWidgetSecondInput": [
+			"editor.action.startFindReplaceAction",
+			"editor.action.startFindReplaceAction",
+		],
 	},
 
 	/* Language Extensions */

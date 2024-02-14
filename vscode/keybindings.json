@@ -1130,8 +1130,24 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
+	/* Ctrl+Shift+j */
+	/* Switch to JSON */
+	{
+		"key": "ctrl+shift+j",
+		"command": "workbench.action.openGlobalKeybindingsFile",
+		"when": "inKeybindings"
+	},
+	{
+		"key": "ctrl+shift+j",
+		"command": "workbench.action.openActiveLogOutputFile",
+		"when": "panelFocus && activePanel == 'workbench.panel.output'"
+	},
+	{
+		"key": "ctrl+shift+j",
+		"command": "settings.switchToJSON",
+		"when": "inSettingsEditor"
+	},
 	/* J for Join */
-	{ "command": "", "key": "alt+j" },
 	{
 		"key": "ctrl+shift+j",
 		"command": "editor.action.joinLines",
@@ -1141,6 +1157,12 @@
 		"key": "ctrl+shift+j",
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
+	},
+	/* restore the default */
+	{
+		"key": "ctrl+shift+j",
+		"command": "workbench.action.search.toggleQueryDetails",
+		"when": "inSearchEditor || searchViewletFocus"
 	},
 
 	/* Emmet */
@@ -1377,8 +1399,8 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+q"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	//{ "command": "", "key": "ctrl+r"
-	//, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
+	{ "command": "", "key": "ctrl+r"
+	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+s"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+v"
@@ -1423,11 +1445,6 @@
 		"command": "workbench.action.terminal.sendSequence",
 		"when": "terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u0000" }
-	},
-	{
-		"key": "alt+z",
-		"command": "workbench.action.terminal.sizeToContentWidth",
-		"when": "terminalFindFocused || terminalTabsFocus"
 	},
 	/* scroll */
 	{
@@ -1644,6 +1661,23 @@
 		"when": "notebookCellFocused"
 	},
 
+	/* file-ext-switcher */
+	{
+		"key": "ctrl+alt+j",
+		"command": "fileextswitch",
+		"args": {
+			"extensions": [
+				".ts",
+				".html",
+				".css",
+				".scss",
+				".spec.ts",
+			],
+			//"useOtherColumn": true
+		},
+		"when": "editorFocus && !inSearchEditor"
+	},
+
 	/* ryu1kn.text-marker */
 	{
 		"key": "ctrl+0",
@@ -1726,40 +1760,6 @@
 		"key": "ctrl+shift+.",
 		"command": "editor.action.surroundWithSnippet",
 		"when": "editorTextFocus && editorHasSelection"
-	},
-
-	/* Ctrl+Shift+J */
-	/* file-ext-switcher */
-	{
-		"key": "ctrl+shift+j",
-		"command": "fileextswitch",
-		"args": {
-			"extensions": [
-				".ts",
-				".html",
-				".css",
-				".scss",
-				".spec.ts",
-			],
-			//"useOtherColumn": true
-		},
-		"when": "editorFocus && !inSearchEditor"
-	},
-	/* Switch to JSON */
-	{
-		"key": "ctrl+shift+j",
-		"command": "workbench.action.openGlobalKeybindingsFile",
-		"when": "inKeybindings"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "workbench.action.openActiveLogOutputFile",
-		"when": "panelFocus && activePanel == 'workbench.panel.output'"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "settings.switchToJSON",
-		"when": "inSettingsEditor"
 	},
 
 	/* ^+C to Copy in Panel (not in Editor) */
@@ -1878,6 +1878,18 @@
 		"key": "ctrl+alt+enter",
 		"command": "search.action.replaceAll",
 		"when": "replaceInputBoxFocus"
+	},
+
+	/* Word Wrap */
+	{ "command": "", "key": "alt+z" },
+	{
+		"key": "ctrl+alt+z",
+		"command": "editor.action.toggleWordWrap"
+	},
+	{
+		"key": "ctrl+alt+z",
+		"command": "workbench.action.terminal.sizeToContentWidth",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/*~*~*~*/

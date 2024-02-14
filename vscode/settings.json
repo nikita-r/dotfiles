@@ -282,16 +282,23 @@
 		}
 	},
 
+	/* alefragnani.Bookmarks */
+	"bookmarks.gutterIconBorderColor": "#60c0c0",
+	"bookmarks.gutterIconFillColor": "#60c0c0",
+	//"bookmarks.keepBookmarksOnLineDelete": true,
 	"bookmarks.label.suggestion": "suggestWhenSelected",
+	"bookmarks.navigateThroughAllFiles": false,
+	"bookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
+
 	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
 	"cSpell.showStatus": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true,
 	"filesize.showGzip": false,
 	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
-	"quick-select.includeBackticks": false,
-	"quicktype.inferBooleanStrings": false,
+	"quick-select.includeBackticks": false, /* dbankier.vscode-quick-select */
+	"quicktype.inferBooleanStrings": false, /* Paste JSON as Code */
 
 	/* tomoki1207.pdf */
 	"pdf-preview.default.cursor": "hand",
@@ -575,7 +582,7 @@
 			"banner.iconForeground": "#ccc",
 			"editorInfo.foreground": "#39f", // 210°
 			"editorOverviewRuler.infoForeground": "#39f9",
-			"bookmarks.overviewRuler": "#39f6",
+			"bookmarks.overviewRuler": "#6cc9", // 180°
 			"editorWarning.foreground": "#fd3", // 50°
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorGutter.addedBackground": "#408020", // 100°
@@ -609,8 +616,8 @@
 			"scrollbarSlider.activeBackground": "#ccc6",
 
 			/* [_] */
-			"listFilterWidget.background": "#104030",
-			"listFilterWidget.noMatchesOutline": "#CC2860",
+			"listFilterWidget.background": "#104030", // 160°
+			"listFilterWidget.noMatchesOutline": "#CC2860", // 340°
 			"listFilterWidget.outline": "#ccc",
 
 			/* [|] */
@@ -652,6 +659,10 @@
 			"editor.background": "#1a1a1a",
 			//"editorStickyScroll.background": "#2d2d2d",
 			//"editorStickyScrollHover.background": "#3a3a3a",
+			"textLink.foreground": "#ffd700", // Gold
+			"textLink.activeForeground": "#fff7cc",
+			"chat.slashCommandBackground": "#703010", // 20°
+			"chat.slashCommandForeground": "#c0dada", // 180°
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

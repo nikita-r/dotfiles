@@ -1130,14 +1130,15 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* Alt+J */
+	/* J for Join */
+	{ "command": "", "key": "alt+j" },
 	{
-		"key": "alt+j",
+		"key": "ctrl+shift+j",
 		"command": "editor.action.joinLines",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+j",
+		"key": "ctrl+shift+j",
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
 	},

@@ -102,6 +102,7 @@
 
 	"editor.fontFamily": "Fira Code, Consolas, Lucida Console, monospace",
 	"editor.fontLigatures": "'cv13', 'cv14'",
+	"editor.fontSize": 14,
 	//"editor.fontFamily": "Cascadia Code",
 	//"editor.fontLigatures": "'ss01', 'zero'",
 	//"editor.tokenColorCustomizations": { "textMateRules": [ {
@@ -203,11 +204,7 @@
 	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
-	"git.showActionButton": {
-		"commit": false,
-		"publish": true,
-		"sync": false
-	},
+	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2,
 
@@ -504,7 +501,7 @@
 	"terminal.integrated.commandsToSkipShell": [
 		"noop",
 		"copyRelativeFilePath", "notifications.showList",
-		"outline.focus", "timeline.focus",
+		"outline.focus", "timeline.focus", "terminal.focus",
 		"scrollPageUp", "scrollPageDown", "editorScroll",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.openRecent",
@@ -659,10 +656,11 @@
 			"editor.background": "#1a1a1a",
 			//"editorStickyScroll.background": "#2d2d2d",
 			//"editorStickyScrollHover.background": "#3a3a3a",
-			"textLink.foreground": "#ffd700", // Gold
+			"pickerGroup.foreground": "#ffd700", // Gold // 50°
+			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
-			"chat.slashCommandBackground": "#703010", // 20°
-			"chat.slashCommandForeground": "#c0dada", // 180°
+			"chat.slashCommandBackground": "#90c0c0", // 180°
+			"chat.slashCommandForeground": "#102020",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",

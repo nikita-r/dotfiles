@@ -713,43 +713,6 @@
 		"when": "textCompareEditorActive"
 	},
 
-	/* GitHub Copilot */
-	{
-		"key": "ctrl+\\",
-		"command": "github.copilot.generate",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+\\",
-		"command": "github.copilot.acceptCursorPanelSolution",
-		"when": "resourceScheme == 'copilot'" // github.copilot.activated && github.copilot.panelVisible
-	},
-	{
-		"key": "ctrl+]",
-		"command": "github.copilot.nextPanelSolution",
-		"when": "github.copilot.panelVisible"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "github.copilot.previousPanelSolution",
-		"when": "github.copilot.panelVisible"
-	},
-	{
-		"key": "ctrl+k shift+i",
-		"command": "workbench.action.quickchat.toggle",
-		"when": "hasChatProvider"
-	},
-	{
-		"key": "ctrl+k shift+i",
-		"command": "github.copilot.terminal.suggestCommand",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "alt+\\",
-		"command": "editor.action.inlineSuggest.trigger",
-		"when": "editorTextFocus"
-	},
-
 	/* Alt+[][] */
 	{ "command": "noop", "key": "alt+]" },
 	{ "command": "noop", "key": "alt+[" },
@@ -806,6 +769,12 @@
 	{
 		"key": "ctrl+pagedown",
 		"command": "workbench.action.nextEditorInGroup"
+	},
+
+	/* Split Editor */
+	{
+		"key": "ctrl+k shift+\\",
+		"command": "workbench.action.splitEditorLeft"
 	},
 
 	/* antipode to Ctrl+Grave */
@@ -1433,7 +1402,7 @@
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalTabsFocus"
 	},
-	/* Z */
+	/* terminal.sendSequence */
 	{
 		"key": "ctrl+z",
 		"command": "workbench.action.terminal.sendSequence",
@@ -1445,6 +1414,12 @@
 		"command": "workbench.action.terminal.sendSequence",
 		"when": "terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u0000" }
+	},
+	{
+		"key": "ctrl+/",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
+		"args": { "text": "\u001f" } // readline undo
 	},
 	/* scroll */
 	{
@@ -1539,22 +1514,16 @@
 		"command": "workbench.action.terminal.unsplit",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	/* ctrl/back/slash */
+
+	/* Terminal hocus-pocus */
 	{
 		"key": "ctrl+\\",
-		"command": "workbench.action.terminal.moveToEditorInstance",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"command": "terminal.focus"
 	},
 	{
 		"key": "ctrl+\\",
-		"command": "workbench.action.terminal.split",
-		"when": "terminalEditorActive"
-	},
-	{
-		"key": "ctrl+/",
-		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
-		"args": { "text": "\u001f" } // readline undo
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "terminalFocus && !terminalEditorActive"
 	},
 	/* Ctrl+Grave */
 	{
@@ -1746,6 +1715,43 @@
 	{
 		"key": "ctrl+shift+i",
 		"command": "editor.action.triggerParameterHints",
+		"when": "editorTextFocus"
+	},
+
+	/* GitHub Copilot */
+	{
+		"key": "ctrl+k ctrl+shift+i",
+		"command": "github.copilot.generate",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "github.copilot.acceptCursorPanelSolution",
+		"when": "resourceScheme == 'copilot'" // github.copilot.activated && github.copilot.panelVisible
+	},
+	{
+		"key": "ctrl+]",
+		"command": "github.copilot.nextPanelSolution",
+		"when": "github.copilot.panelVisible"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "github.copilot.previousPanelSolution",
+		"when": "github.copilot.panelVisible"
+	},
+	{
+		"key": "ctrl+k shift+i",
+		"command": "workbench.action.quickchat.toggle",
+		"when": "hasChatProvider"
+	},
+	{
+		"key": "ctrl+k shift+i",
+		"command": "github.copilot.terminal.suggestCommand",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "alt+\\",
+		"command": "editor.action.inlineSuggest.trigger",
 		"when": "editorTextFocus"
 	},
 

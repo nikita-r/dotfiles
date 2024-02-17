@@ -13,6 +13,7 @@
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
+	$: workbench.action.splitEditorInGroup: "ctrl+k ctrl+shift+\\"
 	$: workbench.action.toggleMaximizeEditorGroup: "ctrl+k ctrl+m"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	%: Show or Focus Hover: "ctrl+k ctrl+i"
@@ -385,8 +386,8 @@
 	},
 
 	/* Alt+Arrow */
-	{ "command": "noop", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
-	{ "command": "noop", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
+	{ "command": "", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
+	{ "command": "", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
 
 	/* Sublime Text defaults: "move", "by": "subword*s" */
 	{
@@ -1376,32 +1377,6 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+w"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	/* ?terminalTabsFocus */
-	{
-		"key": "ctrl+up",
-		"command": "workbench.action.terminal.scrollToPreviousCommand",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+shift+up",
-		"command": "workbench.action.terminal.selectToPreviousCommand",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "workbench.action.terminal.scrollToNextCommand",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+shift+down",
-		"command": "workbench.action.terminal.selectToNextCommand",
-		"when": "terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+f",
-		"command": "workbench.action.terminal.focusFind",
-		"when": "terminalTabsFocus"
-	},
 	/* terminal.sendSequence */
 	{
 		"key": "ctrl+z",
@@ -1421,7 +1396,27 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
-	/* scroll */
+	/* terminal.scroll */
+	{
+		"key": "ctrl+up",
+		"command": "workbench.action.terminal.scrollToPreviousCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "workbench.action.terminal.scrollToNextCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "workbench.action.terminal.selectToPreviousCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "workbench.action.terminal.selectToNextCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
 	{
 		"key": "alt+up",
 		"command": "workbench.action.terminal.scrollUp",
@@ -1432,16 +1427,6 @@
 		"command": "workbench.action.terminal.scrollDown",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	//{
-	//	"key": "alt+pageup",
-	//	"command": "workbench.action.terminal.scrollUpPage",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
-	//{
-	//	"key": "alt+pagedown",
-	//	"command": "workbench.action.terminal.scrollDownPage",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
 	{
 		"key": "shift+pageup",
 		"command": "workbench.action.terminal.scrollUpPage",
@@ -1452,16 +1437,6 @@
 		"command": "workbench.action.terminal.scrollDownPage",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
-	//{
-	//	"key": "shift+home",
-	//	"command": "workbench.action.terminal.scrollToTop",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
-	//{
-	//	"key": "shift+end",
-	//	"command": "workbench.action.terminal.scrollToBottom",
-	//	"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	//},
 	{
 		"key": "ctrl+home",
 		"command": "workbench.action.terminal.scrollToTop",
@@ -1476,12 +1451,12 @@
 	{
 		"key": "alt+left",
 		"command": "workbench.action.terminal.focusPreviousPane",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocus || terminalTabsFocus"
 	},
 	{
 		"key": "alt+right",
 		"command": "workbench.action.terminal.focusNextPane",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocus || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+pageup",
@@ -1862,13 +1837,28 @@
 	},
 	{
 		"key": "shift+alt+z",
-		"command": "noop",
+		"command": "Command requires a Match focus",
 		"when": "focusedView == 'workbench.view.search'"
 	},
 	{
 		"key": "shift+alt+z",
+		"command": "search.action.replaceAll",
+		"when": "searchViewletFocus && replaceActive && listFocus"
+	},
+	{
+		"key": "shift+alt+z",
 		"command": "search.action.replace",
-		"when": "focusedView == 'workbench.view.search' && listFocus"
+		"when": "fileMatchOrMatchFocus"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "search.action.replace",
+		"when": "folderMatchFocus"
+	},
+	{
+		"key": "enter",
+		"command": "addCursorsAtSearchResults",
+		"when": "fileMatchOrMatchFocus"
 	},
 	{
 		"key": "alt+enter",
@@ -1877,7 +1867,7 @@
 	},
 	{
 		"key": "ctrl+alt+enter",
-		"command": "noop",
+		"command": "Command requires focus in Replace Input Box",
 		"when": "!editorFocus || !findWidgetVisible"
 	},
 	{

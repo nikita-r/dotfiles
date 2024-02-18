@@ -682,6 +682,7 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#0C060C",
+			"editorHoverWidget.background": "#0C060C",
 			"editorLineNumber.dimmedForeground": "#804080",
 			"editorWidget.background": "#282428",
 			"sideBar.background": "#282428",
@@ -817,6 +818,7 @@
 
 	"cSpell.language": "en,en-GB",
 	"cSpell.userWords": [
+		"dotfiles",
 	],
 
 	/* . . . */

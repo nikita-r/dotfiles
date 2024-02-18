@@ -2,6 +2,7 @@
 	/*
 	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
+	$: editor.action.removeBrackets: "ctrl+alt+backspace"
 	$: editor.action.replaceAll: "ctrl+alt+enter"
 	$: editor.action.selectAllMatches: "alt+enter"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
@@ -166,7 +167,7 @@
 	{
 		"key": "alt+q",
 		"command": "workbench.action.terminal.toggleFindRegex",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* Optional search toggles for Mac */
@@ -189,7 +190,7 @@
 	{
 		"key": "alt+c",
 		"command": "workbench.action.terminal.toggleFindCaseSensitive",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	/* Opt+W */
 	{
@@ -210,7 +211,7 @@
 	{
 		"key": "alt+w",
 		"command": "workbench.action.terminal.toggleFindWholeWord",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	/* Opt+P */
 	{
@@ -302,12 +303,12 @@
 	{
 		"key": "f3",
 		"command": "workbench.action.terminal.findNext",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "shift+f3",
 		"command": "workbench.action.terminal.findPrevious",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+g",
@@ -317,12 +318,22 @@
 	{
 		"key": "cmd+g",
 		"command": "workbench.action.terminal.findNext",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "shift+cmd+g",
 		"command": "workbench.action.terminal.findPrevious",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "workbench.action.terminal.focusFind",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-problems.action.focusFilter",
+		"when": "focusedView == 'workbench.panel.markers.view'"
 	},
 
 	/* toggle treeFind */
@@ -1189,17 +1200,17 @@
 	{
 		"key": "shift+enter",
 		"command": "interactive.execute",
-		"when": "resourceScheme == 'vscode-interactive' && !notebookCellListFocused"
+		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
 	},
 	{
 		"key": "ctrl+up",
 		"command": "interactive.history.previous",
-		"when": "resourceScheme == 'vscode-interactive' && !notebookCellListFocused"
+		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
 	},
 	{
 		"key": "ctrl+down",
 		"command": "interactive.history.next",
-		"when": "resourceScheme == 'vscode-interactive' && !notebookCellListFocused"
+		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
 	},
 
 	/* Do not let hijack bindings that are key when "editorTextFocus" */
@@ -1859,14 +1870,19 @@
 		"when": "fileMatchOrMatchFocus"
 	},
 	{
-		"key": "enter",
+		"key": "alt+enter",
+		"command": "Command requires focus in Search Input Box",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+enter",
 		"command": "addCursorsAtSearchResults",
 		"when": "fileMatchOrMatchFocus"
 	},
 	{
 		"key": "alt+enter",
 		"command": "search.action.openInEditor",
-		"when": "searchViewletFocus"
+		"when": "searchInputBoxFocus"
 	},
 	{
 		"key": "ctrl+alt+enter",

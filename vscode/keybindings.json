@@ -1039,38 +1039,7 @@
 	{ "command": "", "key": "alt+h" }, // Help
 	{ "command": "", "key": "shift+alt+h" },
 
-	/* Peek ???? Hierarchy */
-	{
-		"key": "ctrl+k a",
-		"command": "editor.showCallHierarchy",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+k a",
-		"command": "editor.showIncomingCalls",
-		"when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
-	},
-	{
-		"key": "ctrl+k a",
-		"command": "editor.showOutgoingCalls",
-		"when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
-	},
-	{
-		"key": "shift+enter",
-		"command": "-editor.refocusCallHierarchy",
-		"when": "callHierarchyVisible"
-	},
-	{
-		"key": "ctrl+k y",
-		"command": "editor.showTypeHierarchy",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+enter",
-		"command": "-editor.refocusTypeHierarchy",
-		"when": "typeHierarchyVisible"
-	},
-
+	/* Hierarchy */
 	/* references-view */
 	{
 		"key": "ctrl+k ctrl+h",
@@ -1189,28 +1158,6 @@
 		"key": "alt+shift+x",
 		"command": "editor.emmet.action.balanceIn", // shrink_selection "to": "tag"
 		"when": "editorFocus"
-	},
-
-	/* 'vscode-interactive' */
-	{ "command": "-interactive.history.previous", "key": "up" },
-	{ "command": "-interactive.history.next", "key": "down" },
-	{ "command": "-interactive.execute", "key": "ctrl+enter" },
-	{ "command": "-interactive.execute", "key": "meta+enter" },
-	{ "command": "-interactive.execute", "key": "shift+enter" },
-	{
-		"key": "shift+enter",
-		"command": "interactive.execute",
-		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
-	},
-	{
-		"key": "ctrl+up",
-		"command": "interactive.history.previous",
-		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "interactive.history.next",
-		"when": "activeEditor == 'workbench.editor.interactive' && !notebookCellListFocused"
 	},
 
 	/* Do not let hijack bindings that are key when "editorTextFocus" */
@@ -1872,7 +1819,7 @@
 	{
 		"key": "alt+enter",
 		"command": "Command requires focus in Search Input Box",
-		"when": "searchViewletFocus"
+		"when": "focusedView == 'workbench.view.search'"
 	},
 	{
 		"key": "alt+enter",
@@ -1882,7 +1829,12 @@
 	{
 		"key": "alt+enter",
 		"command": "search.action.openInEditor",
-		"when": "searchInputBoxFocus"
+		"when": "searchInputBoxFocus && hasSearchResult"
+	},
+	{
+		"key": "alt+enter",
+		"command": "Command requires Search Result to appear",
+		"when": "searchInputBoxFocus && !hasSearchResult"
 	},
 	{
 		"key": "ctrl+alt+enter",

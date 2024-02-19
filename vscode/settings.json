@@ -473,7 +473,6 @@
 	"html.autoCreateQuotes": false,
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
-	//"xml.completion.autoCloseTags": false,
 
 	/* . . . */
 
@@ -799,7 +798,7 @@
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
 	},
-	"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
+	//"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,

@@ -238,7 +238,7 @@
 
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
-	"git-graph.repository.includeCommitsMentionedByReflogs": true,
+	//"git-graph.repository.includeCommitsMentionedByReflogs": true,
 	//"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.showUncommittedChanges": false,
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
@@ -306,7 +306,7 @@
 	"svg.preview.showRuler": true,
 
 	/* gruntfuggly.todo-tree */
-	"todo-tree.tree.scanAtStartup": false,
+	"todo-tree.tree.scanAtStartup": true,
 	"todo-tree.tree.autoRefresh": false,
 	"todo-tree.filtering.ignoreGitSubmodules": true,
 	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
@@ -600,6 +600,7 @@
 			"editorGroup.border": "#666",
 			"editorRuler.foreground": "#3c96", // 160°
 			"panel.border": "#689", // 200°
+			"menu.border": "#689",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
 
@@ -678,6 +679,8 @@
 			"activityBar.background": "#402040",
 			"activityBarBadge.background": "#806080",
 			"activityBarBadge.foreground": "#402040",
+			"list.hoverBackground": "#201020",
+			"terminalStickyScrollHover.background": "#201020",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#0C060C",
@@ -686,7 +689,6 @@
 			"editorWidget.background": "#282428",
 			"sideBar.background": "#282428",
 			"menu.background": "#282428",
-			"menu.border": "#806080",
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",

@@ -9,6 +9,7 @@
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: rerunSearchEditorSearch: "ctrl+shift+r"
+	$: workbench.action.chat.open: "ctrl+cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
 	$: workbench.action.gotoSymbol: "ctrl+shift+o"
@@ -32,6 +33,9 @@
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
+
+	{ "command": "noop", "key": "alt+/" },
+	{ "command": "noop", "key": "alt+\\" },
 
 	/* pour Web-based */
 	{
@@ -342,11 +346,11 @@
 		"command": "-list.find",
 		"when": "listFocus && listSupportsFind"
 	},
-	{
-		"key": "/",
-		"command": "list.find",
-		"when": "listFocus && !inputFocus"
-	},
+	//{
+	//	"key": "/",
+	//	"command": "list.find",
+	//	"when": "listFocus && !inputFocus"
+	//},
 	{
 		"key": "alt+/",
 		"command": "list.toggleFindMode",
@@ -817,12 +821,15 @@
 		"key": "alt+9",
 		"command": "workbench.action.lastEditorInGroup"
 	},
+	{ "command": "", "key": "alt+0" },
+	{ "command": "", "key": "alt+-" },
+	{ "command": "", "key": "alt+=" },
 	{
-		"key": "alt+0",
+		"key": "ctrl+alt+0",
 		"command": "workbench.action.compareEditor.focusOtherSide"
 	},
 	{
-		"key": "alt+0",
+		"key": "ctrl+alt+0",
 		"command": "togglePeekWidgetFocus",
 		"when": "inReferenceSearchEditor || referenceSearchVisible"
 	},
@@ -1038,6 +1045,13 @@
 	{ "command": "", "key": "shift+alt+t" },
 	{ "command": "", "key": "alt+h" }, // Help
 	{ "command": "", "key": "shift+alt+h" },
+
+	/* Peeking */
+	{
+		"key": "ctrl+k y",
+		"command": "editor.action.peekTypeDefinition",
+		"when": "editorFocus"
+	},
 
 	/* Hierarchy */
 	/* references-view */
@@ -1663,17 +1677,17 @@
 	{
 		"key": "ctrl+shift+i",
 		"command": "github.copilot.acceptCursorPanelSolution",
-		"when": "resourceScheme == 'copilot'" // github.copilot.activated && github.copilot.panelVisible
+		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'" // resourceScheme == 'webview-panel'
 	},
 	{
 		"key": "ctrl+]",
 		"command": "github.copilot.nextPanelSolution",
-		"when": "github.copilot.panelVisible"
+		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "github.copilot.previousPanelSolution",
-		"when": "github.copilot.panelVisible"
+		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
 	},
 	{
 		"key": "ctrl+k shift+i",

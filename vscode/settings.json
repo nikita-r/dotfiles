@@ -680,6 +680,7 @@
 			"activityBarBadge.background": "#806080",
 			"activityBarBadge.foreground": "#402040",
 			"list.hoverBackground": "#201020",
+			//"terminalStickyScroll.background": null,
 			"terminalStickyScrollHover.background": "#201020",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
@@ -727,9 +728,17 @@
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			"searchEditor.findMatchBackground": "#515",
+
+			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#404",
+			"peekViewTitle.background": "#000020",
+			"peekViewResult.background": "#000020",
+			"peekViewEditor.background": "#001020",
+			"peekViewEditorGutter.background": "#1a1a1a",
+			"peekViewEditorStickyScroll.background": "#203038",
+			"peekViewEditorStickyScrollHover.background": "#304854",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",

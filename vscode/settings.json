@@ -427,6 +427,7 @@
 	"mssql.format.datatypeCasing": "lowercase",
 	"mssql.format.keywordCasing": "uppercase",
 	"mssql.format.placeCommasBeforeNextStatement": true,
+	"mssql.copyRemoveNewLine": false,
 
 	/* ES */
 	"eslint.alwaysShowStatus": true,
@@ -830,6 +831,10 @@
 	"cSpell.userWords": [
 		"dotfiles",
 	],
+
+	"mssql.connections": [
+	],
+	"mssql.objectExplorer.groupBySchema": false,
 
 	/* . . . */
 

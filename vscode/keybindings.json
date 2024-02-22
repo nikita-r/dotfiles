@@ -36,6 +36,8 @@
 
 	{ "command": "noop", "key": "alt+/" },
 	{ "command": "noop", "key": "alt+\\" },
+	{ "command": "", "key": "alt+-" },
+	{ "command": "", "key": "alt+=" },
 
 	/* pour Web-based */
 	{
@@ -234,6 +236,12 @@
 		"when": "inKeybindings"
 	},
 
+	/* Complement !+A */
+	{
+		"key": "alt+a",
+		"command": "editor.action.commentLine"
+	},
+
 	/* default bindings, but with the "when" removed */
 	{
 		"key": "ctrl+shift+\\",
@@ -242,6 +250,10 @@
 	{
 		"key": "ctrl+/",
 		"command": "editor.action.commentLine"
+	},
+	{
+		"key": "shift+alt+a",
+		"command": "editor.action.blockComment"
 	},
 	{
 		"key": "ctrl+k i",
@@ -356,10 +368,15 @@
 		"command": "list.toggleFindMode",
 		"when": "listFocus"
 	},
+	//{
+	//	"key": "alt+/",
+	//	"command": "list.find",
+	//	"when": "listFocus && !treeFindOpen"
+	//},
 	{
 		"key": "alt+/",
 		"command": "list.find",
-		"when": "listFocus && !treeFindOpen"
+		"when": "listFocus && !inputFocus"
 	},
 
 	/* space in a tree */
@@ -440,13 +457,8 @@
 
 	/* smart-select */
 	{
-		"key": "alt+a",
-		"command": "editor.action.smartSelect.grow",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+x",
-		"command": "editor.action.smartSelect.shrink",
+		"key": "shift+alt+x",
+		"command": "editor.action.smartSelect.expand",
 		"when": "editorTextFocus"
 	},
 
@@ -735,12 +747,12 @@
 	{
 		"key": "alt+]",
 		"command": "editor.gotoNextFold",
-		"when": "editorTextFocus"
+		"when": "editorFocus"
 	},
 	{
 		"key": "alt+[",
 		"command": "editor.gotoPreviousFold",
-		"when": "editorTextFocus"
+		"when": "editorFocus"
 	},
 	{
 		"key": "alt+]",
@@ -803,33 +815,21 @@
 		"command": "workbench.action.focusActiveEditorGroup"
 	},
 
-	/* 0 & 9 */
+	/* Alt+[09] */
 	{
-		"key": "ctrl+0",
+		"key": "alt+0",
 		"command": "workbench.action.focusActiveEditorGroup"
-	},
-	{
-		"key": "ctrl+0",
-		"command": "workbench.action.focusActivityBar",
-		"when": "editorFocus || sideBarFocus"
-	},
-	{
-		"key": "ctrl+9",
-		"command": "workbench.action.lastEditorInGroup"
 	},
 	{
 		"key": "alt+9",
 		"command": "workbench.action.lastEditorInGroup"
 	},
-	{ "command": "", "key": "alt+0" },
-	{ "command": "", "key": "alt+-" },
-	{ "command": "", "key": "alt+=" },
 	{
-		"key": "ctrl+alt+0",
-		"command": "workbench.action.compareEditor.focusOtherSide"
+		"key": "shift+alt+0",
+		"command": "workbench.action.focusOtherSideEditor"
 	},
 	{
-		"key": "ctrl+alt+0",
+		"key": "shift+alt+0",
 		"command": "togglePeekWidgetFocus",
 		"when": "inReferenceSearchEditor || referenceSearchVisible"
 	},
@@ -1052,6 +1052,11 @@
 		"command": "editor.action.peekTypeDefinition",
 		"when": "editorFocus"
 	},
+	{
+		"key": "ctrl+k a",
+		"command": "editor.showCallHierarchy",
+		"when": "editorFocus"
+	},
 
 	/* Hierarchy */
 	/* references-view */
@@ -1163,16 +1168,16 @@
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
-	{
-		"key": "alt+shift+a",
-		"command": "editor.emmet.action.balanceOut", // expand_selection "to": "tag"
-		"when": "editorFocus"
-	},
-	{
-		"key": "alt+shift+x",
-		"command": "editor.emmet.action.balanceIn", // shrink_selection "to": "tag"
-		"when": "editorFocus"
-	},
+	//{
+	//	"key": "alt+shift+a",
+	//	"command": "editor.emmet.action.balanceOut", // expand_selection "to": "tag"
+	//	"when": "editorFocus"
+	//},
+	//{
+	//	"key": "alt+shift+x",
+	//	"command": "editor.emmet.action.balanceIn", // shrink_selection "to": "tag"
+	//	"when": "editorFocus"
+	//},
 
 	/* Do not let hijack bindings that are key when "editorTextFocus" */
 	{
@@ -1463,6 +1468,12 @@
 		"key": "ctrl+shift+clear",
 		"command": "workbench.action.terminal.unsplit",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	/* terminal.select */
+	{
+		"key": "shift+alt+a",
+		"command": "workbench.action.terminal.selectAll",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* Terminal hocus-pocus */

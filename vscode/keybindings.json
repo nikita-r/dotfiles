@@ -244,16 +244,16 @@
 
 	/* default bindings, but with the "when" removed */
 	{
-		"key": "ctrl+shift+\\",
-		"command": "workbench.action.terminal.focusTabs"
+		"key": "shift+alt+a",
+		"command": "editor.action.blockComment"
 	},
 	{
 		"key": "ctrl+/",
 		"command": "editor.action.commentLine"
 	},
 	{
-		"key": "shift+alt+a",
-		"command": "editor.action.blockComment"
+		"key": "ctrl+shift+\\",
+		"command": "workbench.action.terminal.focusTabs"
 	},
 	{
 		"key": "ctrl+k i",
@@ -1376,16 +1376,11 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
-	/* terminal.scroll */
+	/* terminal.select */
 	{
-		"key": "ctrl+up",
-		"command": "workbench.action.terminal.scrollToPreviousCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "workbench.action.terminal.scrollToNextCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
+		"key": "shift+alt+a",
+		"command": "workbench.action.terminal.selectAll",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+shift+up",
@@ -1395,6 +1390,17 @@
 	{
 		"key": "ctrl+shift+down",
 		"command": "workbench.action.terminal.selectToNextCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+	/* terminal.scroll */
+	{
+		"key": "ctrl+up",
+		"command": "workbench.action.terminal.scrollToPreviousCommand",
+		"when": "terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "workbench.action.terminal.scrollToNextCommand",
 		"when": "terminalFindFocused || terminalTabsFocus"
 	},
 	{
@@ -1468,12 +1474,6 @@
 		"key": "ctrl+shift+clear",
 		"command": "workbench.action.terminal.unsplit",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	/* terminal.select */
-	{
-		"key": "shift+alt+a",
-		"command": "workbench.action.terminal.selectAll",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* Terminal hocus-pocus */

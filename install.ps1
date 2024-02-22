@@ -42,6 +42,12 @@ New-Item $dirCode\User -Type Dir -ea:0 | Out-Null
 }
 
 
+$tmp = New-TemporaryFile
+$tmp = Rename-Item $tmp ($tmp.FullName + '.vsix') -PassThru
+Invoke-WebRequest $urlRaw/vscode-vsix/ctf0.macros-0.0.4.vsix -OutFile $tmp
+cmd.exe /c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+
+
 -split((
   iwr -UseBasicParsing $urlRaw/vscode/extensions.txt
 ).Content) |% Trim |? { $_ } |? { $_ -notLike '#*' } |% {

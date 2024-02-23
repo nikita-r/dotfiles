@@ -764,6 +764,14 @@
 		"command": "editor.action.inlineSuggest.showPrevious",
 		"when": "inlineSuggestionVisible"
 	},
+	{
+		"key": "shift+alt+]",
+		"command": "editor.action.diffReview.next"
+	},
+	{
+		"key": "shift+alt+[",
+		"command": "editor.action.diffReview.prev"
+	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -1887,6 +1895,7 @@
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },
+	{ "command": "", "key": "alt+`", "when": "isMac" },
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"

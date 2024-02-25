@@ -38,6 +38,7 @@
 	{ "command": "noop", "key": "alt+\\" },
 	{ "command": "", "key": "alt+-" },
 	{ "command": "", "key": "alt+=" },
+	{ "command": "", "key": "shift+alt+o" },
 
 	/* pour Web-based */
 	{
@@ -260,6 +261,14 @@
 		"command": "inlineChat.start"
 	},
 	{
+		"key": "f9",
+		"command": "editor.debug.action.toggleBreakpoint"
+	},
+	{
+		"key": "shift+f9",
+		"command": "editor.debug.action.toggleInlineBreakpoint"
+	},
+	{
 		"key": "alt+pageup",
 		"command": "scrollPageUp"
 	},
@@ -460,6 +469,11 @@
 		"key": "shift+alt+x",
 		"command": "editor.action.smartSelect.expand",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+x",
+		"command": "editor.emmet.action.balanceOut",
+		"when": "editorTextFocus && editorLangId == 'html' || editorTextFocus && editorLangId == 'xml'"
 	},
 
 	/* Reassign Ctrl+Up/Down when listFocus; Ctrl+Right to switch viewAs */
@@ -844,15 +858,15 @@
 
 	/* time/out/line/focus */
 	{
-		"key": "alt+o",
+		"key": "ctrl+alt+t",
 		"command": "timeline.focus"
 	},
 	{
-		"key": "shift+alt+o",
+		"key": "ctrl+alt+o",
 		"command": "outline.focus"
 	},
 	{
-		"key": "shift+alt+o",
+		"key": "ctrl+alt+o",
 		"command": "outline.collapse",
 		"when": "focusedView == 'outline'"
 	},
@@ -1157,12 +1171,12 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+m",
+		"key": "alt+d m",
 		"command": "editor.emmet.action.matchTag",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+d m",
+		"key": "alt+d u",
 		"command": "editor.emmet.action.updateTag",
 		"when": "editorTextFocus"
 	},
@@ -1176,16 +1190,6 @@
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
-	//{
-	//	"key": "alt+shift+a",
-	//	"command": "editor.emmet.action.balanceOut", // expand_selection "to": "tag"
-	//	"when": "editorFocus"
-	//},
-	//{
-	//	"key": "alt+shift+x",
-	//	"command": "editor.emmet.action.balanceIn", // shrink_selection "to": "tag"
-	//	"when": "editorFocus"
-	//},
 
 	/* Do not let hijack bindings that are key when "editorTextFocus" */
 	{
@@ -1528,7 +1532,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
-		"when": "panelFocus"
+		"when": "panelFocus || panelMaximized"
 	},
 
 	/* dbankier.vscode-quick-select */
@@ -1821,7 +1825,7 @@
 	},
 	{
 		"key": "shift+alt+z",
-		"command": "macros.focusFindWidgetSecondInput",
+		"command": "macros.focusFindWidgetSecondInput", /* ctf0.macros */
 		"when": "!findInputFocussed && !replaceInputFocussed"
 	},
 	{
@@ -1894,6 +1898,7 @@
 
 	/*~*~*~*/
 	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
+	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },
 	{

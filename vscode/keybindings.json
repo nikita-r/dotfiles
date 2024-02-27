@@ -687,8 +687,18 @@
 	//},
 	{
 		"key": "f8",
-		"command": "terminal.focus",
-		"when": "!editorTextFocus"
+		"command": "Command requires codes to be selected and in-focus in the Editor",
+		"when": "!editorTextFocus || !editorHasSelection"
+	},
+	//{
+	//	"key": "f8",
+	//	"command": "terminal.focus",
+	//	"when": "!editorFocus"
+	//},
+	{
+		"key": "f8",
+		"command": "",
+		"when": "terminalFocusInAny"
 	},
 
 	/* Ctrl+[][]: jump to next/prev; abjure any-and-all non-Debug usage of F5 */
@@ -785,6 +795,16 @@
 	{
 		"key": "shift+alt+[",
 		"command": "editor.action.diffReview.prev"
+	},
+	{
+		"key": "shift+alt+]",
+		"command": "macros.diffReview.next", /* ctf0.macros */
+		"when": "textCompareEditorActive && !editorFocus"
+	},
+	{
+		"key": "shift+alt+[",
+		"command": "macros.diffReview.prev", /* ctf0.macros */
+		"when": "textCompareEditorActive && !editorFocus"
 	},
 
 	/* vim-like panes navigation */
@@ -1171,7 +1191,7 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+d m",
+		"key": "shift+alt+m",
 		"command": "editor.emmet.action.matchTag",
 		"when": "editorTextFocus"
 	},

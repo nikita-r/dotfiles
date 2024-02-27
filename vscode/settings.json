@@ -294,6 +294,7 @@
 	"filesize.showGzip": false,
 	"hexeditor.inspectorType": "hover",
 	"hexeditor.maxFileSize": 99,
+	"mssql.copyRemoveNewLine": false, /* ms-mssql.mssql */
 	"quick-select.includeBackticks": false, /* dbankier.vscode-quick-select */
 	"quicktype.inferBooleanStrings": false, /* Paste JSON as Code */
 
@@ -387,6 +388,14 @@
 			"editor.action.startFindReplaceAction",
 			"editor.action.startFindReplaceAction",
 		],
+		"diffReview.next": [
+			"workbench.action.focusActiveEditorGroup",
+			"editor.action.diffReview.next",
+		],
+		"diffReview.prev": [
+			"workbench.action.focusActiveEditorGroup",
+			"editor.action.diffReview.prev",
+		],
 	},
 
 	/* Language Extensions */
@@ -417,17 +426,18 @@
 	"jupyter.experiments.enabled": false,
 	"jupyter.sendSelectionToInteractiveWindow": true,
 	"python.experiments.enabled": false,
-	"python.languageServer": "Pylance",
-	//"python.analysis.typeCheckingMode": "strict",
 	"isort.args": [ "--profile", "black" ],
 	"python.formatting.provider": "none",
 	"python.linting.enabled": false,
+	"python.languageServer": "Pylance",
+	//"python.analysis.typeCheckingMode": "strict",
+	"python.analysis.inlayHints.callArgumentNames": "partial",
+	"python.analysis.inlayHints.functionReturnTypes": true,
 
 	/* T-SQL */
 	"mssql.format.datatypeCasing": "lowercase",
 	"mssql.format.keywordCasing": "uppercase",
 	"mssql.format.placeCommasBeforeNextStatement": true,
-	"mssql.copyRemoveNewLine": false,
 
 	/* ES */
 	"eslint.alwaysShowStatus": true,
@@ -729,6 +739,8 @@
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			"searchEditor.findMatchBackground": "#515",
+			"diffEditor.move.border": "#f090c0",
+			"diffEditor.moveActive.border": "#f0c0d8",
 
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
@@ -820,7 +832,7 @@
 		"appsettings.json": "appsettings.*.json",
 	},
 
-	/* ad-hoc preferences per extension */
+	/* situational per-extension configs */
 
 	"emmet.includeLanguages": {
 	},

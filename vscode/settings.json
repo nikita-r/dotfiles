@@ -206,7 +206,7 @@
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
 	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
 	"git.autoRepositoryDetection": "subFolders",
-	//"git.repositoryScanMaxDepth": 2,
+	//"git.repositoryScanMaxDepth": 2, // or -1
 
 	"git.defaultBranchName": "trunk",
 	"git.enableStatusBarSync": false,
@@ -556,7 +556,7 @@
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
 	"terminal.integrated.showLinkHover": false,
-	"terminal.integrated.enableBell": true, // icon in tabs
+	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 
 	"terminal.integrated.tabs.enabled": true,
@@ -850,13 +850,13 @@
 
 	/* . . . */
 
-	"inlineChat.mode": "preview",
 	"github.copilot.chat.welcomeMessage": "never",
 	"github.copilot.editor.enableCodeActions": false,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
+	"inlineChat.mode": "preview",
 	"editor.copyWithSyntaxHighlighting": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 }

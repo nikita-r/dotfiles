@@ -806,6 +806,16 @@
 		"command": "macros.diffReview.prev", /* ctf0.macros */
 		"when": "textCompareEditorActive && !editorFocus"
 	},
+	{
+		"key": "shift+alt+]",
+		"command": "inlineChat.moveToNextHunk",
+		"when": "inlineChatHasProvider && inlineChatVisible"
+	},
+	{
+		"key": "shift+alt+[",
+		"command": "inlineChat.moveToPreviousHunk",
+		"when": "inlineChatHasProvider && inlineChatVisible"
+	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -1746,6 +1756,11 @@
 		"key": "alt+\\",
 		"command": "editor.action.inlineSuggest.trigger",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+delete",
+		"command": "inlineChat.discardHunkChange",
+		"when": "inlineChatVisible && config.inlineChat.mode != 'preview'"
 	},
 
 	/* Ctrl+Shift+. */

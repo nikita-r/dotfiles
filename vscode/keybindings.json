@@ -1521,7 +1521,7 @@
 	/* Terminal hocus-pocus */
 	{
 		"key": "ctrl+\\",
-		"command": "terminal.focus"
+		"command": "workbench.action.terminal.focus"
 	},
 	{
 		"key": "ctrl+\\",
@@ -1758,7 +1758,7 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "shift+alt+delete",
+		"key": "shift+alt+backspace",
 		"command": "inlineChat.discardHunkChange",
 		"when": "inlineChatVisible && config.inlineChat.mode != 'preview'"
 	},

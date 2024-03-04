@@ -424,7 +424,7 @@
 	/* Py */
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
-	"jupyter.sendSelectionToInteractiveWindow": true,
+	//"jupyter.interactiveWindow.textEditor.executeSelection": true,
 	"python.experiments.enabled": false,
 	"isort.args": [ "--profile", "black" ],
 	"python.formatting.provider": "none",
@@ -792,11 +792,11 @@
 
 	/* file-saving preferences */
 	"[python]": {
-		"editor.formatOnSave": false,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": "explicit",
-			"source.fixAll": "never",
-		}
+		//"editor.formatOnSave": false,
+		//"editor.codeActionsOnSave": {
+		//	"source.organizeImports": "explicit",
+		//	"source.fixAll": "never",
+		//}
 	},
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

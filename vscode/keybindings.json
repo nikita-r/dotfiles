@@ -691,7 +691,7 @@
 		"when": "codeActionMenuVisible"
 	},
 
-	/* Retain F8 for execSelection */
+	/* Retain F8 to Send Selected Text to Active Terminal */
 	{
 		"key": "f8",
 		"command": "-editor.action.marker.nextInFiles"
@@ -720,11 +720,6 @@
 		"command": "Command requires codes to be selected and in-focus in the Editor",
 		"when": "!editorTextFocus || !editorHasSelection"
 	},
-	//{
-	//	"key": "f8",
-	//	"command": "terminal.focus",
-	//	"when": "!editorFocus"
-	//},
 	{
 		"key": "f8",
 		"command": "",

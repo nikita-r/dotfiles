@@ -245,7 +245,7 @@
 		"command": "editor.action.commentLine"
 	},
 
-	/* default bindings, but with the "when" removed */
+	/* the same as the Default Keyboard Shortcuts, excepting the "when" */
 	{
 		"key": "shift+alt+a",
 		"command": "editor.action.blockComment"
@@ -1200,7 +1200,7 @@
 	{
 		"key": "ctrl+shift+j",
 		"command": "editor.action.joinLines",
-		"when": "editorTextFocus"
+		"when": "editorTextFocus && !editorReadonly"
 	},
 	{
 		"key": "ctrl+shift+j",
@@ -1443,6 +1443,24 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
+	{
+		"key": "tab",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"args": { "text": "\u0020\u0020\u0020\u0020" }
+	},
+	{
+		"key": "shift+tab",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"args": { "text": "\u007f\u007f\u007f\u007f" }
+	},
+	{
+		"key": "ctrl+shift+9",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"args": { "text": ")\u001b[H(\u001b[H" }
+	},
 	/* terminal.select */
 	{
 		"key": "shift+alt+a",
@@ -1543,11 +1561,13 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
-	/* Terminal hocus-pocus */
+	/* Terminal: Switch */
+	/* Focus Active Terminal */
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.focus"
 	},
+	/* Yet do not switch away from Terminal in Editor Area */
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.focusActiveEditorGroup",
@@ -1556,6 +1576,7 @@
 	/* Ctrl+Grave */
 	{
 		"key": "ctrl+`",
+		/* Focus on Terminal View */
 		"command": "terminal.focus"
 	},
 	{
@@ -1563,10 +1584,16 @@
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFocus"
 	},
+	/* Toggle Terminal */
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.terminal.toggleTerminal",
 		"when": "terminalEditorActive"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "!terminalProcessSupported && !terminalHasBeenCreated"
 	},
 
 	/* View: Toggle Sizes */

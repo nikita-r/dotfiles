@@ -19,8 +19,9 @@ $json = Invoke-WebRequest -UseBasicParsing $urlPath/keybindings.json
 $json -split "`n" |% {
   if ($_ -match '"ctrl\+shift\+a"') { return }
   if ($_ -match '"command": ""') { return $_ }
+  if ($_ -match '"key": "ctrl+i"') { return $_ }
   $_ `
-    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g])"', '"key": "$2$1md+$3"' `
+    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[\\q`g])"', '"key": "$2$1md+$3"' `
     -iReplace '"key": "(shift)\+(c)trl\+([^+"]+)"', '"key": "$2md+$1+$3"' `
     -iReplace '"key": "(c)trl\+(alt)\+([^+"]+)"', '"key": "$2+$1md+$3"' `
     -iReplace '"key": "(c)trl\+(shift)\+(alt)\+([^+"]+)"', '"key": "$2+$3+$1md+$4"' `

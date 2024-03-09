@@ -75,8 +75,9 @@
 	"markdown.validate.enabled": true,
 	"editor.lightbulb.enabled": false,
 
-	"editor.inlineSuggest.enabled": false,
-	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "off" },
+	//"editor.inlineSuggest.enabled": false,
+	"github.copilot.editor.enableAutoCompletions": false,
+	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,
 	"editor.parameterHints.enabled": false,
 	"editor.parameterHints.cycle": true,

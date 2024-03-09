@@ -632,10 +632,17 @@
 		"command": "deleteWordRight",
 		"when": "textInputFocus"
 	},
+
+	/* Accept Next of Inline Suggestion */
 	{
 		"key": "ctrl+right",
 		"command": "editor.action.inlineSuggest.acceptNextWord",
 		"when": "inlineSuggestionVisible && editorTextFocus"
+	},
+	{
+		"key": "shift+enter",
+		"command": "editor.action.inlineSuggest.acceptNextLine",
+		"when": "editorTextFocus"
 	},
 
 	/* Shift+Alt+Arrow: ensure Windows defaults */
@@ -1567,29 +1574,35 @@
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.focus"
 	},
-	/* Yet do not switch away from Terminal in Editor Area */
+	/* back to Editor away from Terminal View */
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "terminalFocus && !terminalEditorActive"
 	},
-	/* Ctrl+Grave */
+	/* Create New Terminal in Editor Area */
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.createTerminalEditor",
+		"when": "!terminalIsOpen"
+	},
+	/* back to Editor away from Terminal in Editor Area */
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.openPreviousRecentlyUsedEditor",
+		"when": "terminalFocus && terminalEditorActive"
+	},
+	/* Ctrl+Grave: Focus Terminal in Terminal View */
 	{
 		"key": "ctrl+`",
-		/* Focus on Terminal View */
 		"command": "terminal.focus"
 	},
 	{
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
-		"when": "inTerminalPicker || terminalFocus"
+		"when": "inTerminalPicker || terminalFocus && !terminalEditorActive"
 	},
 	/* Toggle Terminal */
-	{
-		"key": "ctrl+`",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "terminalEditorActive"
-	},
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.toggleTerminal",

@@ -1529,12 +1529,12 @@
 	{
 		"key": "alt+left",
 		"command": "workbench.action.terminal.focusPreviousPane",
-		"when": "terminalFocus || terminalTabsFocus"
+		"when": "terminalFocus && !terminalEditorActive || terminalTabsFocus"
 	},
 	{
 		"key": "alt+right",
 		"command": "workbench.action.terminal.focusNextPane",
-		"when": "terminalFocus || terminalTabsFocus"
+		"when": "terminalFocus && !terminalEditorActive || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+pageup",

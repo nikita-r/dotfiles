@@ -23,9 +23,9 @@
 	/* icky */
 	"editor.stickyScroll.enabled": false,
 	"editor.stickyScroll.maxLineCount": 5,
-	//"workbench.tree.enableStickyScroll": true,
+	"workbench.tree.enableStickyScroll": false,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
-	//"terminal.integrated.stickyScroll.enabled": true,
+	"terminal.integrated.stickyScroll.enabled": false,
 	"terminal.integrated.stickyScroll.maxLineCount": 3,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -72,8 +72,13 @@
 	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
-	"markdown.validate.enabled": true,
+
+	/* Code Problems & Actions */
 	"editor.lightbulb.enabled": false,
+	"github.copilot.editor.enableCodeActions": false,
+	"markdown.validate.enabled": true,
+	"problems.decorations.enabled": false,
+	"problems.showCurrentInStatus": true,
 
 	//"editor.inlineSuggest.enabled": false,
 	"github.copilot.editor.enableAutoCompletions": false,
@@ -120,8 +125,8 @@
 
 	/* Terminal */
 	//"terminal.integrated.fontFamily": "JetBrains Mono",
-	//"terminal.integrated.fontSize": 14,
-	//"terminal.integrated.tabs.location": "left",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.tabs.location": "left",
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
@@ -194,9 +199,6 @@
 
 	"editor.comments.insertSpace": false,
 	//"editor.comments.ignoreEmptyLines": false,
-
-	"problems.decorations.enabled": false,
-	"problems.showCurrentInStatus": true,
 
 	"editor.codeLensFontFamily": "serif",
 	"editor.codeLensFontSize": 12,
@@ -854,7 +856,6 @@
 	/* . . . */
 
 	"github.copilot.chat.welcomeMessage": "never",
-	"github.copilot.editor.enableCodeActions": false,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

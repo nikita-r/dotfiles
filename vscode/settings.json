@@ -51,6 +51,7 @@
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false, // or "multiFile"
+	"search.mode": "newEditor",
 	"search.searchEditor.defaultNumberOfContextLines": null,
 	"search.searchOnTypeDebouncePeriod": 666,
 	"search.showLineNumbers": true,
@@ -71,6 +72,7 @@
 	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
+	"markdown.validate.enabled": true,
 	"editor.lightbulb.enabled": false,
 
 	"editor.inlineSuggest.enabled": false,

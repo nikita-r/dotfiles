@@ -23,7 +23,7 @@
 	/* icky */
 	"editor.stickyScroll.enabled": false,
 	"editor.stickyScroll.maxLineCount": 5,
-	"workbench.tree.enableStickyScroll": false,
+	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
 	"terminal.integrated.stickyScroll.enabled": false,
 	"terminal.integrated.stickyScroll.maxLineCount": 3,
@@ -563,6 +563,7 @@
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",

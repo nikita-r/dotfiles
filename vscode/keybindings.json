@@ -1187,22 +1187,6 @@
 	},
 
 	/* Ctrl+Shift+j */
-	/* Switch to JSON */
-	{
-		"key": "ctrl+shift+j",
-		"command": "workbench.action.openGlobalKeybindingsFile",
-		"when": "inKeybindings"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "workbench.action.openActiveLogOutputFile",
-		"when": "panelFocus && activePanel == 'workbench.panel.output'"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "settings.switchToJSON",
-		"when": "inSettingsEditor"
-	},
 	/* J for Join */
 	{
 		"key": "ctrl+shift+j",
@@ -1656,7 +1640,7 @@
 	{ "command": "noop", "key": "shift+alt+k" },
 	{ "command": "noop", "key": "shift+alt+l" }, // "bookmarks.expandSelectionToNext"
 	{
-		"key": "shift+alt+j",
+		"key": "ctrl+k 8",
 		"command": "workbench.view.extension.bookmarks"
 	},
 	{
@@ -1698,6 +1682,7 @@
 		"when": "notebookCellFocused"
 	},
 
+	/* Ctrl+Alt+j */
 	/* file-ext-switcher */
 	{
 		"key": "ctrl+alt+j",
@@ -1711,8 +1696,23 @@
 				".spec.ts",
 			],
 			//"useOtherColumn": true
-		},
-		"when": "editorFocus && !inSearchEditor"
+		}
+	},
+	/* Switch to JSON */
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.openGlobalKeybindingsFile",
+		"when": "inKeybindings"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.openActiveLogOutputFile",
+		"when": "panelFocus && activePanel == 'workbench.panel.output'"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "settings.switchToJSON",
+		"when": "inSettingsEditor"
 	},
 
 	/* ryu1kn.text-marker */

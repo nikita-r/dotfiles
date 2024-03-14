@@ -397,25 +397,20 @@
 		"command": "-list.find",
 		"when": "listFocus && listSupportsFind"
 	},
-	//{
-	//	"key": "/",
-	//	"command": "list.find",
-	//	"when": "listFocus && !inputFocus"
-	//},
 	{
 		"key": "alt+/",
-		"command": "list.toggleFindMode",
+		"command": "\"list.find\" requires support for Tree Find",
 		"when": "listFocus"
 	},
-	//{
-	//	"key": "alt+/",
-	//	"command": "list.find",
-	//	"when": "listFocus && !treeFindOpen"
-	//},
 	{
 		"key": "alt+/",
 		"command": "list.find",
-		"when": "listFocus && !inputFocus"
+		"when": "listFocus && listSupportsFind"
+	},
+	{
+		"key": "alt+/",
+		"command": "list.toggleFindMode",
+		"when": "listFocus && listSupportsFind && treeFindOpen && inputFocus"
 	},
 
 	/* space in a tree */
@@ -841,12 +836,12 @@
 	{
 		"key": "shift+alt+]",
 		"command": "inlineChat.moveToNextHunk",
-		"when": "inlineChatHasProvider && inlineChatVisible"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
 	},
 	{
 		"key": "shift+alt+[",
 		"command": "inlineChat.moveToPreviousHunk",
-		"when": "inlineChatHasProvider && inlineChatVisible"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
 	},
 
 	/* vim-like panes navigation */
@@ -1621,17 +1616,6 @@
 		"when": "editorFocus"
 	},
 
-	/* Shift+Alt+Letter */
-	{
-		"key": "shift+alt+c",
-		"command": "copyRelativeFilePath"
-	},
-	{
-		"key": "shift+alt+c",
-		"command": "workbench.action.terminal.copyLastCommandOutput",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-
 	/* alefragnani.Bookmarks */
 	{ "command": "noop", "key": "ctrl+alt+j" },
 	{ "command": "noop", "key": "ctrl+alt+k" },
@@ -1680,6 +1664,37 @@
 		"key": "shift+alt+p",
 		"command": "notebook.focusPreviousEditor",
 		"when": "notebookCellFocused"
+	},
+
+	/* Shift+Alt+Letter */
+	{
+		"key": "shift+alt+c",
+		"command": "copyRelativeFilePath"
+	},
+	{
+		"key": "shift+alt+c",
+		"command": "workbench.action.terminal.copyLastCommandOutput",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+	},
+	{
+		"key": "shift+alt+j",
+		"command": "inlineChat.acceptChanges",
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
+	},
+	{
+		"key": "shift+alt+j",
+		"command": "workbench.action.acceptSelectedQuickOpenItem",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "shift+alt+n",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
 	},
 
 	/* Ctrl+Alt+j */
@@ -1825,7 +1840,7 @@
 	{
 		"key": "shift+alt+backspace",
 		"command": "inlineChat.discardHunkChange",
-		"when": "inlineChatVisible && config.inlineChat.mode != 'preview'"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
 	},
 
 	/* Ctrl+Shift+. */

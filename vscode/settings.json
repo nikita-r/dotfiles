@@ -80,18 +80,21 @@
 	"problems.decorations.enabled": false,
 	"problems.showCurrentInStatus": true,
 
+	/* auto-suggestion */
 	//"editor.inlineSuggest.enabled": false,
 	"github.copilot.editor.enableAutoCompletions": false,
 	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,
+	"editor.suggest.selectionMode": "never",
 	"editor.parameterHints.enabled": false,
-	"editor.parameterHints.cycle": true,
 	"editor.suggestOnTriggerCharacters": false,
 
+	/* acceptance */
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.tabCompletion": "onlySnippets", // or "on"
 	"emmet.triggerExpansionOnTab": true,
+	"editor.parameterHints.cycle": true,
 
 	"emmet.showSuggestionsAsSnippets": false,
 	"editor.snippetSuggestions": "none", // or "top"
@@ -861,7 +864,7 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
-	"inlineChat.mode": "preview",
+	"inlineChat.mode": "live",
 	"editor.copyWithSyntaxHighlighting": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 }

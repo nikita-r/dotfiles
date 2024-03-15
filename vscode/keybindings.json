@@ -223,16 +223,16 @@
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	/* Opt+P */
-	{
-		"key": "alt+p",
-		"command": "togglePreserveCase",
-		"when": "editorFocus"
-	},
-	{
-		"key": "alt+p",
-		"command": "toggleSearchPreserveCase",
-		"when": "searchViewletFocus"
-	},
+	//{
+	//	"key": "alt+p",
+	//	"command": "togglePreserveCase",
+	//	"when": "editorFocus"
+	//},
+	//{
+	//	"key": "alt+p",
+	//	"command": "toggleSearchPreserveCase",
+	//	"when": "searchViewletFocus"
+	//},
 	{
 		"key": "alt+p",
 		"command": "keybindings.editor.toggleSortByPrecedence",
@@ -399,7 +399,7 @@
 	},
 	{
 		"key": "alt+/",
-		"command": "\"list.find\" requires support for Tree Find",
+		"command": "\"list.find\" requires the list to support Tree Find",
 		"when": "listFocus"
 	},
 	{
@@ -1331,14 +1331,27 @@
 	},
 
 	/* Ctrl+Alt+Letter */
-	//{
-	//	"key": "ctrl+alt+p",
-	//	"command": "workbench.action.terminal.runRecentCommand"
-	//},
+	{
+		"key": "ctrl+alt+m",
+		"command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+	},
 	{
 		"key": "ctrl+alt+r",
 		"command": "macros.renamePresentFile", /* ctf0.macros */
 		"when": "resourceScheme == 'file'"
+	},
+	{
+		"key": "ctrl+alt+r",
+		"command": "workbench.action.terminal.runRecentCommand",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "list.focusAnyDown"
+	},
+	{
+		"key": "ctrl+alt+p",
+		"command": "list.focusAnyUp"
 	},
 	{
 		"key": "ctrl+alt+e",
@@ -1446,6 +1459,18 @@
 		"command": "workbench.action.terminal.sendSequence",
 		"when": "terminalFocusInAny && terminalShellType == 'python'",
 		"args": { "text": ")\u001b[H(\u001b[H" }
+	},
+	{
+		"key": "alt+n",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocusInAny || terminalTabsFocus",
+		"args": { "text": "\u001b[B" } // Arrow Down
+	},
+	{
+		"key": "alt+p",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocusInAny || terminalTabsFocus",
+		"args": { "text": "\u001b[A" } // Arrow Up
 	},
 	/* terminal.select */
 	{
@@ -1620,9 +1645,9 @@
 	{ "command": "noop", "key": "ctrl+alt+j" },
 	{ "command": "noop", "key": "ctrl+alt+k" },
 	{ "command": "noop", "key": "ctrl+alt+l" },
-	{ "command": "noop", "key": "shift+alt+j" }, // "bookmarks.expandSelectionToPrevious"
+	{ "command": "noop", "key": "shift+alt+j" },
 	{ "command": "noop", "key": "shift+alt+k" },
-	{ "command": "noop", "key": "shift+alt+l" }, // "bookmarks.expandSelectionToNext"
+	{ "command": "noop", "key": "shift+alt+l" },
 	{
 		"key": "ctrl+k 8",
 		"command": "workbench.view.extension.bookmarks"

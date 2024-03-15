@@ -81,7 +81,7 @@
 	"problems.showCurrentInStatus": true,
 
 	/* auto-suggestion */
-	//"editor.inlineSuggest.enabled": false,
+	"editor.inlineSuggest.enabled": false,
 	"github.copilot.editor.enableAutoCompletions": false,
 	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,
@@ -96,15 +96,19 @@
 	"emmet.triggerExpansionOnTab": true,
 	"editor.parameterHints.cycle": true,
 
+	/* snippety */
 	"emmet.showSuggestionsAsSnippets": false,
 	"editor.snippetSuggestions": "none", // or "top"
 
+	/* how to show */
 	"editor.suggestSelection": "first",
+	//"editor.suggest.preview": true,
+	"editor.suggest.showInlineDetails": false,
+
+	/* which to show */
 	"editor.suggest.filterGraceful": false,
 	//"editor.suggest.localityBonus": true,
-	//"editor.suggest.preview": true,
 	"editor.suggest.showDeprecated": false,
-	"editor.suggest.showInlineDetails": false,
 	"editor.suggest.showKeywords": false,
 	//"editor.wordBasedSuggestions": false,
 	"editor.suggest.showWords": true,

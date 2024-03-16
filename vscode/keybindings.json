@@ -1338,7 +1338,7 @@
 	{
 		"key": "ctrl+alt+r",
 		"command": "macros.renamePresentFile", /* ctf0.macros */
-		"when": "resourceScheme == 'file'"
+		//"when": "resourceScheme == 'file'"
 	},
 	{
 		"key": "ctrl+alt+r",
@@ -1463,13 +1463,13 @@
 	{
 		"key": "alt+n",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFocusInAny || terminalTabsFocus",
+		"when": "!isMac && (terminalFocusInAny || terminalTabsFocus)",
 		"args": { "text": "\u001b[B" } // Arrow Down
 	},
 	{
 		"key": "alt+p",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFocusInAny || terminalTabsFocus",
+		"when": "!isMac && (terminalFocusInAny || terminalTabsFocus)",
 		"args": { "text": "\u001b[A" } // Arrow Up
 	},
 	/* terminal.select */
@@ -1955,8 +1955,8 @@
 	},
 
 	/* No search.action.replace[All*] without Alt */
-	{ "command": "", "key": "ctrl+shift+1" },
-	{ "command": "", "key": "shift+cmd+1" },
+	//{ "command": "", "key": "ctrl+shift+1" },
+	//{ "command": "", "key": "shift+cmd+1" },
 	{ "command": "", "key": "ctrl+shift+enter", "when": "!editorTextFocus" },
 	{ "command": "", "key": "shift+cmd+enter", "when": "!editorTextFocus" },
 	{

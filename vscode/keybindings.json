@@ -138,7 +138,7 @@
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.terminal.clear",
-		"when": "terminalFocus"
+		"when": "terminalFocusInAny"
 	},
 
 	/* Q */
@@ -245,7 +245,7 @@
 		"command": "editor.action.commentLine"
 	},
 
-	/* the same as the Default Keyboard Shortcuts, excepting the "when" */
+	/* take KB from Default Keyboard Shortcuts for Windows, but drop the "when" */
 	{
 		"key": "shift+alt+a",
 		"command": "editor.action.blockComment"
@@ -269,6 +269,10 @@
 	{
 		"key": "shift+f9",
 		"command": "editor.debug.action.toggleInlineBreakpoint"
+	},
+	{
+		"key": "shift+alt+.",
+		"command": "editor.action.autoFix"
 	},
 	{
 		"key": "alt+pageup",
@@ -316,6 +320,11 @@
 		"key": "ctrl+k ctrl+j",
 		"command": "macros.expandAllNotebookCells", /* ctf0.macros */
 		"when": "activeEditor == 'workbench.editor.notebook' && !editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "macros.expandAllNotebookCells", /* ctf0.macros */
+		"when": "activeEditor == 'workbench.editor.interactive'"
 	},
 
 	/* Find Action */
@@ -495,11 +504,11 @@
 		"command": "editor.action.smartSelect.expand",
 		"when": "editorTextFocus"
 	},
-	{
-		"key": "shift+alt+x",
-		"command": "editor.emmet.action.balanceOut",
-		"when": "editorTextFocus && editorLangId =~ /html|xml/"
-	},
+	//{
+	//	"key": "shift+alt+x",
+	//	"command": "editor.emmet.action.balanceOut",
+	//	"when": "editorTextFocus && editorLangId =~ /html|xml/"
+	//},
 
 	/* Reassign Ctrl+Up/Down when listFocus; Ctrl+Right to switch viewAs */
 	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
@@ -707,25 +716,62 @@
 		"command": "workbench.action.terminal.runSelectedText",
 		"when": "editorTextFocus"
 	},
-	//{
-	//	"key": "f8",
-	//	"command": "PowerShell.RunSelection",
-	//	"when": "editorTextFocus && editorLangId == 'powershell'"
-	//},
-	//{
-	//	"key": "f8",
-	//	"command": "python.execSelectionInTerminal",
-	//	"when": "editorTextFocus && editorLangId == 'python'"
-	//},
+	{
+		"key": "shift+f8",
+		"command": "PowerShell.RunSelection",
+		"when": "editorTextFocus && editorLangId == 'powershell'"
+	},
+	{
+		"key": "shift+f8",
+		"command": "python.execSelectionInTerminal",
+		"when": "editorTextFocus && editorLangId == 'python'"
+	},
+	{
+		"key": "shift+f8",
+		"command": "jupyter.execSelectionInteractive",
+		"when": "editorTextFocus && editorLangId == 'python' && jupyter.ownsSelection"
+	},
 	{
 		"key": "f8",
 		"command": "Command requires codes to be selected and in-focus in the Editor",
 		"when": "!editorTextFocus || !editorHasSelection"
 	},
 	{
+		"key": "shift+f8",
+		"command": "Command requires codes to be selected and in-focus in the Editor",
+		"when": "!editorTextFocus || !editorHasSelection"
+	},
+	{
 		"key": "f8",
 		"command": "",
-		"when": "terminalFocusInAny"
+		"when": "terminalFocus"
+	},
+	{
+		"key": "shift+f8",
+		"command": "",
+		"when": "terminalFocus"
+	},
+
+	/* notebookType == 'interactive' */
+	{ "command": "-interactive.history.previous", "key": "up" },
+	{ "command": "-interactive.history.next", "key": "down" },
+	{ "command": "-interactive.execute", "key": "ctrl+enter" },
+	{ "command": "-interactive.execute", "key": "meta+enter" },
+	{ "command": "-interactive.execute", "key": "shift+enter" },
+	{
+		"key": "shift+enter",
+		"command": "interactive.execute",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "interactive.history.previous",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "interactive.history.next",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
 
 	/* Ctrl+[][]: jump to next/prev; abjure any-and-all non-Debug usage of F5 */
@@ -1343,7 +1389,7 @@
 	{
 		"key": "ctrl+alt+r",
 		"command": "workbench.action.terminal.runRecentCommand",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+alt+n",
@@ -1384,7 +1430,7 @@
 	{
 		"key": "ctrl+f4",
 		"command": "workbench.action.terminal.kill",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus" // "panelFocus && activePanel == 'terminal'"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus" // "panelFocus && activePanel == 'terminal'"
 	},
 	{
 		"key": "ctrl+f4",
@@ -1445,31 +1491,31 @@
 	{
 		"key": "tab",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"when": "terminalFocus && terminalShellType == 'python'",
 		"args": { "text": "\u0020\u0020\u0020\u0020" }
 	},
 	{
 		"key": "shift+tab",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"when": "terminalFocus && terminalShellType == 'python'",
 		"args": { "text": "\u007f\u007f\u007f\u007f" }
 	},
 	{
 		"key": "ctrl+shift+9",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFocusInAny && terminalShellType == 'python'",
+		"when": "terminalFocus && terminalShellType == 'python'",
 		"args": { "text": ")\u001b[H(\u001b[H" }
 	},
 	{
 		"key": "alt+n",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "!isMac && (terminalFocusInAny || terminalTabsFocus)",
+		"when": "!isMac && (terminalFocus || terminalTabsFocus)",
 		"args": { "text": "\u001b[B" } // Arrow Down
 	},
 	{
 		"key": "alt+p",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "!isMac && (terminalFocusInAny || terminalTabsFocus)",
+		"when": "!isMac && (terminalFocus || terminalTabsFocus)",
 		"args": { "text": "\u001b[A" } // Arrow Up
 	},
 	/* terminal.select */
@@ -1502,32 +1548,32 @@
 	{
 		"key": "alt+up",
 		"command": "workbench.action.terminal.scrollUp",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "alt+down",
 		"command": "workbench.action.terminal.scrollDown",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "shift+pageup",
 		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "shift+pagedown",
 		"command": "workbench.action.terminal.scrollDownPage",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+home",
 		"command": "workbench.action.terminal.scrollToTop",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+end",
 		"command": "workbench.action.terminal.scrollToBottom",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	/* Navigate panes/groups/tabs */
 	{
@@ -1673,12 +1719,12 @@
 	{
 		"key": "shift+alt+k",
 		"command": "notebook.revealRunningCell",
-		"when": "activeEditor == 'workbench.editor.notebook'"
+		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
 	},
 	{
 		"key": "shift+alt+l",
 		"command": "notebook.cell.toggleLineNumbers",
-		"when": "activeEditor == 'workbench.editor.notebook'"
+		"when": "notebookCellEditorFocused"
 	},
 	{
 		"key": "shift+alt+n",
@@ -1910,12 +1956,12 @@
 	{
 		"key": "ctrl+shift+c",
 		"command": "workbench.action.terminal.copySelection",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+shift+v",
 		"command": "workbench.action.terminal.paste",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* Markdown Preview */
@@ -2033,7 +2079,7 @@
 	{
 		"key": "ctrl+alt+z",
 		"command": "workbench.action.terminal.sizeToContentWidth",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/*~*~*~*/

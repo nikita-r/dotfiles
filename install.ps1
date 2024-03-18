@@ -21,6 +21,7 @@ $json -split "`n" |% {
   if ($_ -match '"command": ""') { return $_ }
   if ($_ -match '"key": "ctrl\+i"') { return $_ }
   if ($_ -match '"ctrl\+alt\+[enpr]"') { return $_ }
+  if ($_ -match '"command": "-[^"]+"') { return $_ }
   $_ `
     -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g]|\\)"', '"key": "$2$1md+$3"' `
     -iReplace '"key": "(shift)\+(c)trl\+([^+"]+)"', '"key": "$2md+$1+$3"' `

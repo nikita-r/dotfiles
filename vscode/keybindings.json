@@ -733,12 +733,12 @@
 	},
 	{
 		"key": "f8",
-		"command": "Command requires codes to be selected and in-focus in the Editor",
+		"command": "Command requires codes to be selected and in-focus in Editor",
 		"when": "!editorTextFocus || !editorHasSelection"
 	},
 	{
 		"key": "shift+f8",
-		"command": "Command requires codes to be selected and in-focus in the Editor",
+		"command": "Command requires codes to be selected and in-focus in Editor",
 		"when": "!editorTextFocus || !editorHasSelection"
 	},
 	{
@@ -751,6 +751,8 @@
 		"command": "",
 		"when": "terminalFocus"
 	},
+	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "f8" },
+	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "shift+f8" },
 
 	/* notebookType == 'interactive' */
 	{ "command": "-interactive.history.previous", "key": "up" },
@@ -957,21 +959,6 @@
 		"key": "shift+alt+0",
 		"command": "togglePeekWidgetFocus",
 		"when": "inReferenceSearchEditor || referenceSearchVisible"
-	},
-
-	/* time/out/line/focus */
-	{
-		"key": "ctrl+alt+t",
-		"command": "timeline.focus"
-	},
-	{
-		"key": "ctrl+alt+o",
-		"command": "outline.focus"
-	},
-	{
-		"key": "ctrl+alt+o",
-		"command": "outline.collapse",
-		"when": "focusedView == 'outline'"
 	},
 
 	/* [VS] View.Navigate */
@@ -1392,6 +1379,15 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
+		"key": "ctrl+alt+o",
+		"command": "outline.focus"
+	},
+	{
+		"key": "ctrl+alt+o",
+		"command": "outline.collapse",
+		"when": "focusedView == 'outline'"
+	},
+	{
 		"key": "ctrl+alt+n",
 		"command": "list.focusAnyDown"
 	},
@@ -1679,6 +1675,11 @@
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelFocus || panelMaximized"
 	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "panelVisible"
+	},
 
 	/* dbankier.vscode-quick-select */
 	{
@@ -1700,11 +1701,13 @@
 	},
 	{
 		"key": "shift+alt+k",
-		"command": "bookmarks.toggle"
+		"command": "bookmarks.toggle",
+		"when": "editorFocus"
 	},
 	{
 		"key": "shift+alt+l",
-		"command": "bookmarks.toggleLabeled"
+		"command": "bookmarks.toggleLabeled",
+		"when": "editorFocus"
 	},
 	{
 		"key": "shift+alt+n",
@@ -1715,10 +1718,21 @@
 		"command": "bookmarks.jumpToPrevious"
 	},
 
-	/* alefragnani.Bookmarks is not functional in Notebook Editor */
+	/* alefragnani.Bookmarks non-functional when "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/" */
+	/* Notebook Cell commands */
+	{
+		"key": "shift+alt+j",
+		"command": "notebook.cell.execute",
+		"when": "notebookCellFocused && !notebookCellExecuting && notebookCellType == 'code'"
+	},
 	{
 		"key": "shift+alt+k",
 		"command": "notebook.revealRunningCell",
+		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
+	},
+	{
+		"key": "shift+alt+l",
+		"command": "noop",
 		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
 	},
 	{
@@ -1729,12 +1743,12 @@
 	{
 		"key": "shift+alt+n",
 		"command": "notebook.focusNextEditor",
-		"when": "notebookCellFocused"
+		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
 	},
 	{
 		"key": "shift+alt+p",
 		"command": "notebook.focusPreviousEditor",
-		"when": "notebookCellFocused"
+		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
 	},
 
 	/* Shift+Alt+Letter */
@@ -1768,10 +1782,9 @@
 		"when": "inQuickOpen"
 	},
 
-	/* Ctrl+Alt+j */
 	/* file-ext-switcher */
 	{
-		"key": "ctrl+alt+j",
+		"key": "shift+alt+,",
 		"command": "fileextswitch",
 		"args": {
 			"extensions": [
@@ -1784,6 +1797,7 @@
 			//"useOtherColumn": true
 		}
 	},
+
 	/* Switch to JSON */
 	{
 		"key": "ctrl+alt+j",

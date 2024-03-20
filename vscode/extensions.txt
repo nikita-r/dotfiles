@@ -8,7 +8,7 @@ mhutchie.git-graph
 #EditorConfig.EditorConfig
 hediet.hediet-power-tools
 hediet.vscode-drawio
-JohannesRudolph.file-ext-switcher
+redhat.vscode-yaml
 #redhat.java
 ms-python.python
 #ms-dotnettools.csharp

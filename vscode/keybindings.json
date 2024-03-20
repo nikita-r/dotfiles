@@ -23,6 +23,8 @@
 
 	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
 	{ "command": "noop", "key": "ctrl+shift+n" },
+	{ "command": "noop", "key": "ctrl+shift+0" }, // not available if isWindows
+	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
@@ -1718,7 +1720,7 @@
 		"command": "bookmarks.jumpToPrevious"
 	},
 
-	/* alefragnani.Bookmarks non-functional when "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/" */
+	/* alefragnani.Bookmarks is dysfunctional when "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/" */
 	/* Notebook Cell commands */
 	{
 		"key": "shift+alt+j",
@@ -1732,7 +1734,7 @@
 	},
 	{
 		"key": "shift+alt+l",
-		"command": "noop",
+		"command": "notebook.cell.focusOutOutput",
 		"when": "activeEditor =~ /^workbench\\.editor\\.(notebook|interactive)$/"
 	},
 	{

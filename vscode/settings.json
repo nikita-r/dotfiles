@@ -26,6 +26,7 @@
 	"[python][yaml]": {
 		"editor.stickyScroll.enabled": true,
 		"editor.stickyScroll.maxLineCount": 9,
+		"editor.stickyScroll.defaultModel": "foldingProviderModel",
 	},
 	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
@@ -300,10 +301,10 @@
 	"bookmarks.gutterIconFillColor": "#60c0c0",
 	"numberedBookmarks.gutterIconFillColor": "#806080",
 	"numberedBookmarks.gutterIconNumberColor": "#201820",
-	//"bookmarks.keepBookmarksOnLineDelete": true,
-	//"numberedBookmarks.keepBookmarksOnLineDelete": true,
+	"bookmarks.keepBookmarksOnLineDelete": true,
+	"numberedBookmarks.keepBookmarksOnLineDelete": true,
 	"bookmarks.label.suggestion": "suggestWhenSelected",
-	"bookmarks.navigateThroughAllFiles": false,
+	//"bookmarks.navigateThroughAllFiles": false,
 	"bookmarks.saveBookmarksInProject": true,
 	"numberedBookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
@@ -813,6 +814,7 @@
 	"editor.smartSelect.selectSubwords": false,
 
 	/* file-saving preferences */
+	"editor.formatOnSaveMode": "modifications",
 	"[python]": {
 		//"editor.formatOnSave": false,
 		//"editor.codeActionsOnSave": {

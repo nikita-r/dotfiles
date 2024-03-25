@@ -21,9 +21,9 @@
 	%: Show or Focus Hover: "ctrl+k ctrl+i"
 	*/
 
-	{ "command": "noop", "key": "ctrl+shift+u" }, // key for ibus Unicode input
+	{ "command": "noop", "key": "ctrl+shift+u" }, // in GtkIMContextSimple, ^+U is bound to input Unicode codepoint
 	{ "command": "noop", "key": "ctrl+shift+n" },
-	{ "command": "noop", "key": "ctrl+shift+0" }, // not available if isWindows
+	{ "command": "noop", "key": "ctrl+shift+0" }, // cannot receive ^+0 under Windows
 	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
@@ -1001,7 +1001,7 @@
 	},
 
 	/* Ctrl+k *s */
-	{ "command": "saveAll", "key": "ctrl+k s" },
+	{ "command": "noop", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
@@ -1041,7 +1041,7 @@
 	{
 		"key": "ctrl+k 4",
 		"command": "workbench.debug.action.focusRepl",
-		"when": "sideBarFocus && activeViewlet == 'workbench.view.debug'"
+		"when": "sideBarFocus && activeViewlet == 'workbench.view.debug' || auxiliaryBarFocus && activeAuxiliary == 'workbench.view.debug'"
 	},
 	{
 		"key": "ctrl+k 5",

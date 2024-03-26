@@ -804,12 +804,12 @@
 	{
 		"key": "ctrl+]",
 		"command": "references-view.next",
-		"when": "reference-list.hasResult && activeViewlet == 'workbench.view.extension.references-view'"
+		"when": "reference-list.hasResult && (activeViewlet == 'workbench.view.extension.references-view' || activeAuxiliary == 'workbench.view.extension.references-view')"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "references-view.prev",
-		"when": "reference-list.hasResult && activeViewlet == 'workbench.view.extension.references-view'"
+		"when": "reference-list.hasResult && (activeViewlet == 'workbench.view.extension.references-view' || activeAuxiliary == 'workbench.view.extension.references-view')"
 	},
 	{
 		"key": "ctrl+]",
@@ -840,6 +840,16 @@
 		"key": "ctrl+[",
 		"command": "workbench.action.compareEditor.previousChange",
 		"when": "textCompareEditorActive"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "goToNextReference",
+		"when": "referenceSearchVisible"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "goToPreviousReference",
+		"when": "referenceSearchVisible"
 	},
 
 	/* Alt+[][] */
@@ -942,6 +952,16 @@
 	{
 		"key": "cmd+escape",
 		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "alt+`",
+		"command": "workbench.action.focusQuickOpen",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "cmd+escape",
+		"command": "workbench.action.focusQuickOpen",
+		"when": "inQuickOpen"
 	},
 
 	/* Alt+[09] */
@@ -1316,7 +1336,7 @@
 		"when": "inFilesPicker && inQuickOpen"
 	},
 
-	/* ?inQuickOpen */
+	/* shifted in a Picker */
 	{
 		"key": "ctrl+shift+e",
 		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
@@ -1326,11 +1346,6 @@
 		"key": "ctrl+shift+p",
 		"command": "workbench.action.quickOpenNavigateNext",
 		"when": "inCommandsPicker && inQuickOpen"
-	},
-	{
-		"key": "alt+`",
-		"command": "workbench.action.focusQuickOpen",
-		"when": "inQuickOpen"
 	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */
@@ -2016,7 +2031,7 @@
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
 	},
 
-	/* No search.action.replace[All*] without Alt */
+	/* editor.action & search.action to Find/Replace */
 	//{ "command": "", "key": "ctrl+shift+1" },
 	//{ "command": "", "key": "shift+cmd+1" },
 	{ "command": "", "key": "ctrl+shift+enter", "when": "!editorTextFocus" },

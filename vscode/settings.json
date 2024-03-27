@@ -56,8 +56,10 @@
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": false, // or "multiFile"
+
 	"search.mode": "newEditor",
 	"search.searchEditor.defaultNumberOfContextLines": null,
+	//"search.searchOnType": false,
 	"search.searchOnTypeDebouncePeriod": 666,
 	"search.showLineNumbers": true,
 
@@ -314,6 +316,8 @@
 	"cSpell.showStatus": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true, /* mkxml.vscode-filesize */
 	"filesize.showGzip": false,
+	"hediet-power-tools.applyRename.enabled": false, /* hediet.hediet-power-tools */
+	"hediet-power-tools.applyRename.theme": "colored",
 	"hexeditor.inspectorType": "hover", /* ms-vscode.hexeditor */
 	"hexeditor.maxFileSize": 99,
 	"mssql.copyRemoveNewLine": false, /* ms-mssql.mssql */
@@ -455,6 +459,12 @@
 	//"python.analysis.typeCheckingMode": "strict",
 	"python.analysis.inlayHints.callArgumentNames": "partial",
 	"python.analysis.inlayHints.functionReturnTypes": true,
+
+	/* dotnet */
+	"dotnet.inlayHints.enableInlayHintsForParameters": true,
+	//"dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+	"dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+	"dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
 
 	/* T-SQL */
 	"mssql.format.datatypeCasing": "lowercase",
@@ -815,12 +825,11 @@
 
 	/* file-saving preferences */
 	"editor.formatOnSaveMode": "modifications",
-	"[python]": {
-		//"editor.formatOnSave": false,
-		//"editor.codeActionsOnSave": {
-		//	"source.organizeImports": "explicit",
-		//	"source.fixAll": "never",
-		//}
+	"[csharp][razor]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.codeActionsOnSave": {
+		}
 	},
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,
@@ -846,6 +855,7 @@
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
 	},
+	//"search.followSymlinks": false,
 	//"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
 	"explorer.fileNesting.enabled": true,
@@ -875,6 +885,7 @@
 	/* . . . */
 
 	"github.copilot.chat.welcomeMessage": "never",
+	"editor.accessibilitySupport": "off",
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

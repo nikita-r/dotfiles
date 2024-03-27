@@ -735,6 +735,16 @@
 	},
 	{
 		"key": "f8",
+		"command": "Command requires the Selection to be Single",
+		"when": "editorHasMultipleSelections"
+	},
+	{
+		"key": "shift+f8",
+		"command": "Command requires the Selection to be Single",
+		"when": "editorHasMultipleSelections"
+	},
+	{
+		"key": "f8",
 		"command": "Command requires codes to be selected and in-focus in Editor",
 		"when": "!editorTextFocus || !editorHasSelection"
 	},

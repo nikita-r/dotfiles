@@ -70,6 +70,7 @@
 	//"workbench.editor.enablePreview": false,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
+
 	//"search.quickOpen.includeSymbols": true,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 
@@ -426,8 +427,11 @@
 
 	/* Language Extensions */
 
+	//"dotnet.server.useOmnisharp": true,
+	"omnisharp.organizeImportsOnFormat": true,
 	"omnisharp.autoStart": false, // #> OmniSharp: Restart
 	"omnisharp.enableRoslynAnalyzers": true,
+	"dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
 
 	"[powershell]": {
 		"editor.codeLens": false,

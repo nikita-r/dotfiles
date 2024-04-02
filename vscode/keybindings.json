@@ -639,18 +639,6 @@
 		"when": "textInputFocus"
 	},
 
-	/* Accept Next of Inline Suggestion */
-	{
-		"key": "ctrl+right",
-		"command": "editor.action.inlineSuggest.acceptNextWord",
-		"when": "inlineSuggestionVisible && editorTextFocus"
-	},
-	{
-		"key": "shift+enter",
-		"command": "editor.action.inlineSuggest.acceptNextLine",
-		"when": "editorTextFocus"
-	},
-
 	/* Shift+Alt+Arrow: ensure Windows defaults */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
@@ -731,8 +719,9 @@
 	{
 		"key": "shift+f8",
 		"command": "jupyter.execSelectionInteractive",
-		"when": "editorTextFocus && editorLangId == 'python' && jupyter.ownsSelection"
+		"when": "editorTextFocus && jupyter.ownsSelection"
 	},
+	{ "command": "noop", "when": "editorTextFocus", "key": "shift+enter" },
 	{
 		"key": "f8",
 		"command": "Command requires the Selection to be Single",
@@ -786,6 +775,18 @@
 		"key": "ctrl+down",
 		"command": "interactive.history.next",
 		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+
+	/* Accept Next of Inline Suggestion */
+	{
+		"key": "ctrl+right",
+		"command": "editor.action.inlineSuggest.acceptNextWord",
+		"when": "inlineSuggestionVisible && editorTextFocus"
+	},
+	{
+		"key": "shift+enter",
+		"command": "editor.action.inlineSuggest.acceptNextLine",
+		"when": "inlineSuggestionVisible && editorTextFocus"
 	},
 
 	/* Ctrl+[][]: jump to next/prev; abjure any-and-all non-Debug usage of F5 */
@@ -1858,6 +1859,13 @@
 	{
 		"key": "ctrl+k c",
 		"command": "extension.partialDiff.diffSelectionWithClipboard"
+	},
+
+	/* hediet.hediet-power-tools */
+	{
+		"key": "shift+enter",
+		"command": "hediet-power-tools.apply-rename",
+		"when": "hediet-power-tools.apply-rename.applicable"
 	},
 
 	/* Ctrl+k Ctrl+f */

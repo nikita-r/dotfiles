@@ -549,11 +549,11 @@
 		"copyRelativeFilePath", "notifications.showList",
 		"outline.focus", "timeline.focus", "terminal.focus",
 		"scrollPageUp", "scrollPageDown", "editorScroll",
+		"workbench.action.files.newUntitledFile",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.openRecent",
 		"workbench.action.remote.showMenu",
 		"workbench.action.terminal.moveToEditorInstance",
-		"workbench.action.moveEditorLeftInGroup", "workbench.action.moveEditorRightInGroup",
 		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
 	],
@@ -890,11 +890,13 @@
 
 	"github.copilot.chat.welcomeMessage": "never",
 	"editor.accessibilitySupport": "off",
+	//"editor.foldingHighlight": false,
+	"editor.copyWithSyntaxHighlighting": false,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
 	"inlineChat.mode": "live",
-	"editor.copyWithSyntaxHighlighting": false,
 	"diffEditor.ignoreTrimWhitespace": false,
+	//"diffEditor.experimental.showMoves": true,
 }

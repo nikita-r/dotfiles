@@ -24,6 +24,8 @@ $json -split "`n" |% {
   if ($_ -match '"command": "-[^"]+"') { return $_ }
   if ($_ -match '"command": "noop"') {
     if ($_ -match '"ctrl\+shift\+[un]"') { return }
+  } else {
+    if ($_ -match '"ctrl\+alt\+(up|down|\\\\)"') { return $_ }
   }
   $_ `
     -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g]|\\)"', '"key": "$2$1md+$3"' `

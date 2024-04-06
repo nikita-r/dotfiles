@@ -914,16 +914,6 @@
 		"command": "macros.diffReview.prev", /* ctf0.macros */
 		"when": "textCompareEditorActive && !editorFocus"
 	},
-	{
-		"key": "shift+alt+]",
-		"command": "inlineChat.moveToNextHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
-	},
-	{
-		"key": "shift+alt+[",
-		"command": "inlineChat.moveToPreviousHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
-	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -1257,23 +1247,22 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* Ctrl+Shift+j */
-	/* J for Join */
+	/* Ctrl+(Shift+)j */
+	/* Mac default: ^J for Join */
 	{
-		"key": "ctrl+shift+j",
+		"key": "ctrl+j",
 		"command": "editor.action.joinLines",
-		"when": "editorTextFocus && !editorReadonly"
+		//"when": "editorTextFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+shift+j",
+		"key": "ctrl+j",
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
 	},
-	/* restore the default */
+	/* Toggle Panel Visibility */
 	{
 		"key": "ctrl+shift+j",
-		"command": "workbench.action.search.toggleQueryDetails",
-		"when": "inSearchEditor || searchViewletFocus"
+		"command": "workbench.action.togglePanel"
 	},
 
 	/* Emmet */
@@ -1836,6 +1825,13 @@
 		}
 	},
 
+	/* instead of ^+J */
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.search.toggleQueryDetails",
+		"when": "inSearchEditor || searchViewletFocus"
+	},
+
 	/* Switch to JSON */
 	{
 		"key": "ctrl+alt+j",
@@ -1932,13 +1928,14 @@
 	},
 
 	/* GitHub Copilot */
+	/* Completions Panel */
 	{
-		"key": "ctrl+k ctrl+shift+i",
+		"key": "ctrl+shift+alt+i",
 		"command": "github.copilot.generate",
-		"when": "editorTextFocus"
+		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
 	{
-		"key": "ctrl+shift+i",
+		"key": "ctrl+enter",
 		"command": "github.copilot.acceptCursorPanelSolution",
 		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'" // resourceScheme == 'webview-panel'
 	},
@@ -1952,6 +1949,7 @@
 		"command": "github.copilot.previousPanelSolution",
 		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
 	},
+	/* Quick/Suggest */
 	{
 		"key": "ctrl+k shift+i",
 		"command": "workbench.action.quickchat.toggle",
@@ -1968,6 +1966,16 @@
 		"when": "editorTextFocus"
 	},
 	/* Inline Chat */
+	{
+		"key": "shift+alt+]",
+		"command": "inlineChat.moveToNextHunk",
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
+	},
+	{
+		"key": "shift+alt+[",
+		"command": "inlineChat.moveToPreviousHunk",
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
+	},
 	{
 		"key": "shift+alt+backspace",
 		"command": "inlineChat.discardHunkChange",

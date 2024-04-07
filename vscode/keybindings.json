@@ -1264,6 +1264,11 @@
 		"key": "ctrl+shift+j",
 		"command": "workbench.action.togglePanel"
 	},
+	{ "command": "", "key": "ctrl+b" },
+	{
+		"key": "ctrl+shift+b",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
 
 	/* Emmet */
 	{
@@ -1928,9 +1933,24 @@
 	},
 
 	/* GitHub Copilot */
-	/* Completions Panel */
+	/* Side Chat */
 	{
-		"key": "ctrl+shift+alt+i",
+		"key": "ctrl+alt+i",
+		"command": "workbench.action.chat.open"
+	},
+	{
+		"key": "ctrl+win+i",
+		"command": "workbench.action.chat.open"
+	},
+	/* Completions Panel */
+	{ "command": "noop", "key": "shift+ctrl+alt+i" },
+	{
+		"key": "shift+ctrl+alt+i",
+		"command": "github.copilot.generate",
+		"when": "editorTextFocus && !editorHasMultipleSelections"
+	},
+	{
+		"key": "shift+ctrl+win+i",
 		"command": "github.copilot.generate",
 		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
@@ -1985,7 +2005,7 @@
 	{
 		"key": "ctrl+k i",
 		"command": "inlineChat.start",
-		"when": "editorTextFocus"
+		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
 
 	/* Ctrl+Shift+. */

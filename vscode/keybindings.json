@@ -1652,7 +1652,7 @@
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.focus"
 	},
-	/* back to Editor away from Terminal View */
+	/* back to Editor away from Terminal in Terminal View */
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.focusActiveEditorGroup",
@@ -1680,7 +1680,7 @@
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFocus && !terminalEditorActive"
 	},
-	/* Toggle Terminal */
+	/* Toggle Terminal View */
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.toggleTerminal",
@@ -1914,22 +1914,22 @@
 	{
 		"key": "ctrl+i",
 		"command": "editor.action.triggerSuggest",
-		"when": "textInputFocus"
+		"when": "textInputFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
 		"key": "ctrl+i",
 		"command": "focusSuggestion",
-		"when": "textInputFocus && suggestWidgetVisible"
+		"when": "suggestWidgetVisible"
 	},
 	{
 		"key": "ctrl+i",
 		"command": "toggleSuggestionDetails",
-		"when": "textInputFocus && suggestWidgetVisible && suggestWidgetHasFocusedSuggestion"
+		"when": "suggestWidgetHasFocusedSuggestion"
 	},
 	{
 		"key": "ctrl+shift+i",
 		"command": "editor.action.triggerParameterHints",
-		"when": "editorTextFocus"
+		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 
 	/* GitHub Copilot */
@@ -1947,12 +1947,12 @@
 	{
 		"key": "shift+ctrl+alt+i",
 		"command": "github.copilot.generate",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
+		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
 		"key": "shift+ctrl+win+i",
 		"command": "github.copilot.generate",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
+		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
 		"key": "ctrl+enter",
@@ -1973,17 +1973,17 @@
 	{
 		"key": "ctrl+k shift+i",
 		"command": "workbench.action.quickchat.toggle",
-		"when": "hasChatProvider"
+		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
 	{
 		"key": "ctrl+k shift+i",
 		"command": "github.copilot.terminal.suggestCommand",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
+		"when": "terminalFocus"
 	},
 	{
 		"key": "alt+\\",
 		"command": "editor.action.inlineSuggest.trigger",
-		"when": "editorTextFocus"
+		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	/* Inline Chat */
 	{
@@ -2006,6 +2006,11 @@
 		"key": "ctrl+k i",
 		"command": "inlineChat.start",
 		"when": "editorTextFocus && !editorHasMultipleSelections"
+	},
+	{
+		"key": "ctrl+k i",
+		"command": "workbench.action.terminal.chat.start",
+		"when": "terminalFocus"
 	},
 
 	/* Ctrl+Shift+. */
@@ -2093,6 +2098,46 @@
 		"command": "editor.action.insertSnippet",
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
 	},
+
+	/* Mac special characters */
+	{ "when": "!isMac && editorTextFocus", "key": "alt+;",
+	  "command": "type", "args": { "text": "…" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+o",
+	  "command": "type", "args": { "text": "ø" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+o",
+	  "command": "type", "args": { "text": "Ø" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+6",
+	  "command": "type", "args": { "text": "§" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+9",
+	  "command": "type", "args": { "text": "·" } }, // middot
+	{ "when": "!isMac && editorTextFocus", "key": "alt+8",
+	  "command": "type", "args": { "text": "•" } }, // Bullet
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+8",
+	  "command": "type", "args": { "text": "°" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+m",
+	  "command": "type", "args": { "text": "µ" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+m",
+	  "command": "type", "args": { "text": "−" } }, // Minus Sign
+	{ "when": "!isMac && editorTextFocus", "key": "alt+-",
+	  "command": "type", "args": { "text": "–" } }, // En Dash
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+-",
+	  "command": "type", "args": { "text": "—" } }, // Em Dash
+	{ "when": "!isMac && editorTextFocus", "key": "alt+=",
+	  "command": "type", "args": { "text": "≠" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+=",
+	  "command": "type", "args": { "text": "±" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+x",
+	  "command": "type", "args": { "text": "≈" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+l",
+	  "command": "type", "args": { "text": "¬" } }, // Not Sign
+	{ "when": "!isMac && editorTextFocus", "key": "alt+j",
+	  "command": "type", "args": { "text": "∆" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+3",
+	  "command": "type", "args": { "text": "‹" } },
+	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+4",
+	  "command": "type", "args": { "text": "›" } },
+	{ "when": "!isMac && editorTextFocus", "key": "alt+5",
+	  "command": "type", "args": { "text": "∞" } },
 
 	/* editor.action & search.action to Find/Replace */
 	//{ "command": "", "key": "ctrl+shift+1" },

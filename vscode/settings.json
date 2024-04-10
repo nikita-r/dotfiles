@@ -313,6 +313,7 @@
 	"bookmarks.sideBar.expanded": true,
 	"numberedBookmarks.showBookmarkNotDefinedWarning": true,
 
+	"sortLines.ignoreUnselectedLastLine": true,
 	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
 	"cSpell.showStatus": false,
 	"filesize.displayInfoOnTheRightSideOfStatusBar": true, /* mkxml.vscode-filesize */

@@ -498,7 +498,7 @@
 		"when": "textInputFocus"
 	},
 
-	/* erase subword */
+	/* subword rubout */
 	{
 		"key": "alt+backspace",
 		"command": "deleteWordPartLeft",
@@ -510,14 +510,14 @@
 		"when": "textInputFocus"
 	},
 
-	/* smart-select */
+	/* ![KeyK] */
 	{
-		"key": "shift+alt+x",
+		"key": "alt+k",
 		"command": "editor.action.smartSelect.expand",
 		"when": "editorTextFocus"
 	},
 	//{
-	//	"key": "shift+alt+x",
+	//	"key": "alt+k",
 	//	"command": "editor.emmet.action.balanceOut",
 	//	"when": "editorTextFocus && editorLangId =~ /html|xml/"
 	//},
@@ -993,6 +993,16 @@
 		"command": "togglePeekWidgetFocus",
 		"when": "inReferenceSearchEditor || referenceSearchVisible"
 	},
+
+	/* extra Optional shortcuts */
+	{ "key": "shift+alt+1", "command": "type", "args": { "text": "¡" } },
+	{ "key": "shift+alt+2", "command": "type", "args": { "text": "²" } },
+	{ "key": "shift+alt+7", "command": "type", "args": { "text": "№" } },
+	{ "key": "shift+alt+x", "command": "type", "args": { "text": "×" } },
+	{ "key": "alt+1", "command": "workbench.action.openEditorAtIndex1" },
+	{ "key": "alt+2", "command": "workbench.action.openEditorAtIndex2" },
+	{ "key": "alt+3", "command": "workbench.action.openEditorAtIndex3" },
+	{ "key": "alt+4", "command": "workbench.action.openEditorAtIndex4" },
 
 	/* [VS] View.Navigate */
 	{
@@ -2099,7 +2109,7 @@
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
 	},
 
-	/* Mac special characters */
+	/* symbols with Mac Option key */
 	{ "when": "!isMac && editorTextFocus", "key": "alt+;",
 	  "command": "type", "args": { "text": "…" } },
 	{ "when": "!isMac && editorTextFocus", "key": "alt+o",
@@ -2109,14 +2119,14 @@
 	{ "when": "!isMac && editorTextFocus", "key": "alt+6",
 	  "command": "type", "args": { "text": "§" } },
 	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+9",
-	  "command": "type", "args": { "text": "·" } }, // middot
+	  "command": "type", "args": { "text": "·" } }, // &middot; (Interpunct)
 	{ "when": "!isMac && editorTextFocus", "key": "alt+8",
 	  "command": "type", "args": { "text": "•" } }, // Bullet
 	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+8",
 	  "command": "type", "args": { "text": "°" } },
 	{ "when": "!isMac && editorTextFocus", "key": "alt+m",
 	  "command": "type", "args": { "text": "µ" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+m",
+	{ "when": "editorTextFocus", "key": "shift+alt+m",
 	  "command": "type", "args": { "text": "−" } }, // Minus Sign
 	{ "when": "!isMac && editorTextFocus", "key": "alt+-",
 	  "command": "type", "args": { "text": "–" } }, // En Dash

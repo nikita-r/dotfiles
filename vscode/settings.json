@@ -560,6 +560,16 @@
 	],
 	//"terminal.integrated.allowMnemonics": true,
 
+	"terminal.integrated.profiles.osx": {
+		"pwsh": {
+			"source": "pwsh",
+			"args": [
+				"-NoExit", "-Command",
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) }.Invoke()"
+			],
+		},
+	},
+
 	"terminal.integrated.profiles.windows": {
 		//"PowerShell": {
 		//	"source": "PowerShell",

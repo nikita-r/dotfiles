@@ -2201,12 +2201,12 @@
 	{
 		"key": "alt+enter",
 		"command": "search.action.openInEditor",
-		"when": "searchInputBoxFocus && hasSearchResult"
+		"when": "hasSearchResult && (searchInputBoxFocus || patternIncludesInputBoxFocus || patternExcludesInputBoxFocus)"
 	},
 	{
 		"key": "alt+enter",
 		"command": "Command requires Search Result to appear",
-		"when": "searchInputBoxFocus && !hasSearchResult"
+		"when": "!hasSearchResult && focusedView == 'workbench.view.search'"
 	},
 	{
 		"key": "ctrl+alt+enter",

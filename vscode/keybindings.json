@@ -77,6 +77,10 @@
 		"command": "explorer.newFolder",
 		"when": "filesExplorerFocus"
 	},
+	{
+		"key": "ctrl+k ctrl+n",
+		"command": "workbench.action.newWindow"
+	},
 	/* Ctrl+Shift+a: Search Tabs in Chrome */
 	{ "command": "", "key": "ctrl+shift+a" },
 
@@ -510,7 +514,8 @@
 		"when": "textInputFocus"
 	},
 
-	/* ![KeyK] */
+	/* alt+[KeyK] */
+	{ "command": "noop", "key": "alt+k" },
 	{
 		"key": "alt+k",
 		"command": "editor.action.smartSelect.expand",
@@ -521,6 +526,11 @@
 	//	"command": "editor.emmet.action.balanceOut",
 	//	"when": "editorTextFocus && editorLangId =~ /html|xml/"
 	//},
+	{
+		"key": "alt+k",
+		"command": "keybindings.editor.recordSearchKeys",
+		"when": "inKeybindings && inKeybindingsSearch"
+	},
 
 	/* Reassign Ctrl+Up/Down when listFocus; Ctrl+Right to switch viewAs */
 	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
@@ -2190,18 +2200,18 @@
 	},
 	{
 		"key": "alt+enter",
-		"command": "Command requires focus in Search Input Box",
+		"command": "search.action.openInEditor",
 		"when": "focusedView == 'workbench.view.search'"
 	},
 	{
 		"key": "alt+enter",
-		"command": "addCursorsAtSearchResults",
-		"when": "fileMatchOrMatchFocus"
+		"command": "Command requires focus on a single-file Match",
+		"when": "focusedView == 'workbench.view.search' && listFocus"
 	},
 	{
 		"key": "alt+enter",
-		"command": "search.action.openInEditor",
-		"when": "hasSearchResult && (searchInputBoxFocus || patternIncludesInputBoxFocus || patternExcludesInputBoxFocus)"
+		"command": "addCursorsAtSearchResults",
+		"when": "fileMatchOrMatchFocus && !folderMatchFocus"
 	},
 	{
 		"key": "alt+enter",

@@ -775,9 +775,9 @@
 			/* pinpoint matches within text */
 			"editor.selectionHighlightBackground": "#aaa3",
 			"editor.findMatchBackground": "#515",
-			"editor.findMatchBorder": "#30c090",
+			"editor.findMatchBorder": "#30c090", // 160°
 			"editor.findMatchHighlightBackground": "#a0a6",
-			"editor.findRangeHighlightBackground": "#66e3",
+			"editor.findRangeHighlightBackground": "#66e3", // 240°
 			"editor.rangeHighlightBackground": "#80008040",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 			"editorUnicodeHighlight.background": "#0000",
@@ -787,7 +787,7 @@
 			"terminal.findMatchBorder": "#30c090",
 			"terminal.findMatchHighlightBorder": "#b7b",
 			"searchEditor.findMatchBackground": "#515",
-			"diffEditor.move.border": "#f090c0",
+			"diffEditor.move.border": "#f090c0", // 330°
 			"diffEditor.moveActive.border": "#f0c0d8",
 
 			/* Peeking Viewport */
@@ -815,6 +815,7 @@
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
+	"workbench.productIconTheme": "feather-vscode",
 
 	//"files.simpleDialog.enable": true,
 	"window.dialogStyle": "custom",
@@ -879,6 +880,10 @@
 		//"*": "${capture}.map",
 		"*proj": "${capture}proj.user",
 		"appsettings.json": "appsettings.*.json",
+	},
+
+	"workbench.editor.customLabels.patterns": {
+		"**/.*": "${dirname}┇${filename}",
 	},
 
 	/* situational per-extension configs */

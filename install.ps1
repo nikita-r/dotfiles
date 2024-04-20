@@ -52,10 +52,14 @@ New-Item $dirCode\User -Type Dir -ea:0 | Out-Null
 
 $tmp = New-TemporaryFile
 $tmp = Rename-Item $tmp ($tmp.FullName + '.vsix') -PassThru
-'ctf0.macros-0.0.4', 'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0', 'melishev.feather-vscode-1.0.1' |% {
-  Write-Host $_.vsix
-  Invoke-WebRequest $urlRaw/vscode-vsix/$_.vsix -OutFile $tmp
-  cmd.exe /c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+'ctf0.macros-1.1.0', 'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0', 'melishev.feather-vscode-1.0.1' |% {
+  Write-Host "$_.vsix"
+  Invoke-WebRequest $urlRaw/vscode-vsix/"$_.vsix" -OutFile $tmp
+  if (Get-Variable IsWindows -ea:0 -ValueOnly) {
+    cmd.exe /c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+  } else {
+    /bin/sh -c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+  }
 }
 Remove-Item $tmp
 

@@ -560,6 +560,16 @@
 	],
 	//"terminal.integrated.allowMnemonics": true,
 
+	"terminal.integrated.profiles.linux": {
+		"pwsh": {
+			"source": "pwsh",
+			"args": [
+				"-NoExit", "-Command",
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) }.Invoke()"
+			],
+		},
+	},
+
 	"terminal.integrated.profiles.osx": {
 		"pwsh": {
 			"source": "pwsh",
@@ -841,7 +851,7 @@
 	"workbench.layoutControl.type": "toggles",
 
 	"editor.useTabStops": false, // for Backspace
-	//"editor.renderWhitespace": "trailing",
+	"editor.renderWhitespace": "trailing",
 	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
 	"editor.smartSelect.selectSubwords": false,
 

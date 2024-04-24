@@ -716,10 +716,13 @@
 			//"editorStickyScroll.background": "#2d2d2d",
 			//"editorStickyScrollHover.background": "#3a3a3a",
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
+			"list.highlightForeground": "#0af",
+			"list.focusHighlightForeground": "#ffd700",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
 			"chat.slashCommandBackground": "#90c0c0", // 180°
 			"chat.slashCommandForeground": "#102020",
+			"textBlockQuote.border": "#90c0c0",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -765,6 +768,7 @@
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
+			"editorWhitespace.foreground": "#69c",
 			"terminal.selectionBackground": "#369",
 			"list.activeSelectionBackground": "#147",
 			"list.inactiveSelectionBackground": "#345",
@@ -793,13 +797,14 @@
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
-			"peekViewResult.matchHighlightBackground": "#404",
+			"peekViewResult.matchHighlightBackground": "#1230",
 			"peekViewTitle.background": "#000020",
 			"peekViewResult.background": "#000020",
 			"peekViewEditor.background": "#001020",
 			"peekViewEditorGutter.background": "#1a1a1a",
 			"peekViewEditorStickyScroll.background": "#203038",
 			"peekViewEditorStickyScrollHover.background": "#304854",
+			"peekViewTitleDescription.foreground": "#ccc",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",
@@ -836,6 +841,7 @@
 	"workbench.layoutControl.type": "toggles",
 
 	"editor.useTabStops": false, // for Backspace
+	//"editor.renderWhitespace": "trailing",
 	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
 	"editor.smartSelect.selectSubwords": false,
 

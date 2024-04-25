@@ -1501,6 +1501,11 @@
 		"command": "workbench.action.terminal.goToRecentDirectory",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
+	{
+		"key": "ctrl+shift+g",
+		"command": "workbench.action.terminal.openDetectedLink",
+		"when": "accessibleViewCurrentProviderId == 'terminal' || terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
 	{ "command": "", "key": "ctrl+h"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+n"

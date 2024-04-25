@@ -52,6 +52,7 @@ New-Item $dirCode\User -Type Dir -ea:0 | Out-Null
 
 $tmp = New-TemporaryFile
 $tmp = Rename-Item $tmp ($tmp.FullName + '.vsix') -PassThru
+'JohannesRudolph.file-ext-switcher-3.2.0',
 'ctf0.macros-1.1.0', 'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0', 'melishev.feather-vscode-1.0.1' |% {
   Write-Host "$_.vsix"
   Invoke-WebRequest $urlRaw/vscode-vsix/"$_.vsix" -OutFile $tmp

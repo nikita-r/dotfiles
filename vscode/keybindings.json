@@ -12,7 +12,6 @@
 	$: workbench.action.chat.open: "ctrl+cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
-	$: workbench.action.gotoSymbol: "ctrl+shift+o"
 	$: workbench.action.keepEditor: "ctrl+k enter"
 	$: workbench.action.navigateToLastEditLocation: "ctrl+k ctrl+q"
 	$: workbench.action.splitEditorInGroup: "ctrl+k ctrl+shift+\\"
@@ -35,6 +34,15 @@
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
+
+	{
+		"key": "ctrl+shift+g",
+		"command": "editor.action.openLink"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.openWorkspace"
+	},
 
 	{ "command": "noop", "key": "alt+/" },
 	{ "command": "noop", "key": "alt+\\" },
@@ -1845,6 +1853,8 @@
 		"command": "fileextswitch",
 		"args": {
 			"extensions": [
+				".aspx",
+				".aspx.cs",
 				".ts",
 				".html",
 				".css",

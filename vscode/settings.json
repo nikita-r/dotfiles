@@ -225,6 +225,7 @@
 	"scm.repositories.visible": 0,
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
 	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
+	"git.showInlineOpenFileAction": false,
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2, // or -1
 
@@ -435,7 +436,6 @@
 	"dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
 
 	"[powershell]": {
-		"editor.codeLens": false,
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
@@ -444,6 +444,7 @@
 	"powershell.integratedConsole.startLocation": "Editor",
 	//"powershell.integratedConsole.suppressStartupBanner": true,
 	"powershell.promptToUpdatePowerShell": false,
+	"powershell.enableReferencesCodeLens": false,
 	"powershell.scriptAnalysis.enable": false,
 
 	/* Java */
@@ -537,6 +538,7 @@
 	"debug.inlineValues": "on",
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.showBreakpointsInOverviewRuler": true,
+	"debug.showInlineBreakpointCandidates": false,
 	"debug.showSubSessionsInToolBar": true,
 
 	/* Terminal */
@@ -760,6 +762,8 @@
 			"editorHoverWidget.background": "#0C060C",
 			"editorLineNumber.dimmedForeground": "#804080",
 			"editorWidget.background": "#282428",
+			"inputOption.hoverBackground": "#282428",
+			"inputOption.activeBackground": "#000",
 			"sideBar.background": "#282428",
 			"menu.background": "#282428",
 			"notificationCenterHeader.background": "#402040",

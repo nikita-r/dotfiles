@@ -852,9 +852,10 @@
 
 	"editor.useTabStops": false, // for Backspace
 	"editor.renderWhitespace": "trailing",
-	"[markdown]": { "editor.renderWhitespace": "selection" },
+	"[markdown][plaintext]": { "editor.renderWhitespace": "selection" },
 	"[tsv]": { "editor.renderWhitespace": "boundary" },
-	"[makefile]": { "editor.renderWhitespace": "all" },
+	"[makefile][csv]": { "editor.renderWhitespace": "all" },
+	"[log]": { "editor.renderWhitespace": "none" },
 	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
 	"editor.smartSelect.selectSubwords": false,
 

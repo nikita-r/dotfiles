@@ -742,6 +742,8 @@
 			"tab.activeModifiedBorder": "#F08048",
 			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
+			"editor.symbolHighlightBackground": "#C40a",
+			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */
 			"statusBarItem.remoteBackground": "#208060",

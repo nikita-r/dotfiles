@@ -851,13 +851,15 @@
 	"workbench.layoutControl.type": "toggles",
 
 	"editor.useTabStops": false, // for Backspace
+	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+	"editor.smartSelect.selectSubwords": false,
+
+	"editor.experimentalWhitespaceRendering": "off",
 	"editor.renderWhitespace": "trailing",
 	"[markdown][plaintext]": { "editor.renderWhitespace": "selection" },
 	"[tsv]": { "editor.renderWhitespace": "boundary" },
 	"[makefile][csv]": { "editor.renderWhitespace": "all" },
 	"[log]": { "editor.renderWhitespace": "none" },
-	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
-	"editor.smartSelect.selectSubwords": false,
 
 	/* file-saving preferences */
 	"editor.formatOnSaveMode": "modifications",
@@ -926,6 +928,7 @@
 
 	"github.copilot.chat.welcomeMessage": "never",
 	"editor.accessibilitySupport": "off",
+	"accessibility.verbosity.terminal": false,
 	//"editor.foldingHighlight": false,
 	"editor.copyWithSyntaxHighlighting": false,
 

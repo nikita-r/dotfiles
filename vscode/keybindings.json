@@ -404,11 +404,11 @@
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
-	{
-		"key": "ctrl+f",
-		"command": "-problems.action.focusFilter",
-		"when": "focusedView == 'workbench.panel.markers.view'"
-	},
+	//{
+	//	"key": "ctrl+f",
+	//	"command": "-problems.action.focusFilter",
+	//	"when": "focusedView == 'workbench.panel.markers.view'"
+	//},
 
 	/* toggle treeFind */
 	{

@@ -70,6 +70,7 @@
 	//"workbench.editor.enablePreview": false,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
+	"markdown.preview.markEditorSelection": false,
 
 	//"search.quickOpen.includeSymbols": true,
 	"workbench.settings.enableNaturalLanguageSearch": false,
@@ -264,6 +265,7 @@
 	"git-graph.repository.showUncommittedChanges": false,
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
 
+	//"gitlens.codeLens.enabled": false,
 	"gitlens.blame.ignoreWhitespace": true,
 	//"gitlens.advanced.blame.delayAfterEdit": 0,
 	"gitlens.defaultGravatarsStyle": "identicon",
@@ -309,6 +311,7 @@
 	"numberedBookmarks.keepBookmarksOnLineDelete": true,
 	"bookmarks.label.suggestion": "suggestWhenSelected",
 	//"bookmarks.navigateThroughAllFiles": false,
+	"numberedBookmarks.navigateThroughAllFiles": "replace",
 	"bookmarks.saveBookmarksInProject": true,
 	"numberedBookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
@@ -734,7 +737,6 @@
 			"textLink.activeForeground": "#fff7cc",
 			"chat.slashCommandBackground": "#90c0c0", // 180°
 			"chat.slashCommandForeground": "#102020",
-			"textBlockQuote.border": "#90c0c0",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -755,6 +757,8 @@
 			"activityBar.background": "#402040",
 			"activityBarBadge.background": "#806080",
 			"activityBarBadge.foreground": "#402040",
+			"settings.modifiedItemIndicator": "#969",
+			"textBlockQuote.border": "#969",
 			"list.hoverBackground": "#201020",
 			//"terminalStickyScroll.background": null,
 			"terminalStickyScrollHover.background": "#201020",

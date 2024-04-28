@@ -61,6 +61,8 @@
 	"search.searchEditor.defaultNumberOfContextLines": null,
 	//"search.searchOnType": false,
 	"search.searchOnTypeDebouncePeriod": 666,
+	//"search.useReplacePreview": false,
+	//"search.maxResults": null,
 	"search.showLineNumbers": true,
 
 	//"editor.stablePeek": true,
@@ -337,6 +339,9 @@
 	/* jock.svg */
 	"svg.preview.autoFit": false,
 	"svg.preview.showRuler": true,
+	"svg.preview.backgroundSaveTo": "NoSave",
+	"svg.preview.background": "transparent",
+	"svg.preview.toolbarSize": "large",
 
 	/* gruntfuggly.todo-tree */
 	"todo-tree.tree.scanAtStartup": true,

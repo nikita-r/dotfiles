@@ -66,7 +66,7 @@
 		"key": "ctrl+k t",
 		"command": "workbench.action.reopenClosedEditor"
 	},
-	/* ctrl+n/N */
+	/* Ctrl+k n/N: for New */
 	{
 		"key": "ctrl+k n",
 		"command": "workbench.action.files.newUntitledFile"
@@ -404,11 +404,6 @@
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
-	//{
-	//	"key": "ctrl+f",
-	//	"command": "-problems.action.focusFilter",
-	//	"when": "focusedView == 'workbench.panel.markers.view'"
-	//},
 
 	/* toggle treeFind */
 	{
@@ -2098,7 +2093,7 @@
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
-	/* Markdown Preview */
+	/* Ctrl+k v/V: show Preview */
 	{ "command": "noop", "key": "ctrl+k v" },
 	{ "command": "noop", "key": "ctrl+k shift+v" },
 	{
@@ -2110,6 +2105,11 @@
 		"key": "ctrl+k shift+v",
 		"command": "markdown.showPreview",
 		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+k v",
+		"command": "svg.showSvg",
+		"when": "editorLangId == 'svg'"
 	},
 
 	/* Try and block a useless Tab */

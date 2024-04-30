@@ -1,14 +1,11 @@
-alefragnani.Bookmarks
-alefragnani.numbered-bookmarks
 darkriszty.markdown-table-prettify
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
-#eamodio.gitlens
 mhutchie.git-graph
 #EditorConfig.EditorConfig
 hediet.hediet-power-tools
-hediet.vscode-drawio
-redhat.vscode-yaml
+#hediet.vscode-drawio
+#redhat.vscode-yaml
 #redhat.java
 ms-python.python
 #ms-dotnettools.csharp
@@ -20,6 +17,4 @@ ms-vscode.hexeditor
 ms-vscode.vscode-github-issue-notebooks
 ms-vscode-remote.remote-containers
 #quicktype.quicktype
-GrapeCity.gc-excelviewer
 tomoki1207.pdf
-vincaslt.highlight-matching-tag

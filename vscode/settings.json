@@ -6,7 +6,7 @@
 	"update.showReleaseNotes": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
-	"extensions.autoUpdate": false,
+	"extensions.autoUpdate": "onlySelectedExtensions",
 
 	/* surveys & telemetry */
 	"extensions.ignoreRecommendations": true,
@@ -262,6 +262,7 @@
 
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
+	"git-graph.enhancedAccessibility": true,
 	//"git-graph.repository.includeCommitsMentionedByReflogs": true,
 	//"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.showUncommittedChanges": false,
@@ -406,6 +407,7 @@
 	"textmarker.defaultHighlightColor": "DarkSlateGray",
 
 	/* ctf0.macros */
+	"macros.langIds": [],
 	"macros.list": {
 		"expandAllNotebookCells": [
 			"notebook.cell.expandAllCellInputs",
@@ -944,6 +946,7 @@
 	"github.copilot.chat.welcomeMessage": "never",
 	"editor.accessibilitySupport": "off",
 	"accessibility.verbosity.terminal": false,
+	"accessibility.accessibleView.closeOnKeyPress": false,
 	//"editor.foldingHighlight": false,
 	"editor.copyWithSyntaxHighlighting": false,
 

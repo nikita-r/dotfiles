@@ -682,6 +682,8 @@
 			"editorRuler.foreground": "#3c96", // 160°
 			"panel.border": "#689", // 200°
 			"menu.border": "#689",
+			"debugToolBar.background": "#023",
+			"debugIcon.restartForeground": "#fec",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
 

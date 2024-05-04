@@ -208,6 +208,7 @@
 
 	"editor.showFoldingControls": "always",
 	"notebook.showFoldingControls": "always",
+	"notebook.output.minimalErrorRendering": true,
 	//"editor.foldingImportsByDefault": true,
 	"editor.unfoldOnClickAfterEndOfLine": true,
 
@@ -229,13 +230,13 @@
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
 	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
 	"git.showInlineOpenFileAction": false,
+
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2, // or -1
-
-	"git.defaultBranchName": "trunk",
-	"git.enableStatusBarSync": false,
 	//"git.autorefresh": false,
-	//"git.openRepositoryInParentFolders": "never",
+	"git.openRepositoryInParentFolders": "never",
+
+	"git.enableStatusBarSync": false,
 	"git.fetchOnPull": true,
 	//"git.autofetch": "all",
 	"git.rebaseWhenSync": true,
@@ -243,6 +244,9 @@
 	//"git.followTagsWhenSync": true,
 	"git.showPushSuccessNotification": true,
 
+	"git.defaultBranchName": "trunk",
+	//"scm.workingSets.enabled": true,
+	//"scm.workingSets.default": "empty",
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
@@ -624,6 +628,7 @@
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
+	"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,

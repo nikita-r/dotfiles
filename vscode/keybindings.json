@@ -531,6 +531,11 @@
 	//},
 	{
 		"key": "alt+k",
+		"command": "editor.emmet.action.balanceOut",
+		"when": "editorTextFocus && editorLangId == 'svg'"
+	},
+	{
+		"key": "alt+k",
 		"command": "keybindings.editor.recordSearchKeys",
 		"when": "inKeybindings && inKeybindingsSearch"
 	},
@@ -1106,6 +1111,10 @@
 		"command": "testing.openOutputPeek",
 		"when": "focusedView == 'workbench.view.testing'"
 	},
+	{
+		"key": "ctrl+k 5",
+		"command": "workbench.action.quickTextSearch"
+	},
 
 	/* Ctrl+r */
 	{
@@ -1434,15 +1443,6 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
-		"key": "ctrl+alt+o",
-		"command": "outline.focus"
-	},
-	{
-		"key": "ctrl+alt+o",
-		"command": "outline.collapse",
-		"when": "focusedView == 'outline'"
-	},
-	{
 		"key": "ctrl+alt+n",
 		"command": "list.focusAnyDown"
 	},
@@ -1451,7 +1451,7 @@
 		"command": "list.focusAnyUp"
 	},
 	{
-		"key": "ctrl+alt+e",
+		"key": "ctrl+alt+a",
 		"command": "workbench.action.quickOpen"
 	},
 	{
@@ -1888,12 +1888,12 @@
 	{
 		"key": "ctrl+0",
 		"command": "textmarker.goToNextHighlight",
-		//"when": "editorTextFocus"
+		"when": "true"
 	},
 	{
 		"key": "ctrl+9",
 		"command": "textmarker.goToPreviousHighlight",
-		//"when": "editorTextFocus"
+		"when": "true"
 	},
 
 	/* ryu1kn.partial-diff */

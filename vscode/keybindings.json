@@ -52,6 +52,22 @@
 	{ "command": "noop", "key": "shift+alt+delete" },
 	{ "command": "noop", "key": "shift+alt+backspace" },
 
+	/* Files Explorer */
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
+	},
+
 	/* pour Web-based */
 	{
 		"key": "ctrl+k w",
@@ -87,13 +103,13 @@
 	},
 	{
 		"key": "ctrl+k shift+n",
-		"command": "workbench.action.moveEditorGroupToNewWindow",
-		"when": "groupEditorsCount || groupEditorsCount == 0"
+		"command": "workbench.action.terminal.moveIntoNewWindow",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+k shift+n",
-		"command": "workbench.action.terminal.moveIntoNewWindow",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+		"command": "workbench.action.moveEditorGroupToNewWindow",
+		"when": "groupEditorsCount || groupEditorsCount == 0"
 	},
 	{
 		"key": "ctrl+k ctrl+n",
@@ -1374,22 +1390,6 @@
 		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
 		"when": "editorTextFocus"
-	},
-
-	/* Files Explorer */
-	{
-		"key": "ctrl+shift+e",
-		"command": "workbench.files.action.focusFilesExplorer"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus"
-	},
-	{
-		"key": "ctrl+shift+n",
-		"command": "explorer.newFolder",
-		"when": "filesExplorerFocus"
 	},
 
 	/* Ctrl+E; Mac default for Cmd+E is "actions.findWithSelection" */

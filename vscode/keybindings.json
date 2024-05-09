@@ -993,14 +993,34 @@
 		"command": "workbench.action.nextEditorInGroup"
 	},
 
-	/* Windows defaults */
+	/* Ctrl+Shift+Page */
 	{
 		"key": "ctrl+shift+pageup",
-		"command": "workbench.action.moveEditorLeftInGroup"
+		"command": "workbench.action.previousSideBarView"
 	},
 	{
 		"key": "ctrl+shift+pagedown",
-		"command": "workbench.action.moveEditorRightInGroup"
+		"command": "workbench.action.nextSideBarView"
+	},
+	{
+		"key": "ctrl+shift+pageup",
+		"command": "workbench.action.moveEditorLeftInGroup",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+pagedown",
+		"command": "workbench.action.moveEditorRightInGroup",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+pageup",
+		"command": "workbench.action.previousPanelView",
+		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+shift+pagedown",
+		"command": "workbench.action.nextPanelView",
+		"when": "panelFocus"
 	},
 
 	/* Split Editor */
@@ -1084,16 +1104,16 @@
 		"command": "workbench.action.navigateForwardInNavigationLocations"
 	},
 	/* ?panelFocus */
-	{
-		"key": "ctrl+shift+]",
-		"command": "workbench.action.nextPanelView",
-		"when": "panelFocus"
-	},
-	{
-		"key": "ctrl+shift+[",
-		"command": "workbench.action.previousPanelView",
-		"when": "panelFocus"
-	},
+	//{
+	//	"key": "ctrl+shift+]",
+	//	"command": "workbench.action.nextPanelView",
+	//	"when": "panelFocus"
+	//},
+	//{
+	//	"key": "ctrl+shift+[",
+	//	"command": "workbench.action.previousPanelView",
+	//	"when": "panelFocus"
+	//},
 
 	/* Ctrl+k *s */
 	{ "command": "noop", "key": "ctrl+k s" },

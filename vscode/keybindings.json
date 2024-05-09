@@ -86,6 +86,16 @@
 		"when": "filesExplorerFocus"
 	},
 	{
+		"key": "ctrl+k shift+n",
+		"command": "workbench.action.moveEditorGroupToNewWindow",
+		"when": "groupEditorsCount || groupEditorsCount == 0"
+	},
+	{
+		"key": "ctrl+k shift+n",
+		"command": "workbench.action.terminal.moveIntoNewWindow",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+	{
 		"key": "ctrl+k ctrl+n",
 		"command": "workbench.action.newWindow"
 	},
@@ -965,6 +975,16 @@
 	{
 		"key": "ctrl+pagedown",
 		"command": "workbench.action.nextEditorInGroup"
+	},
+
+	/* Windows defaults */
+	{
+		"key": "ctrl+shift+pageup",
+		"command": "workbench.action.moveEditorLeftInGroup"
+	},
+	{
+		"key": "ctrl+shift+pagedown",
+		"command": "workbench.action.moveEditorRightInGroup"
 	},
 
 	/* Split Editor */

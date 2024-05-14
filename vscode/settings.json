@@ -835,7 +835,7 @@
 			"terminal.selectionBackground": "#369",
 			"terminal.selectionForeground": "#e6e6e6",
 			"terminal.inactiveSelectionBackground": "#147",
-			"button.secondaryBackground": "#920",
+			"button.secondaryBackground": "#444",
 
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",

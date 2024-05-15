@@ -899,12 +899,12 @@
 	{
 		"key": "ctrl+]",
 		"command": "workbench.action.compareEditor.nextChange",
-		"when": "activeEditor =~ /DiffEditor/"
+		"when": "textCompareEditorActive"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "workbench.action.compareEditor.previousChange",
-		"when": "activeEditor =~ /DiffEditor/"
+		"when": "textCompareEditorActive"
 	},
 	{
 		"key": "ctrl+]",
@@ -951,12 +951,12 @@
 	{
 		"key": "shift+alt+]",
 		"command": "macros.diffReview.next", /* ctf0.macros */
-		"when": "activeEditor =~ /DiffEditor/ && !editorFocus"
+		"when": "activeEditor =~ /DiffEditor$/ && !isInDiffEditor"
 	},
 	{
 		"key": "shift+alt+[",
 		"command": "macros.diffReview.prev", /* ctf0.macros */
-		"when": "activeEditor =~ /DiffEditor/ && !editorFocus"
+		"when": "activeEditor =~ /DiffEditor$/ && !isInDiffEditor"
 	},
 
 	/* vim-like panes navigation */
@@ -1065,7 +1065,7 @@
 	{
 		"key": "shift+alt+0",
 		"command": "diffEditor.switchSide",
-		"when": "activeEditor =~ /DiffEditor/ && editorFocus"
+		"when": "activeEditor =~ /DiffEditor$/ && editorFocus"
 	},
 	{
 		"key": "shift+alt+0",
@@ -1768,7 +1768,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "activeEditor =~ /DiffEditor/ && config.diffEditor.renderSideBySide"
+		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide"
 	},
 	{
 		"key": "shift+alt+enter",

@@ -254,7 +254,7 @@
 	/* diff */
 	"scm.diffDecorationsIgnoreTrimWhitespace": "false",
 	"diffEditor.renderIndicators": false,
-	"diffEditor.renderSideBySide": true,
+	//"diffEditor.renderSideBySide": false,
 	"diffEditor.diffAlgorithm": "advanced",
 	"mergeEditor.diffAlgorithm": "advanced",
 
@@ -833,7 +833,7 @@
 			//"terminalStickyScroll.background": null,
 			"terminalStickyScrollHover.background": "#201020",
 			"terminal.selectionBackground": "#369",
-			"terminal.selectionForeground": "#e6e6e6",
+			"terminal.selectionForeground": "#fff",
 			"terminal.inactiveSelectionBackground": "#147",
 			"button.secondaryBackground": "#444",
 

@@ -6,7 +6,7 @@
 	"update.showReleaseNotes": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
-	"extensions.autoUpdate": "onlySelectedExtensions",
+	"extensions.autoUpdate": false,
 
 	/* surveys & telemetry */
 	"extensions.ignoreRecommendations": true,
@@ -673,8 +673,8 @@
 
 			/* err */
 			"errorForeground": "#C66",
-			"editorUnnecessaryCode.opacity": "#123f",
-			"editorUnnecessaryCode.border": "#C66",
+			"editorUnnecessaryCode.opacity": "#123c",
+			//"editorUnnecessaryCode.border": "#C66",
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
 
@@ -685,7 +685,7 @@
 			/* 123 */
 			"editorLineNumber.foreground": "#808080",
 			"editorActiveLineNumber.foreground": "#c0c0c0",
-			"editorGutter.foldingControlForeground": "#c0c0c0",
+			//"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */
 			"sideBar.border": "#666",
@@ -771,6 +771,8 @@
 			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */
+			"button.background": "#246650",
+			"button.hoverBackground": "#208060",
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.warningBackground": "#208060",
 			"editor.foldBackground": "#20806040",

@@ -741,6 +741,8 @@
 		"[Default Dark+]": {
 			"icon.foreground": "#fec", // 40°
 			"list.warningForeground": "#fec",
+			"list.inactiveSelectionIconForeground": "#cdf",
+			"list.focusAndSelectionOutline": "#cdf",
 			"notificationCenterHeader.foreground": "#fec",
 			"notifications.border": "#ccc",
 			"badge.background": "#515",

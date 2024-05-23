@@ -658,19 +658,25 @@
 		"[* Dark*]": {
 			"widget.border": "#000",
 			"widget.shadow": "#000",
-			"editorError.foreground": "#fff",
-			"terminalCommandDecoration.errorBackground": "#fff",
 			"titleBar.inactiveForeground": "#ccc",
 			"banner.foreground": "#ccc",
 			"banner.iconForeground": "#ccc",
 			"editorInfo.foreground": "#39f", // 210°
 			"editorOverviewRuler.infoForeground": "#39f9",
+			"editorGhostText.foreground": "#9cf9", // suggestive
 			"bookmarks.overviewRuler": "#6cc9", // 180°
 			"editorWarning.foreground": "#fd3", // 50°
 			"editorOverviewRuler.warningForeground": "#fd39",
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
+
+			/* err */
+			"errorForeground": "#C66",
+			"editorUnnecessaryCode.opacity": "#123f",
+			"editorUnnecessaryCode.border": "#C66",
+			"editorError.foreground": "#fff",
+			"terminalCommandDecoration.errorBackground": "#fff",
 
 			/* (:) */
 			"editorBracketMatch.border": "#689",
@@ -679,6 +685,7 @@
 			/* 123 */
 			"editorLineNumber.foreground": "#808080",
 			"editorActiveLineNumber.foreground": "#c0c0c0",
+			"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */
 			"sideBar.border": "#666",
@@ -830,8 +837,8 @@
 			"diffEditor.moveActive.border": "#f0c0d8",
 
 			/* Terminal */
-			//"terminalStickyScroll.background": null,
-			"terminalStickyScrollHover.background": "#201020",
+			"terminalStickyScroll.background": "#023",
+			"terminalStickyScrollHover.background": "#023",
 			"terminal.selectionBackground": "#369",
 			"terminal.selectionForeground": "#fff",
 			"terminal.inactiveSelectionBackground": "#147",

@@ -644,6 +644,14 @@
 	/* . . . */
 
 	"workbench.colorTheme": "Default Dark+",
+	"editor.tokenColorCustomizations": { "[Default Dark+]": {
+		"textMateRules": [
+			{ "scope": "constant.language", "settings": { "foreground": "#69c" } },
+			{ "scope": "support.type.property-name", "settings": { "foreground": "#9cf" } },
+		],
+		"keywords": "#c6c",
+		"variables": "#9cf",
+	} },
 
 	"workbench.colorCustomizations": {
 

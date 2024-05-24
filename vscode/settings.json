@@ -689,6 +689,12 @@
 			/* (:) */
 			"editorBracketMatch.border": "#689",
 			"editorBracketMatch.background": "#0000",
+			"editorBracketHighlight.foreground1": "#ffd700",
+			"editorBracketHighlight.foreground2": "#c6c",
+			"editorBracketHighlight.foreground3": "#37f",
+			"editorBracketHighlight.foreground4": "#1230",
+			"editorBracketHighlight.foreground5": "#1230",
+			"editorBracketHighlight.foreground6": "#1230",
 
 			/* 123 */
 			"editorLineNumber.foreground": "#808080",

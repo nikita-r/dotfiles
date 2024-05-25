@@ -89,7 +89,7 @@
 	"github.copilot.editor.enableCodeActions": false,
 	"markdown.validate.enabled": true,
 	"problems.decorations.enabled": false,
-	"problems.showCurrentInStatus": true,
+	"problems.showCurrentInStatus": false,
 
 	/* auto-suggestion */
 	"editor.inlineSuggest.enabled": false,
@@ -628,7 +628,7 @@
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
-	"terminal.integrated.middleClickBehavior": "paste",
+	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
@@ -641,14 +641,17 @@
 	"terminal.integrated.tabs.showActions": "never",
 	"terminal.integrated.tabs.showActiveTerminal": "never",
 
-	/* . . . */
+	/* Themes */
 
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
 			{ "scope": "constant.language", "settings": { "foreground": "#69c" } },
+			{ "scope": "variable.language", "settings": { "foreground": "#dbd" } },
+			{ "scope": "keyword.other", "settings": { "foreground": "#69c" } },
 			{ "scope": "support.type.property-name", "settings": { "foreground": "#9cf" } },
 		],
+		"comments": "#593",
 		"keywords": "#c6c",
 		"variables": "#9cf",
 	} },
@@ -697,9 +700,9 @@
 			"editorBracketHighlight.foreground6": "#1230",
 
 			/* 123 */
-			"editorLineNumber.foreground": "#808080",
-			"editorActiveLineNumber.foreground": "#c0c0c0",
-			//"editorGutter.foldingControlForeground": "#c0c0c0",
+			"editorLineNumber.foreground": "#666",
+			"editorActiveLineNumber.foreground": "#999",
+			//"editorGutter.foldingControlForeground": "#999",
 
 			/* |=| */
 			"sideBar.border": "#666",
@@ -807,7 +810,7 @@
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#0C060C",
 			"editorHoverWidget.background": "#0C060C",
-			"editorLineNumber.dimmedForeground": "#804080",
+			"editorLineNumber.dimmedForeground": "#636",
 			"editorWidget.background": "#282428",
 			"inputOption.hoverBackground": "#282428",
 			"inputOption.activeBackground": "#000",

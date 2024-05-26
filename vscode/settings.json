@@ -702,7 +702,7 @@
 			/* 123 */
 			"editorLineNumber.foreground": "#666",
 			"editorActiveLineNumber.foreground": "#999",
-			//"editorGutter.foldingControlForeground": "#999",
+			"editorGutter.foldingControlForeground": "#999",
 
 			/* |=| */
 			"sideBar.border": "#666",
@@ -893,6 +893,8 @@
 	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
 	"workbench.productIconTheme": "feather-vscode",
 
+	/* UI layout */
+
 	//"files.simpleDialog.enable": true,
 	"window.dialogStyle": "custom",
 	//"window.openFilesInNewWindow": "default",
@@ -910,6 +912,8 @@
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",
+
+	/* . . . */
 
 	"editor.useTabStops": false, // for Backspace
 	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,

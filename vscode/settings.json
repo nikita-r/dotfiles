@@ -683,7 +683,7 @@
 			"editorGutter.modifiedBackground": "#206080", // 200°
 
 			/* err */
-			"errorForeground": "#C66",
+			"errorForeground": "#fff",
 			"editorUnnecessaryCode.opacity": "#123c",
 			//"editorUnnecessaryCode.border": "#C66",
 			"editorError.foreground": "#fff",
@@ -700,9 +700,9 @@
 			"editorBracketHighlight.foreground6": "#1230",
 
 			/* 123 */
-			"editorLineNumber.foreground": "#666",
-			"editorActiveLineNumber.foreground": "#999",
-			"editorGutter.foldingControlForeground": "#999",
+			"editorLineNumber.foreground": "#808080",
+			"editorActiveLineNumber.foreground": "#c0c0c0",
+			"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */
 			"sideBar.border": "#666",
@@ -713,7 +713,7 @@
 			"panel.border": "#689", // 200°
 			"menu.border": "#689",
 			"debugToolBar.background": "#023",
-			"debugIcon.restartForeground": "#fec",
+			"debugIcon.restartForeground": "#fec", // 40°
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
 
@@ -752,20 +752,22 @@
 			"titleBar.border": "#6669",
 			"editorGroupHeader.tabsBorder": "#666",
 			"editorGroupHeader.border": "#666",
-			"toolbar.hoverBackground": "#3699",
+			"toolbar.hoverBackground": "#3699", // 210°
 		},
 
 		"[Default Dark+]": {
 			"icon.foreground": "#fec", // 40°
 			"list.warningForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",
-			"list.focusAndSelectionOutline": "#cdf",
+			"list.focusAndSelectionOutline": "#cdf", // 220°
 			"notificationCenterHeader.foreground": "#fec",
 			"notifications.border": "#ccc",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
 			"editorCursor.foreground": "#f93", // 30°
 			"editorCursor.background": "#fff",
+			"editorMultiCursor.primary.foreground": "#f39", // 330°
+			"editorMultiCursor.secondary.foreground": "#93f", // 270°
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
@@ -810,7 +812,7 @@
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#0C060C",
 			"editorHoverWidget.background": "#0C060C",
-			"editorLineNumber.dimmedForeground": "#636",
+			"editorLineNumber.dimmedForeground": "#804080",
 			"editorWidget.background": "#282428",
 			"inputOption.hoverBackground": "#282428",
 			"inputOption.activeBackground": "#000",
@@ -872,7 +874,7 @@
 			"peekViewTitle.background": "#000020",
 			"peekViewResult.background": "#000020",
 			"peekViewEditor.background": "#001020",
-			"peekViewEditorGutter.background": "#1a1a1a",
+			"peekViewEditorGutter.background": "#06060C",
 			"peekViewEditorStickyScroll.background": "#203038",
 			"peekViewEditorStickyScrollHover.background": "#304854",
 			"peekViewTitleDescription.foreground": "#ccc",

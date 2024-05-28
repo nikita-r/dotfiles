@@ -648,7 +648,9 @@
 		"textMateRules": [
 			{ "scope": "constant.language", "settings": { "foreground": "#69c" } },
 			{ "scope": "variable.language", "settings": { "foreground": "#dbd" } },
+			{ "scope": "punctuation.section.embedded", "settings": { "foreground": "#69c" } },
 			{ "scope": "keyword.other", "settings": { "foreground": "#69c" } },
+			{ "scope": "support.variable", "settings": { "foreground": "#9cf" } },
 			{ "scope": "support.type.property-name", "settings": { "foreground": "#9cf" } },
 		],
 		"comments": "#593",

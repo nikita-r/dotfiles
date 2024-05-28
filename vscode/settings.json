@@ -786,6 +786,9 @@
 			"focusBorder": "#F08048",
 			"progressBar.background": "#F08048",
 			"tab.activeModifiedBorder": "#F08048",
+			"tab.inactiveModifiedBorder": "#c63",
+			"activityBarBadge.background": "#c63",
+			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
 			"editor.symbolHighlightBackground": "#C40a",
@@ -801,8 +804,6 @@
 
 			/* Hue: 300/360 */
 			"activityBar.background": "#402040",
-			"activityBarBadge.background": "#806080",
-			"activityBarBadge.foreground": "#402040",
 			"settings.modifiedItemIndicator": "#969",
 			"textBlockQuote.border": "#969",
 			"list.hoverBackground": "#201020",

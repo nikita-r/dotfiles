@@ -648,13 +648,15 @@
 		"textMateRules": [
 			{ "scope": "constant.language", "settings": { "foreground": "#69c" } },
 			{ "scope": "variable.language", "settings": { "foreground": "#dbd" } },
-			{ "scope": "punctuation.section.embedded", "settings": { "foreground": "#69c" } },
+			{ "scope": "punctuation.section.embedded", "settings": { "foreground": "#37f" } },
 			{ "scope": "keyword.other", "settings": { "foreground": "#69c" } },
 			{ "scope": "support.variable", "settings": { "foreground": "#9cf" } },
+			{ "scope": "storage.modifier", "settings": { "foreground": "#cdf" } },
 			{ "scope": "support.type.property-name", "settings": { "foreground": "#9cf" } },
 		],
 		"comments": "#593",
 		"keywords": "#c6c",
+		"numbers": "#6c9",
 		"variables": "#9cf",
 	} },
 

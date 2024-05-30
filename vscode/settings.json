@@ -649,6 +649,8 @@
 			{ "scope": "constant.language", "settings": { "foreground": "#69c" } },
 			{ "scope": "variable.language", "settings": { "foreground": "#dbd" } },
 			{ "scope": "punctuation.section.embedded", "settings": { "foreground": "#37f" } },
+			{ "scope": "keyword.operator.logical.python", "settings": { "foreground": "#69c" } },
+			{ "scope": "keyword.other.unit", "settings": { "foreground": "#c69" } },
 			{ "scope": "keyword.other", "settings": { "foreground": "#69c" } },
 			{ "scope": "support.variable", "settings": { "foreground": "#9cf" } },
 			{ "scope": "storage.modifier", "settings": { "foreground": "#cdf" } },

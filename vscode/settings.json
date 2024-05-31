@@ -648,6 +648,7 @@
 		"textMateRules": [
 			{ "scope": "punctuation.section.embedded", "settings": { "foreground": "#37f" } },
 			{ "scope": "constant.character.escape", "settings": { "foreground": "#fdc" } },
+			{ "scope": "support.other", "settings": { "foreground": "#6c9" } },
 			{ "scope": "string.verbatim", "settings": { "foreground": "#C66" } },
 			{ "scope": "variable.language", "settings": { "foreground": "#dbd" } },
 			{ "scope": "variable.other.constant", "settings": { "foreground": "#6c9" } },
@@ -709,7 +710,8 @@
 			"terminalCommandDecoration.errorBackground": "#fff",
 
 			/* (:) */
-			"editorBracketMatch.border": "#689",
+			"editorBracketHighlight.unexpectedBracket.foreground": "#fff",
+			"editorBracketMatch.border": "#408040",
 			"editorBracketMatch.background": "#0000",
 			"editorBracketHighlight.foreground1": "#ffd700",
 			"editorBracketHighlight.foreground2": "#c6c",

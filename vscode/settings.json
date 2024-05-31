@@ -665,11 +665,13 @@
 			{ "scope": "entity.other.attribute-name", "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.name.namespace", "settings": { "foreground": "#dcf" } },
 			{ "scope": "entity.name.type", "settings": { "foreground": "#dcf" } },
+			{ "scope": "entity.other.inherited-class", "settings": { "foreground": "#b9f" } },
 		],
 		"comments": "#593",
 		"functions": "#DFDF9F",
 		"keywords": "#c6c",
 		"numbers": "#6c9",
+		"strings": "#D99F8C",
 		"variables": "#9cf",
 	} },
 

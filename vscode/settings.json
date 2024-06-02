@@ -111,12 +111,12 @@
 	"emmet.showSuggestionsAsSnippets": false,
 	"editor.snippetSuggestions": "none", // or "top"
 
-	/* how to show */
+	/* appearance */
 	"editor.suggestSelection": "first",
 	//"editor.suggest.preview": true,
 	"editor.suggest.showInlineDetails": false,
 
-	/* which to show */
+	/* picky */
 	"editor.suggest.filterGraceful": false,
 	//"editor.suggest.localityBonus": true,
 	"editor.suggest.showDeprecated": false,
@@ -663,6 +663,7 @@
 			{ "scope": [ "keyword.operator.new", "keyword.operator.expression" ], "settings": { "foreground": "#dfdf20" } },
 			//{ "scope": [ "constant.character", "constant.other.option" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.assignment", "constant.language", "keyword.operator.logical", "keyword.operator.logical.python" ], "settings": { "foreground": "#0af" } },
+			{ "scope": "keyword.operator.assignment.powershell", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "keyword", "entity.name.tag" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.other.attribute-name", "settings": { "foreground": "#9cf" } },
 			{ "scope": "punctuation.definition.tag", "settings": { "foreground": "#e69ac0" } },
@@ -689,7 +690,7 @@
 
 	"workbench.colorCustomizations": {
 
-		/* diff+markers */
+		/* differential */
 		"diffEditor.insertedLineBackground": "#0f02",
 		"diffEditor.insertedTextBackground": "#0f02",
 		"diffEditor.removedLineBackground": "#f002",
@@ -702,6 +703,7 @@
 			"editorGutter.deletedBackground": "#fff", //"#802020",
 			"editorGutter.modifiedBackground": "#206080", // 200°
 
+			/* miscellaneous */
 			"widget.border": "#000",
 			"widget.shadow": "#000",
 			"editorLink.activeForeground": "#fff",

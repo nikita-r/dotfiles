@@ -656,7 +656,7 @@
 			{ "scope": "string.verbatim", "settings": { "foreground": "#C66" } },
 			{ "scope": [ "variable.language", "variable.parameter" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.other.caps", "variable.other.constant", "variable.other.enummember" ], "settings": { "foreground": "#6c9" } },
-			{ "scope": "constant.other.placeholder", "settings": { "foreground": "#6cc" } },
+			{ "scope": [ "constant.other.placeholder", "entity.name.label", "punctuation.separator.label" ], "settings": { "foreground": "#6cc" } },
 			{ "scope": "source.powershell keyword.other, keyword.operator.comparison", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "punctuation.separator.arguments, keyword.operator.other", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "entity.name.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.directive.using", "keyword.other.operator", "keyword.other.using" ], "settings": { "foreground": "#c6c" } },
@@ -698,8 +698,13 @@
 		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
 		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
 		"[* Dark*]": {
+			"editorGutter.addedBackground": "#408020", // 100°
+			"editorGutter.deletedBackground": "#fff", //"#802020",
+			"editorGutter.modifiedBackground": "#206080", // 200°
+
 			"widget.border": "#000",
 			"widget.shadow": "#000",
+			"editorLink.activeForeground": "#fff",
 			"titleBar.inactiveForeground": "#ccc",
 			"banner.foreground": "#ccc",
 			"banner.iconForeground": "#ccc",
@@ -709,9 +714,6 @@
 			"bookmarks.overviewRuler": "#6cc9", // 180°
 			"editorWarning.foreground": "#fd3", // 50°
 			"editorOverviewRuler.warningForeground": "#fd39",
-			"editorGutter.addedBackground": "#408020", // 100°
-			"editorGutter.deletedBackground": "#fff", //"#802020",
-			"editorGutter.modifiedBackground": "#206080", // 200°
 
 			/* err */
 			"errorForeground": "#fff",
@@ -744,6 +746,9 @@
 			"editorRuler.foreground": "#3c96", // 160°
 			"panel.border": "#689", // 200°
 			"menu.border": "#689",
+			"editor.hoverHighlightBackground": "#6ac3",
+			"inlineChat.regionHighlight": "#6ac3",
+			"terminal.hoverHighlightBackground": "#6ac3",
 			"debugToolBar.background": "#023",
 			"debugIcon.restartForeground": "#fec", // 40°
 			"editorStickyScroll.background": "#203038",
@@ -798,6 +803,8 @@
 			"badge.foreground": "#ccc",
 			"editorCursor.foreground": "#f93", // 30°
 			"editorCursor.background": "#fff",
+			"editor.symbolHighlightBorder": "#f93",
+			"editor.symbolHighlightBackground": "#3210",
 			"editorMultiCursor.primary.foreground": "#f39", // 330°
 			"editorMultiCursor.secondary.foreground": "#93f", // 270°
 			"tab.hoverBorder": "#fff",
@@ -823,7 +830,6 @@
 			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
-			"editor.symbolHighlightBackground": "#C40a",
 			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */

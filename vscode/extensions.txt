@@ -5,12 +5,10 @@ mhutchie.git-graph
 #EditorConfig.EditorConfig
 hediet.hediet-power-tools
 #hediet.vscode-drawio
-#redhat.vscode-yaml
 #redhat.java
 ms-python.python
 #ms-dotnettools.csharp
 ms-vscode.powershell
-samuelcolvin.jinjahtml
 #gruntfuggly.todo-tree
 ms-mssql.sql-database-projects-vscode
 ms-vscode.hexeditor

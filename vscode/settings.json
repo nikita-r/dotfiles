@@ -664,7 +664,7 @@
 			{ "scope": "source.powershell keyword.other, punctuation.definition.subshell, keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "source.powershell keyword.operator.other, source.powershell punctuation.terminator, source.yaml punctuation.definition.block, source.yaml keyword.control.flow.block-scalar, source.yaml punctuation.definition.anchor", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell", "settings": { "foreground": "#DFDF9F" } },
-			{ "scope": [ "support.variable", "support.constant" ], "settings": { "foreground": "#FF8080" } },
+			{ "scope": [ "support.variable", "support.constant.variable", "keyword.operator.range" ], "settings": { "foreground": "#FF8080" } },
 			{ "scope": [ "keyword.operator.arrow", "keyword.type", "keyword.operator.expansion" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "entity.name.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.directive.using", "keyword.other.operator", "keyword.other.using" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.operator.new", "keyword.operator.expression" ], "settings": { "foreground": "#dfdf20" } },

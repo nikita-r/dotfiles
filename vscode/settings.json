@@ -575,7 +575,7 @@
 		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
 	],
-	//"terminal.integrated.allowMnemonics": true,
+	"terminal.integrated.allowMnemonics": true,
 
 	"terminal.integrated.profiles.linux": {
 		"pwsh": {
@@ -658,6 +658,7 @@
 			{ "scope": "string.verbatim", "settings": { "foreground": "#C66" } },
 			{ "scope": [ "variable.language", /*"variable.parameter", */"variable.parameter.function-call" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.operator.unary", "keyword.operator.logical", "keyword.operator.logical.python" ], "settings": { "foreground": "#0af" } },
+			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.operator.optional" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "variable.other.constant", "variable.other.enummember", "entity.name.operator" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "constant.numeric", "constant.other.caps" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "keyword.other.unit", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
@@ -674,7 +675,7 @@
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.operator.new", "keyword.operator.expression" ], "settings": { "foreground": "#dfdf20" } },
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
-			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.question-mark, keyword.operator.null-coalescing", "settings": { "foreground": "#0af" } },
+			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.key-value", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell, keyword.other.package", "settings": { "foreground": "#fff" } },
 			{ "scope": "keyword.operator.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "entity.name.tag" ], "settings": { "foreground": "#9cf" } },
@@ -726,6 +727,12 @@
 			"banner.iconForeground": "#ccc",
 			"editorInfo.foreground": "#39f", // 210°
 			"editorOverviewRuler.infoForeground": "#39f9",
+			"dropdown.background": "#384048",
+			"editorWidget.background": "#202428",
+			"input.background": "#384048",
+			"input.placeholderForeground": "#abc0", //"#8090A0",
+			"inputOption.hoverBackground": "#202428",
+			"inputOption.activeBackground": "#000",
 			"editorGhostText.foreground": "#9cf9", // suggestive
 			"bookmarks.overviewRuler": "#6cc9", // 180°
 			"editorWarning.foreground": "#fd3", // 50°
@@ -755,6 +762,8 @@
 			"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */
+			"menu.background": "#202428",
+			"sideBar.background": "#202428",
 			"sideBar.border": "#666",
 			"sideBarSectionHeader.border": "#666",
 			"tab.border": "#666",
@@ -852,6 +861,7 @@
 			"button.background": "#246650",
 			"button.hoverBackground": "#208060",
 			"statusBarItem.remoteBackground": "#208060",
+			"statusBarItem.offlineBackground": "#800000", // Maroon
 			"statusBarItem.warningBackground": "#208060",
 			"editor.foldBackground": "#20806040",
 			"list.dropBackground": "#20806040",
@@ -868,14 +878,10 @@
 			"editorGutter.background": "#0C060C",
 			"editorHoverWidget.background": "#0C060C",
 			"editorLineNumber.dimmedForeground": "#804080",
-			"editorWidget.background": "#282428",
-			"inputOption.hoverBackground": "#282428",
-			"inputOption.activeBackground": "#000",
-			"sideBar.background": "#282428",
-			"menu.background": "#282428",
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",
 			"statusBar.noFolderBackground": "#402040",
+			"statusBarItem.errorBackground": "#804080",
 			"editorGroup.dropBackground": "#80408080",
 			"editorGroupHeader.tabsBorder": "#806080",
 			"editorGroupHeader.tabsBackground": "#0C060C",

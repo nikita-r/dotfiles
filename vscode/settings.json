@@ -34,6 +34,7 @@
 	"terminal.integrated.stickyScroll.maxLineCount": 3,
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
+	//"editor.links": false,
 	"editor.wrappingIndent": "none",
 	"editor.renderFinalNewline": "dimmed",
 
@@ -647,6 +648,9 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
+			{ "scope": "log.constant", "settings": { "foreground": "#d4d4d4" } },
+			{ "scope": "markup.deleted", "settings": { "foreground": "#D99D8C" } },
+			//{ "scope": "log.error", "settings": { "fontStyle": "" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "keyword.control.anchor.regexp" ], "settings": { "foreground": "#37f" } },
 			{ "scope": "constant.character.escape", "settings": { "foreground": "#fdc" } },
 			{ "scope": [ "support.other", "constant.other.character-class.regexp", "constant.other.set.regexp", "punctuation.definition.character-class.regexp" ], "settings": { "foreground": "#6c9" } },
@@ -729,6 +733,7 @@
 			"editorOverviewRuler.infoForeground": "#39f9",
 			"dropdown.background": "#384048",
 			"editorWidget.background": "#202428",
+			//"editorHoverWidget.background": "#141A20",
 			"input.background": "#384048",
 			"input.placeholderForeground": "#abc0", //"#8090A0",
 			"inputOption.hoverBackground": "#202428",
@@ -835,6 +840,9 @@
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
+
+			/* text */
+			"editor.foreground": "#d4d4d4",
 			"editor.background": "#1a1a1a",
 			//"editorStickyScroll.background": "#2d2d2d",
 			//"editorStickyScrollHover.background": "#3a3a3a",
@@ -876,7 +884,6 @@
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorGutter.background": "#0C060C",
-			"editorHoverWidget.background": "#0C060C",
 			"editorLineNumber.dimmedForeground": "#804080",
 			"notificationCenterHeader.background": "#402040",
 			"statusBar.background": "#402040",

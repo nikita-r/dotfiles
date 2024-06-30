@@ -14,5 +14,7 @@ ms-mssql.sql-database-projects-vscode
 ms-vscode.hexeditor
 ms-vscode.vscode-github-issue-notebooks
 ms-vscode-remote.remote-containers
+zeithaste.cursorCharCode
 #quicktype.quicktype
 tomoki1207.pdf
+#vincaslt.highlight-matching-tag

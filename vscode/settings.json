@@ -738,6 +738,7 @@
 			"editorInfo.foreground": "#39f", // 210°
 			"editorOverviewRuler.infoForeground": "#39f9",
 			"dropdown.background": "#384048",
+			"checkbox.border": "#707880",
 			"editorWidget.background": "#202428",
 			//"editorHoverWidget.background": "#141A20",
 			"input.background": "#384048",
@@ -1013,8 +1014,7 @@
 	"[csharp][razor]": {
 		"editor.formatOnSave": true,
 		"editor.formatOnSaveMode": "file",
-		"editor.codeActionsOnSave": {
-		}
+		"editor.codeActionsOnSave": {}
 	},
 	//"files.trimTrailingWhitespace": true,
 	//"files.trimFinalNewlines": true,

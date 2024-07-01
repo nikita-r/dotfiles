@@ -651,7 +651,7 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
-			{ "scope": "log.constant", "settings": { "foreground": "#d4d4d4" } },
+			{ "scope": [ "log.constant", "meta.preprocessor" ], "settings": { "foreground": "#d4d4d4" } },
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#D99D8C" } },
 			//{ "scope": "log.error", "settings": { "fontStyle": "" } },

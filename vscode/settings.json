@@ -1007,7 +1007,7 @@
 	"[markdown][plaintext]": { "editor.renderWhitespace": "selection" },
 	"[tsv]": { "editor.renderWhitespace": "boundary" },
 	"[makefile][csv]": { "editor.renderWhitespace": "all" },
-	"[log]": { "editor.renderWhitespace": "none" },
+	"[log][Log]": { "editor.renderWhitespace": "none" },
 
 	"files.associations": {
 		"*.qss": "css",

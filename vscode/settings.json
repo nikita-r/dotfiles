@@ -926,21 +926,22 @@
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
 			"editor.inactiveSelectionBackground": "#135",
-			"editorWhitespace.foreground": "#69c",
+			"editor.hoverHighlightBackground": "#147",
+			"minimap.selectionHighlight": "#69c",
 			"list.activeSelectionBackground": "#147",
 			"list.inactiveSelectionBackground": "#345",
-			"editor.hoverHighlightBackground": "#147",
 			"menu.selectionBackground": "#147",
-			"minimap.selectionHighlight": "#69c",
 			"toolbar.hoverBackground": "#69c9",
+			"editorWhitespace.foreground": "#69c",
 
 			/* pinpoint matches within text */
-			"editor.selectionHighlightBackground": "#aaa3",
+			"editor.selectionHighlightBackground": "#abc0",
+			"editor.selectionHighlightBorder": "#802050",
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090", // 160°
 			"editor.findMatchHighlightBackground": "#a0a6",
 			"editor.findRangeHighlightBackground": "#66e3", // 240°
-			"editor.rangeHighlightBackground": "#80008040",
+			"editor.rangeHighlightBackground": "#ABC0",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 			"editorUnicodeHighlight.background": "#0000",
 			"editorUnicodeHighlight.border": "#737",

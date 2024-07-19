@@ -659,6 +659,8 @@
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#D99D8C" } },
 			//{ "scope": "log.error", "settings": { "fontStyle": "" } },
+			{ "scope": "log.warning, log.error", "settings": { "foreground": "#c69" } },
+			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": "markup.bold, markup.italic", "settings": { "foreground": "#D99D8C" } },
 			{ "scope": [ "markup.changed", "meta.diff.range" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "markup.heading", "meta.diff.header", "meta.separator.diff" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
@@ -1082,6 +1084,14 @@
 	],
 
 	"mssql.connections": [
+		{
+			"profileName": "",
+			"connectionString": "Data Source=; ApplicationIntent=ReadOnly",
+			"server": "", "database": "",
+			//"user": "", "password": "",
+			//"trustServerCertificate": true,
+			"authenticationType": "Integrated"
+		},
 	],
 	"mssql.objectExplorer.groupBySchema": false,
 

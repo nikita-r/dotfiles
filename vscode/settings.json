@@ -641,6 +641,7 @@
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
+	"terminal.integrated.initialHint": false,
 	"terminal.integrated.enableMultiLinePasteWarning": "never",
 
 	"terminal.integrated.tabs.enabled": true,
@@ -832,8 +833,8 @@
 			"editor.snippetTabstopHighlightBorder": "#fff",
 
 			/* on break */
-			"editor.stackFrameHighlightBackground": "#C000C033",
-			"editor.focusedStackFrameHighlightBackground": "#C000C033",
+			"editor.stackFrameHighlightBackground": "#c0c3",
+			"editor.focusedStackFrameHighlightBackground": "#0c03",
 			"debugIcon.breakpointForeground": "#c63",
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
 			"debugIcon.breakpointStackframeForeground": "#c3c",

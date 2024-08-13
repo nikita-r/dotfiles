@@ -924,6 +924,7 @@
 			"editorGroupHeader.tabsBorder": "#806080",
 			"editorGroupHeader.tabsBackground": "#0C060C",
 			//"tab.activeBorder": "#804080",
+			"simpleFindWidget.sashBorder": "#806080",
 			"activityBar.border": "#806080",
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",

@@ -687,6 +687,8 @@
 			{ "scope": [ "keyword.other.unit", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
 			{ "scope": "entity.name.label, punctuation.separator.label", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "keyword.operator.at.batchfile, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "keyword.command.batchfile", "settings": { "foreground": "#DFDF9F" } },
 			{ "scope": [ "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, punctuation.definition.subshell", "settings": { "foreground": "#ffd700" } },
 			//{ "scope": "keyword.operator.pipe", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
@@ -759,6 +761,7 @@
 			"editorOverviewRuler.infoForeground": "#39f9",
 			"dropdown.background": "#384048",
 			"checkbox.border": "#707880",
+			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
 			//"editorHoverWidget.background": "#141A20",
 			"input.background": "#384048",
@@ -801,15 +804,16 @@
 
 			/* |=| */
 			"menu.background": "#202428",
+			"menu.separatorBackground": "#4C6680",
+			"menu.border": "#4C6680",
+			"panel.border": "#4C6680",
 			"sideBar.background": "#202428",
 			"sideBar.border": "#666",
 			"sideBarSectionHeader.border": "#666",
 			"tab.border": "#666",
 			"editorGroup.border": "#666",
 			"editorRuler.foreground": "#3c96", // 160°
-			"panel.border": "#689", // 200°
-			"menu.border": "#689",
-			"debugToolBar.background": "#023",
+			"debugToolBar.background": "#023", // 200°
 			"debugIcon.restartForeground": "#fec", // 40°
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
@@ -879,6 +883,8 @@
 			//"editorStickyScrollHover.background": "#3a3a3a",
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
+			"list.deemphasizedForeground": "#7aa3cc",
+			"gitDecoration.ignoredResourceForeground": "#7aa3cc",
 			"list.focusHighlightForeground": "#ffd700",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
@@ -923,8 +929,6 @@
 			"editorGroup.dropBackground": "#80408080",
 			"editorGroupHeader.tabsBorder": "#806080",
 			"editorGroupHeader.tabsBackground": "#0C060C",
-			//"tab.activeBorder": "#804080",
-			"simpleFindWidget.sashBorder": "#806080",
 			"activityBar.border": "#806080",
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",

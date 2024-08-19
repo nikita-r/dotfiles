@@ -784,7 +784,7 @@
 
 			/* (:) */
 			"editorBracketHighlight.unexpectedBracket.foreground": "#fff",
-			"editorBracketMatch.border": "#046",
+			"editorBracketMatch.border": "#666",
 			"editorBracketMatch.background": "#0000",
 			"editorBracketHighlight.foreground1": "#ffd700",
 			"editorBracketHighlight.foreground2": "#c6c",
@@ -792,12 +792,12 @@
 			"editorBracketHighlight.foreground4": "#1230",
 			"editorBracketHighlight.foreground5": "#1230",
 			"editorBracketHighlight.foreground6": "#1230",
-			"editorBracketPairGuide.background1": "#046",
-			"editorBracketPairGuide.background2": "#046",
-			"editorBracketPairGuide.background3": "#046",
-			"editorBracketPairGuide.background4": "#046",
-			"editorBracketPairGuide.background5": "#046",
-			"editorBracketPairGuide.background6": "#046",
+			"editorBracketPairGuide.background1": "#653",
+			"editorBracketPairGuide.background2": "#636",
+			"editorBracketPairGuide.background3": "#346",
+			"editorBracketPairGuide.background4": "#1230",
+			"editorBracketPairGuide.background5": "#1230",
+			"editorBracketPairGuide.background6": "#1230",
 
 			/* 123 */
 			"editorLineNumber.foreground": "#808080",

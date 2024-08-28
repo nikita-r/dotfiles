@@ -127,7 +127,7 @@
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showKeywords": false,
 	//"editor.wordBasedSuggestions": false,
-	"editor.suggest.showWords": true,
+	"editor.suggest.showWords": false,
 
 	/* . . . */
 
@@ -706,7 +706,7 @@
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell, meta.function-call.generic", "settings": { "foreground": "#DFDF9F" } },
 			{ "scope": [ "support.variable", "support.constant.variable" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "support.variable.magic", "meta.attribute", "support.variable.property", "meta.definition.variable.name" ], "settings": { "foreground": "#9cf" } },
-			{ "scope": [ "keyword.operator.arrow", "punctuation.definition.lambda", "punctuation.separator.label", "punctuation.separator.annotation", "keyword.operator.type.annotation", "keyword.type", "punctuation.separator.initializers", "keyword.operator.range" ], "settings": { "foreground": "#c6c" } },
+			{ "scope": [ "keyword.operator.arrow", "punctuation.definition.lambda", "punctuation.section.function.lambda", "punctuation.separator.label", "punctuation.separator.annotation", "keyword.operator.type.annotation", "keyword.type", "punctuation.separator.initializers", "keyword.operator.range" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.operator.new", "keyword.operator.expression" ], "settings": { "foreground": "#dfdf20" } },
 			{ "scope": "punctuation.destructuring, keyword.operator.spread, keyword.operator.expansion", "settings": { "foreground": "#FF8080" } },
@@ -925,6 +925,8 @@
 			"terminalCommandDecoration.defaultBackground": "#b0a0b0",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
+			"editorOverviewRuler.border": "#0C060C",
+			"terminalOverviewRuler.border": "#0C060C",
 			"editorGutter.background": "#0C060C",
 			"editorLineNumber.dimmedForeground": "#804080",
 			"notificationCenterHeader.background": "#402040",

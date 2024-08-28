@@ -59,7 +59,7 @@
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.cursorMoveOnType": false,
 	"editor.find.seedSearchStringFromSelection": "never",
-	"editor.occurrencesHighlight": false, // or "multiFile"
+	"editor.occurrencesHighlight": "off", // or "multiFile"
 
 	"search.mode": "newEditor",
 	"search.searchEditor.defaultNumberOfContextLines": null,
@@ -89,7 +89,7 @@
 	"editor.inlayHints.padding": true,
 
 	/* Code Problems & Actions */
-	"editor.lightbulb.enabled": false,
+	"editor.lightbulb.enabled": "off",
 	"github.copilot.editor.enableCodeActions": false,
 	"editor.showDeprecated": false, // strikethrough
 	"markdown.validate.enabled": true,
@@ -124,10 +124,10 @@
 	/* picky */
 	"editor.suggest.filterGraceful": false,
 	//"editor.suggest.localityBonus": true,
+	//"editor.wordBasedSuggestions": "off",
+	"editor.suggest.showWords": false,
 	"editor.suggest.showDeprecated": false,
 	"editor.suggest.showKeywords": false,
-	//"editor.wordBasedSuggestions": false,
-	"editor.suggest.showWords": false,
 
 	/* . . . */
 

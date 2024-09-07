@@ -714,7 +714,7 @@
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.dict", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell", "settings": { "foreground": "#d4d4d4" } },
-			{ "scope": "keyword.operator.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "keyword.type, source.go keyword, punctuation.separator.label", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, variable.other.label", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "entity.name.tag", "meta.object-literal.key", "meta.structure.dictionary.key.python" ], "settings": { "foreground": "#9cf" } },

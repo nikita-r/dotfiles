@@ -1120,13 +1120,13 @@
 	//	"when": "panelFocus"
 	//},
 
-	/* Ctrl+k *s */
+	/* Ctrl+k es */
 	{ "command": "noop", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
 
-	/* workbench.view # */
+	/* Ctrl+k # */
 	{
 		"key": "ctrl+k 1",
 		"command": "workbench.view.explorer"
@@ -1165,16 +1165,11 @@
 	},
 	{
 		"key": "ctrl+k 5",
-		"command": "workbench.view.testing.focus"
-	},
-	{
-		"key": "ctrl+k 5",
-		"command": "testing.openOutputPeek",
-		"when": "focusedView == 'workbench.view.testing'"
-	},
-	{
-		"key": "ctrl+k 5",
 		"command": "workbench.action.quickTextSearch"
+	},
+	{
+		"key": "ctrl+k 6",
+		"command": "workbench.view.extensions"
 	},
 
 	/* Ctrl+r */
@@ -2080,6 +2075,11 @@
 	{
 		"key": "ctrl+k i",
 		"command": "inlineChat.start",
+		"when": "editorTextFocus && !editorHasMultipleSelections"
+	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "inlineChat.startWithCurrentLine",
 		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
 	{

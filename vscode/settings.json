@@ -264,10 +264,8 @@
 	"git.showCommitInput": false,
 
 	/* diff */
-	"scm.diffDecorationsIgnoreTrimWhitespace": "false",
 	"scm.diffDecorationsGutterPattern": { "modified": false },
 	"diffEditor.renderIndicators": false,
-	//"diffEditor.renderSideBySide": false,
 	"diffEditor.diffAlgorithm": "advanced",
 	"mergeEditor.diffAlgorithm": "advanced",
 
@@ -687,11 +685,13 @@
 			{ "scope": "string.verbatim", "settings": { "foreground": "#C66" } },
 			{ "scope": [ "variable.language", /*"variable.parameter", */"variable.parameter.function-call" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.operator.unary", "keyword.operator.logical", "keyword.operator.logical.python", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
-			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.operator.optional" ], "settings": { "foreground": "#0af" } },
+			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing" ], "settings": { "foreground": "#0af" } },
+			{ "scope": "keyword.operator.optional, keyword.operator.definiteassignment", "settings": { "foreground": "#0af" } },
 			{ "scope": [ "variable.other.constant", "variable.other.enummember" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "constant.numeric, meta.preprocessor.numeric", "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "keyword.other.unit", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
+			{ "scope": "keyword.operator.bitwise.shift.cpp", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.at.batchfile, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "keyword.command.batchfile", "settings": { "foreground": "#DFDF9F" } },
 			{ "scope": [ "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
@@ -715,7 +715,7 @@
 			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.dict", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell", "settings": { "foreground": "#d4d4d4" } },
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon", "settings": { "foreground": "#ffd700" } },
-			{ "scope": "keyword.type, source.go keyword, punctuation.separator.label", "settings": { "foreground": "#c6c" } },
+			{ "scope": "keyword.type, source.go keyword, punctuation.separator.label, punctuation.separator.colon.case", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, variable.other.label", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "entity.name.tag", "meta.object-literal.key", "meta.structure.dictionary.key.python" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.other.attribute-name", "settings": { "foreground": "#9cf" } },
@@ -1083,7 +1083,7 @@
 	"explorer.fileNesting.expand": false,
 	"explorer.fileNesting.patterns": {
 		//"*": "${capture}.map",
-		"*proj": "${capture}proj.user",
+		"*proj": "${capture}proj.*",
 		"appsettings.json": "appsettings.*.json",
 	},
 

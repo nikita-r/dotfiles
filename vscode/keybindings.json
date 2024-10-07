@@ -1394,22 +1394,24 @@
 	{
 		"key": "ctrl+home",
 		"command": "cursorTop",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "ctrl+end",
 		"command": "cursorBottom",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
+	{ "command": "", "key": "ctrl+shift+enter", "when": "!textInputFocus" },
+	{ "command": "", "key": "shift+cmd+enter", "when": "!textInputFocus" },
 	{
 		"key": "ctrl+enter",
 		"command": "editor.action.insertLineAfter",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 
 	/* Ctrl+E; Mac default for Cmd+E is "actions.findWithSelection" */
@@ -2003,6 +2005,11 @@
 	},
 
 	/* GitHub Copilot */
+	{
+		"key": "enter",
+		"command": "noop",
+		"when": "inChatInput && !chatInputHasText"
+	},
 	/* Side Chat */
 	{
 		"key": "ctrl+alt+i",
@@ -2222,8 +2229,6 @@
 	/* editor.action & search.action to Find/Replace */
 	//{ "command": "", "key": "ctrl+shift+1" },
 	//{ "command": "", "key": "shift+cmd+1" },
-	{ "command": "", "key": "ctrl+shift+enter", "when": "!editorTextFocus" },
-	{ "command": "", "key": "shift+cmd+enter", "when": "!editorTextFocus" },
 	{
 		"key": "shift+alt+z",
 		"command": "editor.action.replaceOne"

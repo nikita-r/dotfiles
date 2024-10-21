@@ -94,8 +94,10 @@
 	"github.copilot.editor.enableCodeActions": false,
 	"editor.showDeprecated": false, // strikethrough
 	"markdown.validate.enabled": true,
+	"editor.codeActionWidget.includeNearbyQuickFixes": false,
+	//"editor.codeActionWidget.showHeaders": false,
+	//"problems.showCurrentInStatus": true,
 	"problems.decorations.enabled": false,
-	"problems.showCurrentInStatus": false,
 
 	/* auto-suggestion */
 	"editor.inlineSuggest.enabled": false,
@@ -202,7 +204,7 @@
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.historyBasedLanguageDetection": false,
 
-	//"workbench.editor.openPositioning": "first",
+	"workbench.editor.openPositioning": "first",
 	"workbench.editor.revealIfOpen": true,
 	"workbench.editor.restoreViewState": true,
 	"workbench.editor.sharedViewState": true,
@@ -320,6 +322,28 @@
 			}
 		}
 	},
+
+	/* andersliu.insert-line-number */
+	"InsertLineNumber.formats": [
+		{
+			"width": "alignToLast",
+			"align": "right"
+		},
+		{
+			"padding": "zero",
+			"width": "alignToLast",
+			"align": "right"
+		},
+		{
+			"start": "current",
+			"padding": "zero",
+			"width": 6,
+			"prefix": "[LINE_",
+			"suffix": "]\t",
+			"align": "right"
+		},
+		{}
+	],
 
 	/* alefragnani */
 	"bookmarks.gutterIconBorderColor": "#e6e6b4",
@@ -698,8 +722,8 @@
 			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.bitwise.shift.cpp", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.at.batchfile, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "meta.function-call.generic", "keyword.command.batchfile" ], "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": [ "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "meta.function-call.generic", "meta.method", "keyword.command.batchfile" ], "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": [ "keyword.other.package", "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, punctuation.definition.subshell, punctuation.definition.metadata", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.definition.link.title", "settings": { "foreground": "#37f" } },
 			//{ "scope": "keyword.operator.pipe", "settings": { "foreground": "#fec", "fontStyle": "bold" } },

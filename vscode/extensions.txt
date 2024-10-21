@@ -1,3 +1,4 @@
+andersliu.insert-line-number
 darkriszty.markdown-table-prettify
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select

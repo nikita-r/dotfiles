@@ -40,8 +40,9 @@
 		"command": "editor.action.openLink"
 	},
 	{
-		"key": "ctrl+shift+o",
-		"command": "workbench.action.openWorkspace"
+		"key": "ctrl+shift+g",
+		"command": "workbench.action.terminal.openDetectedLink",
+		"when": "accessibleViewCurrentProviderId == 'terminal' || terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	{ "command": "noop", "key": "alt+/" },
@@ -433,9 +434,9 @@
 
 	/* toggle treeFind */
 	{
-		"key": "ctrl+f",
-		"command": "-list.find",
-		"when": "listFocus && listSupportsFind"
+		"key": "ctrl+alt+f",
+		"command": "",
+		"when": "true"
 	},
 	{
 		"key": "alt+/",
@@ -445,7 +446,7 @@
 	{
 		"key": "alt+/",
 		"command": "list.find",
-		"when": "listFocus && listSupportsFind"
+		"when": "listFocus && listSupportsFind || inDebugRepl"
 	},
 	{
 		"key": "alt+/",
@@ -1243,9 +1244,13 @@
 		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
 	},
 
-	/* Ctrl+k *o */
+	/* File: Open */
 	{ "key": "ctrl+k o", "command": "workbench.action.files.openFolder" },
 	{ "key": "ctrl+k ctrl+o", "command": "addRootFolder" },
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.openWorkspace"
+	},
 
 	/* selection anchor */
 	{ "command": "noop", "key": "ctrl+k ctrl+k" },
@@ -1545,11 +1550,6 @@
 		"key": "ctrl+g",
 		"command": "workbench.action.terminal.goToRecentDirectory",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+shift+g",
-		"command": "workbench.action.terminal.openDetectedLink",
-		"when": "accessibleViewCurrentProviderId == 'terminal' || terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{ "command": "", "key": "ctrl+h"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },

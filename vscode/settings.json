@@ -722,7 +722,7 @@
 			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.bitwise.shift.cpp", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.at.batchfile, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "meta.function-call.generic", "meta.method", "keyword.command.batchfile" ], "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": [ "meta.function-call.generic", "keyword.command.batchfile" ], "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, punctuation.definition.subshell, punctuation.definition.metadata", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.definition.link.title", "settings": { "foreground": "#37f" } },

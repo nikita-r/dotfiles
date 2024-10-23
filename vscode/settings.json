@@ -757,7 +757,7 @@
 			{ "scope": "punctuation.definition.tag", "settings": { "foreground": "#69c" } },
 			{ "scope": [ "storage.modifier", "punctuation.decorator", "punctuation.definition.decorator", "punctuation.definition.annotation", "punctuation.definition.typeparameters", "punctuation.section.angle-brackets", "storage.type.generic.groovy" ], "settings": { "foreground": "#ee7" } },
 			{ "scope": "entity.name.function.decorator, storage.type.annotation.java, storage.type.annotation.groovy", "settings": { "foreground": "#7bf" } },
-			{ "scope": [ "support.constant.color", "constant.other.option", "markup.inline.raw", "entity.name.operator" ], "settings": { "foreground": "#dcf" } },
+			{ "scope": [ "support.constant.color", "constant.other.option", "markup.inline.raw", "log.exception", "entity.name.operator" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "entity.name.namespace", "entity.name.scope-resolution", "entity.other.attribute", "entity.other.attribute-name.pseudo-class.css", "entity.other.attribute-name.pseudo-element.css", "storage.type.java", "storage.type.object.array.java", "storage.type.primitive.array.java", "storage.type.primitive.java", "storage.type.groovy", "storage.type.object.array.groovy", "storage.type.primitive.array.groovy", "storage.type.primitive.groovy", "storage.type.token.java", "storage.type.numeric.go", "storage.type.byte.go", "storage.type.boolean.go", "storage.type.string.go", "storage.type.uintptr.go", "storage.type.error.go", "storage.type.rune.go" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "storage.type.generic.java", "storage.type.generic.groovy storage.type.groovy", "entity.other.inherited-class", "keyword.other.special-method" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "entity.name.function.preprocessor", "keyword.operator.noexcept", "keyword.operator.cast", "keyword.operator.sizeof", "keyword.operator.alignof", "keyword.operator.typeid", "keyword.operator.alignas", "keyword.operator.instanceof" ], "settings": { "foreground": "#69c" } },
@@ -818,7 +818,7 @@
 			/* err */
 			"errorForeground": "#fff",
 			"editorUnnecessaryCode.opacity": "#123f",
-			"editorUnnecessaryCode.border": "#dcf",
+			"editorUnnecessaryCode.border": "#206080",
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
 			"activityErrorBadge.background": "#fff",
@@ -921,7 +921,6 @@
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
-			"actionBar.toggledBackground": "#800000",
 
 			/* text */
 			"editor.foreground": "#ccc",
@@ -983,6 +982,7 @@
 			"titleBar.border": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
+			"actionBar.toggledBackground": "#806080",
 			"scmGraph.historyItemRemoteRefColor": "#804080",
 
 			/* Selective Hue: 210/360 */

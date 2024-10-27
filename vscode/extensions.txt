@@ -7,15 +7,14 @@ mhutchie.git-graph
 hediet.hediet-power-tools
 #hediet.vscode-drawio
 #redhat.java
-ms-python.python
+#ms-python.python
 #ms-dotnettools.csharp
 ms-vscode.powershell
+rosshamish.kuskus-kusto-syntax-highlighting
 #gruntfuggly.todo-tree
-ms-mssql.sql-database-projects-vscode
 ms-vscode.hexeditor
 ms-vscode.vscode-github-issue-notebooks
 ms-vscode-remote.remote-containers
 zeithaste.cursorCharCode
-#quicktype.quicktype
 tomoki1207.pdf
 #vincaslt.highlight-matching-tag

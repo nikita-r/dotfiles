@@ -35,6 +35,7 @@
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
 
+	/* Open Link */
 	{
 		"key": "ctrl+shift+g",
 		"command": "editor.action.openLink"
@@ -144,7 +145,7 @@
 	{
 		"key": "ctrl+shift+l",
 		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorTextFocus && editorHasSelection"
+		"when": "textInputFocus && editorHasSelection"
 	},
 
 	/* Ctrl+D complements */
@@ -168,18 +169,13 @@
 	{ "command": "noop", "key": "ctrl+l" },
 	{
 		"key": "ctrl+l",
-		"command": "expandLineSelection",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+l",
 		"command": "workbench.debug.panel.action.clearReplAction",
 		"when": "inDebugRepl"
 	},
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.terminal.clear",
-		"when": "terminalFocusInAny"
+		"when": "terminalFocus"
 	},
 
 	/* Q */
@@ -325,16 +321,26 @@
 	},
 
 	/* 📜 */
+	{
+		"key": "ctrl+up",
+		"command": "scrollLineUp",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "scrollLineDown",
+		"when": "textInputFocus"
+	},
 	/* half a page */
 	{
 		"key": "Shift+Alt+PageUp",
-		//"when": "editorTextFocus",
+		//"when": "editorFocus",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "halfPage", "to": "up" }
 	},
 	{
 		"key": "Shift+Alt+PageDown",
-		//"when": "editorTextFocus",
+		//"when": "editorFocus",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "halfPage", "to": "down" }
 	},
@@ -431,6 +437,11 @@
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
+	{
+		"key": "ctrl+f",
+		"command": "repl.action.filter",
+		"when": "focusedView == 'workbench.panel.repl.view'"
+	},
 
 	/* toggle treeFind */
 	{
@@ -473,23 +484,13 @@
 	{ "command": "noop", "key": "ctrl+alt+right" },
 	{
 		"key": "ctrl+shift+up",
-		"command": "-cursorUpSelect",
-		"when": "textInputFocus"
-	},
-	{
-		"key": "ctrl+shift+down",
-		"command": "-cursorDownSelect",
-		"when": "textInputFocus"
-	},
-	{
-		"key": "ctrl+shift+up",
 		"command": "editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "ctrl+shift+down",
 		"command": "editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 
 	/* Zoom */
@@ -811,9 +812,6 @@
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "shift+f8" },
 
 	/* notebookType == 'interactive' */
-	{ "command": "-interactive.history.previous", "key": "up" },
-	{ "command": "-interactive.history.next", "key": "down" },
-	{ "command": "-interactive.execute", "key": "ctrl+enter" },
 	{ "command": "-interactive.execute", "key": "meta+enter" },
 	{ "command": "-interactive.execute", "key": "shift+enter" },
 	{
@@ -1075,10 +1073,10 @@
 	},
 
 	/* extra Optional shortcuts */
-	{ "key": "shift+alt+1", "command": "type", "args": { "text": "¡" } },
-	{ "key": "shift+alt+2", "command": "type", "args": { "text": "²" } },
-	{ "key": "shift+alt+7", "command": "type", "args": { "text": "№" } },
-	{ "key": "shift+alt+x", "command": "type", "args": { "text": "×" } },
+	{ "key": "shift+alt+1", "command": "type", "args": { "text": "¡" }, "when": "textInputFocus" },
+	{ "key": "shift+alt+2", "command": "type", "args": { "text": "²" }, "when": "textInputFocus" },
+	{ "key": "shift+alt+7", "command": "type", "args": { "text": "№" }, "when": "textInputFocus" },
+	{ "key": "shift+alt+x", "command": "type", "args": { "text": "×" }, "when": "textInputFocus" },
 	{ "key": "alt+1", "command": "workbench.action.openEditorAtIndex1" },
 	{ "key": "alt+2", "command": "workbench.action.openEditorAtIndex2" },
 	{ "key": "alt+3", "command": "workbench.action.openEditorAtIndex3" },
@@ -1395,7 +1393,7 @@
 		"when": "editorTextFocus"
 	},
 
-	/* Do not let hijack bindings that are key when "editorTextFocus" */
+	/* Do not let hijack bindings that are key when "textInputFocus" */
 	{
 		"key": "ctrl+home",
 		"command": "cursorTop",
@@ -1406,13 +1404,39 @@
 		"command": "cursorBottom",
 		"when": "textInputFocus"
 	},
-	{ "command": "", "key": "ctrl+shift+enter", "when": "!textInputFocus" },
-	{ "command": "", "key": "shift+cmd+enter", "when": "!textInputFocus" },
+	{
+		"key": "ctrl+l",
+		"command": "expandLineSelection",
+		"when": "textInputFocus"
+	},
+	/* down/up may be hijacked by history.next/prev */
+	{
+		"key": "up",
+		"command": "cursorUp",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "down",
+		"command": "cursorDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "alt+up",
+		"command": "workbench.action.terminal.chat.previousFromHistory",
+		"when": "terminalChatFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "workbench.action.terminal.chat.nextFromHistory",
+		"when": "terminalChatFocus"
+	},
+	/* "ctrl+enter" may be hijacked by accept/commit */
 	{
 		"key": "ctrl+enter",
 		"command": "editor.action.insertLineAfter",
 		"when": "textInputFocus"
 	},
+	{ "command": "noop", "key": "ctrl+shift+enter" }, // shy from "search.action.replaceAllIn*"
 	{
 		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
@@ -1870,6 +1894,17 @@
 	},
 	{
 		"key": "shift+alt+j",
+		"command": "workbench.action.terminal.chat.runCommand",
+		"when": "terminalChatFocus && !terminalChatActiveRequest && terminalChatResponseContainsCodeBlock && !terminalChatResponseContainsMultipleCodeBlocks"
+	},
+	{
+		"key": "shift+alt+j",
+		"command": "Terminal Chat: multiple code blocks present", // workbench.action.terminal.chat.runFirstCommand
+		"when": "terminalChatResponseContainsMultipleCodeBlocks"
+	},
+	/* ?inQuickOpen */
+	{
+		"key": "shift+alt+j",
 		"command": "workbench.action.acceptSelectedQuickOpenItem",
 		"when": "inQuickOpen"
 	},
@@ -2092,7 +2127,7 @@
 	{
 		"key": "ctrl+k i",
 		"command": "workbench.action.terminal.chat.start",
-		"when": "terminalFocus"
+		"when": "terminalFocusInAny"
 	},
 
 	/* Ctrl+Shift+. */
@@ -2175,55 +2210,55 @@
 	/* https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax */
 	{
 		"key": "alt+shift+;",
-		"when": "editorTextFocus",
+		"when": "textInputFocus",
 		"command": "editor.action.insertSnippet",
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$0" }
 	},
 	{
 		"key": "alt+shift+;",
-		"when": "editorTextFocus && editorHasSelection",
+		"when": "textInputFocus && editorHasSelection",
 		"command": "editor.action.insertSnippet",
 		"args": { "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}${CURRENT_TIMEZONE_OFFSET}$1\n${TM_SELECTED_TEXT}$0" }
 	},
 
 	/* symbols with Mac Option key */
-	{ "when": "!isMac && editorTextFocus", "key": "alt+;",
+	{ "when": "!isMac && textInputFocus", "key": "alt+;",
 	  "command": "type", "args": { "text": "…" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+o",
+	{ "when": "!isMac && textInputFocus", "key": "alt+o",
 	  "command": "type", "args": { "text": "ø" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+o",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+o",
 	  "command": "type", "args": { "text": "Ø" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+6",
+	{ "when": "!isMac && textInputFocus", "key": "alt+6",
 	  "command": "type", "args": { "text": "§" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+9",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+9",
 	  "command": "type", "args": { "text": "·" } }, // &middot; (Interpunct)
-	{ "when": "!isMac && editorTextFocus", "key": "alt+8",
+	{ "when": "!isMac && textInputFocus", "key": "alt+8",
 	  "command": "type", "args": { "text": "•" } }, // Bullet
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+8",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+8",
 	  "command": "type", "args": { "text": "°" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+m",
+	{ "when": "!isMac && textInputFocus", "key": "alt+m",
 	  "command": "type", "args": { "text": "µ" } },
-	{ "when": "editorTextFocus", "key": "shift+alt+m",
+	{ "when": "textInputFocus", "key": "shift+alt+m",
 	  "command": "type", "args": { "text": "−" } }, // Minus Sign
-	{ "when": "!isMac && editorTextFocus", "key": "alt+-",
+	{ "when": "!isMac && textInputFocus", "key": "alt+-",
 	  "command": "type", "args": { "text": "–" } }, // En Dash
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+-",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+-",
 	  "command": "type", "args": { "text": "—" } }, // Em Dash
-	{ "when": "!isMac && editorTextFocus", "key": "alt+=",
+	{ "when": "!isMac && textInputFocus", "key": "alt+=",
 	  "command": "type", "args": { "text": "≠" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+=",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+=",
 	  "command": "type", "args": { "text": "±" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+x",
+	{ "when": "!isMac && textInputFocus", "key": "alt+x",
 	  "command": "type", "args": { "text": "≈" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+l",
+	{ "when": "!isMac && textInputFocus", "key": "alt+l",
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
-	{ "when": "!isMac && editorTextFocus", "key": "alt+j",
+	{ "when": "!isMac && textInputFocus", "key": "alt+j",
 	  "command": "type", "args": { "text": "∆" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+3",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+3",
 	  "command": "type", "args": { "text": "‹" } },
-	{ "when": "!isMac && editorTextFocus", "key": "shift+alt+4",
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+4",
 	  "command": "type", "args": { "text": "›" } },
-	{ "when": "!isMac && editorTextFocus", "key": "alt+5",
+	{ "when": "!isMac && textInputFocus", "key": "alt+5",
 	  "command": "type", "args": { "text": "∞" } },
 
 	/* editor.action & search.action to Find/Replace */

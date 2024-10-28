@@ -935,6 +935,8 @@
 			"list.deemphasizedForeground": "#7aa3cc",
 			"gitDecoration.ignoredResourceForeground": "#7aa3cc",
 			"list.focusHighlightForeground": "#ffd700",
+			"textPreformat.background": "#124",
+			"textPreformat.foreground": "#cdf",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
 			"chat.slashCommandBackground": "#90c0c0", // 180°
@@ -1165,7 +1167,6 @@
 		"localhost",
 	],
 
-	"github.copilot.chat.welcomeMessage": "never",
 	"editor.accessibilitySupport": "off",
 	"accessibility.verbosity.terminal": false,
 	"accessibility.accessibleView.closeOnKeyPress": false,

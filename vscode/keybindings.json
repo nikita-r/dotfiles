@@ -1413,12 +1413,12 @@
 	{
 		"key": "up",
 		"command": "cursorUp",
-		"when": "textInputFocus"
+		"when": "textInputFocus && !suggestWidgetVisible"
 	},
 	{
 		"key": "down",
 		"command": "cursorDown",
-		"when": "textInputFocus"
+		"when": "textInputFocus && !suggestWidgetVisible"
 	},
 	{
 		"key": "alt+up",

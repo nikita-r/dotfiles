@@ -809,7 +809,6 @@
 			"checkbox.border": "#707880",
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
-			//"editorHoverWidget.background": "#141A20",
 			"input.background": "#384048",
 			"input.placeholderForeground": "#abc0", //"#8090A0",
 			"inputOption.hoverBackground": "#202428",
@@ -873,6 +872,8 @@
 			"debugIcon.restartForeground": "#fec", // 40°
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
+			"editorHoverWidget.background": "#203038",
+			"editorHoverWidget.border": "#304854",
 
 			/* |~| */
 			"minimapSlider.background": "#6663",

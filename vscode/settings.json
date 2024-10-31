@@ -798,7 +798,6 @@
 			/* miscellaneous */
 			"widget.border": "#000",
 			"widget.shadow": "#000",
-			"editorHint.foreground": "#fff",
 			"editorLink.activeForeground": "#fff",
 			"titleBar.inactiveForeground": "#ccc",
 			"banner.foreground": "#ccc",
@@ -820,10 +819,9 @@
 
 			/* err */
 			"errorForeground": "#fff",
-			"editorUnnecessaryCode.opacity": "#123f",
-			"editorUnnecessaryCode.border": "#305060",
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
+			"list.invalidItemForeground": "#fff",
 			"activityErrorBadge.background": "#fff",
 			"activityErrorBadge.foreground": "#000",
 			"activityWarningBadge.background": "#333",
@@ -834,6 +832,11 @@
 			"inputValidation.infoForeground": "#fff",
 			"inputValidation.warningForeground": "#fff",
 			"inputValidation.errorForeground": "#fff",
+
+			/* ___ */
+			"editorHint.foreground": "#fff",
+			"editorUnnecessaryCode.opacity": "#123f",
+			"editorUnnecessaryCode.border": "#305060",
 
 			/* (:) */
 			"editorBracketHighlight.unexpectedBracket.foreground": "#fff",

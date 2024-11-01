@@ -685,7 +685,7 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
-			{ "scope": [ "meta.preprocessor", "meta.preprocessor string", "punctuation.separator.colon" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "meta.preprocessor", "meta.preprocessor string", "punctuation.separator.colon", "expression.ng" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.preprocessor.string", "settings": { "foreground": "#D99D8C" } },
 			{ "scope": [ "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.legacy.builtin.python", "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -725,7 +725,8 @@
 			{ "scope": "keyword.operator.bitwise.shift.cpp", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.at.batchfile, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command" ], "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": [ "keyword.other.package", "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "meta.preprocessor punctuation.separator.hash", "support.constant.handlebars" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "keyword.other.package", "keyword.other.important", "storage.type.format", "keyword.operator.combinator", "keyword.operator.other" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, punctuation.definition.subshell, punctuation.definition.metadata", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.definition.link.title", "settings": { "foreground": "#37f" } },
 			//{ "scope": "keyword.operator.pipe", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
@@ -748,7 +749,7 @@
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.operator.new", "keyword.operator.expression" ], "settings": { "foreground": "#ee7" } },
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
-			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.key-value, punctuation.definition.seperator.key-value, punctuation.separator.dict, punctuation.definition.constant", "settings": { "foreground": "#0af" } },
+			{ "scope": "keyword.operator.assignment, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.dict, punctuation.definition.constant", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "keyword.type, source.go keyword, punctuation.separator.label, punctuation.separator.colon.case", "settings": { "foreground": "#c6c" } },

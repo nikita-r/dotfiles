@@ -685,8 +685,8 @@
 		"textMateRules": [
 			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor.string", "markup.bold", "markup.italic" ], "settings": { "foreground": "#D99D8C" } },
-			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.block.javadoc", "settings": { "foreground": "#999" } },
-			{ "scope": "string.quoted.docstring, comment.block.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, keyword.other.documentation", "settings": { "foreground": "#69c" } },
+			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc", "settings": { "foreground": "#999" } },
+			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, keyword.other.documentation", "settings": { "foreground": "#69c" } },
 			{ "scope": "punctuation.whitespace.comment.leading", "settings": { "fontStyle": "bold" } },
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.keyword", "punctuation.definition.storage", "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground

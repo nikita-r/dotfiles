@@ -7,6 +7,7 @@
 	$: editor.action.selectAllMatches: "alt+enter"
 	$: editor.action.setSelectionAnchor: "ctrl+k ctrl+b"
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
+	$: editor.detectLanguage: "shift+alt+d"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
 	$: rerunSearchEditorSearch: "ctrl+shift+r"
 	$: workbench.action.chat.open: "ctrl+cmd+i"
@@ -1937,14 +1938,22 @@
 		}
 	},
 
-	/* instead of ^+J */
+	/* Ctrl+Alt+j */
 	{
 		"key": "ctrl+alt+j",
-		"command": "workbench.action.search.toggleQueryDetails",
-		"when": "inSearchEditor || searchViewletFocus"
+		"command": "github.copilot.chat.attachFile",
+		"when": "view.workbench.panel.chat.view.copilot.visible"
 	},
-
-	/* Switch to JSON */
+	{
+		"key": "ctrl+alt+j",
+		"command": "markdown.showSource",
+		"when": "!panelFocus && (activeWebviewPanelId == 'markdown.preview' || activeWebviewPanelId == 'vscode.markdown.preview.editor')"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.openActiveLogOutputFile",
+		"when": "panelFocus && activePanel == 'workbench.panel.output'" // resourceScheme == 'output'
+	},
 	{
 		"key": "ctrl+alt+j",
 		"command": "workbench.action.openGlobalKeybindingsFile",
@@ -1952,13 +1961,14 @@
 	},
 	{
 		"key": "ctrl+alt+j",
-		"command": "workbench.action.openActiveLogOutputFile",
-		"when": "panelFocus && activePanel == 'workbench.panel.output'"
-	},
-	{
-		"key": "ctrl+alt+j",
 		"command": "settings.switchToJSON",
 		"when": "inSettingsEditor"
+	},
+	/* instead of ^+J */
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.search.toggleQueryDetails",
+		"when": "inSearchEditor || searchViewletFocus"
 	},
 
 	/* ryu1kn.text-marker */

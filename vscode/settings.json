@@ -669,7 +669,7 @@
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
-	"terminal.integrated.enableMultiLinePasteWarning": "never",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",
@@ -696,7 +696,7 @@
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#D99D8C" } },
-			//{ "scope": "log.error", "settings": { "fontStyle": "" } },
+			{ "scope": [ "log.error", "markup.bold" ], "settings": { "fontStyle": "" } },
 			{ "scope": [ "log.error", "log.warning" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": "log.info", "settings": { "foreground": "#8cc" } },

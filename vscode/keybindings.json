@@ -52,6 +52,8 @@
 	{ "command": "", "key": "alt+-" },
 	{ "command": "", "key": "alt+=" },
 	{ "command": "", "key": "shift+alt+o" },
+	{ "command": "", "key": "shift+alt+1" },
+	{ "command": "", "key": "shift+alt+9" },
 	{ "command": "noop", "key": "shift+alt+delete" },
 	{ "command": "noop", "key": "shift+alt+backspace" },
 
@@ -167,7 +169,7 @@
 	},
 
 	/* Ctrl+L */
-	{ "command": "noop", "key": "ctrl+l" },
+	{ "command": "", "key": "ctrl+l" },
 	{
 		"key": "ctrl+l",
 		"command": "workbench.debug.panel.action.clearReplAction",
@@ -696,7 +698,7 @@
 		"when": "textInputFocus"
 	},
 
-	/* Shift+Alt+Arrow: ensure Windows defaults */
+	/* copyLines*Action: ensure Windows defaults */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
 	{ "command": "noop", "key": "ctrl+shift+alt+left" },
@@ -1432,6 +1434,7 @@
 		"when": "terminalChatFocus"
 	},
 	/* "ctrl+enter" may be hijacked by accept/commit */
+	{ "key": "cmd+enter", "command": "-editor.action.replaceAll" },
 	{
 		"key": "ctrl+enter",
 		"command": "editor.action.insertLineAfter",
@@ -1972,15 +1975,17 @@
 	},
 
 	/* ryu1kn.text-marker */
+	{ "command": "noop", "key": "ctrl+0" },
+	{ "command": "noop", "key": "ctrl+9" },
 	{
 		"key": "ctrl+0",
 		"command": "textmarker.goToNextHighlight",
-		"when": "true"
+		"when": "editorTextFocus"
 	},
 	{
 		"key": "ctrl+9",
 		"command": "textmarker.goToPreviousHighlight",
-		"when": "true"
+		"when": "editorTextFocus"
 	},
 
 	/* ryu1kn.partial-diff */
@@ -2216,6 +2221,18 @@
 		"when": "editorTextFocus && editorHasSelection && !inSnippetMode && !editorTabMovesFocus && !suggestWidgetVisible && !editorReadonly"
 	},
 
+	/* Word Wrap */
+	{ "command": "", "key": "alt+z" },
+	{
+		"key": "ctrl+alt+z",
+		"command": "editor.action.toggleWordWrap"
+	},
+	{
+		"key": "ctrl+alt+z",
+		"command": "workbench.action.terminal.sizeToContentWidth",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+
 	/* User-Defined Snippets */
 	/* https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax */
 	{
@@ -2270,10 +2287,10 @@
 	  "command": "type", "args": { "text": "›" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+5",
 	  "command": "type", "args": { "text": "∞" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+z",
+	  "command": "type", "args": { "text": "\u03a9" } },
 
 	/* editor.action & search.action to Find/Replace */
-	//{ "command": "", "key": "ctrl+shift+1" },
-	//{ "command": "", "key": "shift+cmd+1" },
 	{
 		"key": "shift+alt+z",
 		"command": "editor.action.replaceOne"
@@ -2337,18 +2354,6 @@
 		"key": "ctrl+alt+enter",
 		"command": "search.action.replaceAll",
 		"when": "replaceInputBoxFocus"
-	},
-
-	/* Word Wrap */
-	{ "command": "", "key": "alt+z" },
-	{
-		"key": "ctrl+alt+z",
-		"command": "editor.action.toggleWordWrap"
-	},
-	{
-		"key": "ctrl+alt+z",
-		"command": "workbench.action.terminal.sizeToContentWidth",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/*~*~*~*/

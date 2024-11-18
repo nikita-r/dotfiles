@@ -1084,6 +1084,10 @@
 	{ "key": "alt+2", "command": "workbench.action.openEditorAtIndex2" },
 	{ "key": "alt+3", "command": "workbench.action.openEditorAtIndex3" },
 	{ "key": "alt+4", "command": "workbench.action.openEditorAtIndex4" },
+	{ "key": "alt+5", "command": "" },
+	{ "key": "alt+6", "command": "" },
+	{ "key": "alt+7", "command": "" },
+	{ "key": "alt+8", "command": "" },
 
 	/* [VS] View.Navigate */
 	{
@@ -1422,6 +1426,17 @@
 		"key": "down",
 		"command": "cursorDown",
 		"when": "textInputFocus && !suggestWidgetVisible"
+	},
+	/* Alt+Up/Down to cycle history; disregard (isComposing || suggestWidgetVisible) */
+	{
+		"key": "alt+up",
+		"command": "history.showPrevious",
+		"when": "historyNavigationWidgetFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "history.showNext",
+		"when": "historyNavigationWidgetFocus"
 	},
 	{
 		"key": "alt+up",

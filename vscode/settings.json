@@ -689,14 +689,14 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
-			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown", "string.quoted.double.sql" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown", "string.quoted.double.sql", "string.interpolated.backtick", "variable.interpolation" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor.string", "markup.bold", "markup.italic" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, keyword.other.documentation", "settings": { "foreground": "#69c" } },
 			{ "scope": "punctuation.whitespace.comment.leading", "settings": { "fontStyle": "bold" } },
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.keyword", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string", "string.unquoted.cdata punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.constant", "text.log constant.language" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
@@ -716,12 +716,12 @@
 			{ "scope": "punctuation.definition.group.assertion.regexp, string.regexp keyword.operator", "settings": { "foreground": "#ee7" } },
 			{ "scope": [ "support.other", "constant.regexp", "punctuation.definition.character-class.regexp", "constant.other.character-class.regexp" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "keyword.operator.negation.regexp", "punctuation.definition.character-class", "constant.other.set.regexp" ], "settings": { "foreground": "#6c9" } },
-			{ "scope": "keyword.operator.quantifier.regexp", "settings": { "foreground": "#FF8080" } },
+			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c9b" } },
 			{ "scope": "string.verbatim, source.sql text.variable", "settings": { "foreground": "#c9b" } },
-			{ "scope": [ "variable.language", "variable.parameter.function-call", "variable.parameter.batchfile" ], "settings": { "foreground": "#f9c" } },
+			{ "scope": [ "variable.language", "variable.parameter.function-call", "variable.parameter.batchfile", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.operator.unary", "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.other.DDL.create.II.sql" ], "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.optional, keyword.operator.definiteassignment, keyword.operator.glob, keyword.operator.star", "settings": { "foreground": "#0af" } },
@@ -729,9 +729,9 @@
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "keyword.other.unit", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
-			{ "scope": "keyword.operator.bitwise.shift.cpp", "settings": { "foreground": "#0cc" } },
+			{ "scope": "keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command" ], "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": "punctuation.definition.link.title", "settings": { "foreground": "#37f" } },
+			{ "scope": "punctuation.definition.link.title, punctuation.definition.comment.shebang, string.other.modeline, constant.string", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.big-arrow", "punctuation.definition.subshell", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
@@ -751,7 +751,7 @@
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": "punctuation.separator.annotation, keyword.operator.type.annotation", "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "support.variable", "support.constant.variable", "support.function.git-rebase" ], "settings": { "foreground": "#f9c" } },
-			{ "scope": [ "support.variable.property", "support.variable.magic", "meta.definition.variable.name" ], "settings": { "foreground": "#9cf" } },
+			{ "scope": [ "support.variable.property", "support.variable.magic", "meta.definition.variable.name", "meta.parameter-expansion" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "keyword.fsharp, keyword.type, source.go keyword, keyword.preprocessor, keyword.other.julia, source.rust keyword.other", "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.operator.arrow", "keyword.operator.lambda", "punctuation.section.function.lambda", "punctuation.section.function.definition", "punctuation.definition.lambda" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },
@@ -763,7 +763,7 @@
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, variable.other.label", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag" ], "settings": { "foreground": "#9cf" } },
+			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.other.attribute-name, entity.tag.name", "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.name.tag.namespace, entity.name.tag punctuation.separator.namespace", "settings": { "foreground": "#69c" } },
 			{ "scope": "entity.other.attribute-name.namespace, entity.other.attribute-name punctuation.separator.namespace", "settings": { "foreground": "#69c" } },
@@ -832,7 +832,8 @@
 			"errorForeground": "#fff",
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
-			"list.errorForeground": "#f05",
+			"list.errorForeground": "#c9b",
+			"list.warningForeground": "#fec",
 			"list.invalidItemForeground": "#fff",
 			"activityErrorBadge.background": "#fff",
 			"activityErrorBadge.foreground": "#000",
@@ -953,7 +954,6 @@
 
 		"[Default Dark+]": {
 			"icon.foreground": "#fec", // 40°
-			"list.warningForeground": "#fec",
 			"editor.foldPlaceholderForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",
 			"list.focusAndSelectionOutline": "#cdf", // 220°
@@ -965,8 +965,8 @@
 			"editorCursor.background": "#fff",
 			"editor.symbolHighlightBorder": "#f93",
 			"editor.symbolHighlightBackground": "#3210",
-			"editorMultiCursor.primary.foreground": "#f39", // 330°
-			"editorMultiCursor.secondary.foreground": "#93f", // 270°
+			"editorMultiCursor.primary.foreground": "#c69", // 330°
+			"editorMultiCursor.secondary.foreground": "#96c", // 270°
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",

@@ -1,12 +1,12 @@
-andersliu.insert-line-number
 darkriszty.markdown-table-prettify
-dbaeumer.vscode-eslint
+bierner.markdown-checkbox
+bierner.markdown-mermaid
+bierner.markdown-preview-github-styles
 dbankier.vscode-quick-select
 mhutchie.git-graph
 #EditorConfig.EditorConfig
 hediet.hediet-power-tools
 #hediet.vscode-drawio
-#redhat.java
 #ms-python.python
 #ms-dotnettools.csharp
 ms-vscode.powershell

@@ -323,6 +323,18 @@
 		"command": "editor.unfoldAll"
 	},
 
+	/* Ctrl+Up/Down when navigable */
+	{
+		"key": "ctrl+up",
+		"command": "widgetNavigation.focusPrevious",
+		"when": "navigableContainerFocused"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "widgetNavigation.focusNext",
+		"when": "navigableContainerFocused"
+	},
+
 	/* 📜 */
 	{
 		"key": "ctrl+up",
@@ -572,8 +584,6 @@
 	},
 
 	/* Reassign Ctrl+Up/Down when listFocus; Ctrl+Right to switch viewAs */
-	{ "key": "ctrl+up", "when": "listFocus", "command": "noop" },
-	{ "key": "ctrl+down", "when": "listFocus", "command": "noop" },
 	{
 		"key": "alt+up",
 		"command": "list.scrollUp",

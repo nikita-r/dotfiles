@@ -689,7 +689,7 @@
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
 			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.other.documentation", "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator.at", "punctuation.definition.keyword", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "keyword.operator.at"/*, "punctuation.definition.keyword"*/, "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -711,7 +711,7 @@
 			{ "scope": "punctuation.definition.group.assertion.regexp, string.regexp keyword.operator", "settings": { "foreground": "#ee7" } },
 			{ "scope": [ "support.other", "constant.regexp", "punctuation.definition.character-class.regexp", "constant.other.character-class.regexp" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "keyword.operator.negation.regexp", "punctuation.definition.character-class", "constant.other.set.regexp" ], "settings": { "foreground": "#6c9" } },
-			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option", "settings": { "foreground": "#FF8080" } },
+			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option, keyword.operator.question", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c9b" } },
@@ -723,7 +723,7 @@
 			{ "scope": [ "variable.other.constant", "variable.other.enummember" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "constant.numeric.other.suffix", "keyword.other.unit", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
-			{ "scope": "constant.other.placeholder, constant.character", "settings": { "foreground": "#0cc" } },
+			{ "scope": "constant.other.placeholder, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command" ], "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable", "settings": { "foreground": "#37f" } },
@@ -742,7 +742,7 @@
 			{ "scope": "string.quoted.double keyword.other.powershell", "settings": { "fontStyle": "bold" } },
 			{ "scope": "string.quoted.double keyword.other.powershell, invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python", "settings": { "foreground": "#cb9" } },
-			{ "scope": "source.powershell keyword.operator.other, source.powershell punctuation.terminator", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": "source.powershell keyword.operator.other, punctuation.backtick, source.powershell punctuation.terminator", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
 			//{ "scope": "punctuation.definition.dict, punctuation.definition.list, punctuation.definition.array", "settings": { "foreground": "#37f" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, string.quoted.double.sql punctuation.definition.string", "settings": { "foreground": "#c6c" } },

@@ -718,12 +718,12 @@
 	{
 		"key": "shift+alt+up",
 		"command": "editor.action.copyLinesUpAction",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "shift+alt+down",
 		"command": "editor.action.copyLinesDownAction",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 	{
 		"key": "shift+alt+up",
@@ -824,22 +824,22 @@
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "f8" },
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "shift+f8" },
 
-	/* notebookType == 'interactive' */
-	{ "command": "-interactive.execute", "key": "meta+enter" },
+	/* config.interactiveWindow.executeWithShiftEnter & not ctrl+Enter */
+	{ "command": "-notebook.cell.execute", "key": "meta+enter" },
+	{
+		"key": "ctrl+enter",
+		"command": "-interactive.execute",
+		"when": "activeEditor == 'workbench.editor.interactive'"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-repl.execute",
+		"when": "activeEditor == 'workbench.editor.repl'"
+	},
 	{ "command": "-interactive.execute", "key": "shift+enter" },
 	{
 		"key": "shift+enter",
 		"command": "interactive.execute",
-		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
-	},
-	{
-		"key": "ctrl+up",
-		"command": "interactive.history.previous",
-		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "interactive.history.next",
 		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
 
@@ -1457,6 +1457,16 @@
 		"key": "alt+down",
 		"command": "workbench.action.terminal.chat.nextFromHistory",
 		"when": "terminalChatFocus"
+	},
+	{
+		"key": "alt+up",
+		"command": "interactive.history.previous",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+	{
+		"key": "alt+down",
+		"command": "interactive.history.next",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
 	/* "ctrl+enter" may be hijacked by accept/commit */
 	{ "key": "cmd+enter", "command": "-editor.action.replaceAll" },

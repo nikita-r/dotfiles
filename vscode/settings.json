@@ -716,7 +716,7 @@
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c9b" } },
-			{ "scope": "string.verbatim, source.sql text.variable, support.other.variable.less", "settings": { "foreground": "#c9b" } },
+			{ "scope": [ "string.verbatim", "source.sql text.variable", "support.other.variable.less" ], "settings": { "foreground": "#c9b" } },
 			{ "scope": [ "variable.language", "variable.parameter.function-call", "variable.parameter.batchfile", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.operator.unary", "keyword.operator.custom.prefix", "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.other.DDL.create.II.sql" ], "settings": { "foreground": "#0af" } },
@@ -1215,7 +1215,8 @@
 	],
 
 	"workbench.editorAssociations": {
-		"*.md": "vscode.markdown.preview.editor",
+		"file:/**/*.md": "vscode.markdown.preview.editor",
+		//"{git,git-graph,gitlens}:/**/*.{md}": "default",
 	},
 
 	"editor.accessibilitySupport": "off",

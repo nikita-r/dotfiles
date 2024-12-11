@@ -1980,7 +1980,7 @@
 	{
 		"key": "ctrl+alt+j",
 		"command": "github.copilot.chat.attachFile",
-		"when": "view.workbench.panel.chat.view.copilot.visible"
+		"when": "view.workbench.panel.chat.view.copilot.visible" // view.workbench.panel.chat.view.edits.visible
 	},
 	{
 		"key": "ctrl+alt+j",
@@ -2383,7 +2383,7 @@
 	{
 		"key": "ctrl+alt+enter",
 		"command": "Command requires focus in Replace Input Box",
-		"when": "!editorFocus || !findWidgetVisible"
+		"when": "!replaceInputFocussed"
 	},
 	{
 		"key": "ctrl+alt+enter",

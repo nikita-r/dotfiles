@@ -151,6 +151,21 @@
 		"when": "textInputFocus && editorHasSelection"
 	},
 
+	/* Select All Occurrences of Find Match */
+	{
+		"key": "ctrl+shift+l",
+		"command": "runCommands", "args": { "commands": [
+			"editor.action.selectHighlights", // no-op if "No results" found
+			"workbench.action.focusActiveEditorGroup",
+		] },
+		"when": "findInputFocussed || replaceInputFocussed"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "notebook.selectAllFindMatches",
+		"when": "notebookFindWidgetFocused"
+	},
+
 	/* Ctrl+D complements */
 	{
 		"key": "alt+d d",

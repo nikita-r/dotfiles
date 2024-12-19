@@ -1483,14 +1483,14 @@
 		"command": "interactive.history.next",
 		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
-	/* "ctrl+enter" may be hijacked by accept/commit */
-	{ "key": "cmd+enter", "command": "-editor.action.replaceAll" },
+	/* "ctrl+enter" may be hijacked by accept/commit; "ctrl+shift+enter" by "*.action.replace*" */
+	{ "command": "noop", "key": "ctrl+enter" },
 	{
 		"key": "ctrl+enter",
 		"command": "editor.action.insertLineAfter",
 		"when": "textInputFocus"
 	},
-	{ "command": "noop", "key": "ctrl+shift+enter" }, // shy from "search.action.replaceAllIn*"
+	{ "command": "noop", "key": "ctrl+shift+enter" },
 	{
 		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
@@ -1995,12 +1995,22 @@
 	{
 		"key": "ctrl+alt+j",
 		"command": "github.copilot.chat.attachFile",
-		"when": "view.workbench.panel.chat.view.copilot.visible" // view.workbench.panel.chat.view.edits.visible
+		"when": "view.workbench.panel.chat.view.copilot.visible"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "github.copilot.edits.attachFile",
+		"when": "view.workbench.panel.chat.view.edits.visible"
 	},
 	{
 		"key": "ctrl+alt+j",
 		"command": "markdown.showSource",
 		"when": "activeWebviewPanelId == 'markdown.preview' || activeWebviewPanelId == 'vscode.markdown.preview.editor'"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "copilot-mermAId-diagram.view-markdown-source-from-outline",
+		"when": "activeWebviewPanelId == 'mermaidDiagram'"
 	},
 	{
 		"key": "ctrl+alt+j",

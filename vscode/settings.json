@@ -202,6 +202,7 @@
 	"workbench.tips.enabled": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.editor.empty.hint": "hidden",
+	"inlineChat.lineNaturalLanguageHint": false,
 
 	"workbench.editor.languageDetection": false,
 	"workbench.editor.historyBasedLanguageDetection": false,
@@ -737,7 +738,7 @@
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, keyword.operator.other, keyword.operator.combinator, punctuation.separator.combinator", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "meta.embedded.block.powershell keyword.operator.other", "source.powershell keyword.operator.other", "punctuation.backtick" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": [ "meta.embedded.block.powershell keyword.operator.other", "source.powershell keyword.operator.other", "punctuation.backtick", "punctuation.terminator.statement.powershell" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "keyword.operator.borrow, punctuation.definition.lifetime", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "source.yaml punctuation.definition.block, source.yaml keyword.control.flow.block-scalar, source.yaml punctuation.definition.anchor", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.definition.quote.begin.markdown", "punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },
@@ -1229,7 +1230,6 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
-	"inlineChat.mode": "live",
 	"diffEditor.ignoreTrimWhitespace": false,
 	//"diffEditor.experimental.showMoves": true,
 }

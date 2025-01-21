@@ -1617,6 +1617,7 @@
 	/* Terminal */
 	/* Emacs-mode shortcuts for readline/zle */
 	{ "command": "", "key": "ctrl+e", "when": "terminalFocus" },
+	{ "command": "", "key": "ctrl+i", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+a", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+["
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
@@ -2094,30 +2095,10 @@
 		"when": "notebookCellFocused && !inputFocus"
 	},
 
-	/* Ctrl+i is to match Ctrl+Space with regard to Suggestions and Hints */
-	{ "command": "noop", "key": "ctrl+i" },
-	{ "command": "noop", "key": "ctrl+shift+i" },
-	{ "command": "", "key": "ctrl+i", "when": "terminalFocus" },
-	{
-		"key": "ctrl+i",
-		"command": "editor.action.triggerSuggest",
-		"when": "textInputFocus && !editorHasSelection && !editorHasMultipleSelections"
-	},
-	{
-		"key": "ctrl+i",
-		"command": "focusSuggestion",
-		"when": "suggestWidgetVisible"
-	},
-	{
-		"key": "ctrl+i",
-		"command": "toggleSuggestionDetails",
-		"when": "suggestWidgetHasFocusedSuggestion"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "editor.action.triggerParameterHints",
-		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
-	},
+	/* Bring up the Suggestions Widget / Hints */
+	{ "key": "ctrl+space", "command": "editor.action.triggerSuggest", "when": "textInputFocus && !suggestWidgetVisible" },
+	{ "key": "ctrl+shift+space", "command": "editor.action.triggerParameterHints" },
+	{ "key": "ctrl+shift+space", "command": "showNextParameterHint", "when": "parameterHintsVisible" },
 
 	/* GitHub Copilot */
 	{

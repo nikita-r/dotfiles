@@ -1061,7 +1061,7 @@
 			"editor.rangeHighlightBackground": "#ABC0",
 			"editorOverviewRuler.findMatchForeground": "#A5A",
 			"editorUnicodeHighlight.background": "#0000",
-			"editorUnicodeHighlight.border": "#737",
+			"editorUnicodeHighlight.border": "#5AA",
 			"minimap.selectionOccurrenceHighlight": "#666",
 			"minimap.findMatchHighlight": "#c6c",
 			"terminal.findMatchBorder": "#30c090",

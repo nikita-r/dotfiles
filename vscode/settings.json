@@ -151,7 +151,7 @@
 	//} ] },
 
 	/* Terminal */
-	"terminal.integrated.tabs.title": "${shellType}",
+	//"terminal.integrated.tabs.title": "${shellType}",
 	//"terminal.integrated.fontFamily": "JetBrains Mono",
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
@@ -738,7 +738,7 @@
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, keyword.operator.other, keyword.operator.combinator, punctuation.separator.combinator", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "meta.embedded.block.powershell keyword.operator.other", "source.powershell keyword.operator.other", "punctuation.backtick", "punctuation.terminator.statement.powershell" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, punctuation.terminator.statement.powershell", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "keyword.operator.borrow, punctuation.definition.lifetime", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "source.yaml punctuation.definition.block, source.yaml keyword.control.flow.block-scalar, source.yaml punctuation.definition.anchor", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.definition.quote.begin.markdown", "punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },
@@ -751,7 +751,7 @@
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, string.quoted.double.sql punctuation.definition.string", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread", "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": [ "support.variable", "support.constant.variable", "support.function.git-rebase", "meta.diff.index" ], "settings": { "foreground": "#f9c" } },
+			{ "scope": [ "support.variable", "support.constant.variable", "support.function.git-rebase", "meta.diff.index", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "support.variable.property", "support.variable.magic", "meta.definition.variable.name", "meta.parameter-expansion" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "keyword.operator.arrow", "keyword.operator.lambda", "punctuation.section.function.lambda", "punctuation.section.function.definition", "punctuation.definition.lambda" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.new.cpp", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },

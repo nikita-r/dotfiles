@@ -2204,11 +2204,15 @@
 		"when": "editorTextFocus && editorHasSelection"
 	},
 
-	/* ^+C to Copy in Panel (not in Editor) */
+	/* editor.action.clipboardCopy */
 	{
 		"key": "ctrl+shift+c",
 		"command": "editor.action.clipboardCopyAction",
 		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+c",
+		"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
 	},
 
 	/* ^+V to Paste */

@@ -513,7 +513,7 @@
 	"isort.args": [ "--profile", "black" ],
 	"python.formatting.provider": "none",
 	"python.linting.enabled": false,
-	"python.languageServer": "Pylance",
+	"python.languageServer": "Pylance", // or "Jedi"
 	//"python.analysis.typeCheckingMode": "strict",
 	"python.analysis.inlayHints.callArgumentNames": "partial",
 	"python.analysis.inlayHints.functionReturnTypes": true,
@@ -1209,7 +1209,6 @@
 		},
 	],
 	"mssql.objectExplorer.groupBySchema": false,
-	"mssql.enableRichExperiences": true,
 
 	/* . . . */
 

@@ -372,6 +372,7 @@
 	"hexeditor.inspectorType": "hover", /* ms-vscode.hexeditor */
 	"hexeditor.maxFileSize": 99,
 	"mssql.copyRemoveNewLine": false, /* ms-mssql.mssql */
+	"mssql.query.displayBitAsNumber": false,
 	"quick-select.includeBackticks": false, /* dbankier.vscode-quick-select */
 	"quicktype.inferBooleanStrings": false, /* Paste JSON as Code */
 
@@ -1209,6 +1210,7 @@
 		},
 	],
 	"mssql.objectExplorer.groupBySchema": false,
+	"mssql.enableRichExperiencesDoNotShowPrompt": true,
 
 	/* . . . */
 

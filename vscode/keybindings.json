@@ -1617,7 +1617,6 @@
 	/* Terminal */
 	/* Emacs-mode shortcuts for readline/zle */
 	{ "command": "", "key": "ctrl+e", "when": "terminalFocus" },
-	{ "command": "", "key": "ctrl+i", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+a", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+["
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
@@ -2162,33 +2161,17 @@
 	{
 		"key": "shift+alt+]",
 		"command": "inlineChat.moveToNextHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
 	},
 	{
 		"key": "shift+alt+[",
 		"command": "inlineChat.moveToPreviousHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
 	},
 	{
 		"key": "shift+alt+backspace",
 		"command": "inlineChat.discardHunkChange",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest && config.inlineChat.mode == 'live'"
-	},
-	{ "command": "noop", "key": "ctrl+k i" },
-	{
-		"key": "ctrl+k i",
-		"command": "inlineChat.start",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
-	},
-	{
-		"key": "ctrl+shift+x",
-		"command": "inlineChat.startWithCurrentLine",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
-	},
-	{
-		"key": "ctrl+k i",
-		"command": "workbench.action.terminal.chat.start",
-		"when": "terminalFocusInAny"
+		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
 	},
 
 	/* Ctrl+Shift+. */
@@ -2204,12 +2187,14 @@
 		"when": "editorTextFocus && editorHasSelection"
 	},
 
-	/* editor.action.clipboardCopy */
+	/* ^+C to Copy in Panel (not in Editor) */
 	{
 		"key": "ctrl+shift+c",
 		"command": "editor.action.clipboardCopyAction",
 		"when": "panelFocus"
 	},
+
+	/* Ctrl+k Ctrl+c */
 	{
 		"key": "ctrl+k ctrl+c",
 		"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"

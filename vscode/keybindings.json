@@ -1395,6 +1395,11 @@
 
 	/* Emmet */
 	{
+		"key": "ctrl+shift+x",
+		"command": "editor.emmet.action.incrementNumberByOne",
+		"when": "editorFocus"
+	},
+	{
 		"key": "alt+d e",
 		"command": "workbench.action.showEmmetCommands",
 		"when": "editorTextFocus"
@@ -2144,13 +2149,8 @@
 	/* Quick/Suggest */
 	{
 		"key": "ctrl+k shift+i",
-		"command": "workbench.action.quickchat.toggle",
+		"command": "workbench.action.openQuickChat",
 		"when": "editorTextFocus && !editorHasMultipleSelections"
-	},
-	{
-		"key": "ctrl+k shift+i",
-		"command": "github.copilot.terminal.suggestCommand",
-		"when": "terminalFocus"
 	},
 	{
 		"key": "alt+\\",

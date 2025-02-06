@@ -7,9 +7,9 @@ mhutchie.git-graph
 #EditorConfig.EditorConfig
 hediet.hediet-power-tools
 #hediet.vscode-drawio
-#ms-python.python
-#ms-dotnettools.csharp
+ms-python.python
 ms-vscode.powershell
+PowerQuery.vscode-powerquery
 rosshamish.kuskus-kusto-syntax-highlighting
 #gruntfuggly.todo-tree
 ms-vscode.hexeditor

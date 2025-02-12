@@ -545,10 +545,14 @@
 	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
 	"typescript.inlayHints.variableTypes.enabled": true,
 
-	/* ~codeFormatting */
+	/* markup */
+	"xml.foldings.includeClosingTagInFold": true,
+
+	/* codes formatting styles */
 	"html.format.wrapAttributes": "force-expand-multiline",
 	"html.format.wrapAttributesIndentSize": 1,
 	"html.format.wrapLineLength": 0,
+	"xml.format.maxLineWidth": 0,
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
@@ -663,7 +667,7 @@
 		//},
 		"Command Prompt": {
 			"path": [ "${env:windir}\\System32\\cmd.exe" ],
-			"args": [ "/K", "cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
+			"args": [ "/K", "set PYTHON_BASIC_REPL=1 & cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
 		},
 	},
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
@@ -1122,7 +1126,7 @@
 
 	//"files.simpleDialog.enable": true,
 	"window.dialogStyle": "custom",
-	//"window.openFilesInNewWindow": "default",
+	"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
 
 	"window.zoomLevel": 0.0,
@@ -1153,6 +1157,7 @@
 
 	"files.associations": {
 		"*.qss": "css",
+		"*.svg": "xml",
 	},
 
 	"[json]": { "editor.maxTokenizationLineLength": 10240000 },
@@ -1230,7 +1235,7 @@
 
 	"workbench.editorAssociations": {
 		"file:/**/*.md": "vscode.markdown.preview.editor",
-		//"{git,git-graph,gitlens}:/**/*.{md}": "default",
+		"{git,git-graph,gitlens}:/**/*.{md,svg}": "default",
 	},
 
 	"editor.accessibilitySupport": "off",

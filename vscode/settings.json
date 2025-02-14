@@ -207,6 +207,7 @@
 	"inlineChat.lineNaturalLanguageHint": false,
 
 	"workbench.editor.languageDetection": false,
+	//"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
 	"workbench.editor.historyBasedLanguageDetection": false,
 
 	"workbench.editor.openPositioning": "first",
@@ -547,6 +548,7 @@
 
 	/* markup */
 	"xml.foldings.includeClosingTagInFold": true,
+	"markdown.updateLinksOnFileMove.enabled": "prompt",
 
 	/* codes formatting styles */
 	"html.format.wrapAttributes": "force-expand-multiline",
@@ -803,11 +805,9 @@
 		"types": "#dcf",
 		"variables": "#9cf",
 	} },
-	"editor.semanticTokenColorCustomizations": { "[Default Dark+]": {
-		"rules": {
-			"*.typeHint": "#69c",
-		}
-	} },
+	"editor.semanticTokenColorCustomizations": { "[Default Dark+]": { "rules": {
+		"*.typeHint": "#69c",
+	} } },
 	"editor.semanticHighlighting.enabled": false,
 
 	"workbench.colorCustomizations": {
@@ -1124,8 +1124,8 @@
 
 	/* UI layout */
 
-	//"files.simpleDialog.enable": true,
 	"window.dialogStyle": "custom",
+	//"files.simpleDialog.enable": true,
 	"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
 

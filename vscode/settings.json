@@ -379,6 +379,7 @@
 	"hexeditor.maxFileSize": 99,
 	"mssql.copyRemoveNewLine": false, /* ms-mssql.mssql */
 	"mssql.query.displayBitAsNumber": false,
+	"mssql.autoDisableNonTSqlLanguageService": false,
 	"quick-select.includeBackticks": false, /* dbankier.vscode-quick-select */
 	"quicktype.inferBooleanStrings": false, /* Paste JSON as Code */
 
@@ -745,7 +746,7 @@
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator" ], "settings": { "foreground": "#f96" } },
 			{ "scope": "punctuation.definition.link.title, punctuation.definition.comment.shebang, string.other.modeline, constant.string", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.big-arrow", "punctuation.definition.subshell", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
+			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": "source.powershell keyword.other, keyword.operator.other, keyword.operator.combinator, punctuation.separator.combinator", "settings": { "foreground": "#ffd700" } },
@@ -761,7 +762,7 @@
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
 			//{ "scope": "punctuation.definition.dict, punctuation.definition.list, punctuation.definition.array, punctuation.definition.table.inline", "settings": { "foreground": "#37f" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, string.quoted.double.sql punctuation.definition.string", "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
+			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.rest, punctuation.destructuring, punctuation.section.array", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "support.variable", "support.constant.variable" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "support.variable.property", "support.variable.magic", "meta.definition.variable.name", "meta.parameter-expansion" ], "settings": { "foreground": "#9cf" } },
@@ -908,7 +909,7 @@
 			"editorGroup.border": "#666",
 			"editorRuler.foreground": "#3c96", // 160°
 			"debugToolBar.background": "#023", // 200°
-			"debugIcon.restartForeground": "#fec", // 40°
+			"debugIcon.restartForeground": "#fec",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
 			"editorHoverWidget.background": "#203038",
@@ -938,19 +939,19 @@
 			"scmGraph.foreground2": "#208000",
 			"scmGraph.foreground3": "#C04080",
 			"scmGraph.foreground4": "#40C0C0",
-			"scmGraph.foreground5": "#b66dff",
+			"scmGraph.foreground5": "#b66dff", // 270°
 			"scmGraph.historyItemHoverAdditionsForeground": "#80C080",
 			"scmGraph.historyItemHoverDeletionsForeground": "#C66",
 			"gitDecoration.conflictingResourceForeground": "#7ee",
 			"gitDecoration.deletedResourceForeground": "#C66",
 			"gitDecoration.stageDeletedResourceForeground": "#C66",
-			"gitDecoration.modifiedResourceForeground": "#cb9",
+			"gitDecoration.modifiedResourceForeground": "#cb9", // 40°
 			"gitDecoration.stageModifiedResourceForeground": "#cb9",
 			"gitDecoration.addedResourceForeground": "#80C080",
 			"gitDecoration.renamedResourceForeground": "#80C080",
 			"gitDecoration.untrackedResourceForeground": "#99f",
 			"gitDecoration.submoduleResourceForeground": "#99f",
-			"gitDecoration.ignoredResourceForeground": "#7aa3cc",
+			"gitDecoration.ignoredResourceForeground": "#7aa3cc", // 210°
 
 			/* on break */
 			"editor.stackFrameHighlightBackground": "#c0c3",
@@ -996,7 +997,7 @@
 			"editor.background": "#1a1a1a",
 			//"editorStickyScroll.background": "#2d2d2d",
 			//"editorStickyScrollHover.background": "#3a3a3a",
-			"editorCodeLens.foreground": "#86c",
+			"editorCodeLens.foreground": "#86c", // 260°
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
 			"list.deemphasizedForeground": "#7aa3cc",
@@ -1200,6 +1201,7 @@
 
 	"workbench.editor.customLabels.patterns": {
 		"**/.*": "${dirname}┇${filename}",
+		"**/index.*": "${dirname}┇${filename}.${extname}",
 	},
 
 	/* situational per-extension configs */

@@ -207,7 +207,7 @@
 	"inlineChat.lineNaturalLanguageHint": false,
 
 	"workbench.editor.languageDetection": false,
-	//"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
+	"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
 	"workbench.editor.historyBasedLanguageDetection": false,
 
 	"workbench.editor.openPositioning": "first",
@@ -878,7 +878,7 @@
 			"editorBracketMatch.background": "#0000",
 			"editorBracketHighlight.foreground1": "#ffd700",
 			"editorBracketHighlight.foreground2": "#c6c",
-			"editorBracketHighlight.foreground3": "#37f",
+			"editorBracketHighlight.foreground3": "#37f", // 220°
 			"editorBracketHighlight.foreground4": "#1230",
 			"editorBracketHighlight.foreground5": "#1230",
 			"editorBracketHighlight.foreground6": "#1230",
@@ -935,9 +935,9 @@
 
 			/* -|- */
 			"scmGraph.historyItemRemoteRefColor": "#804080",
-			"scmGraph.foreground1": "#ffb000",
-			"scmGraph.foreground2": "#208000",
-			"scmGraph.foreground3": "#C04080",
+			"scmGraph.foreground1": "#fa0", // 40°
+			"scmGraph.foreground2": "#208000", // 105°
+			"scmGraph.foreground3": "#C04080", // 330°
 			"scmGraph.foreground4": "#40C0C0",
 			"scmGraph.foreground5": "#b66dff", // 270°
 			"scmGraph.historyItemHoverAdditionsForeground": "#80C080",
@@ -956,7 +956,7 @@
 			/* on break */
 			"editor.stackFrameHighlightBackground": "#c0c3",
 			"editor.focusedStackFrameHighlightBackground": "#0c03",
-			"debugIcon.breakpointForeground": "#c63",
+			"debugIcon.breakpointForeground": "#c63", // 20°
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
 			"debugIcon.breakpointStackframeForeground": "#c3c",
 			"editor.inlineValuesBackground": "#333",
@@ -977,7 +977,7 @@
 			"icon.foreground": "#fec", // 40°
 			"editor.foldPlaceholderForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",
-			"list.focusAndSelectionOutline": "#cdf", // 220°
+			"list.focusAndSelectionOutline": "#cdf",
 			"notificationCenterHeader.foreground": "#fec",
 			"notifications.border": "#ccc",
 			"badge.background": "#515",
@@ -995,14 +995,12 @@
 			/* text */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
-			//"editorStickyScroll.background": "#2d2d2d",
-			//"editorStickyScrollHover.background": "#3a3a3a",
 			"editorCodeLens.foreground": "#86c", // 260°
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
 			"list.deemphasizedForeground": "#7aa3cc",
 			"list.focusHighlightForeground": "#ffd700",
-			"textPreformat.background": "#124",
+			"textPreformat.background": "#124", // 220°
 			"textPreformat.foreground": "#cdf",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",

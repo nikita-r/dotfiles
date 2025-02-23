@@ -237,6 +237,10 @@
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": false,
 
+	/* SectionHeaders */
+	"editor.minimap.sectionHeaderFontSize": 12,
+	"editor.minimap.sectionHeaderLetterSpacing": 2,
+
 	"editor.comments.insertSpace": false,
 	//"editor.comments.ignoreEmptyLines": false,
 
@@ -840,6 +844,7 @@
 			"checkbox.border": "#707880",
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
+			"panelSectionHeader.background": "#202428",
 			"input.background": "#384048",
 			"input.placeholderForeground": "#abc0", //"#8090A0",
 			"inputOption.hoverBackground": "#202428",
@@ -1125,11 +1130,11 @@
 
 	"window.dialogStyle": "custom",
 	//"files.simpleDialog.enable": true,
-	"window.openFilesInNewWindow": "default",
+	//"window.openFilesInNewWindow": "default",
 	"window.newWindowDimensions": "offset",
 
 	"window.zoomLevel": 0.0,
-	"workbench.editor.centeredLayoutFixedWidth": true,
+	//"workbench.editor.centeredLayoutFixedWidth": true,
 	"workbench.editor.splitOnDragAndDrop": false,
 
 	//"window.menuBarVisibility": "hidden",
@@ -1234,7 +1239,7 @@
 	],
 
 	"workbench.editorAssociations": {
-		"file:/**/*.md": "vscode.markdown.preview.editor",
+		//"file:/**/*.md": "vscode.markdown.preview.editor",
 		"{git,git-graph,gitlens}:/**/*.{md,svg}": "default",
 	},
 

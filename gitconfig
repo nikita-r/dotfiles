@@ -78,7 +78,7 @@
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
 [alias]
-	dc = ! set -f && git diff -w --ignore-blank-lines --word-diff=color -C "$@" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dc = ! set -f && git diff -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
 	db = diff -b --ignore-blank-lines --stat
 
@@ -97,7 +97,7 @@
 	trustExitCode = true
 
 [merge]
-	conflictStyle = zdiff3
+	conflictStyle = diff3 # "zdiff3" zealously introduced in v2.35 (Jan 2022)
 
 #[core]
 #	editor = code -w

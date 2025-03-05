@@ -154,6 +154,7 @@
 	"terminal.integrated.tabs.title": "${process}${separator}${progress}",
 	//"terminal.integrated.fontFamily": "JetBrains Mono",
 	//"terminal.integrated.fontLigatures.enabled": true,
+	//"terminal.integrated.gpuAcceleration": "off",
 	//"terminal.integrated.fontLigatures.featureSettings": "'zero', 'cv03', 'cv10', 'cv11', 'cv15', 'cv16', 'cv18', 'cv99'",
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
@@ -537,7 +538,6 @@
 	"javascript.suggestionActions.enabled": false,
 	"typescript.suggestionActions.enabled": false,
 	"js/ts.implicitProjectConfig.experimentalDecorators": true,
-	/* inlay */
 	"javascript.inlayHints.enumMemberValues.enabled": true,
 	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
 	"javascript.inlayHints.parameterNames.enabled": "all",
@@ -608,9 +608,6 @@
 	"debug.showVariableTypes": true,
 
 	/* Terminal */
-
-	//"terminal.integrated.gpuAcceleration": "off",
-	"terminal.integrated.experimental.windowsUseConptyDll": true,
 
 	"terminal.integrated.hideOnStartup": "whenEmpty", // on startup, hide the panel if Terminal View is active, unless a Persistent Session can be restored
 	"terminal.integrated.confirmOnExit": "hasChildProcesses", // not "always"
@@ -778,7 +775,7 @@
 			{ "scope": [ "keyword.operator.arrow", "keyword.operator.lambda", "punctuation.section.function.lambda", "punctuation.section.function.definition", "punctuation.definition.lambda" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.other.operator", "keyword.operator.delete", "keyword.operator.channel", "keyword.operator.new.cpp", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.expression, keyword.operator.asp, keyword.other.alias.sql, keyword.operator.new", "settings": { "foreground": "#ee7" } },
-			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.comparison.sql, keyword.operator.math.sql, keyword.operator.star", "settings": { "foreground": "#FF8080" } },
+			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.assignment.ahk, keyword.operator.comparison.sql, keyword.operator.math.sql, keyword.operator.star", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment, keyword.operator.eq, punctuation.definition.equals, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.map.value, punctuation.separator.dict, keyword.operator.update", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -787,7 +784,7 @@
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, variable.other.label, variable.other.anchor.yaml, variable.other.alias.yaml", "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field" ], "settings": { "foreground": "#9cf" } },
+			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field", "storage.modifier.sql" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "entity.other.attribute-name", "entity.tag.name", "support.constant.attribute" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.name.tag.namespace, entity.name.tag punctuation.separator.namespace", "settings": { "foreground": "#69c" } },
 			{ "scope": "entity.other.attribute-name.namespace, entity.other.attribute-name punctuation.separator.namespace", "settings": { "foreground": "#69c" } },

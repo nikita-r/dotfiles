@@ -128,6 +128,18 @@ function normalize-space([string]$str) { # like XPath
     $str -replace '^\s+' -replace '\s+$' -replace '\s+', ' '
 }
 
+function Format-Time {
+  begin { Set-StrictMode -Off }
+  process {
+    if ($args.Count -gt 1) {
+      $input = $args -join ' '
+    } elseif ($args.Count -eq 1) {
+      $input = $args
+    }
+    $input |% { (Get-Date $_ -f s) + (Get-Date $_ -F.fffffff) }
+  }
+}
+
 
 <# misc Getters #>
 
@@ -226,15 +238,18 @@ function Is-Numeric ($x) {
 
 function Get-Epoch-Timestamp ($x) {
   $epoch = Get-Date 1970-1-1
+  Write-Host 'Unix epoch UTC' $epoch -ForegroundColor Yellow
 
   if (Is-Numeric $x) {
     try {
       $datetime = $epoch.AddSeconds($x)
+      $textDate = (Get-Date $datetime -f s)
     } catch [ArgumentOutOfRangeException] {
-      Write-Host 'consider as milliseconds' -ForegroundColor Yellow
+      Write-Host 'consider arg as milliseconds' -ForegroundColor Yellow
       $datetime = $epoch.AddSeconds($x / 1000)
+      $textDate = (Get-Date $datetime -f s) + (Get-Date $datetime -F.fff)
     }
-    return (Get-Date $datetime -f s) + 'Z'
+    return $textDate + 'Z'
   }
 
   if ($null -eq $x) {

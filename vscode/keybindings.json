@@ -2106,6 +2106,11 @@
 
 	/* GitHub Copilot */
 	{
+		"key": "alt+\\",
+		"command": "editor.action.inlineSuggest.trigger",
+		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
+	},
+	{
 		"key": "enter",
 		"command": "noop",
 		"when": "inChatInput && !chatInputHasText"
@@ -2118,6 +2123,12 @@
 	{
 		"key": "ctrl+win+i",
 		"command": "workbench.action.chat.open"
+	},
+	/* Higher Chat */
+	{
+		"key": "ctrl+k shift+i",
+		"command": "workbench.action.openQuickChat",
+		"when": "editorTextFocus && !editorHasMultipleSelections"
 	},
 	/* Completions Panel */
 	{ "command": "noop", "key": "shift+ctrl+alt+i" },
@@ -2132,9 +2143,9 @@
 		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
-		"key": "ctrl+enter",
+		"key": "ctrl+\\", // resourceScheme == 'webview-panel'
 		"command": "github.copilot.acceptCursorPanelSolution",
-		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'" // resourceScheme == 'webview-panel'
+		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
 	},
 	{
 		"key": "ctrl+]",
@@ -2145,17 +2156,6 @@
 		"key": "ctrl+[",
 		"command": "github.copilot.previousPanelSolution",
 		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
-	},
-	/* Quick/Suggest */
-	{
-		"key": "ctrl+k shift+i",
-		"command": "workbench.action.openQuickChat",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
-	},
-	{
-		"key": "alt+\\",
-		"command": "editor.action.inlineSuggest.trigger",
-		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	/* Inline Chat */
 	{

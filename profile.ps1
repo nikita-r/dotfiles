@@ -129,15 +129,12 @@ function normalize-space([string]$str) { # like XPath
 }
 
 function Format-Time {
-  begin { Set-StrictMode -Off }
-  process {
-    if ($args.Count -gt 1) {
-      $input = $args -join ' '
-    } elseif ($args.Count -eq 1) {
-      $input = $args
-    }
-    $input |% { (Get-Date $_ -f s) + (Get-Date $_ -F.fffffff) }
+  if ($args.Count -gt 1) {
+    $input = $args -join ' '
+  } elseif ($args.Count -eq 1) {
+    $input = $args[0]
   }
+  $input |% { (Get-Date $_ -f s) + (Get-Date $_ -F.fffffff) }
 }
 
 

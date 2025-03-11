@@ -144,8 +144,6 @@
 	//	"scope": [
 	//		"comment.block",
 	//		"meta.function.decorator",
-	//		"variable.parameter.function.language.special.cls.python",
-	//		"variable.parameter.function.language.special.self.python",
 	//	],
 	//	"settings": { "fontStyle": "italic" }
 	//} ] },
@@ -553,6 +551,7 @@
 
 	/* markup */
 	"xml.foldings.includeClosingTagInFold": true,
+	"xml.server.preferBinary": true,
 	"markdown.updateLinksOnFileMove.enabled": "prompt",
 
 	/* codes formatting styles */
@@ -600,7 +599,7 @@
 	//"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
 	"debug.inlineValues": "on",
-	"notebook.inlineValues": true,
+	"notebook.inlineValues": "auto",
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.showBreakpointsInOverviewRuler": true,
 	"debug.showInlineBreakpointCandidates": false,
@@ -732,7 +731,8 @@
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c9b" } },
 			{ "scope": [ "string.verbatim", "source.sql text.variable", "support.other.variable.less" ], "settings": { "foreground": "#c9b" } },
-			{ "scope": [ "variable.language", "variable.parameter.function-call", "constant.language.symbol.hashkey", "variable.parameter.batchfile", "punctuation.definition.variable.percent", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
+			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "constant.language.symbol.hashkey", "variable.parameter.batchfile", "punctuation.definition.variable.percent", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
+			{ "scope": "variable.language.this, variable.language.self, variable.language.special, variable.parameter.function.language.special", "settings": { "fontStyle": "italic" } },
 			{ "scope": [ "constant.language", "keyword.keys" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.unary", "keyword.operator.custom.prefix", "keyword.operator.arithmetic.shell", "punctuation.section.arithmetic" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.word.logical", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
@@ -755,10 +755,10 @@
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
-			{ "scope": "source.powershell keyword.other, keyword.operator.other, keyword.operator.combinator, punctuation.separator.combinator", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "source.powershell keyword.other, keyword.operator.other, keyword.operator.combinator, punctuation.separator.combinator, keyword.operator.range, punctuation.separator.slice", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, keyword.operator.pipe.haskell, punctuation.separator.statement.viml, punctuation.terminator.statement.powershell", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": "keyword.operator.borrow, punctuation.definition.lifetime, keyword.operator.type.ts, punctuation.definition.anchor.yaml, punctuation.definition.alias.yaml", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
-			{ "scope": "entity.name.type.lifetime", "settings": { "fontStyle": "underline" } },
+			{ "scope": [ "entity.name.type.lifetime" ], "settings": { "fontStyle": "underline" } },
 			{ "scope": "source.yaml punctuation.definition.block, source.yaml keyword.control.flow.block-scalar", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.definition.quote.begin.markdown", "punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.definition.evaluation.backticks", "punctuation.definition.string.template", "punctuation.definition.raw", "punctuation.definition.markdown" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },

@@ -1,6 +1,5 @@
 [
 	/*
-	$: editor.action.dirtydiff.next: "alt+f3"
 	$: editor.action.insertCursorAtEndOfEachLineSelected: "shift+alt+i"
 	$: editor.action.removeBrackets: "ctrl+alt+backspace"
 	$: editor.action.replaceAll: "ctrl+alt+enter"
@@ -306,10 +305,6 @@
 		"command": "editor.action.blockComment"
 	},
 	{
-		"key": "ctrl+/",
-		"command": "editor.action.commentLine"
-	},
-	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
 	},
@@ -541,7 +536,7 @@
 	{ "command": "", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
 	{ "command": "", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
 
-	/* Sublime Text defaults: "move", "by": "subword*s" */
+	/* option cursor left/right */
 	{
 		"key": "alt+left",
 		"command": "cursorWordPartLeft",
@@ -1666,7 +1661,7 @@
 	{
 		"key": "ctrl+/",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
+		"when": "!terminalSuggestWidgetVisible && (terminalFindFocused || terminalFocus || terminalTabsFocus)",
 		"args": { "text": "\u001f" } // readline undo
 	},
 	{
@@ -2124,7 +2119,7 @@
 		"key": "ctrl+win+i",
 		"command": "workbench.action.chat.open"
 	},
-	/* Higher Chat */
+	/* Upper Chat */
 	{
 		"key": "ctrl+k shift+i",
 		"command": "workbench.action.openQuickChat",

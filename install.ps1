@@ -1,7 +1,5 @@
 
-$urlRaw = 'https://raw.githubusercontent.com/nikita-r/dotfiles/master'
-
-
+<# copying to User #>
 if (Get-Variable IsMacOS -ea:0 -ValueOnly) {
 
 $dirCode = "$env:HOME/Library/Application Support/Code"
@@ -9,13 +7,8 @@ $dirCode = "$env:HOME/Library/Application Support/Code"
 
 New-Item $dirCode/User -Type Dir -ea:0 | Out-Null
 
-$urlPath = "$urlRaw/vscode"
-
-# 'settings.json'
-Invoke-WebRequest $urlPath/settings.json -OutFile $dirCode/User/settings.json
-
-# 'keybindings.json'
-$json = Invoke-WebRequest -UseBasicParsing $urlPath/keybindings.json
+$filename = 'keybindings.json'
+$json = Get-Content ./vscode/$filename
 $json -split "`n" |% {
   if ($_ -match '"ctrl\+(shift\+)?space"') { return $_ }
   if ($_ -match '"ctrl\+shift\+a"') { return }
@@ -29,13 +22,16 @@ $json -split "`n" |% {
     if ($_ -match '"ctrl\+alt\+(up|down|\\\\)"') { return $_ }
   }
   $_ `
-    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g]|\\)"', '"key": "$2$1md+$3"' `
+    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g])"', '"key": "$2$1md+$3"' `
     -iReplace '"key": "(shift)\+(c)trl\+([^+"]+)"', '"key": "$2md+$1+$3"' `
     -iReplace '"key": "(c)trl\+(alt)\+([^+"]+)"', '"key": "$2+$1md+$3"' `
     -iReplace '"key": "(c)trl\+(shift)\+(alt)\+([^+"]+)"', '"key": "$2+$3+$1md+$4"' `
     -iReplace '"key": "ctrl\+k ctrl\+([^"]+\+)?([^"]+)"', '"key": "cmd+k $1cmd+$2"' `
     -iReplace '"key": "ctrl\+k ([^"]+)"', '"key": "cmd+k $1"' `
-} | Out-File $dirCode/User/keybindings.json
+} | Out-File $dirCode/User/$filename
+
+$filename = 'settings.json'
+Copy-Item ./vscode/$filename $dirCode/User/$filename
 
 } else {
 
@@ -45,16 +41,18 @@ $dirCode = "$env:AppData\Code"
 New-Item $dirCode\User -Type Dir -ea:0 | Out-Null
 
 'keybindings.json', 'settings.json' |% {
-  iwr $urlRaw/vscode/$_ -OutFile $dirCode\User\$_
+  Copy-Item .\vscode\$_ $dirCode\User\$_
 }
 
 }
 
 
+$urlRaw = 'https://raw.githubusercontent.com/nikita-r/dotfiles/master'
 $tmp = New-TemporaryFile
 $tmp = Rename-Item $tmp ($tmp.FullName + '.vsix') -PassThru
-'JohannesRudolph.file-ext-switcher-3.2.0', 'alefragnani.Bookmarks-13.5.66', 'alefragnani.numbered-bookmarks-8.4.66',
-'ctf0.macros-1.1.0', 'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0', 'my.feather-vscode-1.0.17' |% {
+'ctf0.macros-0.0.4', 'my.feather-vscode-1.0.17',
+'alefragnani.Bookmarks-13.5.66', 'alefragnani.numbered-bookmarks-8.4.66',
+'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0' |% {
   Write-Host "$_.vsix"
   Invoke-WebRequest $urlRaw/vscode-vsix/"$_.vsix" -OutFile $tmp
   if (Get-Variable IsWindows -ea:0 -ValueOnly) {
@@ -75,4 +73,3 @@ Remove-Item $tmp
     code --install-extension $_
   }
 }
-

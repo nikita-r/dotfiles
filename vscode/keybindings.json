@@ -1973,10 +1973,10 @@
 		"when": "inQuickOpen"
 	},
 
-	/* file-ext-switcher */
+	/* switch between relateds */
 	{
 		"key": "shift+alt+,",
-		"command": "fileextswitch",
+		"command": "fileextswitch", /* JohannesRudolph.file-ext-switcher */
 		"args": {
 			"extensions": [
 				".aspx",
@@ -1989,6 +1989,11 @@
 			],
 			//"useOtherColumn": true
 		}
+	},
+	{
+		"key": "shift+alt+,",
+		"command": "C_Cpp.SwitchHeaderSource",
+		"when": "config.C_Cpp.intelliSenseEngine && editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/"
 	},
 
 	/* Ctrl+Alt+j */

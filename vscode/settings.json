@@ -698,6 +698,7 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
+			{ "scope": [ "source" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown", "string.quoted.double.sql", "string.interpolated.backtick", "variable.interpolation" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor.string", "markup.bold", "markup.italic", "string.unquoted.heredoc", "constant.other.symbol.ruby", "constant.language.symbol" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
@@ -738,7 +739,7 @@
 			{ "scope": [ "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.word.logical", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.other.DDL.create.II.sql" ], "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.optional, keyword.operator.definiteassignment, keyword.operator.glob, entity.name.tag.wildcard, entity.other.attribute-name.parent.less", "settings": { "foreground": "#0af" } },
-			{ "scope": "punctuation.definition.constant, punctuation.section.symbol, punctuation.definition.quotedidentifier, string.quoted.byte.raw.rust, punctuation.definition.string.raw", "settings": { "foreground": "#0af" } },
+			{ "scope": "punctuation.definition.constant, punctuation.definition.symbol, punctuation.section.symbol, punctuation.definition.quotedidentifier, string.quoted.byte.raw.rust, punctuation.definition.string.raw", "settings": { "foreground": "#0af" } },
 			{ "scope": "constant.language.polymorphic-variant.ocaml", "settings": { "fontStyle": "italic", "foreground": "#dcf" } },
 			{ "scope": [ "variable.other.constant", "variable.other.enummember", "constant.language.capital-identifier.ocaml" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "keyword.other.order.sql", "constant.other.caps" ], "settings": { "foreground": "#b9f" } },

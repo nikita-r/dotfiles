@@ -140,7 +140,7 @@
 	{
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",
-		"when": "editorTextFocus"
+		"when": "!inChatInput"
 	},
 	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
@@ -297,6 +297,11 @@
 	{
 		"key": "alt+a",
 		"command": "editor.action.commentLine"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "editor.action.commentLine",
+		"when": "!inChatInput"
 	},
 
 	/* take KB from Default Keyboard Shortcuts for Windows, but drop the "when" */
@@ -2001,11 +2006,6 @@
 		"key": "ctrl+alt+j",
 		"command": "github.copilot.chat.attachFile",
 		"when": "view.workbench.panel.chat.view.copilot.visible"
-	},
-	{
-		"key": "ctrl+alt+j",
-		"command": "github.copilot.edits.attachFile",
-		"when": "view.workbench.panel.chat.view.edits.visible"
 	},
 	{
 		"key": "ctrl+alt+j",

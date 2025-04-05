@@ -27,7 +27,7 @@
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
-	//{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
+	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
 
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // instead of "ctrl+shift+;"
@@ -46,8 +46,7 @@
 		"when": "accessibleViewCurrentProviderId == 'terminal' || terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
-	{ "command": "noop", "key": "alt+/" },
-	{ "command": "noop", "key": "alt+\\" },
+	{ "command": "", "key": "alt+\\" },
 	{ "command": "", "key": "alt+-" },
 	{ "command": "", "key": "alt+=" },
 	{ "command": "", "key": "shift+alt+o" },
@@ -2106,7 +2105,11 @@
 
 	/* GitHub Copilot */
 	{
-		"key": "alt+\\",
+		"key": "ctrl+shift+i",
+		"command": "Command requires single cursor and no selection in Editor"
+	},
+	{
+		"key": "ctrl+shift+i",
 		"command": "editor.action.inlineSuggest.trigger",
 		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
@@ -2251,18 +2254,6 @@
 		"when": "editorTextFocus && editorHasSelection && !inSnippetMode && !editorTabMovesFocus && !suggestWidgetVisible && !editorReadonly"
 	},
 
-	/* Word Wrap */
-	{ "command": "", "key": "alt+z" },
-	{
-		"key": "ctrl+alt+z",
-		"command": "editor.action.toggleWordWrap"
-	},
-	{
-		"key": "ctrl+alt+z",
-		"command": "workbench.action.terminal.sizeToContentWidth",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
-	},
-
 	/* User-Defined Snippets */
 	/* https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax */
 	{
@@ -2311,14 +2302,24 @@
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
 	{ "when": "!isMac && textInputFocus", "key": "alt+j",
 	  "command": "type", "args": { "text": "∆" } },
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+/",
+	  "command": "type", "args": { "text": "¿" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+'",
+	  "command": "type", "args": { "text": "æ" } },
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+'",
+	  "command": "type", "args": { "text": "Æ" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+\\",
+	  "command": "type", "args": { "text": "«" } },
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+\\",
+	  "command": "type", "args": { "text": "»" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+3",
 	  "command": "type", "args": { "text": "‹" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+4",
 	  "command": "type", "args": { "text": "›" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+5",
 	  "command": "type", "args": { "text": "∞" } },
-	{ "when": "!isMac && textInputFocus", "key": "alt+z",
-	  "command": "type", "args": { "text": "\u03a9" } },
+	//{ "when": "!isMac && textInputFocus", "key": "alt+z",
+	//  "command": "type", "args": { "text": "\u03a9" } },
 
 	/* editor.action & search.action to Find/Replace */
 	{
@@ -2387,7 +2388,6 @@
 	},
 
 	/*~*~*~*/
-	{ "key": "alt+shift+\\", "command": "workbench.action.remote.showMenu" },
 	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },

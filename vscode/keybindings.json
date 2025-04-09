@@ -1588,6 +1588,11 @@
 		"command": "workbench.action.inspectContextKeys"
 	},
 
+	/* !^Z */
+	{ "key": "ctrl+z", "command": "default:undo" },
+	{ "key": "alt+z", "command": "editor.action.toggleWordWrap" },
+	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth" },
+
 	/* v1.57 release removed this kb */
 	{
 		"key": "ctrl+w",

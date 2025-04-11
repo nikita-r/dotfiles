@@ -85,19 +85,24 @@
 		"key": "ctrl+k t",
 		"command": "workbench.action.reopenClosedEditor"
 	},
-	/* Ctrl+k n/N: for New */
+	/* ^K *N for New */
 	{
 		"key": "ctrl+k n",
 		"command": "workbench.action.files.newUntitledFile"
 	},
-	{
-		"key": "ctrl+k shift+n", /* vscode-github-issue-notebooks */
-		"command": "workbench.action.files.newUntitledFile", "args": { "viewType": "github-issues" }
-	},
+	//{
+	//	"key": "ctrl+k shift+n", /* vscode-github-issue-notebooks */
+	//	"command": "workbench.action.files.newUntitledFile", "args": { "viewType": "github-issues" }
+	//},
 	{
 		"key": "ctrl+k n",
 		"command": "explorer.newFile",
 		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+k shift+n",
+		"command": "workbench.action.moveEditorGroupToNewWindow",
+		"when": "groupEditorsCount || groupEditorsCount == 0"
 	},
 	{
 		"key": "ctrl+k shift+n",
@@ -107,12 +112,7 @@
 	{
 		"key": "ctrl+k shift+n",
 		"command": "workbench.action.terminal.moveIntoNewWindow",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+k shift+n",
-		"command": "workbench.action.moveEditorGroupToNewWindow",
-		"when": "groupEditorsCount || groupEditorsCount == 0"
+		"when": "!terminalEditorActive && (terminalFocusInAny || terminalFindFocused || terminalTabsFocus)"
 	},
 	{
 		"key": "ctrl+k ctrl+n",
@@ -337,18 +337,6 @@
 		"command": "editor.unfoldAll"
 	},
 
-	/* Ctrl+Up/Down when navigable */
-	{
-		"key": "ctrl+up",
-		"command": "widgetNavigation.focusPrevious",
-		"when": "navigableContainerFocused"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "widgetNavigation.focusNext",
-		"when": "navigableContainerFocused"
-	},
-
 	/* 📜 */
 	{
 		"key": "ctrl+up",
@@ -385,6 +373,18 @@
 		"when": "editorFocus && !editorHoverFocused",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "line", "to": "down" }
+	},
+
+	/* Ctrl+Up/Down when navigable */
+	{
+		"key": "ctrl+up",
+		"command": "widgetNavigation.focusPrevious",
+		"when": "navigableContainerFocused"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "widgetNavigation.focusNext",
+		"when": "navigableContainerFocused"
 	},
 
 	/* Unfold All Cells */
@@ -840,16 +840,6 @@
 
 	/* config.interactiveWindow.executeWithShiftEnter & not ctrl+Enter */
 	{ "command": "-notebook.cell.execute", "key": "meta+enter" },
-	{
-		"key": "ctrl+enter",
-		"command": "-interactive.execute",
-		"when": "activeEditor == 'workbench.editor.interactive'"
-	},
-	{
-		"key": "ctrl+enter",
-		"command": "-repl.execute",
-		"when": "activeEditor == 'workbench.editor.repl'"
-	},
 	{ "command": "-interactive.execute", "key": "shift+enter" },
 	{
 		"key": "shift+enter",
@@ -1591,7 +1581,7 @@
 	/* !^Z */
 	{ "key": "ctrl+z", "command": "default:undo" },
 	{ "key": "alt+z", "command": "editor.action.toggleWordWrap" },
-	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth" },
+	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth", "when": "terminalFocusInAny" },
 
 	/* v1.57 release removed this kb */
 	{
@@ -1658,7 +1648,7 @@
 	{
 		"key": "ctrl+z",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "terminalTabsFocus",
+		"when": "terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001a" } // ^Z
 	},
 	{
@@ -2008,7 +1998,7 @@
 	/* Ctrl+Alt+j */
 	{
 		"key": "ctrl+alt+j",
-		"command": "github.copilot.chat.attachFile",
+		"command": "workbench.action.chat.attachFile",
 		"when": "view.workbench.panel.chat.view.copilot.visible"
 	},
 	{

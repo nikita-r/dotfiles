@@ -311,30 +311,6 @@
 	"csv-preview.lineNumbers": "source",
 	"csv-preview.skipComments": true,
 
-	"highlight-matching-tag.highlightFromContent": true,
-	"highlight-matching-tag.highlightSelfClosing": true,
-	"highlight-matching-tag.noDefaultEmptyElements": true,
-	"highlight-matching-tag.styles": {
-		"opening": {
-			"left": {
-				"custom": {
-					"borderWidth": "2px",
-					"borderStyle": "dashed",
-					"borderColor": "#abc",
-					"overviewRulerColor": "#abc"
-				}
-			},
-			"right": {
-				"custom": {
-					"borderWidth": "2px",
-					"borderStyle": "dashed",
-					"borderColor": "#abc",
-					"overviewRulerColor": "#abc"
-				}
-			}
-		}
-	},
-
 	/* andersliu.insert-line-number */
 	"InsertLineNumber.formats": [
 		{
@@ -365,7 +341,6 @@
 	"bookmarks.keepBookmarksOnLineDelete": true,
 	"numberedBookmarks.keepBookmarksOnLineDelete": true,
 	"bookmarks.label.suggestion": "suggestWhenSelected",
-	//"bookmarks.navigateThroughAllFiles": false,
 	"numberedBookmarks.navigateThroughAllFiles": "replace",
 	"bookmarks.saveBookmarksInProject": true,
 	"numberedBookmarks.saveBookmarksInProject": true,
@@ -758,7 +733,7 @@
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.other", "keyword.other.array", "keyword.other.hashtable", "keyword.operator.combinator", "punctuation.separator.combinator", "punctuation.definition.inheritance", "punctuation.separator.inheritance", "keyword.operator.range" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.range.julia" ], "settings": { "foreground": "#9fc" } },
-			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, keyword.operator.pipe.haskell, punctuation.separator.statement.viml", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, keyword.operator.pipe.haskell, keyword.operator.pipe.batchfile, punctuation.separator.statement.viml", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": [ "keyword.operator.borrow", "punctuation.definition.lifetime", "punctuation.definition.anchor.yaml", "punctuation.definition.alias.yaml" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
 			{ "scope": [ "entity.name.type.lifetime" ], "settings": { "fontStyle": "underline" } },
 			{ "scope": [ "keyword.operator.type.ts", "variable.other.readwrite.global.pre-defined.ruby" ], "settings": { "fontStyle": "bold" } },
@@ -785,7 +760,7 @@
 			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, variable.other.generic-type, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "keyword.cs, keyword.fsharp, keyword.type, keyword.other.type, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile, punctuation.separator.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, variable.other.label, variable.other.anchor.yaml, variable.other.alias.yaml", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field", "storage.modifier.sql" ], "settings": { "foreground": "#9cf" } },
@@ -1010,7 +985,7 @@
 			/* text */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
-			"editorCodeLens.foreground": "#86c", // 260°
+			"editorCodeLens.foreground": "#37f", // 220°
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
 			"list.deemphasizedForeground": "#7aa3cc",

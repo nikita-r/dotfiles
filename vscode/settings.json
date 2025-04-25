@@ -241,6 +241,8 @@
 	/* SectionHeaders */
 	"editor.minimap.sectionHeaderFontSize": 12,
 	"editor.minimap.sectionHeaderLetterSpacing": 2,
+	"editor.minimap.showRegionSectionHeaders": false,
+	//"editor.minimap.showMarkSectionHeaders": false,
 
 	"editor.comments.insertSpace": false,
 	//"editor.comments.ignoreEmptyLines": false,
@@ -286,6 +288,7 @@
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
+	//"dev.containers.defaultExtensions": [ "ctf0.macros" ],
 	"dev.containers.copyGitConfig": false,
 
 	/* Extensions */
@@ -744,7 +747,7 @@
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
-			//{ "scope": "punctuation.definition.dict, punctuation.definition.list, punctuation.definition.array, punctuation.definition.table.inline", "settings": { "foreground": "#37f" } },
+			{ "scope": "punctuation.definition.dict, punctuation.definition.array, punctuation.definition.dictionary, punctuation.definition.table.inline", "settings": { "foreground": "#9fc" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, string.quoted.double.sql punctuation.definition.string", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.list, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread, keyword.operator.ellipsis", "settings": { "foreground": "#e6e6b4" } },
@@ -1206,6 +1209,7 @@
 		"dotfiles",
 	],
 
+	"mssql.connectionGroups": [ { "name": "ROOT", "id": "12345678-9ABC-DEF0-1234-56789ABCDEF0" } ],
 	"mssql.connections": [
 		{
 			"profileName": "",
@@ -1213,7 +1217,8 @@
 			"server": "", "database": "",
 			//"user": "", "password": "",
 			//"trustServerCertificate": true,
-			"authenticationType": "Integrated"
+			"authenticationType": "Integrated",
+			"groupId": "12345678-9ABC-DEF0-1234-56789ABCDEF0"
 		},
 	],
 	"mssql.objectExplorer.groupBySchema": false,

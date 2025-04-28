@@ -33,7 +33,7 @@
 		"editor.stickyScroll.enabled": true,
 		"editor.stickyScroll.maxLineCount": 9,
 		"editor.stickyScroll.defaultModel": "foldingProviderModel",
-		"editor.autoIndent": "advanced",
+		//"editor.autoIndent": "advanced",
 	},
 	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
@@ -503,6 +503,7 @@
 	"jupyter.interactiveWindow.textEditor.executeSelection": true,
 	//"python.terminal.activateEnvironment": false,
 	"python.experiments.enabled": false,
+	"python.analysis.autoIndent": false,
 	"isort.args": [ "--profile", "black" ],
 	"python.languageServer": "Pylance", // or "Jedi"
 	//"python.analysis.typeCheckingMode": "strict",

@@ -581,11 +581,6 @@
 		"command": "editor.action.smartSelect.expand",
 		"when": "editorTextFocus"
 	},
-	//{
-	//	"key": "alt+k",
-	//	"command": "editor.emmet.action.balanceOut",
-	//	"when": "editorTextFocus && editorLangId =~ /html|xml/"
-	//},
 	{
 		"key": "alt+k",
 		"command": "editor.emmet.action.balanceOut",
@@ -2038,6 +2033,20 @@
 		"when": "inSearchEditor || searchViewletFocus"
 	},
 
+	/* scroll a page */
+	{
+		"key": "Ctrl+Alt+k",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "page", "to": "up" }
+	},
+	{
+		"key": "Ctrl+Alt+j",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "page", "to": "down" }
+	},
+
 	/* ryu1kn.text-marker */
 	{ "command": "noop", "key": "ctrl+0" },
 	{ "command": "noop", "key": "ctrl+9" },
@@ -2112,15 +2121,6 @@
 		"key": "enter",
 		"command": "noop",
 		"when": "inChatInput && !chatInputHasText"
-	},
-	/* Side Chat */
-	{
-		"key": "ctrl+alt+i",
-		"command": "workbench.action.chat.open"
-	},
-	{
-		"key": "ctrl+win+i",
-		"command": "workbench.action.chat.open"
 	},
 	/* Upper Chat */
 	{

@@ -833,7 +833,7 @@
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "f8" },
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "shift+f8" },
 
-	/* config.interactiveWindow.executeWithShiftEnter & not ctrl+Enter */
+	/* interactive.execute */
 	{ "command": "-notebook.cell.execute", "key": "meta+enter" },
 	{ "command": "-interactive.execute", "key": "shift+enter" },
 	{
@@ -1187,7 +1187,7 @@
 		"command": "workbench.view.extensions"
 	},
 
-	/* Ctrl+r */
+	/* Ctrl+r/R */
 	{
 		"key": "ctrl+r",
 		"command": "workbench.action.openRecent"
@@ -1202,14 +1202,11 @@
 		"command": "workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
 		"when": "inQuickOpen && inRecentFilesPicker"
 	},
-	/* ?isDevelopment */
-	{
-		"key": "ctrl+k shift+r",
-		"command": "workbench.action.reloadWindow",
-		//"when": "isDevelopment"
-	},
-	/* Ctrl+k r */
+
+	/* Ctrl+k r/R */
 	{ "command": "revealInExplorer", "key": "ctrl+k r" },
+	{ "key": "ctrl+k shift+r", "command": "workbench.action.reloadWindow" },
+
 	/* Ctrl+k Ctrl+r */
 	{ "command": "noop", "key": "ctrl+k ctrl+r" },
 	{
@@ -1354,28 +1351,31 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* Ctrl+(Shift+)j */
 	/* Mac default: ^J for Join */
+	{ "command": "noop", "key": "ctrl+j" },
 	{
 		"key": "ctrl+j",
 		"command": "editor.action.joinLines",
-		//"when": "editorTextFocus && !editorReadonly"
+		"when": "editorTextFocus && !editorReadonly"
 	},
 	{
 		"key": "ctrl+j",
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
 	},
+
 	/* Toggle Panel Visibility */
 	{
 		"key": "ctrl+shift+j",
 		"command": "workbench.action.togglePanel"
 	},
-	{ "command": "", "key": "ctrl+b" },
 	{
-		"key": "ctrl+shift+b",
-		"command": "workbench.action.toggleSidebarVisibility"
+		"key": "ctrl+shift+\\",
+		"command": "workbench.action.closePanel",
+		"when": "terminalTabsFocus && panelFocus"
 	},
+	{ "command": "", "key": "ctrl+b" },
+	{ "key": "ctrl+shift+b", "command": "workbench.action.toggleSidebarVisibility" },
 
 	/* Emmet */
 	{
@@ -1600,7 +1600,7 @@
 	{
 		"key": "ctrl+f4",
 		"command": "workbench.action.terminal.kill",
-		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus" // "panelFocus && activePanel == 'terminal'"
+		"when": "panelFocus && activePanel == 'terminal'"
 	},
 	{
 		"key": "ctrl+f4",
@@ -2334,7 +2334,7 @@
 	{
 		"key": "delete",
 		"command": "search.action.remove",
-		"when": "fileMatchOrMatchFocus" // == "matchFocus || fileMatchFocus || folderMatchFocus"
+		"when": "fileMatchOrMatchFocus"
 	},
 	{
 		"key": "shift+alt+z",

@@ -537,6 +537,9 @@
 	"html.format.wrapAttributesIndentSize": 1,
 	"html.format.wrapLineLength": 0,
 	"xml.format.maxLineWidth": 0,
+	"css.format.spaceAroundSelectorSeparator": true,
+	"less.format.spaceAroundSelectorSeparator": true,
+	"scss.format.spaceAroundSelectorSeparator": true,
 	"powershell.codeFormatting.preset": "OTBS",
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
@@ -657,6 +660,7 @@
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
+	"terminal.integrated.wordSeparators": " \"()", // double-click to select a word; would have it to be only " ", but it is used as delimiters in fallback link detection
 	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs

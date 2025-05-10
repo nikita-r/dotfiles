@@ -673,7 +673,7 @@
 		"when": "breadcrumbsActive && !listFocus"
 	},
 
-	/* pour Mac: "ctrl" to be replaced with "cmd" in the "key" in order to override the default keybindings which go to an end of the line */
+	/* pour Mac: Cmd+Arrow jumps word */
 	/* Left */
 	{
 		"key": "ctrl+left",
@@ -832,15 +832,6 @@
 	},
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "f8" },
 	{ "command": "noop", "when": "terminalFocus && terminalTextSelectedInFocused", "key": "shift+f8" },
-
-	/* interactive.execute */
-	{ "command": "-notebook.cell.execute", "key": "meta+enter" },
-	{ "command": "-interactive.execute", "key": "shift+enter" },
-	{
-		"key": "shift+enter",
-		"command": "interactive.execute",
-		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
-	},
 
 	/* Accept Next of Inline Suggestion */
 	{
@@ -2047,6 +2038,20 @@
 		"args": { "revealCursor": false, "by": "page", "to": "down" }
 	},
 
+	/* scroll half a page */
+	{
+		"key": "Ctrl+Shift+Alt+k",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "halfPage", "to": "up" }
+	},
+	{
+		"key": "Ctrl+Shift+Alt+j",
+		"when": "editorFocus",
+		"command": "editorScroll",
+		"args": { "revealCursor": false, "by": "halfPage", "to": "down" }
+	},
+
 	/* ryu1kn.text-marker */
 	{ "command": "noop", "key": "ctrl+0" },
 	{ "command": "noop", "key": "ctrl+9" },
@@ -2191,6 +2196,11 @@
 		"command": "editor.action.clipboardCopyAction",
 		"when": "panelFocus"
 	},
+	//{
+	//	"key": "ctrl+shift+c",
+	//	"command": "problems.action.copy",
+	//	"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
+	//},
 
 	/* Ctrl+k Ctrl+c */
 	{

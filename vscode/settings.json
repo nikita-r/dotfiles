@@ -33,7 +33,7 @@
 		"editor.stickyScroll.enabled": true,
 		"editor.stickyScroll.maxLineCount": 9,
 		"editor.stickyScroll.defaultModel": "foldingProviderModel",
-		//"editor.autoIndent": "advanced",
+		//"editor.autoIndent": "advanced", // or "brackets"
 	},
 	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
@@ -156,7 +156,7 @@
 	//"terminal.integrated.fontFamily": "JetBrains Mono",
 	//"terminal.integrated.fontLigatures.enabled": true,
 	//"terminal.integrated.gpuAcceleration": "off",
-	//"terminal.integrated.fontLigatures.featureSettings": "'zero', 'cv03', 'cv10', 'cv11', 'cv15', 'cv16', 'cv18', 'cv99'",
+	//"terminal.integrated.fontLigatures.featureSettings": "'zero', 'cv03', 'cv10', 'cv11', 'cv15', 'cv16', 'cv18', 'cv99'", // https://github.com/JetBrains/JetBrainsMono/wiki/OpenType-features
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
 	"terminal.integrated.tabs.location": "left",
@@ -821,8 +821,11 @@
 		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
 		"[* Dark*]": {
 			"editorGutter.addedBackground": "#408020", // 100°
-			"editorGutter.deletedBackground": "#fff", //"#802020",
+			"editorGutter.addedSecondaryBackground": "#408020",
+			"editorGutter.deletedBackground": "#fff",
+			"editorGutter.deletedSecondaryBackground": "#fff",
 			"editorGutter.modifiedBackground": "#206080", // 200°
+			"editorGutter.modifiedSecondaryBackground": "#206080",
 
 			/* miscellaneous */
 			"widget.border": "#000",
@@ -889,7 +892,7 @@
 
 			/* 123 */
 			"editorLineNumber.foreground": "#808080",
-			"editorActiveLineNumber.foreground": "#c0c0c0",
+			"editorLineNumber.activeForeground": "#c0c0c0",
 			"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */

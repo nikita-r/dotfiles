@@ -69,6 +69,7 @@
 	//"search.searchOnType": false,
 	"search.searchOnTypeDebouncePeriod": 666,
 	//"search.useReplacePreview": false,
+	"search.decorations.colors": false,
 	//"search.maxResults": null,
 	"search.showLineNumbers": true,
 
@@ -357,7 +358,7 @@
 	"gifPlayer.autoPlay": false, /* bierner.gif-player */
 	"hediet-power-tools.applyRename.enabled": false, /* hediet.hediet-power-tools */
 	"hediet-power-tools.applyRename.theme": "colored",
-	"hexeditor.inspectorType": "hover", /* ms-vscode.hexeditor */
+	"hexeditor.inspectorType": "sidebar", /* ms-vscode.hexeditor */
 	"hexeditor.maxFileSize": 99,
 	"mssql.copyRemoveNewLine": false, /* ms-mssql.mssql */
 	"mssql.query.displayBitAsNumber": false,
@@ -788,7 +789,7 @@
 			{ "scope": [ "variable.scss", "variable.css", "support.other.variable.less", "support.type.custom-property", "string.unquoted.alias.graphql" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "keyword.other.special-method", "support.function.kernel.ruby", "keyword.other.ocaml.interface" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "meta.resultLinePrefix.search", "meta.attribute.powershell", "entity.name.function.macro.rules", "entity.name.function.tagged-template" ], "settings": { "foreground": "#b9f" } },
-			{ "scope": [ "entity.name.function.preprocessor", "entity.name.other.preprocessor.macro.predefined.probably" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "entity.name.function.preprocessor", "entity.name.other.preprocessor.macro.predefined.probably" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "entity.name.tag.css", "entity.name.tag.less", "entity.other.attribute-name.scss", "entity.other.attribute-name.class.css", "source.css entity.other.attribute-name.class", "entity.other.attribute-name.id.css", "source.css.less entity.other.attribute-name.id" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.other.time", "meta.type.cast.expr", "meta.type.new.expr", "support.constant.dom", "support.constant.json", "support.constant.math" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "string.tag", "string.value", "support.constant.font-name", "constant.other.rgb-value", "constant.other.color.rgb-value", "support.constant.media", "support.constant.media-type", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },

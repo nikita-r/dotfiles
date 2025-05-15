@@ -562,6 +562,7 @@
 
 	/* !autoClosing */
 	"editor.autoClosingBrackets": "never",
+	"editor.autoClosingComments": "never",
 	"editor.autoClosingQuotes": "never",
 	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,

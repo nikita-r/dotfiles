@@ -290,8 +290,9 @@
 
 	/* Remote › Containers */
 	"dotfiles.repository": "nikita-r/dotfiles",
-	//"dev.containers.defaultExtensions": [ "ctf0.macros" ],
 	"dev.containers.copyGitConfig": false,
+	//"dev.containers.defaultExtensions": [ "ctf0.macros" ],
+	"remote.downloadExtensionsLocally": true,
 
 	/* Extensions */
 
@@ -364,7 +365,6 @@
 	"mssql.query.displayBitAsNumber": false,
 	"mssql.autoDisableNonTSqlLanguageService": false,
 	"quick-select.includeBackticks": false, /* dbankier.vscode-quick-select */
-	"quicktype.inferBooleanStrings": false, /* Paste JSON as Code */
 
 	/* tomoki1207.pdf */
 	"pdf-preview.default.cursor": "hand",
@@ -559,13 +559,13 @@
 	//"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.preferences.quoteStyle": "single",
+	"html.completion.attributeDefaultValue": "empty",
 
 	/* !autoClosing */
 	"editor.autoClosingBrackets": "never",
 	"editor.autoClosingComments": "never",
 	"editor.autoClosingQuotes": "never",
 	"html.autoClosingTags": false,
-	"html.autoCreateQuotes": false,
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
 

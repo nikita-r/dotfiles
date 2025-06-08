@@ -30,7 +30,7 @@
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
 
-	{ "key": "ctrl+;", "command": "breadcrumbs.focus" }, // instead of "ctrl+shift+;"
+	{ "key": "ctrl+;", "command": "breadcrumbs.focus" },
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
 	{ "key": "ctrl+shift+'", "command": "workbench.action.output.toggleOutput" },
@@ -578,13 +578,8 @@
 	{ "command": "noop", "key": "alt+k" },
 	{
 		"key": "alt+k",
-		"command": "editor.action.smartSelect.expand",
+		"command": "editor.action.smartSelect.grow",
 		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+k",
-		"command": "editor.emmet.action.balanceOut",
-		"when": "editorTextFocus && editorLangId == 'svg'"
 	},
 	{
 		"key": "alt+k",
@@ -1370,11 +1365,6 @@
 
 	/* Emmet */
 	{
-		"key": "ctrl+shift+x",
-		"command": "editor.emmet.action.incrementNumberByOne",
-		"when": "editorFocus"
-	},
-	{
 		"key": "alt+d e",
 		"command": "workbench.action.showEmmetCommands",
 		"when": "editorTextFocus"
@@ -1382,11 +1372,6 @@
 	{
 		"key": "alt+d i",
 		"command": "editor.emmet.action.updateImageSize",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+m",
-		"command": "editor.emmet.action.matchTag",
 		"when": "editorTextFocus"
 	},
 	{
@@ -1980,6 +1965,11 @@
 		"command": "C_Cpp.SwitchHeaderSource",
 		"when": "config.C_Cpp.intelliSenseEngine && editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/"
 	},
+	{
+		"key": "shift+alt+,",
+		"command": "workbench.action.openActiveLogOutputFile",
+		"when": "panelFocus && activePanel == 'workbench.panel.output'" // resourceScheme == 'output'
+	},
 
 	/* Ctrl+Alt+j */
 	{
@@ -2001,11 +1991,6 @@
 		"key": "ctrl+alt+j",
 		"command": "macros.focusEditor", /* ctf0.macros */
 		"when": "panelFocus || panelMaximized"
-	},
-	{
-		"key": "ctrl+alt+j",
-		"command": "workbench.action.openActiveLogOutputFile",
-		"when": "panelFocus && activePanel == 'workbench.panel.output'" // resourceScheme == 'output'
 	},
 	{
 		"key": "ctrl+alt+j",
@@ -2123,9 +2108,23 @@
 		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
+		"key": "ctrl+shift+x",
+		"command": "inlineChat.startWithCurrentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
 		"key": "enter",
 		"command": "noop",
 		"when": "inChatInput && !chatInputHasText"
+	},
+	/* Toggle Side Chat */
+	{
+		"key": "ctrl+alt+i",
+		"command": "workbench.panel.chat"
+	},
+	{
+		"key": "ctrl+win+i",
+		"command": "workbench.panel.chat"
 	},
 	/* Upper Chat */
 	{
@@ -2396,6 +2395,7 @@
 	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
 	{ "command": "", "key": "shift+f10", "when": "!isMac" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },
+	{ "key": "alt+u", "command": "cursorUndo", "when": "!isMac" },
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"

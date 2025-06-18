@@ -25,7 +25,7 @@
 	{ "command": "noop", "key": "ctrl+shift+0" }, // cannot receive ^+0 under Windows
 	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
-	{ "key": "ctrl+y", "command": "cursorRedo" },
+	{ "key": "ctrl+y", "command": "cursorRedo", "when": "!chatEdits.hasEditorModifications" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
@@ -892,6 +892,16 @@
 		"key": "ctrl+[",
 		"command": "merge.goToPreviousConflict",
 		"when": "activeEditor == 'mergeEditor'"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "chatEditor.action.navigateNext",
+		"when": "chatEdits.hasEditorModifications"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "chatEditor.action.navigatePrevious",
+		"when": "chatEdits.hasEditorModifications"
 	},
 	{
 		"key": "ctrl+]",

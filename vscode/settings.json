@@ -107,7 +107,6 @@
 	/* auto-suggestion */
 	"editor.inlineSuggest.enabled": false,
 	"github.copilot.editor.enableAutoCompletions": false,
-	"github.copilot.chat.followUps": "always",
 	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,
 	"editor.suggest.selectionMode": "never",
@@ -738,7 +737,7 @@
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.operator.custom.postfix", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator" ], "settings": { "foreground": "#f96" } },
 			{ "scope": "punctuation.definition.link.title, punctuation.definition.comment.shebang, string.other.modeline, constant.string", "settings": { "foreground": "#37f" } },
-			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
@@ -755,7 +754,8 @@
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
 			{ "scope": "keyword.other.powershell, variable.other.member.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, string.quoted.double.sql punctuation.definition.string", "settings": { "foreground": "#c6c" } },
+			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
+			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.list, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread, keyword.operator.ellipsis", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "support.variable", "support.constant.variable", "variable.other.predefined", "entity.name.other.preprocessor.macro.predefined" ], "settings": { "foreground": "#f9c" } },
@@ -1252,6 +1252,11 @@
 	"accessibility.verbosity.terminal": false,
 	"accessibility.accessibleView.closeOnKeyPress": false,
 	"editor.copyWithSyntaxHighlighting": false,
+
+	/* Copilots */
+	"github.copilot.chat.followUps": "always",
+	"inlineChat.enableV2": true,
+	"inlineChat.hideOnRequest": true,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

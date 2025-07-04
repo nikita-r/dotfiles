@@ -10,6 +10,7 @@
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	//"editor.links": false,
+	//"editor.colorDecorators": false,
 	"editor.wrappingIndent": "none",
 	"editor.renderFinalNewline": "dimmed",
 
@@ -767,7 +768,7 @@
 			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.assignment.ahk, keyword.operator.comparison.sql, keyword.operator.math.sql, keyword.operator.star, keyword.operator.infix, entity.name.function.infix", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.comparison, punctuation.separator.other.ruby, keyword.operator.relational, keyword.operator.relation.julia", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment, punctuation.assignment, keyword.operator.eq, punctuation.definition.equals, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.map.value, punctuation.separator.dict, keyword.operator.update", "settings": { "foreground": "#0af" } },
-			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, variable.other.generic-type, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, variable.other.generic-type, support.function.powershell, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "keyword.cs, keyword.fsharp, keyword.type, keyword.other.type, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile, punctuation.separator.batchfile", "settings": { "foreground": "#ffd700" } },

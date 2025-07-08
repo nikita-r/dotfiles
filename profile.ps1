@@ -33,9 +33,7 @@ Set-PSReadLineOption -HistoryNoDuplicates:$true
 Set-PSReadLineOption -AddToHistoryHandler { param ($cmd)
     if ($cmd -like ' *') { return $false }
     if ($cmd.Length -le 3) { return $false }
-    #if ($cmd -like 'gcm *' -or $cmd -like 'dir *') { return $false }
-    #if ($cmd -like 'View-*') { return $false }
-    if ($cmd -in 'exit'<#, 'Parse-UrlQuery-FromClipboard'#>) { return $false }
+    if ($cmd -in 'exit'<#, ''#>) { return $false }
     return $true
 }
 
@@ -155,6 +153,7 @@ function Get-StrictMode { # Set-StrictMode -Version:0
 }
 
 function Get-Timestamp {
+    if ($args.Count) { throw }
     $datetime = (Get-Date).ToUniversalTime()
     (Get-Date $datetime -f s) + (Get-Date $datetime -F.fffZ)
 }

@@ -1,0 +1,11 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "initialPosition": "2,1",
+  "initialCols": 102,
+  "initialRows": 57,
+  "actions": [
+    { "keys": "alt+shift+q", "command": "closePane" },
+  ],
+  "themes": []
+}

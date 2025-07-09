@@ -11,6 +11,7 @@
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	//"editor.links": false,
 	//"editor.colorDecorators": false,
+	"editor.defaultColorDecorators": "never",
 	"editor.wrappingIndent": "none",
 	"editor.renderFinalNewline": "dimmed",
 
@@ -691,7 +692,7 @@
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.block.tag", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.constant", "text.log constant.language", "meta.embedded.block.log constant.language" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
@@ -773,7 +774,7 @@
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile, punctuation.separator.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
-			{ "scope": "entity.name.label, variable.other.label, variable.other.anchor.yaml, variable.other.alias.yaml", "settings": { "foreground": "#ffd700" } },
+			{ "scope": "entity.name.label, entity.name.function.label, variable.other.label, variable.other.anchor.yaml, variable.other.alias.yaml", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field", "storage.modifier.sql" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "entity.other.attribute-name", "entity.tag.name", "support.constant.attribute" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": "entity.name.tag.namespace, entity.name.tag punctuation.separator.namespace", "settings": { "foreground": "#69c" } },
@@ -1255,7 +1256,6 @@
 	"editor.copyWithSyntaxHighlighting": false,
 
 	/* Copilots */
-	"github.copilot.chat.followUps": "always",
 	"inlineChat.enableV2": true,
 	"inlineChat.hideOnRequest": true,
 

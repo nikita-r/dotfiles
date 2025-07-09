@@ -21,14 +21,15 @@
 	*/
 
 	{ "command": "noop", "key": "ctrl+shift+u" }, // in GtkIMContextSimple, ^+U is bound to input Unicode codepoint
-	{ "command": "noop", "key": "ctrl+shift+n" },
 	{ "command": "noop", "key": "ctrl+shift+0" }, // cannot receive ^+0 under Windows
 	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo", "when": "!chatEdits.hasEditorModifications" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
-	{ "key": "shift+ctrl+y", "command": "textmarker.toggleHighlight" },
+
+	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
+	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" },
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
@@ -1440,16 +1441,6 @@
 	},
 	{
 		"key": "alt+up",
-		"command": "workbench.action.terminal.chat.previousFromHistory",
-		"when": "terminalChatFocus"
-	},
-	{
-		"key": "alt+down",
-		"command": "workbench.action.terminal.chat.nextFromHistory",
-		"when": "terminalChatFocus"
-	},
-	{
-		"key": "alt+up",
 		"command": "interactive.history.previous",
 		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
@@ -1458,7 +1449,7 @@
 		"command": "interactive.history.next",
 		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
 	},
-	/* "ctrl+enter" may be hijacked by accept/commit; "ctrl+shift+enter" by "*.action.replace*" */
+	/* "ctrl+enter" may be hijacked by accept/commit; "ctrl+shift+enter" by "*.action.replaceAll*" */
 	{ "command": "noop", "key": "ctrl+enter" },
 	{
 		"key": "ctrl+enter",
@@ -2403,7 +2394,6 @@
 
 	/*~*~*~*/
 	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
-	{ "command": "", "key": "shift+f10", "when": "!isMac" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },
 	{ "key": "alt+u", "command": "cursorUndo", "when": "!isMac" },
 	{

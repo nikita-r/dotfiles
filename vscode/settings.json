@@ -264,8 +264,9 @@
 
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2, // or -1
-	//"git.autorefresh": false,
 	"git.openRepositoryInParentFolders": "never",
+	//"git.autorefresh": false,
+	"git.detectWorktreesLimit": 99,
 
 	"git.enableStatusBarSync": false,
 	"git.fetchOnPull": true,
@@ -1255,9 +1256,19 @@
 	"accessibility.accessibleView.closeOnKeyPress": false,
 	"editor.copyWithSyntaxHighlighting": false,
 
-	/* Copilots */
+	/*~* Copilots *~*/
+
+	/* agentic */
+	"chat.agentSessionsViewLocation": "view", // requires GitHub Pull Requests
+	"chat.todoListTool.enabled": true,
+
+	/* inline chat v2 */
 	"inlineChat.enableV2": true,
 	"inlineChat.hideOnRequest": true,
+	"inlineChat.notebookAgent": true,
+
+	/* MCP */
+	"github.copilot.chat.newWorkspace.useContext7": true,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

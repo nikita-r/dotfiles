@@ -584,6 +584,11 @@
 	},
 	{
 		"key": "alt+k",
+		"command": "editor.emmet.action.balanceOut",
+		"when": "editorTextFocus && editorLangId =~ /html|xml|svg/"
+	},
+	{
+		"key": "alt+k",
 		"command": "keybindings.editor.recordSearchKeys",
 		"when": "inKeybindings && inKeybindingsSearch"
 	},
@@ -1830,6 +1835,11 @@
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelVisible"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
+		"when": "auxiliaryBarFocus"
 	},
 
 	/* dbankier.vscode-quick-select */

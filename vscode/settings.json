@@ -1261,6 +1261,7 @@
 	/* agentic */
 	"chat.agentSessionsViewLocation": "view", // requires GitHub Pull Requests
 	"chat.todoListTool.enabled": true,
+	"chat.editing.confirmEditRequestRemoval": false,
 
 	/* inline chat v2 */
 	"inlineChat.enableV2": true,

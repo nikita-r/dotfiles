@@ -79,6 +79,7 @@
 
 [alias]
 	dc = ! set -f && git diff -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dcs = ! set -f && git diff --staged -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --staged --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
 	db = diff -b --ignore-blank-lines --stat
 

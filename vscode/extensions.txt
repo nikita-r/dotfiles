@@ -1,5 +1,4 @@
 mhutchie.git-graph
-#EditorConfig.EditorConfig
 hediet.hediet-power-tools
 tomoki1207.pdf
 #hediet.vscode-drawio
@@ -12,4 +11,5 @@ rosshamish.kuskus-kusto-syntax-highlighting
 ms-vscode.hexeditor
 ms-vscode.vscode-github-issue-notebooks
 ms-vscode-remote.remote-containers
+sleistner.vscode-fileutils
 zeithaste.cursorCharCode

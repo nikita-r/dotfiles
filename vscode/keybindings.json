@@ -24,10 +24,15 @@
 	{ "command": "noop", "key": "ctrl+shift+0" }, // cannot receive ^+0 under Windows
 	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
-	{ "key": "ctrl+y", "command": "cursorRedo", "when": "!chatEdits.hasEditorModifications" },
+	{ "key": "ctrl+y", "command": "cursorRedo" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 
+	{
+		"key": "ctrl+y",
+		"command": "chatEditor.action.acceptHunk",
+		"when": "chatEdits.hasEditorModifications"
+	},
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
@@ -91,10 +96,6 @@
 		"key": "ctrl+k n",
 		"command": "workbench.action.files.newUntitledFile"
 	},
-	//{
-	//	"key": "ctrl+k shift+n", /* vscode-github-issue-notebooks */
-	//	"command": "workbench.action.files.newUntitledFile", "args": { "viewType": "github-issues" }
-	//},
 	{
 		"key": "ctrl+k n",
 		"command": "explorer.newFile",
@@ -1919,6 +1920,11 @@
 	},
 	{
 		"key": "shift+alt+c",
+		"command": "search.action.copyPath",
+		"when": "fileMatchOrMatchFocus"
+	},
+	{
+		"key": "shift+alt+c",
 		"command": "workbench.action.terminal.copyLastCommandOutput",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
@@ -1962,11 +1968,10 @@
 			"extensions": [
 				".aspx",
 				".aspx.cs",
+				".ps1", ".ps1.Transcript.log",
 				".ts",
-				".html",
-				".css",
-				".scss",
 				".spec.ts",
+				".test.ts",
 			],
 			//"useOtherColumn": true
 		}

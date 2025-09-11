@@ -219,7 +219,7 @@
 	"workbench.editor.openPositioning": "first",
 	"workbench.editor.revealIfOpen": true,
 	"workbench.editor.restoreViewState": true,
-	"workbench.editor.sharedViewState": true,
+	//"workbench.editor.sharedViewState": true,
 	//"workbench.editor.closeEmptyGroups": false,
 	"workbench.editor.navigationScope": "editorGroup",
 
@@ -1061,6 +1061,8 @@
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
 			"actionBar.toggledBackground": "#806080",
+			"window.activeBorder": "#806080",
+			"window.inactiveBorder": "#0000",
 
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
@@ -1140,6 +1142,7 @@
 	"window.zoomLevel": 0.0,
 	//"workbench.editor.centeredLayoutFixedWidth": true,
 	"workbench.editor.splitOnDragAndDrop": false,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
 
 	//"window.menuBarVisibility": "hidden",
 	"window.customMenuBarAltFocus": false,

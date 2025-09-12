@@ -2124,6 +2124,11 @@
 		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
+		"key": "ctrl+shift+i",
+		"command": "workbench.action.chat.openModelPicker",
+		"when": "inChatInput"
+	},
+	{
 		"key": "ctrl+shift+x",
 		"command": "inlineChat.startWithCurrentLine",
 		"when": "editorTextFocus && !editorReadonly"

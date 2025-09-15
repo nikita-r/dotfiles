@@ -28,10 +28,16 @@
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 
+	/* Chat Y/N */
 	{
 		"key": "ctrl+y",
 		"command": "chatEditor.action.acceptHunk",
 		"when": "chatEdits.hasEditorModifications"
+	},
+	{
+		"key": "ctrl+y",
+		"command": "workbench.action.terminal.chat.insertCommand",
+		"when": "terminalChatFocus && !terminalChatActiveRequest && terminalChatResponseContainsCodeBlock && !terminalChatResponseContainsMultipleCodeBlocks"
 	},
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
@@ -2410,6 +2416,11 @@
 		"key": "ctrl+alt+enter",
 		"command": "search.action.replaceAll",
 		"when": "replaceInputBoxFocus"
+	},
+	{
+		"key": "ctrl+alt+enter",
+		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
+		"when": "auxiliaryBarFocus && inChatInput"
 	},
 
 	/*~*~*~*/

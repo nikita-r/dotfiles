@@ -1818,7 +1818,7 @@
 		"when": "!terminalProcessSupported && !terminalHasBeenCreated"
 	},
 
-	/* View: Toggle Sizes */
+	/* View: Toggle Sizes/Visibility */
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleCenteredLayout"
@@ -1827,6 +1827,14 @@
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleSidebarVisibility",
 		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "runCommands", "args": { "commands": [
+			"workbench.action.toggleSidebarVisibility",
+			"workbench.action.toggleAuxiliaryBar",
+		] },
+		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide && sideBarVisible && auxiliaryBarVisible"
 	},
 	{
 		"key": "shift+alt+enter",
@@ -1964,6 +1972,22 @@
 		"key": "shift+alt+p",
 		"command": "workbench.action.quickOpenSelectPrevious",
 		"when": "inQuickOpen"
+	},
+	/* ?suggestWidgetVisible */
+	{
+		"key": "shift+alt+j",
+		"command": "acceptSelectedSuggestion",
+		"when": "suggestWidgetVisible"
+	},
+	{
+		"key": "shift+alt+n",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetVisible"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetVisible"
 	},
 
 	/* switch between relateds */
@@ -2419,8 +2443,8 @@
 	},
 	{
 		"key": "ctrl+alt+enter",
-		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
-		"when": "auxiliaryBarFocus && inChatInput"
+		"command": "workbench.action.maximizeAuxiliaryBar",
+		"when": "auxiliaryBarFocus && inChatInput && !auxiliaryBarMaximized"
 	},
 
 	/*~*~*~*/

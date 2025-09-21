@@ -22,6 +22,7 @@
 
 [alias]
 	co = checkout
+	br = ! git for-each-ref refs/heads/ --sort=-committerdate --format='%(color:blue)%(objectname:short)%(color:reset) %(refname:short) | %(color:green)%(committerdate:relative)%(color:reset) |%(if)%(upstream)%(then) %(upstream:short) %(upstream:track)%(end)|'
 	sb = status -sb
 	au = add -u
 	sf = submodule foreach --recursive
@@ -63,7 +64,6 @@
 [alias]
 	whoami = !printf '%s <%s>\\n' \"$(git config user.name)\" \"$(git config user.email)\"
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
-	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
 
 [diff "rtf"]
 	textconv = unrtf --text
@@ -78,8 +78,8 @@
 	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
 
 [alias]
-	dc = ! set -f && git diff -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
-	dcs = ! set -f && git diff --staged -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --staged --check
+	dc = ! cd \"${GIT_PREFIX:-.}\" && set -f && git diff -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
+	dcs = ! cd \"${GIT_PREFIX:-.}\" && set -f && git diff --staged -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --staged --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
 	db = diff -b --ignore-blank-lines --stat
 

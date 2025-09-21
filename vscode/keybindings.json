@@ -58,6 +58,12 @@
 		"when": "accessibleViewCurrentProviderId == 'terminal' || terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
+	/* Ctrl+Backslash */
+	{
+		"key": "ctrl+\\",
+		"command": "git.diff.stageHunk"
+	},
+
 	{ "command": "", "key": "alt+\\" },
 	{ "command": "", "key": "alt+-" },
 	{ "command": "", "key": "alt+=" },
@@ -1777,30 +1783,6 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
-	/* Terminal: Switch */
-	/* Focus Active Terminal */
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.terminal.focus"
-	},
-	/* back to Editor away from Terminal in Terminal View */
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.focusActiveEditorGroup",
-		"when": "terminalFocus && !terminalEditorActive"
-	},
-	/* Create New Terminal in Editor Area */
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.createTerminalEditor",
-		"when": "!terminalIsOpen"
-	},
-	/* back to Editor away from Terminal in Editor Area */
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.openPreviousRecentlyUsedEditor",
-		"when": "terminalFocus && terminalEditorActive"
-	},
 	/* Ctrl+Grave: Focus Terminal in Terminal View */
 	{
 		"key": "ctrl+`",
@@ -1810,12 +1792,6 @@
 		"key": "ctrl+`",
 		"command": "workbench.action.quickOpenTerm",
 		"when": "inTerminalPicker || terminalFocus && !terminalEditorActive"
-	},
-	/* Toggle Terminal View */
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "!terminalProcessSupported && !terminalHasBeenCreated"
 	},
 
 	/* View: Toggle Sizes/Visibility */
@@ -1941,11 +1917,6 @@
 		"key": "shift+alt+c",
 		"command": "workbench.action.terminal.copyLastCommandOutput",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "shift+alt+j",
-		"command": "inlineChat.acceptChanges",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
 	},
 	{
 		"key": "shift+alt+j",
@@ -2143,7 +2114,7 @@
 	{ "key": "ctrl+shift+space", "command": "editor.action.triggerParameterHints" },
 	{ "key": "ctrl+shift+space", "command": "showNextParameterHint", "when": "parameterHintsVisible" },
 
-	/* GitHub Copilot */
+	/* "ctrl+...+i": bring up copilot */
 	{
 		"key": "ctrl+shift+i",
 		"command": "Command requires single cursor and no selection in Editor"
@@ -2157,11 +2128,6 @@
 		"key": "ctrl+shift+i",
 		"command": "workbench.action.chat.openModelPicker",
 		"when": "inChatInput"
-	},
-	{
-		"key": "ctrl+shift+x",
-		"command": "inlineChat.startWithCurrentLine",
-		"when": "editorTextFocus && !editorReadonly"
 	},
 	{
 		"key": "enter",
@@ -2209,22 +2175,6 @@
 		"key": "ctrl+[",
 		"command": "github.copilot.previousPanelSolution",
 		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
-	},
-	/* Inline Chat */
-	{
-		"key": "shift+alt+]",
-		"command": "inlineChat.moveToNextHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
-	},
-	{
-		"key": "shift+alt+[",
-		"command": "inlineChat.moveToPreviousHunk",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
-	},
-	{
-		"key": "shift+alt+backspace",
-		"command": "inlineChat.discardHunkChange",
-		"when": "inlineChatVisible && !inlineChatHasActiveRequest"
 	},
 
 	/* Ctrl+Shift+. */

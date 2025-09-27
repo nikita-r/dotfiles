@@ -695,7 +695,7 @@
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.constant", "text.log constant.language", "meta.embedded.block.log constant.language" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
@@ -758,7 +758,7 @@
 			{ "scope": [ "string.quoted.double keyword.other.powershell", "variable.other.constant.singlequote" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
-			{ "scope": "keyword.other.powershell, variable.other.member.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": "keyword.other.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.list, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },

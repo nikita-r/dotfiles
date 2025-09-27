@@ -27,8 +27,10 @@
 	au = add -u
 	sf = submodule foreach --recursive
 	cm = commit -m
-	pi = stash pop --index
-	pm = stash push -m
+	pi = stash pop --index -q
+	sl = ! git stash list --name-status | sed 's/^s/\\ns/'
+	sp = stash show -p
+	pm = stash push -q -m
 	rs = restore --staged
 	ol = log --oneline
 	ol = ! git log --pretty=format:'%C(auto)%cI %h %s%d' "$@" && printf '\\n'
@@ -52,9 +54,8 @@
 	cam = commit -a -m
 	dns = diff --name-status
 	mnn = merge --no-commit --no-ff
-	rmd = ! git ls-files -d | xargs -r git rm
-	pop-i = stash pop --index
-	save-u = stash save -u
+	agi = ! cd \"${GIT_PREFIX:-.}\" && bash -c \"shopt -s globstar nocaseglob && git add $@\" && :
+	rmd = ! git ls-files -d | xargs -r git rm && :
 	scour-n = clean -nxffd
 	reset-f = ! git reset --hard $1 && git clean -xffd && :
 	puta = push --follow-tags

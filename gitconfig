@@ -32,9 +32,9 @@
 	sp = stash show -p
 	pm = stash push -q -m
 	rs = restore --staged
+	ss = show -s
 	ol = log --oneline
-	ol = ! git log --pretty=format:'%C(auto)%cI %h %s%d' "$@" && printf '\\n'
-	wt = worktree
+	ol = ! git log --pretty=format:'%C(auto)%cI %h %s%d' \"$@\" && printf '\\n'
 
 [alias]
 	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules
@@ -76,7 +76,7 @@
 	binary = true
 
 [diff]
-	wordRegex = "[^][\"'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"',.;:()<>/+={}!@#^&*`?|]"
+	wordRegex = "[^][\"\\'[:space:],.;:()<>/+={}!@#^&*`?|]+|[][\"\\',.;:()<>/+={}!@#^&*`?|]"
 
 [alias]
 	dc = ! cd \"${GIT_PREFIX:-.}\" && set -f && git diff -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --check
@@ -140,8 +140,9 @@
 #	prune = true
 #	pruneTags = false
 
-#[push]
+[push]
 #	default = nothing
+	autoSetupRemote = true
 
 [apply]
 	whitespace = fix

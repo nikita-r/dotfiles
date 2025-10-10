@@ -63,6 +63,11 @@
 		"key": "ctrl+\\",
 		"command": "git.diff.stageHunk"
 	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.chat.focusInput",
+		"when": "inChat"
+	},
 
 	{ "command": "", "key": "alt+\\" },
 	{ "command": "", "key": "alt+-" },
@@ -520,11 +525,7 @@
 		"when": "listFocus && !inputFocus"
 	},
 
-	/* Ctrl+Shift+Arrow; remove all Ctrl+Alt+Arrow */
-	{ "command": "noop", "key": "ctrl+alt+up" },
-	{ "command": "noop", "key": "ctrl+alt+down" },
-	{ "command": "noop", "key": "ctrl+alt+left" },
-	{ "command": "noop", "key": "ctrl+alt+right" },
+	/* sublime-keymap: select_lines */
 	{
 		"key": "ctrl+shift+up",
 		"command": "editor.action.insertCursorAbove",
@@ -606,7 +607,11 @@
 		"when": "inKeybindings && inKeybindingsSearch"
 	},
 
-	/* Reassign Ctrl+Up/Down when listFocus; Ctrl+Right to switch viewAs */
+	/* Alt for scroll when listFocus; Ctrl+Arrow */
+	{ "key": "ctrl+up", "command": "-list.scrollUp" },
+	{ "key": "ctrl+down", "command": "-list.scrollDown" },
+	{ "key": "ctrl+alt+left", "command": "scrollLeft" },
+	{ "key": "ctrl+alt+right", "command": "scrollRight" },
 	{
 		"key": "alt+up",
 		"command": "list.scrollUp",
@@ -941,6 +946,16 @@
 		"key": "ctrl+[",
 		"command": "goToPreviousReference",
 		"when": "referenceSearchVisible"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.chat.nextUserPrompt",
+		"when": "inChat"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "workbench.action.chat.previousUserPrompt",
+		"when": "inChat"
 	},
 
 	/* Alt+[][] */
@@ -1831,6 +1846,16 @@
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
 		"when": "auxiliaryBarFocus"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.alignQuickInputCenter",
+		"when": "inQuickOpen && quickInputAlignment == 'top'"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.alignQuickInputTop",
+		"when": "inQuickOpen && quickInputAlignment == 'center'"
 	},
 
 	/* dbankier.vscode-quick-select */

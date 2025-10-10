@@ -1263,7 +1263,11 @@
 
 	/*~* Copilots *~*/
 
+	/* * */
+	"chat.emptyChatState.enabled": false,
+
 	/* agentic */
+	"chat.agent.thinkingStyle": "collapsedPreview",
 	"chat.agentSessionsViewLocation": "view", // requires GitHub Pull Requests
 	"chat.todoListTool.enabled": true,
 	"chat.editing.confirmEditRequestRemoval": false,
@@ -1280,7 +1284,6 @@
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
 	"zenMode.hideLineNumbers": false,
-	"chat.math.enabled": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	//"diffEditor.experimental.showMoves": true,
 }

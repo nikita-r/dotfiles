@@ -61,12 +61,32 @@
 	/* Ctrl+Backslash */
 	{
 		"key": "ctrl+\\",
-		"command": "git.diff.stageHunk"
+		"command": "workbench.view.chat.sessions"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "git.diff.stageHunk",
+		"when": "editorTextFocus && !editorHasMultipleSelections"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "git.stageSelectedRanges",
+		"when": "editorTextFocus && !editorHasMultipleSelections && editorHasSelection"
 	},
 	{
 		"key": "ctrl+\\",
 		"command": "workbench.action.chat.focusInput",
-		"when": "inChat"
+		"when": "inQuickOpen && chatInputVisible || inlineChatVisible" // visible Quick Chat (Upper Chat) or Inline Chat
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.chat.focusInput",
+		"when": "inChat" // any chat is in focus
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "chat.action.focus",
+		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 
 	{ "command": "", "key": "alt+\\" },

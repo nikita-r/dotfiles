@@ -110,6 +110,7 @@
 
 	/* auto-suggestion */
 	"editor.inlineSuggest.enabled": false,
+	"editor.inlineSuggest.syntaxHighlightingEnabled": false, // code is dimmed as GhostText.foreground
 	"github.copilot.editor.enableAutoCompletions": false,
 	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,

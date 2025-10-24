@@ -163,6 +163,7 @@
 	//"terminal.integrated.gpuAcceleration": "off",
 	//"terminal.integrated.fontLigatures.featureSettings": "'zero', 'cv03', 'cv10', 'cv11', 'cv15', 'cv16', 'cv18', 'cv99'", // https://github.com/JetBrains/JetBrainsMono/wiki/OpenType-features
 	"terminal.integrated.fontSize": 14,
+	//"terminal.integrated.minimumContrastRatio": 1,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
 	"terminal.integrated.tabs.location": "left",
 
@@ -274,6 +275,7 @@
 	"git.enableStatusBarSync": false,
 	"git.fetchOnPull": true,
 	//"git.autofetch": "all",
+	"githubRepositories.autoFetch.enabled": false,
 	"git.rebaseWhenSync": true,
 	"git.pullBeforeCheckout": true,
 	//"git.followTagsWhenSync": true,
@@ -316,6 +318,9 @@
 	"gitlens.views.formats.commits.label": "${❰ tips ❱ ┇ }${message}",
 	"gitlens.views.repositories.autoRefresh": false,
 
+	/* GitHub.vscode-pull-request-github */
+	"githubPullRequests.showPullRequestNumberInTree": true,
+
 	/* grapecity.gc-excelviewer */
 	"csv-preview.capitalizeHeaders": false,
 	"csv-preview.formatValues": "unquoted",
@@ -357,6 +362,7 @@
 	"numberedBookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
 	"numberedBookmarks.showBookmarkNotDefinedWarning": true,
+	"bookmarks.sideBar.countBadge": "off",
 
 	"sortLines.ignoreUnselectedLastLine": true,
 	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
@@ -1270,7 +1276,7 @@
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",
 	"chat.agentSessionsViewLocation": "view", // requires GitHub Pull Requests
-	"chat.todoListTool.enabled": true,
+	"chat.agent.todoList": { "position": "chat-input" },
 	"chat.editing.confirmEditRequestRemoval": false,
 	//"chat.editing.confirmEditRequestRetry": false,
 

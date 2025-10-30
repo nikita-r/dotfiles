@@ -841,6 +841,15 @@
 			"editorGutter.modifiedBackground": "#206080", // 200°
 			"editorGutter.modifiedSecondaryBackground": "#206080",
 
+			/* CodeLens and merge at 220° */
+			"editorCodeLens.foreground": "#37f",
+			"mergeEditor.change.background": "#124",
+			"mergeEditor.change.word.background": "#37f5",
+			"merge.currentContentBackground": "#37f3",
+			"merge.currentHeaderBackground": "#37f7",
+			"merge.incomingContentBackground": "#37f3",
+			"merge.incomingHeaderBackground": "#37f7",
+
 			/* miscellaneous */
 			"widget.border": "#000",
 			"widget.shadow": "#000",
@@ -1010,7 +1019,6 @@
 			/* text */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
-			"editorCodeLens.foreground": "#37f", // 220°
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
 			"list.deemphasizedForeground": "#7aa3cc",
@@ -1290,6 +1298,7 @@
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,
+	"zenMode.hideStatusBar": false,
 	"zenMode.hideLineNumbers": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	//"diffEditor.experimental.showMoves": true,

@@ -1283,6 +1283,7 @@
 
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",
+	"github.copilot.chat.agent.autoFix": false,
 	"chat.agentSessionsViewLocation": "view", // requires GitHub Pull Requests
 	"chat.agent.todoList": { "position": "chat-input" },
 	"chat.editing.confirmEditRequestRemoval": false,

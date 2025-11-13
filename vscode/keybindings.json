@@ -61,17 +61,22 @@
 	/* Ctrl+Backslash */
 	{
 		"key": "ctrl+\\",
-		"command": "workbench.view.chat.sessions"
+		"command": "Command is not defined for Ctrl+Backslash"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.view.chat.sessions",
+		"when": "!(focusedView =~ /^workbench\\.view\\.chat\\.sessions\\./)"
 	},
 	{
 		"key": "ctrl+\\",
 		"command": "git.diff.stageHunk",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
+		"when": "!editorReadonly && editorTextFocus && !editorHasMultipleSelections"
 	},
 	{
 		"key": "ctrl+\\",
 		"command": "git.stageSelectedRanges",
-		"when": "editorTextFocus && !editorHasMultipleSelections && editorHasSelection"
+		"when": "!editorReadonly && editorTextFocus && !editorHasMultipleSelections && editorHasSelection"
 	},
 	{
 		"key": "ctrl+\\",
@@ -512,11 +517,6 @@
 	},
 
 	/* toggle treeFind */
-	{
-		"key": "ctrl+alt+f",
-		"command": "",
-		"when": "true"
-	},
 	{
 		"key": "alt+/",
 		"command": "\"list.find\" requires the list to support Tree Find",

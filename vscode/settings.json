@@ -35,7 +35,7 @@
 	"editor.stickyScroll.enabled": false,
 	"editor.stickyScroll.maxLineCount": 5,
 	"[python][yaml]": {
-		"editor.stickyScroll.enabled": true,
+		//"editor.stickyScroll.enabled": true,
 		"editor.stickyScroll.maxLineCount": 9,
 		"editor.stickyScroll.defaultModel": "foldingProviderModel",
 		//"editor.autoIndent": "advanced", // or "brackets"
@@ -1017,8 +1017,10 @@
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
+			"button.secondaryBackground": "#157", // 200°
+			"button.secondaryHoverBackground": "#379",
 
-			/* text */
+			/* * */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
 			"pickerGroup.foreground": "#ffd700", // Gold // 50°
@@ -1029,7 +1031,9 @@
 			"textPreformat.foreground": "#cdf",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
-			"chat.slashCommandBackground": "#90c0c0", // 180°
+
+			/* chat */
+			"chat.slashCommandBackground": "#90c0c0",
 			"chat.slashCommandForeground": "#102020",
 
 			/* Hue:  20/360 */
@@ -1119,7 +1123,6 @@
 			"terminal.selectionForeground": "#fff",
 			"terminal.inactiveSelectionBackground": "#147",
 			"terminal.hoverHighlightBackground": "#147",
-			"button.secondaryBackground": "#444",
 
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",

@@ -968,6 +968,8 @@
 			"scmGraph.foreground5": "#b66dff", // 270°
 			"scmGraph.historyItemHoverAdditionsForeground": "#80C080",
 			"scmGraph.historyItemHoverDeletionsForeground": "#C66",
+			"chat.linesAddedForeground": "#80C080",
+			"chat.linesRemovedForeground": "#C66",
 			"gitDecoration.conflictingResourceForeground": "#7ee",
 			"gitDecoration.deletedResourceForeground": "#C66",
 			"gitDecoration.stageDeletedResourceForeground": "#C66",
@@ -1020,21 +1022,25 @@
 			"button.secondaryBackground": "#157", // 200°
 			"button.secondaryHoverBackground": "#379",
 
-			/* * */
+			/* text/list */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
-			"pickerGroup.foreground": "#ffd700", // Gold // 50°
 			"list.highlightForeground": "#0af",
 			"list.deemphasizedForeground": "#7aa3cc",
+
+			/* Gold/50° */
 			"list.focusHighlightForeground": "#ffd700",
-			"textPreformat.background": "#124", // 220°
-			"textPreformat.foreground": "#cdf",
+			"pickerGroup.foreground": "#ffd700",
 			"textLink.foreground": "#ffd700",
 			"textLink.activeForeground": "#fff7cc",
 
 			/* chat */
 			"chat.slashCommandBackground": "#90c0c0",
 			"chat.slashCommandForeground": "#102020",
+			"chat.requestBorder": "#4C6680",
+			"textPreformat.background": "#124", // 220°
+			"textPreformat.foreground": "#cdf",
+			"descriptionForeground": "#a0a8b8",
 
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
@@ -1045,6 +1051,9 @@
 			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
 			"statusBar.debuggingBackground": "#c63",
+			"statusBar.debuggingForeground": "#fff",
+			"statusBarItem.hoverForeground": "#fff",
+			"statusBar.foreground": "#ccc",
 			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */

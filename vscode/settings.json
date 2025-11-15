@@ -245,6 +245,8 @@
 	"editor.minimap.showSlider": "always",
 	"editor.minimap.renderCharacters": false,
 	"editor.renderControlCharacters": false,
+	//"editor.unicodeHighlight.nonBasicASCII": true,
+	"editor.unicodeHighlight.includeComments": true,
 
 	/* SectionHeaders */
 	"editor.minimap.sectionHeaderFontSize": 12,
@@ -1108,6 +1110,10 @@
 			/* pinpoint matches within text */
 			"editor.selectionHighlightBackground": "#abc0",
 			"editor.selectionHighlightBorder": "#802050",
+			"editor.wordHighlightBackground": "#c0c0c014",
+			"editor.wordHighlightBorder": "#c0c0c02a",
+			"editor.wordHighlightStrongBackground": "#1230",
+			"editor.wordHighlightStrongBorder": "#fff",
 			"editor.findMatchBackground": "#515",
 			"editor.findMatchBorder": "#30c090", // 160°
 			"editor.findMatchHighlightBackground": "#a0a6",
@@ -1137,9 +1143,9 @@
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#1230",
-			"peekViewTitle.background": "#000020",
-			"peekViewResult.background": "#000020",
-			"peekViewEditor.background": "#001020",
+			"peekViewTitle.background": "#202428",
+			"peekViewResult.background": "#1a1a1a",
+			"peekViewEditor.background": "#1a1a1a",
 			"peekViewEditorGutter.background": "#06060C",
 			"peekViewEditorStickyScroll.background": "#203038",
 			"peekViewEditorStickyScrollHover.background": "#304854",

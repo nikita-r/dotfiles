@@ -771,7 +771,7 @@
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
 			{ "scope": "keyword.other.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
-			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses", "settings": { "foreground": "#c6c" } },
+			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, punctuation.definition.arguments.shell", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.list, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread, keyword.operator.ellipsis", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "support.variable", "support.constant.variable", "variable.other.predefined", "entity.name.other.preprocessor.macro.predefined" ], "settings": { "foreground": "#f9c" } },
@@ -1012,9 +1012,9 @@
 			"notifications.border": "#ccc",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
-			"editorCursor.foreground": "#f93", // 30°
+			"editorCursor.foreground": "#f73", // 20°
 			"editorCursor.background": "#fff",
-			"editor.symbolHighlightBorder": "#f93",
+			"editor.symbolHighlightBorder": "#f73",
 			"editor.symbolHighlightBackground": "#3210",
 			"editorMultiCursor.primary.foreground": "#c69", // 330°
 			"editorMultiCursor.secondary.foreground": "#96c", // 270°
@@ -1144,9 +1144,9 @@
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#1230",
 			"peekViewTitle.background": "#202428",
-			"peekViewResult.background": "#1a1a1a",
+			"peekViewResult.background": "#202428",
 			"peekViewEditor.background": "#1a1a1a",
-			"peekViewEditorGutter.background": "#06060C",
+			"peekViewEditorGutter.background": "#060C12",
 			"peekViewEditorStickyScroll.background": "#203038",
 			"peekViewEditorStickyScrollHover.background": "#304854",
 			"peekViewTitleDescription.foreground": "#ccc",

@@ -904,6 +904,16 @@
 	},
 	{
 		"key": "ctrl+]",
+		"command": "chatEditor.action.navigateNext",
+		"when": "chatEdits.hasEditorModifications"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "chatEditor.action.navigatePrevious",
+		"when": "chatEdits.hasEditorModifications"
+	},
+	{
+		"key": "ctrl+]",
 		"command": "references-view.next",
 		"when": "reference-list.hasResult && (activeViewlet == 'workbench.view.extension.references-view' || activeAuxiliary == 'workbench.view.extension.references-view')"
 	},
@@ -931,16 +941,6 @@
 		"key": "ctrl+[",
 		"command": "merge.goToPreviousConflict",
 		"when": "activeEditor == 'mergeEditor'"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "chatEditor.action.navigateNext",
-		"when": "chatEdits.hasEditorModifications"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "chatEditor.action.navigatePrevious",
-		"when": "chatEdits.hasEditorModifications"
 	},
 	{
 		"key": "ctrl+]",

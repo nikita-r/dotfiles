@@ -178,7 +178,7 @@
 
 	/* pairs, rulers & guides */
 	"editor.bracketPairColorization.enabled": true,
-	"[diff][python][shellscript][jinja]": {
+	"[diff][git-commit][python][shellscript][jinja]": {
 		"editor.bracketPairColorization.enabled": false,
 	},
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -189,6 +189,7 @@
 	"editor.guides.indentation": false,
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
+	"[git-commit]": { "editor.rulers": [] },
 	"editor.scrollbar.vertical": "visible",
 	"editor.scrollbar.horizontal": "visible",
 	"editor.smoothScrolling": false,
@@ -262,9 +263,13 @@
 
 	/* SCM */
 
+	/* ꜱᴏᴜʀᴄᴇ ᴄᴏɴᴛʀᴏʟ / ʀᴇᴘᴏꜱɪᴛᴏʀɪᴇꜱ */
 	"scm.alwaysShowRepositories": true,
-	"scm.autoReveal": false,
 	"scm.repositories.visible": 0,
+	"scm.repositories.selectionMode": "single",
+
+	/* ꜱᴏᴜʀᴄᴇ ᴄᴏɴᴛʀᴏʟ / ᴄʜᴀɴɢᴇꜱ */
+	"scm.autoReveal": false,
 	"git.untrackedChanges": "separate", // or "hidden" for better performance
 	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
 	"git.showInlineOpenFileAction": false,
@@ -285,6 +290,7 @@
 	"git.showPushSuccessNotification": true,
 
 	"git.defaultBranchName": "trunk",
+	"git.verboseCommit": true,
 	//"scm.workingSets.enabled": true,
 	//"scm.workingSets.default": "empty",
 	"scm.inputFontFamily": "sans",
@@ -325,7 +331,7 @@
 	"githubPullRequests.showPullRequestNumberInTree": true,
 	"githubPullRequests.codingAgent.codeLens": false,
 
-	/* grapecity.gc-excelviewer */
+	/* GrapeCity.gc-excelviewer */
 	"csv-preview.capitalizeHeaders": false,
 	"csv-preview.formatValues": "unquoted",
 	"csv-preview.lineNumbers": "source",
@@ -391,50 +397,6 @@
 	"svg.preview.backgroundSaveTo": "NoSave",
 	"svg.preview.background": "transparent",
 	"svg.preview.toolbarSize": "large",
-
-	/* gruntfuggly.todo-tree */
-	"todo-tree.tree.scanAtStartup": true,
-	"todo-tree.tree.autoRefresh": false,
-	"todo-tree.filtering.ignoreGitSubmodules": true,
-	"todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-	"todo-tree.filtering.excludeGlobs": [ "**/*.log" ],
-	"todo-tree.ripgrep.ripgrepArgs": "--max-columns=999 --no-config --pcre2",
-	"todo-tree.regex.regex": "(?<!\")\\b($TAGS)\\b|^\\s*[-*+] +\\[ \\]",
-	"todo-tree.regex.subTagRegex": "^\\s*:\\s+",
-	//"todo-tree.regex.regexCaseSensitive": false,
-	"todo-tree.general.tags": [
-		"BUG", "HACK", "FIXME", "ToDo",
-		"TODO", "XXX", "MAYBE", "NOTE",
-	],
-	"todo-tree.general.showActivityBarBadge": true,
-	"todo-tree.tree.expanded": true,
-	"todo-tree.tree.flat": true,
-	"todo-tree.tree.showBadges": false,
-	"todo-tree.tree.labelFormat": "${tag:uppercase} ${after}",
-	"todo-tree.tree.tooltipFormat": "Line ${line} ┇ ${after}",
-	"todo-tree.general.revealBehaviour": "start of line",
-	"todo-tree.highlights.enabled": false,
-	"todo-tree.highlights.defaultHighlight": {
-		"icon": "$(symbol-array)", // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-		"iconColor": "terminal.ansiMagenta"
-	},
-	"todo-tree.highlights.customHighlight": {
-		"BUG": { "icon": "$(bug)", "iconColor": "terminal.ansiRed" },
-		"FIXME": { "icon": "$(tools)" },
-		"HACK": { "icon": "$(flame)" },
-		"MAYBE": {
-			"icon": "question",
-			"iconColor": "#4080c0"
-		},
-		"NOTE": {
-			"icon": "note",
-			"iconColor": "#4080c0"
-		},
-		"XXX": {
-			"icon": "pulse", // https://primer.style/octicons/
-			"iconColor": "FireBrick"
-		}
-	},
 
 	/* ryu1kn.text-marker */
 	"textmarker.hideStatusBarItems": true,
@@ -716,8 +678,8 @@
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": "log.info", "settings": { "foreground": "#8cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
-			{ "scope": [ "markup.changed", "meta.diff.range", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
-			{ "scope": [ "markup.heading", "meta.diff.header", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
+			{ "scope": [ "markup.changed", "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.variable.shell", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": "constant.character.escape, punctuation.definition.string.heredoc.quote", "settings": { "foreground": "#fdc" } },
@@ -910,7 +872,7 @@
 			"editorBracketHighlight.foreground4": "#1230",
 			"editorBracketHighlight.foreground5": "#1230",
 			"editorBracketHighlight.foreground6": "#1230",
-			"editorBracketPairGuide.background1": "#653",
+			"editorBracketPairGuide.background1": "#653", // 40°
 			"editorBracketPairGuide.background2": "#636",
 			"editorBracketPairGuide.background3": "#346",
 			"editorBracketPairGuide.background4": "#1230",
@@ -1016,8 +978,8 @@
 			"editorCursor.background": "#fff",
 			"editor.symbolHighlightBorder": "#f73",
 			"editor.symbolHighlightBackground": "#3210",
-			"editorMultiCursor.primary.foreground": "#c69", // 330°
-			"editorMultiCursor.secondary.foreground": "#96c", // 270°
+			"editorMultiCursor.primary.foreground": "#d3f", // 290°
+			"editorMultiCursor.secondary.foreground": "#3bf", // 200°
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
@@ -1109,7 +1071,7 @@
 
 			/* pinpoint matches within text */
 			"editor.selectionHighlightBackground": "#abc0",
-			"editor.selectionHighlightBorder": "#802050",
+			"editor.selectionHighlightBorder": "#802050", // 330°
 			"editor.wordHighlightBackground": "#c0c0c014",
 			"editor.wordHighlightBorder": "#c0c0c02a",
 			"editor.wordHighlightStrongBackground": "#1230",

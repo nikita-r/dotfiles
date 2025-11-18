@@ -34,11 +34,6 @@
 		"command": "chatEditor.action.acceptHunk",
 		"when": "chatEdits.hasEditorModifications"
 	},
-	{
-		"key": "ctrl+y",
-		"command": "workbench.action.terminal.chat.insertCommand",
-		"when": "terminalChatFocus && !terminalChatActiveRequest && terminalChatResponseContainsCodeBlock && !terminalChatResponseContainsMultipleCodeBlocks"
-	},
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
@@ -959,6 +954,16 @@
 	},
 	{
 		"key": "ctrl+]",
+		"command": "multiDiffEditor.goToNextChange",
+		"when": "activeEditor == 'multiDiffEditor'"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "multiDiffEditor.goToPreviousChange",
+		"when": "activeEditor == 'multiDiffEditor'"
+	},
+	{
+		"key": "ctrl+]",
 		"command": "goToNextReference",
 		"when": "referenceSearchVisible"
 	},
@@ -1421,6 +1426,11 @@
 	},
 	{
 		"key": "ctrl+shift+\\",
+		"command": "terminal.focus",
+		"when": "!terminalIsOpen"
+	},
+	{
+		"key": "ctrl+shift+\\",
 		"command": "workbench.action.closePanel",
 		"when": "terminalTabsFocus && panelFocus"
 	},
@@ -1840,6 +1850,16 @@
 		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide"
 	},
 	{
+		"key": "ctrl+k ctrl+0",
+		"command": "multiDiffEditor.collapseAll",
+		"when": "activeEditor == 'multiDiffEditor'"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "multiDiffEditor.expandAll",
+		"when": "activeEditor == 'multiDiffEditor'"
+	},
+	{
 		"key": "shift+alt+enter",
 		"command": "runCommands", "args": { "commands": [
 			"workbench.action.toggleSidebarVisibility",
@@ -1966,11 +1986,11 @@
 	{
 		"key": "shift+alt+j",
 		"command": "workbench.action.terminal.chat.runCommand",
-		"when": "terminalChatFocus && !terminalChatActiveRequest && terminalChatResponseContainsCodeBlock && !terminalChatResponseContainsMultipleCodeBlocks"
+		"when": "terminalChatResponseContainsCodeBlock"
 	},
 	{
 		"key": "shift+alt+j",
-		"command": "Terminal Chat: multiple code blocks present", // workbench.action.terminal.chat.runFirstCommand
+		"command": "workbench.action.terminal.chat.runFirstCommand",
 		"when": "terminalChatResponseContainsMultipleCodeBlocks"
 	},
 	/* ?inQuickOpen */

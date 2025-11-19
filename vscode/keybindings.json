@@ -34,6 +34,11 @@
 		"command": "chatEditor.action.acceptHunk",
 		"when": "chatEdits.hasEditorModifications"
 	},
+	{
+		"key": "ctrl+n",
+		"command": "chatEditor.action.undoHunk",
+		"when": "chatEdits.hasEditorModifications"
+	},
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
@@ -925,12 +930,22 @@
 	{
 		"key": "ctrl+]",
 		"command": "search.action.focusNextSearchResult",
-		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
+		"when": "hasSearchResult && searchViewletVisible"
 	},
 	{
 		"key": "ctrl+[",
 		"command": "search.action.focusPreviousSearchResult",
-		"when": "hasSearchResult && searchViewletVisible || inSearchEditor"
+		"when": "hasSearchResult && searchViewletVisible"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "search.action.focusNextSearchResult",
+		"when": "activeEditor == 'workbench.editor.searchEditor'"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "search.action.focusPreviousSearchResult",
+		"when": "activeEditor == 'workbench.editor.searchEditor'"
 	},
 	{
 		"key": "ctrl+]",
@@ -1847,7 +1862,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide"
+		"when": "activeEditor =~ /DiffEditor$/"
 	},
 	{
 		"key": "ctrl+k ctrl+0",
@@ -1865,7 +1880,7 @@
 			"workbench.action.toggleSidebarVisibility",
 			"workbench.action.toggleAuxiliaryBar",
 		] },
-		"when": "activeEditor =~ /DiffEditor$/ && config.diffEditor.renderSideBySide && sideBarVisible && auxiliaryBarVisible"
+		"when": "activeEditor =~ /DiffEditor$/ && sideBarVisible && auxiliaryBarVisible"
 	},
 	{
 		"key": "shift+alt+enter",
@@ -2253,6 +2268,11 @@
 		"key": "ctrl+shift+.",
 		"command": "editor.action.surroundWithSnippet",
 		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "ctrl+shift+.",
+		"command": "selectPrevCodeAction",
+		"when": "codeActionMenuVisible"
 	},
 
 	/* ^+C to Copy in Panel (not in Editor) */

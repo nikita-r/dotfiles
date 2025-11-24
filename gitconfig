@@ -54,6 +54,7 @@
 	cam = commit -a -m
 	dns = diff --name-status
 	wtf = "!f() { if [[ \"$2\" =~ [[:space:]] ]] || [ -z $2 ]; then echo 'Invalid $2'; return 1; fi; git fetch origin $1 && F=${1//\\//+} && git worktree add $2/$F origin/$1 -b $1 && (cd $2/$F && pwd -L); }; f"
+	wtc = "!f() { if [[ \"$2\" =~ [[:space:]] ]] || [ -z $2 ]; then echo 'Invalid $2'; return 1; fi; F=${1//\\//+} && git worktree add $2/$F -b $1 && (cd $2/$F && pwd -L); }; f"
 	mnn = merge --no-commit --no-ff
 	agi = ! cd \"${GIT_PREFIX:-.}\" && bash -c \"shopt -s globstar nocaseglob && git add $@\" && :
 	rmd = ! git ls-files -d | xargs -r git rm && :
@@ -66,6 +67,9 @@
 [alias]
 	whoami = !printf '%s <%s>\\n' \"$(git config user.name)\" \"$(git config user.email)\"
 	log-rs = log --reverse --pretty=format:'%h|%aN|%s'
+	print-default = ! git symbolic-ref refs/remotes/origin/HEAD && git for-each-ref refs/heads/ --format \"%(if:equals=$(git symbolic-ref refs/remotes/origin/HEAD))%(upstream)%(then)%(refname:short)%(end)\" --omit-empty
+	default-local = ! (git symbolic-ref refs/remotes/origin/HEAD > /dev/null) && git for-each-ref refs/heads/ --format \"%(if:equals=$(git symbolic-ref refs/remotes/origin/HEAD))%(upstream)%(then)%(refname:short)%(end)\" --omit-empty | grep -E '.+'
+	branched-from = ! bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-`git default-local || echo trunk`}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
 
 [diff "rtf"]
 	textconv = unrtf --text

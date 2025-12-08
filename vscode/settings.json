@@ -88,6 +88,7 @@
 	"markdown.preview.markEditorSelection": false,
 
 	//"search.quickOpen.includeSymbols": true,
+	//"search.quickOpen.history.filterSortOrder": "recency",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
 
@@ -757,7 +758,7 @@
 			{ "scope": "entity.other.attribute-name.namespace, entity.other.attribute-name punctuation.separator.namespace", "settings": { "foreground": "#69c" } },
 			{ "scope": "punctuation.definition.tag, entity.tag.name punctuation.definition.bracket, punctuation.definition.escape.key", "settings": { "foreground": "#69c" } },
 			{ "scope": [ "storage.modifier", "keyword.storage", "keyword.local", "punctuation.decorator", "punctuation.definition.decorator", "punctuation.definition.annotation" ], "settings": { "foreground": "#ee7" } },
-			{ "scope": "entity.name.function.decorator, storage.type.annotation.java, storage.type.annotation.groovy", "settings": { "foreground": "#7bf" } },
+			{ "scope": "entity.name.function.decorator, storage.type.annotation.java, storage.type.annotation.groovy, meta.path.basename.search", "settings": { "foreground": "#b9f" } },
 			{ "scope": "punctuation.separator.annotation, keyword.operator.type.annotation", "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "punctuation.definition.typeparameters", "punctuation.separator.generic-parameter-clause", "punctuation.separator.generic-argument-clause", "punctuation.section.angle-brackets", "punctuation.separator.delimiter.comma.template", "meta.template.angle-brackets", "punctuation.bracket.angle", "meta.brace.angle" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "support.constant.color", "constant.other.option", "constant.numeric.integer.shell", "string.parameter.directives", "entity.name.operator" ], "settings": { "foreground": "#dcf" } },

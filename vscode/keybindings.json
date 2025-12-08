@@ -808,6 +808,16 @@
 		"command": "selectNextCodeAction",
 		"when": "codeActionMenuVisible"
 	},
+	{
+		"key": "space",
+		"command": "acceptSelectedCodeAction",
+		"when": "codeActionMenuVisible"
+	},
+	{
+		"key": "ctrl+space",
+		"command": "acceptSelectedCodeAction",
+		"when": "codeActionMenuVisible"
+	},
 
 	/* Retain F8 to Send Selected Text to Active Terminal */
 	{
@@ -1534,6 +1544,11 @@
 		"command": "editor.action.insertLineAfter",
 		"when": "textInputFocus"
 	},
+	{
+		"key": "ctrl+enter",
+		"command": "previewSelectedCodeAction",
+		"when": "codeActionMenuVisible"
+	},
 	{ "command": "noop", "key": "ctrl+shift+enter" },
 	{
 		"key": "ctrl+shift+enter",
@@ -1630,7 +1645,8 @@
 
 	/* !^Z */
 	{ "key": "ctrl+z", "command": "default:undo" },
-	{ "key": "alt+z", "command": "editor.action.toggleWordWrap" },
+	{ "key": "alt+z", "command": "noop" },
+	{ "key": "ctrl+alt+z", "command": "editor.action.toggleWordWrap" },
 	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth", "when": "terminalFocusInAny" },
 
 	/* v1.57 release removed this kb */
@@ -2103,7 +2119,17 @@
 	{
 		"key": "ctrl+alt+j",
 		"command": "workbench.action.search.toggleQueryDetails",
-		"when": "inSearchEditor || searchViewletFocus"
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "search.action.focusFilesToInclude",
+		"when": "inSearchEditor && inputBoxFocus && searchInputBoxFocus"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "search.focus.nextInputBox",
+		"when": "inSearchEditor && inputBoxFocus && !searchInputBoxFocus"
 	},
 
 	/* scroll a page */

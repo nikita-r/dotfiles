@@ -3,9 +3,16 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "initialPosition": "2,1",
   "initialCols": 102,
-  "initialRows": 57,
-  "actions": [
-    { "keys": "alt+shift+q", "command": "closePane" },
+  "initialRows": 51,
+  "keybindings": [
+    { "id": "Terminal.ClosePane", "keys": "alt+shift+q" },
   ],
-  "themes": []
+  "themes": [{ "name": "nikita-r",
+    "tab": {
+      "background": "terminalBackground",
+      "iconStyle": "monochrome",
+      "showCloseButton": "never"
+    }
+  }],
+  "theme": "nikita-r"
 }

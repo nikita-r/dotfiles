@@ -94,8 +94,11 @@
 
 	/* suggestions-adjacent settings */
 
-	"editor.hover.enabled": false,
-	"editor.hover.above": false,
+	"editor.hover.enabled": "onKeyboardModifier", // opposite of Multi-Cursor Modifier
+	"editor.hover.delay": 0,
+	"editor.hover.hidingDelay": 0,
+	//"editor.hover.enabled": false,
+	//"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
 	"editor.inlayHints.maximumLength": 0,
@@ -523,7 +526,7 @@
 	"powershell.codeFormatting.useCorrectCasing": true,
 	"powershell.codeFormatting.whitespaceBetweenParameters": true,
 	"powershell.codeFormatting.alignPropertyValuePairs": false,
-	//"powershell.codeFormatting.addWhitespaceAroundPipe": false,
+	"powershell.codeFormatting.addWhitespaceAroundPipe": false,
 	"powershell.codeFormatting.trimWhitespaceAroundPipe": true,
 	"powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
 	"mssql.format.datatypeCasing": "lowercase",
@@ -942,8 +945,8 @@
 			"gitDecoration.stageModifiedResourceForeground": "#fc9",
 			"gitDecoration.addedResourceForeground": "#80C080",
 			"gitDecoration.renamedResourceForeground": "#80C080",
-			"gitDecoration.untrackedResourceForeground": "#99f",
-			"gitDecoration.submoduleResourceForeground": "#99f",
+			"gitDecoration.untrackedResourceForeground": "#c9f",
+			"gitDecoration.submoduleResourceForeground": "#c9f",
 			"gitDecoration.ignoredResourceForeground": "#7aa3cc", // 210°
 
 			/* on break */
@@ -1264,6 +1267,7 @@
 	/* * */
 	"inlineChat.enableV2": true,
 	"chat.emptyChatState.enabled": false,
+	"chat.viewWelcome.enabled": false,
 
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",

@@ -25,6 +25,7 @@
 	{ "command": "noop", "key": "ctrl+shift+9" },
 	{ "key": "ctrl+u", "command": "cursorUndo" },
 	{ "key": "ctrl+y", "command": "cursorRedo" },
+	{ "key": "ctrl+n", "command": "noop" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
 
@@ -1546,6 +1547,11 @@
 	},
 	{
 		"key": "ctrl+enter",
+		"command": "notebook.cell.insertCodeCellBelow",
+		"when": "notebookCellFocused && !notebookCellEditorFocused"
+	},
+	{
+		"key": "ctrl+enter",
 		"command": "previewSelectedCodeAction",
 		"when": "codeActionMenuVisible"
 	},
@@ -1554,6 +1560,11 @@
 		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
 		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+enter",
+		"command": "notebook.cell.insertCodeCellAbove",
+		"when": "notebookCellFocused && !notebookCellEditorFocused"
 	},
 
 	/* Ctrl+E; Mac default for Cmd+E is "actions.findWithSelection" */
@@ -1645,9 +1656,10 @@
 
 	/* !^Z */
 	{ "key": "ctrl+z", "command": "default:undo" },
-	{ "key": "alt+z", "command": "noop" },
+	{ "key": "alt+z", "command": "" },
 	{ "key": "ctrl+alt+z", "command": "editor.action.toggleWordWrap" },
-	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth", "when": "terminalFocusInAny" },
+	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth"
+	, "when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus" },
 
 	/* v1.57 release removed this kb */
 	{
@@ -2076,7 +2088,7 @@
 	{
 		"key": "shift+alt+,",
 		"command": "C_Cpp.SwitchHeaderSource",
-		"when": "config.C_Cpp.intelliSenseEngine && editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/"
+		"when": "config.C_Cpp.intelliSenseEngine && editorLangId =~ /^(c|(cuda-)?cpp)$/"
 	},
 	{
 		"key": "shift+alt+,",
@@ -2434,8 +2446,8 @@
 	  "command": "type", "args": { "text": "›" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+5",
 	  "command": "type", "args": { "text": "∞" } },
-	//{ "when": "!isMac && textInputFocus", "key": "alt+z",
-	//  "command": "type", "args": { "text": "\u03a9" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+z",
+	  "command": "type", "args": { "text": "\u03a9" } },
 
 	/* editor.action & search.action to Find/Replace */
 	{

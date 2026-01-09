@@ -134,6 +134,9 @@
 		"key": "ctrl+k t",
 		"command": "workbench.action.reopenClosedEditor"
 	},
+	/* Ctrl+Shift+a: Search Tabs in Chrome */
+	{ "command": "", "key": "ctrl+shift+a" },
+
 	/* ^K *N for New */
 	{
 		"key": "ctrl+k n",
@@ -143,6 +146,16 @@
 		"key": "ctrl+k n",
 		"command": "explorer.newFile",
 		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+k n",
+		"command": "workbench.action.chat.newChat",
+		"when": "inChat"
+	},
+	{
+		"key": "ctrl+k n",
+		"command": "workbench.action.openChat",
+		"when": "inChatEditor"
 	},
 	{
 		"key": "ctrl+k shift+n",
@@ -163,8 +176,6 @@
 		"key": "ctrl+k ctrl+n",
 		"command": "workbench.action.newWindow"
 	},
-	/* Ctrl+Shift+a: Search Tabs in Chrome */
-	{ "command": "", "key": "ctrl+shift+a" },
 
 	/* Sublime Text defaults */
 	/* {"to": "brackets"} */
@@ -1545,6 +1556,14 @@
 		"command": "editor.action.insertLineAfter",
 		"when": "textInputFocus"
 	},
+	{ "command": "noop", "key": "ctrl+shift+enter" },
+	{
+		"key": "ctrl+shift+enter",
+		"command": "editor.action.insertLineBefore",
+		"when": "textInputFocus"
+	},
+
+	/* [+]^Enter */
 	{
 		"key": "ctrl+enter",
 		"command": "notebook.cell.insertCodeCellBelow",
@@ -1554,12 +1573,6 @@
 		"key": "ctrl+enter",
 		"command": "previewSelectedCodeAction",
 		"when": "codeActionMenuVisible"
-	},
-	{ "command": "noop", "key": "ctrl+shift+enter" },
-	{
-		"key": "ctrl+shift+enter",
-		"command": "editor.action.insertLineBefore",
-		"when": "textInputFocus"
 	},
 	{
 		"key": "ctrl+shift+enter",
@@ -2527,6 +2540,10 @@
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+shift+t",
+		"command": "workbench.action.reopenClosedEditor"
 	},
 	{
 		"key": "ctrl+win+w",

@@ -105,6 +105,7 @@
 
 	/* Code Problems & Actions */
 	"editor.lightbulb.enabled": "off",
+	"editor.snippets.codeActions.enabled": false,
 	"github.copilot.editor.enableCodeActions": false,
 	"editor.showDeprecated": false, // strikethrough
 	"markdown.validate.enabled": true,
@@ -234,6 +235,7 @@
 	/* . . . */
 
 	"breadcrumbs.symbolSortOrder": "name",
+	"breadcrumbs.symbolPathSeparator": " :: ",
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
 	"workbench.view.alwaysShowHeaderActions": true,
@@ -269,6 +271,7 @@
 
 	/* ꜱᴏᴜʀᴄᴇ ᴄᴏɴᴛʀᴏʟ / ʀᴇᴘᴏꜱɪᴛᴏʀɪᴇꜱ */
 	"scm.alwaysShowRepositories": true,
+	"scm.repositories.explorer": true,
 	"scm.repositories.visible": 0,
 	"scm.repositories.selectionMode": "single",
 
@@ -303,6 +306,7 @@
 
 	/* diff indicators */
 	"scm.diffDecorationsGutterPattern": { "modified": false },
+	//"git.blame.ignoreWhitespace": true,
 	"diffEditor.renderIndicators": false,
 
 	/* GitHub */
@@ -562,12 +566,13 @@
 	"debug.allowBreakpointsEverywhere": true,
 	//"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
-	"debug.inlineValues": "on",
-	"notebook.inlineValues": "auto",
 	"debug.javascript.breakOnConditionalError": true,
+	"debug.breakpointsView.presentation": "tree",
 	"debug.showBreakpointsInOverviewRuler": true,
 	"debug.showInlineBreakpointCandidates": false,
 	"debug.showSubSessionsInToolBar": true,
+	"debug.inlineValues": "on",
+	"notebook.inlineValues": "auto",
 	"debug.showVariableTypes": true,
 
 	/* Terminal */
@@ -1272,7 +1277,6 @@
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",
 	"github.copilot.chat.agent.autoFix": false,
-	"chat.agentSessionsViewLocation": "view",
 	"chat.editing.confirmEditRequestRemoval": false,
 	//"chat.editing.confirmEditRequestRetry": false,
 

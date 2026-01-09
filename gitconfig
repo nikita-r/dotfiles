@@ -34,7 +34,7 @@
 	rs = restore --staged
 	ss = show -s
 	ol = log --oneline
-	ol = ! git log --pretty=format:'%C(auto)%cI %h %s%d' \"$@\" && printf '\\n'
+	ol = ! git log -n3 --pretty=format:'%C(auto)%cI %h %s%d' \"$@\" && printf '\\n'
 
 [alias]
 	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules

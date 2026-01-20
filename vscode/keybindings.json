@@ -104,22 +104,6 @@
 	{ "command": "noop", "key": "shift+alt+delete" },
 	{ "command": "noop", "key": "shift+alt+backspace" },
 
-	/* Files Explorer */
-	{
-		"key": "ctrl+shift+e",
-		"command": "workbench.files.action.focusFilesExplorer"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus"
-	},
-	{
-		"key": "ctrl+shift+n",
-		"command": "explorer.newFolder",
-		"when": "filesExplorerFocus"
-	},
-
 	/* pour Web-based */
 	{
 		"key": "ctrl+k w",
@@ -144,23 +128,8 @@
 	},
 	{
 		"key": "ctrl+k n",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus"
-	},
-	{
-		"key": "ctrl+k shift+n",
-		"command": "explorer.newFolder",
-		"when": "filesExplorerFocus"
-	},
-	{
-		"key": "ctrl+k n",
 		"command": "workbench.action.chat.newChat",
 		"when": "inChat"
-	},
-	{
-		"key": "ctrl+k n",
-		"command": "workbench.action.openChat",
-		"when": "inChatEditor"
 	},
 	{
 		"key": "ctrl+k shift+n",
@@ -173,8 +142,39 @@
 		"when": "!terminalEditorActive && (terminalFocusInAny || terminalFindFocused || terminalTabsFocus)"
 	},
 	{
+		"key": "ctrl+k shift+n",
+		"command": "workbench.action.restoreEditorsToMainWindow",
+		"when": "isAuxiliaryWindow"
+	},
+	{
 		"key": "ctrl+k ctrl+n",
 		"command": "workbench.action.newWindow"
+	},
+
+	/* Files Explorer */
+	{
+		"key": "ctrl+k n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+k shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
 	},
 
 	/* Sublime Text defaults */
@@ -247,7 +247,7 @@
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.terminal.clear",
-		"when": "terminalFocus"
+		"when": "terminalFocus || terminalTabsFocus"
 	},
 
 	/* Q */

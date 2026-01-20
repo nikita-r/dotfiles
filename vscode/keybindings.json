@@ -66,8 +66,8 @@
 	},
 	{
 		"key": "ctrl+\\",
-		"command": "workbench.view.chat.sessions",
-		"when": "!(focusedView =~ /^workbench\\.view\\.chat\\.sessions\\./)"
+		"command": "explorer.download",
+		"when": "filesExplorerFocus"
 	},
 	{
 		"key": "ctrl+\\",
@@ -148,6 +148,11 @@
 		"when": "filesExplorerFocus"
 	},
 	{
+		"key": "ctrl+k shift+n",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus"
+	},
+	{
 		"key": "ctrl+k n",
 		"command": "workbench.action.chat.newChat",
 		"when": "inChat"
@@ -161,11 +166,6 @@
 		"key": "ctrl+k shift+n",
 		"command": "workbench.action.moveEditorGroupToNewWindow",
 		"when": "groupEditorsCount || groupEditorsCount == 0"
-	},
-	{
-		"key": "ctrl+k shift+n",
-		"command": "explorer.newFolder",
-		"when": "filesExplorerFocus"
 	},
 	{
 		"key": "ctrl+k shift+n",
@@ -2101,7 +2101,7 @@
 	{
 		"key": "shift+alt+,",
 		"command": "C_Cpp.SwitchHeaderSource",
-		"when": "config.C_Cpp.intelliSenseEngine && editorLangId =~ /^(c|(cuda-)?cpp)$/"
+		"when": "config.C_Cpp.intelliSenseEngine && editorLangId =~ /^(c|cpp|cuda-cpp)$/"
 	},
 	{
 		"key": "shift+alt+,",

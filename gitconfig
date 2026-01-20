@@ -157,6 +157,7 @@
 	mnemonicPrefix = true
 	noPrefix = true
 	algorithm = histogram
+	colorMoved = default
 
 [user]
 	useConfigOnly = true

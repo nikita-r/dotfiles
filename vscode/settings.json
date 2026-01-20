@@ -1110,6 +1110,10 @@
 			"terminal.inactiveSelectionBackground": "#147",
 			"terminal.hoverHighlightBackground": "#147",
 
+			/* colour ANSI */
+			"terminal.ansiRed": "#f33",
+			"terminal.ansiBrightRed": "#f00",
+
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",
 			"peekViewEditor.matchHighlightBackground": "#404",

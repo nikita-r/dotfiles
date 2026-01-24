@@ -1656,11 +1656,13 @@
 	},
 	{
 		"key": "ctrl+alt+n",
-		"command": "list.focusAnyDown"
+		"command": "list.focusAnyDown",
+		"when": "listFocus"
 	},
 	{
 		"key": "ctrl+alt+p",
-		"command": "list.focusAnyUp"
+		"command": "list.focusAnyUp",
+		"when": "listFocus"
 	},
 	{
 		"key": "ctrl+alt+a",
@@ -2272,6 +2274,11 @@
 	{
 		"key": "ctrl+alt+n",
 		"command": "workbench.action.chat.newChat",
+		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
+	},
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.chat.history",
 		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 	{

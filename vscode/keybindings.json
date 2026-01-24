@@ -127,11 +127,6 @@
 		"command": "workbench.action.files.newUntitledFile"
 	},
 	{
-		"key": "ctrl+k n",
-		"command": "workbench.action.chat.newChat",
-		"when": "inChat"
-	},
-	{
 		"key": "ctrl+k shift+n",
 		"command": "workbench.action.moveEditorGroupToNewWindow",
 		"when": "groupEditorsCount || groupEditorsCount == 0"
@@ -195,7 +190,12 @@
 	{
 		"key": "ctrl+shift+/",
 		"command": "editor.action.blockComment",
-		"when": "!inChatInput"
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+/",
+		"command": "notebook.commentSelectedCells",
+		"when": "notebookEditorFocused && !editorFocus"
 	},
 	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
@@ -355,8 +355,12 @@
 	},
 	{
 		"key": "ctrl+/",
-		"command": "editor.action.commentLine",
-		"when": "!inChatInput"
+		"command": "editor.action.commentLine"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "workbench.action.chat.attachContext",
+		"when": "inChatInput"
 	},
 
 	/* take KB from Default Keyboard Shortcuts for Windows, but drop the "when" */
@@ -2112,11 +2116,6 @@
 	/* Ctrl+Alt+j */
 	{
 		"key": "ctrl+alt+j",
-		"command": "workbench.action.chat.attachFile",
-		"when": "view.workbench.panel.chat.view.copilot.visible"
-	},
-	{
-		"key": "ctrl+alt+j",
 		"command": "markdown.showSource",
 		"when": "activeWebviewPanelId == 'markdown.preview' || activeWebviewPanelId == 'vscode.markdown.preview.editor'"
 	},
@@ -2271,6 +2270,11 @@
 		"command": "workbench.panel.chat"
 	},
 	{
+		"key": "ctrl+alt+n",
+		"command": "workbench.action.chat.newChat",
+		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
+	},
+	{
 		"key": "ctrl+win+i",
 		"command": "workbench.panel.chat"
 	},
@@ -2279,6 +2283,12 @@
 		"key": "ctrl+k shift+i",
 		"command": "workbench.action.openQuickChat",
 		"when": "editorTextFocus && !editorHasMultipleSelections"
+	},
+	/* Any Chat */
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.chat.attachFile",
+		"when": "inChat"
 	},
 	/* Completions Panel */
 	{ "command": "noop", "key": "shift+ctrl+alt+i" },

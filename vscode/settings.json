@@ -1112,7 +1112,7 @@
 
 			/* colour ANSI */
 			"terminal.ansiRed": "#f33",
-			"terminal.ansiBrightRed": "#f00",
+			"terminal.ansiBrightRed": "#f66",
 
 			/* Peeking Viewport */
 			"peekViewEditor.matchHighlightBorder": "#b7b9",

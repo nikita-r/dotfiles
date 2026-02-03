@@ -27,6 +27,7 @@
 
 	/* extravagant features */
 	"security.workspace.trust.enabled": false,
+	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
 	"terminal.integrated.shellIntegration.enabled": false,
@@ -655,6 +656,7 @@
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
 	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.ignoreBracketedPasteMode": true,
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",
@@ -674,7 +676,7 @@
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
 			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.other.phpdoc, keyword.other.documentation", "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -682,15 +684,16 @@
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#c9b" } },
+			{ "scope": "markup.heading meta.tag.inline, markup.heading constant.character.entity", "settings": { "fontStyle": "" } },
 			{ "scope": [ "log.error", "markup.bold", "log.exception", "punctuation.whitespace.comment.leading.graphql" ], "settings": { "fontStyle": "" } },
-			{ "scope": [ "log.error", "log.warning" ], "settings": { "foreground": "#c69" } },
+			{ "scope": [ "log.error", "log.warning", "meta.image.inline.markdown punctuation.definition.metadata" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": "log.info", "settings": { "foreground": "#8cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "markup.changed", "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
-			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.variable.shell", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": "constant.character.escape, punctuation.definition.string.heredoc.quote", "settings": { "foreground": "#fdc" } },
 			{ "scope": "constant.character.escape.powershell, punctuation.whitespace.comment.leading, entity.other.document, storage.modifier.chomping-indicator", "settings": { "fontStyle": "bold" } },
 			{ "scope": "keyword.control.anchor.regexp, string.regexp support.other.match, string.regexp keyword.control", "settings": { "foreground": "#69c" } },
@@ -723,7 +726,8 @@
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.definition.table.inline.toml", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator" ], "settings": { "foreground": "#f96" } },
-			{ "scope": "punctuation.definition.link.title, punctuation.definition.comment.shebang, string.other.modeline, constant.string", "settings": { "foreground": "#37f" } },
+			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
+			{ "scope": [ "punctuation.definition.link.description" ], "settings": { "foreground": "#7c6" } },
 			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
@@ -1277,6 +1281,7 @@
 	"inlineChat.enableV2": true,
 	"chat.emptyChatState.enabled": false,
 	"chat.viewWelcome.enabled": false,
+	"chat.viewSessions.enabled": false,
 
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",

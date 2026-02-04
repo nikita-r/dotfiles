@@ -676,7 +676,7 @@
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
 			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.other.phpdoc, keyword.other.documentation", "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -703,8 +703,9 @@
 			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option, keyword.operator.question, keyword.operator.type.optional", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp, punctuation.separator.regex.alternation", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
-			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c9b" } },
+			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c99" } },
 			{ "scope": [ "string.verbatim", "source.sql text.variable" ], "settings": { "foreground": "#c9b" } },
+			{ "scope": [ "punctuation.definition.variable variable", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "constant.language.symbol.hashkey", "variable.parameter.batchfile", "punctuation.definition.variable.percent", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.keys" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.unary", "keyword.operator.custom.prefix", "keyword.operator.filetest", "keyword.operator.arithmetic.shell", "punctuation.section.arithmetic" ], "settings": { "foreground": "#0af" } },
@@ -727,7 +728,7 @@
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator" ], "settings": { "foreground": "#f96" } },
 			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
-			{ "scope": [ "punctuation.definition.link.description" ], "settings": { "foreground": "#7c6" } },
+			{ "scope": [ "punctuation.definition.link.description", "meta.shebang.shell" ], "settings": { "foreground": "#7c6" } },
 			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
@@ -1216,6 +1217,11 @@
 	//"search.followSymlinks": false,
 	//"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
+	"files.watcherExclude": {
+		"**/node_modules/**": true,
+	},
+	"dotnet.preferVisualStudioCodeFileSystemWatcher": true,
+
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.fileNesting.patterns": {
@@ -1278,7 +1284,6 @@
 	/*~* Copilots *~*/
 
 	/* * */
-	"inlineChat.enableV2": true,
 	"chat.emptyChatState.enabled": false,
 	"chat.viewWelcome.enabled": false,
 	"chat.viewSessions.enabled": false,
@@ -1291,6 +1296,13 @@
 
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,
+
+	/* inlineChat */
+	"inlineChat.enableV2": true,
+	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
+
+	/* chat.tools */
+	"chat.tools.terminal.sandbox.enabled": true,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

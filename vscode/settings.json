@@ -118,7 +118,6 @@
 	/* auto-suggestion */
 	"editor.inlineSuggest.enabled": false,
 	"editor.inlineSuggest.syntaxHighlightingEnabled": false, // code is dimmed as GhostText.foreground
-	"github.copilot.editor.enableAutoCompletions": false,
 	"editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "inline" },
 	"editor.quickSuggestionsDelay": 333,
 	"editor.suggest.selectionMode": "never",
@@ -704,7 +703,6 @@
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp, punctuation.separator.regex.alternation", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp" ], "settings": { "foreground": "#c99" } },
-			{ "scope": [ "string.verbatim", "source.sql text.variable" ], "settings": { "foreground": "#c9b" } },
 			{ "scope": [ "punctuation.definition.variable variable", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "constant.language.symbol.hashkey", "variable.parameter.batchfile", "punctuation.definition.variable.percent", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.keys" ], "settings": { "foreground": "#0af" } },

@@ -684,6 +684,7 @@
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#c9b" } },
 			{ "scope": "markup.heading meta.tag.inline, markup.heading constant.character.entity", "settings": { "fontStyle": "" } },
+			{ "scope": "constant.other.reference.link.markdown", "settings": { "fontStyle": "", "foreground": "#f9c" } },
 			{ "scope": [ "log.error", "markup.bold", "log.exception", "punctuation.whitespace.comment.leading.graphql" ], "settings": { "fontStyle": "" } },
 			{ "scope": [ "log.error", "log.warning", "meta.image.inline.markdown punctuation.definition.metadata" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
@@ -926,7 +927,6 @@
 			"scrollbarSlider.activeBackground": "#ccc6",
 
 			/* [_] */
-			"listFilterWidget.background": "#104030", // 160°
 			"listFilterWidget.noMatchesOutline": "#CC2860", // 340°
 			"listFilterWidget.outline": "#ccc",
 
@@ -995,10 +995,16 @@
 			"tab.hoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
+
+			/* "button.*ground" */
+			"button.background": "#246650", // 160°
+			"button.foreground": "#f5f5f5", // WhiteSmoke
+			"button.hoverBackground": "#208060",
 			"button.secondaryBackground": "#157", // 200°
+			"button.secondaryForeground": "#f5f5f5",
 			"button.secondaryHoverBackground": "#379",
 
-			/* text/list */
+			/* "editor.*ground" */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
 			"list.highlightForeground": "#0af",
@@ -1033,11 +1039,10 @@
 			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */
-			"button.background": "#246650",
-			"button.hoverBackground": "#208060",
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.offlineBackground": "#800000", // Maroon
 			"statusBarItem.warningBackground": "#208060",
+			"listFilterWidget.background": "#104030",
 			"editor.foldBackground": "#20806040",
 			"list.dropBackground": "#20806040",
 

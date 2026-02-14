@@ -28,6 +28,7 @@
 	/* extravagant features */
 	"security.workspace.trust.enabled": false,
 	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
+	//"workbench.browser.dataStorage": "workspace",
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
 	"terminal.integrated.shellIntegration.enabled": false,
@@ -435,10 +436,6 @@
 			"revealInExplorer", // 2nd time is needed if "!explorerViewletVisible" before the 1st command
 			"renameFile",
 		],
-		"focusEditor": [
-			"workbench.action.focusActiveEditorGroup",
-			"workbench.action.focusActiveEditorGroup", // 2nd time is needed if "panelMaximized" before the 1st command
-		],
 		"focusFindWidgetSecondInput": [
 			"editor.action.startFindReplaceAction",
 			"editor.action.startFindReplaceAction",
@@ -450,6 +447,15 @@
 		"diffReview.prev": [
 			"workbench.action.focusActiveEditorGroup",
 			"editor.action.diffReview.prev",
+		],
+		"insert-relpath-linenum": [ // when "!editorReadonly && editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
+			{
+				"command": "editor.action.insertSnippet",
+				"args": { "snippet": "$RELATIVE_FILEPATH:$TM_LINE_NUMBER" }
+			},
+			"editor.action.setSelectionAnchor",
+			"cursorUndo",
+			"editor.action.selectFromAnchorToCursor",
 		],
 	},
 
@@ -834,6 +840,7 @@
 			"widget.shadow": "#000",
 			"editorLink.activeForeground": "#fff",
 			"titleBar.inactiveForeground": "#ccc",
+			"sideBarTitle.foreground": "#ccc",
 			"banner.foreground": "#ccc",
 			"banner.iconForeground": "#ccc",
 			"editorInfo.foreground": "#39f", // 210°
@@ -843,6 +850,7 @@
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
 			"panelSectionHeader.background": "#202428",
+			"panelTitle.inactiveForeground": "#718293",
 			"input.background": "#384048",
 			"input.placeholderForeground": "#abc0", //"#8090A0",
 			"inputOption.hoverBackground": "#202428",
@@ -982,7 +990,8 @@
 			"editor.foldPlaceholderForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",
 			"list.focusAndSelectionOutline": "#cdf",
-			"notificationCenterHeader.foreground": "#fec",
+			"settings.settingsHeaderHoverForeground": "#fec",
+			"notificationCenterHeader.foreground": "#e7e7e7",
 			"notifications.border": "#ccc",
 			"badge.background": "#515",
 			"badge.foreground": "#ccc",
@@ -1127,12 +1136,13 @@
 			"peekViewEditor.matchHighlightBackground": "#404",
 			"peekViewResult.matchHighlightBackground": "#1230",
 			"peekViewTitle.background": "#202428",
+			"peekViewTitleDescription.foreground": "#ccc",
 			"peekViewResult.background": "#202428",
+			"peekViewResult.lineForeground": "#ccc",
 			"peekViewEditor.background": "#1a1a1a",
 			"peekViewEditorGutter.background": "#060C12",
 			"peekViewEditorStickyScroll.background": "#203038",
 			"peekViewEditorStickyScrollHover.background": "#304854",
-			"peekViewTitleDescription.foreground": "#ccc",
 
 			/* Jupyter */
 			"notebook.cellBorderColor": "#806080",

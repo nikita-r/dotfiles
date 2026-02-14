@@ -241,6 +241,11 @@
 	{ "command": "", "key": "ctrl+l" },
 	{
 		"key": "ctrl+l",
+		"command": "workbench.action.browser.focusUrlInput",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	{
+		"key": "ctrl+l",
 		"command": "workbench.debug.panel.action.clearReplAction",
 		"when": "inDebugRepl"
 	},
@@ -590,6 +595,17 @@
 	/* Alt+Arrow */
 	{ "command": "", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
 	{ "command": "", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
+	/* Navigate Browser */
+	{
+		"key": "alt+left",
+		"command": "workbench.action.browser.goBack",
+		"when": "browserFocused"
+	},
+	{
+		"key": "alt+right",
+		"command": "workbench.action.browser.goForward",
+		"when": "browserFocused"
+	},
 
 	/* option cursor left/right */
 	{
@@ -1638,6 +1654,12 @@
 		"command": "search.action.clearSearchResults",
 		"when": "searchViewletVisible"
 	},
+	/* Ctrl+Shift+c to Capture */
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.action.browser.addElementToChat",
+		"when": "browserFocused"
+	},
 
 	/* Ctrl+Alt+Letter */
 	{
@@ -1667,6 +1689,10 @@
 	{
 		"key": "ctrl+alt+a",
 		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
 	},
 	{
 		"key": "ctrl+alt+x",
@@ -2128,7 +2154,10 @@
 	},
 	{
 		"key": "ctrl+alt+j",
-		"command": "macros.focusEditor", /* ctf0.macros */
+		"command": "runCommands", "args": { "commands": [
+			"workbench.action.focusActiveEditorGroup",
+			"workbench.action.focusActiveEditorGroup", // 2nd time is needed if "panelMaximized" before the 1st command
+		] },
 		"when": "panelFocus || panelMaximized"
 	},
 	{
@@ -2355,12 +2384,6 @@
 	//	"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
 	//},
 
-	/* Ctrl+k Ctrl+c */
-	{
-		"key": "ctrl+k ctrl+c",
-		"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
-	},
-
 	/* ^+V to Paste */
 	/* I could set ^+V unbound under Windows, but the following command for "shift+cmd+v" under Mac is in order to Paste into any input */
 	{
@@ -2557,6 +2580,11 @@
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.browser.newTab",
+		"when": "activeEditor == 'workbench.editor.browser'"
 	},
 	{
 		"key": "ctrl+shift+t",

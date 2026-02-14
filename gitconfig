@@ -24,6 +24,7 @@
 	co = checkout
 	br = ! git for-each-ref refs/heads/ --sort=-committerdate --format='%(color:blue)%(objectname:short)%(color:reset) %(refname:short) | %(color:green)%(committerdate:relative)%(color:reset) |%(if)%(upstream)%(then) %(upstream:short) %(upstream:track)%(end)|'
 	sb = status -sb
+	st = status -sb -uno
 	au = add -u
 	sf = submodule foreach --recursive
 	cm = commit -m
@@ -40,7 +41,7 @@
 	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules
 	clone-r = clone --recursive
 	pull-r = pull --recurse-submodules
-	pufw = push --force-with-lease
+	pufw = push --force-with-lease --force-if-includes
 
 [alias]
 	aliases = config --get-regexp ^alias\\.

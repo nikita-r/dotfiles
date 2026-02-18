@@ -1071,16 +1071,6 @@
 		"key": "shift+alt+[",
 		"command": "editor.action.diffReview.prev"
 	},
-	{
-		"key": "shift+alt+]",
-		"command": "macros.diffReview.next", /* ctf0.macros */
-		"when": "activeEditor =~ /DiffEditor$/ && !isInDiffEditor"
-	},
-	{
-		"key": "shift+alt+[",
-		"command": "macros.diffReview.prev", /* ctf0.macros */
-		"when": "activeEditor =~ /DiffEditor$/ && !isInDiffEditor"
-	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -1160,6 +1150,16 @@
 	{
 		"key": "cmd+escape",
 		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "alt+`",
+		"command": "macros.focusEditor_if_auxiliaryBarMaximized",
+		"when": "auxiliaryBarMaximized"
+	},
+	{
+		"key": "cmd+escape",
+		"command": "macros.focusEditor_if_auxiliaryBarMaximized",
+		"when": "auxiliaryBarMaximized"
 	},
 	{
 		"key": "alt+`",

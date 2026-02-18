@@ -198,6 +198,7 @@
 	"[git-commit]": { "editor.rulers": [] },
 	"editor.scrollbar.vertical": "visible",
 	"editor.scrollbar.horizontal": "visible",
+	"editor.scrollBeyondLastColumn": 33,
 	"editor.smoothScrolling": false,
 	"workbench.list.smoothScrolling": true,
 	"workbench.list.horizontalScrolling": true,
@@ -368,7 +369,7 @@
 		{}
 	],
 
-	/* alefragnani */
+	/* alefragnani.Bookmarks */
 	"bookmarks.gutterIconBorderColor": "#e6e6b4",
 	"bookmarks.gutterIconFillColor": "#e6e6b4",
 	"numberedBookmarks.gutterIconFillColor": "#806080",
@@ -383,7 +384,8 @@
 	"numberedBookmarks.showBookmarkNotDefinedWarning": true,
 	"bookmarks.sideBar.countBadge": "off",
 
-	"sortLines.ignoreUnselectedLastLine": true,
+	/* assorted */
+	"sortLines.ignoreUnselectedLastLine": true, /* Tyriar.sort-lines */
 	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
 	"cSpell.showStatus": false,
 	"gifPlayer.autoPlay": false, /* bierner.gif-player */
@@ -436,17 +438,15 @@
 			"revealInExplorer", // 2nd time is needed if "!explorerViewletVisible" before the 1st command
 			"renameFile",
 		],
+		"focusEditor_if_auxiliaryBarMaximized": [
+			"workbench.action.toggleMaximizedAuxiliaryBar",
+			//{ "command": "$delay", "args": { "delay": 100 } },
+			"workbench.action.focusActiveEditorGroup",
+			"workbench.action.focusActiveEditorGroup", // 2nd time is needed if "panelMaximized" after the 1st command
+		],
 		"focusFindWidgetSecondInput": [
 			"editor.action.startFindReplaceAction",
 			"editor.action.startFindReplaceAction",
-		],
-		"diffReview.next": [
-			"workbench.action.focusActiveEditorGroup",
-			"editor.action.diffReview.next",
-		],
-		"diffReview.prev": [
-			"workbench.action.focusActiveEditorGroup",
-			"editor.action.diffReview.prev",
 		],
 		"insert-relpath-linenum": [ // when "!editorReadonly && editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 			{
@@ -849,8 +849,6 @@
 			"checkbox.border": "#707880",
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
-			"panelSectionHeader.background": "#202428",
-			"panelTitle.inactiveForeground": "#718293",
 			"input.background": "#384048",
 			"input.placeholderForeground": "#abc0", //"#8090A0",
 			"inputOption.hoverBackground": "#202428",
@@ -909,6 +907,10 @@
 			"menu.background": "#202428",
 			"menu.separatorBackground": "#4C6680",
 			"menu.border": "#4C6680",
+			"editorHoverWidget.background": "#202428",
+			"editorHoverWidget.border": "#4C6680",
+			"panelSectionHeader.background": "#202428",
+			"panelTitle.inactiveForeground": "#718293",
 			"panel.border": "#4C6680",
 			"tree.inactiveIndentGuidesStroke": "#345",
 			"tree.indentGuidesStroke": "#468",
@@ -923,8 +925,6 @@
 			"debugIcon.restartForeground": "#fec",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
-			"editorHoverWidget.background": "#203038",
-			"editorHoverWidget.border": "#304854",
 
 			/* |~| */
 			"minimapSlider.background": "#6663",

@@ -302,6 +302,7 @@
 	"git.verboseCommit": true,
 	//"scm.workingSets.enabled": true,
 	//"scm.workingSets.default": "empty",
+	"git.terminalGitEditor": true,
 	"scm.inputFontFamily": "sans",
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
@@ -460,6 +461,10 @@
 	},
 
 	/* Language Extensions */
+
+	"[sql]": {
+		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?[\\]^`{|}", // $-%~@
+	},
 
 	"[powershell]": {
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -635,7 +640,7 @@
 			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
 			"args": [
 				"-NoExit",
-				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { ${env:UserProfile} }) .vscode.PowerShell_v5.History.txt) }.Invoke()"
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:UserProfile }) .vscode.PowerShell_v5.History.txt) }.Invoke()"
 			],
 		},
 		//"PowerShell v5": {

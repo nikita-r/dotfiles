@@ -680,7 +680,7 @@
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": { "[Default Dark+]": {
 		"textMateRules": [
-			{ "scope": [ "source" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "markup.changed", "source" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown", "string.quoted.double.sql", "string.interpolated.backtick", "variable.interpolation" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor.string", "markup.bold", "markup.italic", "string.unquoted.heredoc", "constant.other.symbol.ruby", "constant.language.symbol" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
@@ -701,7 +701,7 @@
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": "log.info", "settings": { "foreground": "#8cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
-			{ "scope": [ "markup.changed", "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },

@@ -28,10 +28,13 @@
 	/* extravagant features */
 	"security.workspace.trust.enabled": false,
 	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
-	//"workbench.browser.dataStorage": "workspace",
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
 	"terminal.integrated.shellIntegration.enabled": false,
+
+	/* workbench.browser */
+	"workbench.browser.enableChatTools": true,
+	//"workbench.browser.dataStorage": "workspace",
 
 	/* icky */
 	"editor.stickyScroll.enabled": false,
@@ -85,6 +88,8 @@
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
 	//"workbench.editor.enablePreview": false,
+	"workbench.editor.useModal": "some",
+	"extensions.allowOpenInModalEditor": true,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"markdown.preview.markEditorSelection": false,
@@ -173,6 +178,8 @@
 	"terminal.integrated.minimumContrastRatio": 1,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
 	"terminal.integrated.tabs.location": "left",
+
+	"workbench.notifications.position": "bottom-left",
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
@@ -508,21 +515,14 @@
 	"python.analysis.inlayHints.functionReturnTypes": true,
 
 	/* ES */
-	"javascript.suggestionActions.enabled": false,
-	"typescript.suggestionActions.enabled": false,
+	"js/ts.suggestionActions.enabled": false,
 	"js/ts.implicitProjectConfig.experimentalDecorators": true,
-	"javascript.inlayHints.enumMemberValues.enabled": true,
-	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-	"javascript.inlayHints.parameterNames.enabled": "all",
-	"javascript.inlayHints.parameterTypes.enabled": true,
-	"javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-	"javascript.inlayHints.variableTypes.enabled": true,
-	"typescript.inlayHints.enumMemberValues.enabled": true,
-	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-	"typescript.inlayHints.parameterNames.enabled": "all",
-	"typescript.inlayHints.parameterTypes.enabled": true,
-	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-	"typescript.inlayHints.variableTypes.enabled": true,
+	"js/ts.inlayHints.enumMemberValues.enabled": true,
+	"js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+	"js/ts.inlayHints.parameterNames.enabled": "all",
+	"js/ts.inlayHints.parameterTypes.enabled": true,
+	"js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
+	"js/ts.inlayHints.variableTypes.enabled": true,
 
 	/* markup */
 	"xml.foldings.includeClosingTagInFold": true,
@@ -547,14 +547,10 @@
 	"mssql.format.datatypeCasing": "lowercase",
 	"mssql.format.keywordCasing": "uppercase",
 	"mssql.format.placeCommasBeforeNextStatement": true,
-	"javascript.format.insertSpaceAfterConstructor": true,
-	//"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-	"javascript.preferences.importModuleSpecifier": "non-relative",
-	"javascript.preferences.quoteStyle": "single",
-	"typescript.format.insertSpaceAfterConstructor": true,
-	//"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-	"typescript.preferences.importModuleSpecifier": "non-relative",
-	"typescript.preferences.quoteStyle": "single",
+	"js/ts.format.insertSpaceAfterConstructor": true,
+	//"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+	"js/ts.preferences.importModuleSpecifier": "non-relative",
+	"js/ts.preferences.quoteStyle": "single",
 	"html.completion.attributeDefaultValue": "empty",
 
 	/* !autoClosing */
@@ -564,6 +560,7 @@
 	"html.autoClosingTags": false,
 	"javascript.autoClosingTags": false,
 	"typescript.autoClosingTags": false,
+	"js/ts.autoClosingTags.enabled": false,
 
 	/* . . . */
 
@@ -643,14 +640,6 @@
 				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:UserProfile }) .vscode.PowerShell_v5.History.txt) }.Invoke()"
 			],
 		},
-		//"PowerShell v5": {
-		//	"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
-		//	"args": [
-		//		"-NoExit",
-		//		/* History will be placed under [environment]::CurrentDirectory, which is either "${workspaceFolder}" or $env:UserProfile at launch */
-		//		"Set-PSReadLineOption -HistorySavePath .vscode.PowerShell_v5.History.txt"
-		//	],
-		//},
 		"Command Prompt": {
 			"path": [ "${env:windir}\\System32\\cmd.exe" ],
 			"args": [ "/K", "set PYTHON_BASIC_REPL=1 & cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
@@ -665,7 +654,7 @@
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
-	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.ignoreBracketedPasteMode": true,
 
 	"terminal.integrated.tabs.enabled": true,
@@ -1133,6 +1122,7 @@
 			"terminal.hoverHighlightBackground": "#147",
 
 			/* colour ANSI */
+			"terminal.ansiMagenta": "#e6b4e6",
 			"terminal.ansiRed": "#f33",
 			"terminal.ansiBrightRed": "#f66",
 
@@ -1317,6 +1307,7 @@
 
 	/* inlineChat */
 	"inlineChat.enableV2": true,
+	"inlineChat.renderMode": "hover",
 	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
 
 	/* chat.tools */

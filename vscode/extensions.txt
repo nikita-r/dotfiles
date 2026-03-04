@@ -3,10 +3,10 @@ hediet.hediet-power-tools
 tomoki1207.pdf
 #hediet.vscode-drawio
 GraphQL.vscode-graphql-syntax
+dbankier.vscode-quick-select
 ms-python.python
 #ms-vscode.powershell
 PowerQuery.vscode-powerquery
-rosshamish.kuskus-kusto-syntax-highlighting
 #samuelcolvin.jinjahtml
 ms-vscode.hexeditor
 ms-vscode.vscode-github-issue-notebooks

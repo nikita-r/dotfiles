@@ -30,6 +30,7 @@
 	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
+	"github.copilot.nextEditSuggestions.enabled": false,
 	"terminal.integrated.shellIntegration.enabled": false,
 
 	/* workbench.browser */
@@ -505,7 +506,8 @@
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
 	"jupyter.interactiveWindow.textEditor.executeSelection": true,
-	//"python.terminal.activateEnvironment": false,
+	"python.terminal.activateEnvironment": false,
+	"python-envs.terminal.showActivateButton": true,
 	"python.experiments.enabled": false,
 	"python.analysis.autoIndent": false,
 	"isort.args": [ "--profile", "black" ],
@@ -1054,8 +1056,8 @@
 			"settings.modifiedItemIndicator": "#969",
 			"textBlockQuote.border": "#969",
 			"list.hoverBackground": "#201020",
-			"terminalCommandDecoration.successBackground": "#b0a0b0",
-			"terminalCommandDecoration.defaultBackground": "#b0a0b0",
+			"terminalCommandDecoration.successBackground": "#e6b4e6",
+			"terminalCommandDecoration.defaultBackground": "#e6b4e6",
 			"banner.background": "#201020",
 			"breadcrumb.background": "#402040",
 			"editorOverviewRuler.border": "#0C060C",
@@ -1225,6 +1227,10 @@
 	//"search.followSymlinks": false,
 	//"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
+	"files.readonlyInclude": {
+		"**/node_modules/**": true,
+	},
+
 	"files.watcherExclude": {
 		"**/node_modules/**": true,
 	},
@@ -1299,16 +1305,13 @@
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",
 	"github.copilot.chat.agent.autoFix": false,
+	"chat.notifyWindowOnConfirmation": "always",
+	//"chat.notifyWindowOnResponseReceived": "always",
 	"chat.editing.confirmEditRequestRemoval": false,
 	//"chat.editing.confirmEditRequestRetry": false,
 
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,
-
-	/* inlineChat */
-	"inlineChat.enableV2": true,
-	"inlineChat.renderMode": "hover",
-	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
 
 	/* chat.tools */
 	"chat.tools.terminal.sandbox.enabled": true,
@@ -1317,6 +1320,7 @@
 	"zenMode.restore": false,
 	"zenMode.hideStatusBar": false,
 	"zenMode.hideLineNumbers": false,
+	"zenMode.silentNotifications": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	//"diffEditor.experimental.showMoves": true,
 }

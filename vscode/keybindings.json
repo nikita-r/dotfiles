@@ -1478,7 +1478,7 @@
 
 	/* Toggle Panel Visibility */
 	{
-		"key": "ctrl+shift+j",
+		"key": "ctrl+shift+x",
 		"command": "workbench.action.togglePanel"
 	},
 	{

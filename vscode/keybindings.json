@@ -1710,7 +1710,14 @@
 	{
 		"key": "ctrl+w",
 		"command": "workbench.action.closeWindow",
-		"when": "!editorIsOpen && !multipleEditorGroups"
+		"when": "!editorIsOpen && !multipleEditorGroups && !auxiliaryBarMaximized"
+	},
+
+	/* Do not close Editor/Window when the Editor Group is obscured */
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closePanel",
+		"when": "panelFocus || panelMaximized"
 	},
 
 	/* Ctrl+F4 is by default not bound under Linux */
@@ -2275,6 +2282,9 @@
 	{ "key": "ctrl+shift+space", "command": "editor.action.triggerParameterHints" },
 	{ "key": "ctrl+shift+space", "command": "showNextParameterHint", "when": "parameterHintsVisible" },
 
+	/* access Overtype Mode on Mac */
+	{ "key": "ctrl+k i", "command": "editor.action.toggleOvertypeInsertMode" },
+
 	/* "ctrl+...+i": bring up copilot */
 	{
 		"key": "ctrl+shift+i",
@@ -2569,8 +2579,8 @@
 	},
 	{
 		"key": "ctrl+alt+enter",
-		"command": "workbench.action.maximizeAuxiliaryBar",
-		"when": "auxiliaryBarFocus && inChatInput && !auxiliaryBarMaximized"
+		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
+		"when": "auxiliaryBarFocus && inChatInput || auxiliaryBarMaximized"
 	},
 
 	/*~*~*~*/

@@ -89,8 +89,6 @@
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
 	//"workbench.editor.enablePreview": false,
-	"workbench.editor.useModal": "some",
-	"extensions.allowOpenInModalEditor": true,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"markdown.preview.markEditorSelection": false,
@@ -933,6 +931,9 @@
 			/* [_] */
 			"listFilterWidget.noMatchesOutline": "#CC2860", // 340°
 			"listFilterWidget.outline": "#ccc",
+			"statusBar.foreground": "#ccc",
+			"list.filterMatchBorder": "#fff",
+			"list.filterMatchBackground": "#1230",
 
 			/* [|] */
 			"editor.snippetFinalTabstopHighlightBorder": "#fff",
@@ -1040,8 +1041,6 @@
 			"statusBar.debuggingBackground": "#c63",
 			"statusBar.debuggingForeground": "#fff",
 			"statusBarItem.hoverForeground": "#fff",
-			"statusBar.foreground": "#ccc",
-			"list.filterMatchBackground": "#C40a",
 
 			/* Hue: 160/360 */
 			"statusBarItem.remoteBackground": "#208060",
@@ -1301,6 +1300,7 @@
 	"chat.emptyChatState.enabled": false,
 	"chat.viewWelcome.enabled": false,
 	"chat.viewSessions.enabled": false,
+	"chat.agent.codeBlockProgress": false,
 
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",

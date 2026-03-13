@@ -33,7 +33,7 @@
 	"github.copilot.nextEditSuggestions.enabled": false,
 	"terminal.integrated.shellIntegration.enabled": false,
 
-	/* workbench.browser */
+	/* IntegratedBrowser */
 	"workbench.browser.enableChatTools": true,
 	//"workbench.browser.dataStorage": "workspace",
 
@@ -100,11 +100,11 @@
 
 	/* suggestions-adjacent settings */
 
-	"editor.hover.enabled": "onKeyboardModifier", // opposite of Multi-Cursor Modifier
-	"editor.hover.delay": 0,
-	"editor.hover.hidingDelay": 0,
-	//"editor.hover.enabled": false,
-	//"editor.hover.above": false,
+	//"editor.hover.enabled": "onKeyboardModifier", // opposite of Multi-Cursor Modifier
+	//"editor.hover.delay": 0,
+	//"editor.hover.hidingDelay": 0,
+	"editor.hover.enabled": false,
+	"editor.hover.above": false,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
 	"editor.inlayHints.maximumLength": 0,
@@ -391,7 +391,7 @@
 	"numberedBookmarks.showBookmarkNotDefinedWarning": true,
 	"bookmarks.sideBar.countBadge": "off",
 
-	/* assorted */
+	/* extensions mixtes */
 	"sortLines.ignoreUnselectedLastLine": true, /* Tyriar.sort-lines */
 	"cSpell.numSuggestions": 3, /* streetsidesoftware.code-spell-checker */
 	"cSpell.showStatus": false,
@@ -408,6 +408,11 @@
 	/* tomoki1207.pdf */
 	"pdf-preview.default.cursor": "hand",
 	"pdf-preview.default.scale": "page-actual",
+
+	/* ms-vscode.live-server */
+	"livePreview.portNumber": 17171,
+	"livePreview.useIntegratedBrowser": true,
+	"livePreview.notifyOnOpenLooseFile": false,
 
 	/* jock.svg */
 	"svg.preview.autoFit": false,
@@ -649,6 +654,7 @@
 
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
 	"terminal.integrated.wordSeparators": " \"()", // double-click to select a word; would have it to be only " ", but it is used as delimiters in fallback link detection
+	"terminal.integrated.enableFileLinks": "off",
 	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs

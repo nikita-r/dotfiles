@@ -485,6 +485,16 @@
 	},
 	{
 		"key": "f3",
+		"command": "workbench.action.browser.findNext",
+		"when": "!panelFocus && activeEditor == 'workbench.editor.browser' && browserFindWidgetVisible"
+	},
+	{
+		"key": "shift+f3",
+		"command": "workbench.action.browser.findPrevious",
+		"when": "!panelFocus && activeEditor == 'workbench.editor.browser' && browserFindWidgetVisible"
+	},
+	{
+		"key": "f3",
 		"command": "workbench.action.terminal.findNext",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
@@ -515,6 +525,16 @@
 		"key": "shift+cmd+g",
 		"command": "editor.action.webvieweditor.findPrevious",
 		"when": "!panelFocus && activeEditor == 'WebviewEditor'"
+	},
+	{
+		"key": "cmd+g",
+		"command": "workbench.action.browser.findNext",
+		"when": "!panelFocus && activeEditor == 'workbench.editor.browser' && browserFindWidgetVisible"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "workbench.action.browser.findPrevious",
+		"when": "!panelFocus && activeEditor == 'workbench.editor.browser' && browserFindWidgetVisible"
 	},
 	{
 		"key": "cmd+g",
@@ -788,7 +808,7 @@
 		"when": "textInputFocus"
 	},
 
-	/* copyLines*Action: ensure Windows defaults */
+	/* copy*Up/Down*: ensure Windows defaults */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
 	{ "command": "noop", "key": "ctrl+shift+alt+left" },
@@ -1040,37 +1060,7 @@
 		"when": "inChat"
 	},
 
-	/* Alt+[][] */
-	{ "command": "noop", "key": "alt+]" },
-	{ "command": "noop", "key": "alt+[" },
-	{
-		"key": "alt+]",
-		"command": "editor.gotoNextFold",
-		"when": "editorFocus"
-	},
-	{
-		"key": "alt+[",
-		"command": "editor.gotoPreviousFold",
-		"when": "editorFocus"
-	},
-	{
-		"key": "alt+]",
-		"command": "editor.action.inlineSuggest.showNext",
-		"when": "inlineSuggestionVisible"
-	},
-	{
-		"key": "alt+[",
-		"command": "editor.action.inlineSuggest.showPrevious",
-		"when": "inlineSuggestionVisible"
-	},
-	{
-		"key": "shift+alt+]",
-		"command": "editor.action.diffReview.next"
-	},
-	{
-		"key": "shift+alt+[",
-		"command": "editor.action.diffReview.prev"
-	},
+	/* editor.goto Fold */
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -2419,9 +2409,9 @@
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
-	/* Ctrl+k v/V: show Preview */
-	{ "command": "noop", "key": "ctrl+k v" },
-	{ "command": "noop", "key": "ctrl+k shift+v" },
+	/* Ctrl+k v/V: show Preview (ext ms-vscode.live-server by default) */
+	{ "command": "livePreview.start.preview.atFile", "key": "ctrl+k v" },
+	{ "command": "livePreview.start", "key": "ctrl+k shift+v" },
 	{
 		"key": "ctrl+k v",
 		"command": "markdown.showPreviewToSide",
@@ -2493,12 +2483,22 @@
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
 	{ "when": "!isMac && textInputFocus", "key": "alt+j",
 	  "command": "type", "args": { "text": "∆" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+b",
+	  "command": "type", "args": { "text": "∫" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+/",
 	  "command": "type", "args": { "text": "¿" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+'",
 	  "command": "type", "args": { "text": "æ" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+'",
 	  "command": "type", "args": { "text": "Æ" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+[",
+	  "command": "type", "args": { "text": "“" } },
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+[",
+	  "command": "type", "args": { "text": "”" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+]",
+	  "command": "type", "args": { "text": "‘" } },
+	{ "when": "!isMac && textInputFocus", "key": "shift+alt+]",
+	  "command": "type", "args": { "text": "’" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+\\",
 	  "command": "type", "args": { "text": "«" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+\\",

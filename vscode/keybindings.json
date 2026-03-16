@@ -808,7 +808,7 @@
 		"when": "textInputFocus"
 	},
 
-	/* copy*Up/Down*: ensure Windows defaults */
+	/* override Linux defaults for editor.action.copyLines; do not use Ctrl+Shift+Alt+Arrow to cursorColumnSelect */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
 	{ "command": "noop", "key": "ctrl+shift+alt+left" },
@@ -1061,6 +1061,18 @@
 	},
 
 	/* editor.goto Fold */
+	{
+		"key": "ctrl+alt+'",
+		"command": "editor.gotoParentFold"
+	},
+	{
+		"key": "ctrl+alt+]",
+		"command": "editor.gotoNextFold"
+	},
+	{
+		"key": "ctrl+alt+[",
+		"command": "editor.gotoPreviousFold"
+	},
 
 	/* vim-like panes navigation */
 	{ "key": "ctrl+k k", "command": "workbench.action.navigateUp" },
@@ -1924,7 +1936,7 @@
 		"when": "inTerminalPicker || terminalFocus && !terminalEditorActive"
 	},
 
-	/* View: Toggle Sizes/Visibility */
+	/* Shift+Alt+Enter */
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleCenteredLayout"
@@ -1959,18 +1971,26 @@
 	},
 	{
 		"key": "shift+alt+enter",
+		"command": "runCommands", "args": { "commands": [
+			"workbench.action.focusPanel",
+			"workbench.action.toggleMaximizedPanel",
+		] },
+		"when": "panelVisible"
+	},
+	{
+		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelFocus || panelMaximized"
 	},
 	{
 		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleMaximizedPanel",
-		"when": "panelVisible"
+		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
+		"when": "auxiliaryBarFocus"
 	},
 	{
 		"key": "shift+alt+enter",
-		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
-		"when": "auxiliaryBarFocus"
+		"command": "workbench.action.chat.submitWithoutDispatching",
+		"when": "chatInputHasText && inChatInput"
 	},
 	{
 		"key": "shift+alt+enter",

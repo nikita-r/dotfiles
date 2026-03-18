@@ -1321,6 +1321,9 @@
 
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,
+	"chat.mcp.serverSampling": {
+	},
+	"chat.mcp.gallery.enabled": false,
 
 	/* chat.tools */
 	"chat.tools.terminal.sandbox.enabled": true,

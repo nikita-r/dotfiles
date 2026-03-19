@@ -2306,11 +2306,6 @@
 		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
 	},
 	{
-		"key": "ctrl+shift+i",
-		"command": "workbench.action.chat.openModelPicker",
-		"when": "inChatInput"
-	},
-	{
 		"key": "enter",
 		"command": "noop",
 		"when": "inChatInput && !chatInputHasText"
@@ -2328,6 +2323,11 @@
 	{
 		"key": "ctrl+alt+p",
 		"command": "workbench.action.chat.history",
+		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
+	},
+	{
+		"key": "ctrl+alt+h",
+		"command": "workbench.action.chat.openSessionTargetPicker",
 		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 	{

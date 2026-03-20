@@ -9,9 +9,14 @@ New-Item $dirCode/User -Type Dir -ea:0 | Out-Null
 
 $filename = 'keybindings.json'
 $json = Get-Content ./vscode/$filename
+$flagE = 0
 $json -split "`n" |% {
+  if ($_ -match '"ctrl\+shift\+e"') {
+      if (!$flagE++) { return $_ }
+  }
   if ($_ -match '"ctrl\+(shift\+)?space"') { return $_ }
   if ($_ -match '"ctrl\+shift\+a"') { return }
+  if ($_ -match '"ctrl\+shift\+f"') { return $_ }
   if ($_ -match '"command": ""') { return $_ }
   if ($_ -match '"key": "ctrl\+[ij]"') { return $_ }
   if ($_ -match '"ctrl\+alt\+[carx]"') { return $_ }
@@ -22,7 +27,7 @@ $json -split "`n" |% {
     if ($_ -match '"ctrl\+alt\+(up|down|\\\\)"') { return $_ }
   }
   $_ `
-    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[q`g])"', '"key": "$2$1md+$3"' `
+    -iReplace '"key": "(c)trl\+(shift\+)?([^+"]+)(?<!\+[vcq`g])"', '"key": "$2$1md+$3"' `
     -iReplace '"key": "(shift)\+(c)trl\+([^+"]+)"', '"key": "$2md+$1+$3"' `
     -iReplace '"key": "(c)trl\+(alt)\+([^+"]+)"', '"key": "$2+$1md+$3"' `
     -iReplace '"key": "(c)trl\+(shift)\+(alt)\+([^+"]+)"', '"key": "$2+$3+$1md+$4"' `

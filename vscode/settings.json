@@ -194,6 +194,11 @@
 	"[diff][git-commit][python][shellscript][jinja]": {
 		"editor.bracketPairColorization.enabled": false,
 	},
+	//"[]": { "editor.language.colorizedBracketPairs": [
+	//	["(",")"],
+	//	["[","]"],
+	//	["{","}"],
+	//] },
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"editor.guides.bracketPairs": "active",
 	"editor.guides.bracketPairsHorizontal": "active",
@@ -699,7 +704,7 @@
 			{ "scope": "log.info", "settings": { "foreground": "#8cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
-			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
+			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown", "punctuation.definition.tag.primary", "punctuation.definition.tag.secondary" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": "constant.character.escape, punctuation.definition.string.heredoc.quote", "settings": { "foreground": "#fdc" } },
@@ -794,7 +799,7 @@
 			{ "scope": [ "constant.other.time", "meta.type.cast.expr", "meta.type.new.expr", "support.constant.dom", "support.constant.json", "support.constant.math" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "string.tag", "string.value", "support.constant.font-name", "constant.other.rgb-value", "constant.other.color.rgb-value", "support.constant.media", "support.constant.media-type", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "support.type.property-name, support.type.vendored.property-name, meta.object-literal.key, meta.structure.dictionary.key.python", "settings": { "foreground": "#9cf" } },
-			{ "scope": [ "support.constant.property-value" ], "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": [ "support.constant.property-value", "storage.type.tag" ], "settings": { "foreground": "#e6e6b4" } },
 		],
 		"comments": "#593",
 		"functions": "#e6e6b4",
@@ -1322,6 +1327,9 @@
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"chat.mcp.serverSampling": {
+	},
+	"chat.mcp.discovery.enabled": {
+		"cursor-workspace": true,
 	},
 	"chat.mcp.gallery.enabled": false,
 

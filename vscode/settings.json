@@ -36,6 +36,7 @@
 	/* IntegratedBrowser */
 	"workbench.browser.enableChatTools": true,
 	//"workbench.browser.dataStorage": "workspace",
+	"workbench.browser.showInTitleBar": true,
 
 	/* icky */
 	"editor.stickyScroll.enabled": false,
@@ -680,7 +681,8 @@
 	/* Themes */
 
 	"workbench.colorTheme": "Default Dark+",
-	"editor.tokenColorCustomizations": { "[Default Dark+]": {
+	//"workbench.colorTheme": "Dark+",
+	"editor.tokenColorCustomizations": { "[*Dark+]": {
 		"textMateRules": [
 			{ "scope": [ "markup.changed", "source" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "comment.line.markdown", "string.quoted.double.sql", "string.interpolated.backtick", "variable.interpolation" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -809,7 +811,7 @@
 		"types": "#dcf",
 		"variables": "#9cf",
 	} },
-	"editor.semanticTokenColorCustomizations": { "[Default Dark+]": { "rules": {
+	"editor.semanticTokenColorCustomizations": { "[*Dark+]": { "rules": {
 		"*.typeHint": "#69c",
 	} } },
 	"editor.semanticHighlighting.enabled": false,
@@ -825,7 +827,7 @@
 		"editorOverviewRuler.addedForeground": "#0f0a", // 120°
 		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
 		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
-		"[* Dark*]": {
+		"[*Dark*]": {
 			"editorGutter.addedBackground": "#408020", // 100°
 			"editorGutter.addedSecondaryBackground": "#408020",
 			"editorGutter.deletedBackground": "#fff",
@@ -985,7 +987,7 @@
 			"editor.inlineValuesForeground": "#999",
 		},
 
-		"[Default Dark Modern][GitHub Dark*]": {
+		"[*Dark Modern][GitHub Dark*]": {
 			"panel.border": "#666",
 			"activityBar.border": "#6669",
 			"statusBar.border": "#6669",
@@ -995,7 +997,7 @@
 			"toolbar.hoverBackground": "#3699", // 210°
 		},
 
-		"[Default Dark+]": {
+		"[*Dark+]": {
 			"icon.foreground": "#fec", // 40°
 			"editor.foldPlaceholderForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",

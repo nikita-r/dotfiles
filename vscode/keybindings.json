@@ -239,21 +239,6 @@
 
 	/* Ctrl+L */
 	{ "command": "", "key": "ctrl+l" },
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.browser.focusUrlInput",
-		"when": "activeEditor == 'workbench.editor.browser'"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "workbench.debug.panel.action.clearReplAction",
-		"when": "inDebugRepl"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.terminal.clear",
-		"when": "terminalFocus || terminalTabsFocus"
-	},
 
 	/* Q */
 	{
@@ -1690,7 +1675,7 @@
 	},
 	{
 		"key": "ctrl+alt+a",
-		"command": "workbench.action.quickOpen"
+		"command": "workbench.action.browser.quickOpen"
 	},
 	{
 		"key": "ctrl+alt+c",

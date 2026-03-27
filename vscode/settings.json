@@ -55,7 +55,6 @@
 	/* the Explorer */
 
 	"explorer.autoReveal": false,
-	"imageCarousel.explorerContextMenu.enabled": true,
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.confirmUndo": "verbose",
 	"explorer.enableUndo": false,
@@ -74,6 +73,7 @@
 	"editor.find.history": "never",
 	"editor.find.replaceHistory": "never",
 	"editor.find.cursorMoveOnType": false,
+	"search.globalFindClipboard": true,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": "off", // or "multiFile"
 
@@ -680,6 +680,7 @@
 
 	/* Themes */
 
+	"window.autoDetectColorScheme": false,
 	"workbench.colorTheme": "Default Dark+",
 	//"workbench.colorTheme": "Dark+",
 	"editor.tokenColorCustomizations": { "[*Dark+]": {
@@ -1259,7 +1260,7 @@
 	},
 
 	"workbench.editor.customLabels.patterns": {
-		"**/.*": "${dirname}┇${filename}",
+		//"**/.*": "${dirname}┇${filename}",
 		"**/index.*": "${dirname}┇${filename}.${extname}",
 	},
 
@@ -1328,11 +1329,8 @@
 
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,
-	"chat.mcp.serverSampling": {
-	},
-	"chat.mcp.discovery.enabled": {
-		"cursor-workspace": true,
-	},
+	"chat.mcp.serverSampling": {},
+	"chat.mcp.discovery.enabled": {},
 	"chat.mcp.gallery.enabled": false,
 
 	/* chat.tools */

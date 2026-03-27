@@ -239,6 +239,11 @@
 
 	/* Ctrl+L */
 	{ "command": "", "key": "ctrl+l" },
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.browser.focusUrlInput",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
 
 	/* Q */
 	{
@@ -1290,6 +1295,11 @@
 	{
 		"key": "ctrl+r",
 		"command": "workbench.action.openRecent"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "workbench.action.browser.reload",
+		"when": "browserFocused && activeEditor == 'workbench.editor.browser'"
 	},
 	{
 		"key": "ctrl+r",
@@ -2370,6 +2380,11 @@
 		"key": "ctrl+shift+.",
 		"command": "editor.action.surroundWithSnippet",
 		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "ctrl+shift+.",
+		"command": "workbench.action.chat.openSessionTargetPicker",
+		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 	{
 		"key": "ctrl+shift+.",

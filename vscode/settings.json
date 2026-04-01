@@ -73,7 +73,7 @@
 	"editor.find.history": "never",
 	"editor.find.replaceHistory": "never",
 	"editor.find.cursorMoveOnType": false,
-	"search.globalFindClipboard": true,
+	//"search.globalFindClipboard": true,
 	"editor.find.seedSearchStringFromSelection": "never",
 	"editor.occurrencesHighlight": "off", // or "multiFile"
 
@@ -91,6 +91,7 @@
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
 	//"workbench.editor.enablePreview": false,
+	"workbench.editor.useModal": "off",
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"markdown.preview.markEditorSelection": false,
@@ -872,8 +873,8 @@
 			"errorForeground": "#fff",
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
-			"list.errorForeground": "#c9b",
-			"list.warningForeground": "#fec",
+			"list.errorForeground": "#c9b", // 320°
+			"list.warningForeground": "#fec", // 40°
 			"list.invalidItemForeground": "#fff",
 			"activityErrorBadge.background": "#fff",
 			"activityErrorBadge.foreground": "#000",
@@ -982,7 +983,7 @@
 			"editor.stackFrameHighlightBackground": "#c0c3",
 			"editor.focusedStackFrameHighlightBackground": "#0c03",
 			"debugIcon.breakpointForeground": "#c63", // 20°
-			"debugIcon.breakpointCurrentStackframeForeground": "#3c9",
+			"debugIcon.breakpointCurrentStackframeForeground": "#3c9", // 160°
 			"debugIcon.breakpointStackframeForeground": "#c3c",
 			"editor.inlineValuesBackground": "#333",
 			"editor.inlineValuesForeground": "#999",
@@ -1029,8 +1030,8 @@
 			/* "editor.*ground" */
 			"editor.foreground": "#ccc",
 			"editor.background": "#1a1a1a",
-			"list.highlightForeground": "#0af",
-			"list.deemphasizedForeground": "#7aa3cc",
+			"list.highlightForeground": "#0af", // 200°
+			"list.deemphasizedForeground": "#7aa3cc", // 210°
 
 			/* Gold/50° */
 			"list.focusHighlightForeground": "#ffd700",
@@ -1041,7 +1042,7 @@
 			/* chat */
 			"chat.slashCommandBackground": "#90c0c0",
 			"chat.slashCommandForeground": "#102020",
-			"chat.requestBorder": "#4C6680",
+			"chat.requestBorder": "#4C6680", // 210°
 			"textPreformat.background": "#124", // 220°
 			"textPreformat.foreground": "#cdf",
 			"descriptionForeground": "#a0a8b8",
@@ -1093,7 +1094,7 @@
 			"titleBar.inactiveBackground": "#201020",
 			"actionBar.toggledBackground": "#806080",
 			"window.activeBorder": "#806080",
-			"window.inactiveBorder": "#0000",
+			"window.inactiveBorder": "#402040",
 
 			/* Selective Hue: 210/360 */
 			"editor.selectionBackground": "#135",
@@ -1333,8 +1334,12 @@
 	"chat.mcp.discovery.enabled": {},
 	"chat.mcp.gallery.enabled": false,
 
-	/* chat.tools */
-	"chat.tools.terminal.sandbox.enabled": true,
+	/* Chat › Tools › Terminal */
+	"chat.tools.terminal.outputLocation": "terminal",
+
+	/* Sandbox */
+	"chat.agent.sandboxNetwork.allowedDomains": [],
+	"chat.agent.sandbox": true,
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/
 	"zenMode.restore": false,

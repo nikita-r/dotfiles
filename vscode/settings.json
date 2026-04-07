@@ -355,6 +355,8 @@
 	/* GitHub.vscode-pull-request-github */
 	"githubPullRequests.showPullRequestNumberInTree": true,
 	"githubPullRequests.codingAgent.codeLens": false,
+	"githubIssues.issueAvatarDisplay": "state",
+	"githubPullRequests.pullRequestAvatarDisplay": "state",
 
 	/* GrapeCity.gc-excelviewer */
 	"csv-preview.capitalizeHeaders": false,
@@ -978,6 +980,14 @@
 			"gitDecoration.untrackedResourceForeground": "#c9f",
 			"gitDecoration.submoduleResourceForeground": "#c9f",
 			"gitDecoration.ignoredResourceForeground": "#7aa3cc", // 210°
+			"issues.closed": "#b66dff",
+			"issues.newIssueDecoration": "#9cf9",
+			"issues.open": "#80C080",
+			"github.issues.closed": "#b66dff",
+			"pullRequests.closed": "#C66",
+			"pullRequests.draft": "#fc9",
+			"pullRequests.merged": "#b66dff",
+			"pullRequests.open": "#80C080",
 
 			/* on break */
 			"editor.stackFrameHighlightBackground": "#c0c3",

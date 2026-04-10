@@ -30,7 +30,6 @@
 	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
-	"github.copilot.nextEditSuggestions.enabled": false,
 	"terminal.integrated.shellIntegration.enabled": false,
 
 	/* IntegratedBrowser */
@@ -324,7 +323,7 @@
 
 	/* diff indicators */
 	"scm.diffDecorationsGutterPattern": { "modified": false },
-	//"git.blame.ignoreWhitespace": true,
+	"git.blame.ignoreWhitespace": true,
 	"diffEditor.renderIndicators": false,
 
 	/* GitHub */
@@ -355,9 +354,9 @@
 
 	/* GitHub.vscode-pull-request-github */
 	"githubPullRequests.showPullRequestNumberInTree": true,
-	"githubPullRequests.codingAgent.codeLens": false,
 	"githubIssues.issueAvatarDisplay": "state",
 	"githubPullRequests.pullRequestAvatarDisplay": "state",
+	"githubPullRequests.commentExpandState": "collapsePreexisting",
 
 	/* GrapeCity.gc-excelviewer */
 	"csv-preview.capitalizeHeaders": false,
@@ -700,7 +699,7 @@
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.constant", "text.log constant.language", "meta.embedded.block.log constant.language" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
+			{ "scope": "markup.inserted, log.verbose", "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#c9b" } },
 			{ "scope": "markup.heading meta.tag.inline, markup.heading constant.character.entity", "settings": { "fontStyle": "" } },
@@ -715,7 +714,7 @@
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": "constant.character.escape, punctuation.definition.string.heredoc.quote", "settings": { "foreground": "#fdc" } },
-			{ "scope": "constant.character.escape.powershell, punctuation.whitespace.comment.leading, entity.other.document, storage.modifier.chomping-indicator", "settings": { "fontStyle": "bold" } },
+			{ "scope": "constant.character.escape.powershell, punctuation.whitespace.comment.leading, meta.separator.markdown, entity.other.document, storage.modifier.chomping-indicator", "settings": { "fontStyle": "bold" } },
 			{ "scope": "keyword.control.anchor.regexp, string.regexp support.other.match, string.regexp keyword.control", "settings": { "foreground": "#69c" } },
 			{ "scope": "punctuation.definition.group.assertion.regexp, string.regexp keyword.operator", "settings": { "foreground": "#ee7" } },
 			{ "scope": [ "support.other", "constant.regexp", "punctuation.definition.character-class.regexp", "constant.other.character-class.regexp" ], "settings": { "foreground": "#6c9" } },
@@ -743,9 +742,9 @@
 			{ "scope": "constant.other.placeholder, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
 			{ "scope": "keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command", "keyword.operator.combination" ], "settings": { "foreground": "#e6e6b4" } },
-			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.definition.table.inline.toml", "settings": { "foreground": "#37f" } },
+			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.definition.table.inline.toml, meta.separator.markdown", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
-			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator" ], "settings": { "foreground": "#f96" } },
+			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator", "punctuation.definition.begin.frontmatter", "punctuation.definition.end.frontmatter" ], "settings": { "foreground": "#f96" } },
 			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
 			{ "scope": [ "punctuation.definition.link.description", "meta.shebang.shell" ], "settings": { "foreground": "#7c6" } },
 			{ "scope": [ "punctuation.definition.metadata", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
@@ -1327,17 +1326,21 @@
 	/* * */
 	"chat.emptyChatState.enabled": false,
 	"chat.viewWelcome.enabled": false,
+	"chat.tips.enabled": false,
 	"chat.useCustomizationsInParentRepositories": true,
 	"chat.viewSessions.enabled": false,
 	"chat.agent.codeBlockProgress": false,
+	"github.copilot.nextEditSuggestions.enabled": false,
 
 	/* agentic */
+	"github.copilot.chat.codesearch.enabled": true,
 	"chat.agent.thinkingStyle": "collapsedPreview",
 	"github.copilot.chat.agent.autoFix": false,
 	"chat.notifyWindowOnConfirmation": "always",
 	//"chat.notifyWindowOnResponseReceived": "always",
 	"chat.editing.confirmEditRequestRemoval": false,
 	//"chat.editing.confirmEditRequestRetry": false,
+	"github.copilot.chat.agent.currentEditorContext.enabled": false,
 
 	/* MCP */
 	"github.copilot.chat.newWorkspace.useContext7": true,

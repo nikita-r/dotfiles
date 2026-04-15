@@ -35,6 +35,7 @@
 	/* IntegratedBrowser */
 	"workbench.browser.enableChatTools": true,
 	//"workbench.browser.dataStorage": "workspace",
+	"workbench.browser.pageZoom": "100%",
 	"workbench.browser.showInTitleBar": true,
 
 	/* icky */
@@ -313,6 +314,7 @@
 	"git.showPushSuccessNotification": true,
 
 	"git.defaultBranchName": "trunk",
+	//"githubPullRequests.overrideDefaultBranch": "trunk",
 	"git.verboseCommit": true,
 	//"scm.workingSets.enabled": true,
 	//"scm.workingSets.default": "empty",
@@ -685,7 +687,7 @@
 
 	"window.autoDetectColorScheme": false,
 	"workbench.colorTheme": "Default Dark+",
-	//"workbench.colorTheme": "Dark+",
+	"workbench.colorTheme": "Dark+",
 	"editor.tokenColorCustomizations": { "[*Dark+]": {
 		"textMateRules": [
 			{ "scope": [ "markup.changed", "source" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -898,7 +900,7 @@
 			"editorBracketHighlight.unexpectedBracket.foreground": "#fff",
 			"editorBracketMatch.border": "#666",
 			"editorBracketMatch.background": "#0000",
-			"editorBracketHighlight.foreground1": "#ffd700",
+			"editorBracketHighlight.foreground1": "#ffd700", // 50°
 			"editorBracketHighlight.foreground2": "#c6c",
 			"editorBracketHighlight.foreground3": "#37f", // 220°
 			"editorBracketHighlight.foreground4": "#1230",
@@ -1327,6 +1329,7 @@
 	"chat.emptyChatState.enabled": false,
 	"chat.viewWelcome.enabled": false,
 	"chat.tips.enabled": false,
+	"inlineChat.askInChat": false,
 	"chat.useCustomizationsInParentRepositories": true,
 	"chat.viewSessions.enabled": false,
 	"chat.agent.codeBlockProgress": false,
@@ -1352,8 +1355,10 @@
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.terminal.preventShellHistory": false,
 
-	/* Sandbox */
-	"chat.agent.sandbox.allowedNetworkDomains": [],
+	/* environnement d’exécution isolé pour agents autonomes */
+	"chat.agent.networkFilter": true,
+	"chat.agent.allowedNetworkDomains": [],
+	"chat.agent.deniedNetworkDomains": [],
 	"chat.agent.sandbox.enabled": "on",
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/

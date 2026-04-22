@@ -34,7 +34,7 @@
 
 	/* IntegratedBrowser */
 	"workbench.browser.enableChatTools": true,
-	//"workbench.browser.dataStorage": "workspace",
+	"workbench.browser.dataStorage": "workspace",
 	"workbench.browser.pageZoom": "100%",
 	"workbench.browser.showInTitleBar": true,
 
@@ -1350,6 +1350,11 @@
 	"chat.mcp.serverSampling": {},
 	"chat.mcp.discovery.enabled": {},
 	"chat.mcp.gallery.enabled": false,
+
+	/* experimental */
+	"chat.experimental.incrementalRendering.enabled": true,
+	"chat.experimental.incrementalRendering.animationStyle": "reveal",
+	"chat.experimental.incrementalRendering.buffering": "paragraph",
 
 	/* Chat › Tools › Terminal */
 	"chat.tools.terminal.outputLocation": "terminal",

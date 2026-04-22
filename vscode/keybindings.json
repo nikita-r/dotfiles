@@ -798,7 +798,7 @@
 		"when": "textInputFocus"
 	},
 
-	/* override Linux defaults for editor.action.copyLines; do not use Ctrl+Shift+Alt+Arrow to cursorColumnSelect */
+	/* override Linux defaults for editor.action.copyLines; do not use Ctrl+Shift+Alt+Arrow for cursorColumnSelect either */
 	{ "command": "noop", "key": "ctrl+shift+alt+up" },
 	{ "command": "noop", "key": "ctrl+shift+alt+down" },
 	{ "command": "noop", "key": "ctrl+shift+alt+left" },
@@ -1205,11 +1205,13 @@
 	/* [VS] View.Navigate */
 	{
 		"key": "ctrl+-",
-		"command": "workbench.action.navigateBack"
+		"command": "workbench.action.navigateBack",
+		"when": "!browserFocused"
 	},
 	{
 		"key": "ctrl+shift+-",
-		"command": "workbench.action.navigateForward"
+		"command": "workbench.action.navigateForward",
+		"when": "!browserFocused"
 	},
 	{
 		"key": "ctrl+shift+[",
@@ -1221,11 +1223,13 @@
 	},
 	{
 		"key": "ctrl+=",
-		"command": "workbench.action.navigateBackInNavigationLocations"
+		"command": "workbench.action.navigateBackInNavigationLocations",
+		"when": "!browserFocused"
 	},
 	{
 		"key": "ctrl+shift+=",
-		"command": "workbench.action.navigateForwardInNavigationLocations"
+		"command": "workbench.action.navigateForwardInNavigationLocations",
+		"when": "!browserFocused"
 	},
 	/* ?panelFocus */
 	{
@@ -2132,8 +2136,8 @@
 		"command": "fileextswitch", /* JohannesRudolph.file-ext-switcher */
 		"args": {
 			"extensions": [
-				".aspx",
-				".aspx.cs",
+				".aspx", ".aspx.cs",
+				".xaml", ".xaml.cs",
 				".ps1", ".ps1.Transcript.log",
 				".ts",
 				".spec.ts",
@@ -2241,10 +2245,11 @@
 		"when": "editorTextFocus"
 	},
 
-	/* ryu1kn.partial-diff */
+	/* Ctrl+# (not used by vscode-numbered-bookmarks) */
 	{
-		"key": "ctrl+k c",
-		"command": "extension.partialDiff.diffSelectionWithClipboard"
+		"key": "ctrl+0",
+		"command": "workbench.action.browser.resetZoom",
+		"when": "activeEditor == 'workbench.editor.browser'"
 	},
 
 	/* hediet.hediet-power-tools */
@@ -2313,7 +2318,7 @@
 	{
 		"key": "ctrl+alt+n",
 		"command": "workbench.action.chat.newChat",
-		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
+		"when": "!chatSessionIsEmpty && inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 	{
 		"key": "ctrl+alt+p",

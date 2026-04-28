@@ -1176,6 +1176,8 @@
 			"notebook.cellToolbarSeparator": "#806080",
 
 			/* Extensions */
+			"mssql.resultsGridNullBackground": "#141800",
+			"mssql.resultsGridNullForeground": "#0af",
 			"gitlens.gutterBackgroundColor": "#2222",
 			"gitlens.trailingLineForegroundColor": "#6666",
 		},

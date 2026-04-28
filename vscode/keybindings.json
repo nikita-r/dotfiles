@@ -2293,7 +2293,17 @@
 	{ "key": "ctrl+shift+space", "command": "showNextParameterHint", "when": "parameterHintsVisible" },
 
 	/* access Overtype Mode on Mac */
-	{ "key": "ctrl+k i", "command": "editor.action.toggleOvertypeInsertMode" },
+	{ "key": "ctrl+k i", "command": "noop" },
+	{
+		"key": "ctrl+i",
+		"command": "hexEditor.switchEditMode",
+		"when": "hexEditor:isActive && !inputFocus"
+	},
+	{
+		"key": "ctrl+k i",
+		"command": "editor.action.toggleOvertypeInsertMode",
+		"when": "editorTextFocus"
+	},
 
 	/* "ctrl+...+i": bring up copilot */
 	{

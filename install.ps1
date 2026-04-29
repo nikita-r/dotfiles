@@ -18,7 +18,7 @@ $json -split "`n" |% {
   if ($_ -match '"ctrl\+shift\+a"') { return }
   if ($_ -match '"ctrl\+shift\+f"') { return $_ }
   if ($_ -match '"command": ""') { return $_ }
-  if ($_ -match '"key": "ctrl\+[ij]"') { return $_ }
+  if ($_ -match '"key": "ctrl(\+shift)?\+(\\\\|j)"(?!, //)') { return $_ }
   if ($_ -match '"ctrl\+alt\+[carx]"') { return $_ }
   if ($_ -match '"command": "-[^"]+"') { return $_ }
   if ($_ -match '"command": "noop"') {

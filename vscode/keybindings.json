@@ -1099,33 +1099,33 @@
 	},
 
 	/* Ctrl+Shift+Page */
-	{
-		"key": "ctrl+shift+pageup",
-		"command": "workbench.action.previousSideBarView"
-	},
-	{
-		"key": "ctrl+shift+pagedown",
-		"command": "workbench.action.nextSideBarView"
-	},
+	//{
+	//	"key": "ctrl+shift+pageup",
+	//	"command": "workbench.action.previousSideBarView"
+	//},
+	//{
+	//	"key": "ctrl+shift+pagedown",
+	//	"command": "workbench.action.nextSideBarView"
+	//},
 	{
 		"key": "ctrl+shift+pageup",
 		"command": "workbench.action.moveEditorLeftInGroup",
-		"when": "editorFocus"
+		//"when": "editorFocus && !focusedView"
 	},
 	{
 		"key": "ctrl+shift+pagedown",
 		"command": "workbench.action.moveEditorRightInGroup",
-		"when": "editorFocus"
+		//"when": "editorFocus && !focusedView"
 	},
 	{
 		"key": "ctrl+shift+pageup",
-		"command": "workbench.action.previousPanelView",
-		"when": "panelFocus"
+		"command": "workbench.action.terminal.scrollUpPage",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+shift+pagedown",
-		"command": "workbench.action.nextPanelView",
-		"when": "panelFocus"
+		"command": "workbench.action.terminal.scrollDownPage",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
 	/* Split Editor */

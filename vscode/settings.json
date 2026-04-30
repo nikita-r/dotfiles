@@ -298,12 +298,14 @@
 	"git.showActionButton": { "commit": false, "publish": true, "sync": false },
 	"git.showInlineOpenFileAction": false,
 
+	/* detective */
 	"git.autoRepositoryDetection": "subFolders",
 	//"git.repositoryScanMaxDepth": 2, // or -1
 	"git.openRepositoryInParentFolders": "never",
 	//"git.autorefresh": false,
 	"git.detectWorktreesLimit": 99,
 
+	/* fetch & sync */
 	"git.enableStatusBarSync": false,
 	"git.fetchOnPull": true,
 	//"git.autofetch": "all",
@@ -313,6 +315,7 @@
 	//"git.followTagsWhenSync": true,
 	"git.showPushSuccessNotification": true,
 
+	/* how to commit */
 	"git.defaultBranchName": "trunk",
 	//"githubPullRequests.overrideDefaultBranch": "trunk",
 	"git.verboseCommit": true,
@@ -323,10 +326,16 @@
 	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
 
+	/* whos to blame */
+	"git.blame.ignoreWhitespace": true,
+	//"git.blame.statusBarItem.template": "${authorEmail} :: ${authorDateAgo}",
+	"git.addAICoAuthor": "off",
+
 	/* diff indicators */
 	"scm.diffDecorationsGutterPattern": { "modified": false },
-	"git.blame.ignoreWhitespace": true,
 	"diffEditor.renderIndicators": false,
+	//"diffEditor.experimental.showMoves": true,
+	"diffEditor.ignoreTrimWhitespace": false,
 
 	/* GitHub */
 	"github.showAvatar": false,
@@ -343,7 +352,7 @@
 	"git-graph.date.format": "ISO Date Only",
 	"git-graph.enhancedAccessibility": true,
 	//"git-graph.repository.includeCommitsMentionedByReflogs": true,
-	//"git-graph.repository.onLoad.showCheckedOutBranch": true,
+	"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.showUncommittedChanges": false,
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
 
@@ -1328,8 +1337,6 @@
 	/*~* Copilots *~*/
 
 	/* * */
-	"chat.emptyChatState.enabled": false,
-	"chat.viewWelcome.enabled": false,
 	"chat.tips.enabled": false,
 	"inlineChat.askInChat": false,
 	"chat.useCustomizationsInParentRepositories": true,
@@ -1338,7 +1345,6 @@
 	"github.copilot.nextEditSuggestions.enabled": false,
 
 	/* agentic */
-	"github.copilot.chat.codesearch.enabled": true,
 	"chat.agent.thinkingStyle": "collapsedPreview",
 	"github.copilot.chat.agent.autoFix": false,
 	"chat.notifyWindowOnConfirmation": "always",
@@ -1358,6 +1364,10 @@
 	"chat.experimental.incrementalRendering.animationStyle": "reveal",
 	"chat.experimental.incrementalRendering.buffering": "paragraph",
 
+	/* misc tooling */
+	"github.copilot.chat.codesearch.enabled": true, // #codebase
+	"github.copilot.chat.localIndex.enabled": true, ///chronicle
+
 	/* Chat › Tools › Terminal */
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.terminal.preventShellHistory": false,
@@ -1373,6 +1383,4 @@
 	"zenMode.hideStatusBar": false,
 	"zenMode.hideLineNumbers": false,
 	"zenMode.silentNotifications": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	//"diffEditor.experimental.showMoves": true,
 }

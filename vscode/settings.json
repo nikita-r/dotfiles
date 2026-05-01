@@ -109,6 +109,10 @@
 	//"editor.hover.hidingDelay": 0,
 	"editor.hover.enabled": false,
 	"editor.hover.above": false,
+
+	/* Inlay Hints */
+	"editor.inlayHints.fontFamily": "Georgia",
+	"editor.inlayHints.fontSize": 12,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
 	"editor.inlayHints.maximumLength": 0,
@@ -328,7 +332,7 @@
 
 	/* whos to blame */
 	"git.blame.ignoreWhitespace": true,
-	//"git.blame.statusBarItem.template": "${authorEmail} :: ${authorDateAgo}",
+	//"git.blame.statusBarItem.template": "${authorEmail}┇${authorDateAgo}",
 	"git.addAICoAuthor": "off",
 
 	/* diff indicators */
@@ -518,6 +522,7 @@
 	"java.autobuild.enabled": false,
 
 	/* dotnet */
+	"dotnet.projects.enableAutomaticRestore": false,
 	"dotnet.formatting.organizeImportsOnFormat": true,
 	"dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
 	"dotnet.inlayHints.enableInlayHintsForParameters": true,
@@ -895,7 +900,7 @@
 			"activityWarningBadge.foreground": "#ccc",
 			"inputValidation.warningBorder": "#cc0",
 			"inputValidation.warningBackground": "#660",
-			"inputValidation.infoBackground": "#144A66",
+			"inputValidation.infoBackground": "#144A66", // 200°
 			"inputValidation.infoForeground": "#fff",
 			"inputValidation.warningForeground": "#fff",
 			"inputValidation.errorForeground": "#fff",
@@ -928,7 +933,7 @@
 			"editorGutter.foldingControlForeground": "#c0c0c0",
 
 			/* |=| */
-			"menu.background": "#202428",
+			"menu.background": "#202428", // 210°
 			"menu.separatorBackground": "#4C6680",
 			"menu.border": "#4C6680",
 			"editorHoverWidget.background": "#202428",
@@ -1024,7 +1029,7 @@
 			"icon.foreground": "#fec", // 40°
 			"editor.foldPlaceholderForeground": "#fec",
 			"list.inactiveSelectionIconForeground": "#cdf",
-			"list.focusAndSelectionOutline": "#cdf",
+			"list.focusAndSelectionOutline": "#cdf", // 220°
 			"settings.settingsHeaderHoverForeground": "#fec",
 			"notificationCenterHeader.foreground": "#e7e7e7",
 			"notifications.border": "#ccc",

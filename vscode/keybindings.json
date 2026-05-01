@@ -1099,23 +1099,13 @@
 	},
 
 	/* Ctrl+Shift+Page */
-	//{
-	//	"key": "ctrl+shift+pageup",
-	//	"command": "workbench.action.previousSideBarView"
-	//},
-	//{
-	//	"key": "ctrl+shift+pagedown",
-	//	"command": "workbench.action.nextSideBarView"
-	//},
 	{
 		"key": "ctrl+shift+pageup",
-		"command": "workbench.action.moveEditorLeftInGroup",
-		//"when": "editorFocus && !focusedView"
+		"command": "workbench.action.moveEditorLeftInGroup"
 	},
 	{
 		"key": "ctrl+shift+pagedown",
-		"command": "workbench.action.moveEditorRightInGroup",
-		//"when": "editorFocus && !focusedView"
+		"command": "workbench.action.moveEditorRightInGroup"
 	},
 	{
 		"key": "ctrl+shift+pageup",
@@ -1164,7 +1154,7 @@
 		"when": "inQuickOpen"
 	},
 
-	/* Alt+[09] */
+	/* (Shift+)Alt+[09] */
 	{
 		"key": "alt+0",
 		"command": "workbench.action.focusActiveEditorGroup"

@@ -673,7 +673,7 @@
 		},
 		"Command Prompt": {
 			"path": [ "${env:windir}\\System32\\cmd.exe" ],
-			"args": [ "/K", "set PYTHON_BASIC_REPL=1 & cls & @echo CMD is inducted on %date% at %time: =0% & @echo CD: %CD% & @prompt $$$+$G$S" ],
+			"args": [ "/K", "set PYTHON_BASIC_REPL=1 & echo CMD is inducted on %date% at %time: =0% & chcp 65001 & echo. & echo CD: %CD% & prompt $$$+$G$S" ],
 		},
 	},
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
@@ -686,7 +686,7 @@
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
-	"terminal.integrated.enableMultiLinePasteWarning": "never",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
 	"terminal.integrated.ignoreBracketedPasteMode": true,
 	"terminal.integrated.windowsUseConptyDll": true,
 

@@ -40,6 +40,21 @@
 		"command": "chatEditor.action.undoHunk",
 		"when": "chatEdits.hasEditorModifications"
 	},
+	{
+		"key": "ctrl+y",
+		"command": "workbench.action.chat.acceptTool",
+		"when": "chatHasToolConfirmation && inChat"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.chat.skipTool",
+		"when": "chatHasToolConfirmation && inChat"
+	},
+	{
+		"key": "ctrl+y",
+		"command": "workbench.action.chat.acceptElicitation",
+		"when": "chatHasElicitationRequest && inChat"
+	},
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
@@ -1570,6 +1585,20 @@
 	{ "command": "noop", "key": "ctrl+shift+enter" },
 	{
 		"key": "ctrl+shift+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "panelFocus || panelMaximized"
+	},
+	{
+		"key": "ctrl+shift+enter",
+		"command": "runCommands", "args": { "commands": [
+			"workbench.action.toggleMaximizedPanel",
+			"workbench.action.terminal.scrollToBottom",
+			"terminal.focus"
+		] },
+		"when": "(panelFocus || panelMaximized) && activePanel == 'terminal'"
+	},
+	{
+		"key": "ctrl+shift+enter",
 		"command": "editor.action.insertLineBefore",
 		"when": "textInputFocus"
 	},
@@ -1765,7 +1794,7 @@
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
 	{ "command": "", "key": "ctrl+w"
 	, "when": "terminalFindFocused || terminalFocus || terminalTabsFocus" },
-	/* terminal.sendSequence */
+	/* Terminal: Send Sequence */
 	{
 		"key": "ctrl+z",
 		"command": "workbench.action.terminal.sendSequence",
@@ -1801,6 +1830,12 @@
 		"command": "workbench.action.terminal.sendSequence",
 		"when": "terminalFocus && terminalShellType == 'python'",
 		"args": { "text": ")\u001b[H(\u001b[H" }
+	},
+	{
+		"key": "shift+enter",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocus && terminalShellType == 'claude'",
+		"args": { "text": "\\\n" }
 	},
 	{
 		"key": "alt+n",
@@ -2292,7 +2327,7 @@
 	{
 		"key": "ctrl+k i",
 		"command": "editor.action.toggleOvertypeInsertMode",
-		"when": "editorTextFocus"
+		"when": "textInputFocus"
 	},
 
 	/* "ctrl+...+i": bring up copilot */

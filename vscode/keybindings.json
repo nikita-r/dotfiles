@@ -841,6 +841,28 @@
 		"when": "notebookCellFocused && !inputFocus"
 	},
 
+	/* Alt+Up/Down to cycle history; disregard (isComposing || suggestWidgetVisible) */
+	{
+		"key": "alt+up",
+		"command": "history.showPrevious",
+		"when": "historyNavigationWidgetFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "history.showNext",
+		"when": "historyNavigationWidgetFocus"
+	},
+	{
+		"key": "alt+up",
+		"command": "interactive.history.previous",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+	{
+		"key": "alt+down",
+		"command": "interactive.history.next",
+		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
+	},
+
 	/* peruse Problems */
 	{
 		"key": "alt+f8",
@@ -1344,16 +1366,6 @@
 	},
 	{
 		"key": "ctrl+k ctrl+r",
-		"command": "remote-containers.explorerDetailsRefresh",
-		"when": "activeViewlet == 'workbench.view.remote' && view.detailsContainers.visible"
-	},
-	{
-		"key": "ctrl+k ctrl+r",
-		"command": "remote-containers.explorerTargetsRefresh",
-		"when": "activeViewlet == 'workbench.view.remote' && view.targetsContainers.visible"
-	},
-	{
-		"key": "ctrl+k ctrl+r",
 		"command": "workbench.extensions.action.refreshExtension",
 		"when": "activeViewlet == 'workbench.view.extensions'"
 	},
@@ -1366,11 +1378,6 @@
 		"key": "ctrl+k ctrl+r",
 		"command": "bookmarks.refresh",
 		"when": "activeViewlet == 'workbench.view.extension.bookmarks'"
-	},
-	{
-		"key": "ctrl+k ctrl+r",
-		"command": "todo-tree.refresh",
-		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
 	},
 
 	/* File: Open */
@@ -1554,27 +1561,6 @@
 		"command": "cursorDown",
 		"when": "textInputFocus && !suggestWidgetVisible"
 	},
-	/* Alt+Up/Down to cycle history; disregard (isComposing || suggestWidgetVisible) */
-	{
-		"key": "alt+up",
-		"command": "history.showPrevious",
-		"when": "historyNavigationWidgetFocus"
-	},
-	{
-		"key": "alt+down",
-		"command": "history.showNext",
-		"when": "historyNavigationWidgetFocus"
-	},
-	{
-		"key": "alt+up",
-		"command": "interactive.history.previous",
-		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
-	},
-	{
-		"key": "alt+down",
-		"command": "interactive.history.next",
-		"when": "activeEditor == 'workbench.editor.interactive' && editorTextFocus && !notebookCellFocused"
-	},
 	/* "ctrl+enter" may be hijacked by accept/commit; "ctrl+shift+enter" by "*.action.replaceAll*" */
 	{ "command": "noop", "key": "ctrl+enter" },
 	{
@@ -1587,15 +1573,6 @@
 		"key": "ctrl+shift+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelFocus || panelMaximized"
-	},
-	{
-		"key": "ctrl+shift+enter",
-		"command": "runCommands", "args": { "commands": [
-			"workbench.action.toggleMaximizedPanel",
-			"workbench.action.terminal.scrollToBottom",
-			"terminal.focus"
-		] },
-		"when": "(panelFocus || panelMaximized) && activePanel == 'terminal'"
 	},
 	{
 		"key": "ctrl+shift+enter",
@@ -1658,11 +1635,6 @@
 		"key": "ctrl+shift+c",
 		"command": "references-view.clear",
 		"when": "activeViewlet == 'workbench.view.extension.references-view'"
-	},
-	{
-		"key": "ctrl+shift+c",
-		"command": "todo-tree.filterClear",
-		"when": "activeViewlet == 'workbench.view.extension.todo-tree-container'"
 	},
 	{
 		"key": "ctrl+shift+c",
@@ -2369,13 +2341,7 @@
 		"key": "ctrl+win+i",
 		"command": "workbench.panel.chat"
 	},
-	/* Upper Chat */
-	{
-		"key": "ctrl+k shift+i",
-		"command": "workbench.action.openQuickChat",
-		"when": "editorTextFocus && !editorHasMultipleSelections"
-	},
-	/* Any Chat */
+	/* In Any Chat */
 	{
 		"key": "ctrl+alt+j",
 		"command": "workbench.action.chat.attachFile",
@@ -2469,16 +2435,10 @@
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
-	/* Ctrl+k v/V: show Preview (ext ms-vscode.live-server by default) */
+	/* "ctrl+k v" for a Preview (ext ms-vscode.live-server by default) */
 	{ "command": "livePreview.start.preview.atFile", "key": "ctrl+k v" },
-	{ "command": "livePreview.start", "key": "ctrl+k shift+v" },
 	{
 		"key": "ctrl+k v",
-		"command": "markdown.showPreviewToSide",
-		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+k shift+v",
 		"command": "markdown.showPreview",
 		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
 	},

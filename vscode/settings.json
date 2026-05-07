@@ -30,7 +30,11 @@
 	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
 	//"security.restrictUNCAccess": false,
 	//"git.mergeEditor": true,
+
+	/* constrain Shell Integration */
 	"terminal.integrated.shellIntegration.enabled": false,
+	"python.terminal.shellIntegration.enabled": false,
+	"terminal.integrated.environmentChangesRelaunch": false,
 
 	/* IntegratedBrowser */
 	"workbench.browser.enableChatTools": true,
@@ -111,7 +115,7 @@
 	"editor.hover.above": false,
 
 	/* Inlay Hints */
-	"editor.inlayHints.fontFamily": "Georgia",
+	"editor.inlayHints.fontFamily": "Geist Mono, Georgia",
 	"editor.inlayHints.fontSize": 12,
 	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
 	"editor.inlayHints.padding": true,
@@ -655,6 +659,10 @@
 		},
 	},
 
+	"terminal.integrated.automationProfile.windows": {
+		"path": "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE",
+		"args": [ "-ExecutionPolicy", "Bypass", "-NoProfile" ],
+	},
 	"terminal.integrated.profiles.windows": {
 		//"PowerShell": {
 		//	"source": "PowerShell",

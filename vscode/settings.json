@@ -169,6 +169,9 @@
 	"editor.fontFamily": "Fira Code, Noto Emoji, Consolas, Segoe UI Symbol, Lucida Console, monospace",
 	"editor.fontLigatures": "'cv13', 'cv14'",
 	"editor.fontSize": 14,
+	//"editor.fontFamily": "Geist Mono",
+	//"editor.fontLigatures": "'ss03', 'ss06'",
+	//"editor.fontVariations": "'wght' 300",
 	//"editor.fontFamily": "Cascadia Code",
 	//"editor.fontLigatures": "'ss01', 'zero'",
 	//"editor.tokenColorCustomizations": { "textMateRules": [ {

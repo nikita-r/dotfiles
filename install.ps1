@@ -105,7 +105,7 @@ if ($dirFontsDst) {
 
         if ($hkcuKey) {
           $hkcuName = '{0} (TrueType)' -f ([io.Path]::GetFileNameWithoutExtension($_.Name))
-          Set-ItemProperty -Path $hkcuKey -Name ($hkcuName-cReplace'^([A-Z][a-z]+)([A-Z][a-z]+)\S+','$1 $2') -Value $_.Name
+          Set-ItemProperty -Path $hkcuKey -Name ($hkcuName-cReplace'^([A-Z][a-z]+)([A-Z][a-z]+)\S+','$1 $2') -Value (Join-Path $dirFontsDst $_.Name)
         }
       }
     } finally {

@@ -2167,6 +2167,11 @@
 	},
 	{
 		"key": "ctrl+alt+j",
+		"command": "imagePreview.reopenAsText",
+		"when": "activeWebviewPanelId == 'imagePreview.previewEditor'"
+	},
+	{
+		"key": "ctrl+alt+j",
 		"command": "runCommands", "args": { "commands": [
 			"workbench.action.focusActiveEditorGroup",
 			"workbench.action.focusActiveEditorGroup", // 2nd time is needed if "panelMaximized" before the 1st command
@@ -2317,7 +2322,7 @@
 		"command": "noop",
 		"when": "inChatInput && !chatInputHasText"
 	},
-	/* Toggle Side Chat */
+	/* The Side Chat */
 	{
 		"key": "ctrl+alt+i",
 		"command": "workbench.panel.chat"
@@ -2440,12 +2445,7 @@
 	{
 		"key": "ctrl+k v",
 		"command": "markdown.showPreview",
-		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+k v",
-		"command": "svg.showSvg",
-		"when": "editorLangId == 'svg'"
+		"when": "resourceLangId == 'markdown'"
 	},
 
 	/* Try and block a useless Tab */

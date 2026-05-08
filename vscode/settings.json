@@ -767,7 +767,7 @@
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "constant.numeric.other.suffix", "keyword.other.unit", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
 			{ "scope": "constant.other.placeholder, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
-			{ "scope": "keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
+			{ "scope": "storage.type.modifier.calling-convention, keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command", "keyword.operator.combination" ], "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.definition.table.inline.toml, meta.separator.markdown", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
@@ -844,6 +844,7 @@
 	} },
 	"editor.semanticTokenColorCustomizations": { "[*Dark+]": { "rules": {
 		"*.typeHint": "#69c",
+		"newOperator": "#e6e6b4",
 	} } },
 	"editor.semanticHighlighting.enabled": false,
 

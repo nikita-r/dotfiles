@@ -78,3 +78,38 @@ Remove-Item $tmp
     code --install-extension $_
   }
 }
+
+
+if (Get-Variable IsMacOS -ea:0 -ValueOnly) {
+  $dirFontsDst = Join-Path $env:HOME 'Library/Fonts'
+  $hkcuKey = $null
+} elseif (Get-Variable IsWindows -ea:0 -ValueOnly) {
+  $dirFontsDst = Join-Path $env:LocalAppData 'Microsoft\Windows\Fonts'
+  $hkcuKey = 'HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Fonts'
+} else {
+  $dirFontsDst = $null
+}
+
+if ($dirFontsDst) {
+  foreach ($zip in (Get-ChildItem ./fnt/ -File -Filter *.zip)) {
+    Write-Host Installing TTF from $zip.Name
+
+    $dirZipExtract = Join-Path ([io.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
+    New-Item -ItemType Directory -Path $dirZipExtract | Out-Null
+
+    try {
+      Expand-Archive -LiteralPath $zip.FullName -DestinationPath $dirZipExtract -Force
+
+      Get-ChildItem -LiteralPath $dirZipExtract -File -Filter *.ttf |% {
+        Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $dirFontsDst $_.Name) -Force
+
+        if ($hkcuKey) {
+          $hkcuName = '{0} (TrueType)' -f ([io.Path]::GetFileNameWithoutExtension($_.Name))
+          Set-ItemProperty -Path $hkcuKey -Name ($hkcuName-cReplace'^([A-Z][a-z]+)([A-Z][a-z]+)\S+','$1 $2') -Value $_.Name
+        }
+      }
+    } finally {
+      Remove-Item -LiteralPath $dirZipExtract -Recurse -Force -ea:0
+    }
+  }
+}

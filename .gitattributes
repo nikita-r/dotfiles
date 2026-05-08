@@ -5,6 +5,7 @@
 *.txt eol=crlf
 
 *.vsix binary
+/fnt/** binary
 
 # https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 /gitattributes linguist-language=gitattributes

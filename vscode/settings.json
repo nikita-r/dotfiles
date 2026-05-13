@@ -91,15 +91,20 @@
 	"search.showLineNumbers": true,
 
 	//"editor.stablePeek": true,
-	"markdown.preview.doubleClickToSwitchToEditor": false,
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
+
+	"markdown.preview.doubleClickToSwitchToEditor": false,
+	"markdown.preview.markEditorSelection": false,
+	"markdown.preview.scrollEditorWithPreview": false,
+	"markdown.preview.scrollPreviewWithEditor": false,
+	"markdown.preview.fontFamily": "Cambria, Georgia",
+	"markdown.preview.fontSize": 14, // affects <code> blocks too, so it is best to keep the default
 
 	//"workbench.editor.enablePreview": false,
 	"workbench.editor.useModal": "off",
 	//"extensions.allowOpenInModalEditor": true,
 	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
-	"markdown.preview.markEditorSelection": false,
 
 	//"search.quickOpen.includeSymbols": true,
 	//"search.quickOpen.history.filterSortOrder": "recency",
@@ -208,7 +213,7 @@
 	"[diff][git-commit][python][shellscript][jinja]": {
 		"editor.bracketPairColorization.enabled": false,
 	},
-	//"[]": { "editor.language.colorizedBracketPairs": [
+	//"[javascript][typescript]": { "editor.language.colorizedBracketPairs": [
 	//	["(",")"],
 	//	["[","]"],
 	//	["{","}"],
@@ -1341,6 +1346,9 @@
 		//"file:/**/*.md": "vscode.markdown.preview.editor",
 		"{git,git-graph,gitlens}:/**/*.{md,svg}": "default",
 	},
+	//"workbench.diffEditorAssociations": {
+	//	"*.md": "vscode.markdown.preview.editor",
+	//},
 
 	//"extensions.experimental.affinity": {
 	//	"auteur.vim": 1,

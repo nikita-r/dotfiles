@@ -2445,7 +2445,7 @@
 	{
 		"key": "ctrl+k v",
 		"command": "markdown.showPreview",
-		"when": "resourceLangId == 'markdown'"
+		"when": "resourceLangId =~ /^(markdown|skill)$/"
 	},
 
 	/* Try and block a useless Tab */

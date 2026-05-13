@@ -822,7 +822,7 @@
 			{ "scope": "punctuation.definition.tag, entity.tag.name punctuation.definition.bracket, punctuation.definition.escape.key", "settings": { "foreground": "#69c" } },
 			{ "scope": [ "storage.modifier", "keyword.storage", "keyword.local", "punctuation.decorator", "punctuation.definition.decorator", "punctuation.definition.annotation" ], "settings": { "foreground": "#ee7" } },
 			{ "scope": "entity.name.function.decorator, storage.type.annotation.java, storage.type.annotation.groovy, meta.path.basename.search", "settings": { "foreground": "#b9f" } },
-			{ "scope": "punctuation.separator.annotation, keyword.operator.type.annotation", "settings": { "foreground": "#dcf" } },
+			{ "scope": "punctuation.definition.table.markdown, punctuation.separator.annotation, keyword.operator.type.annotation", "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "punctuation.definition.typeparameters", "punctuation.separator.generic-parameter-clause", "punctuation.separator.generic-argument-clause", "punctuation.section.angle-brackets", "punctuation.separator.delimiter.comma.template", "meta.template.angle-brackets", "punctuation.bracket.angle", "meta.brace.angle" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "support.constant.color", "constant.other.option", "constant.numeric.integer.shell", "string.parameter.directives", "entity.name.operator" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "entity.namespace", "entity.name.namespace", "entity.name.scope-resolution", "entity.other.attribute", "source.css entity.other.attribute-name.pseudo-class", "entity.other.attribute-name.pseudo-element.css", "source.css entity.other.attribute-name.pseudo-element" ], "settings": { "foreground": "#dcf" } },
@@ -1013,6 +1013,8 @@
 			"gitDecoration.untrackedResourceForeground": "#c9f",
 			"gitDecoration.submoduleResourceForeground": "#c9f",
 			"gitDecoration.ignoredResourceForeground": "#7aa3cc", // 210°
+
+			/* GitHub.vscode-pull-request-github */
 			"issues.closed": "#b66dff",
 			"issues.newIssueDecoration": "#9cf9",
 			"issues.open": "#80C080",
@@ -1379,6 +1381,8 @@
 	"github.copilot.chat.agent.currentEditorContext.enabled": false,
 
 	/* MCP */
+	"chat.mcp.autostart": "never",
+	//"chat.mcp.access": "none",
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"chat.mcp.serverSampling": {},
 	"chat.mcp.discovery.enabled": {},

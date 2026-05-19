@@ -29,13 +29,12 @@
 	sf = submodule foreach --recursive
 	cm = commit -m
 	pi = stash pop --index -q
-	sl = ! git stash list --name-status | sed 's/^s/\\ns/'
-	sp = stash show -p
+	sl = ! git stash list --name-status | sed 's/^s/\\ns/' && :
 	pm = stash push -q -m
 	rs = restore --staged
 	ss = show -s
-	ol = log --oneline
-	ol = ! git log -n3 --pretty=format:'%C(auto)%cI %h %s%d' \"$@\" && printf '\\n'
+	ol = log --oneline --first-parent
+	ol = ! git log -n3 --first-parent --pretty=format:'%C(auto)%cI %h %s%d' \"$@\" && printf '\\n'
 
 [alias]
 	shallow-clone = clone --depth=1 --shallow-submodules --recurse-submodules #--remote-submodules
@@ -57,11 +56,14 @@
 	dns = diff --name-status
 	wtf = "!f() { if [[ \"$2\" =~ [[:space:]] ]] || [ -z $2 ]; then echo 'Invalid $2'; return 1; fi; git fetch origin $1 && F=${1//\\//+} && git worktree add $2/$F origin/$1 -b $1 && echo && (cd $2/$F && pwd -L); }; f"
 	wtc = "!f() { if [[ \"$2\" =~ [[:space:]] ]] || [ -z $2 ]; then echo 'Invalid $2'; return 1; fi; F=${1//\\//+} && git worktree add $2/$F -b $1 && echo && (cd $2/$F && pwd -L); }; f"
+	ssp = stash show -p
+	ssu = stash show -u
 	mnn = merge --no-commit --no-ff
 	agi = ! cd \"${GIT_PREFIX:-.}\" && bash -c \"shopt -s globstar nocaseglob && git add $@\" && :
 	rmd = ! git ls-files -d | xargs -r git rm && :
 	scour-n = clean -nxffd
 	reset-f = ! git reset --hard $1 && git clean -xffd && :
+	stab = stash branch
 	puta = push --follow-tags
 	root = !pwd # ~ rev-parse --show-toplevel
 	down = log --branches --not --remotes # \ git branch -r
@@ -90,6 +92,10 @@
 	dcs = ! cd \"${GIT_PREFIX:-.}\" && set -f && git diff --staged -w --ignore-blank-lines --word-diff=color -C \"$@\" && printf '%*s\n\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _ && git diff --staged --check
 	dx = diff -w --ignore-blank-lines --color-words --no-index
 	db = diff -b --ignore-blank-lines --stat
+
+[alias]
+	t-d = difftool
+	t-m = mergetool
 
 # Beyond Compare; under Linux, use "bc3"
 [diff]

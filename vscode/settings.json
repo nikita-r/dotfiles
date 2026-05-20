@@ -90,6 +90,7 @@
 	//"search.maxResults": null,
 	"search.showLineNumbers": true,
 
+	/* when double-clicking */
 	//"editor.stablePeek": true,
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
@@ -102,8 +103,6 @@
 
 	//"workbench.editor.enablePreview": false,
 	"workbench.editor.useModal": "off",
-	//"extensions.allowOpenInModalEditor": true,
-	//"extensions.closeExtensionDetailsOnViewChange": true,
 	"workbench.quickOpen.closeOnFocusLost": false,
 
 	//"search.quickOpen.includeSymbols": true,
@@ -1366,6 +1365,8 @@
 	/* * */
 	"chat.tips.enabled": false,
 	"inlineChat.askInChat": false,
+	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
+	"chat.requestQueuing.defaultAction": "queue",
 	"chat.useCustomizationsInParentRepositories": true,
 	"chat.viewSessions.enabled": false,
 	"chat.agent.codeBlockProgress": false,

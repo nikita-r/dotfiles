@@ -2162,11 +2162,6 @@
 	},
 	{
 		"key": "ctrl+alt+j",
-		"command": "copilot-mermAId-diagram.view-markdown-source-from-outline",
-		"when": "activeWebviewPanelId == 'mermaidDiagram'"
-	},
-	{
-		"key": "ctrl+alt+j",
 		"command": "imagePreview.reopenAsText",
 		"when": "activeWebviewPanelId == 'imagePreview.previewEditor'"
 	},
@@ -2440,12 +2435,17 @@
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 
-	/* "ctrl+k v" for a Preview (ext ms-vscode.live-server by default) */
-	{ "command": "livePreview.start.preview.atFile", "key": "ctrl+k v" },
+	/* "ctrl+k v" for Preview (by default, Open in Integrated Browser) */
+	{ "command": "workbench.action.browser.openFile", "key": "ctrl+k v" },
+	//{
+	//	"key": "ctrl+k v",
+	//	"command": "imagePreview.reopenAsPreview",
+	//	"when": "activeEditorIsNotPreview && activeEditorAvailableEditorIds =~ /imagePreview.previewEditor/"
+	//},
 	{
 		"key": "ctrl+k v",
 		"command": "markdown.showPreview",
-		"when": "resourceLangId =~ /^(markdown|skill)$/"
+		"when": "resourceLangId =~ /^(markdown|instructions|prompt|skill)$/"
 	},
 
 	/* Try and block a useless Tab */

@@ -18,6 +18,7 @@
 	$: workbench.action.toggleMaximizeEditorGroup: "ctrl+k ctrl+m"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	%: Show or Focus Hover: "ctrl+k ctrl+i"
+	%: chat queue/steer : Alt+Enter
 	*/
 
 	{ "command": "noop", "key": "ctrl+shift+u" }, // in GtkIMContextSimple, ^+U is bound to input Unicode codepoint
@@ -58,6 +59,7 @@
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
+	/* toggle Views */
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" },
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
@@ -762,11 +764,21 @@
 		"when": "focusedView == 'workbench.panel.markers.view' && problemsViewMode == 'table'"
 	},
 
-	/* Ctrl+Up/Down when !listFocus */
+	/* breadcrumbs */
 	{
 		"key": "ctrl+down",
 		"command": "breadcrumbs.selectFocused",
 		"when": "breadcrumbsActive && !listFocus"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "breadcrumbs.focusPrevious",
+		"when": "breadcrumbsActive"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "breadcrumbs.focusNext",
+		"when": "breadcrumbsActive"
 	},
 
 	/* pour Mac: Cmd+Arrow jumps word */
@@ -780,11 +792,6 @@
 		"key": "ctrl+shift+left",
 		"command": "cursorWordLeftSelect",
 		"when": "textInputFocus"
-	},
-	{
-		"key": "ctrl+left",
-		"command": "breadcrumbs.focusPrevious",
-		"when": "breadcrumbsActive"
 	},
 	{
 		"key": "ctrl+backspace",
@@ -801,11 +808,6 @@
 		"key": "ctrl+shift+right",
 		"command": "cursorWordEndRightSelect",
 		"when": "textInputFocus"
-	},
-	{
-		"key": "ctrl+right",
-		"command": "breadcrumbs.focusNext",
-		"when": "breadcrumbsActive"
 	},
 	{
 		"key": "ctrl+delete",
@@ -1504,7 +1506,7 @@
 		"command": "workbench.action.closePanel",
 		"when": "terminalTabsFocus && panelFocus"
 	},
-	{ "command": "", "key": "ctrl+b" },
+	{ "command": "noop", "key": "ctrl+b" },
 	{ "key": "ctrl+shift+b", "command": "workbench.action.toggleSidebarVisibility" },
 
 	/* Emmet */
@@ -1810,6 +1812,18 @@
 		"args": { "text": "\\\n" }
 	},
 	{
+		"key": "ctrl+enter",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocus && terminalShellType == 'claude'",
+		"args": { "text": "\u0005\u001b\r" }
+	},
+	{
+		"key": "ctrl+shift+enter",
+		"command": "workbench.action.terminal.sendSequence",
+		"when": "terminalFocus && terminalShellType == 'claude'",
+		"args": { "text": "\u0001\u001b\r\u001b[A" }
+	},
+	{
 		"key": "alt+n",
 		"command": "workbench.action.terminal.sendSequence",
 		"when": "!isMac && (terminalFocus || terminalTabsFocus)",
@@ -1908,17 +1922,6 @@
 		"key": "ctrl+pagedown",
 		"command": "workbench.action.nextEditorInGroup",
 		"when": "terminalEditorActive"
-	},
-	/* [un]split */
-	{
-		"key": "ctrl+clear",
-		"command": "workbench.action.terminal.split",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+shift+clear",
-		"command": "workbench.action.terminal.unsplit",
-		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 
 	/* Ctrl+Grave: Focus Terminal in Terminal View */
@@ -2389,11 +2392,6 @@
 	},
 	{
 		"key": "ctrl+shift+.",
-		"command": "workbench.action.chat.openSessionTargetPicker",
-		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
-	},
-	{
-		"key": "ctrl+shift+.",
 		"command": "selectPrevCodeAction",
 		"when": "codeActionMenuVisible"
 	},
@@ -2404,11 +2402,6 @@
 		"command": "editor.action.clipboardCopyAction",
 		"when": "panelFocus"
 	},
-	//{
-	//	"key": "ctrl+shift+c",
-	//	"command": "problems.action.copy",
-	//	"when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
-	//},
 
 	/* ^+V to Paste */
 	/* I could set ^+V unbound under Windows, but the following command for "shift+cmd+v" under Mac is in order to Paste into any input */
@@ -2587,6 +2580,8 @@
 		"command": "Command requires Search Result to appear",
 		"when": "!hasSearchResult && focusedView == 'workbench.view.search'"
 	},
+
+	/* Ctrl+Alt+Enter */
 	{
 		"key": "ctrl+alt+enter",
 		"command": "Command requires focus in Replace Input Box",

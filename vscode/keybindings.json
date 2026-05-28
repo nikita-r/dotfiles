@@ -2350,6 +2350,11 @@
 		"command": "workbench.action.chat.attachFile",
 		"when": "inChat"
 	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "workbench.action.browser.addScreenshotToChat",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
 	/* Completions Panel */
 	{ "command": "noop", "key": "shift+ctrl+alt+i" },
 	{
@@ -2430,11 +2435,6 @@
 
 	/* "ctrl+k v" for Preview (by default, Open in Integrated Browser) */
 	{ "command": "workbench.action.browser.openFile", "key": "ctrl+k v" },
-	//{
-	//	"key": "ctrl+k v",
-	//	"command": "imagePreview.reopenAsPreview",
-	//	"when": "activeEditorIsNotPreview && activeEditorAvailableEditorIds =~ /imagePreview.previewEditor/"
-	//},
 	{
 		"key": "ctrl+k v",
 		"command": "markdown.showPreview",

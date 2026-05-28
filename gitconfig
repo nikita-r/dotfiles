@@ -95,6 +95,7 @@
 
 [alias]
 	t-d = difftool
+	t-d-d = difftool --dir-diff
 	t-m = mergetool
 
 # Beyond Compare; under Linux, use "bc3"
@@ -170,17 +171,5 @@
 [user]
 	useConfigOnly = true
 
-#[user]
-#	name = nikita-r
-#	email = nikita-r@device
-#
-#[commit]
-#	gpgSign = true
-#[push]
-#	gpgSign = true
-#[tag]
-#	gpgSign = true
-#
 [include]
 	path = ~/.gitconfig.local
-

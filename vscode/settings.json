@@ -184,6 +184,8 @@
 	//	],
 	//	"settings": { "fontStyle": "italic" }
 	//} ] },
+	//"editor.fontFamily": "Monaspace Xenon Var",
+	//"editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss09', 'liga', 'cv01' 0, 'cv10'",
 
 	/* Terminal */
 	"terminal.integrated.tabs.title": "${process}${separator}${progress}",
@@ -729,7 +731,7 @@
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.function.decorator.python entity.name.function.decorator, meta.function.decorator.python support.type, variable.parameter.function.language.python, variable.other.object.java", "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": [ "log.constant", "text.log constant.language", "meta.embedded.block.log constant.language" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "log.constant, text.log constant.language, meta.embedded.block.log constant.language", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.verbose", "markup.inserted" ], "settings": { "foreground": "#6c9" } },
 			{ "scope": "markup.strikethrough", "settings": { "fontStyle": "underline" } },
 			{ "scope": "markup.deleted", "settings": { "foreground": "#c9b" } },
@@ -769,9 +771,9 @@
 			{ "scope": [ "variable.other.constant", "variable.other.enummember", "constant.language.capital-identifier.ocaml", "keyword.operator.inclusiveidentifier" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "keyword.other.order.sql", "constant.other.caps", "keyword.default", "symbol.unrecognized", "entity.name.constant", "support.constant", "constant.character.enum" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
-			{ "scope": [ "constant.numeric.other.suffix", "keyword.other.unit", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#c69" } },
+			{ "scope": [ "constant.numeric.other.suffix", "keyword.other.unit", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust", "keyword.operator.plus.exponent", "keyword.operator.minus.exponent" ], "settings": { "foreground": "#ee7" } },
 			{ "scope": "constant.other.placeholder, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
-			{ "scope": "punctuation.definition.decorator.python, storage.type.modifier.calling-convention, keyword.operator.bitwise.shift.cpp, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
+			{ "scope": "punctuation.definition.decorator.python, storage.type.modifier.calling-convention, keyword.operator.bitwise.powershell, source.powershell variable.parameter", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "keyword.command", "keyword.operator.combination" ], "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.definition.table.inline.toml, meta.separator.markdown", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
@@ -803,7 +805,7 @@
 			{ "scope": [ "support.variable.property", "support.variable.magic", "source.css variable", "meta.definition.variable.name", "meta.parameter-expansion", "variable.other punctuation.definition.variable.php" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "support.variable.magic", "support.function.magic" ], "settings": { "fontStyle": "italic" } },
 			{ "scope": [ "keyword.operator.arrow", "keyword.operator.channel", "keyword.operator.lambda", "keyword.operator.function", "keyword.operator.function-result", "keyword.operator.return-value", "punctuation.section.function.lambda", "punctuation.section.function.definition", "punctuation.definition.arrow", "punctuation.definition.lambda" ], "settings": { "foreground": "#c6c" } },
-			{ "scope": [ "keyword.other.operator", "keyword.operator.new.cpp", "keyword.operator.delete", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import", "keyword.other.new", "keyword.other.delete", "keyword.other.default" ], "settings": { "foreground": "#c6c" } },
+			{ "scope": [ "keyword.other.operator", "keyword.operator.new.cpp", "keyword.operator.delete", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import", "keyword.operator.new.cuda-cpp", "keyword.other.new", "keyword.other.delete", "keyword.other.default" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.expression, keyword.operator.asp, keyword.other.alias.sql, keyword.operator.new, keyword.other.directive", "settings": { "foreground": "#ee7" } },
 			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.assignment.ahk, keyword.operator.comparison.sql, keyword.operator.math.sql, keyword.operator.star, keyword.operator.infix, entity.name.function.infix", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.comparison, punctuation.separator.other.ruby, keyword.operator.relational, keyword.operator.relation.julia", "settings": { "foreground": "#FF8080" } },
@@ -851,6 +853,7 @@
 		"newOperator": "#e6e6b4",
 	} } },
 	"editor.semanticHighlighting.enabled": false,
+	"[cpp][cuda-cpp]": { "editor.semanticHighlighting.enabled": false },
 
 	"workbench.colorCustomizations": {
 
@@ -1347,9 +1350,6 @@
 		//"file:/**/*.md": "vscode.markdown.preview.editor",
 		"{git,git-graph,gitlens}:/**/*.{md,svg}": "default",
 	},
-	//"workbench.diffEditorAssociations": {
-	//	"*.md": "vscode.markdown.preview.editor",
-	//},
 
 	//"extensions.experimental.affinity": {
 	//	"auteur.vim": 1,

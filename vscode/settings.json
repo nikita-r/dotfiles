@@ -187,6 +187,8 @@
 	//} ] },
 	//"editor.fontFamily": "Monaspace Xenon Var",
 	//"editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss09', 'liga', 'cv01' 0, 'cv10'",
+	"scm.inputFontSize": 12,
+	"editor.codeLensFontSize": 12,
 
 	/* Terminal */
 	"terminal.integrated.tabs.title": "${process}${separator}${progress}",
@@ -197,9 +199,6 @@
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.minimumContrastRatio": 1,
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
-
-	"terminal.integrated.tabs.location": "left",
-	"workbench.notifications.position": "bottom-left",
 
 	/* Caret */
 	"editor.cursorBlinking": "phase",
@@ -301,9 +300,6 @@
 	"editor.comments.insertSpace": false,
 	//"editor.comments.ignoreEmptyLines": false,
 
-	"editor.codeLensFontFamily": "Fira Code, mono",
-	"editor.codeLensFontSize": 12,
-
 	/* SCM */
 
 	/* ꜱᴏᴜʀᴄᴇ ᴄᴏɴᴛʀᴏʟ / ʀᴇᴘᴏꜱɪᴛᴏʀɪᴇꜱ */
@@ -342,8 +338,6 @@
 	//"scm.workingSets.enabled": true,
 	//"scm.workingSets.default": "empty",
 	"git.terminalGitEditor": true,
-	"scm.inputFontFamily": "sans",
-	"scm.inputFontSize": 12,
 	"git.showCommitInput": false,
 
 	/* whos to blame */
@@ -709,6 +703,9 @@
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 	"terminal.integrated.windowsUseConptyDll": true,
+
+	"terminal.integrated.tabs.location": "left",
+	"workbench.notifications.position": "bottom-left",
 
 	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.tabs.hideCondition": "never",
@@ -1378,6 +1375,7 @@
 
 	/* agentic */
 	"chat.agent.thinkingStyle": "collapsedPreview",
+	"chat.tools.compressOutput.enabled": true,
 	"github.copilot.chat.agent.autoFix": false,
 	"chat.notifyWindowOnConfirmation": "always",
 	//"chat.notifyWindowOnResponseReceived": "always",
@@ -1392,11 +1390,6 @@
 	"chat.mcp.serverSampling": {},
 	"chat.mcp.discovery.enabled": {},
 	"chat.mcp.gallery.enabled": false,
-
-	/* experimental */
-	"chat.experimental.incrementalRendering.enabled": true,
-	"chat.experimental.incrementalRendering.animationStyle": "reveal",
-	"chat.experimental.incrementalRendering.buffering": "paragraph",
 
 	/* misc tooling */
 	"github.copilot.chat.codesearch.enabled": true, // #codebase

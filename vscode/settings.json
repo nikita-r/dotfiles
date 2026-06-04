@@ -613,7 +613,6 @@
 	/* debug */
 	"debug.confirmOnExit": "always",
 	"debug.allowBreakpointsEverywhere": true,
-	//"debug.console.historySuggestions": false,
 	"debug.focusEditorOnBreak": false,
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.breakpointsView.presentation": "tree",
@@ -621,7 +620,6 @@
 	"debug.showInlineBreakpointCandidates": false,
 	"debug.showSubSessionsInToolBar": true,
 	"debug.inlineValues": "on",
-	"notebook.inlineValues": "auto",
 	"debug.showVariableTypes": true,
 
 	/* Terminal */
@@ -800,8 +798,8 @@
 			{ "scope": "keyword.other.powershell, entity.name.operator.custom-literal, keyword.other.suffix.literal", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, punctuation.definition.arguments.shell", "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.list, keyword.operator.rest, punctuation.destructuring", "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.spread, keyword.operator.ellipsis", "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.list, keyword.operator.spread", "settings": { "foreground": "#c6c" } },
+			{ "scope": "keyword.operator.unpacking.parameter, keyword.operator.rest, keyword.operator.ellipsis", "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": [ "support.variable", "support.constant.variable", "variable.other.predefined", "entity.name.other.preprocessor.macro.predefined" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "support.variable.property", "support.variable.magic", "source.css variable", "meta.definition.variable.name", "meta.parameter-expansion", "variable.other punctuation.definition.variable.php" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "support.variable.magic", "support.function.magic" ], "settings": { "fontStyle": "italic" } },
@@ -815,7 +813,7 @@
 			{ "scope": "keyword.cs, keyword.fsharp, keyword.type, keyword.other.type, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile, punctuation.separator.batchfile", "settings": { "foreground": "#ffd700" } },
-			{ "scope": "punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
+			{ "scope": "punctuation.destructuring, punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },
 			{ "scope": "entity.name.label, entity.name.function.label, variable.other.label, variable.other.anchor.yaml, variable.other.alias.yaml", "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword", "storage.type.sql", "entity.name.tag", "support.constant.field", "storage.modifier.sql" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "entity.other.attribute-name", "entity.tag.name", "support.constant.attribute" ], "settings": { "foreground": "#9cf" } },

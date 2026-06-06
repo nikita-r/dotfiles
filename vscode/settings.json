@@ -700,7 +700,7 @@
 	"terminal.integrated.initialHint": false,
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
-	"terminal.integrated.windowsUseConptyDll": true,
+	//"terminal.integrated.windowsUseConptyDll": true,
 
 	"terminal.integrated.tabs.location": "left",
 	"workbench.notifications.position": "bottom-left",
@@ -725,7 +725,7 @@
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc", "settings": { "foreground": "#69c" } },
 			{ "scope": "comment.block.documentation, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.other.phpdoc, keyword.other.documentation", "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "keyword.control.block.transition", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -837,7 +837,7 @@
 			{ "scope": [ "constant.other.time", "meta.type.cast.expr", "meta.type.new.expr", "support.constant.dom", "support.constant.json", "support.constant.math" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "string.tag", "string.value", "support.constant.font-name", "constant.other.rgb-value", "constant.other.color.rgb-value", "support.constant.media", "support.constant.media-type", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "support.type.property-name, support.type.vendored.property-name, meta.object-literal.key, meta.structure.dictionary.key.python", "settings": { "foreground": "#9cf" } },
-			{ "scope": [ "support.constant.property-value", "storage.type.tag" ], "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": [ "support.constant.property-value", "storage.type.tag", "storage.type.tag-handle" ], "settings": { "foreground": "#e6e6b4" } },
 		],
 		"comments": "#593",
 		"functions": "#e6e6b4",

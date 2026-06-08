@@ -10,9 +10,6 @@
 	"extensions.requestTimeout": 15000, // @tag:advanced
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
-	"[c][cpp][cuda-cpp]": { "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?" },
-	//"C_Cpp.default.compilerPath": "...\\cl.exe",
-
 	//"editor.links": false,
 	//"editor.colorDecorators": false,
 	"editor.defaultColorDecorators": "never",
@@ -267,6 +264,8 @@
 
 	/* . . . */
 
+	"editor.comments.insertSpace": false,
+	//"editor.comments.ignoreEmptyLines": false,
 	"comments.openView": "never",
 	"comments.maxHeight": false,
 
@@ -281,7 +280,6 @@
 		"editor.showFoldingControls": "never",
 	},
 	"notebook.showFoldingControls": "always",
-	"notebook.output.minimalErrorRendering": true,
 	//"editor.foldingImportsByDefault": true,
 	"editor.unfoldOnClickAfterEndOfLine": true,
 
@@ -297,8 +295,11 @@
 	"editor.minimap.showRegionSectionHeaders": false,
 	//"editor.minimap.showMarkSectionHeaders": false,
 
-	"editor.comments.insertSpace": false,
-	//"editor.comments.ignoreEmptyLines": false,
+	"notebook.output.minimalErrorRendering": true,
+	"notebook.output.textLineLimit": 22,
+	"notebook.output.scrolling": true,
+	"notebook.inlineValues": "auto",
+	"notebook.navigation.allowNavigateToSurroundingCells": false,
 
 	/* SCM */
 
@@ -316,7 +317,7 @@
 
 	/* detective */
 	"git.autoRepositoryDetection": "subFolders",
-	//"git.repositoryScanMaxDepth": 2, // or -1
+	"git.repositoryScanMaxDepth": 2, // or -1
 	"git.openRepositoryInParentFolders": "never",
 	//"git.autorefresh": false,
 	"git.detectWorktreesLimit": 99,
@@ -508,6 +509,10 @@
 
 	/* Language Extensions */
 
+	"[c][cpp][cuda-cpp]": { "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?" },
+	//"C_Cpp.default.compilerPath": "...\\cl.exe",
+	"[cpp][cuda-cpp]": { "editor.semanticHighlighting.enabled": false },
+
 	"[sql]": {
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?[\\]^`{|}", // $-%~@
 	},
@@ -693,11 +698,12 @@
 	"terminal.integrated.rightClickBehavior": "default", // ensure the Linux default
 	"terminal.integrated.wordSeparators": " \"()", // double-click to select a word; would have it to be only " ", but it is used as delimiters in fallback link detection
 	"terminal.integrated.enableFileLinks": "off",
-	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.showLinkHover": false,
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
+
+	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 	//"terminal.integrated.windowsUseConptyDll": true,
@@ -852,7 +858,6 @@
 		"newOperator": "#e6e6b4",
 	} } },
 	"editor.semanticHighlighting.enabled": false,
-	"[cpp][cuda-cpp]": { "editor.semanticHighlighting.enabled": false },
 
 	"workbench.colorCustomizations": {
 

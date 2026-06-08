@@ -511,7 +511,7 @@
 
 	"[c][cpp][cuda-cpp]": { "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?" },
 	//"C_Cpp.default.compilerPath": "...\\cl.exe",
-	"[cpp][cuda-cpp]": { "editor.semanticHighlighting.enabled": false },
+	"[cpp]": { "editor.semanticHighlighting.enabled": false },
 
 	"[sql]": {
 		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?[\\]^`{|}", // $-%~@

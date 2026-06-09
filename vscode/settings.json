@@ -99,6 +99,7 @@
 	"markdown.preview.scrollPreviewWithEditor": false,
 	"markdown.preview.fontFamily": "Cambria, Georgia",
 	"markdown.preview.fontSize": 14, // affects <code> blocks too, so it is best to keep the default
+	"markdown-mermaid.controls.show": "always",
 
 	//"workbench.editor.enablePreview": false,
 	"workbench.editor.useModal": "off",
@@ -618,12 +619,12 @@
 	/* debug */
 	"debug.confirmOnExit": "always",
 	"debug.allowBreakpointsEverywhere": true,
+	"debug.showInlineBreakpointCandidates": false,
+	"debug.showSubSessionsInToolBar": true,
 	"debug.focusEditorOnBreak": false,
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.breakpointsView.presentation": "tree",
 	"debug.showBreakpointsInOverviewRuler": true,
-	"debug.showInlineBreakpointCandidates": false,
-	"debug.showSubSessionsInToolBar": true,
 	"debug.inlineValues": "on",
 	"debug.showVariableTypes": true,
 
@@ -1266,6 +1267,10 @@
 		"*.svg": "xml",
 	},
 
+	"json.schemaDownload.trustedDomains": {
+		"https://schema.management.azure.com": true,
+	},
+	//"json.schemaDownload.enable": false,
 	"[json]": { "editor.maxTokenizationLineLength": 10240000 },
 
 	/* file-saving preferences */

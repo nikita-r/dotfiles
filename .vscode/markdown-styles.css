@@ -1,0 +1,15 @@
+
+pre, code {
+	border-color: #666;
+	border-radius: 0 !important;
+	font-size: 14px;
+}
+
+hr {
+	border: none;
+	border-top: 2px solid #999 !important;
+}
+
+h1, h2 {
+	border-bottom: 2px solid #718293 !important;
+}

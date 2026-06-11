@@ -2129,6 +2129,22 @@
 		"command": "selectPrevSuggestion",
 		"when": "suggestWidgetVisible"
 	},
+	/* ?inlineSuggestionVisible */
+	{
+		"key": "shift+alt+j",
+		"command": "editor.action.inlineSuggest.commit",
+		"when": "inlineSuggestionVisible && editorTextFocus"
+	},
+	{
+		"key": "shift+alt+n",
+		"command": "editor.action.inlineSuggest.showNext",
+		"when": "inlineSuggestionVisible && editorTextFocus"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "editor.action.inlineSuggest.showPrevious",
+		"when": "inlineSuggestionVisible && editorTextFocus"
+	},
 
 	/* switch between relateds */
 	{
@@ -2231,9 +2247,15 @@
 		"args": { "revealCursor": false, "by": "halfPage", "to": "down" }
 	},
 
-	/* ryu1kn.text-marker */
+	/* Ctrl+# */
 	{ "command": "noop", "key": "ctrl+0" },
 	{ "command": "noop", "key": "ctrl+9" },
+	{
+		"key": "ctrl+0",
+		"command": "workbench.action.browser.resetZoom",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	/* ryu1kn.text-marker */
 	{
 		"key": "ctrl+0",
 		"command": "textmarker.goToNextHighlight",
@@ -2243,13 +2265,6 @@
 		"key": "ctrl+9",
 		"command": "textmarker.goToPreviousHighlight",
 		"when": "editorTextFocus"
-	},
-
-	/* Ctrl+# (not used by vscode-numbered-bookmarks) */
-	{
-		"key": "ctrl+0",
-		"command": "workbench.action.browser.resetZoom",
-		"when": "activeEditor == 'workbench.editor.browser'"
 	},
 
 	/* hediet.hediet-power-tools */
@@ -2596,6 +2611,11 @@
 		"key": "ctrl+alt+enter",
 		"command": "workbench.action.toggleMaximizedAuxiliaryBar",
 		"when": "auxiliaryBarFocus && inChatInput || auxiliaryBarMaximized"
+	},
+	{
+		"key": "ctrl+alt+enter",
+		"command": "workbench.action.chat.sendToNewChat",
+		"when": "chatInputHasText && inChatInput"
 	},
 
 	/*~*~*~*/

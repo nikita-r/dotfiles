@@ -714,12 +714,12 @@
 	{
 		"key": "ctrl+up",
 		"command": "notebook.cell.focusOutOutput",
-		"when": "notebookCellFocused"
+		"when": "notebookCellFocused && !inputFocus"
 	},
 	{
 		"key": "ctrl+down",
 		"command": "notebook.cell.focusInOutput",
-		"when": "notebookCellFocused"
+		"when": "notebookCellFocused && !inputFocus"
 	},
 	/* Search Results */
 	{
@@ -1497,6 +1497,11 @@
 		"command": "workbench.action.togglePanel"
 	},
 	{
+		"key": "ctrl+shift+x",
+		"command": "workbench.action.toggleAuxiliaryBar",
+		"when": "auxiliaryBarMaximized"
+	},
+	{
 		"key": "ctrl+shift+\\",
 		"command": "terminal.focus",
 		"when": "!terminalIsOpen"
@@ -2231,6 +2236,16 @@
 		"when": "editorFocus",
 		"command": "editorScroll",
 		"args": { "revealCursor": false, "by": "page", "to": "down" }
+	},
+	{
+		"key": "Ctrl+Alt+k",
+		"command": "list.focusPageUp",
+		"when": "listFocus"
+	},
+	{
+		"key": "Ctrl+Alt+j",
+		"command": "list.focusPageDown",
+		"when": "listFocus"
 	},
 
 	/* scroll half a page */

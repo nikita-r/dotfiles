@@ -275,7 +275,6 @@
 	"breadcrumbs.symbolPathSeparator": " :: ",
 	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.outline.showCodeCells": true,
-	"workbench.view.alwaysShowHeaderActions": true,
 
 	"editor.showFoldingControls": "always",
 	"[plaintext]": {
@@ -296,6 +295,7 @@
 	"editor.minimap.sectionHeaderLetterSpacing": 2,
 	"editor.minimap.showRegionSectionHeaders": false,
 	//"editor.minimap.showMarkSectionHeaders": false,
+	"workbench.view.alwaysShowHeaderActions": true,
 
 	/* Notebook */
 
@@ -785,7 +785,7 @@
 			{ "scope": [ "keyword.other.order.sql", "keyword.default", "symbol.unrecognized", "entity.name.constant", "support.constant", "constant.character.enum" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
 			{ "scope": [ "storage.type.number.python", "constant.numeric.other.suffix", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust" ], "settings": { "foreground": "#ee7" } },
-			{ "scope": "source.cpp meta.encoding, keyword.other.unit, keyword.other.suffix.literal, keyword.operator.plus.exponent, keyword.operator.minus.exponent", "settings": { "foreground": "#ee7" } },
+			{ "scope": "source.cpp meta.encoding, source.cuda-cpp meta.encoding, keyword.other.unit, keyword.other.suffix.literal, keyword.operator.plus.exponent, keyword.operator.minus.exponent", "settings": { "foreground": "#ee7" } },
 			{ "scope": "constant.other.placeholder, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "punctuation.definition.decorator.python", "storage.type.modifier.calling-convention", "keyword.operator.bitwise.powershell", "source.powershell variable.parameter" ], "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "meta.function-call.generic", "entity.name.operator.custom-literal", "keyword.command", "keyword.operator.combination", "keyword.other.powershell" ], "settings": { "foreground": "#e6e6b4" } },
@@ -810,7 +810,7 @@
 			{ "scope": [ "string.quoted.double keyword.other.powershell", "variable.other.constant.singlequote" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
-			{ "scope": "keyword.other.unit.user-defined", "settings": { "foreground": "#fc9" } },
+			{ "scope": [ "keyword.other.unit.user-defined" ], "settings": { "foreground": "#fc9" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, punctuation.definition.arguments.shell", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.list, keyword.operator.spread", "settings": { "foreground": "#c6c" } },

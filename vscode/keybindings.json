@@ -1478,7 +1478,7 @@
 		"when": "focusedView == 'references-view.tree' && reference-list.source == 'javaTypeHierarchy'" // typeHierarchyDirection != 'both'
 	},
 
-	/* Mac default: ^J for Join */
+	/* Mac default: ^J for Join; "shift+cmd+j" toggles "files to *" in Search */
 	{ "command": "noop", "key": "ctrl+j" },
 	{
 		"key": "ctrl+j",
@@ -1489,6 +1489,11 @@
 		"key": "ctrl+j",
 		"command": "notebook.cell.joinBelow",
 		"when": "notebookCellFocused && !inputFocus"
+	},
+	{
+		"key": "ctrl+shift+j",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "textInputFocus"
 	},
 
 	/* Toggle Panel Visibility */

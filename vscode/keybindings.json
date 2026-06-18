@@ -1735,6 +1735,50 @@
 		"when": "activeEditorGroupEmpty"
 	},
 
+	/* Accursed "return" convention for Rename in macOS */
+	{ "key": "enter", "command": "-agentSession.rename" },
+	{
+		"key": "enter",
+		"command": "-debug.renameWatchExpression",
+		"when": "watchExpressionsFocused"
+	},
+	{
+		"key": "enter",
+		"command": "-debug.setVariable",
+		"when": "variablesFocused"
+	},
+	{
+		"key": "enter",
+		"command": "-remote.tunnel.label",
+		"when": "tunnelViewFocus && tunnelType == 'Forwarded' && tunnelViewMultiSelection == 'undefined'"
+	},
+	{ "key": "enter", "command": "-renameFile" },
+	{
+		"key": "f2",
+		"command": "agentSession.rename",
+		"when": "agentSessionsViewerFocused"
+	},
+	{
+		"key": "f2",
+		"command": "debug.renameWatchExpression",
+		"when": "watchExpressionsFocused"
+	},
+	{
+		"key": "f2",
+		"command": "debug.setVariable",
+		"when": "variablesFocused"
+	},
+	{
+		"key": "f2",
+		"command": "remote.tunnel.label",
+		"when": "tunnelViewFocus && tunnelType == 'Forwarded' && tunnelViewMultiSelection == 'undefined'"
+	},
+	{
+		"key": "f2",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+
 	/* terminal.kill[Editor] */
 	{
 		"key": "ctrl+f4",
@@ -1748,6 +1792,12 @@
 	},
 
 	/* Terminal */
+	{ "key": "enter", "command": "-workbench.action.terminal.renameActiveTab" },
+	{
+		"key": "f2",
+		"command": "workbench.action.terminal.renameActiveTab",
+		"when": "terminalTabsFocus"
+	},
 	/* Emacs-mode shortcuts for readline/zle */
 	{ "command": "", "key": "ctrl+e", "when": "terminalFocus" },
 	{ "command": "", "key": "ctrl+a", "when": "terminalFocus" },

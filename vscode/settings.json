@@ -7,6 +7,7 @@
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
 	"extensions.autoUpdate": false,
+	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
 
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
@@ -187,6 +188,7 @@
 	//"editor.fontFamily": "Monaspace Xenon Var",
 	//"editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss09', 'liga', 'cv01' 0, 'cv10'",
 	"scm.inputFontSize": 12,
+	"editor.codeLensFontFamily": "Fira Code",
 	"editor.codeLensFontSize": 12,
 
 	/* Terminal */
@@ -851,7 +853,7 @@
 			{ "scope": [ "entity.name.tag.css", "entity.name.tag.less", "entity.other.attribute-name.scss", "entity.other.attribute-name.class.css", "source.css entity.other.attribute-name.class", "entity.other.attribute-name.id.css", "source.css.less entity.other.attribute-name.id" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.other.time", "meta.type.cast.expr", "meta.type.new.expr", "support.constant.dom", "support.constant.json", "support.constant.math" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": [ "string.tag", "string.value", "support.constant.font-name", "constant.other.rgb-value", "constant.other.color.rgb-value", "support.constant.media", "support.constant.media-type", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },
-			{ "scope": "support.type.property-name, support.type.vendored.property-name, meta.object-literal.key, meta.structure.dictionary.key.python", "settings": { "foreground": "#9cf" } },
+			{ "scope": "support.type.property-name, support.type.vendored.property-name, meta.object-literal.key, meta.object-literal.key string, meta.structure.dictionary.key.python", "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "support.constant.property-value", "storage.type.tag", "storage.type.tag-handle" ], "settings": { "foreground": "#e6e6b4" } },
 		],
 		"comments": "#593",
@@ -890,7 +892,7 @@
 			"editorGutter.modifiedSecondaryBackground": "#206080",
 
 			/* CodeLens and merge at 220° */
-			"editorCodeLens.foreground": "#37f",
+			"editorCodeLens.foreground": "#9ac",
 			"mergeEditor.change.background": "#124",
 			"mergeEditor.change.word.background": "#37f5",
 			"merge.currentContentBackground": "#37f3",
@@ -1314,6 +1316,7 @@
 	"files.readonlyInclude": {
 		"**/node_modules/**": true,
 	},
+	"files.readonlyFromPermissions": true,
 
 	"files.watcherExclude": {
 		"**/node_modules/**": true,

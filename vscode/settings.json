@@ -187,7 +187,6 @@
 	//} ] },
 	//"editor.fontFamily": "Monaspace Xenon Var",
 	//"editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss09', 'liga', 'cv01' 0, 'cv10'",
-	"scm.inputFontSize": 12,
 	"editor.codeLensFontFamily": "Fira Code",
 	"editor.codeLensFontSize": 12,
 
@@ -1154,6 +1153,7 @@
 			"activityBar.border": "#806080",
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",
+			"tab.selectedBorderTop": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
 			"actionBar.toggledBackground": "#806080",
@@ -1257,6 +1257,7 @@
 
 	//"window.titleBarStyle": "native",
 	"window.controlsStyle": "hidden",
+	"chat.titleBar.openInAgentsWindow.enabled": false,
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",

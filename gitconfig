@@ -170,6 +170,8 @@
 
 [user]
 	useConfigOnly = true
+#	name = nikita-r
+#	email = nikita-r@device
 
 [include]
 	path = ~/.gitconfig.local

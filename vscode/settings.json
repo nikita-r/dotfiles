@@ -6,7 +6,7 @@
 	"update.showReleaseNotes": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
-	"extensions.autoUpdate": false,
+	"extensions.autoUpdate": "off",
 	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
 
@@ -713,7 +713,7 @@
 	"terminal.integrated.initialHint": false,
 
 	//"terminal.integrated.middleClickBehavior": "paste",
-	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 	//"terminal.integrated.windowsUseConptyDll": true,
 
@@ -1110,11 +1110,21 @@
 			"textPreformat.foreground": "#cdf",
 			"descriptionForeground": "#a0a8b8",
 
+			/* "tab.*Foreground" */
+			"tab.activeForeground": "#fff",
+			"tab.unfocusedActiveForeground": "#ccc",
+			"tab.inactiveForeground": "#999",
+			"tab.unfocusedInactiveForeground": "#999",
+
+			/* "tab.*ModifiedBorder" */
+			"tab.activeModifiedBorder": "#48F080",
+			"tab.unfocusedActiveModifiedBorder": "#48F080",
+			"tab.inactiveModifiedBorder": "#3c6",
+			"tab.unfocusedInactiveModifiedBorder": "#3c6",
+
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
 			"progressBar.background": "#F08048",
-			"tab.activeModifiedBorder": "#F08048",
-			"tab.inactiveModifiedBorder": "#c63",
 			"activityBarBadge.background": "#c63",
 			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
@@ -1153,7 +1163,8 @@
 			"activityBar.border": "#806080",
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",
-			"tab.selectedBorderTop": "#806080",
+			//"tab.selectedBorderTop": "#806080",
+			"tab.border": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
 			"actionBar.toggledBackground": "#806080",

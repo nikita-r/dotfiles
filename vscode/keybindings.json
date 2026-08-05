@@ -59,7 +59,7 @@
 	{ "key": "shift+ctrl+y", "command": "chatEditor.action.accept" },
 	{ "key": "shift+ctrl+n", "command": "chatEditor.action.reject" },
 
-	/* toggle Views */
+	/* Ctrl(+Shift)+[';] */
 	{ "key": "ctrl+;", "command": "breadcrumbs.focus" },
 	{ "key": "ctrl+'", "command": "workbench.action.toggleAuxiliaryBar" },
 	{ "key": "ctrl+shift+;", "command": "workbench.actions.view.problems" },
@@ -622,7 +622,7 @@
 	/* Alt+Arrow */
 	{ "command": "", "key": "alt+left" }, // ?inQuickOpen: "workbench.action.quickInputBack"
 	{ "command": "", "key": "alt+right" }, // ?inFilesPicker: Open to the Side
-	/* Navigate Browser */
+	/* restore (some) Windows defaults */
 	{
 		"key": "alt+left",
 		"command": "workbench.action.browser.goBack",
@@ -1637,7 +1637,7 @@
 
 	/* Ctrl+Shift+c */
 	{ "command": "noop", "key": "ctrl+shift+c" },
-	/* Reset the View ( Clear ) */
+	/* Reset a View / Clear Results */
 	{
 		"key": "ctrl+shift+c",
 		"command": "macros.resetExplorerView", /* ctf0.macros */
@@ -1658,7 +1658,7 @@
 		"command": "search.action.clearSearchResults",
 		"when": "searchViewletVisible"
 	},
-	/* Ctrl+Shift+c to Capture */
+	/* restore (some) Windows defaults for ^+C */
 	{
 		"key": "ctrl+shift+c",
 		"command": "workbench.action.browser.addElementToChat",
@@ -1698,6 +1698,17 @@
 		"key": "ctrl+alt+c",
 		"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
 	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "workbench.action.browser.addElementCommentToChat",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	{
+		"key": "alt+ctrl+s",
+		"command": "workbench.action.browser.addAreaScreenshotToChat",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	{ "key": "alt+cmd+s", "command": "-saveAll" },
 	{
 		"key": "ctrl+alt+x",
 		"command": "workbench.action.inspectContextKeys"
@@ -2345,27 +2356,6 @@
 	},
 
 	/* Ctrl+k Ctrl+f */
-	{ "command": "noop", "key": "ctrl+k ctrl+f" },
-	{
-		"key": "ctrl+k ctrl+f",
-		"command": "editor.action.format",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+k ctrl+f",
-		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && !editorHasDocumentFormattingProvider"
-	},
-	{
-		"key": "ctrl+k ctrl+f",
-		"command": "editor.action.formatSelection",
-		"when": "editorTextFocus && editorHasSelection"
-	},
-	{
-		"key": "ctrl+k ctrl+f",
-		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && editorHasSelection && !editorHasDocumentSelectionFormattingProvider"
-	},
 	{
 		"key": "ctrl+k ctrl+f",
 		"command": "notebook.formatCell",

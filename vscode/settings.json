@@ -883,12 +883,12 @@
 		"editorOverviewRuler.deletedForeground": "#f00a", // 0°
 		"editorOverviewRuler.modifiedForeground": "#0afa", // 200°
 		"[*Dark*]": {
-			"editorGutter.addedBackground": "#408020", // 100°
-			"editorGutter.addedSecondaryBackground": "#408020",
+			"editorGutter.addedBackground": "#208040", // 140°
+			"editorGutter.addedSecondaryBackground": "#208040",
 			"editorGutter.deletedBackground": "#fff",
 			"editorGutter.deletedSecondaryBackground": "#fff",
-			"editorGutter.modifiedBackground": "#206080", // 200°
-			"editorGutter.modifiedSecondaryBackground": "#206080",
+			"editorGutter.modifiedBackground": "#517acc", // 220°
+			"editorGutter.modifiedSecondaryBackground": "#517acc",
 
 			/* CodeLens and merge at 220° */
 			"editorCodeLens.foreground": "#9ac",

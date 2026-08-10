@@ -132,7 +132,6 @@
 	"markdown.validate.enabled": true,
 	"editor.codeActionWidget.includeNearbyQuickFixes": false,
 	//"editor.codeActionWidget.showHeaders": false,
-	//"problems.showCurrentInStatus": true,
 	"problems.decorations.enabled": false,
 
 	/* auto-suggestion */
@@ -187,7 +186,7 @@
 	//} ] },
 	//"editor.fontFamily": "Monaspace Xenon Var",
 	//"editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss09', 'liga', 'cv01' 0, 'cv10'",
-	"editor.codeLensFontFamily": "Fira Code",
+	"editor.codeLensFontFamily": "Fira Code", // or "Cambria, serif"
 	"editor.codeLensFontSize": 12,
 
 	/* Terminal */
@@ -713,7 +712,7 @@
 	"terminal.integrated.initialHint": false,
 
 	//"terminal.integrated.middleClickBehavior": "paste",
-	"terminal.integrated.enableMultiLinePasteWarning": "never",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 	//"terminal.integrated.windowsUseConptyDll": true,
 
@@ -1266,10 +1265,11 @@
 	"window.customMenuBarAltFocus": false,
 	"window.enableMenuBarMnemonics": true,
 
+	"window.doubleClickIconToClose": true,
 	//"window.titleBarStyle": "native",
 	"window.controlsStyle": "hidden",
-	"chat.titleBar.openInAgentsWindow.enabled": false,
 	"window.commandCenter": false,
+	"chat.titleBar.openInAgentsWindow.enabled": false,
 	"workbench.layoutControl.enabled": true,
 	"workbench.layoutControl.type": "toggles",
 

@@ -10,6 +10,9 @@
 	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
 
+	"security.workspace.trust.enabled": false,
+	"security.workspace.trust.banner": "always",
+
 	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
 	//"editor.links": false,
 	//"editor.colorDecorators": false,
@@ -24,21 +27,17 @@
 	"telemetry.feedback.enabled": false,
 	"workbench.enableExperiments": false,
 
-	/* extravagant features */
-	"security.workspace.trust.enabled": false,
-	"task.allowAutomaticTasks": "off", // this User setting cannot be overridden in Workspace anymore starting with v1.109
-	//"security.restrictUNCAccess": false,
-	//"git.mergeEditor": true,
-
 	/* constrain Shell Integration */
 	"terminal.integrated.shellIntegration.enabled": false,
 	"python.terminal.shellIntegration.enabled": false,
 	"terminal.integrated.environmentChangesRelaunch": false,
 
 	/* IntegratedBrowser */
+	"workbench.browser.autoReloadOnFileChange": false,
 	"workbench.browser.enableChatTools": true,
 	"workbench.browser.dataStorage": "workspace",
 	"workbench.browser.pageZoom": "100%",
+	"workbench.browser.searchEngine": "none",
 	"workbench.browser.showInTitleBar": true,
 
 	/* icky */
@@ -1379,6 +1378,7 @@
 	"security.allowedUNCHosts": [
 		"localhost",
 	],
+	//"security.restrictUNCAccess": false,
 
 	"workbench.editorAssociations": {
 		//"file:/**/*.md": "vscode.markdown.preview.editor",

@@ -14,7 +14,7 @@ $json -split "`n" |% {
   if ($_ -match '"ctrl\+shift\+e"') {
       if (!$flagE++) { return $_ }
   }
-  if ($_ -match '"ctrl\+(shift\+)?space"') { return $_ }
+  if ($_ -match '"ctrl(\+shift)?\+space"') { return $_ }
   if ($_ -match '"ctrl\+shift\+a"') { return }
   if ($_ -match '"ctrl\+shift\+f"') { return $_ }
   if ($_ -match '"command": ""') { return $_ }

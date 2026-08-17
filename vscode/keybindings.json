@@ -203,17 +203,6 @@
 		"key": "ctrl+shift+m",
 		"when": "editorTextFocus"
 	},
-	/* "toggle_comment", "block" */
-	{
-		"key": "ctrl+shift+/",
-		"command": "editor.action.blockComment",
-		"when": "editorFocus"
-	},
-	{
-		"key": "ctrl+shift+/",
-		"command": "notebook.commentSelectedCells",
-		"when": "notebookEditorFocused && !editorFocus"
-	},
 	/* "split_selection_into_lines" */
 	{ "command": "noop", "key": "ctrl+shift+l" },
 	{
@@ -360,26 +349,29 @@
 		"when": "inKeybindings"
 	},
 
-	/* Complement !+A */
+	/* Toggle Comment */
 	{
 		"key": "alt+a",
-		"command": "editor.action.commentLine"
+		"command": "editor.action.commentLine",
+		"when": "editorFocus"
 	},
 	{
 		"key": "ctrl+/",
-		"command": "editor.action.commentLine"
+		"command": "editor.action.commentLine",
+		"when": "editorFocus"
 	},
 	{
-		"key": "ctrl+/",
-		"command": "workbench.action.chat.attachContext",
-		"when": "inChatInput"
+		"key": "shift+alt+a",
+		"command": "editor.action.blockComment",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+/",
+		"command": "editor.action.blockComment",
+		"when": "editorFocus"
 	},
 
 	/* take KB from Default Keyboard Shortcuts for Windows, but drop the "when" */
-	{
-		"key": "shift+alt+a",
-		"command": "editor.action.blockComment"
-	},
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
@@ -1716,6 +1708,9 @@
 
 	/* !^Z */
 	{ "key": "ctrl+z", "command": "default:undo" },
+	{ "key": "ctrl+shift+z", "command": "default:redo" },
+	//{ "key": "ctrl+z", "command": "markdown.editor.undo", "when": "markdownEditorFocus" },
+	//{ "key": "ctrl+shift+z", "command": "markdown.editor.redo", "when": "markdownEditorFocus" },
 	{ "key": "alt+z", "command": "" },
 	{ "key": "ctrl+alt+z", "command": "editor.action.toggleWordWrap" },
 	{ "key": "ctrl+alt+z", "command": "workbench.action.terminal.sizeToContentWidth"
@@ -1855,7 +1850,7 @@
 	{
 		"key": "ctrl+/",
 		"command": "workbench.action.terminal.sendSequence",
-		"when": "!terminalSuggestWidgetVisible && (terminalFindFocused || terminalFocus || terminalTabsFocus)",
+		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus",
 		"args": { "text": "\u001f" } // readline undo
 	},
 	{
@@ -2217,22 +2212,7 @@
 		"when": "inlineSuggestionVisible && editorTextFocus"
 	},
 
-	/* switch between relateds */
-	{
-		"key": "shift+alt+,",
-		"command": "fileextswitch", /* JohannesRudolph.file-ext-switcher */
-		"args": {
-			"extensions": [
-				".aspx", ".aspx.cs",
-				".xaml", ".xaml.cs",
-				".ps1", ".ps1.Transcript.log",
-				".ts",
-				".spec.ts",
-				".test.ts",
-			],
-			//"useOtherColumn": true
-		}
-	},
+	/* Shift+Alt+, */
 	{
 		"key": "shift+alt+,",
 		"command": "C_Cpp.SwitchHeaderSource",
@@ -2429,6 +2409,11 @@
 		"key": "ctrl+alt+j",
 		"command": "workbench.action.browser.addScreenshotToChat",
 		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "workbench.action.chat.attachContext",
+		"when": "inChatInput"
 	},
 	/* Completions Panel */
 	{ "command": "noop", "key": "shift+ctrl+alt+i" },

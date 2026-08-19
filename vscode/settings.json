@@ -912,7 +912,8 @@
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
 			"input.background": "#384048",
-			"input.placeholderForeground": "#abc0", //"#8090A0",
+			"input.placeholderForeground": "#abc0",
+			"editor.placeholder.foreground": "#abc0",
 			"inputOption.hoverBackground": "#202428",
 			"inputOption.activeBackground": "#000",
 			"editorGhostText.foreground": "#9cf9", // suggestive
@@ -1383,6 +1384,7 @@
 	"workbench.editorAssociations": {
 		//"file:/**/*.md": "vscode.markdown.preview.editor",
 		"{git,git-graph,gitlens}:/**/*.{md,svg}": "default",
+		//"*.{html,htm}": "workbench.editor.browser",
 	},
 
 	//"extensions.experimental.affinity": {

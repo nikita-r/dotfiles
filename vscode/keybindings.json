@@ -285,6 +285,11 @@
 	},
 	{
 		"key": "alt+q",
+		"command": "workbench.action.chat.toggleFindRegex",
+		"when": "chatFindWidgetVisible"
+	},
+	{
+		"key": "alt+q",
 		"command": "workbench.action.terminal.toggleFindRegex",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
@@ -308,6 +313,11 @@
 	},
 	{
 		"key": "alt+c",
+		"command": "workbench.action.chat.toggleFindCaseSensitive",
+		"when": "chatFindWidgetVisible"
+	},
+	{
+		"key": "alt+c",
 		"command": "workbench.action.terminal.toggleFindCaseSensitive",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
@@ -326,6 +336,11 @@
 		"key": "alt+w",
 		"command": "toggleSearchEditorWholeWord",
 		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.chat.toggleFindWholeWord",
+		"when": "chatFindWidgetVisible"
 	},
 	{
 		"key": "alt+w",
@@ -494,6 +509,16 @@
 	},
 	{
 		"key": "f3",
+		"command": "workbench.action.chat.findNext",
+		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+	},
+	{
+		"key": "shift+f3",
+		"command": "workbench.action.chat.findPrevious",
+		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+	},
+	{
+		"key": "f3",
 		"command": "workbench.action.terminal.findNext",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
@@ -534,6 +559,16 @@
 		"key": "shift+cmd+g",
 		"command": "workbench.action.browser.findPrevious",
 		"when": "!panelFocus && activeEditor == 'workbench.editor.browser' && browserFindWidgetVisible"
+	},
+	{
+		"key": "cmd+g",
+		"command": "workbench.action.chat.findNext",
+		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "workbench.action.chat.findPrevious",
+		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
 	},
 	{
 		"key": "cmd+g",
@@ -2212,7 +2247,7 @@
 		"when": "inlineSuggestionVisible && editorTextFocus"
 	},
 
-	/* Shift+Alt+, */
+	/* Shift+Alt+Comma */
 	{
 		"key": "shift+alt+,",
 		"command": "C_Cpp.SwitchHeaderSource",
@@ -2387,7 +2422,7 @@
 	},
 	{
 		"key": "ctrl+alt+p",
-		"command": "workbench.action.chat.history",
+		"command": "workbench.action.chat.toggleShowAgentSessions",
 		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
 	{

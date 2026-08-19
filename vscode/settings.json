@@ -1404,7 +1404,6 @@
 	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
 	"chat.requestQueuing.defaultAction": "queue",
 	"chat.useCustomizationsInParentRepositories": true,
-	"chat.viewSessions.enabled": false,
 	"chat.agent.codeBlockProgress": false,
 	"github.copilot.nextEditSuggestions.enabled": false,
 
@@ -1445,4 +1444,5 @@
 	"zenMode.hideStatusBar": false,
 	"zenMode.hideLineNumbers": false,
 	"zenMode.silentNotifications": false,
+	"chat.viewSessions.enabled": false,
 }

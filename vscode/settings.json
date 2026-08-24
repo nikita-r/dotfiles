@@ -20,6 +20,22 @@
 	"editor.wrappingIndent": "none",
 	"editor.renderFinalNewline": "dimmed",
 
+	"editor.hover.enabled": false,
+	"editor.hover.above": false,
+
+	//"editor.hover.enabled": "onKeyboardModifier", // opposite of Multi-Cursor Modifier
+	//"editor.hover.delay": 0,
+	//"editor.hover.hidingDelay": 0,
+	//"editor.hover.sticky": false,
+	//"editor.hover.above": true,
+
+	/* Inlay Hints */
+	"editor.inlayHints.fontFamily": "Geist Mono, Georgia",
+	"editor.inlayHints.fontSize": 12,
+	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
+	"editor.inlayHints.padding": true,
+	"editor.inlayHints.maximumLength": 0,
+
 	/* surveys & telemetry */
 	"extensions.ignoreRecommendations": true,
 	"redhat.telemetry.enabled": false,
@@ -109,19 +125,6 @@
 	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
 
 	/* suggestions-adjacent settings */
-
-	//"editor.hover.enabled": "onKeyboardModifier", // opposite of Multi-Cursor Modifier
-	//"editor.hover.delay": 0,
-	//"editor.hover.hidingDelay": 0,
-	"editor.hover.enabled": false,
-	"editor.hover.above": false,
-
-	/* Inlay Hints */
-	"editor.inlayHints.fontFamily": "Geist Mono, Georgia",
-	"editor.inlayHints.fontSize": 12,
-	"editor.inlayHints.enabled": "offUnlessPressed", // press Ctrl+Alt
-	"editor.inlayHints.padding": true,
-	"editor.inlayHints.maximumLength": 0,
 
 	/* Code Problems & Actions */
 	"editor.lightbulb.enabled": "off",
@@ -741,7 +744,7 @@
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "keyword.control.block.transition", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "punctuation.separator.namespace.ruby", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.asp, variable.other.column.kusto, variable.other.member.powershell", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.function.decorator.python entity.name.function.decorator, meta.function.decorator.python support.type, variable.other.object.java", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "log.constant, text.log constant.language, meta.embedded.block.log constant.language", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "log.verbose", "markup.inserted" ], "settings": { "foreground": "#6c9" } },

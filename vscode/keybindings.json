@@ -8,7 +8,6 @@
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.detectLanguage: "shift+alt+d"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
-	$: rerunSearchEditorSearch: "ctrl+shift+r"
 	$: workbench.action.chat.open: "ctrl+cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
@@ -390,6 +389,10 @@
 	{
 		"key": "ctrl+shift+\\",
 		"command": "workbench.action.terminal.focusTabs"
+	},
+	{
+		"key": "ctrl+shift+alt+a",
+		"command": "workbench.action.openAgentsWindow"
 	},
 	{
 		"key": "f9",
@@ -1351,32 +1354,10 @@
 		"command": "workbench.view.extensions"
 	},
 
-	/* Ctrl+r/R */
-	{
-		"key": "ctrl+r",
-		"command": "workbench.action.openRecent"
-	},
-	{
-		"key": "ctrl+r",
-		"command": "workbench.action.browser.reload",
-		"when": "browserFocused && activeEditor == 'workbench.editor.browser'"
-	},
-	{
-		"key": "ctrl+r",
-		"command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
-		"when": "inQuickOpen && inRecentFilesPicker"
-	},
-	{
-		"key": "ctrl+shift+r",
-		"command": "workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
-		"when": "inQuickOpen && inRecentFilesPicker"
-	},
-
-	/* Ctrl+k r/R */
-	{ "command": "revealInExplorer", "key": "ctrl+k r" },
+	/* Ctrl * R */
+	{ "command": "revealInExplorer", "key": "ctrl+r" },
+	{ "key": "ctrl+k r", "command": "revealFileInOS" },
 	{ "key": "ctrl+k shift+r", "command": "workbench.action.reloadWindow" },
-
-	/* Ctrl+k Ctrl+r */
 	{ "command": "noop", "key": "ctrl+k ctrl+r" },
 	{
 		"key": "ctrl+k ctrl+r",
@@ -2198,6 +2179,10 @@
 		"command": "workbench.action.terminal.chat.runFirstCommand",
 		"when": "terminalChatResponseContainsMultipleCodeBlocks"
 	},
+	{
+		"key": "shift+alt+r",
+		"command": "workbench.action.openRecent"
+	},
 	/* ?inQuickOpen */
 	{
 		"key": "shift+alt+j",
@@ -2709,6 +2694,11 @@
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.browser.newTab",
+		"when": "activeEditor == 'workbench.editor.browser'"
+	},
+	{
+		"key": "f5",
+		"command": "workbench.action.browser.reload",
 		"when": "activeEditor == 'workbench.editor.browser'"
 	},
 	{

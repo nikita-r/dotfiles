@@ -1,9 +1,10 @@
 {
 	"window.titleSeparator": " · ",
-	"window.title": "Code${separator}${profileName}${separator}${rootName}${separator}${dirty}${activeEditorShort}|${activeEditorState}",
+	"window.title": "Code${separator}${profileName}${separator}${rootName}${separator}${dirty}${activeEditorShort}|${activeEditorState}", // ┇
 
 	"update.mode": "none", // or "manual"
 	"update.showReleaseNotes": false,
+	"mssql.showChangelogOnUpdate": false,
 	"update.enableWindowsBackgroundUpdates": false,
 	"extensions.autoCheckUpdates": false,
 	"extensions.autoUpdate": "off",
@@ -13,7 +14,7 @@
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.banner": "always",
 
-	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
+	"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}", // $-%~
 	//"editor.links": false,
 	//"editor.colorDecorators": false,
 	"editor.defaultColorDecorators": "never",
@@ -74,7 +75,7 @@
 
 	"explorer.autoReveal": false,
 	"explorer.copyRelativePathSeparator": "/",
-	//"explorer.compactFolders": false,
+	"explorer.compactFolders": false,
 	"explorer.confirmUndo": "verbose",
 	"explorer.enableUndo": false,
 	"explorer.incrementalNaming": "smart",
@@ -256,7 +257,7 @@
 	"inlineChat.lineNaturalLanguageHint": false,
 
 	"workbench.editor.languageDetection": false,
-	//"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
+	"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
 	"workbench.editor.historyBasedLanguageDetection": false,
 
 	"workbench.editor.openPositioning": "first",
@@ -282,7 +283,6 @@
 	"[plaintext]": {
 		"editor.showFoldingControls": "never",
 	},
-	"notebook.showFoldingControls": "always",
 	//"editor.foldingImportsByDefault": true,
 	"editor.unfoldOnClickAfterEndOfLine": true,
 
@@ -301,6 +301,7 @@
 
 	/* Notebook */
 
+	"notebook.lineNumbers": "on",
 	"notebook.output.minimalErrorRendering": true,
 	"notebook.output.textLineLimit": 22,
 	"notebook.output.scrolling": true,
@@ -343,8 +344,6 @@
 	"git.defaultBranchName": "trunk",
 	//"githubPullRequests.overrideDefaultBranch": "trunk",
 	"git.verboseCommit": true,
-	//"scm.workingSets.enabled": true,
-	//"scm.workingSets.default": "empty",
 	"git.terminalGitEditor": true,
 	"git.showCommitInput": false,
 
@@ -526,7 +525,7 @@
 	},
 
 	"[powershell]": {
-		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}·", // $-%~
+		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}", // $-%~
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
 	"powershell.debugging.createTemporaryIntegratedConsole": true,
@@ -1241,8 +1240,8 @@
 			"notebook.cellToolbarSeparator": "#806080",
 
 			/* Extensions */
-			"mssql.resultsGridNullBackground": "#141800",
-			"mssql.resultsGridNullForeground": "#0af",
+			"mssql.resultsGridNullBackground": "#1a1a1a",
+			"mssql.resultsGridNullForeground": "#F08048",
 			"gitlens.gutterBackgroundColor": "#2222",
 			"gitlens.trailingLineForegroundColor": "#6666",
 		},
@@ -1376,6 +1375,7 @@
 		},
 	],
 	"mssql.objectExplorer.groupBySchema": false,
+	"mssql.preview.betaResultsGrid": false,
 
 	/* . . . */
 

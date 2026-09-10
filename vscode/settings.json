@@ -714,7 +714,6 @@
 	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
-	//"terminal.integrated.windowsUseConptyDll": true,
 
 	"terminal.integrated.tabs.location": "left",
 	"workbench.notifications.position": "bottom-left",
@@ -810,7 +809,7 @@
 			{ "scope": [ "string.quoted.double keyword.other.powershell", "variable.other.constant.singlequote" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
-			{ "scope": [ "keyword.other.unit.user-defined" ], "settings": { "foreground": "#fc9" } },
+			{ "scope": [ "keyword.other.unit.user-defined", "variable.other.global" ], "settings": { "foreground": "#fc9" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, constant.other.ellipsis, punctuation.vararg-ellipses, punctuation.definition.arguments.shell", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.unpacking.arguments, keyword.operator.list, keyword.operator.spread", "settings": { "foreground": "#c6c" } },
@@ -825,7 +824,7 @@
 			{ "scope": "keyword.operator.comparison, punctuation.separator.other.ruby, keyword.operator.relational, keyword.operator.relation.julia", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment, punctuation.assignment, keyword.operator.eq, punctuation.definition.equals, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.map.value, punctuation.separator.dict, keyword.operator.update", "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, keyword.operator.ternary.swift, variable.other.generic-type, support.function.powershell, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml", "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "keyword.cs, keyword.fsharp, keyword.type, keyword.other.type, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn", "settings": { "foreground": "#c6c" } },
+			{ "scope": "keyword.cs, keyword.fsharp, keyword.type, keyword.other.type, keyword.operator.type.php, keyword.operator.as.php, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.ternary, keyword.control.ternary, keyword.operator.conditional.question-mark, keyword.operator.conditional.colon, keyword.operator.conditional.batchfile, punctuation.separator.batchfile", "settings": { "foreground": "#ffd700" } },
 			{ "scope": "punctuation.destructuring, punctuation.separator.label, punctuation.separator.colon.case, punctuation.terminator.statement.case", "settings": { "foreground": "#c6c" } },

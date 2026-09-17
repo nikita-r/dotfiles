@@ -867,12 +867,17 @@
 		"variables": "#9cf",
 	} },
 	"editor.semanticTokenColorCustomizations": { "[*Dark+]": { "rules": {
-		"*.typeHint": "#69c",
 		"builtinConstant": "#0af",
+		"property": "#ccc",
+		"variable": "#ccc",
+		"*.typeHint": "#69c",
+		"module": { "foreground": "#dcf", "fontStyle": "underline" },
+		"operator.overridden": { "fontStyle": "bold" },
 		"newOperator": "#e6e6b4",
 		"stringLiteral": "#0af",
 	} } },
 	"editor.semanticHighlighting.enabled": false,
+	"[python]": { "editor.semanticHighlighting.enabled": true },
 
 	"workbench.colorCustomizations": {
 

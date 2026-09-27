@@ -1004,14 +1004,21 @@
 			"panelSectionHeader.background": "#202428",
 			"panelTitle.inactiveForeground": "#718293",
 			"panel.border": "#4C6680",
+			"agentsPanel.border": "#666",
+			"agentsBottomPanel.border": "#4C6680",
+			"agentsChatInput.border": "#4C6680",
+			"agentsNewSessionButton.border": "#4C6680",
 			"tree.inactiveIndentGuidesStroke": "#345",
 			"tree.indentGuidesStroke": "#468",
 			"pickerGroup.border": "#666",
 			"sideBar.background": "#202428",
 			"sideBar.border": "#666",
-			"sideBarSectionHeader.border": "#666",
+			"sideBarSectionHeader.border": "#4C6680",
 			"tab.border": "#666",
-			"editorGroup.border": "#666",
+			"modernEditorTab.inactiveBackground": "#202428",
+			"tab.selectedBackground": "#fec",
+			"editorGroup.border": "#4C6680",
+			"editorGroupHeader.border": "#4C6680",
 			"editorRuler.foreground": "#3c96", // 160°
 			"debugToolBar.background": "#023", // 200°
 			"debugIcon.restartForeground": "#fec",
@@ -1085,6 +1092,7 @@
 			"activityBar.border": "#6669",
 			"statusBar.border": "#6669",
 			"titleBar.border": "#6669",
+			"sideBarSectionHeader.border": "#666",
 			"editorGroupHeader.tabsBorder": "#666",
 			"editorGroupHeader.border": "#666",
 			"toolbar.hoverBackground": "#3699", // 210°
@@ -1147,6 +1155,8 @@
 			/* "tab.*ModifiedBorder" at 140° */
 			"tab.activeModifiedBorder": "#48F080",
 			"tab.unfocusedActiveModifiedBorder": "#48F080",
+			"tab.border": "#208040",
+			"tab.inactiveBackground": "#303632",
 			"tab.inactiveModifiedBorder": "#3c6",
 			"tab.unfocusedInactiveModifiedBorder": "#3c6",
 
@@ -1162,6 +1172,7 @@
 			"statusBarItem.hoverForeground": "#fff",
 
 			/* Hue: 160/360 */
+			"editorGroupHeader.border": "#365",
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.offlineBackground": "#800000", // Maroon
 			"statusBarItem.warningBackground": "#208060",
@@ -1194,7 +1205,6 @@
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",
 			//"tab.selectedBorderTop": "#806080",
-			"tab.border": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
 			"actionBar.toggledBackground": "#806080",

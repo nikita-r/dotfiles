@@ -34,7 +34,7 @@
 	sf = submodule foreach --recursive
 	cm = commit -m
 	pi = stash pop --index -q
-	sl = ! git stash list --name-status | sed 's/^s/\\ns/' && :
+	sl = ! git stash list --name-status | sed 's/^s/\\ns/' && echo && :
 	pm = stash push -q -m
 	rs = restore --staged
 	ss = show -s

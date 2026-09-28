@@ -512,11 +512,8 @@
 
 	/* Language Extensions */
 
-	"[c][cpp][cuda-cpp][wolfram]": {
-		"editor.language.colorizedBracketPairs": [
-			["(",")"],
-			["{","}"],
-		],
+	"[c][cpp][cuda-cpp]": {
+		"editor.language.colorizedBracketPairs": [["(",")"],["{","}"]],
 		"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
 	},
 	//"C_Cpp.default.compilerPath": "...\\cl.exe",
@@ -525,6 +522,11 @@
 	"[python]": {
 		"editor.semanticHighlighting.enabled": true,
 		"editor.links": false,
+	},
+
+	"[wolfram]": {
+		"editor.language.colorizedBracketPairs": [["(",")"],["{","}"]],
+		"editor.wordSeparators": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"//+_
 	},
 
 	"[sql]": {
@@ -673,7 +675,7 @@
 			"path": "pwsh",
 			"args": [
 				"-NoExit", "-Command",
-				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) -Colors @{ Operator = \"$([char]27)[39m\"; Parameter = \"$([char]27)[38;2;192;128;192m\" } -PromptText '' }.Invoke()"
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) -Colors @{ Keyword = 'DarkBlue'; Operator = \"$([char]27)[39m\"; Parameter = 'DarkMagenta'; Variable = 'Magenta' } -PromptText '' }.Invoke()"
 			],
 		},
 	},
@@ -683,7 +685,7 @@
 			"path": "pwsh",
 			"args": [
 				"-NoExit", "-Command",
-				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) -Colors @{ Operator = \"$([char]27)[39m\"; Parameter = \"$([char]27)[38;2;192;128;192m\" } -PromptText '' }.Invoke()"
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:HOME }) .vscode.pwsh.History.txt) -Colors @{ Keyword = 'DarkBlue'; Operator = \"$([char]27)[39m\"; Parameter = 'DarkMagenta'; Variable = 'Magenta' } -PromptText '' }.Invoke()"
 			],
 		},
 	},
@@ -697,14 +699,14 @@
 			"source": "PowerShell",
 			"args": [
 				"-NoExit", "-Command",
-				"function prompt { 'ps' + $psVersionTable.psVersion.Major + \"$([char]27)[38;2;0;204;204m«$([char]27)[39m\" + $PWD.Path + \"$([char]27)[38;2;0;204;204m»$([char]27)[39m\" + '❯' * $NestedPromptLevel + ' ' } Set-PSReadLineOption -Colors @{ Operator = \"$([char]27)[38;2;204;204;204m\"; Parameter = \"$([char]27)[38;2;192;128;192m\" } -PromptText ''"
+				"function prompt { 'ps' + $psVersionTable.psVersion.Major + \"$([char]27)[38;2;0;204;204m«$([char]27)[39m\" + $PWD.Path + \"$([char]27)[38;2;0;204;204m»$([char]27)[39m\" + '❯' * $NestedPromptLevel + ' ' } Set-PSReadLineOption -Colors @{ Operator = \"$([char]27)[38;2;204;204;204m\"; Parameter = \"$([char]27)[38;2;204;102;204m\"; Variable = \"$([char]27)[38;2;255;170;255m\" } -PromptText ''"
 			],
 		},
 		"PowerShell v5": {
 			"path": [ "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\PowerShell.EXE" ],
 			"args": [
 				"-NoExit",
-				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:UserProfile }) .vscode.PowerShell_v5.History.txt) -Colors @{ Operator = \"$([char]27)[39m\"; Parameter = \"$([char]27)[38;2;192;128;192m\" } }.Invoke()"
+				"{ Set-StrictMode -Off; Set-PSReadLineOption -HistorySavePath (Join-Path $(if (\"${workspaceFolder}\") { \"${workspaceFolder}\" } else { $env:UserProfile }) .vscode.PowerShell_v5.History.txt) -Colors @{ Keyword = 'DarkBlue'; Operator = \"$([char]27)[39m\"; Parameter = 'DarkMagenta'; Variable = 'Magenta' } }.Invoke()"
 			],
 		},
 		"Command Prompt": {
@@ -743,7 +745,7 @@
 	"workbench.colorTheme": "Dark+",
 	"editor.tokenColorCustomizations": { "[*Dark+]": {
 		"textMateRules": [
-			{ "scope": [ "markup.changed", "source", "entity.name.command.shell", "source.sql.embedded.php keyword.other", "log.verbose", "log.info" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "markup.changed", "source", "entity.name.command.shell", "source.sql.embedded.php keyword.other.sql", "log.verbose", "log.info" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor string", "meta.preprocessor", "meta.method-call.php", "comment.documentation", "comment.line.markdown", "string.quoted.double.sql", "string.interpolated.backtick", "variable.interpolation" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "meta.preprocessor.string", "markup.bold", "markup.italic", "comment.documentation.cdata", "string.unquoted.heredoc", "constant.other.symbol.ruby", "constant.language.symbol" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc, comment.documentation.delimiter", "settings": { "foreground": "#69c" } },
@@ -803,7 +805,7 @@
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator", "punctuation.definition.begin.frontmatter", "punctuation.definition.end.frontmatter" ], "settings": { "foreground": "#f96" } },
 			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
 			{ "scope": [ "punctuation.definition.link.description", "meta.shebang.shell", "keyword.other.ocaml.interface" ], "settings": { "foreground": "#7c6" } },
-			{ "scope": [ "punctuation.definition.metadata", "keyword.definition.arrow.php", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "punctuation.definition.metadata", "keyword.definition.arrow", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
@@ -1120,6 +1122,7 @@
 			"editorMultiCursor.primary.foreground": "#d3f", // 290°
 			"editorMultiCursor.secondary.foreground": "#3bf", // 200°
 			"tab.hoverBorder": "#fff",
+			"tab.unfocusedHoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
 
@@ -1154,8 +1157,8 @@
 			/* "tab.*Foreground" */
 			"tab.activeForeground": "#fff",
 			"tab.unfocusedActiveForeground": "#ccc",
-			"tab.inactiveForeground": "#999",
-			"tab.unfocusedInactiveForeground": "#999",
+			"tab.inactiveForeground": "#ccc",
+			"tab.unfocusedInactiveForeground": "#ccc",
 
 			/* "tab.*ModifiedBorder" at 140° */
 			"tab.activeModifiedBorder": "#48F080",
@@ -1212,6 +1215,7 @@
 			//"tab.selectedBorderTop": "#806080",
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
+			"titleBar.inactiveForeground": "#fff", /* hard-coded to blend with Background (alpha 60%) */
 			"actionBar.toggledBackground": "#806080",
 			"modernActivityBarItem.activeBackground": "#805080",
 			"modernActivityBarItem.hoverBackground": "#ccc2",
@@ -1268,7 +1272,8 @@
 			"terminal.hoverHighlightBackground": "#147",
 
 			/* colour ANSI */
-			"terminal.ansiMagenta": "#e6b4e6",
+			"terminal.ansiBrightMagenta": "#faf",
+			"terminal.ansiMagenta": "#e7e",
 			"terminal.ansiBrightBlack": "#616",
 			"terminal.ansiRed": "#f33",
 			"terminal.ansiBrightRed": "#f66",
@@ -1279,7 +1284,7 @@
 			"terminal.ansiGreen": "#0c6",
 			"terminal.ansiBrightGreen": "#0e7",
 			"terminal.ansiBrightWhite": "#fff",
-			"terminal.ansiBlue": "#37f",
+			"terminal.ansiBlue": "#0af",
 			"terminal.ansiBrightBlue": "#9cf",
 
 			/* Peeking Viewport */

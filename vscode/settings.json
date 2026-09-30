@@ -950,6 +950,8 @@
 			"editorOverviewRuler.infoForeground": "#39f9",
 			"dropdown.background": "#384048",
 			"checkbox.border": "#707880",
+			"checkbox.disabled.background": "#707880",
+			"checkbox.disabled.foreground": "#ccc",
 			"simpleFindWidget.sashBorder": "#202428",
 			"editorWidget.background": "#202428",
 			"input.background": "#384048",
@@ -1011,6 +1013,8 @@
 			"menu.background": "#202428", // 210°
 			"menu.separatorBackground": "#4C6680",
 			"menu.border": "#4C6680",
+			"quickInputTitle.background": "#2a3f54",
+			"editorHoverWidget.statusBarBackground": "#2a3f54",
 			"editorHoverWidget.background": "#202428",
 			"editorHoverWidget.border": "#4C6680",
 			"panelSectionHeader.background": "#202428",
@@ -1033,7 +1037,6 @@
 			"editorGroup.border": "#4C6680",
 			"editorGroupHeader.border": "#4C6680",
 			"editorRuler.foreground": "#3c96", // 160°
-			"debugToolBar.background": "#023", // 200°
 			"debugIcon.restartForeground": "#fec",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
@@ -1076,7 +1079,7 @@
 			"gitDecoration.stageModifiedResourceForeground": "#fc9",
 			"gitDecoration.addedResourceForeground": "#80C080",
 			"gitDecoration.renamedResourceForeground": "#80C080",
-			"gitDecoration.untrackedResourceForeground": "#c9f",
+			"gitDecoration.untrackedResourceForeground": "#c9f", // 270°
 			"gitDecoration.submoduleResourceForeground": "#c9f",
 			"gitDecoration.ignoredResourceForeground": "#7aa3cc", // 210°
 
@@ -1271,8 +1274,8 @@
 			"editorCommentsWidget.rangeActiveBackground": "#abc0",
 
 			/* Terminal */
-			"terminalStickyScroll.background": "#023",
-			"terminalStickyScrollHover.background": "#023",
+			"terminalStickyScroll.background": "#143",
+			"terminalStickyScrollHover.background": "#345",
 			"terminal.selectionBackground": "#369",
 			"terminal.selectionForeground": "#fff",
 			"terminal.inactiveSelectionBackground": "#147",

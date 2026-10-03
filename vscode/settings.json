@@ -538,7 +538,7 @@
 	},
 
 	"[powershell]": {
-		"editor.wordSeparators": "!\"#&'()*+,./:;<=>?@[\\]^`{|}", // $-%~
+		"editor.wordSeparators": "!\"#&'()*+,./:;<=>@[\\]^`{|}", // $-%~?
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
 	"powershell.debugging.createTemporaryIntegratedConsole": true,
@@ -640,8 +640,8 @@
 	"debug.confirmOnExit": "always",
 	"debug.allowBreakpointsEverywhere": true,
 	"debug.showInlineBreakpointCandidates": false,
-	"debug.toolBarLocation": "docked",
-	"debug.showSubSessionsInToolBar": true,
+	//"debug.toolBarLocation": "docked",
+	//"debug.showSubSessionsInToolBar": true,
 	"debug.focusEditorOnBreak": false,
 	"debug.javascript.breakOnConditionalError": true,
 	"debug.breakpointsView.presentation": "tree",
@@ -767,7 +767,7 @@
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
-			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown", "comment.documentation.attribute.quotes", "punctuation.definition.tag.primary", "punctuation.definition.tag.secondary" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
+			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown", "comment.documentation.attribute.quotes" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "constant.character.escape", "punctuation.definition.string.heredoc.quote" ], "settings": { "foreground": "#fdc" } },
@@ -822,7 +822,7 @@
 			{ "scope": [ "punctuation.definition.quote.begin.markdown", "keyword.control.flow.block-scalar", "punctuation.definition.block.sequence.item", "markup.list.unnumbered punctuation.definition.list.begin.markdown", "punctuation.separator.key-value.makefile" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.definition.evaluation.backticks", "punctuation.definition.string.template", "string.interpolated.perl punctuation.definition.string", "string.interpolated.ruby punctuation.definition.string", "string.quoted.raw.go punctuation.definition.string", "punctuation.definition.raw", "punctuation.definition.markdown" ], "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": [ "punctuation.terminator.statement.powershell" ], "settings": { "foreground": "#37f", "fontStyle": "bold" } },
-			{ "scope": [ "string.quoted.double keyword.other.powershell", "variable.other.constant.singlequote" ], "settings": { "fontStyle": "bold" } },
+			{ "scope": [ "string.quoted.double keyword.other.powershell", "variable.other.constant.singlequote", "punctuation.definition.tag.primary", "punctuation.definition.tag.secondary" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
 			{ "scope": [ "keyword.other.unit.user-defined", "comment.documentation.processingInstruction" ], "settings": { "foreground": "#fc9" } },
@@ -984,6 +984,7 @@
 
 			/* ___ */
 			"editorHint.foreground": "#fff",
+			"editorLightBulbAutoFix.foreground": "#3df",
 			"editorUnnecessaryCode.opacity": "#123f",
 			"editorUnnecessaryCode.border": "#6666",
 
@@ -1014,11 +1015,14 @@
 			"menu.separatorBackground": "#4C6680",
 			"menu.border": "#4C6680",
 			"quickInputTitle.background": "#2a3f54",
+			"multiDiffEditor.headerBackground": "#2a3f54",
 			"editorHoverWidget.statusBarBackground": "#2a3f54",
 			"editorHoverWidget.background": "#202428",
 			"editorHoverWidget.border": "#4C6680",
+			"debugToolBar.background": "#202428",
 			"panelSectionHeader.background": "#202428",
 			"panelTitle.inactiveForeground": "#718293",
+			"disabledForeground": "#718293",
 			"panel.border": "#4C6680",
 			"agentsPanel.border": "#666",
 			"agentsBottomPanel.border": "#4C6680",
@@ -1099,8 +1103,8 @@
 			"debugIcon.breakpointForeground": "#c63", // 20°
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9", // 160°
 			"debugIcon.breakpointStackframeForeground": "#c3c",
-			"editor.inlineValuesBackground": "#333",
-			"editor.inlineValuesForeground": "#999",
+			"editor.inlineValuesBackground": "#2a3f54",
+			"editor.inlineValuesForeground": "#718293",
 		},
 
 		"[*Dark Modern][GitHub Dark*]": {
@@ -1134,6 +1138,16 @@
 			"tab.unfocusedHoverBorder": "#fff",
 			"editorInlayHint.background": "#404",
 			"editorInlayHint.foreground": "#c8c",
+
+			/* corresponding to "editor.tokenColorCustomizations" */
+			"debugView.valueChangedHighlight": "#69c",
+			"debugTokenExpression.boolean": "#0af",
+			"debugTokenExpression.error": "#fc9",
+			"debugTokenExpression.value": "#ccc",
+			"debugTokenExpression.type": "#0af",
+			"debugTokenExpression.name": "#c6c",
+			"debugTokenExpression.number": "#6c9",
+			"debugTokenExpression.string": "#c99",
 
 			/* "button.*ground" */
 			"button.background": "#246650", // 160°
@@ -1349,6 +1363,7 @@
 
 	"window.doubleClickIconToClose": true,
 	//"window.titleBarStyle": "native",
+	//"window.menuStyle": "inherit",
 	"window.controlsStyle": "hidden",
 	"window.commandCenter": false,
 	"chat.titleBar.openInAgentsWindow.enabled": false,

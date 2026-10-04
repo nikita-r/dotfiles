@@ -31,6 +31,9 @@
 	//"editor.hover.sticky": false,
 	//"editor.hover.above": true,
 
+	"workbench.hover.delay": 999,
+	"workbench.sash.hoverDelay": 0,
+
 	/* Inlay Hints */
 	"editor.inlayHints.fontFamily": "Geist Mono, Georgia",
 	"editor.inlayHints.fontSize": 12,
@@ -910,6 +913,7 @@
 	"editor.semanticHighlighting.enabled": false,
 
 	"workbench.colorCustomizations": {
+		"modernSash.gripForeground": "#abc0",
 
 		/* differential */
 		"diffEditor.insertedLineBackground": "#0f02",
@@ -969,7 +973,7 @@
 			"editorError.foreground": "#fff",
 			"terminalCommandDecoration.errorBackground": "#fff",
 			"list.errorForeground": "#c9b", // 320°
-			"list.warningForeground": "#fec", // 40°
+			"list.warningForeground": "#6c8", // 140°
 			"list.invalidItemForeground": "#fff",
 			"activityErrorBadge.background": "#fff",
 			"activityErrorBadge.foreground": "#000",
@@ -1240,7 +1244,7 @@
 			"titleBar.activeBackground": "#402040",
 			"titleBar.inactiveBackground": "#201020",
 			"titleBar.inactiveForeground": "#fff", /* hard-coded to blend with Background (alpha 60%) */
-			"actionBar.toggledBackground": "#806080",
+			"sash.hoverBorder": "#805080",
 			"modernActivityBarItem.activeBackground": "#805080",
 			"modernActivityBarItem.hoverBackground": "#ccc2",
 			"modernActivityBar.border": "#806080",
@@ -1253,6 +1257,7 @@
 			"editor.inactiveSelectionBackground": "#135",
 			"editor.hoverHighlightBackground": "#147",
 			"minimap.selectionHighlight": "#69c",
+			"actionBar.toggledBackground": "#147",
 			"list.activeSelectionBackground": "#147",
 			"list.inactiveSelectionBackground": "#345",
 			"settings.focusedRowBackground": "#202428",
@@ -1363,7 +1368,7 @@
 
 	"window.doubleClickIconToClose": true,
 	//"window.titleBarStyle": "native",
-	//"window.menuStyle": "inherit",
+	"window.menuStyle": "inherit",
 	"window.controlsStyle": "hidden",
 	"window.commandCenter": false,
 	"chat.titleBar.openInAgentsWindow.enabled": false,

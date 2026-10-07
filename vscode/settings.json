@@ -67,8 +67,6 @@
 	"[yaml]": {
 		"editor.stickyScroll.enabled": true,
 		"editor.stickyScroll.maxLineCount": 9,
-		//"editor.stickyScroll.defaultModel": "foldingProviderModel",
-		//"editor.autoIndent": "advanced", // or "brackets"
 	},
 	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 7,
@@ -352,6 +350,8 @@
 	"git.verboseCommit": true,
 	"git.terminalGitEditor": true,
 	"git.showCommitInput": false,
+	"scm.inputFontFamily": "serif",
+	"scm.inputFontSize": 16,
 
 	/* whos to blame */
 	"git.blame.ignoreWhitespace": true,
@@ -1515,8 +1515,8 @@
 	"claudeCode.hideOnboarding": true,
 	"chat.requestQueuing.defaultAction": "queue",
 	"chat.useCustomizationsInParentRepositories": true,
-	"chat.agent.codeBlockProgress": false,
 
+	/* ghost text suggestions & NES */
 	//"editor.inlineSuggest.showToolbar": "always",
 	"github.copilot.enable": { // Inline Suggestions
 		"*": false,
@@ -1553,8 +1553,8 @@
 
 	/* environnement d’exécution isolé pour agents autonomes */
 	"chat.agent.networkFilter": true,
-	"chat.agent.allowedNetworkDomains": [],
-	"chat.agent.deniedNetworkDomains": [],
+	"chat.agent.sandbox.network.allowedDomains": [],
+	"chat.agent.sandbox.network.deniedDomains": [],
 	"chat.agent.sandbox.enabled": "on",
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/

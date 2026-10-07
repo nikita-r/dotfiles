@@ -1,6 +1,6 @@
 
 pre, code {
-	border-color: #666;
+	border-color: var(--vscode-tab-border);
 	border-radius: 0 !important;
 	font-size: 14px;
 }
@@ -11,5 +11,5 @@ hr {
 }
 
 h1, h2 {
-	border-bottom: 2px solid #718293 !important;
+	border-bottom: 2px solid var(--vscode-disabledForeground) !important;
 }

@@ -76,7 +76,6 @@
 	"terminal.integrated.stickyScroll.maxLineCount": 3,
 
 	/* the Explorer */
-
 	"explorer.autoReveal": false,
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.compactFolders": false,
@@ -87,11 +86,12 @@
 	//"explorer.sortOrderLexicographicOptions": "unicode",
 	"explorer.openEditors.visible": 16,
 
+	/* local file history */
 	"workbench.localHistory.enabled": false,
 	"workbench.localHistory.mergeWindow": 96,
 	"workbench.localHistory.maxFileEntries": 16,
 
-	/* search / peek / preview */
+	/* Find Widget & Search View/Editor */
 
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.find.history": "never",
@@ -114,6 +114,8 @@
 	"editor.doubleClickSelectsBlock": false,
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
+	/* preview */
+
 	"markdown.preview.doubleClickToSwitchToEditor": false,
 	"markdown.preview.markEditorSelection": false,
 	"markdown.preview.scrollEditorWithPreview": false,
@@ -126,10 +128,10 @@
 	"workbench.editor.useModal": "off",
 	"workbench.quickOpen.closeOnFocusLost": false,
 
+	/* suggestions-adjacent settings */
+
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
-
-	/* suggestions-adjacent settings */
 
 	/* Code Problems & Actions */
 	"editor.lightbulb.enabled": "off",
@@ -203,6 +205,7 @@
 	//"terminal.integrated.fontLigatures.featureSettings": "'zero', 'cv03', 'cv10', 'cv11', 'cv15', 'cv16', 'cv18', 'cv99'", // https://github.com/JetBrains/JetBrainsMono/wiki/OpenType-features
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.minimumContrastRatio": 1,
+	"terminal.integrated.fontWeightBold": "normal",
 	"terminal.integrated.rescaleOverlappingGlyphs": false,
 
 	/* Caret */
@@ -425,16 +428,10 @@
 	/* alefragnani.Bookmarks */
 	"bookmarks.gutterIconBorderColor": "#e6e6b4",
 	"bookmarks.gutterIconFillColor": "#e6e6b4",
-	"numberedBookmarks.gutterIconFillColor": "#806080",
-	"numberedBookmarks.gutterIconNumberColor": "#201820",
 	"bookmarks.keepBookmarksOnLineDelete": true,
-	"numberedBookmarks.keepBookmarksOnLineDelete": true,
 	"bookmarks.label.suggestion": "suggestWhenSelected",
-	"numberedBookmarks.navigateThroughAllFiles": "replace",
 	"bookmarks.saveBookmarksInProject": true,
-	"numberedBookmarks.saveBookmarksInProject": true,
 	"bookmarks.sideBar.expanded": true,
-	"numberedBookmarks.showBookmarkNotDefinedWarning": true,
 	"bookmarks.sideBar.countBadge": "off",
 
 	/* extensions mixtes */
@@ -911,6 +908,7 @@
 		"markupAttributeQuote": { "foreground": "#69c", "fontStyle": "bold" },
 	} } },
 	"editor.semanticHighlighting.enabled": false,
+	"editor.showUnused": false,
 
 	"workbench.colorCustomizations": {
 		"modernSash.gripForeground": "#abc0",
@@ -1249,6 +1247,7 @@
 			"editorGroup.dropBackground": "#80408080",
 			"editorGroupHeader.tabsBorder": "#806080",
 			"editorGroupHeader.tabsBackground": "#0C060C",
+			"editorGroupHeader.connectedTabsBackground": "#0C060C",
 			"activityBar.border": "#806080",
 			//"statusBar.border": "#806080",
 			"titleBar.border": "#806080",
@@ -1319,7 +1318,7 @@
 			"terminal.ansiCyan": "#0cc",
 			"terminal.ansiBrightCyan": "#3ff",
 			"terminal.ansiYellow": "#fd3",
-			"terminal.ansiBrightYellow": "#ff3",
+			"terminal.ansiBrightYellow": "#ffa",
 			"terminal.ansiGreen": "#0c6",
 			"terminal.ansiBrightGreen": "#0e7",
 			"terminal.ansiBrightWhite": "#fff",
@@ -1360,7 +1359,8 @@
 	/* UI layout */
 
 	"workbench.experimental.modernUI": false,
-	"workbench.experimental.modernUIEditorTabStyle": "pill",
+	"workbench.experimental.modernUIEditorTabStyle": "connected",
+	"workbench.modernUIFrostedGlassOpacity": 50,
 
 	"window.dialogStyle": "custom",
 	//"files.simpleDialog.enable": true,

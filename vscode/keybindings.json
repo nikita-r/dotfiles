@@ -8,6 +8,7 @@
 	$: editor.createFoldingRangeFromSelection: "ctrl+k ctrl+,"
 	$: editor.detectLanguage: "shift+alt+d"
 	$: editor.toggleFold: "ctrl+k ctrl+l"
+	$: search.action.replace[AllIn(File/Folder)]: "shift+cmd+1"
 	$: workbench.action.chat.open: "ctrl+cmd+i"
 	$: workbench.action.closeUnmodifiedEditors: "ctrl+k u"
 	$: workbench.action.editor.changeLanguageMode: "ctrl+k m"
@@ -17,6 +18,7 @@
 	$: workbench.action.toggleMaximizeEditorGroup: "ctrl+k ctrl+m"
 	?: "isInDiffEditor": F7/Shift+F7 to diffReview
 	%: Show or Focus Hover: "ctrl+k ctrl+i"
+	%: Insert [First] (Terminal Inline) Chat Command : Alt+Enter
 	%: chat queue/steer : Alt+Enter
 	*/
 
@@ -2346,13 +2348,6 @@
 		"key": "ctrl+9",
 		"command": "textmarker.goToPreviousHighlight",
 		"when": "editorTextFocus"
-	},
-
-	/* hediet.hediet-power-tools */
-	{
-		"key": "shift+enter",
-		"command": "hediet-power-tools.apply-rename",
-		"when": "hediet-power-tools.apply-rename.applicable"
 	},
 
 	/* Ctrl+k Ctrl+f */

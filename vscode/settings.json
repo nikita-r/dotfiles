@@ -518,6 +518,7 @@
 	},
 	//"C_Cpp.default.compilerPath": "...\\cl.exe",
 	"[cpp]": { "editor.semanticHighlighting.enabled": false },
+	"C_Cpp.dimInactiveRegions": false,
 
 	"[python]": {
 		"editor.semanticHighlighting.enabled": true,
@@ -799,8 +800,8 @@
 			{ "scope": [ "storage.type.number.python", "constant.numeric.other.suffix", "constant.numeric.other.exponent", "keyword.operator.exponent.rust", "keyword.operator.exponent.sign.rust" ], "settings": { "foreground": "#ee7" } },
 			{ "scope": "source.cpp meta.encoding, source.cuda-cpp meta.encoding, keyword.other.unit, keyword.other.suffix.literal, keyword.operator.plus.exponent, keyword.operator.minus.exponent", "settings": { "foreground": "#ee7" } },
 			{ "scope": "constant.other.placeholder, comment.documentation.entityReference, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
-			{ "scope": [ "storage.type.string.python", "punctuation.definition.decorator.python", "storage.type.modifier.calling-convention", "keyword.operator.bitwise.powershell", "source.powershell variable.parameter" ], "settings": { "foreground": "#0cc" } },
-			{ "scope": [ "meta.function-call.generic", "entity.name.operator.custom-literal", "keyword.command", "variable.function.wolfram", "keyword.operator.combination", "keyword.other.powershell" ], "settings": { "foreground": "#e6e6b4" } },
+			{ "scope": [ "storage.type.string.python", "punctuation.definition.decorator.python", "keyword.operator.bitwise.powershell", "source.powershell variable.parameter" ], "settings": { "foreground": "#0cc" } },
+			{ "scope": [ "meta.function-call.generic", "entity.name.operator.custom-literal", "keyword.command", "variable.function.wolfram", "keyword.other.powershell" ], "settings": { "foreground": "#e6e6b4" } },
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.section.attribute, punctuation.section.parts, keyword.operator.Span, punctuation.definition.table.inline.toml, meta.separator.markdown", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator", "punctuation.definition.begin.frontmatter", "punctuation.definition.end.frontmatter" ], "settings": { "foreground": "#f96" } },
@@ -826,7 +827,7 @@
 			{ "scope": "invalid, invalid.illegal", "settings": { "foreground": "#f05" } },
 			{ "scope": "invalid.deprecated, variable.legacy.builtin.python, string.unquoted.attribute-value", "settings": { "foreground": "#fc9" } },
 			{ "scope": [ "keyword.other.unit.user-defined", "comment.documentation.processingInstruction" ], "settings": { "foreground": "#fc9" } },
-			{ "scope": [ "keyword.other.declaration-specifier", "punctuation.definition.capture", "keyword.operator.cast", "punctuation.separator.continuation" ], "settings": { "foreground": "#3df" } },
+			{ "scope": [ "storage.type.modifier.calling-convention", "keyword.other.declaration-specifier", "punctuation.definition.capture", "keyword.operator.cast", "punctuation.separator.continuation" ], "settings": { "foreground": "#3df" } },
 			{ "scope": [ "string.quoted.double.sql punctuation.definition.string", "punctuation.separator.dictionary.inline-struct", "punctuation.definition.array.shell" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, punctuation.definition.arguments.shell, keyword.operator.Function", "settings": { "foreground": "#c6c" } },
 			{ "scope": "constant.other.ellipsis, keyword.operator.variadic, punctuation.vararg-ellipses", "settings": { "foreground": "#c6c" } },
@@ -908,7 +909,6 @@
 		"markupAttributeQuote": { "foreground": "#69c", "fontStyle": "bold" },
 	} } },
 	"editor.semanticHighlighting.enabled": false,
-	"editor.showUnused": false,
 
 	"workbench.colorCustomizations": {
 		"modernSash.gripForeground": "#abc0",

@@ -1682,11 +1682,6 @@
 	},
 	{
 		"key": "ctrl+alt+r",
-		"command": "macros.renamePresentFile", /* ctf0.macros */
-		//"when": "resourceScheme == 'file'"
-	},
-	{
-		"key": "ctrl+alt+r",
 		"command": "workbench.action.terminal.runRecentCommand",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
@@ -2078,7 +2073,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.alignQuickInputCenter",
-		"when": "inQuickOpen && quickInputAlignment == 'top'"
+		"when": "inQuickOpen"
 	},
 	{
 		"key": "shift+alt+enter",

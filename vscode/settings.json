@@ -109,7 +109,7 @@
 	"search.showLineNumbers": true,
 
 	/* when double-clicking */
-	"editor.doubleClickSelectsBlock": false,
+	//"editor.doubleClickSelectsBlock": false,
 	"search.searchEditor.doubleClickBehaviour": "selectWord",
 
 	/* preview */
@@ -127,6 +127,10 @@
 	"workbench.quickOpen.closeOnFocusLost": false,
 
 	/* suggestions-adjacent settings */
+
+	"workbench.editor.languageDetection": false,
+	"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
+	"workbench.editor.historyBasedLanguageDetection": false,
 
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
@@ -252,16 +256,12 @@
 	//"window.density.editorTabHeight": "compact",
 	"workbench.editor.pinnedTabsOnSeparateRow": true,
 	"workbench.editor.wrapTabs": true,
+	"workbench.editor.titleScrollbarVisibility": "hidden",
 
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.editor.empty.hint": "hidden",
-	"inlineChat.lineNaturalLanguageHint": false,
-
-	"workbench.editor.languageDetection": false,
-	"workbench.editor.languageDetectionHints": { "untitledEditors": false, "notebookEditors": false },
-	"workbench.editor.historyBasedLanguageDetection": false,
 
 	"workbench.editor.openPositioning": "first",
 	"workbench.editor.revealIfOpen": true,
@@ -279,8 +279,6 @@
 
 	"breadcrumbs.symbolSortOrder": "name",
 	"breadcrumbs.symbolPathSeparator": " :: ",
-	"notebook.breadcrumbs.showCodeCells": false,
-	"notebook.outline.showCodeCells": true,
 
 	"editor.showFoldingControls": "always",
 	"[plaintext]": {
@@ -306,10 +304,11 @@
 	/* Notebook */
 
 	"notebook.lineNumbers": "on",
+	"notebook.breadcrumbs.showCodeCells": false,
 	"notebook.output.minimalErrorRendering": true,
 	"notebook.output.textLineLimit": 22,
 	"notebook.output.scrolling": true,
-	"notebook.inlineValues": "auto",
+	//"notebook.inlineValues": "on",
 	"notebook.navigation.allowNavigateToSurroundingCells": false,
 
 	/* SCM */
@@ -725,7 +724,8 @@
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
 
-	//"terminal.integrated.middleClickBehavior": "paste",
+	"editor.mouseMiddleClickAction": "ctrlLeftClick",
+	"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 
@@ -1510,7 +1510,7 @@
 	/* * */
 	"chat.tips.enabled": false,
 	"inlineChat.askInChat": false,
-	"inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
+	"inlineChat.defaultModel": "Claude Haiku 5.5 (copilot)",
 	"claudeCode.preferredLocation": "panel",
 	"claudeCode.hideOnboarding": true,
 	"chat.requestQueuing.defaultAction": "queue",

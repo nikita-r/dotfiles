@@ -1,5 +1,6 @@
 
-<# copying to User #>
+<# copying to "Code/User" #>
+
 if (Get-Variable IsMacOS -ea:0 -ValueOnly) {
 
 $dirCode = "$env:HOME/Library/Application Support/Code"
@@ -7,8 +8,8 @@ $dirCode = "$env:HOME/Library/Application Support/Code"
 
 New-Item $dirCode/User -Type Dir -ea:0 | Out-Null
 
-$filename = 'keybindings.json'
-$json = Get-Content ./vscode/$filename
+Write-Host $dirCode/User/keybindings.json
+$json = Get-Content ./vscode/keybindings.json
 $flagE = 0
 $json -split "`n" |% {
   if ($_ -match '"ctrl\+shift\+e"') {
@@ -34,10 +35,10 @@ $json -split "`n" |% {
     -iReplace '"key": "(c)trl\+(shift)\+(alt)\+([^+"]+)"', '"key": "$2+$3+$1md+$4"' `
     -iReplace '"key": "ctrl\+k ctrl\+([^"]+\+)?([^"]+)"', '"key": "cmd+k $1cmd+$2"' `
     -iReplace '"key": "ctrl\+k ([^"]+)"', '"key": "cmd+k $1"' `
-} | Out-File $dirCode/User/$filename
+} | Out-File $dirCode/User/keybindings.json
 
-$filename = 'settings.json'
-Copy-Item ./vscode/$filename $dirCode/User/$filename
+Write-Host $dirCode/User/settings.json
+Copy-Item ./vscode/settings.json $dirCode/User/settings.json
 
 } else {
 
@@ -47,32 +48,27 @@ $dirCode = "$env:AppData\Code"
 New-Item $dirCode\User -Type Dir -ea:0 | Out-Null
 
 'keybindings.json', 'settings.json' |% {
-  Copy-Item .\vscode\$_ $dirCode\User\$_
+  Copy-Item .\vscode\$_ $dirCode\User\$_ -PassThru |% FullName
 }
 
 }
 
 
-$urlRaw = 'https://raw.githubusercontent.com/nikita-r/dotfiles/master'
-$tmp = New-TemporaryFile
-$tmp = Rename-Item $tmp ($tmp.FullName + '.vsix') -PassThru
-'ctf0.macros-0.0.4', 'my.feather-vscode-1.0.17',
-'alefragnani.Bookmarks-13.5.66', 'alefragnani.numbered-bookmarks-8.4.66',
-'ryu1kn.text-marker-1.11.0', 'Tyriar.sort-lines-1.11.0' |% {
-  Write-Host "$_.vsix"
-  Invoke-WebRequest $urlRaw/vscode-vsix/"$_.vsix" -OutFile $tmp
+<# `code --install-extension` #>
+
+Write-Host; Write-Host $ code --install-extension
+
+Get-Item ./vscode-vsix/*.vsix |% FullName |% {
+  Write-Host (Split-Path $_ -Leaf)
   if (Get-Variable IsWindows -ea:0 -ValueOnly) {
-    cmd.exe /c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+    cmd.exe /c ('code --install-extension "' + $_ + '" --force 2>&1')
   } else {
-    /bin/sh -c ('code --install-extension "' + $tmp.FullName + '" --force 2>&1')
+    /bin/sh -c ('code --install-extension "' + $_ + '" --force 2>&1')
   }
 }
-Remove-Item $tmp
 
-
--split((
-  iwr -UseBasicParsing $urlRaw/vscode/extensions.txt
-).Content) |% Trim |? { $_ } |? { $_ -notLike '#*' } |% {
+Get-Content ./vscode/extensions.txt |% Trim |? { $_ } |? { $_ -notLike '#*' } |% {
+  Write-Host $_
   if (Get-Variable dirExt -ea:0 -ValueOnly) {
     code --install-extension $_ --user-data-dir $dirCode --extensions-dir $dirExt
   } else {
@@ -80,6 +76,8 @@ Remove-Item $tmp
   }
 }
 
+
+<# Fonts #>
 
 if (Get-Variable IsMacOS -ea:0 -ValueOnly) {
   $dirFontsDst = Join-Path $env:HOME 'Library/Fonts'
@@ -93,7 +91,7 @@ if (Get-Variable IsMacOS -ea:0 -ValueOnly) {
 
 if ($dirFontsDst) {
   foreach ($zip in (Get-ChildItem ./fnt/ -File -Filter *.zip)) {
-    Write-Host Installing TTF from $zip.Name
+    Write-Host; Write-Host Installing TTF from $zip.Name
 
     $dirZipExtract = Join-Path ([io.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
     New-Item -ItemType Directory -Path $dirZipExtract | Out-Null
@@ -114,3 +112,4 @@ if ($dirFontsDst) {
     }
   }
 }
+

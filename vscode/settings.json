@@ -200,7 +200,9 @@
 	"editor.codeLensFontSize": 12,
 
 	/* Terminal */
-	"terminal.integrated.tabs.title": "${process}${separator}${progress}",
+	"terminal.integrated.tabs.allowAgentCliTitle": false,
+	"terminal.integrated.tabs.title": "${shellType}${separator}${sequence}",
+	"terminal.integrated.tabs.description": "${local}${separator}${task}${separator}${progress}",
 	//"terminal.integrated.fontFamily": "JetBrains Mono, Noto Emoji",
 	//"terminal.integrated.fontLigatures.enabled": true,
 	//"terminal.integrated.gpuAcceleration": "off",
@@ -295,10 +297,8 @@
 	"editor.unicodeHighlight.includeComments": true,
 
 	/* SectionHeaders */
-	"editor.minimap.sectionHeaderFontSize": 12,
-	"editor.minimap.sectionHeaderLetterSpacing": 2,
 	"editor.minimap.showRegionSectionHeaders": false,
-	//"editor.minimap.showMarkSectionHeaders": false,
+	"editor.minimap.showMarkSectionHeaders": false,
 	"workbench.view.alwaysShowHeaderActions": true,
 
 	/* Notebook */
@@ -378,7 +378,7 @@
 	"git-graph.commitDetailsView.location": "Docked to Bottom",
 	"git-graph.date.format": "ISO Date Only",
 	"git-graph.enhancedAccessibility": true,
-	//"git-graph.repository.includeCommitsMentionedByReflogs": true,
+	"git-graph.repository.includeCommitsMentionedByReflogs": true,
 	"git-graph.repository.onLoad.showCheckedOutBranch": true,
 	"git-graph.repository.showUncommittedChanges": false,
 	"git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
@@ -657,15 +657,13 @@
 
 	"terminal.integrated.commandsToSkipShell": [
 		"noop",
-		"copyRelativeFilePath", "notifications.showList",
-		"outline.focus", "timeline.focus", "terminal.focus",
+		"terminal.focus",
+		"workbench.action.terminal.moveToEditorInstance",
 		"scrollPageUp", "scrollPageDown", "editorScroll",
 		"workbench.action.files.newUntitledFile",
 		"workbench.action.focusQuickOpen",
 		"workbench.action.openRecent",
 		"workbench.action.remote.showMenu",
-		"workbench.action.terminal.moveToEditorInstance",
-		"workbench.action.toggleSidebarVisibility",
 		"workbench.view.extension.bookmarks",
 	],
 	"terminal.integrated.allowMnemonics": true,
@@ -720,6 +718,7 @@
 	"terminal.integrated.wordSeparators": " \"()", // double-click to select a word; would have it to be only " ", but it is used as delimiters in fallback link detection
 	"terminal.integrated.enableFileLinks": "off",
 	"terminal.integrated.showLinkHover": false,
+	"terminal.integrated.tabs.defaultColor": "terminal.ansiWhite",
 	"terminal.integrated.enableVisualBell": true, // icon in tabs
 	"terminal.integrated.bellDuration": 3333,
 	"terminal.integrated.initialHint": false,
@@ -752,7 +751,7 @@
 			{ "scope": "string.unquoted.cdata punctuation.definition.string, keyword.operator.heredoc, punctuation.definition.string.heredoc, comment.documentation.delimiter", "settings": { "foreground": "#69c" } },
 			{ "scope": "comment.block.documentation, comment.documentation.comment, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen, comment.doc.ocaml", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.doc-tag.ocamldoc, keyword.other.phpdoc, keyword.other.documentation", "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.block.tag", "keyword.control.block.transition", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
+			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.inline.tag", "punctuation.definition.block.tag", "keyword.control.block.transition", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.import storage.modifier, meta.package storage.modifier, entity.name.function.swift, entity.name.function.sql, variable.function.r, source.css entity.name.tag.custom, variable.parameter.url, variable.def.ahk, variable.other.asp, variable.other.swift, variable.other.column.kusto, variable.other.member.powershell, variable.other.property.go", "settings": { "foreground": "#ccc" } }, // editor.foreground
@@ -768,7 +767,7 @@
 			{ "scope": "log.date", "settings": { "foreground": "#0cc" } },
 			{ "scope": [ "log.exception", "meta.path.search", "markup.inline.raw" ], "settings": { "foreground": "#dcf" } },
 			{ "scope": [ "meta.diff.header", "string.unquoted.batchfile" ], "settings": { "foreground": "#69c" } },
-			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown", "comment.documentation.attribute.quotes" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
+			{ "scope": [ "meta.diff.range", "markup.heading", "meta.separator.diff", "keyword.operator.address.go", "markup.list.numbered punctuation.definition.list.begin.markdown" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "meta.diff.index", "support.function.git-rebase", "punctuation.definition.from-file.diff", "punctuation.definition.to-file.diff" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "punctuation.section.embedded", "punctuation.section.embedded source", "keyword.other.interpolation", "punctuation.definition.interpolation", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end", "punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "constant.character.escape", "punctuation.definition.string.heredoc.quote" ], "settings": { "foreground": "#fdc" } },
@@ -870,6 +869,7 @@
 			{ "scope": [ "entity.name.function.preprocessor", "entity.name.other.preprocessor.macro.predefined.probably" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "entity.name.tag.css", "entity.name.tag.less", "entity.other.attribute-name.scss", "entity.other.attribute-name.class.css", "source.css entity.other.attribute-name.class", "entity.other.attribute-name.id.css", "source.css.less entity.other.attribute-name.id" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.other.time", "meta.type.cast.expr", "meta.type.new.expr", "support.constant.dom", "support.constant.json", "support.constant.math" ], "settings": { "foreground": "#b9f" } },
+			{ "scope": [ "comment.documentation.attribute.quotes", "punctuation.definition.string.begin.html", "punctuation.definition.string.end.html", "punctuation.definition.string.end.html source.css" ], "settings": { "foreground": "#69c", "fontStyle": "bold" } },
 			{ "scope": [ "string.tag", "string.value", "comment.documentation.attribute.value", "support.constant.font-name", "constant.other.rgb-value", "constant.other.color.rgb-value", "support.constant.media", "support.constant.media-type" ], "settings": { "foreground": "#c99" } },
 			{ "scope": "support.type.property-name, support.type.vendored.property-name, meta.object-literal.key, meta.object-literal.key string, meta.structure.dictionary.key.python", "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "support.constant.property-value", "storage.type.tag", "storage.type.tag-handle" ], "settings": { "foreground": "#e6e6b4" } },

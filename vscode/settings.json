@@ -776,7 +776,7 @@
 			{ "scope": "keyword.control.anchor.regexp, string.regexp support.other.match, string.regexp keyword.control", "settings": { "foreground": "#69c" } },
 			{ "scope": "punctuation.definition.group.assertion.regexp, string.regexp keyword.operator", "settings": { "foreground": "#ee7" } },
 			{ "scope": [ "keyword.operator.negation.regexp", "constant.regexp", "punctuation.definition.character-class", "punctuation.definition.character-class.regexp", "constant.other.character-class.regexp", "constant.other.set.regexp" ], "settings": { "foreground": "#9c6" } },
-			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option, keyword.operator.question, keyword.operator.type.optional", "settings": { "foreground": "#FF8080" } },
+			{ "scope": "keyword.operator.quantifier.regexp, punctuation.definition.option, keyword.operator.type.optional", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.disjunction.regexp, keyword.operator.or.regexp, punctuation.separator.regex.alternation", "settings": { "foreground": "#fff", "fontStyle": "bold" } },
 			{ "scope": "punctuation.definition.group.regexp, string.regexp punctuation.definition.group, support.other.parenthesis.regexp, string.regexp punctuation.parenthesis", "settings": { "foreground": "#fff" } },
 			{ "scope": "punctuation.section.regexp, punctuation.definition.string.regexp", "settings": { "foreground": "#37f" } },
@@ -788,8 +788,8 @@
 			{ "scope": [ "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.word.logical", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.other.DDL.create.II.sql", "keyword.on", "keyword.operator.Bang", "keyword.operator.PatternTest" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.word.hcl", "keyword.operation.graphql", "source.openfga keyword", "meta.embedded.inline.openfga keyword", "meta.embedded.block.php keyword.other", "keyword.other.generic-constraint-introducer.swift" ], "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.nulltype, keyword.operator.sectionaccess, keyword.operator.nullable-type", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
-			{ "scope": [ "keyword.operator.optional", "keyword.operator.definiteassignment", "keyword.operator.question.zig", "keyword.default.zig", "keyword.operator.expression.void" ], "settings": { "foreground": "#0af" } },
+			{ "scope": "keyword.operator.nulltype, keyword.operator.sectionaccess, keyword.operator.question.rust, keyword.operator.nullable-type", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": [ "keyword.operator.optional", "keyword.operator.definiteassignment", "keyword.operator.question", "keyword.default.zig", "keyword.operator.expression.void" ], "settings": { "foreground": "#0af" } },
 			{ "scope": "keyword.operator.glob, entity.name.tag.wildcard, entity.name.tag.reference, entity.other.attribute-name.parent-selector.css, entity.other.attribute-name.parent.less", "settings": { "foreground": "#0af" } },
 			{ "scope": "punctuation.definition.constant, punctuation.definition.symbol, punctuation.section.symbol, punctuation.definition.quotedidentifier, string.quoted.byte.raw.rust, punctuation.definition.string.raw", "settings": { "foreground": "#0af" } },
 			{ "scope": [ "constant.language.polymorphic-variant.ocaml", "keyword.operator.pipe.r" ], "settings": { "fontStyle": "italic", "foreground": "#dcf" } },
@@ -1173,7 +1173,7 @@
 			"list.focusAndSelectionOutline": "#cdf", // 220°
 			"list.inactiveSelectionIconForeground": "#cdf",
 			"list.errorForeground": "#c9b", // 320°
-			"list.warningForeground": "#6c8", // 140°
+			"list.warningForeground": "#9c6", // 90°
 
 			/* Gold/50° */
 			"list.focusHighlightForeground": "#ffd700",
@@ -1214,7 +1214,7 @@
 
 			/* Hue: 160/360 */
 			"editorGroupHeader.border": "#365",
-			"breadcrumb.focusForeground": "#397",
+			"breadcrumb.focusForeground": "#9cb",
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.offlineBackground": "#800000", // Maroon
 			"statusBarItem.warningBackground": "#208060",

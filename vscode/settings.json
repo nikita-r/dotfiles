@@ -511,6 +511,8 @@
 
 	/* Language Extensions */
 
+	"[python][java]": { "editor.semanticHighlighting.enabled": true },
+
 	"[c][cpp][cuda-cpp]": {
 		"editor.language.colorizedBracketPairs": [["(",")"],["{","}"]],
 		"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
@@ -520,11 +522,6 @@
 	"C_Cpp.dimInactiveRegions": false,
 	"C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
 	"C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
-
-	"[python]": {
-		"editor.semanticHighlighting.enabled": true,
-		"editor.links": false,
-	},
 
 	"[wolfram]": {
 		"editor.language.colorizedBracketPairs": [["(",")"],["{","}"]],
@@ -540,7 +537,7 @@
 	},
 
 	"[powershell]": {
-		"editor.wordSeparators": "!\"#&'()*+,./:;<=>@[\\]^`{|}", // $-%~?
+		"editor.wordSeparators": "!\"#$%&'()*+,./:;<=>@[\\]^`{|}", // -?~
 	},
 	"powershell.startAutomatically": false, // #> PowerShell: Restart
 	"powershell.debugging.createTemporaryIntegratedConsole": true,
@@ -567,7 +564,10 @@
 	"dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
 	"dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
 
-	/* Py */
+	/* Py and Jupyter */
+	"[python]": {
+		"editor.links": false,
+	},
 	"interactiveWindow.executeWithShiftEnter": true,
 	"jupyter.disableJupyterAutoStart": true,
 	"jupyter.experiments.enabled": false,
@@ -783,7 +783,7 @@
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },
 			{ "scope": [ "punctuation.definition.variable variable", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "constant.language.symbol.hashkey", "variable.parameter.batchfile", "punctuation.definition.variable.percent", "punctuation.definition.variable variable.parameter.positional" ], "settings": { "foreground": "#f9c" } },
-			{ "scope": [ "constant.language", "keyword.keys" ], "settings": { "foreground": "#0af" } },
+			{ "scope": [ "constant.language", "keyword.keys", "entity.name.type.option.rust" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.unary", "keyword.operator.custom.prefix", "keyword.operator.filetest", "keyword.operator.arithmetic.shell", "punctuation.section.arithmetic" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.word.logical", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "punctuation.separator.question-mark", "keyword.operator.null-coalescing", "keyword.other.DDL.create.II.sql", "keyword.on", "keyword.operator.Bang", "keyword.operator.PatternTest" ], "settings": { "foreground": "#0af" } },
@@ -806,15 +806,15 @@
 			{ "scope": [ "keyword.codetag", "meta.resultLinePrefix.matchLinePrefix", "meta.resultLinePrefix.matchLinePrefix punctuation.separator", "punctuation.definition.begin.frontmatter", "punctuation.definition.end.frontmatter" ], "settings": { "foreground": "#f96" } },
 			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
 			{ "scope": [ "punctuation.definition.link.description", "meta.shebang.shell", "keyword.other.ocaml.interface" ], "settings": { "foreground": "#7c6" } },
-			{ "scope": [ "punctuation.definition.metadata", "keyword.definition.arrow", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "punctuation.definition.metadata", "keyword.definition.arrow", "entity.name.type.result.rust", "keyword.operator.arrow.fat", "keyword.operator.big-arrow", "punctuation.definition.subshell", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "string.interpolated.process-substitution" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.splat.hcl", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.other", "keyword.other.array", "keyword.other.hashtable", "keyword.operator.combinator", "punctuation.separator.combinator", "punctuation.definition.inheritance", "punctuation.separator.inheritance", "punctuation.separator.inheritance-clause", "keyword.operator.relation.types.julia", "keyword.operator.set", "keyword.operator.range" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.range.julia", "keyword.operator.list", "keyword.operator.custom.prefix.dot", "keyword.operator.custom.infix.dot", "keyword.operator.custom.postfix.dot", "keyword.operator.redirect", "punctuation.separator.base-integer.erlang", "keyword.operator.redirection" ], "settings": { "foreground": "#9fc" } },
 			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, keyword.operator.pipe.haskell, keyword.operator.pipe.batchfile, punctuation.separator.statement.viml, punctuation.terminator.statement.semicolon.shell", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
-			{ "scope": [ "keyword.operator.borrow", "punctuation.definition.lifetime", "keyword.operator.transposed-variable.julia", "punctuation.definition.anchor.yaml", "punctuation.definition.alias.yaml" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
-			{ "scope": [ "entity.name.type.lifetime" ], "settings": { "fontStyle": "underline" } },
+			{ "scope": [ "keyword.operator.borrow", "punctuation.definition.lifetime", "keyword.operator.dereference.rust", "keyword.operator.transposed-variable.julia", "punctuation.definition.anchor.yaml", "punctuation.definition.alias.yaml" ], "settings": { "foreground": "#fec", "fontStyle": "bold" } },
+			{ "scope": [ "entity.name.type.lifetime", "storage.modifier.mut.rust" ], "settings": { "foreground": "#dcf", "fontStyle": "underline" } },
 			{ "scope": [ "keyword.operator.type.ts", "keyword.operator.pipe.shell", "keyword.operator.Alternatives" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": [ "support.variable.discard-value", "constant.language.ocaml", "keyword.operator.Blank", "keyword.operator.BlankSequence", "keyword.operator.BlankNullSequence" ], "settings": { "fontStyle": "bold" } },
 			{ "scope": [ "variable.other.readwrite.global.pre-defined.ruby", "variable.other.global.php" ], "settings": { "fontStyle": "bold" } },

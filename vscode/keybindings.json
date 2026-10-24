@@ -1356,7 +1356,7 @@
 		"command": "workbench.view.extensions"
 	},
 
-	/* Ctrl * R */
+	/* reveal / reload / refresh */
 	{ "command": "revealInExplorer", "key": "ctrl+r" },
 	{ "key": "ctrl+k r", "command": "revealFileInOS" },
 	{ "key": "ctrl+k shift+r", "command": "workbench.action.reloadWindow" },
@@ -2234,6 +2234,11 @@
 		"key": "shift+alt+,",
 		"command": "C_Cpp.SwitchHeaderSource",
 		"when": "config.C_Cpp.intelliSenseEngine && editorLangId =~ /^(c|cpp|cuda-cpp)$/"
+	},
+	{
+		"key": "shift+alt+,",
+		"command": "ocaml.switch-impl-intf",
+		"when": "editorLangId =~ /^(reason|ocaml(\\.(interface|mlx))?)$/"
 	},
 	{
 		"key": "shift+alt+,",

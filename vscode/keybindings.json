@@ -2045,7 +2045,7 @@
 	{
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleEditorWidths",
-		"when": "multipleEditorGroups"
+		"when": "editorPartMultipleEditorGroups"
 	},
 	{
 		"key": "shift+alt+enter",
@@ -2059,6 +2059,11 @@
 		"key": "shift+alt+enter",
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "panelFocus || panelMaximized"
+	},
+	{
+		"key": "shift+alt+enter",
+		"command": "workbench.action.toggleCompactAuxiliaryWindow",
+		"when": "isAuxiliaryWindow"
 	},
 	{
 		"key": "shift+alt+enter",
@@ -2165,16 +2170,6 @@
 		"key": "shift+alt+c",
 		"command": "workbench.action.terminal.copyLastCommandOutput",
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
-	},
-	{
-		"key": "shift+alt+j",
-		"command": "workbench.action.terminal.chat.runCommand",
-		"when": "terminalChatResponseContainsCodeBlock"
-	},
-	{
-		"key": "shift+alt+j",
-		"command": "workbench.action.terminal.chat.runFirstCommand",
-		"when": "terminalChatResponseContainsMultipleCodeBlocks"
 	},
 	{
 		"key": "shift+alt+r",

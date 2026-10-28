@@ -10,11 +10,7 @@ New-Item $dirCode/User -Type Dir -ea:0 | Out-Null
 
 Write-Host $dirCode/User/keybindings.json
 $json = Get-Content ./vscode/keybindings.json
-$flagE = 0
 $json -split "`n" |% {
-  if ($_ -match '"ctrl\+shift\+e"') {
-      if (!$flagE++) { return $_ }
-  }
   if ($_ -match '"ctrl(\+shift)?\+space"') { return $_ }
   if ($_ -match '"ctrl\+shift\+a"') { return }
   if ($_ -match '"ctrl\+shift\+f"') { return $_ }

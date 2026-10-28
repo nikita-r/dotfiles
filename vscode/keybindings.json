@@ -1388,6 +1388,16 @@
 	},
 	{
 		"key": "ctrl+k ctrl+r",
+		"command": "runCommands", "args": { "commands": [
+			"remote-containers.explorerTargetsRefresh",
+			"remote-containers.explorerVolumesRefresh",
+			"remoteHub.views.workspaceRepositories.refresh",
+			//"github.codespaces.refresh",
+		] },
+		"when": "activeViewlet == 'workbench.view.remote'"
+	},
+	{
+		"key": "ctrl+k ctrl+r",
 		"command": "bookmarks.refresh",
 		"when": "activeViewlet == 'workbench.view.extension.bookmarks'"
 	},
@@ -1617,29 +1627,6 @@
 		"key": "ctrl+shift+enter",
 		"command": "notebook.cell.insertCodeCellAbove",
 		"when": "notebookCellFocused && !notebookCellEditorFocused"
-	},
-
-	/* Ctrl+E; Mac default for Cmd+E is "actions.findWithSelection" */
-	{
-		"key": "ctrl+e",
-		"command": "workbench.action.quickOpen"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-
-	/* shifted in a Picker */
-	{
-		"key": "ctrl+shift+e",
-		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+shift+p",
-		"command": "workbench.action.quickOpenNavigateNext",
-		"when": "inCommandsPicker && inQuickOpen"
 	},
 
 	/* Ctrl+Shift+f: Focus the Search Viewlet */
@@ -2172,8 +2159,22 @@
 		"when": "terminalFindFocused || terminalFocus || terminalTabsFocus"
 	},
 	{
-		"key": "shift+alt+r",
+		"key": "shift+alt+w",
 		"command": "workbench.action.openRecent"
+	},
+	{
+		"key": "shift+alt+w",
+		"command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+		"when": "inQuickOpen && inRecentFilesPicker"
+	},
+	{
+		"key": "shift+alt+q",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "shift+alt+q",
+		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inQuickOpen && inFilesPicker"
 	},
 	/* ?inQuickOpen */
 	{
@@ -2190,6 +2191,11 @@
 		"key": "shift+alt+p",
 		"command": "workbench.action.quickOpenSelectPrevious",
 		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.action.quickOpenNavigateNext",
+		"when": "inQuickOpen && inCommandsPicker"
 	},
 	/* ?suggestWidgetVisible */
 	{
@@ -2479,9 +2485,13 @@
 	},
 
 	/* ^+V to Paste */
-	/* I could set ^+V unbound under Windows, but the following command for "shift+cmd+v" under Mac is in order to Paste into any input */
+	/* ^+V is like that already under Windows; these two are in order to paste in "textInput" under Mac */
 	{
 		"key": "ctrl+shift+v",
+		"command": "editor.action.clipboardPasteAction"
+	},
+	{
+		"key": "shift+cmd+v",
 		"command": "editor.action.clipboardPasteAction"
 	},
 	/* Paste As...</strong> */

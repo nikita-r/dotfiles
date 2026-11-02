@@ -365,20 +365,14 @@
 		"when": "inKeybindings"
 	},
 
+	/* Smart Select */
+	{ "command": "editor.action.smartSelect.expand", "key": "alt+a" },
+	{ "command": "editor.action.smartSelect.shrink", "key": "shift+alt+a" },
+
 	/* Toggle Comment */
-	{
-		"key": "alt+a",
-		"command": "editor.action.commentLine",
-		"when": "editorFocus"
-	},
 	{
 		"key": "ctrl+/",
 		"command": "editor.action.commentLine",
-		"when": "editorFocus"
-	},
-	{
-		"key": "shift+alt+a",
-		"command": "editor.action.blockComment",
 		"when": "editorFocus"
 	},
 	{
@@ -698,24 +692,6 @@
 		"key": "alt+delete",
 		"command": "deleteWordPartRight",
 		"when": "textInputFocus"
-	},
-
-	/* alt+[KeyK] */
-	{ "command": "noop", "key": "alt+k" },
-	{
-		"key": "alt+k",
-		"command": "editor.action.smartSelect.grow",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+k",
-		"command": "editor.emmet.action.balanceOut",
-		"when": "editorTextFocus && editorLangId =~ /html|xml|svg/"
-	},
-	{
-		"key": "alt+k",
-		"command": "keybindings.editor.recordSearchKeys",
-		"when": "inKeybindings && inKeybindingsSearch"
 	},
 
 	/* Alt for scroll when listFocus; Ctrl+Arrow */
@@ -1903,19 +1879,24 @@
 	},
 	/* terminal.select */
 	{
-		"key": "shift+alt+a",
+		"key": "ctrl+alt+a",
 		"command": "workbench.action.terminal.selectAll",
+		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
+	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "workbench.action.terminal.copySelectionAsHtml",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+shift+up",
 		"command": "workbench.action.terminal.selectToPreviousCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+shift+down",
 		"command": "workbench.action.terminal.selectToNextCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
+		"when": "terminalFocusInAny || terminalTabsFocus"
 	},
 	/* terminal.scroll */
 	{
@@ -2686,7 +2667,6 @@
 	/*~*~*~*/
 	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },
-	{ "key": "alt+u", "command": "cursorUndo", "when": "!isMac" },
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.files.newUntitledFile"

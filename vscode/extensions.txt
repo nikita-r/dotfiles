@@ -1,10 +1,10 @@
 mhutchie.git-graph
 tomoki1207.pdf
 hediet.vscode-drawio
+GraphQL.vscode-graphql-syntax
 dbankier.vscode-quick-select
 ms-python.python
 #ms-vscode.powershell
-ms-vscode.hexeditor
 ms-vscode-remote.remote-containers
 sleistner.vscode-fileutils
 zeithaste.cursorCharCode

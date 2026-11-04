@@ -30,6 +30,7 @@
 	{ "key": "ctrl+n", "command": "noop" },
 	{ "key": "shift+alt+y", "command": "notifications.showList" },
 	{ "key": "shift+alt+y", "command": "notifications.hideList", "when": "notificationCenterVisible" },
+	{ "key": "alt+k", "command": "workbench.action.focusActiveEditorGroup" }, // but when "editorFocus", start chord
 
 	/* Chat Y/N */
 	{
@@ -229,7 +230,7 @@
 
 	/* Ctrl+D complements */
 	{
-		"key": "alt+d d",
+		"key": "alt+k alt+l",
 		"command": "editor.action.selectHighlights",
 		"when": "editorFocus"
 	},
@@ -1365,10 +1366,9 @@
 	{
 		"key": "ctrl+k ctrl+r",
 		"command": "runCommands", "args": { "commands": [
+			"remoteHub.views.workspaceRepositories.refresh",
 			"remote-containers.explorerTargetsRefresh",
 			"remote-containers.explorerVolumesRefresh",
-			"remoteHub.views.workspaceRepositories.refresh",
-			//"github.codespaces.refresh",
 		] },
 		"when": "activeViewlet == 'workbench.view.remote'"
 	},
@@ -1517,27 +1517,12 @@
 
 	/* Emmet */
 	{
-		"key": "alt+d e",
-		"command": "workbench.action.showEmmetCommands",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+d i",
-		"command": "editor.emmet.action.updateImageSize",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+d u",
-		"command": "editor.emmet.action.updateTag",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+d .",
+		"key": "alt+k .",
 		"command": "editor.emmet.action.wrapWithAbbreviation",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "alt+d /",
+		"key": "alt+k /",
 		"command": "editor.emmet.action.removeTag",
 		"when": "editorTextFocus"
 	},
@@ -2557,8 +2542,8 @@
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
 	{ "when": "!isMac && textInputFocus", "key": "alt+j",
 	  "command": "type", "args": { "text": "∆" } },
-	{ "when": "!isMac && textInputFocus", "key": "alt+b",
-	  "command": "type", "args": { "text": "∫" } },
+	{ "when": "!isMac && textInputFocus", "key": "alt+d",
+	  "command": "type", "args": { "text": "∂" } }, // &part;
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+/",
 	  "command": "type", "args": { "text": "¿" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+'",

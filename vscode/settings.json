@@ -4,9 +4,11 @@
 
 	"update.mode": "none", // or "manual"
 	"update.showReleaseNotes": false,
-	"mssql.showChangelogOnUpdate": false,
+	"update.showOutdatedBuildReminder": false,
 	"update.enableWindowsBackgroundUpdates": false,
+
 	"extensions.autoCheckUpdates": false,
+	"mssql.showChangelogOnUpdate": false,
 	"extensions.autoUpdate": "off",
 	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
@@ -33,6 +35,7 @@
 
 	"workbench.hover.delay": 999,
 	"workbench.sash.hoverDelay": 0,
+	"workbench.sash.autoHideGrippers": false,
 
 	/* Inlay Hints */
 	"editor.inlayHints.fontFamily": "Geist Mono, Georgia",
@@ -278,6 +281,7 @@
 	"comments.openView": "never",
 	"comments.maxHeight": false,
 
+	"breadcrumbs.showInUntitledFiles": true,
 	"breadcrumbs.symbolSortOrder": "name",
 	"breadcrumbs.symbolPathSeparator": " :: ",
 
@@ -1531,7 +1535,8 @@
 	"github.copilot.nextEditSuggestions.eagerness": "high",
 
 	/* agentic */
-	"chat.agent.thinkingStyle": "collapsedPreview",
+	"chat.persistentProgressVerbosity": "conversation",
+	"chat.agent.thinking.generateTitles": false,
 	"chat.tools.compressOutput.enabled": true,
 	"github.copilot.chat.agent.autoFix": false,
 	"chat.notifyWindowOnConfirmation": "always",

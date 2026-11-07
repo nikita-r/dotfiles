@@ -98,21 +98,6 @@
 		"command": "git.stageSelectedRanges",
 		"when": "!editorReadonly && editorTextFocus && !editorHasMultipleSelections && editorHasSelection"
 	},
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.chat.focusInput",
-		"when": "inQuickOpen && chatInputVisible || inlineChatVisible" // visible Quick Chat (Upper Chat) or Inline Chat
-	},
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.chat.focusInput",
-		"when": "inChat" // any chat is in focus
-	},
-	{
-		"key": "ctrl+\\",
-		"command": "chat.action.focus",
-		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
-	},
 
 	{ "command": "", "key": "alt+\\" },
 	{ "command": "", "key": "alt+-" },
@@ -139,6 +124,21 @@
 	},
 	/* Ctrl+Shift+a: Search Tabs in Chrome */
 	{ "command": "", "key": "ctrl+shift+a" },
+
+	/* ^[+]T (not available in Web-based) */
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.files.newUntitledFile"
+	},
+	//{
+	//	"key": "ctrl+t",
+	//	"command": "workbench.action.browser.newTab",
+	//	"when": "activeEditor == 'workbench.editor.browser'"
+	//},
+	{
+		"key": "ctrl+shift+t",
+		"command": "workbench.action.reopenClosedEditor"
+	},
 
 	/* ^K *N for New */
 	{
@@ -2320,8 +2320,18 @@
 	/* Ctrl+k Ctrl+f */
 	{
 		"key": "ctrl+k ctrl+f",
+		"command": "editor.action.format",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+f",
 		"command": "notebook.formatCell",
 		"when": "notebookCellFocused && !inputFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+f",
+		"command": "Command does not support multi-cursor in Editor",
+		"when": "editorHasMultipleSelections"
 	},
 
 	/* Bring up the Suggestions Widget / Hints */
@@ -2396,33 +2406,6 @@
 		"key": "ctrl+/",
 		"command": "workbench.action.chat.attachContext",
 		"when": "inChatInput"
-	},
-	/* Completions Panel */
-	{ "command": "noop", "key": "shift+ctrl+alt+i" },
-	{
-		"key": "shift+ctrl+alt+i",
-		"command": "github.copilot.generate",
-		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
-	},
-	{
-		"key": "shift+ctrl+win+i",
-		"command": "github.copilot.generate",
-		"when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
-	},
-	{
-		"key": "ctrl+\\", // resourceScheme == 'webview-panel'
-		"command": "github.copilot.acceptCursorPanelSolution",
-		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
-	},
-	{
-		"key": "ctrl+]",
-		"command": "github.copilot.nextPanelSolution",
-		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
-	},
-	{
-		"key": "ctrl+[",
-		"command": "github.copilot.previousPanelSolution",
-		"when": "activeWebviewPanelId == 'GitHub Copilot Suggestions'"
 	},
 
 	/* Ctrl+Shift+. */
@@ -2653,22 +2636,9 @@
 	{ "key": "f11", "command": "-workbench.action.toggleFullScreen" },
 	{ "command": "", "key": "alt+`", "when": "isMac" },
 	{
-		"key": "ctrl+t",
-		"command": "workbench.action.files.newUntitledFile"
-	},
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.browser.newTab",
-		"when": "activeEditor == 'workbench.editor.browser'"
-	},
-	{
 		"key": "f5",
 		"command": "workbench.action.browser.reload",
 		"when": "activeEditor == 'workbench.editor.browser'"
-	},
-	{
-		"key": "ctrl+shift+t",
-		"command": "workbench.action.reopenClosedEditor"
 	},
 	{
 		"key": "ctrl+win+w",

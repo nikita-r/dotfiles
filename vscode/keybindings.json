@@ -1887,12 +1887,12 @@
 	{
 		"key": "ctrl+up",
 		"command": "workbench.action.terminal.scrollToPreviousCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
+		"when": "terminalTabsFocus"
 	},
 	{
 		"key": "ctrl+down",
 		"command": "workbench.action.terminal.scrollToNextCommand",
-		"when": "terminalFindFocused || terminalTabsFocus"
+		"when": "terminalTabsFocus"
 	},
 	{
 		"key": "alt+up",
@@ -2524,7 +2524,7 @@
 	{ "when": "!isMac && textInputFocus", "key": "alt+l",
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
 	{ "when": "!isMac && textInputFocus", "key": "alt+j",
-	  "command": "type", "args": { "text": "∆" } },
+	  "command": "type", "args": { "text": "∆" } }, // &Delta;
 	{ "when": "!isMac && textInputFocus", "key": "alt+d",
 	  "command": "type", "args": { "text": "∂" } }, // &part;
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+/",

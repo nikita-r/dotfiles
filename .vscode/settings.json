@@ -1,4 +1,6 @@
 {
 	"markdown.preview.fontSize": 16,
 	"markdown.styles": [ ".vscode/markdown-styles.css" ],
+	//"[json][jsonl]": { "editor.maxTokenizationLineLength": 10240000 },
+	//"[json][jsonl][jsonc]": { "editor.wrapOnEscapedLineFeeds": true },
 }

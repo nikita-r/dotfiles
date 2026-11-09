@@ -808,9 +808,9 @@
 			{ "scope": "variable.entity.other.jinja.delimiter, entity.other.jinja.delimiter.variable, punctuation.section.brackets.double, punctuation.section.parts, keyword.operator.Span, punctuation.definition.table.inline.toml, meta.separator.markdown", "settings": { "foreground": "#37f" } },
 			{ "scope": [ "entity.other.jinja.delimiter.tag", "keyword.other.r", "keyword.other.function.use", "variable.other.constant.sharpsign", "keyword.operator.attribute", "keyword.preprocessor", "keyword.other.platform" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.codetag", "punctuation.definition.capture", "meta.resultLinePrefix.matchLinePrefix punctuation.separator", "punctuation.definition.begin.frontmatter", "punctuation.definition.end.frontmatter", "punctuation.definition.math.begin.markdown" ], "settings": { "foreground": "#f96" } },
-			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.documentation.link", "punctuation.definition.comment.shebang", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
-			{ "scope": [ "punctuation.definition.link.description", "comment.line.shebang", "meta.shebang.shell", "keyword.other.ocaml.interface" ], "settings": { "foreground": "#7c6" } },
-			{ "scope": [ "meta.image.inline.markdown punctuation.definition.metadata", "meta.image.reference punctuation.definition.constant.markdown" ], "settings": { "foreground": "#c69" } },
+			{ "scope": [ "punctuation.definition.link.title", "punctuation.definition.documentation.link", "punctuation.definition.comment.shebang", "comment.line.shebang punctuation.definition.comment", "string.other.modeline", "constant.string" ], "settings": { "foreground": "#37f" } },
+			{ "scope": [ "punctuation.definition.link.description", "keyword.other.ocaml.interface", "comment.line.shebang", "meta.shebang.shell" ], "settings": { "foreground": "#7c6" } },
+			{ "scope": "meta.image.inline.markdown punctuation.definition.metadata, meta.image.reference punctuation.definition.constant.markdown", "settings": { "foreground": "#c69" } },
 			{ "scope": [ "punctuation.definition.metadata", "meta.link.reference punctuation.definition.constant", "punctuation.definition.subexpression", "punctuation.definition.variable.makefile", "punctuation.definition.subshell", "string.interpolated.process-substitution", "source.hcl punctuation.section.parens" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.definition.arrow", "entity.name.type.result.rust", "keyword.operator.arrow.fat", "keyword.operator.big-arrow" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
@@ -847,7 +847,8 @@
 			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.assignment.ahk, keyword.operator.comparison.sql, keyword.operator.math.sql", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational, keyword.operator.relation.julia", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment, punctuation.assignment, keyword.operator.eq, punctuation.definition.equals, punctuation.separator.equals, punctuation.separator.key-value, punctuation.separator.map.value, punctuation.separator.dict, keyword.operator.update", "settings": { "foreground": "#0af" } },
-			{ "scope": "keyword.operator.comparison.scala, keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, keyword.operator.ternary.swift, support.function.any-method.swift, support.function.powershell, support.function.commandProperty, source.viml support.function, keyword.operator.logical.viml, keyword.operator.assignment.viml, keyword.operator.assignment.zig", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "keyword.operator.comparison.scala, keyword.operator.assignment.powershell, keyword.symbol, punctuation.colon, keyword.operator.ternary.swift, keyword.operator.logical.viml, keyword.operator.assignment.viml, keyword.operator.assignment.zig", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "support.function.any-method.swift, support.function.powershell, support.function.commandProperty, source.viml support.function", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "keyword.cs, keyword.fsharp, keyword.hard, keyword.other.type.haskell, keyword.type.graphql, keyword.type.go, source.go keyword, meta.embedded.block.go keyword, keyword.ocaml, keyword.other.ocaml, keyword.other.rust, keyword.other.fn, meta.function.powershell storage.type.powershell", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.as.php, keyword.operator.key.php, keyword.operator.type.php, keyword.operator.word.r", "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.other.query, keyword.other.julia, keyword.operator.relation.in.julia, keyword.other.data-integrity, keyword.operator.isa", "settings": { "foreground": "#c6c" } },
@@ -1054,7 +1055,6 @@
 			"editorGroup.border": "#4C6680",
 			"editorGroupHeader.border": "#4C6680",
 			"editorRuler.foreground": "#3c96", // 160°
-			"debugIcon.restartForeground": "#fec",
 			"editorStickyScroll.background": "#203038",
 			"editorStickyScrollHover.background": "#304854",
 
@@ -1132,6 +1132,9 @@
 
 		"[*Dark+]": {
 			"icon.foreground": "#fec", // 40°
+			"debugIcon.restartForeground": "#fec",
+			"debugIcon.disconnectForeground": "#faf",
+			"debugIcon.stopForeground": "#faf",
 			"editor.foldPlaceholderForeground": "#fec",
 			"settings.settingsHeaderHoverForeground": "#fec",
 			"notificationCenterHeader.foreground": "#e7e7e7",
@@ -1223,8 +1226,8 @@
 			"activityBarBadge.background": "#c63",
 			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
-			"statusBar.debuggingBackground": "#c63",
-			"statusBar.debuggingForeground": "#fff",
+			"statusBar.debuggingBackground": "#a41",
+			"statusBar.debuggingForeground": "#e7e7e7",
 			"statusBarItem.hoverForeground": "#fff",
 
 			/* Hue: 160/360 */
@@ -1233,6 +1236,8 @@
 			"statusBarItem.remoteBackground": "#208060",
 			"statusBarItem.offlineBackground": "#800000", // Maroon
 			"statusBarItem.warningBackground": "#208060",
+			"statusBarItem.warningForeground": "#cfe",
+			"statusBarItem.warningHoverBackground": "#397",
 			"listFilterWidget.background": "#104030",
 			"editor.foldBackground": "#20806040",
 			"list.dropBackground": "#20806040",

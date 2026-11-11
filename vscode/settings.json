@@ -13,6 +13,7 @@
 	"extensions.autoUpdate": "off",
 	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
+	"application.shellEnvironmentResolutionTimeout": 33,
 
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.banner": "always",
@@ -508,7 +509,7 @@
 
 	/* Language Extensions */
 
-	"[python][java]": { "editor.semanticHighlighting.enabled": true },
+	"[python][java][html]": { "editor.semanticHighlighting.enabled": true },
 
 	"[c][cpp][cuda-cpp][r][perl]": {
 		"editor.language.colorizedBracketPairs": [["(",")"],["{","}"]],
@@ -724,7 +725,7 @@
 	"terminal.integrated.suggest.upArrowNavigatesHistory": false,
 
 	"editor.mouseMiddleClickAction": "ctrlLeftClick",
-	"terminal.integrated.middleClickBehavior": "paste",
+	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
 
@@ -752,10 +753,10 @@
 			{ "scope": "comment.block.documentation, comment.documentation.comment, comment.line.documentation, comment.line.double-slash.documentation, comment.line.triple-slash.documentation, comment.block.javadoc, text.ref comment, comment.line.roxygen, comment.doc.ocaml", "settings": { "foreground": "#999" } },
 			{ "scope": "string.quoted.docstring, string.docstring, comment.block.documentation punctuation.definition.comment, comment.line.documentation punctuation.definition.comment, comment.line.double-slash.documentation punctuation.definition.comment, comment.line.triple-slash.documentation punctuation.definition.comment, comment.block.javadoc punctuation.definition.comment, comment.line.roxygen punctuation.definition.comment, comment.line.roxygen keyword.other.r, keyword.doc-tag.ocamldoc, keyword.other.phpdoc, keyword.other.documentation", "settings": { "foreground": "#69c" } },
 			{ "scope": [ "keyword.operator.at", "punctuation.definition.attribute", "punctuation.definition.inline.tag", "punctuation.definition.block.tag", "keyword.control.block.transition", "punctuation.definition.storage", "punctuation.definition.function", "punctuation.definition.directive", "punctuation.definition.preprocessor", "meta.preprocessor.include punctuation.definition.string" ], "settings": { "foreground": "#69c" } },
-			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "markup.underline.link", "variable.parameter.cmake", "support.class.math.block" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": [ "keyword.operator", "meta.embedded", "source.groovy.embedded", "source.coffee.embedded", "meta.template.expression", "string meta.image.inline.markdown", "markup.underline.link.markdown", "variable.parameter.cmake", "support.class.math.block" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "punctuation.separator", "expression.ng", "meta.interpolation", "string.unquoted", "string.interpolated.process-substitution meta", "meta.scope.subshell", "meta.requires", "variable.meta.scope", "punctuation.terminator" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": [ "variable.language.wildcard.java", "storage.modifier.import.java", "storage.modifier.package.java", "meta.import storage.modifier", "meta.package storage.modifier" ], "settings": { "foreground": "#ccc" } }, // editor.foreground
-			{ "scope": "meta.function-call.ruby entity.name.function, variable.zig, meta.block.hcl variable, entity.other.attribute-name.parent-selector-suffix.css, entity.name.tag.custom, variable.parameter.url, variable.parameter.function.swift, entity.name.function.swift, entity.name.function.sql, variable.function.r, variable.def.ahk, variable.other.asp, variable.other.swift, variable.other.column.kusto, variable.other.member.powershell, variable.ruby, variable.other.constant.ruby, variable.other.go, variable.other.assignment.go", "settings": { "foreground": "#ccc" } }, // editor.foreground
+			{ "scope": "meta.function-call.ruby entity.name.function, variable.zig, meta.block.hcl variable, entity.other.attribute-name.parent-selector-suffix.css, entity.name.tag.custom, variable.parameter.url, variable.parameter.function.swift, entity.name.function.swift, entity.name.function.sql, variable.function.r, variable.def.ahk, variable.other.asp, variable.other.swift, variable.other.column.kusto, variable.other.member.powershell, variable.ruby, variable.other.constant.ruby, variable.other.go, variable.other.assignment.go, variable.other.assignment.shell", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "meta.function.decorator.python entity.name.function.decorator, meta.function.decorator.python support.type, variable.other.generic-type, storage.type.variable.ruby, entity.name.constant.wolfram, variable.other.object.java", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "log.constant, text.log constant.language, meta.embedded.block.log constant.language", "settings": { "foreground": "#ccc" } }, // editor.foreground
 			{ "scope": "markup.inserted", "settings": { "foreground": "#6c9" } },
@@ -784,7 +785,7 @@
 			{ "scope": [ "string.regexp", "constant.other.character-class.set.regexp", "constant.character.character-class.regexp", "constant.character.set.regexp", "punctuation.character.set.begin.regexp", "punctuation.character.set.end.regexp" ], "settings": { "foreground": "#c99" } },
 			{ "scope": [ "punctuation.definition.variable variable", "punctuation.definition.variable.shell", "punctuation.definition.variable.ruby", "punctuation.definition.variable.php" ], "settings": { "foreground": "#69c" } },
 			{ "scope": [ "punctuation.definition.variable variable.parameter.positional", "punctuation.definition.option", "punctuation.definition.variable.percent", "variable.parameter.batchfile" ], "settings": { "foreground": "#f9c" } },
-			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "constant.language.symbol.hashkey", "keyword.other.Slot", "keyword.operator.Function" ], "settings": { "foreground": "#f9c" } },
+			{ "scope": [ "variable.language", "variable.parameter.function.language.special", "variable.parameter.function-call", "keyword.other.Slot", "keyword.operator.Function" ], "settings": { "foreground": "#f9c" } },
 			{ "scope": [ "constant.language", "keyword.keys", "entity.name.type.option.rust", "constant.other.general.math.tex" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.unary", "keyword.operator.custom.prefix", "keyword.operator.filetest", "keyword.operator.arithmetic.shell", "punctuation.section.arithmetic" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "keyword.operator.logical", "keyword.operator.boolean", "keyword.operator.logical.python", "keyword.operator.word.logical", "keyword.operator.wordlike" ], "settings": { "foreground": "#0af" } },
@@ -795,11 +796,11 @@
 			{ "scope": "keyword.operator.glob, entity.name.tag.wildcard, entity.name.tag.reference, entity.name.tag.nesting, entity.other.attribute-name.parent-selector.css, entity.other.attribute-name.parent.less", "settings": { "foreground": "#0af" } },
 			{ "scope": "punctuation.definition.constant, keyword.operator.record, punctuation.definition.symbol, punctuation.section.symbol, punctuation.definition.quotedidentifier, string.quoted.byte.raw.rust, punctuation.definition.string.raw", "settings": { "foreground": "#0af" } },
 			{ "scope": [ "constant.language.polymorphic-variant.ocaml", "keyword.operator.pipe.r", "fenced_code.block.language.attributes" ], "settings": { "fontStyle": "italic", "foreground": "#dcf" } },
-			{ "scope": [ "constant.language.wolfram", "variable.other.constant", "variable.other.enummember", "keyword.operator.inclusiveidentifier", "keyword.operator.type-casting" ], "settings": { "foreground": "#9cf" } },
+			{ "scope": [ "constant.language.wolfram", "variable.other.constant", "constant.other.symbol.hashkey.parameter", "variable.other.enummember", "keyword.operator.inclusiveidentifier", "keyword.operator.type-casting" ], "settings": { "foreground": "#9cf" } },
 			{ "scope": [ "keyword.other.order.sql", "keyword.operator.cmake", "keyword.other.cmake", "entity.name.constant", "support.constant", "constant.character.enum" ], "settings": { "foreground": "#b9f" } },
 			{ "scope": "constant.numeric, meta.preprocessor.numeric, constant.sha.git-rebase", "settings": { "foreground": "#6c9" } },
 			{ "scope": "storage.type.number.python, constant.numeric.other.suffix, constant.numeric.other.exponent, keyword.operator.exponent.rust, keyword.operator.exponent.sign.rust", "settings": { "foreground": "#E6E617" } },
-			{ "scope": [ "support.function.builtin.zig", "string.unquoted.wolfram", "variable.other.enummember.hcl", "constant.other.reference.link.markdown", "punctuation.definition.table.markdown" ], "settings": { "foreground": "#badEBA" } },
+			{ "scope": [ "support.function.builtin.zig", "string.unquoted.wolfram", "constant.language.symbol.hashkey", "variable.other.enummember.hcl", "constant.other.reference.link.markdown", "punctuation.definition.table.markdown" ], "settings": { "foreground": "#badEBA" } },
 			{ "scope": [ "entity.name.operator.custom-literal", "keyword.other.suffix.literal", "keyword.interpolation.scala" ], "settings": { "foreground": "#badEBA" } },
 			{ "scope": "source.cpp meta.encoding, source.cuda-cpp meta.encoding, keyword.other.unit, keyword.operator.plus.exponent, keyword.operator.minus.exponent", "settings": { "foreground": "#E6E617" } },
 			{ "scope": "constant.other.placeholder, comment.documentation.entityReference, constant.character, constant.character punctuation.definition.constant", "settings": { "foreground": "#0cc" } },
@@ -1471,11 +1472,14 @@
 	//"search.useIgnoreFiles": false, // do not exclude dot(git)ignore(d) files
 
 	"files.readonlyInclude": {
+		"**/.venv/**": true,
 		"**/node_modules/**": true,
 	},
 	"files.readonlyFromPermissions": true,
+	"files.readonlyExclude": {},
 
 	"files.watcherExclude": {
+		"**/.venv/**": true,
 		"**/node_modules/**": true,
 	},
 	"dotnet.preferVisualStudioCodeFileSystemWatcher": true,
@@ -1547,12 +1551,12 @@
 	"chat.useCustomizationsInParentRepositories": true,
 
 	/* ghost text suggestions & NES */
-	//"editor.inlineSuggest.showToolbar": "always",
+	"editor.inlineSuggest.showToolbar": "never",
 	"github.copilot.enable": { // Inline Suggestions
 		"*": false,
 		//"powershell": true,
 	},
-	"github.copilot.nextEditSuggestions.enabled": false,
+	"github.copilot.nextEditSuggestions.enabled": true,
 	"github.copilot.nextEditSuggestions.eagerness": "high",
 
 	/* agentic */
@@ -1585,6 +1589,7 @@
 	"chat.agent.networkFilter": true,
 	"chat.agent.sandbox.network.allowedDomains": [],
 	"chat.agent.sandbox.network.deniedDomains": [],
+	"chat.agent.sandbox.network.allowLocalNetwork": false,
 	"chat.agent.sandbox.enabled": "on",
 
 	/*~*~*~*~*~*~*~*~*~*~*~*/

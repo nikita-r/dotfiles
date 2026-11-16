@@ -13,7 +13,6 @@
 	"extensions.autoUpdate": "off",
 	"extensions.autoUpdateDelay": 99,
 	"extensions.requestTimeout": 15000, // @tag:advanced
-	"application.shellEnvironmentResolutionTimeout": 33,
 
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.banner": "always",
@@ -71,7 +70,6 @@
 	"editor.stickyScroll.maxLineCount": 7,
 	"[yaml]": {
 		"editor.stickyScroll.enabled": true,
-		"editor.stickyScroll.maxLineCount": 9,
 	},
 	"workbench.tree.enableStickyScroll": true,
 	"workbench.tree.stickyScrollMaxItemCount": 11,
@@ -243,14 +241,17 @@
 	"editor.renderLineHighlight": "none",
 	//"editor.rulers": [ 80, 120 ],
 	"[git-commit]": { "editor.rulers": [] },
+	"workbench.tree.indent": 12,
+	"workbench.tree.renderIndentGuides": "always",
+
+	/* 📜 */
+	"workbench.editor.titleScrollbarVisibility": "hidden",
 	"editor.scrollbar.vertical": "visible",
 	"editor.scrollbar.horizontal": "visible",
 	"editor.scrollBeyondLastColumn": 33,
 	"editor.smoothScrolling": false,
 	"workbench.list.smoothScrolling": true,
 	"workbench.list.horizontalScrolling": true,
-	"workbench.tree.indent": 12,
-	"workbench.tree.renderIndentGuides": "always",
 
 	/* editor tabs appearance */
 	"workbench.editor.decorations.badges": false,
@@ -263,7 +264,6 @@
 	//"window.density.editorTabHeight": "compact",
 	"workbench.editor.pinnedTabsOnSeparateRow": true,
 	"workbench.editor.wrapTabs": true,
-	"workbench.editor.titleScrollbarVisibility": "hidden",
 
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
@@ -728,6 +728,7 @@
 	//"terminal.integrated.middleClickBehavior": "paste",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	//"terminal.integrated.ignoreBracketedPasteMode": true,
+	"terminal.integrated.enableWin32InputMode": true,
 
 	"terminal.integrated.tabs.location": "left",
 	"workbench.notifications.position": "bottom-left",
@@ -847,7 +848,7 @@
 			{ "scope": [ "keyword.operator.arrow", "keyword.symbol.arrow", "keyword.operator.channel", "keyword.operator.closure", "keyword.operator.lambda", "keyword.operator.function", "keyword.operator.function-result", "keyword.operator.return-value", "punctuation.separator.clause-head-body", "punctuation.section.function.lambda", "punctuation.section.function.definition", "punctuation.definition.arrow", "punctuation.definition.lambda" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": [ "keyword.other.operator", "keyword.other.typedef", "keyword.other.directive.using", "keyword.other.using", "keyword.other.import", "keyword.other.default", "keyword.other.typename" ], "settings": { "foreground": "#c6c" } },
 			{ "scope": "keyword.operator.new.cpp, keyword.operator.new.cuda-cpp, keyword.other.delete, keyword.other.new, keyword.operator.delete", "settings": { "foreground": "#c6c" } },
-			{ "scope": "keyword.operator.expression, keyword.operator.asp, keyword.other.alias.sql, keyword.operator.new, keyword.other.directive", "settings": { "foreground": "#E6E617" } },
+			{ "scope": "keyword.operator.expression, keyword.operator.asp, keyword.other.alias.sql, keyword.operator.new, keyword.other.directive", "settings": { "foreground": "#0A5" } },
 			{ "scope": [ "keyword.operator.relation", "keyword.operator.word", "keyword.operator.star", "keyword.operator.infix", "entity.name.function.infix" ], "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.assignment-or-comparison, keyword.operator.assignment.ahk, keyword.operator.comparison.sql, keyword.operator.math.sql", "settings": { "foreground": "#FF8080" } },
 			{ "scope": "keyword.operator.comparison, keyword.operator.relational", "settings": { "foreground": "#FF8080" } },
@@ -993,11 +994,8 @@
 			"activityErrorBadge.foreground": "#000",
 			"activityWarningBadge.background": "#333",
 			"activityWarningBadge.foreground": "#ccc",
-			"inputValidation.warningBorder": "#cc0",
-			"inputValidation.warningBackground": "#660",
 			"inputValidation.infoBackground": "#144A66", // 200°
 			"inputValidation.infoForeground": "#fff",
-			"inputValidation.warningForeground": "#fff",
 			"inputValidation.errorForeground": "#fff",
 
 			/* ___ */
@@ -1056,7 +1054,6 @@
 			"tab.border": "#666",
 			"sideBarStickyScroll.border": "#666",
 			"modernEditorTab.inactiveBackground": "#202428",
-			"tab.selectedBackground": "#fec",
 			"editorGroup.border": "#4C6680",
 			"editorGroupHeader.border": "#4C6680",
 			"editorRuler.foreground": "#3c96", // 160°
@@ -1121,14 +1118,14 @@
 			"debugIcon.breakpointForeground": "#c63", // 20°
 			"debugIcon.breakpointCurrentStackframeForeground": "#3c9", // 160°
 			"debugIcon.breakpointStackframeForeground": "#c3c",
-			"editor.inlineValuesBackground": "#2a3f54",
+			"editor.inlineValuesBackground": "#2a3f54", // 210°
 			"editor.inlineValuesForeground": "#718293",
 
 			/* testing & debug toolbar icons */
 			"debugIcon.restartForeground": "#fec",
 			"debugIcon.disconnectForeground": "#faf",
 			"debugIcon.stopForeground": "#faf",
-			"testing.runAction": "#0A5",
+			"testing.runAction": "#0A5", // 150°
 			"testing.iconPassed": "#6c9",
 			"debugIcon.startForeground": "#0A5",
 			"debugIcon.pauseForeground": "#69f",
@@ -1243,10 +1240,15 @@
 			/* Hue:  20/360 */
 			"focusBorder": "#F08048",
 			"progressBar.background": "#F08048",
+			"tab.selectedBorderTop": "#F08048",
 			"agentsChatInput.focusBorder": "#F08048",
 			"activityBarBadge.background": "#c63",
 			"activityBarBadge.foreground": "#fff",
 			"editorWidget.border": "#c63",
+			"tab.selectedBackground": "#a41",
+			"inputValidation.warningBackground": "#a41",
+			"inputValidation.warningForeground": "#fff",
+			"inputValidation.warningBorder": "#F08048",
 			"statusBar.debuggingBackground": "#a41",
 			"statusBar.debuggingForeground": "#e7e7e7",
 			"statusBarItem.hoverForeground": "#fff",
@@ -1611,11 +1613,14 @@
 	"chat.agent.sandbox.network.deniedDomains": [],
 	"chat.agent.sandbox.network.allowLocalNetwork": false,
 	"chat.agent.sandbox.enabled": "on",
+	"chat.agent.sandbox.fileSystem.userConfiguredPaths": {},
 
-	/*~*~*~*~*~*~*~*~*~*~*~*/
+	/* Zen Mode */
 	"zenMode.restore": false,
 	"zenMode.hideStatusBar": false,
 	"zenMode.hideLineNumbers": false,
 	"zenMode.silentNotifications": false,
-	"chat.viewSessions.enabled": false,
+
+	/*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*/
+	"application.shellEnvironmentResolutionTimeout": 33,
 }

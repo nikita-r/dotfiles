@@ -1549,7 +1549,7 @@
 		"command": "cursorDown",
 		"when": "textInputFocus && !suggestWidgetVisible"
 	},
-	/* "ctrl+enter" may be hijacked by accept/commit; "ctrl+shift+enter" by "*.action.replaceAll*" */
+	/* "editor.action.insertLine*" */
 	{
 		"key": "ctrl+enter",
 		"command": "editor.action.insertLineAfter",
@@ -2438,7 +2438,7 @@
 		"key": "shift+cmd+v",
 		"command": "editor.action.clipboardPasteAction"
 	},
-	/* Paste As...</strong> */
+	/* "editor.action.pasteAs*" */
 	{
 		"key": "ctrl+shift+v",
 		"command": "editor.action.pasteAsText",

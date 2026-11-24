@@ -1364,7 +1364,7 @@
 			/* colour ANSI */
 			"terminal.ansiBrightMagenta": "#faf",
 			"terminal.ansiMagenta": "#e7e",
-			"terminal.ansiBrightBlack": "#515",
+			"terminal.ansiBrightBlack": "#999",
 			"terminal.ansiRed": "#f33",
 			"terminal.ansiBrightRed": "#f66",
 			"terminal.ansiCyan": "#0cc",

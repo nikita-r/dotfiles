@@ -111,6 +111,8 @@
 	tool = bc ; bc3
 [difftool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
+	# -solo: always a new BC instance/window ("-", not "/", to dodge MSYS path mangling)
+	cmd = \"$(git config difftool.bc.path)\" -solo \"$LOCAL\" \"$REMOTE\"
 [mergetool "bc"]
 	path = "C:/Program Files/Beyond Compare 4/BComp.exe"
 [difftool "bc3"]
@@ -124,9 +126,9 @@
 #[core]
 #	editor = code -w
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 [mergetool "vscode"]
-	cmd = code --wait $MERGED
+	cmd = code --wait \"$MERGED\"
 
 [color]
 	branch = false

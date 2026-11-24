@@ -9,22 +9,16 @@ $ErrorActionPreference='Stop' # Inquire
 Set-StrictMode -Version:Latest # Set-StrictMode -Off
 
 if ($PSVersionTable['Platform'] -ceq 'Unix') {
-  $prompt_intern = "[$((&tty)-replace'^/dev/')|$env:USER]"
+  $_prompt_static_bit = "[$((&tty)-replace'^/dev/')|$env:USER]"
 } else {
-  $prompt_intern = '[' + [Environment]::UserName + ']'
+  $_prompt_static_bit = '[' + [Environment]::UserName + ']'
   try{ . (Join-Path (Split-Path $PROFILE) profile-win-extra-func.ps1) }catch{}
 }
 if ([Environment]::Is64BitProcess -ne [Environment]::Is64BitOperatingSystem) {
-  $prompt_intern += $(
-    switch ([IntPtr]::Size) {
-                4 { '(x86)' }
-                8 { '(x64)' }
-          default { '(?)' }
-    }
-  )
+  $_prompt_static_bit += $(switch ([IntPtr]::Size) { 4 { '(x86)' } 8 { '(x64)' } default { '(?)' } })
 }
 function prompt { (Get-Date -f 'MM\/dd|HH:mm') `
-                + $prompt_intern `
+                + $_prompt_static_bit `
                 + '>' * (1+$NestedPromptLevel) + ' ' `
                 }
 
@@ -62,11 +56,10 @@ function  dir  {
   } | sort
 }
 
-function swapd {
-if ((Get-Location -Stack).Count -eq 0) { throw }
+function swapd { if ((Get-Location -Stack).Count -eq 0) { throw }
 $a=Get-Location; popd; $b=Get-Location
 Set-Location $a; pushd $b
-Write-Host "swapd to `"$b`""
+Write-Host "swapd to `"$b`"" -ForegroundColor Magenta
 }
 
 
@@ -89,30 +82,6 @@ function DeepCopy-Object ($obj) {
     $fmtBin.Serialize($memStr, $obj)
     $memStr.Position=0
     $fmtBin.Deserialize($memStr)
-}
-
-# Usage: ... | List-ObjectProps -t | ogv
-# FIXME: array as positional argument results in additional property Name=Length
-function List-ObjectProps ( [Parameter(Mandatory,ValueFromPipeline)]$obj
-                          , [switch]$TruthyOnly ) {
-    begin { Set-StrictMode -Off }
-    process {
-        $obj | Get-Member -MemberType *Property |% Name | Sort-Object -Unique `
-        |? { if ($TruthyOnly) {$obj |% $_ |? {$_}} else {$true} } `
-        |% { New-Object PSObject -Property $(
-                        $v = $obj |% $_
-                        if ($obj.Count -gt 1) { $v = $v | Sort-Object -Unique }
-                        if ($TruthyOnly) { $v = $v |? {$_} }
-                        if ($MyInvocation.ExpectingInput) {
-                            $f = $(if ($local:i -lt 100) {(0+$local:i).ToString('00')} else {'##'})
-                [ordered]@{'00'=$f;Name=$_;Value=$v}
-                        } else {
-                [ordered]        @{Name=$_;Value=$v}
-                        }
-                        )
-                }
-        ++$local:i
-    }
 }
 
 
@@ -204,12 +173,6 @@ function Get-AuthHeader-Basic ([string]${client_id}, [string]${client_secret}) {
     return @{Authorization="Basic $([Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($str)))"}
 }
 
-function Format-Json {
-$input | ConvertFrom-Json | ConvertTo-Json @args
-}
-
-Set-Alias fj Format-Json
-
 
 function Parse-eyJ { [CmdletBinding()] param (
         [Parameter(ValueFromPipeline)]
@@ -218,14 +181,14 @@ process {
   $t |% {
       $k = $_ -replace '-', '+' -replace '_', '/'
       $k += '=' * ((4 - $k.Length % 4) % 4)
-      [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k)) | fj
+      [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($k))
   }
 } }
 
 
 function Is-Numeric ($x) {
   try {
-    0 + $x | Out-Null # [DBNull|NullString]::Value throw here; [string]::Empty|[AutomationNull]::Value do not
+    0 + $x | Out-Null # [DBNull|NullString]::Value throws here; [string]::Empty|[AutomationNull]::Value does not
     return ![string]::IsNullOrWhiteSpace($x)
   } catch {
     return $false
@@ -249,6 +212,7 @@ function Get-Epoch-Timestamp ($x) {
   }
 
   if ($null -eq $x) {
+    #$> (Get-Epoch-Timestamp) -eq [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
     $datetime = (Get-Date).ToUniversalTime()
   } else {
     $datetime = (Get-Date $x).ToUniversalTime()

@@ -1,0 +1,11 @@
+#·.gitconfig.local
+
+[user]
+#	name = nikita-r
+#	email = nikita-r@device
+
+[difftool "bc"]
+	path = "/Applications/Beyond Compare.app/Contents/MacOS/bcomp"
+[mergetool "bc"]
+	path = "/Applications/Beyond Compare.app/Contents/MacOS/bcomp"
+

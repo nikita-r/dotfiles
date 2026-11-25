@@ -5,6 +5,7 @@
 	"update.mode": "none", // or "manual"
 	"update.showReleaseNotes": false,
 	"update.showOutdatedBuildReminder": false,
+	"update.enableEarlyStaging": false,
 	"update.enableWindowsBackgroundUpdates": false,
 
 	"extensions.autoCheckUpdates": false,
@@ -824,7 +825,7 @@
 			{ "scope": [ "keyword.definition.arrow", "entity.name.type.result.rust", "keyword.operator.arrow.fat", "keyword.operator.big-arrow" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "punctuation.brackets.angle", "punctuation.definition.logical-expression", "punctuation.definition.ng-binding-name" ], "settings": { "foreground": "#0af" } },
 			{ "scope": [ "storage.type.format", "support.constant.handlebars", "keyword.operator.pattern.case", "keyword.operator.splat.hcl", "keyword.operator.template", "keyword.operator.expansion", "punctuation.section.array" ], "settings": { "foreground": "#ffd700" } },
-			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
+			{ "scope": [ "keyword.other.package", "keyword.other.module", "keyword.other.important", "keyword.other.DML.II.sql", "punctuation.separator.sequence.yaml", "punctuation.separator.mapping.yaml", "punctuation.separator.hcl", "meta.preprocessor punctuation.separator.hash" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.other", "keyword.other.array", "keyword.other.hashtable", "keyword.operator.combinator", "punctuation.separator.combinator", "punctuation.definition.inheritance", "punctuation.separator.inheritance", "punctuation.separator.inheritance-clause", "keyword.operator.relation.types.julia", "keyword.operator.set", "keyword.operator.range" ], "settings": { "foreground": "#ffd700" } },
 			{ "scope": [ "keyword.operator.range.julia", "keyword.operator.list", "keyword.operator.custom.prefix.dot", "keyword.operator.custom.infix.dot", "keyword.operator.custom.postfix.dot", "punctuation.separator.dot.decimal.rust", "keyword.operator.redirect", "punctuation.separator.constant.numeric", "keyword.operator.redirection" ], "settings": { "foreground": "#9fc" } },
 			{ "scope": "keyword.operator.other.powershell, punctuation.backtick, keyword.operator.pipe.haskell, keyword.operator.pipe.batchfile, punctuation.separator.statement.viml, punctuation.terminator.statement.semicolon.shell", "settings": { "foreground": "#fec", "fontStyle": "bold" } },
@@ -919,6 +920,7 @@
 		"keyword.overridden": { "foreground": "#c6c", "fontStyle": "" },
 		"macro": "#69c",
 		"field": "#9dd",
+		"selfKeyword": "#f9c", "selfTypeKeyword": "#f9c",
 		"controlKeyword": "#0af",
 		"newOperator": "#0af",
 		"stringLiteral": "#0af",
@@ -1405,6 +1407,7 @@
 
 	"workbench.iconTheme": "vs-minimal", // File Icon Theme
 	"outline.icons": false, // affects breadcrumbs as well ("breadcrumbs.icons" is no-op)
+	"breadcrumbs.icons": false,
 	"workbench.productIconTheme": "feather-vscode",
 
 	/* UI layout */
@@ -1568,6 +1571,10 @@
 
 	/*~* Copilots *~*/
 
+	/* Agent Host */
+	"sessions.keepAwakeWhileWorking": "never",
+	"chat.agentsWindowBanner.enabled": false,
+
 	/* * */
 	"chat.tips.enabled": false,
 	//"chat.disableAIFeatures": true,
@@ -1578,6 +1585,7 @@
 	"chat.implicitContext.enabled": { "panel": "first" }, // for the Ask mode
 	"claudeCode.preferredLocation": "panel",
 	"claudeCode.hideOnboarding": true,
+	"chat.btwTip.enabled": false,
 	"chat.requestQueuing.defaultAction": "queue",
 	"chat.useCustomizationsInParentRepositories": true,
 
@@ -1590,10 +1598,12 @@
 	"github.copilot.nextEditSuggestions.enabled": true,
 	"github.copilot.nextEditSuggestions.eagerness": "high",
 
-	/* agentic */
+	/* agentic chat */
 	"chat.persistentProgressVerbosity": "conversation",
+	"chat.viewSessions.openChatIn": "editorArea",
 	"chat.agent.thinking.generateTitles": false,
 	"chat.tools.compressOutput.enabled": true,
+	"chat.hooks.showWarnings": true,
 	"github.copilot.chat.agent.autoFix": false,
 	"chat.notifyWindowOnConfirmation": "always",
 	//"chat.notifyWindowOnResponseReceived": "always",

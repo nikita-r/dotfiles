@@ -240,14 +240,6 @@
 		"when": "editorFocus"
 	},
 
-	/* Ctrl+L */
-	{ "command": "", "key": "ctrl+l" },
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.browser.focusUrlInput",
-		"when": "activeEditor == 'workbench.editor.browser'"
-	},
-
 	/* Q */
 	{
 		"key": "ctrl+q",
@@ -505,12 +497,12 @@
 	{
 		"key": "f3",
 		"command": "workbench.action.chat.findNext",
-		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+		"when": "chatFindSupported && inChat && !editorFocus"
 	},
 	{
 		"key": "shift+f3",
 		"command": "workbench.action.chat.findPrevious",
-		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+		"when": "chatFindSupported && inChat && !editorFocus"
 	},
 	{
 		"key": "f3",
@@ -558,12 +550,12 @@
 	{
 		"key": "cmd+g",
 		"command": "workbench.action.chat.findNext",
-		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+		"when": "chatFindSupported && inChat && !editorFocus"
 	},
 	{
 		"key": "shift+cmd+g",
 		"command": "workbench.action.chat.findPrevious",
-		"when": "inChat && chatLocation == 'panel' && !quickChatHasFocus"
+		"when": "chatFindSupported && inChat && !editorFocus"
 	},
 	{
 		"key": "cmd+g",
@@ -579,11 +571,6 @@
 		"key": "ctrl+f",
 		"command": "workbench.action.terminal.focusFind",
 		"when": "terminalFocusInAny || terminalFindFocused || terminalTabsFocus"
-	},
-	{
-		"key": "ctrl+f",
-		"command": "repl.action.filter",
-		"when": "focusedView == 'workbench.panel.repl.view'"
 	},
 
 	/* toggle treeFind */
@@ -1280,7 +1267,11 @@
 	{ "command": "noop", "key": "ctrl+k s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+s" },
 	{ "command": "noop", "key": "ctrl+k ctrl+alt+s" },
-	{ "command": "noop", "key": "ctrl+k ctrl+shift+s" },
+	/* AllIn */
+	{
+		"key": "ctrl+k ctrl+shift+s",
+		"command": "workbench.files.action.saveAllInGroup"
+	},
 
 	/* Ctrl+k # */
 	{
@@ -2267,18 +2258,8 @@
 		"when": "listFocus"
 	},
 	{
-		"key": "ctrl+alt+p",
-		"command": "list.focusAnyUp",
-		"when": "listFocus"
-	},
-	{
 		"key": "Ctrl+Alt+j",
 		"command": "list.focusPageDown",
-		"when": "listFocus"
-	},
-	{
-		"key": "ctrl+alt+n",
-		"command": "list.focusAnyDown",
 		"when": "listFocus"
 	},
 
@@ -2353,34 +2334,18 @@
 		"when": "inChatInput && !chatInputHasText"
 	},
 	/* The Side Chat */
-	{
-		"key": "ctrl+alt+i",
-		"command": "workbench.panel.chat"
-	},
-	{
-		"key": "ctrl+alt+n",
-		"command": "workbench.action.chat.newChat",
-		"when": "!chatSessionIsEmpty && inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
-	},
-	{
-		"key": "ctrl+alt+p",
-		"command": "workbench.action.chat.toggleShowAgentSessions",
-		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
-	},
+	{ "key": "ctrl+alt+i", "command": "workbench.panel.chat" },
+	{ "key": "ctrl+alt+n", "command": "workbench.action.chat.newChat" },
 	{
 		"key": "ctrl+alt+h",
 		"command": "workbench.action.chat.openSessionTargetPicker",
 		"when": "inChatInput && !quickChatHasFocus && !inlineChatFocused && !inlineChatResponseFocused"
 	},
-	{
-		"key": "ctrl+win+i",
-		"command": "workbench.panel.chat"
-	},
 	/* In Any Chat */
 	{
 		"key": "ctrl+alt+j",
 		"command": "workbench.action.chat.attachFile",
-		"when": "inChat"
+		"when": "inChatInput"
 	},
 	{
 		"key": "shift+alt+s",
@@ -2494,7 +2459,7 @@
 
 	/* symbols with Mac Option key */
 	{ "when": "!isMac && textInputFocus", "key": "alt+;",
-	  "command": "type", "args": { "text": "…" } },
+	  "command": "type", "args": { "text": "…" } }, // &mldr;
 	{ "when": "!isMac && textInputFocus", "key": "alt+o",
 	  "command": "type", "args": { "text": "ø" } },
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+o",
@@ -2520,7 +2485,7 @@
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+=",
 	  "command": "type", "args": { "text": "±" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+x",
-	  "command": "type", "args": { "text": "≈" } },
+	  "command": "type", "args": { "text": "≈" } }, // &approx;
 	{ "when": "!isMac && textInputFocus", "key": "alt+l",
 	  "command": "type", "args": { "text": "¬" } }, // Not Sign
 	{ "when": "!isMac && textInputFocus", "key": "alt+j",
@@ -2550,9 +2515,9 @@
 	{ "when": "!isMac && textInputFocus", "key": "shift+alt+4",
 	  "command": "type", "args": { "text": "›" } },
 	{ "when": "!isMac && textInputFocus", "key": "alt+5",
-	  "command": "type", "args": { "text": "∞" } },
+	  "command": "type", "args": { "text": "∞" } }, // &infin;
 	{ "when": "!isMac && textInputFocus", "key": "alt+z",
-	  "command": "type", "args": { "text": "\u03a9" } },
+	  "command": "type", "args": { "text": "\u03a9" } }, // &Omega;
 
 	/* editor.action & search.action to Find/Replace */
 	{
